@@ -1,0 +1,10 @@
+resource.*
+install.*
+*.drv
+*.bat
+*.exe
+*.com
+*.inf
+*.ico
+version
+mt32*
