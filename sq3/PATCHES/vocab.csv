@@ -383,7 +383,7 @@ ask | inquire | request,IMPERATIVE_VERB | NOUN,1166
 chase | pursue,IMPERATIVE_VERB,1167
 wait,NOUN | IMPERATIVE_VERB,1168
 disembark | evacuate | exit | leave,IMPERATIVE_VERB | NOUN,1169
-quit,IMPERATIVE_VERB,1170
+quit | צא,IMPERATIVE_VERB,1170
 pause,IMPERATIVE_VERB,1171
 unscrew,IMPERATIVE_VERB,1172
 dont,IMPERATIVE_VERB,1173
@@ -902,3 +902,7 @@ jam | polyfoam | toejam,NOUN,2449
 unknownnumber,NOUN,4093
 '!* | noword,,4094
 * | any | anyword,CONJUNCTION | PREPOSITION | ARTICLE | ADJECTIVE | PRONOUN | NOUN | INDICATIVE_VERB | ADVERB | IMPERATIVE_VERB,4095
+את,ARTICLE,
+1hebrew1prefix1bet,PREPOSITION,
+1hebrew1prefix1lamed,PREPOSITION,
+1hebrew1prefix1mem,PREPOSITION,
