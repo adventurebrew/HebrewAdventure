@@ -1,0 +1,904 @@
+words,class,group
+:* | the,ARTICLE,1
+a,ARTICLE,2
+an,ARTICLE,3
+el,ARTICLE,4
+la,ARTICLE,5
+los,ARTICLE,6
+and,CONJUNCTION,50
+or,CONJUNCTION,51
+nor,CONJUNCTION,52
+if,CONJUNCTION,54
+but,CONJUNCTION,55
+it,PRONOUN,100
+this,PRONOUN,101
+these,PRONOUN,102
+that,PRONOUN,103
+those,PRONOUN,104
+them,PRONOUN,105
+themselves,PRONOUN,106
+him,PRONOUN,107
+himself,PRONOUN,108
+her,PRONOUN,109
+herself,PRONOUN,110
+i | me | myself,NOUN,111
+he,NOUN,112
+she,NOUN,113
+they,NOUN,114
+ya | you,NOUN,115
+yourself,NOUN,116
+we,NOUN,117
+us,NOUN,118
+ourselves,NOUN,119
+until,ASSOCIATION,150
+while,ASSOCIATION,151
+with,ASSOCIATION,152
+without,ASSOCIATION,153
+for,ASSOCIATION,154
+about,ASSOCIATION,155
+to,PREPOSITION,200
+from,PREPOSITION,201
+at,PREPOSITION,202
+on | upon,PREPOSITION,203
+onto,PREPOSITION,204
+off,PREPOSITION,205
+in | inside | into,PREPOSITION,206
+out | outer | outside,PREPOSITION,207
+below | beneath | under | underneath,PREPOSITION,208
+between,PREPOSITION,209
+across,PREPOSITION,210
+above | over,PREPOSITION,211
+through,PREPOSITION,212
+behind,PREPOSITION | NOUN,213
+ahead,PREPOSITION,214
+back,PREPOSITION | ADJECTIVE | NOUN | IMPERATIVE_VERB,215
+front,PREPOSITION | ADJECTIVE | NOUN,216
+around| סביב,PREPOSITION,217
+here,PREPOSITION,218
+there,PREPOSITION,219
+everywhere,PREPOSITION,220
+nowhere,PREPOSITION,221
+somewhere,PREPOSITION,222
+forward,PREPOSITION,223
+backward,PREPOSITION,224
+toward,PREPOSITION,225
+by,PREPOSITION,226
+of,PREPOSITION,229
+how,ADVERB,300
+where,ADVERB,301
+when,ADVERB,302
+why,ADVERB,303
+what | which,ADVERB,304
+who,ADVERB,305
+soon,ADVERB,306
+sooner,ADVERB,307
+soonest,ADVERB,308
+now,ADVERB,309
+late,ADVERB,310
+later,ADVERB,311
+latest,ADVERB,312
+normal,ADVERB,315
+abnormal | strange,ADVERB,316
+so,ADVERB,317
+again,ADVERB,318
+always,ADVERB,319
+never,ADVERB,320
+then,ADVERB,321
+up,ADVERB,322
+down,ADVERB,323
+together,ADVERB,324
+please,ADVERB,325
+away,ADVERB,326
+along,ADVERB,327
+overboard,ADVERB,328
+not,ADVERB,329
+almost,ADVERB,330
+affirmative | aye | certainly | ok | roger | sure | y | yea | yeah | yep | yes,ADVERB | NOUN,331
+n | nay | negative | no | nope,ADVERB,332
+dunno | maybe | possibly | probably,ADVERB,333
+do,INDICATIVE_VERB,400
+did,INDICATIVE_VERB,401
+does,NOUN | INDICATIVE_VERB,402
+be,INDICATIVE_VERB,403
+are | is | wheres | youre,INDICATIVE_VERB,404
+am | im,INDICATIVE_VERB,405
+was,INDICATIVE_VERB,407
+can,NOUN | INDICATIVE_VERB,408
+will,NOUN | INDICATIVE_VERB,409
+would,INDICATIVE_VERB,410
+go,INDICATIVE_VERB,411
+cease | stop,INDICATIVE_VERB,412
+begin | start,INDICATIVE_VERB,413
+say,INDICATIVE_VERB,414
+says,INDICATIVE_VERB,415
+said,INDICATIVE_VERB,416
+have,INDICATIVE_VERB,417
+has,INDICATIVE_VERB,418
+had,INDICATIVE_VERB,419
+tell,INDICATIVE_VERB,420
+use,INDICATIVE_VERB,421
+holler | scream | shout | yell,INDICATIVE_VERB,422
+white,ADJECTIVE | NOUN,500
+black,ADJECTIVE | NOUN,501
+green,ADJECTIVE | NOUN,502
+gold,ADJECTIVE | NOUN,503
+silver,ADJECTIVE | NOUN,504
+orange,ADJECTIVE | NOUN,505
+blue,ADJECTIVE,506
+pink,ADJECTIVE,507
+purple,ADJECTIVE,508
+brown,ADJECTIVE,509
+yellow,ADJECTIVE,510
+golden,ADJECTIVE,511
+red,ADJECTIVE,512
+grey,ADJECTIVE,513
+gray,ADJECTIVE,514
+hard,ADJECTIVE,515
+famished | hungry | ravenous | starved | starving,ADJECTIVE,516
+everything,ADJECTIVE,517
+flashing,ADJECTIVE,518
+grimy | old,ADJECTIVE,519
+absent | lost | missing,ADJECTIVE,520
+live,ADJECTIVE,521
+own,ADJECTIVE,522
+my,ADJECTIVE,523
+his,ADJECTIVE,524
+its,ADJECTIVE,525
+your,ADJECTIVE,526
+our,ADJECTIVE,527
+their,ADJECTIVE,528
+fine | good,ADJECTIVE,529
+another,ADJECTIVE,530
+other,ADJECTIVE,531
+some,ADJECTIVE,532
+young,ADJECTIVE,533
+wet,ADJECTIVE,534
+bad,ADJECTIVE,535
+next,ADJECTIVE,536
+new,ADJECTIVE,537
+important,ADJECTIVE,538
+urgent,ADJECTIVE,539
+nasty,ADJECTIVE,540
+marked,ADJECTIVE,541
+low,ADJECTIVE,542
+glowing,ADJECTIVE,543
+digital,ADJECTIVE,544
+long,ADJECTIVE,545
+real,ADJECTIVE,546
+first,ADJECTIVE,547
+electric | electrical,ADJECTIVE,548
+fat | plump | turgid,ADJECTIVE,549
+little | small | tiny,ADJECTIVE,550
+big | large | massive,ADJECTIVE,551
+all | every,ADJECTIVE,552
+dead | deceased,ADJECTIVE,553
+preceding | previous,ADJECTIVE,554
+naked | nude,ADJECTIVE,555
+crude,ADJECTIVE,556
+faster,ADJECTIVE,557
+slower,ADJECTIVE,558
+steering,ADJECTIVE,559
+shooting,ADJECTIVE,560
+second,ADJECTIVE,561
+both,ADJECTIVE,562
+uniformed,ADJECTIVE,563
+timing,ADJECTIVE,564
+extra | spare,ADJECTIVE,565
+fluorescent,ADJECTIVE,566
+coagulated,ADJECTIVE,567
+single,ADJECTIVE,568
+modular,ADJECTIVE,569
+proper,ADJECTIVE,570
+facial,ADJECTIVE,571
+composite,ADJECTIVE,572
+mr,ADJECTIVE,573
+monitoring,ADJECTIVE,574
+nerve,ADJECTIVE,575
+round,ADJECTIVE,576
+invisibility,ADJECTIVE | NOUN,577
+broken | damaged | poked,ADJECTIVE,578
+safety,ADJECTIVE,579
+flying,ADJECTIVE,580
+sharp,ADJECTIVE,581
+seismic,ADJECTIVE,582
+research,ADJECTIVE,583
+jagged | worn,ADJECTIVE,584
+barbed,ADJECTIVE,585
+metallic,ADJECTIVE,586
+retractable,ADJECTIVE,587
+dense,ADJECTIVE,588
+welded,ADJECTIVE,589
+janitorial,ADJECTIVE,590
+security,ADJECTIVE,591
+lime,ADJECTIVE,592
+detention,ADJECTIVE,593
+accounting,ADJECTIVE,594
+thank,IMPERATIVE_VERB,1000
+combat | fight,IMPERATIVE_VERB,1001
+press | push,IMPERATIVE_VERB,1002
+tp,IMPERATIVE_VERB,1003
+test,IMPERATIVE_VERB,1004
+shoot,IMPERATIVE_VERB,1005
+let | lets,IMPERATIVE_VERB,1006
+tighten,IMPERATIVE_VERB,1007
+explore | frisk | search,IMPERATIVE_VERB,1008
+make,IMPERATIVE_VERB,1009
+fill,IMPERATIVE_VERB,1010
+restart,IMPERATIVE_VERB,1011
+hang,IMPERATIVE_VERB,1012
+feed,IMPERATIVE_VERB,1013
+open,IMPERATIVE_VERB,1014
+drag | pull,IMPERATIVE_VERB,1015
+switch,IMPERATIVE_VERB,1016
+feel | pat | pet | poke | polish | rub | stroke | tap | touch,IMPERATIVE_VERB,1017
+lay,IMPERATIVE_VERB,1018
+swing,IMPERATIVE_VERB,1019
+remove,IMPERATIVE_VERB,1020
+unload,IMPERATIVE_VERB,1021
+wipe,IMPERATIVE_VERB,1022
+pry,IMPERATIVE_VERB,1023
+attack | kill | murder,IMPERATIVE_VERB,1024
+consume | eat | swallow | taste,IMPERATIVE_VERB,1025
+chug,IMPERATIVE_VERB,1026
+cheat,IMPERATIVE_VERB,1027
+unlock,IMPERATIVE_VERB,1028
+unlatch,IMPERATIVE_VERB,1029
+knock | rap,IMPERATIVE_VERB,1030
+cast | hurl | throw | toss,IMPERATIVE_VERB,1031
+awaken | wake,IMPERATIVE_VERB,1032
+save,IMPERATIVE_VERB,1033
+restore,IMPERATIVE_VERB,1034
+sell,IMPERATIVE_VERB,1035
+flush,IMPERATIVE_VERB,1036
+slide,IMPERATIVE_VERB,1037
+wear,IMPERATIVE_VERB,1038
+uncover,IMPERATIVE_VERB,1039
+happen,IMPERATIVE_VERB,1040
+pray,IMPERATIVE_VERB,1041
+carry,IMPERATIVE_VERB,1042
+transmit,IMPERATIVE_VERB,1043
+damn,IMPERATIVE_VERB,1044
+come,IMPERATIVE_VERB,1045
+follow,IMPERATIVE_VERB,1046
+dig,IMPERATIVE_VERB,1047
+rescue,IMPERATIVE_VERB,1048
+scrape,IMPERATIVE_VERB,1049
+point,NOUN | IMPERATIVE_VERB,1050
+coat | smear | spread,IMPERATIVE_VERB | NOUN,1051
+swim,IMPERATIVE_VERB,1052
+launch,IMPERATIVE_VERB,1053
+type,IMPERATIVE_VERB,1054
+sing,IMPERATIVE_VERB,1055
+board | mount | ride,IMPERATIVE_VERB | NOUN,1056
+insert,IMPERATIVE_VERB,1057
+crush | squeeze,IMPERATIVE_VERB,1058
+roll,IMPERATIVE_VERB,1059
+ascend | climb | scale,IMPERATIVE_VERB,1060
+describe,IMPERATIVE_VERB,1061
+bury,IMPERATIVE_VERB,1062
+deactivate,IMPERATIVE_VERB,1063
+listen,IMPERATIVE_VERB,1064
+walk,IMPERATIVE_VERB,1065
+crawl,IMPERATIVE_VERB,1066
+unbuckle | unfasten,IMPERATIVE_VERB,1067
+descend,IMPERATIVE_VERB,1068
+dive,IMPERATIVE_VERB,1069
+lower,ADJECTIVE | IMPERATIVE_VERB,1070
+apply,IMPERATIVE_VERB,1071
+expectorate | spit,IMPERATIVE_VERB | NOUN,1072
+rip | tear,IMPERATIVE_VERB,1073
+fly,IMPERATIVE_VERB,1074
+afix | attach | connect | fasten | install | reconnect | secure | splice,IMPERATIVE_VERB,1075
+disconnect,IMPERATIVE_VERB,1076
+buzz,IMPERATIVE_VERB,1077
+signal,NOUN | IMPERATIVE_VERB,1078
+empty,ADJECTIVE | IMPERATIVE_VERB,1079
+rest,ADJECTIVE | IMPERATIVE_VERB,1080
+stand,NOUN | IMPERATIVE_VERB,1081
+slip,NOUN | IMPERATIVE_VERB,1082
+whistle,NOUN | IMPERATIVE_VERB,1083
+erect,NOUN | IMPERATIVE_VERB,1084
+jump,NOUN | IMPERATIVE_VERB,1085
+leap | polevault | vault,IMPERATIVE_VERB,1086
+hold,NOUN | IMPERATIVE_VERB,1087
+grip,NOUN | IMPERATIVE_VERB,1088
+load,NOUN | IMPERATIVE_VERB,1089
+buy | purchase,IMPERATIVE_VERB | NOUN,1090
+order,NOUN | IMPERATIVE_VERB,1091
+play,IMPERATIVE_VERB,1092
+check,NOUN | IMPERATIVE_VERB,1093
+strip,NOUN | IMPERATIVE_VERB,1094
+undress,NOUN | IMPERATIVE_VERB,1095
+cruise,NOUN | IMPERATIVE_VERB,1096
+release,NOUN | IMPERATIVE_VERB,1097
+free | untie,IMPERATIVE_VERB,1098
+smell | sniff,IMPERATIVE_VERB | NOUN,1099
+speed,NOUN | IMPERATIVE_VERB,1100
+sip,NOUN | IMPERATIVE_VERB,1101
+drink,NOUN | IMPERATIVE_VERB,1102
+lick,NOUN | IMPERATIVE_VERB,1103
+park,NOUN | IMPERATIVE_VERB,1104
+aid | assist | care | help,IMPERATIVE_VERB | NOUN,1105
+answer,NOUN | IMPERATIVE_VERB,1106
+lie,NOUN | IMPERATIVE_VERB,1107
+latch | lock,IMPERATIVE_VERB | NOUN,1108
+name,NOUN | IMPERATIVE_VERB,1109
+bite,NOUN | IMPERATIVE_VERB,1110
+cut,NOUN | IMPERATIVE_VERB,1111
+slice,NOUN | IMPERATIVE_VERB,1112
+severe | stab,IMPERATIVE_VERB,1113
+kiss,NOUN | IMPERATIVE_VERB,1114
+hug,NOUN | IMPERATIVE_VERB,1115
+code,NOUN | IMPERATIVE_VERB,1116
+deal,NOUN | IMPERATIVE_VERB,1117
+shop,NOUN | IMPERATIVE_VERB,1118
+store,NOUN | IMPERATIVE_VERB,1119
+change,NOUN | IMPERATIVE_VERB,1120
+dress,NOUN | IMPERATIVE_VERB,1121
+pocket,NOUN | IMPERATIVE_VERB,1122
+pay,NOUN | IMPERATIVE_VERB,1123
+face,NOUN | IMPERATIVE_VERB,1124
+crack | line | stripe,NOUN | IMPERATIVE_VERB,1125
+buckle,NOUN | IMPERATIVE_VERB,1126
+dust,NOUN | IMPERATIVE_VERB,1127
+debris | junk,IMPERATIVE_VERB | NOUN,1128
+place,NOUN | IMPERATIVE_VERB,1129
+replace | return,IMPERATIVE_VERB,1130
+escape,NOUN | IMPERATIVE_VERB,1131
+want,IMPERATIVE_VERB,1132
+like,IMPERATIVE_VERB,1133
+wish,NOUN | IMPERATIVE_VERB,1134
+duck,NOUN | IMPERATIVE_VERB,1135
+shake,NOUN | IMPERATIVE_VERB,1136
+garbage | litter | refuse | trash,IMPERATIVE_VERB | NOUN,1137
+read,IMPERATIVE_VERB,1138
+see,IMPERATIVE_VERB,1139
+examine | gaze | inspect | look | observe | peer | scan | stare | view | הבט | הסתכל,IMPERATIVE_VERB | NOUN,1140
+investigate,IMPERATIVE_VERB,1141
+fix | repair,IMPERATIVE_VERB,1142
+acquire | get | grab | obtain | pick | snag | snatch | take,IMPERATIVE_VERB,1143
+send | sent,IMPERATIVE_VERB,1144
+freeze | halt,IMPERATIVE_VERB,1145
+shove,IMPERATIVE_VERB,1146
+converse | speak | talk,IMPERATIVE_VERB,1147
+drop | put | set | stash | stow,IMPERATIVE_VERB,1148
+break | damage | destroy | smash,IMPERATIVE_VERB,1149
+conceal | hide,IMPERATIVE_VERB,1150
+find | locate,IMPERATIVE_VERB,1151
+activate,IMPERATIVE_VERB,1152
+sit,IMPERATIVE_VERB,1153
+give | offer | present,IMPERATIVE_VERB,1154
+administer | perform,IMPERATIVE_VERB,1155
+nap | sleep | snooze,IMPERATIVE_VERB,1156
+close | shut,IMPERATIVE_VERB,1157
+breathe | inhale | snort,IMPERATIVE_VERB | NOUN,1158
+write,IMPERATIVE_VERB,1159
+capture | catch,IMPERATIVE_VERB,1160
+interrogate | interview | question,IMPERATIVE_VERB | NOUN,1161
+jog | run,IMPERATIVE_VERB,1162
+buff | shine,IMPERATIVE_VERB,1163
+blow | suck,ADJECTIVE | IMPERATIVE_VERB,1164
+call,IMPERATIVE_VERB,1165
+ask | inquire | request,IMPERATIVE_VERB | NOUN,1166
+chase | pursue,IMPERATIVE_VERB,1167
+wait,NOUN | IMPERATIVE_VERB,1168
+disembark | evacuate | exit | leave,IMPERATIVE_VERB | NOUN,1169
+quit,IMPERATIVE_VERB,1170
+pause,IMPERATIVE_VERB,1171
+unscrew,IMPERATIVE_VERB,1172
+dont,IMPERATIVE_VERB,1173
+disarm,IMPERATIVE_VERB,1174
+beat | hit | kick | pound | punch | slap | stomp | strike,IMPERATIVE_VERB,1175
+fart | leak | pee | piss | urinate,IMPERATIVE_VERB | NOUN,1176
+crap | defecate | dump,IMPERATIVE_VERB,1177
+hoist | lift | raise,IMPERATIVE_VERB | NOUN,1178
+display | show,IMPERATIVE_VERB | NOUN,1179
+beg,IMPERATIVE_VERB,1180
+warn,IMPERATIVE_VERB,1181
+blast | disintegrate | vaporize | zap,IMPERATIVE_VERB,1182
+enter | reenter,IMPERATIVE_VERB,1183
+copy | duplicate | photocopy,NOUN | IMPERATIVE_VERB,1184
+bridle,IMPERATIVE_VERB,1185
+charm,IMPERATIVE_VERB,1186
+tie,IMPERATIVE_VERB,1187
+trade,IMPERATIVE_VERB,1188
+melt,IMPERATIVE_VERB,1189
+tilt,IMPERATIVE_VERB,1190
+land,IMPERATIVE_VERB,1191
+turn,IMPERATIVE_VERB,1192
+decode,IMPERATIVE_VERB,1193
+lean,IMPERATIVE_VERB,1194
+drive | operate,IMPERATIVE_VERB,1195
+qa,IMPERATIVE_VERB,1196
+reach,IMPERATIVE_VERB,1197
+bend,IMPERATIVE_VERB,1198
+manipulate | move,IMPERATIVE_VERB,1199
+clean,IMPERATIVE_VERB,1200
+tickle,IMPERATIVE_VERB,1201
+cry,IMPERATIVE_VERB,1202
+laugh,IMPERATIVE_VERB,1203
+ass | asshole | cock | cocksucker | cunt | dick | fuck | fucker | motherfucker | prick | pussy | shit | shithead,IMPERATIVE_VERB | NOUN,1204
+backstage,IMPERATIVE_VERB,1205
+pump,IMPERATIVE_VERB,1206
+handle,NOUN,2000
+janitor,NOUN,2001
+calendar,NOUN,2002
+chart,NOUN,2003
+stock,NOUN,2004
+copier,NOUN,2005
+memo,NOUN,2006
+note,NOUN,2007
+mrgarbage | vaporizer,NOUN,2008
+nose,NOUN,2009
+mirror,NOUN,2010
+bar,NOUN,2011
+night,NOUN,2012
+station,NOUN,2013
+keylock | scanner,NOUN,2014
+neck | throat,NOUN,2015
+sierra,NOUN,2016
+aisle | bridge | walkway,NOUN,2017
+repeat,NOUN,2018
+cable | cord | wire,IMPERATIVE_VERB | NOUN,2019
+ortega,NOUN,2020
+pestulon,NOUN,2021
+monolith,NOUN,2022
+burger,NOUN,2023
+phleebhut,NOUN,2024
+cafe | diner | restaurant,NOUN,2025
+craft | cruiser | freighter | hull | rocket | saucer | ship | shuttle | spacecraft | spaceship | vehicle | vessel | חללית | ספינה,NOUN,2026
+wheel,NOUN,2027
+generator | reactor,NOUN,2028
+ignition,NOUN,2029
+enterprise,NOUN,2030
+mom | mother,NOUN,2031
+dad | father,NOUN,2032
+blatz | fester,NOUN,2033
+boy | child | kid,NOUN,2034
+w | west,NOUN,2035
+guard | jailer,NOUN,2036
+waiter | waitress,NOUN,2037
+flunky | lackey | minion | pirate,NOUN,2038
+cook,NOUN,2039
+clerk | employee,NOUN,2040
+oaf,NOUN,2041
+jerk,NOUN,2042
+bystander | controller | person | technician | worker,NOUN,2043
+being,NOUN,2044
+android | arnoid | automaton | battlebot | droid | robot | terminator,NOUN,2045
+customer | patron,NOUN,2046
+self | wilco,NOUN,2047
+partner,NOUN,2048
+friend,NOUN,2049
+crew | crowd,NOUN,2050
+folk | people,NOUN,2051
+carbon-based | crewman | crewmen | dude | guy | human | man | men | spaceman | spacemen,NOUN,2052
+bitch | broad | female | girl | lady | slut | whore | woman,NOUN,2053
+passenger | thing | traveler | traveller,NOUN,2054
+women,NOUN,2055
+anybody | anyone | somebody | someone,NOUN,2056
+bye | goodbye,NOUN,2057
+hello | hi | howdy,NOUN,2058
+thanks,NOUN,2059
+rob | steal | swipe,NOUN,2060
+gun | weapon | weapons,NOUN,2061
+stick,NOUN,2062
+area | room | scene | vicinity,NOUN,2063
+arena,NOUN,2064
+department | office,NOUN,2065
+chamber,NOUN,2066
+corridor | hall | hallway | passage | passageway,NOUN,2067
+joint,NOUN,2068
+deck | floor,NOUN,2069
+dirt | ground | sand | soil,NOUN,2070
+dune,NOUN,2071
+desert,NOUN,2072
+stair | staircase | stairway | step,IMPERATIVE_VERB | NOUN,2073
+crumb,NOUN,2074
+lighter,NOUN,2075
+die,NOUN,2076
+magic | sorcery,NOUN,2077
+bay,NOUN,2078
+boot | shoe,NOUN,2079
+way,NOUN,2080
+paint,NOUN | IMPERATIVE_VERB,2081
+bucket,NOUN,2082
+odor,NOUN,2083
+heat,NOUN | IMPERATIVE_VERB,2084
+conveyer,NOUN | IMPERATIVE_VERB,2085
+motivator | warp,NOUN,2086
+runway,NOUN,2087
+wave,NOUN | IMPERATIVE_VERB,2088
+wind,NOUN,2089
+mouth,NOUN,2090
+sun,NOUN,2091
+weight,NOUN,2092
+cutter,NOUN,2093
+canyon | chasm | crevice | fissure | gorge,NOUN,2094
+console | panel | plate | plates,NOUN,2095
+instrument,NOUN,2096
+control,NOUN | IMPERATIVE_VERB,2097
+pit | shaft | tunnel,NOUN,2098
+love,NOUN,2099
+accident,NOUN,2100
+port | porthole | viewport,NOUN,2101
+none | nothing,NOUN,2102
+bubble,NOUN,2103
+bed,NOUN,2104
+cabinet | file,NOUN,2105
+closet,NOUN,2106
+drawer,NOUN,2107
+key,NOUN,2108
+fuel,NOUN,2109
+door | doorway | hatch,NOUN,2110
+inventory,NOUN | IMPERATIVE_VERB,2111
+inv,NOUN | IMPERATIVE_VERB,2112
+artifact | object,NOUN,2113
+stuff,NOUN | IMPERATIVE_VERB,2114
+crud,NOUN | IMPERATIVE_VERB,2115
+table,NOUN,2116
+desk,NOUN,2117
+counter,NOUN,2118
+capsule,NOUN,2119
+tree,NOUN,2120
+scope | telescope,NOUN,2121
+pole,NOUN,2122
+anemometer,NOUN,2123
+partition | wall,NOUN,2124
+side,NOUN,2125
+ceiling,NOUN,2126
+roof,NOUN,2127
+hamburger | sandwich,NOUN,2128
+knife,NOUN,2129
+bottle,NOUN,2130
+equipment,NOUN,2131
+flesh | skin,NOUN,2132
+hut,NOUN,2133
+elevator,NOUN,2134
+water,NOUN | IMPERATIVE_VERB,2135
+lake,NOUN,2136
+card | keycard,NOUN,2137
+tube,NOUN,2138
+property,NOUN,2139
+wastebasket,NOUN,2140
+waste,NOUN,2141
+hose,NOUN,2142
+furniture,NOUN,2143
+owner,NOUN,2144
+astro | chicken,NOUN,2145
+number,NOUN,2146
+container,NOUN,2147
+pedestal | platform,NOUN,2148
+emergency,NOUN,2149
+base,NOUN,2150
+life,NOUN,2151
+engraving | inscription,NOUN,2152
+star,NOUN,2153
+head,NOUN,2154
+hair,NOUN,2155
+moon | planet,NOUN,2156
+athletic | jock | jockstrap | supporter,NOUN,2157
+strap,NOUN,2158
+circle,NOUN,2159
+knob | lever,NOUN,2160
+game,NOUN,2161
+dial,NOUN | IMPERATIVE_VERB,2162
+glass,NOUN,2163
+gauge,NOUN,2164
+branch | limb,NOUN,2165
+leaf,NOUN,2166
+slot,NOUN,2167
+cartridge,NOUN,2168
+airlock,NOUN,2169
+landscape,NOUN,2170
+orat | orat-on-a-stick,NOUN,2171
+matter,NOUN,2172
+implement | tool,NOUN,2173
+occupant,NOUN,2174
+power,NOUN,2175
+bug | insect | scorpazoid | scorpion,NOUN,2176
+microphone,NOUN,2177
+kerona | keronian,NOUN,2178
+dispenser | holder,NOUN,2179
+milk,NOUN,2180
+coffee,NOUN,2181
+tea,NOUN,2182
+detonator | thermal,NOUN,2183
+sarien,NOUN,2184
+animal | beast | creature | monster,NOUN,2185
+alien | lifeform,NOUN,2186
+barrier,NOUN,2187
+sector,NOUN,2188
+author,NOUN,2189
+translator,NOUN,2190
+headquarters,NOUN,2191
+box | case | crate,NOUN,2192
+dialect,NOUN,2193
+chest | trunk,NOUN,2194
+locker,NOUN,2195
+growth,NOUN,2196
+car | hovercraft | hoverwagon | wagon,NOUN,2197
+cap | hat,NOUN,2198
+time,NOUN,2199
+body | carcass | corpse,NOUN,2200
+shark,NOUN,2201
+helmet,NOUN,2202
+podium,NOUN,2203
+lint,NOUN,2204
+ramp,NOUN,2205
+alarm,NOUN,2206
+appendage | arm | hand | paw,IMPERATIVE_VERB | NOUN,2207
+diamond,NOUN,2209
+cavity | hole | opening | orifice,NOUN,2210
+unit,NOUN,2211
+ball,NOUN,2212
+carbon,NOUN,2213
+basket,NOUN,2214
+tray,NOUN,2215
+arch,NOUN,2216
+spider,NOUN,2217
+eye,NOUN,2218
+edge,NOUN,2219
+claw,NOUN | IMPERATIVE_VERB,2220
+instruction,NOUN,2221
+coolant | fluid | liquid | lubricant | propellant,NOUN,2222
+pool | puddle,NOUN,2223
+job,NOUN,2224
+map,NOUN,2225
+sound,NOUN,2226
+meter,NOUN,2227
+breath,NOUN,2228
+heap | mound | pile,NOUN,2229
+faucet,NOUN,2230
+nozzle | thruster,NOUN,2231
+carving,NOUN,2232
+center | middle,NOUN,2233
+ear,NOUN,2234
+plug,NOUN,2235
+lip | teeth | tooth,NOUN,2236
+cabin | cockpit,NOUN,2237
+booth,NOUN,2238
+leg,NOUN,2239
+ledge,NOUN,2240
+read-out | readout,NOUN,2241
+form,NOUN,2242
+shirt,NOUN,2243
+attire | clothes | clothing | coveralls | outfit | overalls | spacesuit | suit | uniform,NOUN,2244
+eva | flight | galaxy | space | universe,NOUN,2245
+anything | something,NOUN,2246
+path,NOUN,2247
+crystal | gem | orium,NOUN,2248
+bank,NOUN,2249
+decoder | ring,NOUN,2250
+tile,NOUN,2251
+cliff,NOUN,2252
+butte | mountain | plateau | rim,NOUN,2253
+bottom,NOUN,2254
+building | house | shack | structure,NOUN,2255
+neon,NOUN,2256
+volcano | volcanoe,NOUN,2257
+lava | magma,NOUN,2258
+cave | cavern | grotto,NOUN,2259
+bomb,NOUN,2260
+meat,NOUN,2261
+description,NOUN,2262
+wrist,NOUN,2263
+bin,NOUN,2264
+blood,NOUN,2265
+activator,NOUN,2266
+garage,NOUN,2267
+cushion | sofa,NOUN,2268
+kitchen,NOUN,2269
+cost | price,NOUN,2270
+tower,NOUN,2271
+entrance,NOUN,2272
+terminal,NOUN,2273
+pack | package,NOUN,2274
+laser,NOUN,2275
+beam | field | force | ray,NOUN,2276
+frame,NOUN | IMPERATIVE_VERB,2277
+tank,NOUN,2278
+conduit | pipe | pipeline,NOUN,2279
+mice | mouse | rat | rodent,NOUN,2280
+ladder,NOUN,2281
+sex,NOUN,2282
+slime,NOUN,2283
+grate | grating | louver | louvre | vent,NOUN,2284
+drain,NOUN,2285
+mask,NOUN,2286
+scenery,NOUN,2287
+cloud,NOUN,2288
+boss | leader | manager,NOUN,2289
+shot,NOUN,2290
+landing,NOUN,2291
+cog | gear,NOUN,2292
+shift,NOUN,2293
+horn,NOUN,2294
+ash,NOUN,2295
+throttle,NOUN,2296
+scrap,NOUN,2297
+chunk | fragment | hunk | part | piece | wad,NOUN,2298
+cover | cowling | lid | top,NOUN,2299
+position,NOUN | IMPERATIVE_VERB,2300
+pane | window | windshield,NOUN,2301
+original | painting | photo | photograph | picture | portrait,NOUN,2302
+shelf | shelves,NOUN,2303
+menu,NOUN,2304
+dinner | food | meal | supper,NOUN,2305
+banister | bannister | rail | railing | track,NOUN,2306
+stream,NOUN,2307
+smoke | steam | vapor,IMPERATIVE_VERB | NOUN,2309
+bag,NOUN,2310
+bill | buck | buckazoid | cash | coin | currency | dollar | money,NOUN,2311
+bullseye | target,NOUN,2312
+feet | foot,NOUN,2313
+chair | seat,NOUN,2314
+credit,NOUN,2315
+city | settlement | town,NOUN,2316
+billfold | wallet,NOUN,2317
+crapper | shitter | stool | throne | toilet | urinal,NOUN,2318
+bathroom | john | lavatory | restroom | shithouse | wc,NOUN,2319
+basin | sink,NOUN,2320
+complaint | difficulty | problem | trouble,NOUN,2321
+letter | message | printing | writing,NOUN,2322
+coke | pepsi | soda,NOUN,2323
+music | song,NOUN,2324
+prisoner,NOUN,2325
+air | oxygen | sky,NOUN,2326
+tip,NOUN | IMPERATIVE_VERB,2327
+compartment,NOUN,2328
+paper,NOUN,2329
+keyboard,NOUN,2330
+radio,NOUN | IMPERATIVE_VERB,2331
+watch,NOUN | IMPERATIVE_VERB,2332
+pant | pants,NOUN,2333
+comp | computer | crt | monitor | screen,NOUN,2334
+panties | shorts | skivvies | thermoweave | underwear,NOUN,2335
+speaker,NOUN,2336
+button,NOUN | IMPERATIVE_VERB,2337
+wound,NOUN | IMPERATIVE_VERB,2338
+engine | motor,NOUN,2339
+belt | seatbelt,NOUN,2340
+gas | methane,NOUN,2341
+boulder,NOUN,2342
+rock | stone,NOUN,2343
+muck | mud,NOUN,2344
+rope,NOUN | IMPERATIVE_VERB,2345
+rack,NOUN,2346
+right,NOUN,2347
+left,NOUN,2348
+jet,NOUN,2349
+finger | fingerprint,NOUN,2350
+thumb,NOUN,2351
+oil,NOUN,2352
+pressure,NOUN,2353
+supply,NOUN,2354
+grabber,NOUN,2355
+wreck,NOUN,2356
+device | machine,NOUN,2357
+sorry,NOUN,2358
+antenna,NOUN,2359
+hell | work,NOUN,2360
+brush | bush | flora | foliage | plant | shrub | vegetation | weed,IMPERATIVE_VERB | NOUN,2361
+burn | fire | flame,IMPERATIVE_VERB | NOUN,2362
+surface,NOUN | IMPERATIVE_VERB,2363
+lamp | light | spotlight,IMPERATIVE_VERB | NOUN,2364
+pair,NOUN,2365
+glow,NOUN,2366
+detective,NOUN,2367
+glove,NOUN,2368
+butt | rear | tail,NOUN,2369
+iron | metal | steel,NOUN,2370
+cage | cell | jail | prison,NOUN,2371
+postcard,NOUN,2372
+gel | gelatin | gello | jello,NOUN,2373
+lightning,NOUN,2374
+footprint,NOUN,2375
+elmo | president | pug,NOUN,2376
+stage | tanker,NOUN,2377
+bone | skeleton,NOUN,2378
+hosebag | rosella,NOUN,2379
+aluminum | mallard,NOUN,2380
+domino | dominoes | tinker | tinkertoy | toy,NOUN,2381
+leggo | lego,NOUN,2382
+bore,NOUN,2383
+acme,NOUN,2384
+jup | jupiter,NOUN,2385
+bow | bowtie | fighter,NOUN,2386
+scout,NOUN,2387
+pulley,NOUN,2388
+block,NOUN,2389
+tackle,NOUN,2390
+cruncher | crusher | grinder | shredder,NOUN,2391
+snake,NOUN,2392
+tongue,NOUN,2393
+overhang,NOUN,2394
+bolt | nut,NOUN,2395
+girder,NOUN,2396
+system,NOUN,2397
+chute,NOUN,2398
+leech | pod | pustule,NOUN,2399
+north,NOUN,2400
+e | east,NOUN,2401
+s | south,NOUN,2402
+toe,NOUN,2403
+hill,NOUN,2404
+mog,NOUN,2405
+skull,NOUN,2406
+jar,NOUN,2407
+hook,NOUN,2408
+dog | wolf | wolve,NOUN,2409
+scumsoft,NOUN,2410
+soft,NOUN,2411
+scum,NOUN,2412
+pilot,NOUN,2413
+banner | flag | pennant,NOUN,2414
+mushroom,NOUN,2415
+sheet,NOUN,2416
+support,NOUN,2417
+wing,NOUN,2418
+grafitti,NOUN,2419
+video,NOUN,2420
+access,NOUN,2421
+diagnostic,NOUN,2422
+hal,NOUN,2423
+end,NOUN,2424
+spaceware,NOUN,2425
+eightprong | eightpronged | pin | pined | prong | pronged,NOUN,2426
+accountant,NOUN,2427
+programmer,NOUN,2428
+protrusion,NOUN,2429
+menace,NOUN,2430
+sign,NOUN | IMPERATIVE_VERB,2431
+complex,NOUN,2432
+whip,NOUN,2433
+pyramid | triangle,NOUN,2434
+aperture,NOUN,2435
+dome,NOUN,2436
+toaster,NOUN,2437
+rib,NOUN,2438
+mosaic,NOUN,2439
+post,NOUN,2440
+blade,NOUN,2441
+relic | remnant,NOUN,2442
+prize,NOUN,2443
+scott,NOUN,2444
+mark,NOUN,2445
+pass,NOUN,2446
+lawn | turf,NOUN,2447
+devil,NOUN,2448
+jam | polyfoam | toejam,NOUN,2449
+0 | o | zero,NOUN,4000
+1 | one,NOUN,4001
+2 | two,NOUN,4002
+3 | three,NOUN,4003
+4 | four,NOUN,4004
+5 | five,NOUN,4005
+6 | six,NOUN,4006
+7 | seven,NOUN,4007
+8 | eight,NOUN,4008
+9 | nine,NOUN,4009
+10 | ten,NOUN,4010
+11 | eleven,NOUN,4011
+12 | twelve,NOUN,4012
+13 | thirteen,NOUN,4013
+14 | forteen | fourteen,NOUN,4014
+15 | fifteen,NOUN,4015
+16 | sixteen,NOUN,4016
+17 | seventeen,NOUN,4017
+18 | eighteen,NOUN,4018
+19 | nineteen | ninteen,NOUN,4019
+20 | twenty,NOUN,4020
+30 | thirty,NOUN,4021
+40 | forty,NOUN,4022
+50 | fifty,NOUN,4023
+60 | sixty,NOUN,4024
+70 | seventy,NOUN,4025
+80 | eighty,NOUN,4026
+90 | ninety,NOUN,4027
+100 | hundred,NOUN,4028
+1000 | thousand,NOUN,4029
+1000000 | million,NOUN,4030
+unknownnumber,NOUN,4093
+'!* | noword,,4094
+* | any | anyword,CONJUNCTION | PREPOSITION | ARTICLE | ADJECTIVE | PRONOUN | NOUN | INDICATIVE_VERB | ADVERB | IMPERATIVE_VERB,4095
