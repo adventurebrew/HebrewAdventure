@@ -32,6 +32,9 @@ with open(INPUT_FILE, newline='') as csvfile:
     vocab = [{k: v for k, v in row.items()}
          for row in csv.DictReader(csvfile, skipinitialspace=True)]
 
+# for duplicate word checking
+words = []
+
 # group number to be used for new entries without group number, start after current maximum
 next_group = max([int(e['group']) for e in vocab if e['group'] != '']) + 1
 
@@ -53,11 +56,12 @@ for entry in vocab:
     byte2 += group >> 8
     byte3 = group & 0xff
 
-    for word in entry['words'].split('|'):
+    for w in entry['words'].split('|'):
         # don't bother with the useless compression
         binary_vocab.append(0)
 
-        chars = str.encode(word.strip(), 'windows-1255')
+        word = w.strip()
+        chars = str.encode(word, 'windows-1255')
         for char in chars:
             assert char >= 0 and char <= 255
             binary_vocab.append(char)
@@ -65,6 +69,12 @@ for entry in vocab:
         binary_vocab.append(byte1)
         binary_vocab.append(byte2)
         binary_vocab.append(byte3)
+
+        if word not in words:
+            words.append(word)
+        else:
+            print("Warning: duplicate word '%s' at: " % word.strip())
+            print(entry)
 
 with open(OUTPUT_FILE, "wb") as out_file:
     out_file.write(bytes(binary_vocab))

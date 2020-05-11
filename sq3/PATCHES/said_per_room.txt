@@ -27,6 +27,7 @@
 000.script:09DC: lofsa	 13dc		; said "ass "
 000.script:0A06: lofsa	 13df		; said "inventory "
 000.script:0A11: lofsa	 13e2		; said "examine , acquire / inventory "
+
 002.script:023D: lofsa	 0df4		; said "close / door "
 002.script:0252: lofsa	 0dfa		; said "examine > "
 002.script:025D: lofsa	 0dfe		; said "< in , through / craft , chute , pane [ < escape ] "
@@ -54,6 +55,7 @@
 002.script:0C48: lofsa	 0f14		; said "( turn < on ) , begin / motivator , artifact , device "
 002.script:0C5E: lofsa	 0f28		; said "turn , acquire , manipulate , press , roll , drag / device , motivator , artifact "
 002.script:0C74: lofsa	 0f43		; said "remove , drag , press , acquire / plug [ < modular , 8 , spaceware ] "
+
 003.script:018E: lofsa	 0cbe		; said "examine > "
 003.script:0199: lofsa	 0cc2		; said "/ bow , bow , tie "
 003.script:01AF: lofsa	 0ccc		; said "/ acme "
