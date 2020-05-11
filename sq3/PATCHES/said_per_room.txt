@@ -90,6 +90,7 @@
 003.script:0BA4: lofsa	 0eb3		; said "examine / craft , bow , tie , bow "
 003.script:0BFE: lofsa	 0ec2		; said "examine / craft , bore , implement "
 003.script:0C58: lofsa	 0ead		; said "examine / craft "
+
 004.script:00E9: lofsa	 08be		; said "examine > "
 004.script:00F4: lofsa	 08c2		; said "/ bucket , conveyer , device , elevator , hoist [ / belt ] "
 004.script:010A: lofsa	 08d7		; said "[ < around , at , in ] [ / area , !* ] "
