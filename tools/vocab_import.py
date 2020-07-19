@@ -70,7 +70,13 @@ for entry in vocab:
         binary_vocab.append(byte2)
         binary_vocab.append(byte3)
 
-        if word not in words:
+        if word == '':
+            # empty word, it's OK - just a redundant |
+            pass
+        elif len(word.split()) > 1:
+            print("Warning: multy word '%s' at: " % word.strip())
+            print(entry)
+        elif word not in words:
             words.append(word)
         else:
             print("Warning: duplicate word '%s' at: " % word.strip())
