@@ -21,20 +21,21 @@ for room in rooms:
     entries = [entry for entry in texts if entry['room'] == room]
     output_file = os.path.join(OUTPUT_FOLDER, 'text.' + room.zfill(3))
 
+    if set([entry['translated'] for entry in entries]) == {''}:
+        # there is no translated entry, no need to create a text file
+        continue
+
     with open(output_file, "wb") as out_file:
         out_file.write(SIERRA_TEXT_HEADER)
         for idx, entry in enumerate(entries):
             assert int(entry['idx']) == idx
             if entry['translated'].strip() != '':
-                txt = entry['translated'].strip()
+                txt = entry['translated']
             else:
-                txt = entry['original'].strip()
+                txt = entry['original']
 
             out_file.write(str.encode(txt, ENCODING))
             out_file.write(b'\0')
-
-        if room == '2':
-            break
 
 
 

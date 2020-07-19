@@ -1,8 +1,8 @@
 room,idx,original,translated
-0,0, Score: %d of %d%13s%s%1s,
-0,1, ,
+0,0, Score: %d of %d%13s%s%1s," ניקוד: %d מתוך %d%13s%s%1s"
+0,1,,
 0,2,Memory fragmented.,
-0,3,OK.,
+0,3,OK.,בסדר.
 0,4,This isn't a text adventure!,
 0,5,"OK, you wear the belt.",
 0,6,You're already wearing it.,
@@ -20,32 +20,32 @@ room,idx,original,translated
 0,18,You don't have one of those.,
 0,19,Forget it. Think of something else.,
 0,20,That doesn't seem to be available.,
-0,21,You already have it.,
+0,21,You already have it.,כבר יש לך את זה.
 0,22,You smell nothing of note.,
-0,23,Keep it to yourself.,
-0,24,You can't,
-0,25,Not now.,
-0,26,Sorry. We don't do running.,
+0,23,Keep it to yourself.,שמור את זה לעצמך.
+0,24,You can't,אתה לא יכול.
+0,25,Not now.,לא עכשו.
+0,26,Sorry. We don't do running.,סליחה. אנחנו לא רצים.
 0,27,"Hey, trashmouth! Don't be saying that shit!",
-0,28,Hey! What kind of talk is that?,
+0,28,Hey! What kind of talk is that?,היי! איזה מין דיבור זה?
 0,29,%d/%d,
 0,30,curRoomNum = %d,
-0,31,"Try another word. Apparently, ""%s"" isn't in the Andromedan dictionary.",
-0,32,Do me a favor and try rephrasing that thought.,
-0,33,Pardon me. This program is too stupid to glean your desire from such a wonderfully crafted sentence. Please try something else.,
+0,31,"Try another word. Apparently, ""%s"" isn't in the Andromedan dictionary.","תנסה מילה אחרת. מתברר ש""%s"" לא נמצאת במילון בני אנדרומדה."
+0,32,Do me a favor and try rephrasing that thought.,"תעשה לי טובה, ותנסה לנסח מחדש את מחשבותיך."
+0,33,Pardon me. This program is too stupid to glean your desire from such a wonderfully crafted sentence. Please try something else.,סלח לי. תוכנה זו טפשה מכדי להבין את רצונך ממשפט מנוסח כה היטב. אנא נסה משהו אחר.
 0,34,You possess %d of these nifty monetary units known as `Buckazoids'.,
-0,35,It's not quite within reach.,
-0,36,You've accomplished that task.,
-0,37,You see nothing special.,
-0,38,That's not possible now.,
-0,39,You don't have it.,
+0,35,It's not quite within reach.,זה לא בדיוק בהישג ידך.
+0,36,You've accomplished that task.,ביצעת משימה זו.
+0,37,You see nothing special.,אתה לא רואה משהו מיוחד.
+0,38,That's not possible now.,זה בלתי אפשרי עכשו.
+0,39,You don't have it.,אין לך את זה.
 1,0,,
 1,1,"The pod, considered to be nothing more
 than another piece of scrap, is taken
 aboard a robot commanded garbage
 freighter. Unfortunately these robots
 have no regard for organics.",
-2,0,Check again! It IS closed.,בדוק שנית! זה סגור.
+2,0,Check again! It IS closed.,בדוק שנית! היא סגורה.
 2,1,This task is impossible since the door is sealed from the inside and there is no light emanating from within.,זאת משימה בלתי אפשרית משום שהדלת נעולה מבפנים ושום אור לא בוקע משם.
 2,2,The window is clear enough to reveal the blackness inside.,החלון נקי מספיק בשביל לחשוף את החשיכה שבפנים.
 2,3,The solidly built door looks to be locked in place.,הדלת המוצקה למראה נעולה על מנעול ובריח.
