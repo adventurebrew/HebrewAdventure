@@ -128,6 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+.idea
+
 resource.*
 install.*
 *.drv
@@ -138,3 +140,9 @@ install.*
 *.ico
 version
 mt32*
+
+DEFAULT.CFG
+Manual.pdf
+game.ini
+readme.txt
+sq3.ini
