@@ -1,5 +1,9 @@
 # export scripts strings (except 'said's) to csv
 
+#TODO: missing some strings, with " (instead of expeted { )
+#in Invent.sc
+#and inventory names in Main.sc
+
 import re
 import os
 import glob

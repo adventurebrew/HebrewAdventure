@@ -8,7 +8,7 @@ import os
 from functools import partial
 from itertools import takewhile
 
-INPUT_FILES = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\ORIG_TEXTS\text.*"
+INPUT_FILES = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\ORIG_RESOURCES\text.*"
 OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\texts.csv"
 
 KEYS = ('room', 'idx', 'original', 'translated')
