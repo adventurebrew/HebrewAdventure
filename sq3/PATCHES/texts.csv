@@ -1,9 +1,9 @@
 room,idx,original,translated,comments
-0,0, Score: %d of %d%13s%s%1s," ניקוד: %d מתוך %d%13s%s%1s ", ניקוד: %d מתוך %d%13s%s%1s
+0,0, Score: %d of %d%13s%s%1s," ניקוד: %d מתוך %d%13s%s%1s", ניקוד: %d מתוך %d%13s%s%1s
 0,1,,,
 0,2,Memory fragmented.,,
 0,3,OK.,בסדר.,
-0,4,This isn't a text adventure!,זו אינה הרפתקה בטקסט!,
+0,4,This isn't a text adventure!,זו אינה הרפתקת טקסט!,
 0,5,"OK, you wear the belt.","בסדר, אתה חוגר את החגורה.",
 0,6,You're already wearing it.,אתה כבר חוגר אותה.,
 0,7,"First, you need to wear it.",קודם עליך לחגור אותה.,
@@ -44,10 +44,7 @@ room,idx,original,translated,comments
 than another piece of scrap, is taken
 aboard a robot commanded garbage
 freighter. Unfortunately these robots
-have no regard for organics.","החללית הקטנה, שנחשבה כלא יותר מאשר
-גרוטאת מתכת חסרת חשיבות, הועלתה לסיפון
-ספינת מטען רובוטית. לרוע המזל אותם רובוטים
-לא נודעו ביחסם החם לחומרים אורגניים.",
+have no regard for organics.","החללית הקטנה, שנחשבה כלא יותר מאשר גרוטאת מתכת חסרת חשיבות, הועלתה לסיפון ספינת מטען רובוטית. לרוע המזל אותם רובוטים לא נודעו ביחסם החם כלפי יצורים אורגניים...",
 2,0,Check again! It IS closed.,בדוק שנית! היא סגורה.,
 2,1,This task is impossible since the door is sealed from the inside and there is no light emanating from within.,זאת משימה בלתי אפשרית משום שהדלת נעולה מבפנים ושום אור לא בוקע משם.,
 2,2,The window is clear enough to reveal the blackness inside.,החלון נקי מספיק בשביל לחשוף את החשיכה שבפנים.,
@@ -93,7 +90,7 @@ have no regard for organics.","החללית הקטנה, שנחשבה כלא יותר מאשר
 3,13,"You can't do that, nor would it be helpful.","אינך יכול לעשות זאת, לא שזה היה עוזר.",
 3,14,"Despite technological advances in strong, lightweight ship materials, you can't possibly budge it.","למרות ההתקדמות הטכנולוגית שחלה בפיתוח חומרי חלל חזקים וקלי משקל, אינך יכול פשוט לדחוף את זה.",
 3,15,You hear the faint sound of machinery in operation.,אתה שומע רעש עמום של מכונות בפעולה.,
-3,16,There is no visible means of entry.,,
+3,16,There is no visible means of entry.,אתה לא רואה איך אפשר להכנס.,
 3,17,You are not skilled in ship climbing.,אינך מומחה בטיפוס חלליות.,
 3,18,It's against your nature to do that.,הפעולה הזו מנוגדת לאופי שלך.,
 3,19,Don't waste your time with that stupid box.,חבל שתבזבז את זמנך על הקופסה הטיפשית הזאת.,
@@ -105,7 +102,7 @@ have no regard for organics.","החללית הקטנה, שנחשבה כלא יותר מאשר
 3,25,That would be fruitless. Don't bother.,לא תבוא מכך שום תועלת. אל תטרח.,
 3,26,You grab the ladder and jam it in your pocket.,אתה אוחז בסולם ותוחב אותו עמוק אל תוך כיסך.,
 3,27,Ouch!,אאוץ'!,
-3,28,It's not here to be gotten.,,
+3,28,It's not here to be gotten.,קצת קשה לקחת את מה שלא כאן.,
 3,29,There is no ladder here.,אין כאן שום סולם.,
 3,30,You ease your way into the hole.,אתה מפלס את דרכך אל עבר החור.,
 3,31,"Unfortunately, the fall was too much for your frail frame to withstand.","לרוע המזל, הנפילה היתה קשה מדי עבור עצמותיך השבריריות.",
@@ -171,12 +168,12 @@ have no regard for organics.","החללית הקטנה, שנחשבה כלא יותר מאשר
 5,17,Sensing the floor the claw releases its cargo and begins the ascent to the grabber unit.,בזהותה משטח הולם הצבת משחררת את מטענה ומתחילה בהעלאה על יחידת הגרירה.,
 5,18,"The claw senses contact with the warp motivator, grasps it firmly, and begins the ascent back to the grabber.","הצבת חשה במגע עם מניע המוטיבטור, אוחזת בו בחוזקה, ופותחת בההעלאה על גבי הגורר.",
 5,19,Finding nothing here the claw begins to ascend to the grabber unit.,"כשאינה מוצאת דבר, הצבת פותחת בהעלאה על גבי יחידת הגרירה.",
-6,0,You see another boring ceiling.,,
-6,1,The walls are made of metal. Missing panels reveal old frayed wires.,,
-6,2,One panel lies wedged against the wall. The other remaining panels are welded in place and are quite uninteresting in appearance.,,
+6,0,You see another boring ceiling.,אתה רואה עוד תקרה משעממת.,
+6,1,The walls are made of metal. Missing panels reveal old frayed wires.,הקירות עשויים ממתכת. מאחורי לוחות חסרים נראים חוטי חשמל חשופים.,
+6,2,One panel lies wedged against the wall. The other remaining panels are welded in place and are quite uninteresting in appearance.,אחד מהלוחות נשען על הקיר. שאר הלוחות מרותכים היטב למקומם ולא מעוררים בך כל עניין.,
 6,3,It's against the wall covering only more wall.,,
-6,4,You see another boring floor.,,
-6,5,Someone (or someTHING) has done a real job on this tanker. Was this the result of some space battle? Or perhaps you're not the only one roaming around in here.,,
+6,4,You see another boring floor.,אתה רואה עוד רצפה משעממת.,
+6,5,Someone (or someTHING) has done a real job on this tanker. Was this the result of some space battle? Or perhaps you're not the only one roaming around in here.,מישהו (או משהו) נתן את הנשמה במיכלית הזאת. האם זה נגרם כתוצאה ממלחמת חלל כלשהי? או שאולי אתה לא היחיד שמשוטט כאן בסביבה.,
 6,6,It looks to have survived better than its co-conductors.,,
 6,7,"Except for the one on the left, most of the wires here look dangerously worn.",,
 6,8,All the wires here look dangerously worn.,,
@@ -1095,7 +1092,7 @@ and the galaxy famous World O' Wonders",,
 shock which triggers the Sleep Chamber's
 Revive Mode. As the glass shroud slides
 back, Roger slowly begins to regain
-consciousness.",,
+consciousness.","זעזוע עז ופתאומי הורגש בחללית הקטנה מה שגורם להפעלת תהליך התעוררות בתא ההקפאה. בעוד מעטה הזכוכית גולש לאחוריו, רוג'ר מתחיל לחזור להכרתו אט אט.",
 255,0,%d,,
 280,0,"1. MINI MONOLITH~~~~ ...........................1.00
 2. MONOLITH ................................2.00
