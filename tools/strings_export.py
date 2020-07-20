@@ -1,15 +1,17 @@
 # export scripts strings (except 'said's) to csv
 
-#TODO: missing some strings, with " (instead of expeted { )
-#in Invent.sc
-#and inventory names in Main.sc
+# it's based on Kawa's latest SCICompanion
+# need to make some changes to the original src.english Main.sc:
+# replace "" strings to {}
+# add 'name {blah}' property to inventory items that miss it
+
 
 import re
 import os
 import glob
 import csv
 
-INPUT_FILES = r"C:\Zvika\ScummVM-dev\SCI-Decompilation-Archive\sq3\src\*.sc"
+INPUT_FILES = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\src.english\*.sc"
 OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\scripts_strings.csv"
 KEYS = ('filename', 'idx', 'original', 'translation')
 
@@ -25,4 +27,5 @@ with open(OUTPUT_FILE, 'w', newline='') as output_file:
             entries = re.findall(r'\{.*?\}', text)
 
             for idx, entry in enumerate(entries):
-                dict_writer.writerow({KEYS[0]: basename, KEYS[1]: idx, KEYS[2]: entry.strip('{}'), KEYS[3]: ''})
+                if entry.strip():
+                    dict_writer.writerow({KEYS[0]: basename, KEYS[1]: idx, KEYS[2]: entry.strip('{}'), KEYS[3]: ''})
