@@ -14,6 +14,7 @@ import csv
 
 INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000.orig"
 OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
+SAID_PER_ROOM_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\said_per_room.txt"
 
 classes = {
     0x004: 'CONJUNCTION',
@@ -36,8 +37,26 @@ def get_classes(i):
             result.append(classes[k])
     return result
 
+def get_said_per_room():
+    words = {}
+    with open(SAID_PER_ROOM_FILE) as f:
+        for line in f:
+            if line.strip():
+                sp = line.replace('"', '').split()
+                assert sp[1] == 'said'
+                room = sp[0]
+                words_in_line = sp[2:]
+                for word in words_in_line:
+                    if word.isalnum():
+                        cur = words.get(word, [])
+                        cur.append((room, line.strip()))
+                        words[word] = cur
+    return words
+
+
 
 in_vocab = list(pathlib.Path(INPUT_FILE).read_bytes())
+said_per_room = get_said_per_room()
 
 #TODO: automatic recognize file kind, and support exporting new kind
 kind = "old"
@@ -88,9 +107,23 @@ for entry in vocab:
 sorted_vocab = []
 for k in sorted(vocab_by_group.keys()):
     entry = vocab_by_group[k]
+
+    rooms = []
+    for word in entry['words']:
+        if word in said_per_room:
+            said = said_per_room[word]
+            rooms.extend([str(int(s[0])) for s in said])
+            rooms = list(set(rooms))
+            rooms.sort(key=int)
+
     entry['group'] = k
     entry['words'] = " | ".join(entry['words'])
     entry['class'] = " | ".join(entry['class'])
+    if rooms:
+        entry['rooms'] = ", ".join(rooms)
+    else:
+        entry['rooms'] = ''
+
     sorted_vocab.append(entry)
 
 keys = sorted_vocab[0].keys()
