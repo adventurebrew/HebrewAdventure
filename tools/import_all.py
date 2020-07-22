@@ -5,6 +5,7 @@ import os
 import zipfile
 import shutil
 
+import google_drive
 import vocab_import
 import texts_import
 import strings_import
@@ -26,12 +27,18 @@ def zip_patches():
 
 
 if __name__ == "__main__":
+    print("\nUpdating the .csv files:")
+    google_drive.update_local_csvs()
+
     print("\nVocab import")
     vocab_import.vocab_import()
+
     print("\nTexts import")
     texts_import.texts_import()
+
     print("\nScripts' strings import")
     scripts = strings_import.strings_import()
+
     if scripts:
         input("Please run SCICompanion, and press 'Enter' after the scripts patches have been exported...")
 

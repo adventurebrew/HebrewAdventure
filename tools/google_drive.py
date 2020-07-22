@@ -1,6 +1,7 @@
 # see https://pythonhosted.org/PyDrive/quickstart.html for instructions how to create client_secrets`.json
-# it seems to have changed
-# I choose "Google Drive API", "Web browser (Javascript)"  and "User data"
+# actually, this is a better resource, since I moved to CommandLineAuth (because the local browser didn't work well for me)
+# https://medium.com/analytics-vidhya/pydrive-to-download-from-google-drive-to-a-remote-machine-14c2d086e84e
+
 
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
@@ -48,8 +49,11 @@ def convert_excel_to_csvs():
                 for r in range(sh.nrows):
                     c.writerow(sh.row_values(r))
 
-
-if __name__ == "__main__":
+def update_local_csvs():
     download_excel()
     convert_excel_to_csvs()
     os.remove(os.path.join(OUTPUT_FOLDER, EXCEL_FILE_NAME))
+
+
+if __name__ == "__main__":
+    update_local_csvs()
