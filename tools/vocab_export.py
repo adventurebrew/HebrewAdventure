@@ -112,7 +112,7 @@ for k in sorted(vocab_by_group.keys()):
     for word in entry['words']:
         if word in said_per_room:
             said = said_per_room[word]
-            rooms.extend([str(int(s[0])) for s in said])
+            rooms.extend([s[0].zfill(3) for s in said])
             rooms = list(set(rooms))
             rooms.sort(key=int)
 
@@ -120,7 +120,9 @@ for k in sorted(vocab_by_group.keys()):
     entry['words'] = " | ".join(entry['words'])
     entry['class'] = " | ".join(entry['class'])
     if rooms:
-        entry['rooms'] = ", ".join(rooms)
+        # added 'in ' to force Excel treat it as text, and thus keeping the leading zeroes,
+        # which will help in easy sort by room
+        entry['rooms'] = "in " + ", ".join(rooms)
     else:
         entry['rooms'] = ''
 
@@ -128,6 +130,6 @@ for k in sorted(vocab_by_group.keys()):
 
 keys = sorted_vocab[0].keys()
 with open(OUTPUT_FILE, 'w', newline='') as output_file:
-    dict_writer = csv.DictWriter(output_file, keys)
+    dict_writer = csv.DictWriter(output_file, keys, quoting=csv.QUOTE_ALL)
     dict_writer.writeheader()
     dict_writer.writerows(sorted_vocab)
