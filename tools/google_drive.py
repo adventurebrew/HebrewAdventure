@@ -45,14 +45,14 @@ def convert_excel_to_csvs():
         for csv_info in CSVS_INFO:
             sh = wb.sheet_by_name(csv_info[0])
             with open(os.path.join(OUTPUT_FOLDER, csv_info[1]), 'w', newline="") as f:
-                c = csv.writer(f)
+                c = csv.writer(f, quoting=csv.QUOTE_ALL)
                 for r in range(sh.nrows):
                     c.writerow(sh.row_values(r))
 
 def update_local_csvs():
     download_excel()
     convert_excel_to_csvs()
-    os.remove(os.path.join(OUTPUT_FOLDER, EXCEL_FILE_NAME))
+    #os.remove(os.path.join(OUTPUT_FOLDER, EXCEL_FILE_NAME))
 
 
 if __name__ == "__main__":

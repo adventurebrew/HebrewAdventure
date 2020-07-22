@@ -1,3 +1,9 @@
+#TODO: menu names not replaced
+#TODO: menu items, BiDi
+#TODO: add verbs prefix rules (from mail)
+#TODO: scripts - copy patches from scicompanion
+#TODO: drive - keep token
+
 # runs all import scripts
 # and create zip file
 
