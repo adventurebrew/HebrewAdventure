@@ -19,6 +19,7 @@ classes = {
     'IMPERATIVE_VERB': 0x800
 }
 
+
 def get_class(l):
     if l.strip() == '':
         return 0
@@ -27,6 +28,12 @@ def get_class(l):
     for c in l.split('|'):
         result += classes[c.strip()]
     return result
+
+
+def get_entry_with_word(entries, word):
+    for entry in entries:
+        if word in entry['words']:
+            return entry
 
 
 def read_csv_file():
@@ -39,6 +46,7 @@ def read_csv_file():
     next_group = max([int(e['group']) for e in vocab if e['group'] != '']) + 1
 
     entries = []
+    rooms_to_recompile = []
     for entry in vocab:
         new_entry = {}
         new_entry['cls'] = get_class(entry['class'])
@@ -60,12 +68,23 @@ def read_csv_file():
             elif word not in words:
                 words.append(word)
                 new_entry['words'].append(word)
-            else:
-                print("Warning: duplicate word '%s' at: " % word.strip())
-                print(entry)
+            elif entry['rooms']:    # ignore duplicated that aren't used in any room
+                # this word already appears in an existing entry
+                # we combine the two entries
+                # note - we don't do `new_entry['words'].append(word)` - because `word` already exists in existing_entry
+                existing_entry = get_entry_with_word(entries, word.strip())
+                if existing_entry['cls'] != new_entry['cls']:
+                    existing_entry['cls'] = existing_entry['cls'] | new_entry['cls']
+                existing_entry['words'].extend(new_entry['words'])
+                assert word in existing_entry['words']
+                rooms = [r.strip() for r in entry['rooms'].split('in')[1].split(',')]
+                rooms_to_recompile.extend(rooms)
+                rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
+                #print(entry)
 
         entries.append(new_entry)
-    return entries
+    return (entries, rooms_to_recompile)
+
 
 def write_vocab_file(entries):
     binary_vocab = [0x86, 0x00]  # vocab signature
@@ -98,12 +117,13 @@ def write_vocab_file(entries):
 
 
 def vocab_import():
-    entries = read_csv_file()
+    (entries, rooms_to_recompile) = read_csv_file()
     write_vocab_file(entries)
+    return rooms_to_recompile
 
 
 if __name__ == "__main__":
-    vocab_import()
+    print(vocab_import())
 
 
 
