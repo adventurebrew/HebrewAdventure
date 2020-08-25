@@ -1,7 +1,5 @@
 #BUG: room 29, "get in ship" in Hebrew
-#TODO: compile vocab rooms with new vocab (and see diff)
 #TODO: -- change ADJECTIVE/NOUN order: e.g., room 6, "look bad cable" in Hebrew the order is "look cable bad" : I think it's already working...
-#TODO: scripts - copy patches from scicompanion
 #TODO: drive - keep token
 #TODO: check if can remove some patches from SVM
 
