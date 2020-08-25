@@ -9,7 +9,6 @@
 # and create zip file
 
 import os
-#import zipfile
 import shutil
 
 import misc
@@ -22,16 +21,6 @@ ZIP_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3_hebrew"
 ZIP_ROOT_DIR = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3"
 PATCHES_DIR = "PATCHES"
 
-# def zipdir(path, ziph):
-#     # ziph is zipfile handle
-#     for root, dirs, files in os.walk(path):
-#         for file in files:
-#             ziph.write(os.path.join(root, file))
-#
-# def zip_patches():
-#     zipf = zipfile.ZipFile(ZIP_FILE, 'w', zipfile.ZIP_DEFLATED)
-#     zipdir(PATCHES_DIR, zipf)
-#     zipf.close()
 
 
 def copy_compiled_scripts(rooms_to_recompile):
@@ -44,7 +33,7 @@ def copy_compiled_scripts(rooms_to_recompile):
 
 if __name__ == "__main__":
     print("\nUpdating the .csv files:")
-    google_drive.update_local_csvs()
+    ##google_drive.update_local_csvs()
 
     print("\nVocab import")
     rooms_to_recompile_from_vocab = vocab_import.vocab_import()
@@ -60,7 +49,6 @@ if __name__ == "__main__":
         input("\n\nPress Enter when ready...\n")
         print("... continuing")
         copy_compiled_scripts(rooms_to_recompile)
-
 
     shutil.make_archive(ZIP_FILE, format='zip', root_dir=ZIP_ROOT_DIR, base_dir=PATCHES_DIR)
 

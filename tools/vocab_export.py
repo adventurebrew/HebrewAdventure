@@ -1,4 +1,4 @@
-# Sierra's SCI vocab format has "old" version (used by vocab.0) - with 7 bits ascii
+# Sierra's SCI vocab format has "old" version (used by vocab.000) - with 7 bits ascii
 # and 8th bit used for string end
 # while "new" version (used by vocab.900) has 8 bits ascii
 #
@@ -6,7 +6,6 @@
 # for Hebrew translation, we need to the vocab to be in the newer version
 
 # this exports vocab file to a csv
-# TODO: I was too lazy to properly create one vocab import/export tool
 # see also vocab_import.py
 
 import pathlib
