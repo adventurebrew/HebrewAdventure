@@ -5,6 +5,7 @@
 
 import os
 import csv
+import re
 
 INPUT_CSV_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\scripts_strings.csv"
 INPUT_SCRIPTS_FOLDER = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\src.english"
@@ -19,12 +20,20 @@ def check_replace(s, s_from, s_to):
     return s_new
 
 
-def strings_import():
+def get_room_number(script):
+    room = re.search(r'\(script#\s*(.+)\)', script).group(1)
+    if room.isdigit():
+        return room
+    else:
+        print(room)
+        return room
+
+
+def strings_import(rooms_to_recompile):
     with open(INPUT_CSV_FILE, newline='') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
     filenames = sorted(list(set([entry['filename'] for entry in texts])))
-    changed_files = []
     for filename in filenames:
         entries = [entry for entry in texts if entry['filename'] == filename]
 
@@ -43,19 +52,15 @@ def strings_import():
             old_trans_script = f.read()
 
         if old_trans_script != script:
-            changed_files.append(filename)
+            rooms_to_recompile.append(get_room_number(script))
+            rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
             with open(os.path.join(OUTPUT_SCRIPTS_FOLDER, filename), 'w', encoding=ENCODING, newline='\n') as f:
                 f.write(script)
 
-    if changed_files:
-        print("Please recompile and export patch for the scripts:")
-        for f in changed_files:
-            print(f)
-
-    return changed_files
+    return rooms_to_recompile
 
 
 if __name__ == "__main__":
-    strings_import()
+    strings_import([])
 
 
