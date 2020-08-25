@@ -1,8 +1,10 @@
 # see details in vocab_export.py
 # this imports from csv to fake vocab.000
+import shutil
 
 INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
-OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
+OUTPUT_FILE1 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
+OUTPUT_FILE2 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
 
 import csv
 
@@ -104,16 +106,16 @@ def write_vocab_file(entries):
 
             chars = str.encode(word, 'windows-1255')
             for char in chars:
-                assert char >= 0 and char <= 255
+                assert 0 <= char <= 255
                 binary_vocab.append(char)
             binary_vocab.append(0)  # end of string (only on newer format!)
             binary_vocab.append(byte1)
             binary_vocab.append(byte2)
             binary_vocab.append(byte3)
 
-
-    with open(OUTPUT_FILE, "wb") as out_file:
+    with open(OUTPUT_FILE1, "wb") as out_file:
         out_file.write(bytes(binary_vocab))
+    shutil.copyfile(OUTPUT_FILE1, OUTPUT_FILE2)
 
 
 def vocab_import():

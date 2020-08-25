@@ -33,7 +33,7 @@ def copy_compiled_scripts(rooms_to_recompile):
 
 if __name__ == "__main__":
     print("\nUpdating the .csv files:")
-    ##google_drive.update_local_csvs()
+    google_drive.update_local_csvs()
 
     print("\nVocab import")
     rooms_to_recompile_from_vocab = vocab_import.vocab_import()
