@@ -48,14 +48,11 @@ def strings_import(rooms_to_recompile):
             if entry['translation']:
                 script = check_replace(script, entry['original'], entry['translation'])
 
-        with open(os.path.join(OUTPUT_SCRIPTS_FOLDER, filename), encoding=ENCODING, newline='\n') as f:
-            old_trans_script = f.read()
+        rooms_to_recompile.append(get_room_number(script))
+        rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
+        with open(os.path.join(OUTPUT_SCRIPTS_FOLDER, filename), 'w', encoding=ENCODING, newline='\n') as f:
+            f.write(script)
 
-        if old_trans_script != script:
-            rooms_to_recompile.append(get_room_number(script))
-            rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
-            with open(os.path.join(OUTPUT_SCRIPTS_FOLDER, filename), 'w', encoding=ENCODING, newline='\n') as f:
-                f.write(script)
 
     return rooms_to_recompile
 

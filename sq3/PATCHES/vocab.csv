@@ -392,7 +392,7 @@
 "gel | gelatin | gello | jello | ג'לי | ג'ל","NOUN","2373","in 095","","",""
 "feel | pat | pet | poke | polish | rub | stroke | tap | touch | גע | הרגש | שפשף","IMPERATIVE_VERB","1017","in 095, 700, 702","","",""
 "eightprong | eightpronged | pin | pined | prong | pronged","NOUN","2426","in 095, 702","","",""
-"accountant | מנהל חשבונות","NOUN","2427","in 095, 702","","",""
+"accountant","NOUN","2427","in 095, 702","מנהל חשבונות","",""
 "release | שחרר","NOUN | IMPERATIVE_VERB","1097","in 095, 703","","",""
 "decode | פענח","IMPERATIVE_VERB","1193","in 290","","",""
 "instruction | הוראות | הנחיות","NOUN","2221","in 290","","",""
