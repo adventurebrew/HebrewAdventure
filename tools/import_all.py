@@ -19,13 +19,11 @@ ZIP_ROOT_DIR = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3"
 PATCHES_DIR = "PATCHES"
 
 
-
 def copy_compiled_scripts(rooms_to_recompile):
     for room in rooms_to_recompile:
         file_name = 'script.' + room
         shutil.copyfile(os.path.join(misc.compiled_scripts_dir, file_name),
                         os.path.join(misc.patches_dir, file_name))
-
 
 
 if __name__ == "__main__":

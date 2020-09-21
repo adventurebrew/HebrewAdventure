@@ -5,6 +5,7 @@ import shutil
 INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
 OUTPUT_FILE1 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
 OUTPUT_FILE2 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
+ENCODING = 'windows-1255'
 
 import csv
 
@@ -39,7 +40,7 @@ def get_entry_with_word(entries, word):
 
 
 def read_csv_file():
-    with open(INPUT_FILE, newline='') as csvfile:
+    with open(INPUT_FILE, newline='', encoding='utf-8') as csvfile:
         vocab = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
     # for duplicate word checking

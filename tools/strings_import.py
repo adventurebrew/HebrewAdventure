@@ -23,14 +23,14 @@ def check_replace(s, s_from, s_to):
 def get_room_number(script):
     room = re.search(r'\(script#\s*(.+)\)', script).group(1)
     if room.isdigit():
-        return room
+        return room.zfill(3)
     else:
-        print(room)
+        print("strings_import: get_room_number need to add support to define: ", room)
         return room
 
 
 def strings_import(rooms_to_recompile):
-    with open(INPUT_CSV_FILE, newline='') as csvfile:
+    with open(INPUT_CSV_FILE, newline='', encoding='utf-8') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
     filenames = sorted(list(set([entry['filename'] for entry in texts])))

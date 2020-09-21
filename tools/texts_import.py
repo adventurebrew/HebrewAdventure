@@ -12,7 +12,7 @@ SIERRA_TEXT_HEADER = b'\x83\0'
 
 
 def texts_import():
-    with open(INPUT_FILE, newline='') as csvfile:
+    with open(INPUT_FILE, newline='', encoding='utf-8') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
     rooms = list(set([entry['room'] for entry in texts]))

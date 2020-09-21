@@ -18,7 +18,6 @@ CSVS_INFO = (
     (u'טקסטים לפי חדרים', 'texts.csv'),
 )
 
-
 def drive_init():
     gauth = GoogleAuth()
     gauth.CommandLineAuth()
@@ -44,7 +43,7 @@ def convert_excel_to_csvs():
     with xlrd.open_workbook(os.path.join(OUTPUT_FOLDER, EXCEL_FILE_NAME)) as wb:
         for csv_info in CSVS_INFO:
             sh = wb.sheet_by_name(csv_info[0])
-            with open(os.path.join(OUTPUT_FOLDER, csv_info[1]), 'w', newline="") as f:
+            with open(os.path.join(OUTPUT_FOLDER, csv_info[1]), 'w', newline="", encoding='utf-8') as f:
                 c = csv.writer(f, quoting=csv.QUOTE_ALL)
                 for r in range(sh.nrows):
                     c.writerow(sh.row_values(r))
