@@ -60,6 +60,7 @@ def read_csv_file():
             new_entry['group'] = int(entry['group'])
 
         new_entry['words'] = []
+        duplicated = None
         for w in entry['words'].split('|'):
             word = w.strip()
             if word == '':
@@ -72,20 +73,24 @@ def read_csv_file():
                 words.append(word)
                 new_entry['words'].append(word)
             elif entry['rooms']:    # ignore duplicated that aren't used in any room
-                # this word already appears in an existing entry
-                # we combine the two entries
-                # note - we don't do `new_entry['words'].append(word)` - because `word` already exists in existing_entry
-                existing_entry = get_entry_with_word(entries, word.strip())
-                if existing_entry['cls'] != new_entry['cls']:
-                    existing_entry['cls'] = existing_entry['cls'] | new_entry['cls']
-                existing_entry['words'].extend(new_entry['words'])
-                assert word in existing_entry['words']
-                rooms = [r.strip() for r in entry['rooms'].split('in')[1].split(',')]
-                rooms_to_recompile.extend(rooms)
-                rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
-                #print(entry)
+                duplicated = word
 
-        entries.append(new_entry)
+        if duplicated:
+            # this word already appears in an existing entry
+            # we combine the two entries
+            # note - we don't do `new_entry['words'].append(duplicated)` - because `duplicated` already exists in existing_entry
+            existing_entry = get_entry_with_word(entries, duplicated.strip())
+            if existing_entry['cls'] != new_entry['cls']:
+                existing_entry['cls'] = existing_entry['cls'] | new_entry['cls']
+            existing_entry['words'].extend(new_entry['words'])
+            assert duplicated in existing_entry['words']
+            rooms = [r.strip() for r in entry['rooms'].split('in')[1].split(',')]
+            rooms_to_recompile.extend(rooms)
+            rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
+            #print(entry)
+        else:
+            entries.append(new_entry)
+
     return (entries, rooms_to_recompile)
 
 
