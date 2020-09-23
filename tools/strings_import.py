@@ -58,6 +58,6 @@ def strings_import(rooms_to_recompile):
 
 
 if __name__ == "__main__":
-    strings_import([])
+    print(strings_import([]))
 
 
