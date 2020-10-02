@@ -1,0 +1,904 @@
+words,class,group,rooms
+naked | nude,ADJECTIVE,555,in 000
+invisibility,ADJECTIVE | NOUN,577,in 000
+tp,IMPERATIVE_VERB,1003,in 000
+undress,NOUN | IMPERATIVE_VERB,1095,in 000
+wait,NOUN | IMPERATIVE_VERB,1168,in 000
+backstage,IMPERATIVE_VERB,1205,in 000
+pump,IMPERATIVE_VERB,1206,in 000
+shark,NOUN,2201,in 000
+examine | gaze | inspect | look | observe | peer | scan | stare | view,IMPERATIVE_VERB | NOUN,1140,"in 000, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 018, 025, 027, 028, 029, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 060, 069, 070, 071, 072, 073, 074, 075, 080, 081, 085, 086, 090, 091, 092, 093, 094, 095, 290, 420, 421, 470, 501, 503, 600, 690, 700, 702, 703"
+press | push,IMPERATIVE_VERB,1002,"in 000, 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 081, 086, 095, 420, 421, 600, 700, 703"
+acquire | get | grab | obtain | pick | snag | snatch | take,IMPERATIVE_VERB,1143,"in 000, 002, 003, 004, 005, 006, 007, 008, 010, 013, 014, 015, 028, 029, 042, 043, 052, 062, 069, 080, 085, 090, 091, 092, 093, 290, 421, 470, 501, 600, 690, 700, 702, 703"
+on | upon,PREPOSITION,203,"in 000, 002, 003, 004, 005, 006, 007, 008, 010, 013, 014, 015, 081, 470, 503, 600, 700, 703"
+remove,IMPERATIVE_VERB,1020,"in 000, 002, 003, 004, 005, 006, 007, 008, 014, 090, 092, 470, 600"
+turn,IMPERATIVE_VERB,1192,"in 000, 002, 003, 004, 005, 007, 008, 014, 081, 085, 092, 421, 503, 600, 700"
+smell | sniff,IMPERATIVE_VERB | NOUN,1099,"in 000, 002, 025, 028, 029"
+use,INDICATIVE_VERB,421,"in 000, 003, 008, 009, 010, 011, 012, 013, 014, 015, 052, 066, 069, 081, 090, 092, 095, 290, 420, 421, 600, 700, 702, 703"
+drop | put | set | stash | stow,IMPERATIVE_VERB,1148,"in 000, 003, 008, 014, 015, 066, 075, 090, 092, 290, 470, 700, 703"
+belt | seatbelt,NOUN,2340,"in 000, 004, 009, 010, 014, 052, 081, 085, 421, 503"
+button,NOUN | IMPERATIVE_VERB,2337,"in 000, 009, 010, 011, 012, 013, 014, 081, 086, 095, 420, 421, 703"
+jump,NOUN | IMPERATIVE_VERB,1085,"in 000, 009, 010, 011, 066, 075, 095, 421, 600, 700, 703"
+switch,IMPERATIVE_VERB,1016,"in 000, 014, 081, 090"
+wear,IMPERATIVE_VERB,1038,"in 000, 014, 090, 470, 600"
+panties | shorts | skivvies | thermoweave | underwear,NOUN,2335,"in 000, 014, 600"
+consume | eat | swallow | taste,IMPERATIVE_VERB,1025,"in 000, 025, 028, 029, 095, 700, 703"
+cap | hat,NOUN,2198,"in 000, 025, 043, 470"
+attire | clothes | clothing | coveralls | outfit | overalls | spacesuit | suit | uniform,NOUN,2244,"in 000, 025, 090"
+cast | hurl | throw | toss,IMPERATIVE_VERB,1031,"in 000, 028, 029, 075"
+jog | run,IMPERATIVE_VERB,1162,"in 000, 053, 092"
+anemometer,NOUN,2123,"in 000, 069"
+pass,NOUN,2446,"in 000, 080"
+activate,IMPERATIVE_VERB,1152,"in 000, 081, 503"
+decoder | ring,NOUN,2250,"in 000, 290"
+ass | asshole | cock | cocksucker | cunt | dick | fuck | fucker | motherfucker | prick | pussy | shit | shithead,IMPERATIVE_VERB | NOUN,1204,"in 000, 700, 703"
+inventory,NOUN | IMPERATIVE_VERB,2111,"in 000, 997"
+pry,IMPERATIVE_VERB,1023,in 002
+qa,IMPERATIVE_VERB,1196,in 002
+area | room | scene | vicinity,NOUN,2063,"in 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 018, 025, 027, 028, 029, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 069, 071, 073, 074, 075, 080, 081, 085, 086, 090, 092, 093, 094, 095, 290, 420, 421, 470, 503, 600, 702"
+around,PREPOSITION,217,"in 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 028, 029, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 069, 071, 073, 074, 075, 080, 081, 085, 086, 290, 420, 421, 503, 600, 690"
+in | inside | into,PREPOSITION,206,"in 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 028, 029, 062, 069, 081, 290, 421, 700, 703"
+at,PREPOSITION,202,"in 002, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 014, 015, 028, 029, 700, 703"
+ascend | climb | scale,IMPERATIVE_VERB,1060,"in 002, 003, 004, 005, 006, 007, 008, 010, 011, 013, 015, 028, 052, 062, 073, 074, 075, 080, 094, 420, 421, 501, 600, 700, 703"
+down,ADVERB,323,"in 002, 003, 004, 005, 006, 007, 008, 010, 013, 014, 015, 025, 028, 029, 075, 080, 090, 094, 095, 420, 421, 470, 501, 700, 702, 703"
+deck | floor,NOUN,2069,"in 002, 003, 004, 005, 006, 007, 008, 013, 014, 015, 025, 028, 029, 090, 095, 470, 700, 702, 703"
+drag | pull,IMPERATIVE_VERB,1015,"in 002, 003, 004, 005, 006, 007, 008, 013, 042, 421, 700, 703"
+dirt | ground | sand | soil,NOUN,2070,"in 002, 003, 004, 005, 006, 007, 008, 013, 054, 080, 090, 095, 501, 600, 700, 702, 703"
+manipulate | move,IMPERATIVE_VERB,1199,"in 002, 003, 004, 005, 006, 007, 008, 013, 700, 703"
+craft | cruiser | freighter | hull | rocket | saucer | ship | shuttle | spacecraft | spaceship | vehicle | vessel,NOUN,2026,"in 002, 003, 004, 005, 006, 007, 008, 014, 028, 029, 049, 062, 069, 070, 080, 094, 600, 700, 703"
+through,PREPOSITION,212,"in 002, 003, 004, 005, 006, 007, 008, 015, 069, 700"
+below | beneath | under | underneath,PREPOSITION,208,"in 002, 003, 004, 005, 006, 007, 008, 700, 703"
+modular,ADJECTIVE,569,"in 002, 003, 004, 005, 007, 008"
+plug,NOUN,2235,"in 002, 003, 004, 005, 007, 008"
+spaceware,NOUN,2425,"in 002, 003, 004, 005, 007, 008"
+8 | eight,NOUN,4008,"in 002, 003, 004, 005, 007, 008"
+device | machine,NOUN,2357,"in 002, 003, 004, 005, 007, 008, 009, 010, 011, 012, 013, 029, 069, 072, 073, 074, 075, 090, 092, 290, 421, 700, 703"
+artifact | object,NOUN,2113,"in 002, 003, 004, 005, 007, 008, 011, 013, 015, 700"
+begin | start,INDICATIVE_VERB,413,"in 002, 003, 004, 005, 007, 008, 013, 014, 092, 703"
+motivator | warp,NOUN,2086,"in 002, 003, 004, 005, 007, 008, 013, 014, 700, 703"
+roll,IMPERATIVE_VERB,1059,"in 002, 003, 004, 005, 007, 008, 700"
+hoist | lift | raise,IMPERATIVE_VERB | NOUN,1178,"in 002, 003, 004, 006, 007, 008, 009, 014, 700"
+open,IMPERATIVE_VERB,1014,"in 002, 003, 004, 006, 008, 014, 015, 028, 029, 043, 069, 086, 090, 093, 600, 700, 703"
+enter | reenter,IMPERATIVE_VERB,1183,"in 002, 003, 004, 007, 008, 013, 014, 028, 049, 062, 075, 081, 090"
+pane | window | windshield,NOUN,2301,"in 002, 003, 004, 007, 008, 014, 028, 029, 095, 470"
+glass,NOUN,2163,"in 002, 003, 004, 007, 008, 043, 470"
+break | damage | destroy | smash,IMPERATIVE_VERB,1149,"in 002, 003, 004, 007, 008, 043, 470, 700, 703"
+nozzle | thruster,NOUN,2231,"in 002, 003, 004, 008"
+board | mount | ride,IMPERATIVE_VERB | NOUN,1056,"in 002, 003, 004, 008, 013, 028, 421, 702"
+chute,NOUN,2398,"in 002, 003, 004, 008, 052"
+door | doorway | hatch,NOUN,2110,"in 002, 003, 006, 008, 012, 014, 015, 028, 029, 042, 043, 062, 081, 086, 090, 095, 600"
+close | shut,IMPERATIVE_VERB,1157,"in 002, 004, 008, 014, 028, 029, 090"
+engine | motor,NOUN,2339,"in 002, 008, 014, 421"
+escape,NOUN | IMPERATIVE_VERB,1131,"in 002, 008, 095"
+fix | repair,IMPERATIVE_VERB,1142,"in 002, 014"
+air | oxygen | sky,NOUN,2326,"in 002, 054, 080, 094, 501, 600"
+flying,ADJECTIVE,580,in 003
+walk,IMPERATIVE_VERB,1065,in 003
+implement | tool,NOUN,2173,in 003
+sound,NOUN,2226,in 003
+bore,NOUN,2383,in 003
+acme,NOUN,2384,in 003
+jup | jupiter,NOUN,2385,"in 003, 004"
+aperture,NOUN,2435,"in 003, 004"
+up,ADVERB,322,"in 003, 004, 005, 006, 007, 008, 010, 013, 014, 015, 025, 028, 029, 043, 054, 074, 075, 080, 090, 094, 095, 420, 421, 470, 501, 700, 702, 703"
+cavity | hole | opening | orifice,NOUN,2210,"in 003, 004, 006, 008, 014, 015, 025, 042, 046, 048, 050, 051, 075, 600, 700"
+port | porthole | viewport,NOUN,2101,"in 003, 004, 008"
+box | case | crate,NOUN,2192,"in 003, 004, 043, 069, 470"
+2 | two,NOUN,4002,"in 003, 004, 095"
+iron | metal | steel,NOUN,2370,"in 003, 006, 008, 009, 010, 700, 703"
+go,INDICATIVE_VERB,411,"in 003, 007, 013, 014, 015, 062, 075, 081, 470, 703"
+debris | junk,IMPERATIVE_VERB | NOUN,1128,"in 003, 008, 009, 010, 052, 421, 470, 700, 703"
+scrap,NOUN,2297,"in 003, 008, 009, 010, 700, 703"
+stand,NOUN | IMPERATIVE_VERB,1081,"in 003, 008, 010, 013, 014, 015, 028, 029, 700, 703"
+descend,IMPERATIVE_VERB,1068,"in 003, 008, 010, 075"
+place,NOUN | IMPERATIVE_VERB,1129,"in 003, 008, 014, 015, 090"
+ladder,NOUN,2281,"in 003, 008, 015, 052, 074, 075, 600, 700, 703"
+erect,NOUN | IMPERATIVE_VERB,1084,"in 003, 008, 015, 700, 703"
+lower,ADJECTIVE | IMPERATIVE_VERB,1070,"in 003, 009, 010, 011, 012, 013"
+clean,IMPERATIVE_VERB,1200,"in 003, 028, 029, 700, 703"
+bow | bowtie | fighter,NOUN,2386,"in 003, 070, 094"
+listen,IMPERATIVE_VERB,1064,"in 003, 700, 703"
+tie,IMPERATIVE_VERB,1187,"in 003, 700, 703"
+cease | stop,INDICATIVE_VERB,412,in 004
+green,ADJECTIVE | NOUN,502,in 004
+bite,NOUN | IMPERATIVE_VERB,1110,in 004
+buff | shine,IMPERATIVE_VERB,1163,in 004
+tickle,IMPERATIVE_VERB,1201,in 004
+wheel,NOUN,2027,in 004
+branch | limb,NOUN,2165,in 004
+tower,NOUN,2271,in 004
+dome,NOUN,2436,in 004
+pit | shaft | tunnel,NOUN,2098,"in 004, 005, 006, 012, 046, 095, 420, 421"
+android | arnoid | automaton | battlebot | droid | robot | terminator,NOUN,2045,"in 004, 005, 007, 008, 013, 047, 052, 421, 470, 501"
+appendage | arm | hand | paw,IMPERATIVE_VERB | NOUN,2207,"in 004, 005, 008, 047, 700, 703"
+onto,PREPOSITION,204,"in 004, 005, 010, 013, 703"
+finger | fingerprint,NOUN,2350,"in 004, 005, 470"
+big | large | massive,ADJECTIVE,551,"in 004, 008"
+off,PREPOSITION,205,"in 004, 008, 010, 013, 014, 081, 085, 421, 470, 503, 600, 703"
+pole,NOUN,2122,"in 004, 008, 052, 066, 069, 600"
+stair | staircase | stairway | step,IMPERATIVE_VERB | NOUN,2073,"in 004, 008, 074, 086, 421, 501"
+bucket,NOUN,2082,"in 004, 009"
+conveyer,NOUN | IMPERATIVE_VERB,2085,"in 004, 009, 010"
+elevator,NOUN,2134,"in 004, 009, 086, 420, 421"
+cog | gear,NOUN,2292,"in 004, 421"
+pulley,NOUN,2388,"in 004, 421"
+protrusion,NOUN,2429,in 005
+toaster,NOUN,2437,in 005
+stage | tanker,NOUN,2377,"in 005, 006, 007"
+crawl,IMPERATIVE_VERB,1066,"in 005, 006, 007, 008, 015, 501, 703"
+tube,NOUN,2138,"in 005, 006, 008"
+console | panel | plate | plates,NOUN,2095,"in 005, 006, 008, 013, 014, 095, 420, 700, 703"
+metallic,ADJECTIVE,586,"in 005, 007"
+head,NOUN,2154,"in 005, 007, 008, 047, 470, 700, 703"
+converse | speak | talk,IMPERATIVE_VERB,1147,"in 005, 013, 014, 025, 028, 029, 052, 053, 069, 085, 092, 093, 095, 421, 470, 501, 503, 702"
+eva | flight | galaxy | space | universe,NOUN,2245,"in 005, 014"
+explore | frisk | search,IMPERATIVE_VERB,1008,"in 005, 014, 052, 090, 092, 093, 421, 702"
+mog,NOUN,2405,"in 005, 042, 470"
+bone | skeleton,NOUN,2378,"in 005, 470"
+absent | lost | missing,ADJECTIVE,520,in 006
+fine | good,ADJECTIVE,529,in 006
+bad,ADJECTIVE,535,in 006
+side,NOUN,2125,in 006
+cave | cavern | grotto,NOUN,2259,in 006
+mushroom,NOUN,2415,in 006
+grate | grating | louver | louvre | vent,NOUN,2284,"in 006, 007, 703"
+conduit | pipe | pipeline,NOUN,2279,"in 006, 008, 010, 700, 703"
+cable | cord | wire,IMPERATIVE_VERB | NOUN,2019,"in 006, 008, 014, 015, 700, 703"
+partition | wall,NOUN,2124,"in 006, 012, 013, 014, 015, 028, 029, 046, 086, 090, 092, 095, 470, 600, 700, 702, 703"
+ceiling,NOUN,2126,"in 006, 013, 014, 015, 025, 028, 029, 090, 421, 470, 700, 702, 703"
+above | over,PREPOSITION,211,"in 006, 013, 066, 700, 703"
+all | every,ADJECTIVE,552,"in 006, 015"
+mice | mouse | rat | rodent,NOUN,2280,"in 006, 015"
+animal | beast | creature | monster,NOUN,2185,"in 006, 015, 025, 028, 029, 042, 043, 047, 470"
+left,NOUN,2348,"in 006, 015, 090, 095, 702"
+conceal | hide,IMPERATIVE_VERB,1150,"in 006, 069, 501"
+jagged | worn,ADJECTIVE,584,"in 006, 700"
+broken | damaged | poked,ADJECTIVE,578,in 007
+dense,ADJECTIVE,588,in 007
+helmet,NOUN,2202,in 007
+wreck,NOUN,2356,in 007
+whip,NOUN,2433,in 007
+to,PREPOSITION,200,"in 007, 008, 010, 013, 081, 700, 703"
+give | offer | present,IMPERATIVE_VERB,1154,"in 007, 025, 470"
+eye,NOUN,2218,"in 007, 025, 470"
+edge,NOUN,2219,"in 007, 075, 600, 700"
+programmer,NOUN,2428,"in 007, 700"
+with,ASSOCIATION,152,in 008
+nerve,ADJECTIVE,575,in 008
+round,ADJECTIVE,576,in 008
+call,IMPERATIVE_VERB,1165,in 008
+reach,IMPERATIVE_VERB,1197,in 008
+handle,NOUN,2000,in 008
+neck | throat,NOUN,2015,in 008
+hose,NOUN,2142,in 008
+leggo | lego,NOUN,2382,in 008
+diagnostic,NOUN,2422,in 008
+pyramid | triangle,NOUN,2434,in 008
+blade,NOUN,2441,in 008
+chair | seat,NOUN,2314,"in 008, 009, 010, 011, 012, 013, 014, 028, 029, 702, 703"
+garbage | litter | refuse | trash,IMPERATIVE_VERB | NOUN,1137,"in 008, 009, 015, 028, 029, 090, 095, 700, 702, 703"
+cabin | cockpit,NOUN,2237,"in 008, 014"
+compartment,NOUN,2328,"in 008, 014"
+scum,NOUN,2412,"in 008, 014"
+afix | attach | connect | fasten | install | reconnect | secure | splice,IMPERATIVE_VERB,1075,"in 008, 014, 015"
+generator | reactor,NOUN,2028,"in 008, 014, 015, 072, 073, 074, 075"
+play,IMPERATIVE_VERB,1092,"in 008, 029, 290"
+aluminum | mallard,NOUN,2380,"in 008, 049, 094"
+little | small | tiny,ADJECTIVE,550,"in 008, 095"
+domino | dominoes | tinker | tinkertoy | toy,NOUN,2381,"in 008, 470"
+disembark | evacuate | exit | leave,IMPERATIVE_VERB | NOUN,1169,"in 009, 010, 011, 012, 013, 014, 025, 028, 081, 090, 290, 470"
+claw,NOUN | IMPERATIVE_VERB,2220,"in 009, 010, 011, 012, 013, 703"
+grabber,NOUN,2355,"in 009, 010, 011, 012, 013, 703"
+heap | mound | pile,NOUN,2229,"in 009, 010, 015, 052, 700, 703"
+tackle,NOUN,2390,in 010
+sheet,NOUN,2416,in 010
+post,NOUN,2440,in 010
+control,NOUN | IMPERATIVE_VERB,2097,"in 010, 013, 014, 095, 420, 421, 703"
+banister | bannister | rail | railing | track,NOUN,2306,"in 010, 013, 074, 421, 700, 703"
+leap | polevault | vault,IMPERATIVE_VERB,1086,"in 010, 066, 703"
+w | west,NOUN,2035,"in 012, 015, 700, 703"
+corridor | hall | hallway | passage | passageway,NOUN,2067,"in 012, 090"
+monitoring,ADJECTIVE,574,in 013
+safety,ADJECTIVE,579,in 013
+bin,NOUN,2264,in 013
+out | outer | outside,PREPOSITION,207,"in 013, 014, 028, 029, 470, 700, 703"
+comp | computer | crt | monitor | screen,NOUN,2334,"in 013, 014, 029"
+system,NOUN,2397,"in 013, 015"
+lamp | light | spotlight,IMPERATIVE_VERB | NOUN,2364,"in 013, 015, 700, 703"
+beat | hit | kick | pound | punch | slap | stomp | strike,IMPERATIVE_VERB,1175,"in 013, 028, 029, 042, 052, 085, 095, 290, 470, 700, 702, 703"
+attack | kill | murder,IMPERATIVE_VERB,1024,"in 013, 052, 053, 069, 085, 095, 421, 470, 501"
+stick,NOUN,2062,"in 013, 052, 421, 703"
+pedestal | platform,NOUN,2148,"in 013, 074, 095, 421"
+holler | scream | shout | yell,INDICATIVE_VERB,422,"in 013, 700, 703"
+back,PREPOSITION | ADJECTIVE | NOUN | IMPERATIVE_VERB,215,"in 013, 703"
+forward,PREPOSITION,223,"in 013, 703"
+backward,PREPOSITION,224,"in 013, 703"
+drive | operate,IMPERATIVE_VERB,1195,"in 013, 703"
+knob | lever,NOUN,2160,"in 013, 703"
+throttle,NOUN,2296,"in 013, 703"
+shoot,IMPERATIVE_VERB,1005,in 014
+launch,IMPERATIVE_VERB,1053,in 014
+fly,IMPERATIVE_VERB,1074,in 014
+park,NOUN | IMPERATIVE_VERB,1104,in 014
+land,IMPERATIVE_VERB,1191,in 014
+star,NOUN,2153,in 014
+cushion | sofa,NOUN,2268,in 014
+video,NOUN,2420,in 014
+access,NOUN,2421,in 014
+prize,NOUN,2443,in 014
+scott,NOUN,2444,in 014
+hal,NOUN,2423,"in 014, 015"
+crystal | gem | orium,NOUN,2248,"in 014, 015, 025, 470, 700, 703"
+sit,IMPERATIVE_VERB,1153,"in 014, 028, 029, 501, 702, 703"
+ramp,NOUN,2205,"in 014, 062, 086, 095"
+gun | weapon | weapons,NOUN,2061,"in 014, 069, 085"
+insert,IMPERATIVE_VERB,1057,"in 014, 090, 290"
+replace | return,IMPERATIVE_VERB,1130,"in 014, 092"
+tile,NOUN,2251,"in 014, 700"
+passenger | thing | traveler | traveller,NOUN,2054,"in 014, 702"
+by,PREPOSITION,226,in 015
+chunk | fragment | hunk | part | piece | wad,NOUN,2298,in 015
+cover | cowling | lid | top,NOUN,2299,in 015
+hook,NOUN,2408,in 015
+support,NOUN,2417,in 015
+jar,NOUN,2407,"in 015, 421"
+e | east,NOUN,2401,"in 015, 700"
+leech | pod | pustule,NOUN,2399,"in 015, 700, 703"
+north,NOUN,2400,"in 015, 700, 703"
+her,PRONOUN,109,in 025
+pay,NOUN | IMPERATIVE_VERB,1123,in 025
+bitch | broad | female | girl | lady | slut | whore | woman,NOUN,2053,in 025
+him,PRONOUN,107,"in 025, 028, 029"
+order,NOUN | IMPERATIVE_VERB,1091,"in 025, 028, 029"
+menu,NOUN,2304,"in 025, 028, 029"
+dinner | food | meal | supper,NOUN,2305,"in 025, 028, 029"
+read,IMPERATIVE_VERB,1138,"in 025, 028, 029, 042, 043, 044, 290, 470"
+alien | lifeform,NOUN,2186,"in 025, 028, 029, 043, 047, 470"
+kiss,NOUN | IMPERATIVE_VERB,1114,"in 025, 028, 029, 053, 085, 470, 700, 703"
+clerk | employee,NOUN,2040,"in 025, 028, 029, 069"
+bystander | controller | person | technician | worker,NOUN,2043,"in 025, 028, 029, 093, 702"
+buy | purchase,IMPERATIVE_VERB | NOUN,1090,"in 025, 028, 029, 470"
+menace,NOUN,2430,"in 025, 029, 043"
+lip | teeth | tooth,NOUN,2236,"in 025, 047"
+bill | buck | buckazoid | cash | coin | currency | dollar | money,NOUN,2311,"in 025, 290"
+bye | goodbye,NOUN,2057,"in 025, 290, 470"
+trade,IMPERATIVE_VERB,1188,"in 025, 470"
+monolith,NOUN,2022,in 027
+enterprise,NOUN,2030,in 027
+burger,NOUN,2023,"in 027, 028, 029"
+cafe | diner | restaurant,NOUN,2025,"in 027, 028, 029"
+away,ADVERB,326,"in 028, 029"
+being,NOUN,2044,"in 028, 029"
+customer | patron,NOUN,2046,"in 028, 029"
+booth,NOUN,2238,"in 028, 029"
+bag,NOUN,2310,"in 028, 029"
+table,NOUN,2116,"in 028, 029, 043"
+drink,NOUN | IMPERATIVE_VERB,1102,"in 028, 029, 091"
+folk | people,NOUN,2051,"in 028, 029, 095, 702"
+ask | inquire | request,IMPERATIVE_VERB | NOUN,1166,"in 028, 029, 470"
+counter,NOUN,2118,"in 028, 029, 470"
+grafitti,NOUN,2419,in 029
+tilt,IMPERATIVE_VERB,1190,"in 029, 290"
+astro | chicken,NOUN,2145,"in 029, 290"
+game,NOUN,2161,"in 029, 290"
+dune,NOUN,2071,"in 041, 046, 050, 501"
+feet | foot,NOUN,2313,"in 042, 043"
+entrance,NOUN,2272,"in 042, 043, 081, 095"
+leg,NOUN,2239,"in 042, 043, 700, 703"
+sign,NOUN | IMPERATIVE_VERB,2431,"in 042, 044, 081"
+toe,NOUN,2403,"in 042, 054, 501"
+flashing,ADJECTIVE,518,in 043
+knock | rap,IMPERATIVE_VERB,1030,in 043
+mom | mother,NOUN,2031,in 043
+dad | father,NOUN,2032,in 043
+car | hovercraft | hoverwagon | wagon,NOUN,2197,in 043
+neon,NOUN,2256,in 043
+slime,NOUN,2283,in 043
+s | south,NOUN,2402,in 043
+lawn | turf,NOUN,2447,in 043
+devil,NOUN,2448,in 043
+hill,NOUN,2404,"in 043, 047"
+building | house | shack | structure,NOUN,2255,"in 043, 072, 073, 074, 075, 081, 700"
+display | show,IMPERATIVE_VERB | NOUN,1179,"in 043, 090, 470"
+boy | child | kid,NOUN,2034,"in 043, 093, 095"
+blatz | fester,NOUN,2033,"in 043, 421, 470"
+bank,NOUN,2249,in 046
+rock | stone,NOUN,2343,"in 048, 050, 051, 052, 069, 070, 080, 470, 501, 600"
+tongue,NOUN,2393,in 052
+orat | orat-on-a-stick,NOUN,2171,"in 052, 421"
+feed,IMPERATIVE_VERB,1013,in 053
+bridle,IMPERATIVE_VERB,1185,in 053
+charm,IMPERATIVE_VERB,1186,in 053
+cruncher | crusher | grinder | shredder,NOUN,2391,in 053
+snake,NOUN,2392,in 053
+butte | mountain | plateau | rim,NOUN,2253,"in 054, 072, 501"
+desert,NOUN,2072,"in 054, 501"
+cloud,NOUN,2288,"in 054, 501"
+lightning,NOUN,2374,"in 054, 501"
+bubble,NOUN,2103,in 060
+across,PREPOSITION,210,in 066
+canyon | chasm | crevice | fissure | gorge,NOUN,2094,"in 066, 600"
+seismic,ADJECTIVE,582,in 069
+research,ADJECTIVE,583,in 069
+station,NOUN,2013,in 069
+antenna,NOUN,2359,in 069
+boulder,NOUN,2342,"in 069, 070, 080, 600"
+detonator | thermal,NOUN,2183,"in 069, 075, 600"
+flunky | lackey | minion | pirate,NOUN,2038,"in 069, 081, 085"
+equipment,NOUN,2131,"in 069, 421"
+scope | telescope,NOUN,2121,"in 069, 690"
+scout,NOUN,2387,"in 070, 421"
+skull,NOUN,2406,"in 070, 470"
+beam | field | force | ray,NOUN,2276,"in 072, 073, 074, 075, 085, 690, 700, 703"
+lava | magma,NOUN,2258,"in 073, 074, 075, 600"
+bomb,NOUN,2260,in 075
+pestulon,NOUN,2021,"in 075, 470"
+moon | planet,NOUN,2156,"in 075, 600, 690"
+tree,NOUN,2120,in 080
+banner | flag | pennant,NOUN,2414,in 080
+guard | jailer,NOUN,2036,"in 081, 085, 095, 503"
+deactivate,IMPERATIVE_VERB,1063,"in 081, 085, 503"
+dog | wolf | wolve,NOUN,2409,"in 081, 470"
+scumsoft,NOUN,2410,"in 081, 470"
+soft,NOUN,2411,"in 081, 470"
+a,ARTICLE,2,in 090
+latch | lock,IMPERATIVE_VERB | NOUN,1108,in 090
+change,NOUN | IMPERATIVE_VERB,1120,in 090
+pocket,NOUN | IMPERATIVE_VERB,1122,in 090
+find | locate,IMPERATIVE_VERB,1151,in 090
+janitor,NOUN,2001,in 090
+keylock | scanner,NOUN,2014,in 090
+closet,NOUN,2106,in 090
+life,NOUN,2151,in 090
+position,NOUN | IMPERATIVE_VERB,2300,in 090
+girder,NOUN,2396,in 090
+copy | duplicate | photocopy,NOUN | IMPERATIVE_VERB,1184,"in 090, 092"
+original | painting | photo | photograph | picture | portrait,NOUN,2302,"in 090, 092"
+unlock,IMPERATIVE_VERB,1028,"in 090, 093"
+key,NOUN,2108,"in 090, 093"
+card | keycard,NOUN,2137,"in 090, 093, 470"
+crack | line | stripe,NOUN | IMPERATIVE_VERB,1125,"in 090, 095, 600"
+mr,ADJECTIVE,573,"in 090, 095, 702"
+blast | disintegrate | vaporize | zap,IMPERATIVE_VERB,1182,"in 090, 095, 702"
+mrgarbage | vaporizer,NOUN,2008,"in 090, 095, 702"
+right,NOUN,2347,"in 090, 095, 702"
+hold,NOUN | IMPERATIVE_VERB,1087,"in 090, 421, 700, 703"
+fart | leak | pee | piss | urinate,IMPERATIVE_VERB | NOUN,1176,in 091
+water,NOUN | IMPERATIVE_VERB,2135,in 091
+brush | bush | flora | foliage | plant | shrub | vegetation | weed,IMPERATIVE_VERB | NOUN,2361,in 091
+calendar,NOUN,2002,"in 091, 702"
+make,IMPERATIVE_VERB,1009,in 092
+copier,NOUN,2005,in 092
+elmo | president | pug,NOUN,2376,"in 092, 093, 095"
+hang,IMPERATIVE_VERB,1012,"in 092, 703"
+drawer,NOUN,2107,in 093
+boss | leader | manager,NOUN,2289,in 093
+complex,NOUN,2432,in 093
+desk,NOUN,2117,"in 093, 702"
+combat | fight,IMPERATIVE_VERB,1001,in 095
+free | untie,IMPERATIVE_VERB,1098,in 095
+melt,IMPERATIVE_VERB,1189,in 095
+aisle | bridge | walkway,NOUN,2017,in 095
+gel | gelatin | gello | jello,NOUN,2373,in 095
+feel | pat | pet | poke | polish | rub | stroke | tap | touch,IMPERATIVE_VERB,1017,"in 095, 700, 702"
+eightprong | eightpronged | pin | pined | prong | pronged,NOUN,2426,"in 095, 702"
+accountant,NOUN,2427,"in 095, 702"
+release,NOUN | IMPERATIVE_VERB,1097,"in 095, 703"
+decode,IMPERATIVE_VERB,1193,in 290
+instruction,NOUN,2221,in 290
+letter | message | printing | writing,NOUN,2322,in 290
+relic | remnant,NOUN,2442,in 290
+aid | assist | care | help,IMPERATIVE_VERB | NOUN,1105,"in 290, 997"
+quit,IMPERATIVE_VERB,1170,"in 290, 997"
+rope,NOUN | IMPERATIVE_VERB,2345,in 421
+overhang,NOUN,2394,in 421
+bolt | nut,NOUN,2395,in 421
+swing,IMPERATIVE_VERB,1019,"in 421, 700"
+body | carcass | corpse,NOUN,2200,"in 421, 700, 703"
+sell,IMPERATIVE_VERB,1035,in 470
+shop,NOUN | IMPERATIVE_VERB,1118,in 470
+store,NOUN | IMPERATIVE_VERB,1119,in 470
+face,NOUN | IMPERATIVE_VERB,1124,in 470
+rob | steal | swipe,NOUN,2060,in 470
+owner,NOUN,2144,in 470
+shirt,NOUN,2243,in 470
+shelf | shelves,NOUN,2303,in 470
+rack,NOUN,2346,in 470
+postcard,NOUN,2372,in 470
+pilot,NOUN,2413,in 470
+glowing,ADJECTIVE,543,"in 470, 700, 703"
+mouth,NOUN,2090,"in 470, 700, 703"
+cabinet | file,NOUN,2105,"in 470, 702"
+bug | insect | scorpazoid | scorpion,NOUN,2176,in 501
+footprint,NOUN,2375,in 501
+dig,IMPERATIVE_VERB,1047,"in 501, 700"
+lie,NOUN | IMPERATIVE_VERB,1107,"in 501, 700, 703"
+ortega,NOUN,2020,in 600
+lake,NOUN,2136,in 600
+ledge,NOUN,2240,in 600
+cliff,NOUN,2252,in 600
+volcano | volcanoe,NOUN,2257,in 600
+sharp,ADJECTIVE,581,in 700
+barbed,ADJECTIVE,585,in 700
+bend,IMPERATIVE_VERB,1198,in 700
+paint,NOUN | IMPERATIVE_VERB,2081,in 700
+coolant | fluid | liquid | lubricant | propellant,NOUN,2222,in 700
+frame,NOUN | IMPERATIVE_VERB,2277,in 700
+end,NOUN,2424,in 700
+rib,NOUN,2438,in 700
+expectorate | spit,IMPERATIVE_VERB | NOUN,1072,"in 700, 703"
+whistle,NOUN | IMPERATIVE_VERB,1083,"in 700, 703"
+nap | sleep | snooze,IMPERATIVE_VERB,1156,"in 700, 703"
+write,IMPERATIVE_VERB,1159,"in 700, 703"
+lean,IMPERATIVE_VERB,1194,"in 700, 703"
+cry,IMPERATIVE_VERB,1202,"in 700, 703"
+laugh,IMPERATIVE_VERB,1203,"in 700, 703"
+self | wilco,NOUN,2047,"in 700, 703"
+can,NOUN | INDICATIVE_VERB,408,in 702
+chart,NOUN,2003,in 702
+department | office,NOUN,2065,in 702
+basket,NOUN,2214,in 702
+paper,NOUN,2329,in 702
+from,PREPOSITION,201,in 703
+bar,NOUN,2011,in 703
+hosebag | rosella,NOUN,2379,in 703
+normal,ADVERB,315,in 997
+faster,ADJECTIVE,557,in 997
+slower,ADJECTIVE,558,in 997
+restart,IMPERATIVE_VERB,1011,in 997
+save,IMPERATIVE_VERB,1033,in 997
+restore,IMPERATIVE_VERB,1034,in 997
+pause,IMPERATIVE_VERB,1171,in 997
+:* | the,ARTICLE,1,
+an,ARTICLE,3,
+el,ARTICLE,4,
+la,ARTICLE,5,
+los,ARTICLE,6,
+and,CONJUNCTION,50,
+or,CONJUNCTION,51,
+nor,CONJUNCTION,52,
+if,CONJUNCTION,54,
+but,CONJUNCTION,55,
+it,PRONOUN,100,
+this,PRONOUN,101,
+these,PRONOUN,102,
+that,PRONOUN,103,
+those,PRONOUN,104,
+them,PRONOUN,105,
+themselves,PRONOUN,106,
+himself,PRONOUN,108,
+herself,PRONOUN,110,
+i | me | myself,NOUN,111,
+he,NOUN,112,
+she,NOUN,113,
+they,NOUN,114,
+ya | you,NOUN,115,
+yourself,NOUN,116,
+we,NOUN,117,
+us,NOUN,118,
+ourselves,NOUN,119,
+until,ASSOCIATION,150,
+while,ASSOCIATION,151,
+without,ASSOCIATION,153,
+for,ASSOCIATION,154,
+about,ASSOCIATION,155,
+between,PREPOSITION,209,
+behind,PREPOSITION | NOUN,213,
+ahead,PREPOSITION,214,
+front,PREPOSITION | ADJECTIVE | NOUN,216,
+here,PREPOSITION,218,
+there,PREPOSITION,219,
+everywhere,PREPOSITION,220,
+nowhere,PREPOSITION,221,
+somewhere,PREPOSITION,222,
+toward,PREPOSITION,225,
+of,PREPOSITION,229,
+how,ADVERB,300,
+where,ADVERB,301,
+when,ADVERB,302,
+why,ADVERB,303,
+what | which,ADVERB,304,
+who,ADVERB,305,
+soon,ADVERB,306,
+sooner,ADVERB,307,
+soonest,ADVERB,308,
+now,ADVERB,309,
+late,ADVERB,310,
+later,ADVERB,311,
+latest,ADVERB,312,
+abnormal | strange,ADVERB,316,
+so,ADVERB,317,
+again,ADVERB,318,
+always,ADVERB,319,
+never,ADVERB,320,
+then,ADVERB,321,
+together,ADVERB,324,
+please,ADVERB,325,
+along,ADVERB,327,
+overboard,ADVERB,328,
+not,ADVERB,329,
+almost,ADVERB,330,
+affirmative | aye | certainly | ok | roger | sure | y | yea | yeah | yep | yes,ADVERB | NOUN,331,
+n | nay | negative | no | nope,ADVERB,332,
+dunno | maybe | possibly | probably,ADVERB,333,
+do,INDICATIVE_VERB,400,
+did,INDICATIVE_VERB,401,
+does,NOUN | INDICATIVE_VERB,402,
+be,INDICATIVE_VERB,403,
+are | is | wheres | youre,INDICATIVE_VERB,404,
+am | im,INDICATIVE_VERB,405,
+was,INDICATIVE_VERB,407,
+will,NOUN | INDICATIVE_VERB,409,
+would,INDICATIVE_VERB,410,
+say,INDICATIVE_VERB,414,
+says,INDICATIVE_VERB,415,
+said,INDICATIVE_VERB,416,
+have,INDICATIVE_VERB,417,
+has,INDICATIVE_VERB,418,
+had,INDICATIVE_VERB,419,
+tell,INDICATIVE_VERB,420,
+white,ADJECTIVE | NOUN,500,
+black,ADJECTIVE | NOUN,501,
+gold,ADJECTIVE | NOUN,503,
+silver,ADJECTIVE | NOUN,504,
+orange,ADJECTIVE | NOUN,505,
+blue,ADJECTIVE,506,
+pink,ADJECTIVE,507,
+purple,ADJECTIVE,508,
+brown,ADJECTIVE,509,
+yellow,ADJECTIVE,510,
+golden,ADJECTIVE,511,
+red,ADJECTIVE,512,
+grey,ADJECTIVE,513,
+gray,ADJECTIVE,514,
+hard,ADJECTIVE,515,
+famished | hungry | ravenous | starved | starving,ADJECTIVE,516,
+everything,ADJECTIVE,517,
+grimy | old,ADJECTIVE,519,
+live,ADJECTIVE,521,
+own,ADJECTIVE,522,
+my,ADJECTIVE,523,
+his,ADJECTIVE,524,
+its,ADJECTIVE,525,
+your,ADJECTIVE,526,
+our,ADJECTIVE,527,
+their,ADJECTIVE,528,
+another,ADJECTIVE,530,
+other,ADJECTIVE,531,
+some,ADJECTIVE,532,
+young,ADJECTIVE,533,
+wet,ADJECTIVE,534,
+next,ADJECTIVE,536,
+new,ADJECTIVE,537,
+important,ADJECTIVE,538,
+urgent,ADJECTIVE,539,
+nasty,ADJECTIVE,540,
+marked,ADJECTIVE,541,
+low,ADJECTIVE,542,
+digital,ADJECTIVE,544,
+long,ADJECTIVE,545,
+real,ADJECTIVE,546,
+first,ADJECTIVE,547,
+electric | electrical,ADJECTIVE,548,
+fat | plump | turgid,ADJECTIVE,549,
+dead | deceased,ADJECTIVE,553,
+preceding | previous,ADJECTIVE,554,
+crude,ADJECTIVE,556,
+steering,ADJECTIVE,559,
+shooting,ADJECTIVE,560,
+second,ADJECTIVE,561,
+both,ADJECTIVE,562,
+uniformed,ADJECTIVE,563,
+timing,ADJECTIVE,564,
+extra | spare,ADJECTIVE,565,
+fluorescent,ADJECTIVE,566,
+coagulated,ADJECTIVE,567,
+single,ADJECTIVE,568,
+proper,ADJECTIVE,570,
+facial,ADJECTIVE,571,
+composite,ADJECTIVE,572,
+retractable,ADJECTIVE,587,
+welded,ADJECTIVE,589,
+janitorial,ADJECTIVE,590,
+security,ADJECTIVE,591,
+lime,ADJECTIVE,592,
+detention,ADJECTIVE,593,
+accounting,ADJECTIVE,594,
+thank,IMPERATIVE_VERB,1000,
+test,IMPERATIVE_VERB,1004,
+let | lets,IMPERATIVE_VERB,1006,
+tighten,IMPERATIVE_VERB,1007,
+fill,IMPERATIVE_VERB,1010,
+lay,IMPERATIVE_VERB,1018,
+unload,IMPERATIVE_VERB,1021,
+wipe,IMPERATIVE_VERB,1022,
+chug,IMPERATIVE_VERB,1026,
+cheat,IMPERATIVE_VERB,1027,
+unlatch,IMPERATIVE_VERB,1029,
+awaken | wake,IMPERATIVE_VERB,1032,
+flush,IMPERATIVE_VERB,1036,
+slide,IMPERATIVE_VERB,1037,
+uncover,IMPERATIVE_VERB,1039,
+happen,IMPERATIVE_VERB,1040,
+pray,IMPERATIVE_VERB,1041,
+carry,IMPERATIVE_VERB,1042,
+transmit,IMPERATIVE_VERB,1043,
+damn,IMPERATIVE_VERB,1044,
+come,IMPERATIVE_VERB,1045,
+follow,IMPERATIVE_VERB,1046,
+rescue,IMPERATIVE_VERB,1048,
+scrape,IMPERATIVE_VERB,1049,
+point,NOUN | IMPERATIVE_VERB,1050,
+coat | smear | spread,IMPERATIVE_VERB | NOUN,1051,
+swim,IMPERATIVE_VERB,1052,
+type,IMPERATIVE_VERB,1054,
+sing,IMPERATIVE_VERB,1055,
+crush | squeeze,IMPERATIVE_VERB,1058,
+describe,IMPERATIVE_VERB,1061,
+bury,IMPERATIVE_VERB,1062,
+unbuckle | unfasten,IMPERATIVE_VERB,1067,
+dive,IMPERATIVE_VERB,1069,
+apply,IMPERATIVE_VERB,1071,
+rip | tear,IMPERATIVE_VERB,1073,
+disconnect,IMPERATIVE_VERB,1076,
+buzz,IMPERATIVE_VERB,1077,
+signal,NOUN | IMPERATIVE_VERB,1078,
+empty,ADJECTIVE | IMPERATIVE_VERB,1079,
+rest,ADJECTIVE | IMPERATIVE_VERB,1080,
+slip,NOUN | IMPERATIVE_VERB,1082,
+grip,NOUN | IMPERATIVE_VERB,1088,
+load,NOUN | IMPERATIVE_VERB,1089,
+check,NOUN | IMPERATIVE_VERB,1093,
+strip,NOUN | IMPERATIVE_VERB,1094,
+cruise,NOUN | IMPERATIVE_VERB,1096,
+speed,NOUN | IMPERATIVE_VERB,1100,
+sip,NOUN | IMPERATIVE_VERB,1101,
+lick,NOUN | IMPERATIVE_VERB,1103,
+answer,NOUN | IMPERATIVE_VERB,1106,
+name,NOUN | IMPERATIVE_VERB,1109,
+cut,NOUN | IMPERATIVE_VERB,1111,
+slice,NOUN | IMPERATIVE_VERB,1112,
+severe | stab,IMPERATIVE_VERB,1113,
+hug,NOUN | IMPERATIVE_VERB,1115,
+code,NOUN | IMPERATIVE_VERB,1116,
+deal,NOUN | IMPERATIVE_VERB,1117,
+dress,NOUN | IMPERATIVE_VERB,1121,
+buckle,NOUN | IMPERATIVE_VERB,1126,
+dust,NOUN | IMPERATIVE_VERB,1127,
+want,IMPERATIVE_VERB,1132,
+like,IMPERATIVE_VERB,1133,
+wish,NOUN | IMPERATIVE_VERB,1134,
+duck,NOUN | IMPERATIVE_VERB,1135,
+shake,NOUN | IMPERATIVE_VERB,1136,
+see,IMPERATIVE_VERB,1139,
+investigate,IMPERATIVE_VERB,1141,
+send | sent,IMPERATIVE_VERB,1144,
+freeze | halt,IMPERATIVE_VERB,1145,
+shove,IMPERATIVE_VERB,1146,
+administer | perform,IMPERATIVE_VERB,1155,
+breathe | inhale | snort,IMPERATIVE_VERB | NOUN,1158,
+capture | catch,IMPERATIVE_VERB,1160,
+interrogate | interview | question,IMPERATIVE_VERB | NOUN,1161,
+blow | suck,ADJECTIVE | IMPERATIVE_VERB,1164,
+chase | pursue,IMPERATIVE_VERB,1167,
+unscrew,IMPERATIVE_VERB,1172,
+dont,IMPERATIVE_VERB,1173,
+disarm,IMPERATIVE_VERB,1174,
+crap | defecate | dump,IMPERATIVE_VERB,1177,
+beg,IMPERATIVE_VERB,1180,
+warn,IMPERATIVE_VERB,1181,
+stock,NOUN,2004,
+memo,NOUN,2006,
+note,NOUN,2007,
+nose,NOUN,2009,
+mirror,NOUN,2010,
+night,NOUN,2012,
+sierra,NOUN,2016,
+repeat,NOUN,2018,
+phleebhut,NOUN,2024,
+ignition,NOUN,2029,
+waiter | waitress,NOUN,2037,
+cook,NOUN,2039,
+oaf,NOUN,2041,
+jerk,NOUN,2042,
+partner,NOUN,2048,
+friend,NOUN,2049,
+crew | crowd,NOUN,2050,
+carbon-based | crewman | crewmen | dude | guy | human | man | men | spaceman | spacemen,NOUN,2052,
+women,NOUN,2055,
+anybody | anyone | somebody | someone,NOUN,2056,
+hello | hi | howdy,NOUN,2058,
+thanks,NOUN,2059,
+arena,NOUN,2064,
+chamber,NOUN,2066,
+joint,NOUN,2068,
+crumb,NOUN,2074,
+lighter,NOUN,2075,
+die,NOUN,2076,
+magic | sorcery,NOUN,2077,
+bay,NOUN,2078,
+boot | shoe,NOUN,2079,
+way,NOUN,2080,
+odor,NOUN,2083,
+heat,NOUN | IMPERATIVE_VERB,2084,
+runway,NOUN,2087,
+wave,NOUN | IMPERATIVE_VERB,2088,
+wind,NOUN,2089,
+sun,NOUN,2091,
+weight,NOUN,2092,
+cutter,NOUN,2093,
+instrument,NOUN,2096,
+love,NOUN,2099,
+accident,NOUN,2100,
+none | nothing,NOUN,2102,
+bed,NOUN,2104,
+fuel,NOUN,2109,
+inv,NOUN | IMPERATIVE_VERB,2112,
+stuff,NOUN | IMPERATIVE_VERB,2114,
+crud,NOUN | IMPERATIVE_VERB,2115,
+capsule,NOUN,2119,
+roof,NOUN,2127,
+hamburger | sandwich,NOUN,2128,
+knife,NOUN,2129,
+bottle,NOUN,2130,
+flesh | skin,NOUN,2132,
+hut,NOUN,2133,
+property,NOUN,2139,
+wastebasket,NOUN,2140,
+waste,NOUN,2141,
+furniture,NOUN,2143,
+number,NOUN,2146,
+container,NOUN,2147,
+emergency,NOUN,2149,
+base,NOUN,2150,
+engraving | inscription,NOUN,2152,
+hair,NOUN,2155,
+athletic | jock | jockstrap | supporter,NOUN,2157,
+strap,NOUN,2158,
+circle,NOUN,2159,
+dial,NOUN | IMPERATIVE_VERB,2162,
+gauge,NOUN,2164,
+leaf,NOUN,2166,
+slot,NOUN,2167,
+cartridge,NOUN,2168,
+airlock,NOUN,2169,
+landscape,NOUN,2170,
+matter,NOUN,2172,
+occupant,NOUN,2174,
+power,NOUN,2175,
+microphone,NOUN,2177,
+kerona | keronian,NOUN,2178,
+dispenser | holder,NOUN,2179,
+milk,NOUN,2180,
+coffee,NOUN,2181,
+tea,NOUN,2182,
+sarien,NOUN,2184,
+barrier,NOUN,2187,
+sector,NOUN,2188,
+author,NOUN,2189,
+translator,NOUN,2190,
+headquarters,NOUN,2191,
+dialect,NOUN,2193,
+chest | trunk,NOUN,2194,
+locker,NOUN,2195,
+growth,NOUN,2196,
+time,NOUN,2199,
+podium,NOUN,2203,
+lint,NOUN,2204,
+alarm,NOUN,2206,
+diamond,NOUN,2209,
+unit,NOUN,2211,
+ball,NOUN,2212,
+carbon,NOUN,2213,
+tray,NOUN,2215,
+arch,NOUN,2216,
+spider,NOUN,2217,
+pool | puddle,NOUN,2223,
+job,NOUN,2224,
+map,NOUN,2225,
+meter,NOUN,2227,
+breath,NOUN,2228,
+faucet,NOUN,2230,
+carving,NOUN,2232,
+center | middle,NOUN,2233,
+ear,NOUN,2234,
+read-out | readout,NOUN,2241,
+form,NOUN,2242,
+anything | something,NOUN,2246,
+path,NOUN,2247,
+bottom,NOUN,2254,
+meat,NOUN,2261,
+description,NOUN,2262,
+wrist,NOUN,2263,
+blood,NOUN,2265,
+activator,NOUN,2266,
+garage,NOUN,2267,
+kitchen,NOUN,2269,
+cost | price,NOUN,2270,
+terminal,NOUN,2273,
+pack | package,NOUN,2274,
+laser,NOUN,2275,
+tank,NOUN,2278,
+sex,NOUN,2282,
+drain,NOUN,2285,
+mask,NOUN,2286,
+scenery,NOUN,2287,
+shot,NOUN,2290,
+landing,NOUN,2291,
+shift,NOUN,2293,
+horn,NOUN,2294,
+ash,NOUN,2295,
+stream,NOUN,2307,
+smoke | steam | vapor,IMPERATIVE_VERB | NOUN,2309,
+bullseye | target,NOUN,2312,
+credit,NOUN,2315,
+city | settlement | town,NOUN,2316,
+billfold | wallet,NOUN,2317,
+crapper | shitter | stool | throne | toilet | urinal,NOUN,2318,
+bathroom | john | lavatory | restroom | shithouse | wc,NOUN,2319,
+basin | sink,NOUN,2320,
+complaint | difficulty | problem | trouble,NOUN,2321,
+coke | pepsi | soda,NOUN,2323,
+music | song,NOUN,2324,
+prisoner,NOUN,2325,
+tip,NOUN | IMPERATIVE_VERB,2327,
+keyboard,NOUN,2330,
+radio,NOUN | IMPERATIVE_VERB,2331,
+watch,NOUN | IMPERATIVE_VERB,2332,
+pant | pants,NOUN,2333,
+speaker,NOUN,2336,
+wound,NOUN | IMPERATIVE_VERB,2338,
+gas | methane,NOUN,2341,
+muck | mud,NOUN,2344,
+jet,NOUN,2349,
+thumb,NOUN,2351,
+oil,NOUN,2352,
+pressure,NOUN,2353,
+supply,NOUN,2354,
+sorry,NOUN,2358,
+hell | work,NOUN,2360,
+burn | fire | flame,IMPERATIVE_VERB | NOUN,2362,
+surface,NOUN | IMPERATIVE_VERB,2363,
+pair,NOUN,2365,
+glow,NOUN,2366,
+detective,NOUN,2367,
+glove,NOUN,2368,
+butt | rear | tail,NOUN,2369,
+cage | cell | jail | prison,NOUN,2371,
+block,NOUN,2389,
+wing,NOUN,2418,
+mosaic,NOUN,2439,
+mark,NOUN,2445,
+jam | polyfoam | toejam,NOUN,2449,
+0 | o | zero,NOUN,4000,
+1 | one,NOUN,4001,
+3 | three,NOUN,4003,
+4 | four,NOUN,4004,
+5 | five,NOUN,4005,
+6 | six,NOUN,4006,
+7 | seven,NOUN,4007,
+9 | nine,NOUN,4009,
+10 | ten,NOUN,4010,
+11 | eleven,NOUN,4011,
+12 | twelve,NOUN,4012,
+13 | thirteen,NOUN,4013,
+14 | forteen | fourteen,NOUN,4014,
+15 | fifteen,NOUN,4015,
+16 | sixteen,NOUN,4016,
+17 | seventeen,NOUN,4017,
+18 | eighteen,NOUN,4018,
+19 | nineteen | ninteen,NOUN,4019,
+20 | twenty,NOUN,4020,
+30 | thirty,NOUN,4021,
+40 | forty,NOUN,4022,
+50 | fifty,NOUN,4023,
+60 | sixty,NOUN,4024,
+70 | seventy,NOUN,4025,
+80 | eighty,NOUN,4026,
+90 | ninety,NOUN,4027,
+100 | hundred,NOUN,4028,
+1000 | thousand,NOUN,4029,
+1000000 | million,NOUN,4030,
+unknownnumber,NOUN,4093,
+'!* | noword,,4094,
+* | any | anyword,CONJUNCTION | PREPOSITION | ARTICLE | ADJECTIVE | PRONOUN | NOUN | INDICATIVE_VERB | ADVERB | IMPERATIVE_VERB,4095,
