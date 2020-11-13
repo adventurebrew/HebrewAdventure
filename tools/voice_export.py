@@ -16,12 +16,14 @@ RES_AUD_NAME = "RESOURCE.AUD"
 EndOfMapFlag = 0xff
 SIERRA_AUDIO_TYPE = 0x8d
 
+
 def read_32le(l, idx):
     return l[idx + 3] * pow(2, 24) + l[idx + 2] * pow(2, 16) + l[idx + 1] * 256 + l[idx]
 
 
 def read_24le(l, idx):
     return l[idx + 2] * pow(2, 16) + l[idx + 1] * 256 + l[idx]
+
 
 def file_read_string(fp, length):
     b = fp.read(length)
@@ -80,6 +82,7 @@ def export_single_wav(entry):
         else:
             print("Unknown chunk: ", riffTag)
 
+
 def export_sol(entry, fp, header_size):
     ResourceHeaderSize = 2
     fp.seek(3, os.SEEK_CUR)
@@ -99,7 +102,6 @@ def export_sol(entry, fp, header_size):
 
     wav_output = output_file_name_wo_extension + ".wav"
     try:
-        #os.system("ffmpeg.exe -i %s %s" % (output_file_name, output_file_name_wo_extension + ".wav"))
         subprocess.check_output(['ffmpeg.exe', '-y', '-i', output_file_name, wav_output])
         os.remove(output_file_name)
     except:
@@ -124,6 +126,7 @@ def export_csv():
         assert len(relevant) in (0, 1)
         if relevant:
             export_single_wav(relevant[0])
+
 
 if __name__ == "__main__":
     export_csv()
