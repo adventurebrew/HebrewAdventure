@@ -101,6 +101,7 @@ def export_sol(entry, fp, header_size):
     try:
         #os.system("ffmpeg.exe -i %s %s" % (output_file_name, output_file_name_wo_extension + ".wav"))
         subprocess.check_output(['ffmpeg.exe', '-y', '-i', output_file_name, wav_output])
+        os.remove(output_file_name)
     except:
         print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
 
