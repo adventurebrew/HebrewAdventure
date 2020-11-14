@@ -1,17 +1,27 @@
-import pathlib
-import os.path
-import subprocess
-import csv
-
-""" 
+"""
 currently supports only Freddy Pharkas (and probably few others)
 based on ScummVM resource_audio.cpp
    int ResourceManager::readAudioMapSCI11(IntMapResourceSource *map)
 """
 
-INPUT_CSV_FILE = r"C:\Zvika\Games\Freddy Pharkas - Frontier Pharmacist\WAV\export.csv"
-INPUT_PATH = r"C:\Zvika\Games\Freddy Pharkas - Frontier Pharmacist\AUDIO"
-OUTPUT_PATH = r"C:\Zvika\Games\Freddy Pharkas - Frontier Pharmacist\WAV"
+import pathlib
+import os.path
+import subprocess
+import csv
+import argparse
+
+parser = argparse.ArgumentParser(description='Exports .wav files from RESOURCE.AUD', formatter_class=argparse.RawTextHelpFormatter, epilog="""
+Example csv file:
+=================
+room, noun, verb, cond, seq
+230, 28, 0, 0, 1
+0, 0, 0, 0, 1
+230, 4, 1, 0, 1""")
+parser.add_argument('csv_file', help='Path to .csv file with the messages voices to export. Should have the columns "room, noun, verb, cond, seq"')
+parser.add_argument('--input_dir', dest='input_dir', default='.', help='Path to the input directory, containing RESOURCE.AUD and the audio *.MAP files (default: current dir)')
+parser.add_argument('--output_dir', dest='output_dir', default='.', help='Path to the output directory (default: current dir)')
+args = parser.parse_args()
+
 RES_AUD_NAME = "RESOURCE.AUD"
 EndOfMapFlag = 0xff
 SIERRA_AUDIO_TYPE = 0x8d
@@ -32,7 +42,7 @@ def file_read_string(fp, length):
 
 
 def parse_single_map(map):
-    input_file = os.path.join(INPUT_PATH, str(map) + ".MAP")
+    input_file = os.path.join(args.input_dir, str(map) + ".MAP")
     in_vocab = list(pathlib.Path(input_file).read_bytes())
     assert in_vocab[0] == 0x90
     assert in_vocab[1] == 0x00
@@ -62,7 +72,7 @@ def parse_single_map(map):
 
 
 def export_single_wav(entry):
-    input_file = os.path.join(INPUT_PATH, RES_AUD_NAME)
+    input_file = os.path.join(args.input_dir, RES_AUD_NAME)
     fp = open(input_file, 'rb')
     fp.seek(entry['offset'])
 
@@ -90,7 +100,7 @@ def export_sol(entry, fp, header_size):
     size = chunk_size + header_size + ResourceHeaderSize
     fp.seek(-13, os.SEEK_CUR)
     data = fp.read(size)
-    output_file_name_wo_extension = os.path.join(OUTPUT_PATH, "%s_%s_%s_%s_%s" %
+    output_file_name_wo_extension = os.path.join(args.output_dir, "%s_%s_%s_%s_%s" %
                                (entry['room'],
                                 entry['noun'],
                                 entry['verb'],
@@ -109,7 +119,7 @@ def export_sol(entry, fp, header_size):
 
 
 def export_csv():
-    with open(INPUT_CSV_FILE, newline='') as csvfile:       #, encoding='utf-8'
+    with open(args.csv_file, newline='') as csvfile:       #, encoding='utf-8'
         required_entries = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True, quoting=csv.QUOTE_ALL)]
     rooms = set([d['room'] for d in required_entries])
