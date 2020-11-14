@@ -10,7 +10,7 @@ import subprocess
 import csv
 import argparse
 
-parser = argparse.ArgumentParser(description='Exports .wav files from RESOURCE.AUD', formatter_class=argparse.RawTextHelpFormatter, epilog="""
+parser = argparse.ArgumentParser(description="Exports .wav files from RESOURCE.AUD (using 'ffmpeg.exe' in current directory)", formatter_class=argparse.RawTextHelpFormatter, epilog="""
 Example csv file:
 =================
 room, noun, verb, cond, seq
@@ -112,7 +112,7 @@ def export_sol(entry, fp, header_size):
 
     wav_output = output_file_name_wo_extension + ".wav"
     try:
-        subprocess.check_output(['ffmpeg.exe', '-y', '-i', output_file_name, wav_output])
+        subprocess.check_output(['ffmpeg.exe', '-loglevel', 'fatal', '-y', '-i', output_file_name, wav_output])
         os.remove(output_file_name)
     except:
         print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
