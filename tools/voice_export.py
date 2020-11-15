@@ -84,9 +84,16 @@ def export_single_voice(entry, input_dir, output_dir):
     fp = open(input_file, 'rb')
     fp.seek(entry['offset'])
 
+    riff_tag = get_tag(fp)
+    size = get_size(fp, riff_tag)
+    data = fp.read(size)
+    save_data(output_dir, entry, data, riff_tag)
+
+
+def get_tag(fp):
     riffTag = file_read_string(fp, 4)
     if riffTag == 'RIFF':
-        export_wave(output_dir, entry, fp)
+        fp.seek(-4, os.SEEK_CUR)
     else:
         fp.seek(-4, os.SEEK_CUR)
         type = ord(fp.read(1))
@@ -94,45 +101,53 @@ def export_single_voice(entry, input_dir, output_dir):
         header_size = ord(fp.read(1))
         assert header_size == 12        # other values are legal, but not supported yet
         riffTag = file_read_string(fp, 4)
-        if riffTag == 'SOL':
-            export_sol(output_dir, entry, fp, header_size)
-        else:
-            print("Unknown chunk: ", riffTag)
+        fp.seek(-6, os.SEEK_CUR)
+
+    return riffTag
 
 
-def export_wave(output_dir, entry, fp):
-    size = int.from_bytes(fp.read(4), 'little') + 8
-    fp.seek(-8, os.SEEK_CUR)
-    export_common(output_dir, entry, size, fp)
+def get_size(fp, riff_tag):
+    if riff_tag == 'RIFF':
+        fp.seek(4, os.SEEK_CUR)
+        size = int.from_bytes(fp.read(4), 'little') + 8
+        fp.seek(-8, os.SEEK_CUR)
+    elif riff_tag == 'SOL':
+        header_size = 12
+        ResourceHeaderSize = 2
+        fp.seek(9, os.SEEK_CUR)
+        chunk_size = int.from_bytes(fp.read(4), 'little')
+        size = chunk_size + header_size + ResourceHeaderSize
+        fp.seek(-13, os.SEEK_CUR)
+    else:
+        print('Unsupported riff_tag!!!')
+    return size
 
 
-def export_sol(output_dir, entry, fp, header_size):
-    ResourceHeaderSize = 2
-    fp.seek(3, os.SEEK_CUR)
-    chunk_size = int.from_bytes(fp.read(4), 'little')
-    size = chunk_size + header_size + ResourceHeaderSize
-    fp.seek(-13, os.SEEK_CUR)
-    export_common(output_dir, entry, size, fp)
-
-
-def export_common(output_dir, entry, size, fp):
-    data = fp.read(size)
+def save_data(output_dir, entry, data, riff_tag):
     output_file_name_wo_extension = os.path.join(output_dir, "%s_%s_%s_%s_%s" %
                                (entry['room'],
                                 entry['noun'],
                                 entry['verb'],
                                 entry['cond'],
                                 entry['seq']))
-    output_file_name = output_file_name_wo_extension + '.sol'
-    with open(output_file_name, 'wb') as of:
-        of.write(data)
 
-    wav_output = output_file_name_wo_extension + ".wav"
-    try:
-        subprocess.check_output(['ffmpeg.exe', '-loglevel', 'fatal', '-y', '-i', output_file_name, wav_output])
-        os.remove(output_file_name)
-    except:
-        print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
+    if riff_tag == 'SOL':
+        output_file_name = output_file_name_wo_extension + '.sol'
+        with open(output_file_name, 'wb') as of:
+            of.write(data)
+
+        wav_output = output_file_name_wo_extension + ".wav"
+        try:
+            subprocess.check_output(['ffmpeg.exe', '-loglevel', 'fatal', '-y', '-i', output_file_name, wav_output])
+            os.remove(output_file_name)
+        except:
+            print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
+    elif riff_tag == 'RIFF':
+        output_file_name = output_file_name_wo_extension + '.wav'
+        with open(output_file_name, 'wb') as of:
+            of.write(data)
+    else:
+        print('Unknown riff_tag')
 
 
 def export_csv(csv_file, input_dir, output_dir):
