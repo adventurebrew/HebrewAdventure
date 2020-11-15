@@ -11,12 +11,12 @@ def parse_args():
         formatter_class=argparse.RawTextHelpFormatter, epilog="""
 Example csv file:
 =================
-room,   noun,   verb,   cond,   seq
-230,    28,     0,      0,      1
-0,      0,      0,      0,      1
-230,    4,      1,      0,      1""")
+room,   noun,   verb,   cond,   seq,    wav
+230,    28,     0,      0,      1,      do_something.wav
+0,      0,      0,      0,      1,      willy.wav
+230,    4,      1,      0,      1,      willy.wav""")
     parser.add_argument('csv_file',
-                        help='Path to .csv file with the messages voices to import. Should have the columns "room, noun, verb, cond, seq"')
+                        help='Path to .csv file with the messages voices to import. Should have the columns "room, noun, verb, cond, seq, wav"')
     parser.add_argument('--input_dir', dest='input_dir', default='.',
                         help='Path to the input directory, with the .wav files (default: current dir)')
     parser.add_argument('--output_dir', dest='output_dir', default='.',
