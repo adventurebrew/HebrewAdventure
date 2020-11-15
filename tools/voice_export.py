@@ -79,15 +79,14 @@ def parse_single_map(map, input_dir):
     return result
 
 
-def export_single_wav(entry, input_dir, output_dir):
+def export_single_voice(entry, input_dir, output_dir):
     input_file = os.path.join(input_dir, RES_AUD_NAME)
     fp = open(input_file, 'rb')
     fp.seek(entry['offset'])
 
     riffTag = file_read_string(fp, 4)
     if riffTag == 'RIFF':
-        print("Wave chunk, currently not supported")
-        pass
+        export_wave(output_dir, entry, fp)
     else:
         fp.seek(-4, os.SEEK_CUR)
         type = ord(fp.read(1))
@@ -101,12 +100,22 @@ def export_single_wav(entry, input_dir, output_dir):
             print("Unknown chunk: ", riffTag)
 
 
+def export_wave(output_dir, entry, fp):
+    size = int.from_bytes(fp.read(4), 'little') + 8
+    fp.seek(-8, os.SEEK_CUR)
+    export_common(output_dir, entry, size, fp)
+
+
 def export_sol(output_dir, entry, fp, header_size):
     ResourceHeaderSize = 2
     fp.seek(3, os.SEEK_CUR)
     chunk_size = int.from_bytes(fp.read(4), 'little')
     size = chunk_size + header_size + ResourceHeaderSize
     fp.seek(-13, os.SEEK_CUR)
+    export_common(output_dir, entry, size, fp)
+
+
+def export_common(output_dir, entry, size, fp):
     data = fp.read(size)
     output_file_name_wo_extension = os.path.join(output_dir, "%s_%s_%s_%s_%s" %
                                (entry['room'],
@@ -138,7 +147,7 @@ def export_csv(csv_file, input_dir, output_dir):
         room_maps = maps[r['room']]
         entry = get_entry(r, room_maps)
         if entry:
-            export_single_wav(entry, input_dir, output_dir)
+            export_single_voice(entry, input_dir, output_dir)
 
 
 def get_entry(entry, maps):
