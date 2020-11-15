@@ -103,6 +103,7 @@ def write_map(map, output_dir):
         lob.append(int(entry['cond']))
         lob.append(int(entry['seq']))
         delta = entry['offset'] - offset
+        assert delta >= 0
         lob.extend(delta.to_bytes(3, 'little'))
         offset = entry['offset']
     for i in range(11):     # I don't really understand why 11, but it's critical...
