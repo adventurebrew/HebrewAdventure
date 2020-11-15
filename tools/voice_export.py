@@ -10,21 +10,28 @@ import subprocess
 import csv
 import argparse
 
-parser = argparse.ArgumentParser(description="Exports .wav files from RESOURCE.AUD (using 'ffmpeg.exe' in current directory)", formatter_class=argparse.RawTextHelpFormatter, epilog="""
-Example csv file:
-=================
-room, noun, verb, cond, seq
-230, 28, 0, 0, 1
-0, 0, 0, 0, 1
-230, 4, 1, 0, 1""")
-parser.add_argument('csv_file', help='Path to .csv file with the messages voices to export. Should have the columns "room, noun, verb, cond, seq"')
-parser.add_argument('--input_dir', dest='input_dir', default='.', help='Path to the input directory, containing RESOURCE.AUD and the audio *.MAP files (default: current dir)')
-parser.add_argument('--output_dir', dest='output_dir', default='.', help='Path to the output directory (default: current dir)')
-args = parser.parse_args()
-
 RES_AUD_NAME = "RESOURCE.AUD"
 EndOfMapFlag = 0xff
 SIERRA_AUDIO_TYPE = 0x8d
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Exports .wav files from RESOURCE.AUD (using 'ffmpeg.exe' in current directory)",
+        formatter_class=argparse.RawTextHelpFormatter, epilog="""
+Example csv file:
+=================
+room,   noun,   verb,   cond,   seq
+230,    28,     0,      0,      1
+0,      0,      0,      0,      1
+230,    4,      1,      0,      1""")
+    parser.add_argument('csv_file',
+                        help='Path to .csv file with the messages voices to export. Should have the columns "room, noun, verb, cond, seq"')
+    parser.add_argument('--input_dir', dest='input_dir', default='.',
+                        help='Path to the input directory, containing RESOURCE.AUD and the audio *.MAP files (default: current dir)')
+    parser.add_argument('--output_dir', dest='output_dir', default='.',
+                        help='Path to the output directory (default: current dir)')
+    return parser.parse_args()
 
 
 def read_32le(l, idx):
@@ -41,8 +48,8 @@ def file_read_string(fp, length):
     return result
 
 
-def parse_single_map(map):
-    input_file = os.path.join(args.input_dir, str(map) + ".MAP")
+def parse_single_map(map, input_dir):
+    input_file = os.path.join(input_dir, str(map) + ".MAP")
     in_vocab = list(pathlib.Path(input_file).read_bytes())
     assert in_vocab[0] == 0x90
     assert in_vocab[1] == 0x00
@@ -71,8 +78,8 @@ def parse_single_map(map):
     return result
 
 
-def export_single_wav(entry):
-    input_file = os.path.join(args.input_dir, RES_AUD_NAME)
+def export_single_wav(entry, input_dir, output_dir):
+    input_file = os.path.join(input_dir, RES_AUD_NAME)
     fp = open(input_file, 'rb')
     fp.seek(entry['offset'])
 
@@ -88,19 +95,19 @@ def export_single_wav(entry):
         assert header_size == 12        # other values are legal, but not supported yet
         riffTag = file_read_string(fp, 4)
         if riffTag == 'SOL':
-            export_sol(entry, fp, header_size)
+            export_sol(output_dir, entry, fp, header_size)
         else:
             print("Unknown chunk: ", riffTag)
 
 
-def export_sol(entry, fp, header_size):
+def export_sol(output_dir, entry, fp, header_size):
     ResourceHeaderSize = 2
     fp.seek(3, os.SEEK_CUR)
     chunk_size = int.from_bytes(fp.read(4), 'little')
     size = chunk_size + header_size + ResourceHeaderSize
     fp.seek(-13, os.SEEK_CUR)
     data = fp.read(size)
-    output_file_name_wo_extension = os.path.join(args.output_dir, "%s_%s_%s_%s_%s" %
+    output_file_name_wo_extension = os.path.join(output_dir, "%s_%s_%s_%s_%s" %
                                (entry['room'],
                                 entry['noun'],
                                 entry['verb'],
@@ -118,14 +125,14 @@ def export_sol(entry, fp, header_size):
         print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
 
 
-def export_csv():
-    with open(args.csv_file, newline='') as csvfile:       #, encoding='utf-8'
+def export_csv(csv_file, input_dir, output_dir):
+    with open(csv_file, newline='') as csvfile:       #, encoding='utf-8'
         required_entries = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True, quoting=csv.QUOTE_ALL)]
     rooms = set([d['room'] for d in required_entries])
     maps = {}
     for room in rooms:
-        maps[room] = parse_single_map(room)
+        maps[room] = parse_single_map(room, input_dir)
     for r in required_entries:
         room_maps = maps[r['room']]
         relevant = [e for e in room_maps if
@@ -135,9 +142,10 @@ def export_csv():
                     e['seq'] == int(r['seq'])]
         assert len(relevant) in (0, 1)
         if relevant:
-            export_single_wav(relevant[0])
+            export_single_wav(relevant[0], input_dir, output_dir)
 
 
 if __name__ == "__main__":
-    export_csv()
+    args = parse_args()
+    export_csv(args.csv_file, args.input_dir, args.output_dir)
 
