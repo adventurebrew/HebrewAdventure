@@ -11,6 +11,7 @@ import csv
 import argparse
 
 RES_AUD_NAME = "RESOURCE.AUD"
+MAP_FILE_HEADER = [0x90, 0x00]
 EndOfMapFlag = 0xff
 SIERRA_AUDIO_TYPE = 0x8d
 
@@ -51,8 +52,8 @@ def file_read_string(fp, length):
 def parse_single_map(map, input_dir):
     input_file = os.path.join(input_dir, str(map) + ".MAP")
     in_vocab = list(pathlib.Path(input_file).read_bytes())
-    assert in_vocab[0] == 0x90
-    assert in_vocab[1] == 0x00
+    assert in_vocab[0] == MAP_FILE_HEADER[0]
+    assert in_vocab[1] == MAP_FILE_HEADER[1]
     in_vocab = in_vocab[2:]
 
     index = 0
@@ -135,14 +136,27 @@ def export_csv(csv_file, input_dir, output_dir):
         maps[room] = parse_single_map(room, input_dir)
     for r in required_entries:
         room_maps = maps[r['room']]
-        relevant = [e for e in room_maps if
-                    e['noun'] == int(r['noun']) and
-                    e['verb'] == int(r['verb']) and
-                    e['cond'] == int(r['cond']) and
-                    e['seq'] == int(r['seq'])]
-        assert len(relevant) in (0, 1)
-        if relevant:
-            export_single_wav(relevant[0], input_dir, output_dir)
+        entry = get_entry(r, room_maps)
+        if entry:
+            export_single_wav(entry, input_dir, output_dir)
+
+
+def get_entry(entry, maps):
+    relevant = [e for e in maps if entry_equal(e, entry)]
+    assert len(relevant) in (0, 1)
+    try:
+        return relevant[0]
+    except:
+        return None
+
+
+def entry_equal(e1, e2):
+    return \
+        int(e1['room']) == int(e2['room']) and\
+        int(e1['noun']) == int(e2['noun']) and\
+        int(e1['verb']) == int(e2['verb']) and\
+        int(e1['cond']) == int(e2['cond']) and\
+        int(e1['seq']) == int(e2['seq'])
 
 
 if __name__ == "__main__":
