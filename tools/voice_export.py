@@ -32,6 +32,7 @@ room,   noun,   verb,   cond,   seq
                         help='Path to the input directory, containing RESOURCE.AUD and the audio *.MAP files (default: current dir)')
     parser.add_argument('--output_dir', dest='output_dir', default='.',
                         help='Path to the output directory (default: current dir)')
+    parser.add_argument('--sol', action='store_true', help="keep .sol files, don't convert them to .wav")
     return parser.parse_args()
 
 
@@ -91,8 +92,8 @@ def export_single_voice(entry, input_dir, output_dir):
 
 
 def get_tag(fp):
-    riffTag = file_read_string(fp, 4)
-    if riffTag == 'RIFF':
+    riff_tag = file_read_string(fp, 4)
+    if riff_tag == 'RIFF':
         fp.seek(-4, os.SEEK_CUR)
     else:
         fp.seek(-4, os.SEEK_CUR)
@@ -100,13 +101,16 @@ def get_tag(fp):
         assert type == SIERRA_AUDIO_TYPE
         header_size = ord(fp.read(1))
         assert header_size == 12        # other values are legal, but not supported yet
-        riffTag = file_read_string(fp, 4)
+        riff_tag = file_read_string(fp, 4)
         fp.seek(-6, os.SEEK_CUR)
 
-    return riffTag
+    return riff_tag
 
 
-def get_size(fp, riff_tag):
+def get_size(fp, riff_tag=None):
+    if riff_tag is None:
+        riff_tag = get_tag(fp)
+
     if riff_tag == 'RIFF':
         fp.seek(4, os.SEEK_CUR)
         size = int.from_bytes(fp.read(4), 'little') + 8
@@ -119,7 +123,7 @@ def get_size(fp, riff_tag):
         size = chunk_size + header_size + ResourceHeaderSize
         fp.seek(-13, os.SEEK_CUR)
     else:
-        print('Unsupported riff_tag!!!')
+        print('get_size: Unsupported riff_tag: ', riff_tag)
     return size
 
 
@@ -136,12 +140,13 @@ def save_data(output_dir, entry, data, riff_tag):
         with open(output_file_name, 'wb') as of:
             of.write(data)
 
-        wav_output = output_file_name_wo_extension + ".wav"
-        try:
-            subprocess.check_output(['ffmpeg.exe', '-loglevel', 'fatal', '-y', '-i', output_file_name, wav_output])
-            os.remove(output_file_name)
-        except:
-            print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
+        if not args.sol:
+            try:
+                wav_output = output_file_name_wo_extension + ".wav"
+                subprocess.check_output(['ffmpeg.exe', '-loglevel', 'fatal', '-y', '-i', output_file_name, wav_output])
+                os.remove(output_file_name)
+            except:
+                print("You might want to copy 'ffmpeg.exe' to current directory, to auto convert .sol to .wav")
     elif riff_tag == 'RIFF':
         output_file_name = output_file_name_wo_extension + '.wav'
         with open(output_file_name, 'wb') as of:
@@ -183,7 +188,23 @@ def entry_equal(e1, e2):
         int(e1['seq']) == int(e2['seq'])
 
 
+def export_all(args):
+    # usually not used - for debugging
+    rooms = [os.path.splitext(os.path.basename(r))[0] for r in pathlib.Path(args.input_dir).glob('*.MAP')]
+    for room in rooms:
+        export_room(args, room)
+
+
+def export_room(args, room):
+    # usually not used - for debugging
+    map = parse_single_map(room, args.input_dir)
+    for entry in map:
+        export_single_voice(entry, args.input_dir, args.output_dir)
+
+
 if __name__ == "__main__":
     args = parse_args()
+    # export_all(args)
+    # export_room(args, 260)
     export_csv(args.csv_file, args.input_dir, args.output_dir)
 
