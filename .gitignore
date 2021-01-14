@@ -152,3 +152,6 @@ client_secrets.json
 
 .*swp
 .*swo
+
+qfg1vga/*
+!qfg1vga/PATCHES
