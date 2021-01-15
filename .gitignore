@@ -155,3 +155,4 @@ client_secrets.json
 
 qfg1vga/*
 !qfg1vga/PATCHES
+!qfg1vga/src
