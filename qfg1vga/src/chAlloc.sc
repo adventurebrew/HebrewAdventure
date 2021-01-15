@@ -311,7 +311,7 @@
 									(and (<= KEY_a pEventMessage) (<= pEventMessage KEY_z))
 									(and (<= KEY_A pEventMessage) (<= pEventMessage KEY_Z))
 									(and (<= KEY_0 pEventMessage) (<= pEventMessage KEY_9))
-									(and (<= 224 pEventMessage) (<= pEventMessage 250))			;Z aleph - tav
+									(and (<= 224   pEventMessage) (<= pEventMessage 250))			;Z aleph - tav
 								)
 								(self select: namePlate pEventMessage)
 							)
@@ -444,6 +444,7 @@
 			(= temp5 91)
 			(= temp6 215)
 		)
+
 		(Display
 			(Format @temp1 {%d} [theGStrength state])
 			100
@@ -454,7 +455,7 @@
 			106
 			25
 			101
-			-1
+			1		;Z it was -1 (teJustRight) ; changed to 1 (teJustCenter)
 			105
 			123
 		)
@@ -468,7 +469,7 @@
 			106
 			25
 			101
-			-1
+			1		;Z it was -1 (teJustRight) ; changed to 1 (teJustCenter)
 			105
 			123
 		)
@@ -549,7 +550,7 @@
 						(StrAt @global428 (++ local105) 0)
 
 						;Z always clean the name plate before printing it again
-						;Z needed to support English on RTL//
+						;Z needed to support English on RTL
 						(DrawCel
 							maskView
 							maskLoop
@@ -583,20 +584,20 @@
 			(= temp1 215)
 		)
 		(DrawCel view theLoop cel nsLeft nsTop 15)
-;		(Display
-;			@global428
-;			100
-;			(+ nsLeft 47)
-;			nsTop
-;			102
-;			temp1
-;			106
-;			172
-;			101
-;			0
-;			105
-;			123
-;		)
+		(Display
+			@global428
+			100
+			(+ nsLeft 47)
+			nsTop
+			102
+			temp1
+			106
+			172
+			101
+			0
+			105
+			123
+		)
 		(Display
 			@global428
 			100
