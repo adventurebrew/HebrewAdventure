@@ -682,7 +682,7 @@
 					(if local1
 						(Message msgGET 206 3 0 0 21 @temp40)
 						(Print
-							addTextF: @temp0 @temp40 amtDropped (if (> amtDropped 1) {s} else {})
+							addTextF: @temp0 @temp40 amtDropped (if (> amtDropped 1) {ות} else {})
 							init:
 						)
 					else
@@ -702,9 +702,9 @@
 										@temp0
 										@temp40
 										(gold amount?)
-										(if (> (gold amount?) 1) {s} else {})
+										(if (> (gold amount?) 1) {ות} else {})
 										amount
-										(if (> amount 1) {s} else {})
+										(if (> amount 1) {ות} else {})
 										temp90
 										temp91
 									init:
@@ -717,7 +717,7 @@
 										@temp0
 										@temp40
 										amount
-										(if (> amount 1) {s} else {})
+										(if (> amount 1) {ות} else {})
 										temp90
 										temp91
 									init:
@@ -730,7 +730,7 @@
 										@temp0
 										@temp40
 										(gold amount?)
-										(if (> (gold amount?) 1) {s} else {})
+										(if (> (gold amount?) 1) {ות} else {})
 										temp90
 										temp91
 									init:
