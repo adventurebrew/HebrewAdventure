@@ -59,16 +59,25 @@
 	(method (doVerb theVerb &tmp temp0 temp1 temp2 [temp3 50] [temp53 30] [temp83 10] [temp93 20])
 		(if (== theVerb 9) (return 1))
 		(Print font: gFont mode: 1)
-		(Message msgGET 206 3 (self message?) 0 1 @temp93)
+		;Z original: (Message msgGET 206 3 (self message?) 0 1 @temp93)
+		(Message msgGET 206 3 (self message?)  
+			(if (> (self amount?) 1)
+				1	; plural
+			else
+				0	; singular
+			)
+			1 @temp93)
 		(return
 			(switch theVerb
 				(1
 					(if local1
 						(if (== amtDropped 1)
 							(Message msgGET 206 3 0 0 22 @temp53)
+							(Message msgGET 206 3 (self message?) 2 1 @temp93)		;Z The Singular
 							(Print addTextF: @temp3 @temp53 @temp93 init:)
 						else
 							(Message msgGET 206 3 0 0 23 @temp53)
+							(Message msgGET 206 3 (self message?) 3 1 @temp93)		;Z The Plural
 							(Print addTextF: @temp3 @temp53 amtDropped @temp93 init:)
 						)
 					else
@@ -119,16 +128,19 @@
 								greenFur
 							)
 							(Message msgGET 206 3 0 0 5 @temp53)
+							(Message msgGET 206 3 (self message?) 2 1 @temp93)		;Z The Singular
 							(Print addTextF: @temp3 @temp53 @temp93 init:)
 						)
 						((== gModNum 322) (Print addText: 3 0 0 6 0 0 206 init:))
 						((> amount 1)
 							(self dumpIt: 1)
 							(Message msgGET 206 3 0 0 7 @temp53)
+							(Message msgGET 206 3 (self message?) 3 1 @temp93)		;Z The Plural
 							(Print addTextF: @temp3 @temp53 @temp93 init:)
 						)
 						(else
 							(Message msgGET 206 3 0 0 8 @temp53)
+							(Message msgGET 206 3 (self message?) 2 1 @temp93)		;Z The Singular
 							(Print addTextF: @temp3 @temp53 @temp93 init:)
 							(self dumpIt: 1)
 							(if (== (gMainIconBar curInvIcon?) self)
@@ -156,8 +168,10 @@
 						(Print addText: 3 0 0 20 0 0 206 init:)
 					else
 						(if (== amtDropped 1)
+							(Message msgGET 206 3 (self message?) 2 1 @temp93)		;Z The Singular
 							(Message msgGET 206 3 0 0 25 @temp53)
 						else
+						    (Message msgGET 206 3 (self message?) 3 1 @temp93)		;Z The Plural
 							(Message msgGET 206 3 0 0 24 @temp53)
 						)
 						(Print addTextF: @temp3 @temp53 @temp93 init:)
@@ -168,6 +182,7 @@
 				(else 
 					(Message msgGET 206 3 0 0 3 @temp53)
 					(Message msgGET 206 3 theVerb 0 1 @temp83)
+					(Message msgGET 206 3 (self message?) 2 1 @temp93)		;Z The Singular		TODO split to singular/ploral?
 					(Print addTextF: @temp3 @temp53 @temp83 @temp93 init:)
 				)
 			)
