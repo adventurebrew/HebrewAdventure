@@ -135,7 +135,8 @@
 						((> amount 1)
 							(self dumpIt: 1)
 							(Message msgGET 206 3 0 0 7 @temp53)
-							(Message msgGET 206 3 (self message?) 3 1 @temp93)		;Z The Plural
+							;Z currently changed message formatting (Message msgGET 206 3 (self message?) 3 1 @temp93)		;Z The Plural
+							(Message msgGET 206 3 (self message?) 0 1 @temp93)		;Z non-the Singular
 							(Print addTextF: @temp3 @temp53 @temp93 init:)
 						)
 						(else
