@@ -1,20 +1,23 @@
-﻿# STOPPED DEV'ING, moved to PQ1 dir
-# will return to this as template...
-#
-#
-#
-# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.check\WORDS.TOK C:\Zvika\Games\PoliceQuest\AGI\WORDS.TOK WORDS.TOK.patch
+﻿# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.check\WORDS.TOK C:\Zvika\Games\PoliceQuest\AGI\WORDS.TOK WORDS.TOK.patch
 # "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\ames\PoliceQuest\AGI.check\LOGDIR C:\Zvika\Games\PoliceQuest\AGI\LOGDIR logdir.patch
 # "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.check\VOL.0 C:\Zvika\Games\PoliceQuest\AGI\VOL.0 VOL.0.patch
 
 !include MUI2.nsh
 
-!macro BackupAndUpdateFile FILE 
-    IfFileExists "${INSTDIR}\ORIG\*.*" +2
-        CreateDirectory "${INSTDIR}\ORIG"
-    IfFileExists "${INSTDIR}\ORIG\${FILE}" +2
-        CopyFiles "${INSTDIR}\${FILE}" "${INSTDIR}\ORIG\${FILE}"
-    ;TODO - check so far, if works well, move here the update code
+
+!define BACKUPDIR "SIERRA_ORIG_ENGLISH"
+
+!macro BackupAndUpdateFile INSTDIR FILE 
+    IfFileExists "${INSTDIR}\${BACKUPDIR}\*.*" +2
+        CreateDirectory "${INSTDIR}\${BACKUPDIR}"
+    IfFileExists "${INSTDIR}\${BACKUPDIR}\${FILE}" +2
+        CopyFiles "${INSTDIR}\${FILE}" "${INSTDIR}\${BACKUPDIR}\${FILE}"
+
+    DetailPrint "Updating ${FILE} using patch..."
+    !insertmacro VPatchFile ${FILE}.patch "${INSTDIR}\${FILE}" "${INSTDIR}\${FILE}.tmp"
+
+    IfErrors 0 +2
+        abort
 !macroend
 
 
@@ -29,6 +32,7 @@ Unicode true
 ; The default installation directory
 InstallDir "C:\Zvika\Games\PoliceQuest\AGI.check"  #TODO remove this
 
+;TODO nicer message...
 !define MUI_TEXT_WELCOME_INFO_TEXT "New text goes here$\r$\n \
 and in new line" ;" ; gvim get's confused without that extra "
 
@@ -36,6 +40,12 @@ and in new line" ;" ; gvim get's confused without that extra "
 !insertmacro MUI_PAGE_DIRECTORY
 !insertmacro MUI_PAGE_INSTFILES
 !insertmacro MUI_PAGE_FINISH
+!insertmacro MUI_UNPAGE_WELCOME
+!insertmacro MUI_UNPAGE_CONFIRM
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
+
+
 
 !insertmacro MUI_LANGUAGE "Hebrew"
 
@@ -48,16 +58,12 @@ Section "Update file"
   ; Set output path to the installation directory
   SetOutPath $INSTDIR
 
-  ; Extract the old file under name 'updatefile.txt'
-  ;File /oname=updatefile.txt oldfile.txt
-  
-  ; Update the file - it will be replaced with the new version
-  DetailPrint "Updating updatefile.txt using patch..."
-  !insertmacro VPatchFile VOL.0.patch "$INSTDIR\VOL.0" "$INSTDIR\VOL.0.tmp"
+  !insertmacro BackupAndUpdateFile $INSTDIR VOL.0
+  !insertmacro BackupAndUpdateFile $INSTDIR LOGDIR
+  !insertmacro BackupAndUpdateFile $INSTDIR WORDS.TOK
+  File agi-font-dos.bin
+  File PQ1.WAG
 
-IfErrors 0 +2
-    abort
-  ;MessageBox MB_OK "errors"
   
 # define uninstaller name
 WriteUninstaller $INSTDIR\uninstaller.exe
@@ -69,13 +75,24 @@ SectionEnd
 Section "Uninstall"
  
 # now delete installed file
-Delete $INSTDIR\test.txt
+Delete $INSTDIR\agi-font-dos.bin
+Delete $INSTDIR\PQ1.WAG
+CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR
+
+Rmdir /r "$INSTDIR\${BACKUPDIR}"
 
 # Always delete uninstaller first
 #Z why? it doesn't make sense to me
 #Z what if the uninstaller is aborted in the middle of its work?
 Delete $INSTDIR\uninstaller.exe
- 
- 
+
 SectionEnd
+ 
+Function .onInit
+    IfFileExists $INSTDIR\uninstaller.exe 0 +3
+        MessageBox MB_OK "יש להסיר תחילה את ההתקנה הישנה"
+        Exec $INSTDIR\uninstaller.exe 
+FunctionEnd
+
+ 
 
