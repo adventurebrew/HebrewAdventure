@@ -40,10 +40,13 @@ $\r$\n \
 • המשחק באנגלית רץ בצורה תקינה ב ScummVM" ;" ; gvim get's confused without that extra "
 
 !define MUI_FINISHPAGE_TEXT  "ההתקנה הושלמה בהצלחה.$\r$\n$\r$\n \
+• כעת יש להפעיל את המשחק, ולצאת ממנו$\r$\n \
+• לאחר מכן ניתן להגדיר ב ScummVM , ב Edit Game -> Game -> Language את השפה כ Hebrew$\r$\n \
+• אם התפריט בעברית, אז ב עריכת משחק -> משחק -> שפה$\r$\n$\r$\n \
 נשמח לשמור על קשר! $\r$\n \
 חפשו 'הרפתקה עברית' בפייסבוק.$\r$\n \
 מוזמנים להצטרף לדיונים, או סתם לראות איך דברים נראים מאחורי הקלעים, בערוץ הדיסקורד שלנו \
-(קישור בתחתית העמוד)." ;"
+(קישור בתחתית)." ;"
 
 !define MUI_FINISHPAGE_LINK "הצטרפות לדיסקורד 'הרפתקה עברית'"
 !define MUI_FINISHPAGE_LINK_LOCATION https://discord.gg/yvr2m2jYRG
