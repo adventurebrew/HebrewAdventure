@@ -110,7 +110,7 @@ def write_vocab_file(entries):
             # don't bother with the useless compression
             binary_vocab.append(0)
 
-            chars = str.encode(word, 'windows-1255')
+            chars = str.encode(word, ENCODING)
             for char in chars:
                 assert 0 <= char <= 255
                 binary_vocab.append(char)

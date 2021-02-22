@@ -49,6 +49,9 @@ Now you can share and translate the Google Drive file.
 ### Import
 Run `import_all.py` to import everything from the Excel file.
 
+### Distribute
+When everything is ready, create an 'installer.nsi' in the game directory, based on this file.
+Then compile it with NSIS to create a nice (un/)installer.
 
 
 ## Tools files summary
@@ -57,6 +60,9 @@ Run `import_all.py` to import everything from the Excel file.
 - `messages_export.py`: exports all text messages from logic files to csv file
 - `messages_import.py`: imports all text messages from csv file to logic files
 - `words_export.py`: exports words (used by command parser) to csv file
-- `words_import.py`: imports words (used by command parser) from csv file to NON-STANDARD WORDS.TOK file!
+- `words_import.py`: imports words (used by command parser) from csv file to NON-STANDARD WORDS.TOK.EXTENDED file!
+- `object_export.py`: exports object file to csv file
+- `object_import.py`: imports object file from csv file
 - `bios_font_862_to_1255.py` : fix BIOS font to support modern Hebrew encoding
 - `config.py`: contains some common configs for the tools
+- `installer.nsi`: template for NSIS installer (to distribute binary diff)

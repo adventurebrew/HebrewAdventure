@@ -7,11 +7,9 @@ import csv
 
 import config
 
-WORDSFILE = "WORDS.TOK.EXTENDED"
-
 def words_export(gamedir, csvdir):
     words = {}
-    with open(os.path.join(gamedir, WORDSFILE), "rb") as f:
+    with open(os.path.join(gamedir, config.wordsfile), "rb") as f:
         f.seek(52, 0)
 
         PreviousWord = ''
@@ -76,7 +74,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                      description='Exports words (used by command parser) to csv file')
     parser.add_argument("gamedir", help="directory containing the game files")
-    parser.add_argument("csvdir", help="directory to write messages.csv")
+    parser.add_argument("csvdir", help="directory to write {}".format(config.words_csv_filename))
     args = parser.parse_args()
 
     words_export(args.gamedir, args.csvdir)
