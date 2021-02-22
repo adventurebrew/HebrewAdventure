@@ -16,3 +16,6 @@ words_keys = {'idx': 'אינדקס', 'original': 'מקור', 'translation': 'ת�
 objectfile = "object"
 object_csv_filename = "object.csv"
 object_keys = {'room': 'חדר', 'original': 'מקור', 'translation': 'תרגום', 'comments': 'הערות'}
+
+systemui_csv_filename = "systemui.csv"
+systemui_keys = {'command': 'פקודה מקורית', 'original': 'מקור', 'translation': 'תרגום', 'comments': 'הערות'}

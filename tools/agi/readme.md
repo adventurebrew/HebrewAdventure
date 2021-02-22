@@ -13,6 +13,8 @@ Assuming translation of PQ1.
 - Run export_all.py
 - Translate the Excel file (probably on Google Drive)
 - Run all import_all.py
+- Compile installer.nsi (after one time adaptation to the specific game)
+- One time per language - translate ScummVM's 'systemui.cpp' strings, with 'systemui_import.py'
 
 
 ### WinAGI
@@ -53,6 +55,11 @@ Run `import_all.py` to import everything from the Excel file.
 When everything is ready, create an 'installer.nsi' in the game directory, based on this file.
 Then compile it with NSIS to create a nice (un/)installer.
 
+### ScummVM
+One time per language, there is a need to translate the strings hard coded in ScummVM.
+'systemui_import.py' can help here.
+Also, search AGI engine for 'RU_RUS' and 'HE_ISR' for required changes (note that HE_ISR is written from right to left)
+
 
 ## Tools files summary
 - `export_all.py`: exports all required resources from game files to an excel file
@@ -63,6 +70,8 @@ Then compile it with NSIS to create a nice (un/)installer.
 - `words_import.py`: imports words (used by command parser) from csv file to NON-STANDARD WORDS.TOK.EXTENDED file!
 - `object_export.py`: exports object file to csv file
 - `object_import.py`: imports object file from csv file
+  
+- `systemui_import.py`: imports translations for systemui from csv file
 - `bios_font_862_to_1255.py` : fix BIOS font to support modern Hebrew encoding
 - `config.py`: contains some common configs for the tools
 - `installer.nsi`: template for NSIS installer (to distribute binary diff)
