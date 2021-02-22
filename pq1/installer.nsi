@@ -71,19 +71,19 @@ Section "Update file"
     ; Set output path to the installation directory
     SetOutPath $INSTDIR
 
-    !insertmacro BackupAndUpdateFile VOL.0
-    !insertmacro BackupAndUpdateFile LOGDIR
-    !insertmacro BackupAndUpdateFile WORDS.TOK
-    File agi-font-dos.bin
-    File PQ1.WAG
-
     WriteUninstaller $INSTDIR\${UNINSTALLER_NAME}
 
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\PQ1_Hebrew" \
                      "DisplayName" "PQ1 Hebrew translation"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\PQ1_Hebrew" \
                      "UninstallString" "$INSTDIR\${UNINSTALLER_NAME}"
-    
+
+
+    !insertmacro BackupAndUpdateFile VOL.0
+    !insertmacro BackupAndUpdateFile LOGDIR
+    File WORDS.TOK.EXTENDED
+    File agi-font-dos.bin
+    File PQ1.WAG
 SectionEnd
 
 Section "Uninstall"

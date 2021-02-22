@@ -24,7 +24,7 @@ def update(s, index, translation):
 
 
 def messages_import(srcdir, pattern, csvdir):
-    sierra_orig_dir = os.path.join(srcdir, config.messages_original)
+    sierra_orig_dir = os.path.join(srcdir, config.sierra_original)
     try:
         os.mkdir(sierra_orig_dir)
     except:

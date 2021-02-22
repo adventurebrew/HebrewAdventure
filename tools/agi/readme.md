@@ -52,8 +52,11 @@ Run `import_all.py` to import everything from the Excel file.
 
 
 ## Tools files summary
-- `export_all.py`: export all required resources to an excel file
+- `export_all.py`: exports all required resources from game files to an excel file
+- `import_all.py`: imports all required resources to from excel file to game files
 - `messages_export.py`: exports all text messages from logic files to csv file
 - `messages_import.py`: imports all text messages from csv file to logic files
+- `words_export.py`: exports words (used by command parser) to csv file
+- `words_import.py`: imports words (used by command parser) from csv file to NON-STANDARD WORDS.TOK file!
 - `bios_font_862_to_1255.py` : fix BIOS font to support modern Hebrew encoding
 - `config.py`: contains some common configs for the tools
