@@ -8,6 +8,7 @@ import config
 def escape(s):
     result = bytes(s, encoding='windows-1255')
     result = str(result).lstrip('b').strip("'")
+    result = result.replace(r"\\n", r"\n")
     return result
 
 

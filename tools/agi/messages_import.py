@@ -18,7 +18,7 @@ def update(s, index, translation):
         t = re.sub(f'#message {index} ".*"', f'#message {index} "{translation}"', line)
         lines.append(t)
     s_new = '\r'.join(lines)
-    if s_new == s:
+    if s_new == s:  # TODO remove this 'if' and printing, it's useless
         print(f"WARNING: failed to replace message index {index} to '{translation}'")
     return s_new
 
