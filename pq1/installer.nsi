@@ -1,8 +1,8 @@
 ﻿# In order to create the patches, run:
 #
-# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.check\WORDS.TOK C:\Zvika\Games\PoliceQuest\AGI\WORDS.TOK WORDS.TOK.patch
-# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\ames\PoliceQuest\AGI.check\LOGDIR C:\Zvika\Games\PoliceQuest\AGI\LOGDIR logdir.patch
-# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.check\VOL.0 C:\Zvika\Games\PoliceQuest\AGI\VOL.0 VOL.0.patch
+# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.clean\OBJECT C:\Zvika\Games\PoliceQuest\AGI\OBJECT object.patch /r
+# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.clean\LOGDIR C:\Zvika\Games\PoliceQuest\AGI\LOGDIR logdir.patch /r
+# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.clean\VOL.0 C:\Zvika\Games\PoliceQuest\AGI\VOL.0 VOL.0.patch /r
 
 !include MUI2.nsh
 
@@ -30,7 +30,7 @@ BrandingText "הרפתקה עברית"
  
 Unicode true
 
-InstallDir "C:\Zvika\Games\PoliceQuest\AGI.check"  #TODO remove this
+#InstallDir "C:\Zvika\Games\PoliceQuest\AGI.check"  #TODO remove this
 
 !define MUI_TEXT_WELCOME_INFO_TEXT "ברוכים הבאים.$\r$\n \
 $\r$\n \
@@ -47,6 +47,8 @@ $\r$\n \
 חפשו 'הרפתקה עברית' בפייסבוק.$\r$\n \
 מוזמנים להצטרף לדיונים, או סתם לראות איך דברים נראים מאחורי הקלעים, בערוץ הדיסקורד שלנו \
 (קישור בתחתית)." ;"
+
+!define MUI_TEXT_ABORT_SUBTITLE "ההתקנה לא הושלמה במלואה"
 
 !define MUI_FINISHPAGE_LINK "הצטרפות לדיסקורד 'הרפתקה עברית'"
 !define MUI_FINISHPAGE_LINK_LOCATION https://discord.gg/yvr2m2jYRG
@@ -68,6 +70,11 @@ DirText "בחר את התיקייה שקבצי PQ1 נמצאים בה"
 !include "VPatchLib.nsh"
 
 Section "Update file"
+    IfFileExists $INSTDIR\${UNINSTALLER_NAME} 0 +4
+        MessageBox MB_OK "יש להסיר תחילה את ההתקנה הישנה"
+        Exec $INSTDIR\${UNINSTALLER_NAME}
+        MessageBox MB_OK "אשר סיום הסרת התקנה ישנה"
+
     ; Set output path to the installation directory
     SetOutPath $INSTDIR
 
@@ -81,12 +88,14 @@ Section "Update file"
 
     !insertmacro BackupAndUpdateFile VOL.0
     !insertmacro BackupAndUpdateFile LOGDIR
+    !insertmacro BackupAndUpdateFile OBJECT
     File WORDS.TOK.EXTENDED
     File agi-font-dos.bin
     File PQ1.WAG
 SectionEnd
 
 Section "Uninstall"
+    Delete $INSTDIR\WORDS.TOK.EXTENDED
     Delete $INSTDIR\agi-font-dos.bin
     Delete $INSTDIR\PQ1.WAG
     CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR
@@ -95,9 +104,3 @@ Section "Uninstall"
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\PQ1_Hebrew"
 SectionEnd
  
-Function .onInit
-    IfFileExists $INSTDIR\${UNINSTALLER_NAME} 0 +3
-        MessageBox MB_OK "יש להסיר תחילה את ההתקנה הישנה"
-        Exec $INSTDIR\${UNINSTALLER_NAME}
-FunctionEnd
-
