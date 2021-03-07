@@ -5,7 +5,7 @@ import shutil
 
 import config
 
-config.words_extended_file = "WORDS.TOK"
+config.words_extended_file = "WORDS.TOK.EXTENDED"
 
 
 def write_words_file(gamedir, words_by_index):

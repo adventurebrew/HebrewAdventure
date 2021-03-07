@@ -1,4 +1,4 @@
-#TODO: create import_all.py
+#TODO: create import_all.py     (with '"C:\Program Files (x86)\WinAGI GDS\conWAGI.exe" /d C:\Zvika\Games\PoliceQuest\AGI\PQ1.WAG')
 
 import argparse
 import csv
@@ -12,14 +12,15 @@ from agi.config import messages_keys
 
 
 def update(s, index, translation):
+    translation = translation.replace('\\', '\\\\')    # -> replace \ with \\
     translation = translation.replace('"', r'\"')
     lines = []
-    for line in s.split('\r'):
+    for line in s.split('\n'):
         t = re.sub(f'#message {index} ".*"', f'#message {index} "{translation}"', line)
         lines.append(t)
-    s_new = '\r'.join(lines)
-    if s_new == s:  # TODO remove this 'if' and printing, it's useless
-        print(f"WARNING: failed to replace message index {index} to '{translation}'")
+    s_new = '\n'.join(lines)
+    # if s_new == s:  # TODO remove this 'if' and printing, it's useless
+    #     print(f"WARNING: failed to replace message index {index} to '{translation}'")
     return s_new
 
 
@@ -50,7 +51,7 @@ def messages_import(srcdir, pattern, csvdir):
         if not os.path.exists(os.path.join(sierra_orig_dir, filename)):
             shutil.copy2(full_filename, sierra_orig_dir)
 
-        with open(full_filename, encoding=config.encoding, newline='\n') as f:
+        with open(full_filename, encoding=config.encoding) as f:
             logic = f.read()
 
         for entry in entries:
