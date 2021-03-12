@@ -6,6 +6,7 @@ import csv
 import glob
 import os
 import re
+import binascii
 
 import config
 
@@ -48,6 +49,7 @@ def write_csv(csvdir, entries):
                         config.messages_keys['sequence']: entry['sequence'],
                         config.messages_keys['talker']: entry['talker'],
                         config.messages_keys['original']: entry['text'],
+                        config.messages_keys['padding']: entry['padding']
                     })
                 except UnicodeEncodeError as e:
                     print(e, entry)
@@ -94,6 +96,14 @@ def messages_export(srcdir, csvdir):
         amount = read_le(lob, index)
         index += 2
 
+        padding_size = 0
+        if kind == 'ok':
+            # 3 bytes padding
+            padding_size = 3
+        if kind == 'best':
+            # 4 bytes of references - currently ignored
+            padding_size = 4
+
         # print(amount)
         for i in range(amount):
             noun = lob[index]
@@ -102,13 +112,8 @@ def messages_export(srcdir, csvdir):
             sequence = lob[index + 3]
             talker = lob[index + 4]
             offset = read_le(lob, index + 5)
-            index += 7
-            if kind == "ok":
-                # 3 bytes padding
-                index += 3
-            elif kind == "best":
-                # 4 bytes of references - currently ignored
-                index += 4
+            padding = binascii.hexlify(bytes(lob[index + 7: index + 7 + padding_size])).decode('UTF-8-sig')
+            index += 7 + padding_size
 
             text = read_string(lob, offset)
             entries[room].append({'room': room,
@@ -117,7 +122,8 @@ def messages_export(srcdir, csvdir):
                                   'condition': condition,
                                   'sequence': sequence,
                                   'talker': talker,
-                                  'text': text
+                                  'text': text,
+                                  'padding': padding
                                  })
             # print(room, noun, verb, condition, sequence, talker, text)
     write_csv(csvdir, entries)
