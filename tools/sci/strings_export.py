@@ -5,9 +5,7 @@ import os
 import glob
 import csv
 
-# these should go to config.py:
-scripts_strings_csv_filename = "scripts_strings.csv"
-scripts_strings_keys = {'filename': 'קובץ', 'idx': 'אינדקס', 'original': 'מקור', 'translation': 'תרגום', 'comments': 'הערות'}
+from sci.config import scripts_strings_csv_filename, scripts_strings_keys
 
 
 def strings_export(srcdir, pattern, csvdir):
