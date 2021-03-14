@@ -19,8 +19,8 @@
 	local3
 	local4
 	local5
-	[local6 4] = [{Restore} {__Save__} {Replace} {Replace}]
-	[local10 4] = [{Select the game that you would like to restore.} {Type the description of this saved game.} {This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk.} {This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk.}]
+	[local6 4] = [{טעינה} {שמירה} {החלפה} {החלפה}]
+	[local10 4] = [{בחר את השמירה שברצונך לטעון.} {הקש את תיאור המשחק השמור.} {This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk.} {This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk.}]
 )
 (procedure (proc990_0 param1 &tmp temp0 [temp1 33] [temp34 100] temp134 [temp135 100] [temp235 5] [temp240 5])
 	(asm
@@ -629,19 +629,18 @@ code_04f5:
 			self     4
 			pushi    #addText
 			pushi    1
-			lofsa    {Are you sure you want to\ndelete this saved game?}
-			push    
+			lofsa    {האם אתה בטוח שאתה רוצה למחוק את המשחק השמור הזה?}			push    
 			pushi    205
 			pushi    4
 			pushi    0
-			lofsa    { No_}
+			lofsa    {לא}
 			push    
 			pushi    15
 			pushi    27
 			pushi    205
 			pushi    4
 			pushi    1
-			lofsa    {Yes}
+			lofsa    {כן}
 			push    
 			pushi    70
 			pushi    27
@@ -835,7 +834,7 @@ code_0660:
 	(properties
 		elements 0
 		size 0
-		text {Restore a Game}
+		text {טעינת שמירה}
 		font 0
 		window 0
 		theItem 0
@@ -856,7 +855,7 @@ code_0660:
 	(properties
 		elements 0
 		size 0
-		text {Save a Game}
+		text {שמירת משחק}
 		font 0
 		window 0
 		theItem 0
@@ -941,7 +940,7 @@ code_0660:
 
 (instance cancelI of DButton
 	(properties
-		text { Cancel_}
+		text {ביטול}
 	)
 	
 	(method (dispose)
@@ -951,8 +950,7 @@ code_0660:
 
 (instance changeDirI of DButton
 	(properties
-		text {Change\nDirectory}
-	)
+		text {החלפת ספריה}	)
 	
 	(method (dispose)
 		(super dispose: 1)
@@ -961,7 +959,7 @@ code_0660:
 
 (instance deleteI of DButton
 	(properties
-		text { Delete_}
+		text {מחיקה}
 	)
 	
 	(method (dispose)
@@ -981,7 +979,7 @@ code_0660:
 
 (instance text1 of DText
 	(properties
-		text {Replace}
+		text {החלפה}
 		font 0
 	)
 	
@@ -992,7 +990,7 @@ code_0660:
 
 (instance text2 of DText
 	(properties
-		text {with:}
+		text {עם:}
 		font 0
 	)
 	
@@ -1017,7 +1015,7 @@ code_0660:
 
 (instance button1 of DButton
 	(properties
-		text {Replace}
+		text {החלפה}
 	)
 	
 	(method (dispose)
@@ -1027,7 +1025,7 @@ code_0660:
 
 (instance button2 of DButton
 	(properties
-		text {Cancel}
+		text {ביטול}
 	)
 	
 	(method (dispose)
