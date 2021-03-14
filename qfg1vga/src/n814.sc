@@ -315,29 +315,58 @@ code_0218:
 	)
 )
 
+;Z that's the original:
+;(procedure (proc814_1 &tmp temp0 [temp1 20] [temp21 30])
+;	(= temp0 global118)
+;	(Format
+;		@temp1
+;		(switch global119
+;			(0 {Day is dawning})
+;			(1 {It is mid-morning})
+;			(2 {It is midday})
+;			(3 {It is mid-afternoon})
+;			(4 {Sunset approaches})
+;			(5 {The night is still young})
+;			(6
+;				{It is the middle of the night}
+;			)
+;			(7 {It is not yet dawn})
+;		)
+;	)
+;	(if (or (!= global119 6) (> global116 500))
+;		(++ temp0)
+;	)
+;	(Print
+;		font: gFont
+;		addTextF: @temp21 {%s on day %d.} @temp1 temp0
+;		init:
+;	)
+;)
+
+
+;Z modified - see orig above
 (procedure (proc814_1 &tmp temp0 [temp1 20] [temp21 30])
 	(= temp0 global118)
-	(Format
-		@temp1
-		(switch global119
-			(0 {Day is dawning})
-			(1 {It is mid-morning})
-			(2 {It is midday})
-			(3 {It is mid-afternoon})
-			(4 {Sunset approaches})
-			(5 {The night is still young})
-			(6
-				{It is the middle of the night}
-			)
-			(7 {It is not yet dawn})
-		)
-	)
 	(if (or (!= global119 6) (> global116 500))
 		(++ temp0)
 	)
+	(Format
+		@temp1
+		(switch global119
+			(0 {יום %d, החמה זה עתה הפציעה.})
+			(1 {יום %d, הבוקר עוד בעיצומו.})
+			(2 {חצות יום %d.})
+			(3 {אחר הצהריים, יום %d.})
+			(4 {יום %d, צללי ערב מתחילים לנטות.})
+			(5 {יום %d, הערב עוד צעיר.})
+			(6 {חצות ליל יום %d.})
+			(7 {יום %d, אפלולית הלילה נמוגה לאיטה.})
+		)
+		temp0
+	)
 	(Print
 		font: gFont
-		addTextF: @temp21 {%s on day %d.} @temp1 temp0
+		addTextF: @temp21 {%s} @temp1 temp0
 		init:
 	)
 )
