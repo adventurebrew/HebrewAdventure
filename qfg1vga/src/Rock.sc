@@ -104,57 +104,59 @@ code_0453:
 	)
 )
 
+;Z this proc didn't compile, bypassing it like Eric
+;Z see https://github.com/Kawa-oneechan/SCICompanion/issues/11
 (procedure (proc32_4)
-	(asm
-		bnot    
-		pushi    2
-		pushi    500
-		dup     
-		pushi    161
-		pushi    1
-		pushi    0
-		pushi    63
-		pushi    1
-		pushi    15
-		pushi    313
-		pushi    0
-		lofsa    flame
-		send     24
-		jmp      code_0453
-		dup     
-		ldi      24
-		eq?     
-		bnt      code_0453
-		lal      theFetchable
-		bnt      code_0448
-		pushi    #drop
-		pushi    2
-		pushi    #x
-		pushi    0
-		send     4
-		push    
-		pushi    #y
-		pushi    0
-		lal      theFetchable
-		send     4
-		push    
-		lal      theFetchable
-		send     8
-		ldi      0
-		sal      theFetchable
-code_0448:
-		pushi    #setCursor
-		pushi    2
-		lsg      global20
-		pushi    1
-		lag      gGame
-		send     8
-code_0453:
-		toss    
-		ldi      0
-		sal      local4
-		ret     
-	)
+;Z 	(asm
+;Z 		bnot    
+;Z 		pushi    2
+;Z 		pushi    500
+;Z 		dup     
+;Z 		pushi    161
+;Z 		pushi    1
+;Z 		pushi    0
+;Z 		pushi    63
+;Z 		pushi    1
+;Z 		pushi    15
+;Z 		pushi    313
+;Z 		pushi    0
+;Z 		lofsa    flame
+;Z 		send     24
+;Z 		jmp      code_0453
+;Z 		dup     
+;Z 		ldi      24
+;Z 		eq?     
+;Z 		bnt      code_0453
+;Z 		lal      theFetchable
+;Z 		bnt      code_0448
+;Z 		pushi    #drop
+;Z 		pushi    2
+;Z 		pushi    #x
+;Z 		pushi    0
+;Z 		send     4
+;Z 		push    
+;Z 		pushi    #y
+;Z 		pushi    0
+;Z 		lal      theFetchable
+;Z 		send     4
+;Z 		push    
+;Z 		lal      theFetchable
+;Z 		send     8
+;Z 		ldi      0
+;Z 		sal      theFetchable
+;Z code_0448:
+;Z 		pushi    #setCursor
+;Z 		pushi    2
+;Z 		lsg      global20
+;Z 		pushi    1
+;Z 		lag      gGame
+;Z 		send     8
+;Z code_0453:
+;Z 		toss    
+;Z 		ldi      0
+;Z 		sal      local4
+;Z 		ret     
+;Z 	)
 )
 
 (procedure (localproc_0294)
