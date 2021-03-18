@@ -64,7 +64,7 @@
 						value: temp3
 						text: (temp6 name?)
 						;Z original nsLeft: temp0
-						nsLeft: (+ temp0 190)
+						nsLeft: (+ temp0 220)
 						nsTop: temp1
 						setSize:
 						state: 3
