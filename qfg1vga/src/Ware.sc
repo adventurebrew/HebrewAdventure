@@ -25,7 +25,7 @@
 (instance buy of Dialog
 	(properties)
 	
-	(method (init &tmp temp0 temp1 temp2 temp3 newDText gNewListFirst temp6 [tempZvika 40])
+	(method (init &tmp temp0 temp1 temp2 temp3 newDText gNewListFirst temp6 [tempTextRect 4])
 		(= theGCursorNumber gCursorNumber)
 		(gGame setCursor: 999)
 		(= temp0 (= temp1 4))
@@ -64,20 +64,20 @@
 						value: temp3
 						text: (temp6 name?)
 						;Z original nsLeft: temp0
-						;Z prev attempt - good, but not right aligned: nsLeft: (+ temp0 140)
-						;nsLeft: (- (+ temp0 240) (gNewDText nsRight?)) 
-						nsLeft: (+ temp0 140)
+						nsLeft: (+ temp0 190)
 						nsTop: temp1
-						;mode: -1	; teJustRight
 						setSize:
-						;moveTo:  (- (+ temp0 240) (newDText nsRight?)) temp1    ;;nsLeft: (- (+ temp0 240) (gNewDText nsRight?)) temp1
 						state: 3
 						yourself:
 					)
-				;move: (- (gNewDText nsRight?)) 0
 			)
-			;(Format @tempZvika "!%d." (newDText nsRight?))
-			;(Display @tempZvika)
+			
+			;Z added:
+			(TextSize @tempTextRect (newDText text?) (newDText font?))
+			(newDText move: (- 0 [tempTextRect 3]) 0)
+			;D (Format @tempZvika "!%d,%d,%d,%d." [tempTextRect 02] [tempTextRect 1] [tempTextRect 2] [tempTextRect 3])
+			;D (Display @tempZvika)
+			
 			(if (!= gModNum 65)
 				(self
 					add:
