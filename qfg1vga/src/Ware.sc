@@ -25,7 +25,7 @@
 (instance buy of Dialog
 	(properties)
 	
-	(method (init &tmp temp0 temp1 temp2 temp3 newDText gNewListFirst temp6)
+	(method (init &tmp temp0 temp1 temp2 temp3 newDText gNewListFirst temp6 [tempZvika 40])
 		(= theGCursorNumber gCursorNumber)
 		(gGame setCursor: 999)
 		(= temp0 (= temp1 4))
@@ -34,16 +34,19 @@
 			((= gNewDText (DText new:))
 				text: {אולי תרצה לקנות:}
 				setSize:
+				;Z that's the original LTR location. It doesn't matter, we fix it below
 				moveTo: 4 temp1
 			)
 		else
 			((= gNewDText (DText new:))
 				text: {אולי תרצה לתת:}
 				setSize:
+				;Z that's the original LTR location. It doesn't matter, we fix it below
 				moveTo: 4 temp1
 			)
 		)
-		(self add: gNewDText setSize:)
+		;Z moved below
+		;Z original (self add: gNewDText setSize:)
 		(= temp1
 			(+
 				temp1
@@ -60,19 +63,28 @@
 					((= newDText (DText new:))
 						value: temp3
 						text: (temp6 name?)
-						nsLeft: temp0
+						;Z original nsLeft: temp0
+						;Z prev attempt - good, but not right aligned: nsLeft: (+ temp0 140)
+						;nsLeft: (- (+ temp0 240) (gNewDText nsRight?)) 
+						nsLeft: (+ temp0 140)
 						nsTop: temp1
-						state: 3
+						;mode: -1	; teJustRight
 						setSize:
+						;moveTo:  (- (+ temp0 240) (newDText nsRight?)) temp1    ;;nsLeft: (- (+ temp0 240) (gNewDText nsRight?)) temp1
+						state: 3
 						yourself:
 					)
+				;move: (- (gNewDText nsRight?)) 0
 			)
+			;(Format @tempZvika "!%d." (newDText nsRight?))
+			;(Display @tempZvika)
 			(if (!= gModNum 65)
 				(self
 					add:
 						((DText new:)
 							text: (temp6 price?)
-							nsLeft: (+ temp0 120)
+							;Z original nsLeft: (+ temp0 120)
+							nsLeft: (+ temp0 95)
 							nsTop: temp1
 							setSize:
 							yourself:
@@ -82,7 +94,8 @@
 					add:
 						((DText new:)
 							text: (if (StrCmp (temp6 price?) {1}) {מטבעות כסף} else {מטבע כסף})
-							nsLeft: (+ temp0 140)
+							;Z original nsLeft: (+ temp0 140)
+							nsLeft: temp0
 							nsTop: temp1
 							setSize:
 							yourself:
@@ -96,23 +109,33 @@
 		)
 		(= window gHSW)
 		(self setSize:)
+		
+		;Z added:
+		(gNewDText moveTo: (- nsRight (+ 0 (gNewDText nsRight?))) (gNewDText nsTop?))
+		
+		;Z relocated from above
+		(self add: gNewDText setSize:)
+		
 		(= gNewDText (DButton new:))
 		(if (!= gModNum 65)
 			(gNewDText
 				text: {אל תקנה דבר}
 				setSize:
-				moveTo: (- nsRight (+ 4 (gNewDText nsRight?))) nsBottom
+				;Z original moveTo: (- nsRight (+ 4 (gNewDText nsRight?))) nsBottom
+				moveTo: temp0 nsBottom
 			)
 		else
 			(gNewDText
 				text: {אל תתן דבר}
 				setSize:
+				;Z original moveTo: (- nsRight (+ 4 (gNewDText nsRight?))) nsBottom
 				moveTo: (- nsRight (+ 4 (gNewDText nsRight?))) nsBottom
 			)
 		)
-		(gNewDText
-			move: (- (gNewDText nsLeft?) (gNewDText nsRight?)) 0
-		)
+		;Z removed:
+		;Z (gNewDText
+		;Z 	move: (- (gNewDText nsLeft?) (gNewDText nsRight?)) 0
+		;Z )
 		(self add: gNewDText setSize: center:)
 		(return temp3)
 	)
