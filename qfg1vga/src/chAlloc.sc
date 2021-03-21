@@ -16,21 +16,36 @@
 
 (local
 	[local0 14] = [999 0 1 2 3 4 12 5 6 7 8 9 10 11]
-	[local14 14] = [28 40 52 64 76 88 100 40 52 64 76 88 100 112]
-	[local28 14] = [100 100 100 100 100 100 100 204 204 204 204 204 204 204]
-	[local42 14] = [0 1 2 3 4 5 6 7 9 10 1 9 11 12]
+	;local14 - Y coordinates
+	;Z original
+	;Z [local14 14] = [28 40 52 64 76 88 100 40 52 64 76 88 100 112]
+	[local14 14] = [30 42 54 66 78 90 102 42 54 66 78 90 102 113]
+	
+	;local28 - X coordinates
+	;Z original 
+	;Z [local28 14] = [100 100 100 100 100 100 100 204 204 204 204 204 204 204]
+	[local28 14] = [303 303 301 306 304 302 304 197 199 199 198 199 200 199]
+	
+	[pointsX 14] = [215 215 215 215 215 215 215 100 100 100 100 100 100 100]
+	
+	; big lettes' cells
+	;Z original
+	[local42 14] = [0 1 2 3 4 5 6 2 7 7 8 9 6 10]
 	[theTheGStrength 49] = [0 25 10 15 15 10 0 20 15 10 0 0 10 0 0 10 25 15 15 10 25 10 0 15 0 0 0 0 0 10 15 25 10 10 0 10 0 5 10 10 5 5 67 78 68 20 23 27 1]
 	local105
-	local106 =  50
-	[theGStrength 14]
+	local106 =  50		; pointsAvailable
+	[theGStrength 14]	; theEgoStats
 	[theTheTheGStrength 14]
-	local135
+	local135			; nextRoom
 )
+
+;ShowValue
 (procedure (localproc_095b param1)
+	;Z decreased 220 -> 200, 219 -> 199
 	(Display
 		&rest
 		100
-		220
+		200
 		param1
 		102
 		215
@@ -41,24 +56,28 @@
 		105
 		123
 	)
-	(Display &rest 100 219 param1 102 91 106 30 101 1 105 123)
+	(Display &rest 100 199 param1 102 91 106 30 101 1 105 123)
 )
 
+;UpdatePoints
 (procedure (localproc_0997 &tmp [temp0 4] temp4)
 	(= temp4 1)
 	(while (< temp4 14)
 		(= [gStrength [local0 temp4]] [theGStrength temp4])
 		(++ temp4)
 	)
-	(DrawCel 802 8 1 215 142 15)
+	;Z decreased 215 -> 195
+	(DrawCel 802 8 1 195 142 15)
 	(Format @temp0 {%d} local106)
-	(if local106
-		(Display @temp0 100 220 141 102 215 106 30 101 1 105 123)
-		(Display @temp0 100 219 141 102 50 106 30 101 1 105 123)
+	;Z decreased 220 -> 200, 219 -> 199
+	(if local106	;pointsAvailable
+		(Display @temp0 100 200 141 102 215 106 30 101 1 105 123)
+		(Display @temp0 100 199 141 102 50 106 30 101 1 105 123)
 	else
 		(localproc_095b 141 @temp0)
 	)
-	(DrawCel 802 8 1 215 154 15)
+	;Z decreased 215 -> 195
+	(DrawCel 802 8 1 195 154 15)
 	(localproc_095b
 		153
 		(Format
@@ -67,7 +86,8 @@
 			(= [gStrength 14] (/ (+ (proc814_21) 1) 2))
 		)
 	)
-	(DrawCel 802 8 1 215 166 15)
+	;Z decreased 215 -> 195
+	(DrawCel 802 8 1 195 166 15)
 	(localproc_095b
 		165
 		(Format
@@ -76,7 +96,8 @@
 			(= [gStrength 15] (/ (+ (proc814_20) 3) 4))
 		)
 	)
-	(DrawCel 802 8 1 215 178 15)
+	;Z decreased 215 -> 195
+	(DrawCel 802 8 1 195 178 15)
 	(localproc_095b
 		177
 		(Format @temp0 {%d} (= [gStrength 16] (proc814_22)))
@@ -425,7 +446,8 @@
 	
 	(method (highlight param1 &tmp temp0 [temp1 4] temp5 temp6)
 		(= temp0
-			(if (< state 7) (+ nsLeft 71) else (+ nsLeft 80))
+			;Z orig: (if (< state 7) (+ nsLeft 71) else (+ nsLeft 80))
+			[pointsX state]
 		)
 		(DrawCel
 			view
