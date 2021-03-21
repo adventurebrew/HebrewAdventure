@@ -56,7 +56,7 @@
 		)
 	)
 	
-	(method (doDialog param1 &tmp temp0 temp1 temp2 temp3 newDialog newDText newDTextNsBottom temp7 temp8 temp9 [temp10 10] [temp20 10] [temp30 10] [temp40 10] [temp50 10] [temp60 10] [temp70 10] [temp80 10])
+	(method (doDialog param1 &tmp temp0 temp1 temp2 temp3 newDialog newDText newDTextNsBottom temp7 temp8 temp9 [temp10 10] [temp20 10] [temp30 10] [temp40 10] [temp50 10] [temp60 10] [temp70 10] [temp80 10] node obj)
 		(= temp0 [param1 (= temp2 0)])
 		(= newDTextNsBottom 0)
 		(= temp9 1)
@@ -137,6 +137,21 @@
 		)
 		(newDText setSize: moveTo: 4 (+ newDTextNsBottom 4))
 		(newDialog add: newDText)
+		
+		
+		;Z added to right align:
+		(newDialog setSize:)
+		(for  ((= node (newDialog first:)))
+			node
+			((= node (newDialog next: node)))
+
+			(= obj (NodeValue node))
+			(obj move: (- (- (newDialog nsRight?) (obj nsRight?)) 4) 0)
+
+		)
+		;\Z
+		
+		
 		(= temp3 (newDialog setSize: center: open: 0 -1 doit: 0))
 		(cond 
 			((IsObject temp3) (if (temp3 isKindOf: DButton) (= temp3 (temp3 value?))))
