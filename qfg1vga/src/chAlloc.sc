@@ -363,6 +363,24 @@
 		(= nsBottom (+ nsTop 12))
 	)
 	
+	;Z added, override default in order to select from the big letter to the left, instead of to the right
+	(method (onMe obj)
+		(return
+			(if
+				(and
+					(>= (obj x?) (- nsLeft 95))
+					(>= (obj y?) nsTop)
+					(<= (obj x?) (+ nsLeft 10))
+				)
+				(<= (obj y?) nsBottom)
+			else
+				0
+			)
+		)
+	)
+	;\Z
+	
+	
 	(method (select param1)
 		(return
 			(if (super select: &rest)
