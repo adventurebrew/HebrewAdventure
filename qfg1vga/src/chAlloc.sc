@@ -605,7 +605,9 @@
 			(= temp0 91)
 			(= temp1 215)
 		)
-		(DrawCel view theLoop cel nsLeft nsTop 15)
+		;Z orig (DrawCel view theLoop cel nsLeft nsTop 15)
+		(DrawCel view theLoop cel (+ nsRight 2) (+ nsTop 1) 15)
+		
 		(Display
 			@global428
 			100
@@ -649,7 +651,8 @@
 
 (instance pointsAvail of View
 	(properties
-		x 102
+		;Z orig x 102
+		x 193
 		y 140
 		view 802
 		loop 7
