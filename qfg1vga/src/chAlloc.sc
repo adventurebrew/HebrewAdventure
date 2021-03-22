@@ -41,11 +41,11 @@
 
 ;ShowValue
 (procedure (localproc_095b param1)
-	;Z decreased 220 -> 200, 219 -> 199
+	;Z decreased 220 -> 190, 219 -> 189
 	(Display
 		&rest
 		100
-		200
+		190
 		param1
 		102
 		215
@@ -56,7 +56,7 @@
 		105
 		123
 	)
-	(Display &rest 100 199 param1 102 91 106 30 101 1 105 123)
+	(Display &rest 100 189 param1 102 91 106 30 101 1 105 123)
 )
 
 ;UpdatePoints
@@ -66,18 +66,18 @@
 		(= [gStrength [local0 temp4]] [theGStrength temp4])
 		(++ temp4)
 	)
-	;Z decreased 215 -> 195
-	(DrawCel 802 8 1 195 142 15)
+	;Z decreased 215 -> 185
+	(DrawCel 802 8 1 185 142 15)
 	(Format @temp0 {%d} local106)
-	;Z decreased 220 -> 200, 219 -> 199
+	;Z decreased 220 -> 190, 219 -> 189
 	(if local106	;pointsAvailable
-		(Display @temp0 100 200 141 102 215 106 30 101 1 105 123)
-		(Display @temp0 100 199 141 102 50 106 30 101 1 105 123)
+		(Display @temp0 100 190 141 102 215 106 30 101 1 105 123)
+		(Display @temp0 100 189 141 102 50 106 30 101 1 105 123)
 	else
 		(localproc_095b 141 @temp0)
 	)
-	;Z decreased 215 -> 195
-	(DrawCel 802 8 1 195 154 15)
+	;Z decreased 215 -> 185
+	(DrawCel 802 8 1 185 154 15)
 	(localproc_095b
 		153
 		(Format
@@ -86,8 +86,8 @@
 			(= [gStrength 14] (/ (+ (proc814_21) 1) 2))
 		)
 	)
-	;Z decreased 215 -> 195
-	(DrawCel 802 8 1 195 166 15)
+	;Z decreased 215 -> 185
+	(DrawCel 802 8 1 185 166 15)
 	(localproc_095b
 		165
 		(Format
@@ -96,8 +96,8 @@
 			(= [gStrength 15] (/ (+ (proc814_20) 3) 4))
 		)
 	)
-	;Z decreased 215 -> 195
-	(DrawCel 802 8 1 195 178 15)
+	;Z decreased 215 -> 185
+	(DrawCel 802 8 1 185 178 15)
 	(localproc_095b
 		177
 		(Format @temp0 {%d} (= [gStrength 16] (proc814_22)))
@@ -561,7 +561,7 @@
 							maskView
 							maskLoop
 							maskCel
-							(+ nsLeft 46)
+							(+ nsLeft 11)	;Z
 							nsTop
 							15
 						)
@@ -577,7 +577,7 @@
 							maskView
 							maskLoop
 							maskCel
-							(+ nsLeft 46)
+							(+ nsLeft 11)	;Z
 							nsTop
 							15
 						)
@@ -611,7 +611,7 @@
 		(Display
 			@global428
 			100
-			(+ nsLeft 47)
+			(+ nsLeft 12)	;Z
 			nsTop
 			102
 			temp1
@@ -625,7 +625,7 @@
 		(Display
 			@global428
 			100
-			(+ nsLeft 46)
+			(+ nsLeft 11)	;Z
 			nsTop
 			102
 			temp0
