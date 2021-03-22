@@ -259,21 +259,24 @@ code_0173:
 		pushi    1
 		lofsa    {שחזור}
 		push    
-		pushi    0
+		;Z orig pushi    0
+		pushi    205
 		lst      temp7
 		pushi    205
 		pushi    4
 		pushi    2
 		lofsa    {אתחול}
 		push    
-		pushi    70
+		;Z orig pushi    70
+		pushi    135
 		lst      temp7
 		pushi    205
 		pushi    4
 		pushi    3
 		lofsa    {____יציאה____}
 		push    
-		pushi    140
+		;Z orig pushi    140
+		pushi    32
 		lst      temp7
 		pushi    110
 		pushi    0
