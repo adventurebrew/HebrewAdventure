@@ -540,7 +540,8 @@
 		loop 1
 		cel 0
 		nsLeft 100
-		nsTop 22
+		;Z orig nsTop 22
+		nsTop 21
 		nsRight 300
 		nsBottom 34
 		maskView 802
@@ -605,8 +606,9 @@
 			(= temp0 91)
 			(= temp1 215)
 		)
+		; draw the letter
 		;Z orig (DrawCel view theLoop cel nsLeft nsTop 15)
-		(DrawCel view theLoop cel (+ nsRight 2) (+ nsTop 1) 15)
+		(DrawCel view theLoop cel (+ nsRight 2) (+ nsTop 2) 15)
 		
 		(Display
 			@global428
@@ -652,8 +654,9 @@
 (instance pointsAvail of View
 	(properties
 		;Z orig x 102
-		x 193
-		y 140
+		x 195
+		;Z orig y 140
+		y 142
 		view 802
 		loop 7
 		priority 15
