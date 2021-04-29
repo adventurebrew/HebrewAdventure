@@ -23,9 +23,20 @@ def write_words_file(gamedir, words_by_index):
 
     sorted_words = []
     for index in words_by_index:
+        real_index = index  # because of possible duplicates
         for word in words_by_index[index]:
-            if word.strip():
-                sorted_words.append((word.strip(), index))
+            w = word.strip()
+            if w:
+                l = [{'word': sw, 'index': ind} for (sw, ind) in sorted_words if w == sw]
+                if l:
+                    real_index = l[0]['index']
+                    print(w, real_index, index)
+
+        for word in words_by_index[index]:
+            w = word.strip()
+            if w:
+                if w not in [sw for (sw, _) in sorted_words]:
+                    sorted_words.append((w, real_index))
     sorted_words = sorted(sorted_words)
 
     with open(os.path.join(gamedir, config.words_extended_file), "w") as f:

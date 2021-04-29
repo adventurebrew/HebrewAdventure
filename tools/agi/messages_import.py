@@ -40,7 +40,7 @@ def messages_import(srcdir, pattern, csvdir):
             # there is no translated entry, no need to do anything, skip this room
             continue
 
-        print(room)
+        # print(room)
 
         filename = f"Logic{room}.lgc"
         full_filename = os.path.join(srcdir, filename)

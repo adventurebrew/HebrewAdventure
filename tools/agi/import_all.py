@@ -71,4 +71,8 @@ if __name__ == "__main__":
     print("\nCreating installer")
     create_installer(args.cleandir, args.gamedir, args.workingdir, wag_file)
 
+    if args.skip_drive:
+        print("\n*******************************************************************")
+        print("Skipped download from Google Drive")
+        print("*******************************************************************\n")
 
