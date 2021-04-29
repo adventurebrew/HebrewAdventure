@@ -22,6 +22,10 @@ def update(s, index, translation):
     return s_new
 
 
+def get_number(entry, attr):
+    return int(float(entry[messages_keys[attr]]))
+
+
 def messages_import(srcdir, pattern, csvdir):
     sierra_orig_dir = os.path.join(srcdir, config.sierra_original)
     try:
@@ -32,9 +36,9 @@ def messages_import(srcdir, pattern, csvdir):
     with open(os.path.join(csvdir, messages_csv_filename), newline='', encoding='utf-8') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
-    rooms = sorted(list(set([int(float(entry[messages_keys['room']])) for entry in texts])))
+    rooms = sorted(list(set([get_number(entry, 'room') for entry in texts])))
     for room in rooms:
-        entries = [entry for entry in texts if entry[messages_keys['room']] == room]
+        entries = [entry for entry in texts if get_number(entry, 'room') == room]
 
         if set([entry[messages_keys['translation']] for entry in entries]) == {''}:
             # there is no translated entry, no need to do anything, skip this room
@@ -45,8 +49,12 @@ def messages_import(srcdir, pattern, csvdir):
         filename = f"Logic{room}.lgc"
         full_filename = os.path.join(srcdir, filename)
 
-        # save a copy of the original sierra file (if we haven't already done so)
-        if not os.path.exists(os.path.join(sierra_orig_dir, filename)):
+        sierra_orig_file = os.path.join(sierra_orig_dir, filename)
+        if os.path.exists(sierra_orig_file):
+            # there is a copy of the original file - let's copy it over, to start from clean, and have translation changes applied
+            shutil.copy2(sierra_orig_file, srcdir)
+        else:
+            # save a copy of the original sierra file (because we haven't already done so)
             shutil.copy2(full_filename, sierra_orig_dir)
 
         with open(full_filename, encoding=config.encoding) as f:
@@ -54,7 +62,10 @@ def messages_import(srcdir, pattern, csvdir):
 
         for entry in entries:
             if entry[messages_keys['translation']]:
-                logic = update(logic, entry[messages_keys['idx']], entry[messages_keys['translation']])
+                if entry[messages_keys['original']].strip() != entry[messages_keys['original']]:
+                    if entry[messages_keys['translation']].strip() == entry[messages_keys['translation']]:
+                        print("WARNING: space problems at ", entry)
+                logic = update(logic, get_number(entry, 'idx'), entry[messages_keys['translation']])
 
         with open(full_filename, 'w', encoding=config.encoding, newline='\n') as f:
             f.write(logic)
