@@ -19,3 +19,21 @@ object_keys = {'room': 'חדר', 'original': 'מקור', 'translation': 'תרג�
 
 systemui_csv_filename = "systemui.csv"
 systemui_keys = {'command': 'פקודה מקורית', 'original': 'מקור', 'translation': 'תרגום', 'comments': 'הערות'}
+
+# google_drive:
+csvs_info = (
+    (u'הודעות', 'messages.csv'),
+    (u'חפצים', 'object.csv'),
+    (u'פקודות', 'words.csv'),
+)
+
+google_drive_file_id = '18uLIobIjoMCbrQ_kBk1yuKFf07nYFgCG3lBXyPGNNuc'
+
+# import_all:
+conWAGI_exe = r"C:\Program Files (x86)\WinAGI GDS\conWAGI.exe"
+GenPath_exe = r"C:\Program Files (x86)\NSIS\Bin\GenPat.exe"
+makensis_exe = r"C:\Program Files (x86)\NSIS\Bin\makensis.exe"
+
+# import_all - installer:
+files_to_be_patched = ('OBJECT', 'LOGDIR', 'VIEWDIR', 'VOL.0')
+files_to_be_copied = ['WORDS.TOK.EXTENDED', 'agi-font-dos.bin']     # also .wag - will be added by import_all

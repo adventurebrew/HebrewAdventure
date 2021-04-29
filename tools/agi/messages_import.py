@@ -1,5 +1,3 @@
-#TODO: create import_all.py     (with '"C:\Program Files (x86)\WinAGI GDS\conWAGI.exe" /d C:\Zvika\Games\PoliceQuest\AGI\PQ1.WAG')
-
 import argparse
 import csv
 import os
@@ -34,7 +32,7 @@ def messages_import(srcdir, pattern, csvdir):
     with open(os.path.join(csvdir, messages_csv_filename), newline='', encoding='utf-8') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
-    rooms = sorted(list(set([entry[messages_keys['room']] for entry in texts])))
+    rooms = sorted(list(set([int(float(entry[messages_keys['room']])) for entry in texts])))
     for room in rooms:
         entries = [entry for entry in texts if entry[messages_keys['room']] == room]
 
@@ -64,7 +62,7 @@ def messages_import(srcdir, pattern, csvdir):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description='Impors text messages from csv file to logic files ',
+                                     description='Imports text messages from csv file to logic files ',
                                      epilog='''
 Logic files have all the texts messages (strings) at the end of the file.
 You should have already run the export script, and translate the csv file.

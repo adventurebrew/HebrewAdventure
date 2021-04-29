@@ -12,9 +12,11 @@ Assuming translation of PQ1.
 - Copy agi-font-dos.bin  (run it through bios_font_862_to_1255.py, if needed)
 - Run export_all.py
 - Translate the Excel file (probably on Google Drive)
-- Run all import_all.py
+- (one time only) Run 'google_drive.py --list', and update 'config.py' with 'google_drive_file_id'
+- Run import_all.py
 - Compile installer.nsi (after one time adaptation to the specific game)
 - One time per language - translate ScummVM's 'systemui.cpp' strings, with 'systemui_import.py'
+- Inventory descriptions are *currently not supported*. They should be edited in WinAGI. They are properties of the item's view cel.
 
 
 ### WinAGI
@@ -64,6 +66,7 @@ Also, search AGI engine for 'RU_RUS' and 'HE_ISR' for required changes (note tha
 ## Tools files summary
 - `export_all.py`: exports all required resources from game files to an excel file
 - `import_all.py`: imports all required resources to from excel file to game files
+- `google_drive.py`: downloads excel file from Google Drive, and split it to .csv files  
 - `messages_export.py`: exports all text messages from logic files to csv file
 - `messages_import.py`: imports all text messages from csv file to logic files
 - `words_export.py`: exports words (used by command parser) to csv file
