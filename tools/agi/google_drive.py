@@ -41,10 +41,10 @@ def convert_excel_to_csvs(output_folder, excel_file_name):
                     c.writerow(sh.row_values(r))
 
 
-def update_local_csvs(output_folder, excel_file_name='translation.xlsx'):
-    download_excel(output_folder, excel_file_name)
+def update_local_csvs(output_folder, skip_download, excel_file_name='translation.xlsx'):
+    if not skip_download:
+        download_excel(output_folder, excel_file_name)
     convert_excel_to_csvs(output_folder, excel_file_name)
-    #os.remove(os.path.join(output_folder, excel_file_name))
 
 
 if __name__ == "__main__":
@@ -53,9 +53,10 @@ if __name__ == "__main__":
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--list", action='store_true', help="List all file names and IDs, and quits, without downloading+creating CSV files. Then, manually update the id in config.py google_drive_file_id")
     group.add_argument("--csvdir", help="directory to store .csv files")
+    parser.add_argument("--skip_download", action='store_true', help="Skip downloading from Google Drive")
     args = parser.parse_args()
 
     if args.list:
         list_everything()
     else:
-        update_local_csvs(args.csvdir)
+        update_local_csvs(args.csvdir, args.skip_download)

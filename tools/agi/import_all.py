@@ -39,16 +39,16 @@ if __name__ == "__main__":
     parser.add_argument("workingdir", help="directory to put csv files, and files required for installer")
     parser.add_argument("--pattern", default='*.lgc', help="logic files pattern")
     parser.add_argument("--src", default='src', help="source directory inside 'gamedir'")
-    parser.add_argument("--skip_drive", action='store_true', help="Skip downloading from Google Drive")
+    parser.add_argument("--skip_download", "-s",  action='store_true', help="Skip downloading from Google Drive")
     args = parser.parse_args()
 
-    if args.skip_drive:
+    if args.skip_download:
         print("\n*******************************************************************")
         print("Skipping download from Google Drive")
         print("*******************************************************************\n")
-    else:
-        print("\nUpdating the .csv files:")
-        google_drive.update_local_csvs(args.workingdir)
+
+    print("\nUpdating the .csv files:")
+    google_drive.update_local_csvs(args.workingdir, args.skip_download)
 
     print("\nMessages import")
     messages_import.messages_import(os.path.join(args.gamedir, args.src), args.pattern, args.workingdir)
@@ -71,7 +71,7 @@ if __name__ == "__main__":
     print("\nCreating installer")
     create_installer(args.cleandir, args.gamedir, args.workingdir, wag_file)
 
-    if args.skip_drive:
+    if args.skip_download:
         print("\n*******************************************************************")
         print("Skipped download from Google Drive")
         print("*******************************************************************\n")
