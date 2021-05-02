@@ -1,0 +1,51 @@
+"חדר","מקור","תרגום","תאור מקורי","תאור מתורגם","הערות",""
+"max_num_of_animated","19","","","","אין לשנות שורה זו",""
+"0","?","","","","אין לשנות שורה זו",""
+"6","Patrol Car Keys","מפתחות רכב סיור","These keys fit your government-issue, choked-down, limp-wristed patrol car","מפתחות אלה מתאימים לניידת המקרטעת, הקרבה והולכת לסוף דרכה.","שיניתי קצת. בעברית זה נשמע משונה הקטע של הממשלתית","מפתח זה זכר נכון? שיניתי למתאימים"
+"47","Corvette Keys","מפתחות קורבט","These keys fit your personal 'Vette. It goes like a ""runaway gazelle.""","מפתחות אלה מתאימים לקורבט הפרטית שלך. היא נוסעת כמו ""צבי דוהר.""","",""
+"49","Cadillac Keys","מפתחות קדילאק","These keys fit your government-issue, gas- hoggin', unmarked Caddie.","מפתחות אלה מתאימים לקאדילק הסמויה, שתיינית הדלק.","שיניתי קצת. בעברית זה נשמע משונה הקטע של הממשלתית",""
+"6","Radio Extender","מאריך טווח רדיו","Your hand held radio extender works in conjunction with your patrol car's radio, so you can talk to Dispatch while out of your car.","מכשיר הקשר הידני שלך פועל בשילוב עם מערכת הרדיו הנייחת ברכב הסיור, כך שאתה יכול לדבר עם המוקד גם מחוץ לרכב.","",""
+"47","Revolver","אקדח","Your departmental-issue, double-action, .357-magnum service revolver is made of fine blue steel and equipped with wooden grips. It can be a cop's best friend. Your handcuffs are stored in a pouch on the gunbelt.","אקדח השירות המשטרתי בעל הפעולה הכפולה, מגנום 357., עשוי פלדת אל-חלד כחולה ומצוייד בקת עץ. הוא יכול להיות חברו הטוב ביותר של השוטר. האזיקים מאוחסנים בנרתיק הנישא על חגורת האקדח.","חגור הסייר? שיניתי...",""
+"47","Ammunition","תחמושת","Your speed loader holds six rounds of ammunition for your service revolver.","מאיץ הטעינה טומן בחובו שישה סבבי תחמושת עבור אקדח השירות.","",""
+"47","Briefcase","תיק","This briefcase is made of impact-resistant plastic and has the name ""Sonny"" engraved in the finest, imitation gold.","תיק המסמכים עשוי פלסטיק חסין ועליו חרוט השם ""בני"" באותיות מזהב מלאכותי.","",""
+"38","Note Book","מחברת","Notes:
+
+%s10 
+%s11 
+%s12","הערות:
+
+%s10 
+%s11 
+%s12","",""
+"38","Pen","עט","This pen was a gift from your Mommy and Daddy when you graduated from high school.","את העט הזה קיבלת במתנה מאמא ואבא כשסיימת את לימודיך בתיכון.","",""
+"38","Ticket Book","פנקס דוחות","Your ticket book, otherwise known as a pinch book, is made of genuine cowhide. It is a necessary tool for traffic enforcement.","ספר הדוחות, הידוע גם כפנקס דוחות, עשוי מעור פרה אמיתי. זהו כלי עבודה הכרחי לשוטרי התנועה.","",""
+"4","Lytton Tribune","ידיעות לייטון","This is today's edition of the ""Lytton Tribune.""","זוהי המהדורה היומית של ""ידיעות לייטון.""","אנחנו לא רוצים לתרגם שם העיתון? אולי 'לייטון הערב'. 'ידיעות לייטון'. 'חדשות לייטון'. 'לייטון היום'.
+קיבלת",""
+"94","Wallet","ארנק","Your wallet contains $%v89.00 in cash, but no credit cards (ever since you missed those payments a while back).","הארנק שלך מכיל $%v89.00 במזומן, אך ללא כרטיסי אשראי (מאז שחזרו לך כמה צ'קים לפני שנים רבות).","",""
+"94","Nightstick","אלה","This PR-24 nightstick is a self-defense tool. It develops high levels of kinetic energy via centrifugal force. Special training and certification are required to use it.","אלת הPR-24 הינה כלי להגנה עצמית. היא מייצרת רמות גבוהות של אנרגיה קינטית דרך הכוח הצנטריפוגלי. אימונים מיוחדים והסמכה נדרשים כדי להשתמש בה.","",""
+"0","Loaded Revolver","אקדח טעון","Your departmental-issue, double-action, .357-magnum service revolver is made of fine blue steel and equipped with wooden grips. It is presently loaded with %v34 shells. Your handcuffs are stored in a pouch on the gunbelt.","אקדח השירות המשטרתי בעל הפעולה הכפולה, מגנום 357., עשוי פלדת אל-חלד כחולה ומצוייד בקת עץ. הוא כרגע טעון ב%v34 קליעים. האזיקים מאוחסנים בנרתיק הנישא על חגורת האקדח.","",""
+"110","Hoffman File","התיק של הופמן","This file contains Hoffman's Arrest Report Summary, Booking Slips, Evidence Forms, and miscellaneous other information.","התיק מכיל את תקציר דו""ח המעצר של הופמן, טפסי מעצר, טפסי ראיות, ומידע נוסף.","",""
+"50","Wanted Poster","כרזת מבוקש","Isn't it ironic that one of your best pieces of evidence was found in your own office?","האין זה אירוני שאת אחת מהראיות הכי טובות שלך מצאת במשרדך שלך?","",""
+"43","White Suit","חליפה לבנה","With a suit like this, you could become a Leisure Suit Sonny!","עם חליפה כזאת, אתה עוד תהפוך ל'בני חליפת פאר'!","",""
+"43","Trick Cane","מקל תעלול","Your custom, African-walnut, ivory-inlayed cane has a gold eagle's head concealing a .22-caliber, Derringer pistol.","בתוך מקל האגוז אפריקאי, המשובץ שנהב בעל ראש הנשר המוזהב, מוסלק אקדח דרינגר בעל קוטר 22 אינץ'.","",""
+"43","Hair Bleach","מלבין שיער","Donna's Miracle Blonde
+
+""Just Wet And Rinse.""","דונה קסם הבלונד
+
+""להרטיב ולשטוף.""","תיקנתי - לדעתי זה לשטוף, לא להדיח (מדובר על השער)",""
+"43","Marked Money","כסף מסומן","This envelope contains $%v170%v171|1.00 in carefully marked bills.","מעטפה זו מכילה $%v170%v171|1.00 בשטרות מסומנים בקפידה.","",""
+"67","Transmitter Pen","עט שידור","Although it looks like a ball-point pen, this is really a radio transmitter.","למרות שזה נראה כמו עט כדורי, זה למעשה משדר רדיו.","",""
+"64","Room Key","מפתח לחדר","  ""Hotel Delphoria
+       Box 485
+Lytton, CA  93614 
+
+Postage Guaranteed.""","""מלון דלפוריה
+תא 485
+לייטון, קליפורניה 93614 
+
+דמי משלוח מובטחים.""","",""
+"55","No Bail Warrant","צו הארכת מעצר","No Bail Warrant for:
+Jason Taselli.","צו הארכת מעצר עבור:
+ג'ייסון טסלי.","נראה לי שיש טעות בשם החפץ. אם אני לא טועה, הכוונה היא ל'צו מעצר ללא שחרור בערבות'. (אפשר להגיד את זה יותר קצר?)
+צודק",""
+"47","Handcuffs","אזיקים","Your handcuffs are made of case-hardened steel and make a sweet sound when you ratchet them down tightly.","האזיקים עשויים פלדה קשיחה ומשמיעים צליל ענוג בשעה שאתה מהדק אותם לחגורך.","",""
