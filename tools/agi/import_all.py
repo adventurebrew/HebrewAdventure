@@ -13,7 +13,7 @@ import object_import
 import config
 
 
-def create_installer(cleandir, gamedir, workingdir, wagfile):
+def create_installer(cleandir, gamedir, workingdir):
     for p in config.files_to_be_patched:
         subprocess.run([config.GenPath_exe,
                         os.path.join(cleandir, p),
@@ -21,7 +21,6 @@ def create_installer(cleandir, gamedir, workingdir, wagfile):
                         os.path.join(workingdir, p+".patch"),
                         '/r'])
     
-    config.files_to_be_copied.append(os.path.basename(wagfile))
     for c in config.files_to_be_copied:
         shutil.copyfile(os.path.join(gamedir, c),
                         os.path.join(workingdir, c))
@@ -69,7 +68,7 @@ if __name__ == "__main__":
     p = subprocess.run([config.conWAGI_exe, '/d', wag_file], check=True, capture_output=False)
 
     print("\nCreating installer")
-    create_installer(args.cleandir, args.gamedir, args.workingdir, wag_file)
+    create_installer(args.cleandir, args.gamedir, args.workingdir)
 
     if args.skip_download:
         print("\n*******************************************************************")

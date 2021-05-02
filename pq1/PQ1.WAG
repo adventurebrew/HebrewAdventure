@@ -11,7 +11,7 @@
    Author = ""
    About = ""
    GameVersion = ""
-   LastEdit = "02/05/2021 12:50:24"
+   LastEdit = "03/03/2021 15:29:22"
    PlatformType = 0
    Platform = ""
    DOSExec = ""
@@ -23,9 +23,9 @@
 
 [Logic0]
    ID = Logic0
-   Size = 9049
-   CRC32 = &H7E046D01
-   CompCRC32 = &H7E046D01
+   Size = 9014
+   CRC32 = &H2A7A251A
+   CompCRC32 = &H2A7A251A
    Description = ""
    IsRoom = False
 
@@ -39,201 +39,201 @@
 
 [Logic2]
    ID = Logic2
-   Size = 567
-   CRC32 = &HDDA2925C
-   CompCRC32 = &HDDA2925C
+   Size = 568
+   CRC32 = &H481635E9
+   CompCRC32 = &H481635E9
    Description = ""
    IsRoom = False
 
 [Logic3]
    ID = Logic3
-   Size = 5007
-   CRC32 = &H45D846E0
-   CompCRC32 = &H45D846E0
+   Size = 4972
+   CRC32 = &HFF449BA9
+   CompCRC32 = &HFF449BA9
    Description = ""
    IsRoom = False
 
 [Logic4]
    ID = Logic4
-   Size = 2455
-   CRC32 = &HA862A3A
-   CompCRC32 = &HA862A3A
+   Size = 2451
+   CRC32 = &HC1FA5294
+   CompCRC32 = &HC1FA5294
    Description = ""
    IsRoom = False
 
 [Logic5]
    ID = Logic5
    Size = 4018
-   CRC32 = &H62EA8885
-   CompCRC32 = &H62EA8885
+   CRC32 = &H3FDDD8D5
+   CompCRC32 = &H3FDDD8D5
    Description = ""
    IsRoom = False
 
 [Logic6]
    ID = Logic6
-   Size = 5961
-   CRC32 = &H1ED4613A
-   CompCRC32 = &H1ED4613A
+   Size = 6893
+   CRC32 = &HFDFF47B
+   CompCRC32 = &HFDFF47B
    Description = ""
    IsRoom = False
 
 [Logic7]
    ID = Logic7
-   Size = 4040
-   CRC32 = &HD962162C
-   CompCRC32 = &HD962162C
+   Size = 4374
+   CRC32 = &H8D763C12
+   CompCRC32 = &H8D763C12
    Description = ""
    IsRoom = False
 
 [Logic8]
    ID = Logic8
-   Size = 969
-   CRC32 = &HD02377D1
-   CompCRC32 = &HD02377D1
+   Size = 960
+   CRC32 = &HEFD4B371
+   CompCRC32 = &HEFD4B371
    Description = ""
    IsRoom = False
 
 [Logic9]
    ID = Logic9
-   Size = 478
-   CRC32 = &H24E62431
-   CompCRC32 = &H24E62431
+   Size = 568
+   CRC32 = &H19DEF347
+   CompCRC32 = &H19DEF347
    Description = ""
    IsRoom = False
 
 [Logic10]
    ID = Logic10
-   Size = 595
-   CRC32 = &H5E1D2C2A
-   CompCRC32 = &H5E1D2C2A
+   Size = 597
+   CRC32 = &HA4751C23
+   CompCRC32 = &HA4751C23
    Description = ""
    IsRoom = False
 
 [Logic11]
    ID = Logic11
-   Size = 737
-   CRC32 = &H4006CFE6
-   CompCRC32 = &H4006CFE6
+   Size = 746
+   CRC32 = &HED32D697
+   CompCRC32 = &HED32D697
    Description = ""
    IsRoom = False
 
 [Logic12]
    ID = Logic12
-   Size = 808
-   CRC32 = &H541BE87B
-   CompCRC32 = &H541BE87B
+   Size = 829
+   CRC32 = &H52B0868B
+   CompCRC32 = &H52B0868B
    Description = ""
    IsRoom = False
 
 [Logic13]
    ID = Logic13
-   Size = 177
-   CRC32 = &HB029A792
-   CompCRC32 = &HB029A792
+   Size = 184
+   CRC32 = &H875C9BB5
+   CompCRC32 = &H875C9BB5
    Description = ""
    IsRoom = False
 
 [Logic14]
    ID = Logic14
-   Size = 651
-   CRC32 = &H24273ECC
-   CompCRC32 = &H24273ECC
+   Size = 656
+   CRC32 = &HEA714196
+   CompCRC32 = &HEA714196
    Description = ""
    IsRoom = False
 
 [Logic15]
    ID = Logic15
-   Size = 907
-   CRC32 = &HA8D1A399
-   CompCRC32 = &HA8D1A399
+   Size = 939
+   CRC32 = &H696450B8
+   CompCRC32 = &H696450B8
    Description = ""
    IsRoom = False
 
 [Logic16]
    ID = Logic16
-   Size = 217
-   CRC32 = &H7D31EE7D
-   CompCRC32 = &H7D31EE7D
+   Size = 236
+   CRC32 = &H9DE6676D
+   CompCRC32 = &H9DE6676D
    Description = ""
    IsRoom = False
 
 [Logic17]
    ID = Logic17
-   Size = 694
-   CRC32 = &HFA8BA8A5
-   CompCRC32 = &HFA8BA8A5
+   Size = 698
+   CRC32 = &H20031D91
+   CompCRC32 = &H20031D91
    Description = ""
    IsRoom = False
 
 [Logic18]
    ID = Logic18
-   Size = 531
-   CRC32 = &H5AE7A0A1
-   CompCRC32 = &H5AE7A0A1
+   Size = 533
+   CRC32 = &H55970587
+   CompCRC32 = &H55970587
    Description = ""
    IsRoom = False
 
 [Logic19]
    ID = Logic19
-   Size = 230
-   CRC32 = &H5943993
-   CompCRC32 = &H5943993
+   Size = 256
+   CRC32 = &H9D714782
+   CompCRC32 = &H9D714782
    Description = ""
    IsRoom = False
 
 [Logic20]
    ID = Logic20
-   Size = 1157
-   CRC32 = &HFC6DB0C2
-   CompCRC32 = &HFC6DB0C2
+   Size = 1232
+   CRC32 = &H7C87663D
+   CompCRC32 = &H7C87663D
    Description = ""
    IsRoom = False
 
 [Logic21]
    ID = Logic21
-   Size = 786
-   CRC32 = &HFC29073
-   CompCRC32 = &HFC29073
+   Size = 803
+   CRC32 = &HCF8513A7
+   CompCRC32 = &HCF8513A7
    Description = ""
    IsRoom = False
 
 [Logic22]
    ID = Logic22
-   Size = 108
-   CRC32 = &H2A5AC013
-   CompCRC32 = &H2A5AC013
+   Size = 128
+   CRC32 = &H82997C76
+   CompCRC32 = &H82997C76
    Description = ""
    IsRoom = False
 
 [Logic23]
    ID = Logic23
-   Size = 572
-   CRC32 = &HB798AE30
-   CompCRC32 = &HB798AE30
+   Size = 592
+   CRC32 = &H339D9825
+   CompCRC32 = &H339D9825
    Description = ""
    IsRoom = False
 
 [Logic24]
    ID = Logic24
-   Size = 579
-   CRC32 = &H20BD7198
-   CompCRC32 = &H20BD7198
+   Size = 572
+   CRC32 = &HF9D40A5
+   CompCRC32 = &HF9D40A5
    Description = ""
    IsRoom = False
 
 [Logic25]
    ID = Logic25
-   Size = 601
-   CRC32 = &H13ACB6DD
-   CompCRC32 = &H13ACB6DD
+   Size = 613
+   CRC32 = &H191FAD57
+   CompCRC32 = &H191FAD57
    Description = ""
    IsRoom = False
 
 [Logic26]
    ID = Logic26
-   Size = 5387
-   CRC32 = &HB8BCB5F1
-   CompCRC32 = &HB8BCB5F1
+   Size = 6402
+   CRC32 = &H58690565
+   CompCRC32 = &H58690565
    Description = ""
    IsRoom = False
 
@@ -255,425 +255,425 @@
 
 [Logic29]
    ID = Logic29
-   Size = 2680
-   CRC32 = &H473B10B
-   CompCRC32 = &H473B10B
+   Size = 3356
+   CRC32 = &HB351D2FC
+   CompCRC32 = &HB351D2FC
    Description = ""
    IsRoom = False
 
 [Logic30]
    ID = Logic30
-   Size = 1687
-   CRC32 = &H184B6AC2
-   CompCRC32 = &H184B6AC2
+   Size = 1943
+   CRC32 = &HC8C1ADC0
+   CompCRC32 = &HC8C1ADC0
    Description = ""
    IsRoom = False
 
 [Logic31]
    ID = Logic31
-   Size = 5150
-   CRC32 = &H6D58747B
-   CompCRC32 = &H6D58747B
+   Size = 5736
+   CRC32 = &HC87CD3E2
+   CompCRC32 = &HC87CD3E2
    Description = ""
    IsRoom = False
 
 [Logic32]
    ID = Logic32
-   Size = 7715
-   CRC32 = &HB128A95
-   CompCRC32 = &HB128A95
+   Size = 8805
+   CRC32 = &H3929CC59
+   CompCRC32 = &H3929CC59
    Description = ""
    IsRoom = False
 
 [Logic33]
    ID = Logic33
-   Size = 826
-   CRC32 = &H3EB34E84
-   CompCRC32 = &H3EB34E84
+   Size = 927
+   CRC32 = &H94D848C3
+   CompCRC32 = &H94D848C3
    Description = ""
    IsRoom = False
 
 [Logic34]
    ID = Logic34
-   Size = 5964
-   CRC32 = &HD0A4EBC0
-   CompCRC32 = &HD0A4EBC0
+   Size = 6961
+   CRC32 = &H84AB1787
+   CompCRC32 = &H84AB1787
    Description = ""
    IsRoom = False
 
 [Logic35]
    ID = Logic35
-   Size = 2071
-   CRC32 = &HE9169EB0
-   CompCRC32 = &HE9169EB0
+   Size = 2339
+   CRC32 = &HDD66FDF1
+   CompCRC32 = &HDD66FDF1
    Description = ""
    IsRoom = False
 
 [Logic36]
    ID = Logic36
-   Size = 7239
-   CRC32 = &HE101EB71
-   CompCRC32 = &HE101EB71
+   Size = 8348
+   CRC32 = &H7812D620
+   CompCRC32 = &H7812D620
    Description = ""
    IsRoom = False
 
 [Logic37]
    ID = Logic37
-   Size = 7728
-   CRC32 = &HD6794F05
-   CompCRC32 = &HD6794F05
+   Size = 8542
+   CRC32 = &H8306178F
+   CompCRC32 = &H8306178F
    Description = ""
    IsRoom = False
 
 [Logic38]
    ID = Logic38
-   Size = 1445
-   CRC32 = &H318608DD
-   CompCRC32 = &H318608DD
+   Size = 1649
+   CRC32 = &H1E9A0CC2
+   CompCRC32 = &H1E9A0CC2
    Description = ""
    IsRoom = False
 
 [Logic39]
    ID = Logic39
-   Size = 2309
-   CRC32 = &HAC7F903F
-   CompCRC32 = &HAC7F903F
+   Size = 2665
+   CRC32 = &HECFB37
+   CompCRC32 = &HECFB37
    Description = ""
    IsRoom = False
 
 [Logic40]
    ID = Logic40
-   Size = 2309
-   CRC32 = &H161B6E80
-   CompCRC32 = &H161B6E80
+   Size = 2646
+   CRC32 = &HCEB77479
+   CompCRC32 = &HCEB77479
    Description = ""
    IsRoom = False
 
 [Logic41]
    ID = Logic41
-   Size = 5550
-   CRC32 = &HE5373477
-   CompCRC32 = &HE5373477
+   Size = 6294
+   CRC32 = &H373D1A5A
+   CompCRC32 = &H373D1A5A
    Description = ""
    IsRoom = False
 
 [Logic42]
    ID = Logic42
-   Size = 4488
-   CRC32 = &HEC6C5ED7
-   CompCRC32 = &HEC6C5ED7
+   Size = 5411
+   CRC32 = &HEE801564
+   CompCRC32 = &HEE801564
    Description = ""
    IsRoom = False
 
 [Logic43]
    ID = Logic43
-   Size = 3887
-   CRC32 = &HF117A468
-   CompCRC32 = &HF117A468
+   Size = 4220
+   CRC32 = &HC69932E9
+   CompCRC32 = &HC69932E9
    Description = ""
    IsRoom = False
 
 [Logic44]
    ID = Logic44
-   Size = 4353
-   CRC32 = &HEFCEAE20
-   CompCRC32 = &HEFCEAE20
+   Size = 4978
+   CRC32 = &HF5F11249
+   CompCRC32 = &HF5F11249
    Description = ""
    IsRoom = False
 
 [Logic45]
    ID = Logic45
-   Size = 2578
-   CRC32 = &H72841D57
-   CompCRC32 = &H72841D57
+   Size = 3110
+   CRC32 = &H91E050A8
+   CompCRC32 = &H91E050A8
    Description = ""
    IsRoom = False
 
 [Logic46]
    ID = Logic46
-   Size = 480
-   CRC32 = &H87DBC37C
-   CompCRC32 = &H87DBC37C
+   Size = 562
+   CRC32 = &H800C9FCE
+   CompCRC32 = &H800C9FCE
    Description = ""
    IsRoom = False
 
 [Logic47]
    ID = Logic47
-   Size = 3775
-   CRC32 = &H7C4DB67
-   CompCRC32 = &H7C4DB67
+   Size = 4319
+   CRC32 = &H217B1AFB
+   CompCRC32 = &H217B1AFB
    Description = ""
    IsRoom = False
 
 [Logic48]
    ID = Logic48
-   Size = 2493
-   CRC32 = &HCD2EBCF1
-   CompCRC32 = &HCD2EBCF1
+   Size = 2841
+   CRC32 = &H94019B47
+   CompCRC32 = &H94019B47
    Description = ""
    IsRoom = False
 
 [Logic49]
    ID = Logic49
-   Size = 6268
-   CRC32 = &H461DF642
-   CompCRC32 = &H461DF642
+   Size = 7277
+   CRC32 = &H7F3B3140
+   CompCRC32 = &H7F3B3140
    Description = ""
    IsRoom = False
 
 [Logic50]
    ID = Logic50
-   Size = 2181
-   CRC32 = &HDDB176A7
-   CompCRC32 = &HDDB176A7
+   Size = 2351
+   CRC32 = &HB1621D5B
+   CompCRC32 = &HB1621D5B
    Description = ""
    IsRoom = False
 
 [Logic51]
    ID = Logic51
-   Size = 2113
-   CRC32 = &HC53F7728
-   CompCRC32 = &HC53F7728
+   Size = 2425
+   CRC32 = &H6B2950E0
+   CompCRC32 = &H6B2950E0
    Description = ""
    IsRoom = False
 
 [Logic52]
    ID = Logic52
-   Size = 3103
-   CRC32 = &H18BB3C81
-   CompCRC32 = &H18BB3C81
+   Size = 3574
+   CRC32 = &H5C36F162
+   CompCRC32 = &H5C36F162
    Description = ""
    IsRoom = False
 
 [Logic53]
    ID = Logic53
-   Size = 827
-   CRC32 = &HFA125CBC
-   CompCRC32 = &HFA125CBC
+   Size = 974
+   CRC32 = &HD45C7A1
+   CompCRC32 = &HD45C7A1
    Description = ""
    IsRoom = False
 
 [Logic54]
    ID = Logic54
-   Size = 1857
-   CRC32 = &H32372321
-   CompCRC32 = &H32372321
+   Size = 2073
+   CRC32 = &H6935055
+   CompCRC32 = &H6935055
    Description = ""
    IsRoom = False
 
 [Logic55]
    ID = Logic55
-   Size = 4146
-   CRC32 = &H651D5CA2
-   CompCRC32 = &H651D5CA2
+   Size = 4663
+   CRC32 = &HC81F046D
+   CompCRC32 = &HC81F046D
    Description = ""
    IsRoom = False
 
 [Logic56]
    ID = Logic56
-   Size = 3500
-   CRC32 = &H74950E61
-   CompCRC32 = &H74950E61
+   Size = 3955
+   CRC32 = &H1BB7CE61
+   CompCRC32 = &H1BB7CE61
    Description = ""
    IsRoom = False
 
 [Logic57]
    ID = Logic57
-   Size = 6941
-   CRC32 = &HB21113E9
-   CompCRC32 = &HB21113E9
+   Size = 8091
+   CRC32 = &HDDD65FE1
+   CompCRC32 = &HDDD65FE1
    Description = ""
    IsRoom = False
 
 [Logic58]
    ID = Logic58
-   Size = 2549
-   CRC32 = &HEE5422BB
-   CompCRC32 = &HEE5422BB
+   Size = 3015
+   CRC32 = &H30D3C6FF
+   CompCRC32 = &H30D3C6FF
    Description = ""
    IsRoom = False
 
 [Logic59]
    ID = Logic59
-   Size = 3339
-   CRC32 = &H4DE7ADB6
-   CompCRC32 = &H4DE7ADB6
+   Size = 3916
+   CRC32 = &HE4A5B3D8
+   CompCRC32 = &HE4A5B3D8
    Description = ""
    IsRoom = False
 
 [Logic60]
    ID = Logic60
-   Size = 3051
-   CRC32 = &H2BC66C3B
-   CompCRC32 = &H2BC66C3B
+   Size = 3471
+   CRC32 = &H8627BC38
+   CompCRC32 = &H8627BC38
    Description = ""
    IsRoom = False
 
 [Logic61]
    ID = Logic61
-   Size = 2088
-   CRC32 = &HBC1CA95A
-   CompCRC32 = &HBC1CA95A
+   Size = 2382
+   CRC32 = &H58878B3A
+   CompCRC32 = &H58878B3A
    Description = ""
    IsRoom = False
 
 [Logic62]
    ID = Logic62
-   Size = 1757
-   CRC32 = &HD5A0D995
-   CompCRC32 = &HD5A0D995
+   Size = 2026
+   CRC32 = &HFE64B1C9
+   CompCRC32 = &HFE64B1C9
    Description = ""
    IsRoom = False
 
 [Logic63]
    ID = Logic63
-   Size = 1213
-   CRC32 = &HF9335B5A
-   CompCRC32 = &HF9335B5A
+   Size = 1395
+   CRC32 = &H49204113
+   CompCRC32 = &H49204113
    Description = ""
    IsRoom = False
 
 [Logic64]
    ID = Logic64
-   Size = 3531
-   CRC32 = &HEB2A7FDD
-   CompCRC32 = &HEB2A7FDD
+   Size = 4000
+   CRC32 = &HC997C8E4
+   CompCRC32 = &HC997C8E4
    Description = ""
    IsRoom = False
 
 [Logic65]
    ID = Logic65
-   Size = 1775
-   CRC32 = &H89556DA8
-   CompCRC32 = &H89556DA8
+   Size = 2002
+   CRC32 = &H7F72C8E8
+   CompCRC32 = &H7F72C8E8
    Description = ""
    IsRoom = False
 
 [Logic66]
    ID = Logic66
-   Size = 3030
-   CRC32 = &HD6C7960A
-   CompCRC32 = &HD6C7960A
+   Size = 3515
+   CRC32 = &HB65BEEE7
+   CompCRC32 = &HB65BEEE7
    Description = ""
    IsRoom = False
 
 [Logic67]
    ID = Logic67
-   Size = 5682
-   CRC32 = &H81017AA7
-   CompCRC32 = &H81017AA7
+   Size = 6842
+   CRC32 = &H2078CD9
+   CompCRC32 = &H2078CD9
    Description = ""
    IsRoom = False
 
 [Logic68]
    ID = Logic68
-   Size = 8267
-   CRC32 = &H613B6B4B
-   CompCRC32 = &H613B6B4B
+   Size = 9352
+   CRC32 = &H5C0ED51E
+   CompCRC32 = &H5C0ED51E
    Description = ""
    IsRoom = False
 
 [Logic69]
    ID = Logic69
-   Size = 1829
-   CRC32 = &H962DA115
-   CompCRC32 = &H962DA115
+   Size = 2099
+   CRC32 = &HD7EA8F84
+   CompCRC32 = &HD7EA8F84
    Description = ""
    IsRoom = False
 
 [Logic70]
    ID = Logic70
-   Size = 4183
-   CRC32 = &H27989231
-   CompCRC32 = &H27989231
+   Size = 4637
+   CRC32 = &HB179E8AE
+   CompCRC32 = &HB179E8AE
    Description = ""
    IsRoom = False
 
 [Logic71]
    ID = Logic71
-   Size = 2726
-   CRC32 = &H78D911E7
-   CompCRC32 = &H78D911E7
+   Size = 3065
+   CRC32 = &H5964D7A5
+   CompCRC32 = &H5964D7A5
    Description = ""
    IsRoom = False
 
 [Logic72]
    ID = Logic72
-   Size = 438
-   CRC32 = &HC74B780
-   CompCRC32 = &HC74B780
+   Size = 585
+   CRC32 = &HC25076A3
+   CompCRC32 = &HC25076A3
    Description = ""
    IsRoom = False
 
 [Logic73]
    ID = Logic73
-   Size = 1127
-   CRC32 = &HB53EB161
-   CompCRC32 = &HB53EB161
+   Size = 1199
+   CRC32 = &H1D6F5594
+   CompCRC32 = &H1D6F5594
    Description = ""
    IsRoom = False
 
 [Logic74]
    ID = Logic74
-   Size = 1285
-   CRC32 = &HB9E491D3
-   CompCRC32 = &HB9E491D3
+   Size = 1502
+   CRC32 = &HA1909BC4
+   CompCRC32 = &HA1909BC4
    Description = ""
    IsRoom = False
 
 [Logic75]
    ID = Logic75
-   Size = 1465
-   CRC32 = &H868B6294
-   CompCRC32 = &H868B6294
+   Size = 1529
+   CRC32 = &H90760444
+   CompCRC32 = &H90760444
    Description = ""
    IsRoom = False
 
 [Logic76]
    ID = Logic76
-   Size = 499
-   CRC32 = &H856328C2
-   CompCRC32 = &H856328C2
+   Size = 564
+   CRC32 = &H337E1710
+   CompCRC32 = &H337E1710
    Description = ""
    IsRoom = False
 
 [Logic77]
    ID = Logic77
-   Size = 759
-   CRC32 = &H76661F25
-   CompCRC32 = &H76661F25
+   Size = 814
+   CRC32 = &H203B54D7
+   CompCRC32 = &H203B54D7
    Description = ""
    IsRoom = False
 
 [Logic78]
    ID = Logic78
-   Size = 1198
-   CRC32 = &HA21913AD
-   CompCRC32 = &HA21913AD
+   Size = 1298
+   CRC32 = &HAA75DE1B
+   CompCRC32 = &HAA75DE1B
    Description = ""
    IsRoom = False
 
 [Logic79]
    ID = Logic79
-   Size = 2054
-   CRC32 = &HBD6EC6E8
-   CompCRC32 = &HBD6EC6E8
+   Size = 2387
+   CRC32 = &H22273371
+   CompCRC32 = &H22273371
    Description = ""
    IsRoom = False
 
 [Logic80]
    ID = Logic80
-   Size = 260
-   CRC32 = &HD712EFFC
-   CompCRC32 = &HD712EFFC
+   Size = 328
+   CRC32 = &H271768B
+   CompCRC32 = &H271768B
    Description = ""
    IsRoom = False
 
 [Logic81]
    ID = Logic81
-   Size = 1599
-   CRC32 = &H8FD3F033
-   CompCRC32 = &H8FD3F033
+   Size = 1663
+   CRC32 = &H5912A916
+   CompCRC32 = &H5912A916
    Description = ""
    IsRoom = False
 
@@ -703,9 +703,9 @@
 
 [Logic85]
    ID = Logic85
-   Size = 905
-   CRC32 = &HECBB1C65
-   CompCRC32 = &HECBB1C65
+   Size = 969
+   CRC32 = &H82BEAFE2
+   CompCRC32 = &H82BEAFE2
    Description = ""
    IsRoom = False
 
@@ -727,17 +727,17 @@
 
 [Logic88]
    ID = Logic88
-   Size = 1041
-   CRC32 = &HC052D3C0
-   CompCRC32 = &HC052D3C0
+   Size = 1120
+   CRC32 = &HB1F3B9E2
+   CompCRC32 = &HB1F3B9E2
    Description = ""
    IsRoom = False
 
 [Logic89]
    ID = Logic89
-   Size = 1166
-   CRC32 = &H1B253E60
-   CompCRC32 = &H1B253E60
+   Size = 1230
+   CRC32 = &H6E092D4F
+   CompCRC32 = &H6E092D4F
    Description = ""
    IsRoom = False
 
@@ -759,65 +759,65 @@
 
 [Logic92]
    ID = Logic92
-   Size = 450
-   CRC32 = &H77F13131
-   CompCRC32 = &H77F13131
+   Size = 557
+   CRC32 = &H650DDB36
+   CompCRC32 = &H650DDB36
    Description = ""
    IsRoom = False
 
 [Logic93]
    ID = Logic93
-   Size = 141
-   CRC32 = &HEC9C5CAD
-   CompCRC32 = &HEC9C5CAD
+   Size = 177
+   CRC32 = &H91C7615C
+   CompCRC32 = &H91C7615C
    Description = ""
    IsRoom = False
 
 [Logic94]
    ID = Logic94
-   Size = 3235
-   CRC32 = &HD2ACB870
-   CompCRC32 = &HD2ACB870
+   Size = 3567
+   CRC32 = &H76C700F1
+   CompCRC32 = &H76C700F1
    Description = ""
    IsRoom = False
 
 [Logic95]
    ID = Logic95
-   Size = 2561
-   CRC32 = &H95529E07
-   CompCRC32 = &H95529E07
+   Size = 2999
+   CRC32 = &HB3AE85DA
+   CompCRC32 = &HB3AE85DA
    Description = ""
    IsRoom = False
 
 [Logic96]
    ID = Logic96
-   Size = 3799
-   CRC32 = &H50140D04
-   CompCRC32 = &H50140D04
+   Size = 4264
+   CRC32 = &HA0E4294C
+   CompCRC32 = &HA0E4294C
    Description = ""
    IsRoom = False
 
 [Logic97]
    ID = Logic97
-   Size = 4438
-   CRC32 = &H31E1F731
-   CompCRC32 = &H31E1F731
+   Size = 5643
+   CRC32 = &H54A9CB1A
+   CompCRC32 = &H54A9CB1A
    Description = ""
    IsRoom = False
 
 [Logic98]
    ID = Logic98
    Size = 751
-   CRC32 = &HB2703A07
-   CompCRC32 = &HB2703A07
+   CRC32 = &HCFAD5FF3
+   CompCRC32 = &HCFAD5FF3
    Description = ""
    IsRoom = False
 
 [Logic99]
    ID = Logic99
-   Size = 928
-   CRC32 = &HB29149E0
-   CompCRC32 = &HB29149E0
+   Size = 931
+   CRC32 = &HC5FA6BD0
+   CompCRC32 = &HC5FA6BD0
    Description = ""
    IsRoom = False
 
@@ -831,33 +831,33 @@
 
 [Logic101]
    ID = Logic101
-   Size = 439
-   CRC32 = &HC8E5781A
-   CompCRC32 = &HC8E5781A
+   Size = 438
+   CRC32 = &H6230632C
+   CompCRC32 = &H6230632C
    Description = ""
    IsRoom = False
 
 [Logic102]
    ID = Logic102
-   Size = 1183
-   CRC32 = &HAE9758D
-   CompCRC32 = &HAE9758D
+   Size = 1154
+   CRC32 = &H2AA6F151
+   CompCRC32 = &H2AA6F151
    Description = ""
    IsRoom = False
 
 [Logic103]
    ID = Logic103
-   Size = 2694
-   CRC32 = &H46E314F1
-   CompCRC32 = &H46E314F1
+   Size = 3266
+   CRC32 = &HF10E9B6E
+   CompCRC32 = &HF10E9B6E
    Description = ""
    IsRoom = False
 
 [Logic104]
    ID = Logic104
-   Size = 1555
-   CRC32 = &H576FB89C
-   CompCRC32 = &H576FB89C
+   Size = 1781
+   CRC32 = &H873BBF42
+   CompCRC32 = &H873BBF42
    Description = ""
    IsRoom = False
 
@@ -871,9 +871,9 @@
 
 [Logic106]
    ID = Logic106
-   Size = 1321
-   CRC32 = &H18320ABA
-   CompCRC32 = &H18320ABA
+   Size = 1330
+   CRC32 = &H5C6D9A24
+   CompCRC32 = &H5C6D9A24
    Description = ""
    IsRoom = False
 
@@ -887,41 +887,41 @@
 
 [Logic109]
    ID = Logic109
-   Size = 4795
-   CRC32 = &HAF2561C2
-   CompCRC32 = &HAF2561C2
+   Size = 5313
+   CRC32 = &HC9711564
+   CompCRC32 = &HC9711564
    Description = ""
    IsRoom = False
 
 [Logic110]
    ID = Logic110
-   Size = 5315
-   CRC32 = &HB98CD334
-   CompCRC32 = &HB98CD334
+   Size = 5703
+   CRC32 = &H784FA759
+   CompCRC32 = &H784FA759
    Description = ""
    IsRoom = False
 
 [Logic112]
    ID = Logic112
-   Size = 4184
-   CRC32 = &HD56BE029
-   CompCRC32 = &HD56BE029
+   Size = 4389
+   CRC32 = &HDB1D0845
+   CompCRC32 = &HDB1D0845
    Description = ""
    IsRoom = False
 
 [Logic113]
    ID = Logic113
-   Size = 1259
-   CRC32 = &HE2501B17
-   CompCRC32 = &HE2501B17
+   Size = 1336
+   CRC32 = &HF23F8D68
+   CompCRC32 = &HF23F8D68
    Description = ""
    IsRoom = False
 
 [Logic114]
    ID = Logic114
-   Size = 773
-   CRC32 = &H85986BA6
-   CompCRC32 = &H85986BA6
+   Size = 874
+   CRC32 = &HBDA76EC1
+   CompCRC32 = &HBDA76EC1
    Description = ""
    IsRoom = False
 
@@ -935,17 +935,17 @@
 
 [Logic116]
    ID = Logic116
-   Size = 3418
-   CRC32 = &HFF358ED5
-   CompCRC32 = &HFF358ED5
+   Size = 3145
+   CRC32 = &H85B6DD5C
+   CompCRC32 = &H85B6DD5C
    Description = ""
    IsRoom = False
 
 [Logic117]
    ID = Logic117
-   Size = 4827
-   CRC32 = &H36543A62
-   CompCRC32 = &H36543A62
+   Size = 5195
+   CRC32 = &H4F95461B
+   CompCRC32 = &H4F95461B
    Description = ""
    IsRoom = False
 
@@ -959,9 +959,9 @@
 
 [Logic119]
    ID = Logic119
-   Size = 4664
-   CRC32 = &H1420FCDA
-   CompCRC32 = &H1420FCDA
+   Size = 4773
+   CRC32 = &H3BF93639
+   CompCRC32 = &H3BF93639
    Description = ""
    IsRoom = False
 [::END Logics::]
@@ -972,31 +972,26 @@
    ID = Picture1
    Size = 3315
    Description = ""
-   BkgdImg = ""
 
 [Picture2]
    ID = Picture2
    Size = 1237
    Description = ""
-   BkgdImg = ""
 
 [Picture3]
    ID = Picture3
    Size = 2762
    Description = ""
-   BkgdImg = ""
 
 [Picture4]
    ID = Picture4
    Size = 1662
    Description = ""
-   BkgdImg = ""
 
 [Picture5]
    ID = Picture5
    Size = 2346
    Description = ""
-   BkgdImg = ""
 
 [Picture6]
    ID = Picture6
@@ -1007,7 +1002,6 @@
    ID = Picture7
    Size = 3123
    Description = ""
-   BkgdImg = ""
 
 [Picture8]
    ID = Picture8
@@ -1018,7 +1012,6 @@
    ID = Picture9
    Size = 322
    Description = ""
-   BkgdImg = ""
 
 [Picture10]
    ID = Picture10
@@ -1034,13 +1027,11 @@
    ID = Picture12
    Size = 1211
    Description = ""
-   BkgdImg = ""
 
 [Picture13]
    ID = Picture13
    Size = 1442
    Description = ""
-   BkgdImg = ""
 
 [Picture14]
    ID = Picture14
@@ -1051,19 +1042,16 @@
    ID = Picture15
    Size = 461
    Description = ""
-   BkgdImg = ""
 
 [Picture16]
    ID = Picture16
    Size = 1032
    Description = ""
-   BkgdImg = ""
 
 [Picture17]
    ID = Picture17
    Size = 1019
    Description = ""
-   BkgdImg = ""
 
 [Picture18]
    ID = Picture18
@@ -1074,19 +1062,16 @@
    ID = Picture19
    Size = 1190
    Description = ""
-   BkgdImg = ""
 
 [Picture20]
    ID = Picture20
    Size = 745
    Description = ""
-   BkgdImg = ""
 
 [Picture21]
    ID = Picture21
    Size = 630
    Description = ""
-   BkgdImg = ""
 
 [Picture22]
    ID = Picture22
@@ -1097,61 +1082,51 @@
    ID = Picture23
    Size = 870
    Description = ""
-   BkgdImg = ""
 
 [Picture24]
    ID = Picture24
    Size = 1857
    Description = ""
-   BkgdImg = ""
 
 [Picture25]
    ID = Picture25
    Size = 1559
    Description = ""
-   BkgdImg = ""
 
 [Picture26]
    ID = Picture26
    Size = 2772
    Description = ""
-   BkgdImg = ""
 
 [Picture33]
    ID = Picture33
    Size = 2594
    Description = ""
-   BkgdImg = ""
 
 [Picture34]
    ID = Picture34
    Size = 1587
    Description = ""
-   BkgdImg = ""
 
 [Picture35]
    ID = Picture35
    Size = 2236
    Description = ""
-   BkgdImg = ""
 
 [Picture36]
    ID = Picture36
    Size = 2387
    Description = ""
-   BkgdImg = ""
 
 [Picture37]
    ID = Picture37
    Size = 1455
    Description = ""
-   BkgdImg = ""
 
 [Picture38]
    ID = Picture38
    Size = 450
    Description = ""
-   BkgdImg = ""
 
 [Picture40]
    ID = Picture40
@@ -1347,7 +1322,6 @@
    ID = Picture116
    Size = 19
    Description = ""
-   BkgdImg = ""
 [::END Pictures::]
 
 [::BEGIN Sounds::]
@@ -1732,122 +1706,122 @@
 
 [View41]
    ID = View41
-   Size = 446
+   Size = 463
    Description = ""
 
 [View42]
    ID = View42
-   Size = 422
+   Size = 429
    Description = ""
 
 [View43]
    ID = View43
-   Size = 420
+   Size = 440
    Description = ""
 
 [View44]
    ID = View44
-   Size = 675
+   Size = 699
    Description = ""
 
 [View45]
    ID = View45
-   Size = 580
+   Size = 615
    Description = ""
 
 [View46]
    ID = View46
-   Size = 409
+   Size = 427
    Description = ""
 
 [View47]
    ID = View47
-   Size = 424
+   Size = 468
    Description = ""
 
 [View48]
    ID = View48
-   Size = 448
+   Size = 447
    Description = ""
 
 [View49]
    ID = View49
-   Size = 232
+   Size = 255
    Description = ""
 
 [View50]
    ID = View50
-   Size = 577
+   Size = 614
    Description = ""
 
 [View51]
    ID = View51
-   Size = 725
+   Size = 734
    Description = ""
 
 [View52]
    ID = View52
-   Size = 548
+   Size = 567
    Description = ""
 
 [View53]
    ID = View53
-   Size = 495
+   Size = 525
    Description = ""
 
 [View54]
    ID = View54
-   Size = 567
+   Size = 625
    Description = ""
 
 [View55]
    ID = View55
-   Size = 463
+   Size = 508
    Description = ""
 
 [View56]
    ID = View56
-   Size = 742
+   Size = 767
    Description = ""
 
 [View57]
    ID = View57
-   Size = 535
+   Size = 550
    Description = ""
 
 [View58]
    ID = View58
-   Size = 258
+   Size = 280
    Description = ""
 
 [View59]
    ID = View59
-   Size = 568
+   Size = 580
    Description = ""
 
 [View60]
    ID = View60
-   Size = 387
+   Size = 399
    Description = ""
 
 [View61]
    ID = View61
-   Size = 694
+   Size = 722
    Description = ""
 
 [View62]
    ID = View62
-   Size = 479
+   Size = 487
    Description = ""
 
 [View63]
    ID = View63
-   Size = 738
+   Size = 740
    Description = ""
 
 [View64]
    ID = View64
-   Size = 453
+   Size = 486
    Description = ""
 
 [View65]
