@@ -1,4 +1,11 @@
-# based on https://github.com/barryharmsen/ExtractAGI/blob/master/export_words_tok.py
+# tried to base on https://github.com/barryharmsen/ExtractAGI/blob/master/export_words_tok.py
+# but it has bugs!
+# in PQ1, it replaced:
+# sw9764912 -> s2
+# pr24 -> pr4
+# i'm -> im
+#
+# therefore, ditched that, and rewrote
 
 import struct
 import argparse
@@ -7,57 +14,40 @@ import csv
 
 import config
 
+
+def read_be(l, idx):
+    return l[idx] * 256 + l[idx + 1]
+
+
 def words_export(gamedir, csvdir):
-    words = {}
     with open(os.path.join(gamedir, config.wordsfile), "rb") as f:
-        f.seek(52, 0)
+        lob = list(f.read())
 
-        PreviousWord = ''
-        CurrentWord = ''
+    # first 52 bytes are indices - not interesting
+    index = 52
 
-        while True:
-            PreviousWord = CurrentWord
-            CurrentWord = ''
+    words = {}
+    previous_word = ''
+    try:
+        while index < len(lob):
+            reused_letters = lob[index]
+            index += 1
+            word = previous_word[:reused_letters]
+            while lob[index] < 0x80:
+                word += chr(lob[index] ^ 0x7f)
+                index += 1
+            word += chr(lob[index] ^ 0xff)
+            index += 1
+            number = read_be(lob, index)
+            index += 2
 
-            b = f.read(1)
+            previous_word = word
+            if number not in words:
+                words[number] = []
+            words[number].append(word)
 
-            # Break if EOF
-            if not b:
-                break
-
-            byte = struct.unpack('B', b)[0]
-
-            CurrentWord = PreviousWord[0:byte]
-
-            # Get characters
-            while True:
-                b = f.read(1)
-
-                if not b:
-                    break
-
-                byte = struct.unpack('B', b)[0]
-
-                if byte < 32:
-                    CurrentWord = CurrentWord + chr(byte ^ 127)
-                elif byte > 127:
-                    CurrentWord = CurrentWord + chr((byte - 128) ^ 127)
-                    break
-                elif byte == 95:
-                    CurrentWord = CurrentWord + ' '
-
-            # Get word number
-            b = f.read(2)
-            if not b:
-                break
-            wordno = struct.unpack('>H', b)[0]
-
-            if wordno in words:
-                words[wordno].append(CurrentWord)
-            else:
-                words[wordno] = []
-                words[wordno].append(CurrentWord)
-
+    except IndexError:
+        pass
 
     with open(os.path.join(csvdir, config.words_csv_filename), 'w', newline='') as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=config.words_keys.values(), quoting=csv.QUOTE_ALL)

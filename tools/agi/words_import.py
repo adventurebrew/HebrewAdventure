@@ -5,8 +5,6 @@ import shutil
 
 import config
 
-config.words_extended_file = "WORDS.TOK.EXTENDED"
-
 
 def write_words_file(gamedir, words_by_index):
     sierra_orig_dir = os.path.join(gamedir, config.sierra_original)
@@ -39,10 +37,49 @@ def write_words_file(gamedir, words_by_index):
                     sorted_words.append((w, real_index))
     sorted_words = sorted(sorted_words)
 
+    write_extended_words_tok(gamedir, sorted_words)
+    write_legacy_words_tok(gamedir, sorted_words)
+
+
+def write_extended_words_tok(gamedir, sorted_words):
     with open(os.path.join(gamedir, config.words_extended_file), "w") as f:
         f.write("WORDS.TOK: Unofficial extended format to support ASCII range of 128-255\n")
         for (word, index) in sorted_words:
             f.write(f"{word}\0{index}\n")
+
+
+def write_legacy_words_tok(gamedir, sorted_words):
+    """ needed because of duplicates - some word numbers have changed, and we need WinAGI to recompile scripts correctly
+    we don't bother with making it 100% as legacy - no need to implement the "compressing" scheme (reuse letters from previous word)
+    """
+    sorted_words = [(word, number) for (word, number) in sorted_words if word.isascii()]
+    # reserve place for letters indices
+    lob = [0] * 52
+    current_letter = None
+    previous_word = ""
+    for (word, number) in sorted_words:
+        if word[0] != current_letter:
+            current_letter = word[0]
+            assert 'a' <= current_letter <= 'z'
+            letter_index = (ord(current_letter) - ord('a')) * 2
+            lob[letter_index] = len(lob) // 256
+            lob[letter_index+1] = len(lob) % 256
+        prefix = os.path.commonprefix([word, previous_word])
+        previous_word = word
+        word = word[len(prefix):]               # skip reused letters
+        lob.append(len(prefix))                 # use letters from previous word - 'compression'
+        for letter in word[:-1]:                # handle all but last letter, which has MSB set
+            lob.append(ord(letter) ^ 0x7f)      # 'encryption'
+        lob.append(ord(word[-1]) ^ 0xff)        # set MSB of last letter
+        lob.append(number // 256)
+        lob.append(number % 256)
+
+    # I'm not sure why is it needed, but it seems that if the bytes number isn't even, WinAGI gets angry
+    if len(lob) % 2 != 0:
+        lob.append(0)
+
+    with open(os.path.join(gamedir, config.wordsfile), "wb") as f:
+        f.write(bytes(lob))
 
 
 def words_import(gamedir, csvdir):
@@ -63,7 +100,9 @@ if __name__ == "__main__":
                                      epilog='''
 Sierra's original WORDS.TOK file supports only ASCII codes <= 127, meaning that it cannot have characters
 from the range of 128-255, required for Hebrew (and probably few other languages).
-Therefore, this script creates a NON-STANDARD WORDS.TOK file, now supported by ScummVM
+Therefore, this script creates a NON-STANDARD WORDS.TOK file, now supported by ScummVM.
+It also creates a standard WORDS.TOK, with ONLY the ENGLISH words. It's needed because we might have 
+duplicated words, therefore, the word groups are united, and we need to recompile the scripts.
 ''')
     parser.add_argument("gamedir", help="directory containing the game files")
     parser.add_argument("csvdir", help="directory to write messages.csv")
