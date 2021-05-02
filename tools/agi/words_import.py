@@ -74,9 +74,8 @@ def write_legacy_words_tok(gamedir, sorted_words):
         lob.append(number // 256)
         lob.append(number % 256)
 
-    # I'm not sure why is it needed, but it seems that if the bytes number isn't even, WinAGI gets angry
-    if len(lob) % 2 != 0:
-        lob.append(0)
+	# TODO: why exactly is it needed? anyway, without it WinAGI complains
+    lob.append(0)
 
     with open(os.path.join(gamedir, config.wordsfile), "wb") as f:
         f.write(bytes(lob))

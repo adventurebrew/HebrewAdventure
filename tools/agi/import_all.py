@@ -60,12 +60,12 @@ if __name__ == "__main__":
 
     wag_file = list(pathlib.Path(args.gamedir).glob('**/*.WAG'))[0]
 
-    print("\nCompiling dirty scripts")
+    print("\nCompiling all scripts")
 
     #TODO: currently capture_output=True fails to capture the output. I've reported it
     #TODO: currently p.returncode is always zero. I'll report it after the output issue will be solved...
     #note: currently, when running from PyCharm, needs to enable Execution->Emulate terminal in output console, under script's configuration
-    p = subprocess.run([config.conWAGI_exe, '/d', wag_file], check=True, capture_output=False)
+    p = subprocess.run([config.conWAGI_exe, '/c', wag_file], check=True, capture_output=False)
 
     print("\nCreating installer")
     create_installer(args.cleandir, args.gamedir, args.workingdir)

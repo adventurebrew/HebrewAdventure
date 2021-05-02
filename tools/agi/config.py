@@ -35,5 +35,5 @@ GenPath_exe = r"C:\Program Files (x86)\NSIS\Bin\GenPat.exe"
 makensis_exe = r"C:\Program Files (x86)\NSIS\Bin\makensis.exe"
 
 # import_all - installer:
-files_to_be_patched = ('OBJECT', 'LOGDIR', 'VIEWDIR', 'VOL.0')
-files_to_be_copied = ['WORDS.TOK.EXTENDED', 'agi-font-dos.bin']     # also .wag - will be added by import_all
+files_to_be_patched = ('OBJECT', 'LOGDIR', 'PICDIR', 'SNDDIR', 'VIEWDIR', 'VOL.0', 'WORDS.TOK')
+files_to_be_copied = ['WORDS.TOK.EXTENDED', 'agi-font-dos.bin']

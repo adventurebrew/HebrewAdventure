@@ -4,6 +4,7 @@
 # "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.clean\LOGDIR C:\Zvika\Games\PoliceQuest\AGI\LOGDIR logdir.patch /r
 # "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.clean\VIEWDIR C:\Zvika\Games\PoliceQuest\AGI\VIEWDIR viewdir.patch /r
 # "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" C:\Zvika\Games\PoliceQuest\AGI.clean\VOL.0 C:\Zvika\Games\PoliceQuest\AGI\VOL.0 VOL.0.patch /r
+# ...
 
 !include MUI2.nsh
 
@@ -89,8 +90,11 @@ Section "Update file"
 
     !insertmacro BackupAndUpdateFile VOL.0
     !insertmacro BackupAndUpdateFile LOGDIR
-	!insertmacro BackupAndUpdateFile VIEWDIR
+    !insertmacro BackupAndUpdateFile PICDIR
+    !insertmacro BackupAndUpdateFile SNDDIR
+    !insertmacro BackupAndUpdateFile VIEWDIR
     !insertmacro BackupAndUpdateFile OBJECT
+    !insertmacro BackupAndUpdateFile WORDS.TOK
     File WORDS.TOK.EXTENDED
     File agi-font-dos.bin
     File PQ1.WAG
