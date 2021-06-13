@@ -38,7 +38,7 @@ def read_sized_string(l, idx, size):
     return result
 
 
-def open_clu_desc(gamedir, workingdir):
+def open_clu_desc(gamedir):
     clustersdir = os.path.join(gamedir, "clusters")
     with open(os.path.join(clustersdir, cluster_description_file), "rb") as f:
         lob = list(f.read())
@@ -126,7 +126,7 @@ def get_frame(lob, number):
     return frame_header, idx + SIZE_OF_FRAME_HEADER
 
 
-def write_font(clusters):
+def write_font(clusters, workingdir):
     lob = get_resource(clusters, GAME_FONT)
     font = []
     for i in range(224):
@@ -154,7 +154,7 @@ def write_font(clusters):
         font.append(char)
 
     # 255 = white, 0 = black, 127 = gray
-    png.from_array(font[68-32], 'L').save("a.png")
+    png.from_array(font[ord('Z')-32], 'L').save(os.path.join(workingdir, "Z.png"))
 
 
 def get_message(clusters, id):
@@ -163,20 +163,13 @@ def get_message(clusters, id):
     idx = SIZE_OF_HEADER
     idx += read_uint_le(lob, idx + ((id & ITM_ID) + 1) * 4)
 
-    return {'id': id, 'msg': read_string(lob, idx)}
+    return {'id': hex(id), 'msg': read_string(lob, idx)}
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description="TODO", )
-    parser.add_argument("gamedir", help="directory containing the game files")
-    parser.add_argument("workingdir", help="directory to put csv files, and files required for installer")
-    args = parser.parse_args()
-    clusters = open_clu_desc(args.gamedir, args.workingdir)
-    # write_font(clusters)
-
-    with open(os.path.join('messages.csv'), 'w', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=['id', 'msg', 'translation', 'comment'])
+def write_messages(clusters, workingdir):
+    with open(os.path.join(workingdir, 'messages.csv'), 'w', newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, fieldnames=['id', 'msg', 'translation', 'comment'],
+                                     quoting=csv.QUOTE_ALL)
         dict_writer.writeheader()
 
         for i in range(0xfffffffff):
@@ -186,5 +179,17 @@ if __name__ == '__main__':
                 dict_writer.writerow(msg)
             except:
                 pass
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+                                     description="TODO", )
+    parser.add_argument("gamedir", help="directory containing the game files")
+    parser.add_argument("workingdir", help="directory to put csv files, and files required for installer")
+    args = parser.parse_args()
+    clusters = open_clu_desc(args.gamedir)
+
+    write_font(clusters, args.workingdir)
+    write_messages(clusters, args.workingdir)
 
 
