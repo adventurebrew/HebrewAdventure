@@ -5,6 +5,10 @@ import struct
 from collections import namedtuple
 import png
 
+GRAY = 127
+BLACK = 0
+WHITE = 255
+
 FONT_PNG = "font.png"
 
 cluster_description_file = "swordres.rif"
@@ -129,11 +133,30 @@ def get_frame(lob, number):
 
 
 def write_font(clusters, workingdir):
+    font = read_font(clusters)
+    max_width = max([len(c[0]) for c in font])
+    height = len(font[0])
+    grid = []
+    for row in range(14):
+        first_char_in_row = row * 16
+        for i in range(height):
+            line = []
+            for char in font[first_char_in_row:first_char_in_row+16]:
+                line.extend([WHITE] * 8)
+                line.extend(char[i])
+                missing_width = max_width - len(char[i])
+                line.extend([WHITE] * (missing_width + 8))
+            grid.append(line)
+        for i in range(8):
+            grid.append([WHITE] * len(line))
+
+    png.from_array(grid, 'L').save(os.path.join(workingdir, FONT_PNG))
+
+
+def read_font(clusters):
     lob = get_resource(clusters, GAME_FONT)
     font = []
     for i in range(224):
-        # print("----------------")
-        # print(i, chr(i+32))
         frame_header, idx = get_frame(lob, i)
         assert frame_header.height == 26
         char = []
@@ -141,22 +164,20 @@ def write_font(clusters, workingdir):
             line = []
             for j in range(frame_header.width):
                 if lob[idx] == 0:
-                    # transparent - make it white
-                    line.append(255)
+                    # transparent
+                    line.append(WHITE)
                 elif lob[idx] == 200:
-                    # border - make it black
-                    line.append(0)
+                    # border
+                    line.append(BLACK)
                 elif lob[idx] == 193:
-                    # letter - make it gray
-                    line.append(127)
+                    # letter
+                    line.append(GRAY)
                 else:
                     assert False
                 idx += 1
             char.append(line)
         font.append(char)
-
-    # 255 = white, 0 = black, 127 = gray
-    png.from_array(font[ord('Z')-32], 'L').save(os.path.join(workingdir, FONT_PNG))
+    return font
 
 
 def get_message(clusters, id):
