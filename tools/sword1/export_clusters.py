@@ -5,6 +5,8 @@ import struct
 from collections import namedtuple
 import png
 
+FONT_PNG = "font.png"
+
 cluster_description_file = "swordres.rif"
 MAX_LABEL_SIZE = (31+1)
 GAME_FONT = 0x04000000
@@ -154,7 +156,7 @@ def write_font(clusters, workingdir):
         font.append(char)
 
     # 255 = white, 0 = black, 127 = gray
-    png.from_array(font[ord('Z')-32], 'L').save(os.path.join(workingdir, "Z.png"))
+    png.from_array(font[ord('Z')-32], 'L').save(os.path.join(workingdir, FONT_PNG))
 
 
 def get_message(clusters, id):
@@ -172,9 +174,9 @@ def write_messages(clusters, workingdir):
                                      quoting=csv.QUOTE_ALL)
         dict_writer.writeheader()
 
+        # last char so far is 0x100430067
         for i in range(0xfffffffff):
             try:
-                # get_message(clusters, 0x00040000a)
                 msg = get_message(clusters, i)
                 dict_writer.writerow(msg)
             except:
@@ -183,13 +185,15 @@ def write_messages(clusters, workingdir):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description="TODO", )
+                                     description="Extracts from clusters file: font and messages", )
     parser.add_argument("gamedir", help="directory containing the game files")
     parser.add_argument("workingdir", help="directory to put csv files, and files required for installer")
+    parser.add_argument("--skip_messages", "-s",  action='store_true', help="Skip extracting message file")
     args = parser.parse_args()
     clusters = open_clu_desc(args.gamedir)
 
     write_font(clusters, args.workingdir)
-    write_messages(clusters, args.workingdir)
+    if not args.skip_messages:
+        write_messages(clusters, args.workingdir)
 
 
