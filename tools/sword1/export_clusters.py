@@ -3,7 +3,7 @@ import csv
 import os
 import struct
 from collections import namedtuple
-import png
+from shared.font_grid import save_font
 
 GRAY = 127
 BLACK = 0
@@ -134,23 +134,8 @@ def get_frame(lob, number):
 
 def write_font(clusters, workingdir):
     font = read_font(clusters)
-    max_width = max([len(c[0]) for c in font])
-    height = len(font[0])
-    grid = []
-    for row in range(14):
-        first_char_in_row = row * 16
-        for i in range(height):
-            line = []
-            for char in font[first_char_in_row:first_char_in_row+16]:
-                line.extend([WHITE] * 8)
-                line.extend(char[i])
-                missing_width = max_width - len(char[i])
-                line.extend([WHITE] * (missing_width + 8))
-            grid.append(line)
-        for i in range(8):
-            grid.append([WHITE] * len(line))
-
-    png.from_array(grid, 'L').save(os.path.join(workingdir, FONT_PNG))
+    chars = range(32, 255 + 1)
+    save_font(chars, font, os.path.join(workingdir, FONT_PNG))
 
 
 def read_font(clusters):
