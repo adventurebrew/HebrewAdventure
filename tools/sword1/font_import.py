@@ -24,8 +24,8 @@ def get_font(workingdir):
     # from shared.font_grid import save_font
     # save_font(chars, font, os.path.join(workingdir, 'temp.png'))
 
-    # return load_font(os.path.join(workingdir, 'temp.png'))
-    return load_font(os.path.join(workingdir, 'font.png'))
+    return load_font(os.path.join(workingdir, 'temp.png'))
+    # return load_font(os.path.join(workingdir, 'font.png'))
 
 
 def from_color(pixel):
@@ -51,7 +51,7 @@ def font_import(gamedir, workingdir):
 
     offsets = []
 
-    lob = b'\0'
+    lob = b''
     i = 0
     for char in font:
         print(i)
