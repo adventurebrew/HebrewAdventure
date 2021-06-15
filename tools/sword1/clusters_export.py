@@ -13,7 +13,7 @@ WHITE = 255
 
 FONT_PNG = "font.png"
 
-cluster_description_file = "swordres.rif"
+CLUSTER_DESCRIPTION_FILE = "swordres.rif"
 MAX_LABEL_SIZE = (31+1)
 GAME_FONT = 0x04000000
 SIZE_OF_HEADER = 0x14
@@ -44,7 +44,7 @@ def read_sized_string(l, idx, size):
 
 def open_clu_desc(gamedir):
     clustersdir = os.path.join(gamedir, "clusters")
-    with open(os.path.join(clustersdir, cluster_description_file), "rb") as f:
+    with open(os.path.join(clustersdir, CLUSTER_DESCRIPTION_FILE), "rb") as f:
         lob = list(f.read())
     index = 0
     num_of_clusters = read_uint_le(lob, 0)
@@ -60,20 +60,19 @@ def open_clu_desc(gamedir):
         if clusters_index[i] != 0:
             cluster = {}
             cluster['label'] = read_sized_string(lob, index, MAX_LABEL_SIZE)
+            cluster['index'] = clusters_index[i]
             cluster['path'] = os.path.join(clustersdir, cluster['label'] + ".CLU")
             index += MAX_LABEL_SIZE
             cluster['num_of_groups'] = read_uint_le(lob, index)
             index += 4
-            # print(cluster['label'], cluster['num_of_groups'])     #TODO
             groups_index = []
             for i in range(cluster['num_of_groups']):
                 groups_index.append(read_uint_le(lob, index))
                 index += 4
-            # print(cluster['num_of_groups'], [hex(i) for i in groups_index])    #TODO
             cluster['groups'] = []
             for i in range(cluster['num_of_groups']):
                 if groups_index[i] != 0:
-                    group = {'i': i}
+                    group = {'i': i, 'index': groups_index[i]}
                     group['num_of_res'] = read_uint_le(lob, index)
                     index += 4
                     group['resources'] = []
