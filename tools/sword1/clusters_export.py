@@ -5,6 +5,8 @@ import struct
 from collections import namedtuple
 from shared.font_grid import save_font
 
+ENGLISH_GROUP = 0
+
 GRAY = 127
 BLACK = 0
 WHITE = 255
@@ -28,11 +30,7 @@ def read_uint_le(l, idx):
 
 
 def read_string(l, idx):
-    result = ""
-    while l[idx] != 0:
-        result += chr(l[idx])
-        idx += 1
-    return result
+    return bytes(l[idx:]).partition(b'\0')[0].decode(encoding='latin1')
 
 
 def read_sized_string(l, idx, size):
@@ -156,13 +154,15 @@ def read_font(clusters):
     return font
 
 
-# it's not really used now, but maybe it'll proved useful later, so keeping it
+# it's not really used now, but it's nice for debugging
 def get_message(clusters, msg_id):
     id = get_id_from_msg_id(msg_id)
     lob = get_resource(clusters, id)
-    idx = SIZE_OF_HEADER + read_uint_le(lob, get_msg_idx(msg_id))
-
-    return {'id': hex(msg_id), 'msg': read_string(lob, idx)}
+    idx = read_uint_le(lob, get_msg_idx(msg_id))
+    if idx != 0:
+        return {'id': hex(msg_id), 'msg': read_string(lob, idx + SIZE_OF_HEADER)}
+    else:
+        return {'id': hex(msg_id), 'msg': None}
 
 
 def get_msg_idx(msg_id):
@@ -182,20 +182,20 @@ def export_messages(clusters, workingdir):
                                          quoting=csv.QUOTE_ALL)
             dict_writer.writeheader()
 
-            # 0 is English, ignore other languages
-            group = cluster['groups'][0]
+            group = cluster['groups'][ENGLISH_GROUP]
             for res in group['resources']:
                 f.seek(res['offset'])
                 lob = list(f.read(res['length']))
                 i = 0
                 while True:
-                    idx = SIZE_OF_HEADER + read_uint_le(lob, get_msg_idx(i))
+                    idx = read_uint_le(lob, get_msg_idx(i))
+                    i += 1
                     if idx > len(lob):
                         break
-                    msg = {'res': res['i'], 'id': i, 'msg': read_string(lob, idx)}
-                    print(msg)
-                    dict_writer.writerow(msg)
-                    i += 1
+                    elif idx != 0:
+                        msg = {'res': res['i'], 'id': i, 'msg': read_string(lob, idx + SIZE_OF_HEADER)}
+                        print(msg)
+                        dict_writer.writerow(msg)
 
 
 if __name__ == '__main__':
