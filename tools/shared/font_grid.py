@@ -101,3 +101,8 @@ def save_font(chars, char_images, font_path):
     im = create_char_grid(chars.stop, zip(chars, char_images))
     im.putpalette(palette)
     im.save(font_path)
+
+
+def load_font(font_path):
+    frames = read_image_grid(font_path)
+    return [resize_frame(frame) for frame in frames]

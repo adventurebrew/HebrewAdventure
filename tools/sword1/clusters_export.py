@@ -117,6 +117,14 @@ def get_frame(lob, number):
     idx = read_uint_le(lob, SIZE_OF_HEADER + (number + 1) * 4)
     FrameHeader = namedtuple('FrameHeader', 'runTimeComp compSize width height offsetX offsetY')
     frame_header = FrameHeader._make(struct.unpack("4sIHHhh", bytes(lob[idx:idx + SIZE_OF_FRAME_HEADER])))
+
+    # these assertions aren't really important for font exporting,
+    # but I assume them when doing font importing
+    assert frame_header.runTimeComp == b'NONE'
+    assert frame_header.compSize == frame_header.width * frame_header.height
+    assert frame_header.offsetX == 0
+    assert frame_header.offsetY == 0
+
     return frame_header, idx + SIZE_OF_FRAME_HEADER
 
 
@@ -146,7 +154,7 @@ def read_font(clusters):
                     # letter
                     line.append(GRAY)
                 else:
-                    assert False
+                    assert False, f"Unknown color: {lob[idx]}"
                 idx += 1
             char.append(line)
         font.append(char)
@@ -209,5 +217,7 @@ if __name__ == '__main__':
     write_font(clusters, args.workingdir)
     if not args.skip_messages:
         export_messages(clusters, args.workingdir)
+    else:
+        print("Skipped messages")
 
 

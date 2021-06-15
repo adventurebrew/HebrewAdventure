@@ -89,7 +89,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                      description="Writes messages to cluster files", )
     parser.add_argument("gamedir", help="directory containing the game files")
-    parser.add_argument("workingdir", help="directory to put csv files, and files required for installer")
+    parser.add_argument("workingdir", help="directory containing the csv file")
     args = parser.parse_args()
 
     messages_import(args.gamedir, args.workingdir)
