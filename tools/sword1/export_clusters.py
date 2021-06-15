@@ -86,7 +86,6 @@ def open_clu_desc(gamedir):
                     for i in range(group['num_of_res']):
                         res = {'i': i, 'index': res_id_index[i]}
                         if res_id_index[i] != 0:
-                            res = {}
                             res['offset'] = read_uint_le(lob, index)
                             index += 4
                             res['length'] = read_uint_le(lob, index)
@@ -97,31 +96,23 @@ def open_clu_desc(gamedir):
                         group['resources'].append(res)
                     cluster['groups'].append(group)
             clusters.append(cluster)
-
-    """TODO
-    ignoring this code:
-    
-    	if (_prj.clu[3].grp[5].noRes == 29)
-		for (uint8 cnt = 0; cnt < 29; cnt++)
-			_srIdList[cnt] = 0x04050000 | cnt;
-
-    """
     return clusters
 
 
 def get_resource(clusters, id):
-    #TODO: ignoring:
-    # if ((id >> 16) == 0x0405)
-    #     id = _srIdList[id & 0xFFFF];
-    cluster = ((id >> 24) - 1) & 0xff
-    group = (id >> 16) & 0xff
-    res_id = id & 0xffff
-    # print(cluster, group, res_id)
+    cluster, group, res_id = split_id(id)
     res = clusters[cluster]['groups'][group]['resources'][res_id]
     with open(clusters[cluster]['path'], "rb") as f:
         f.seek(res['offset'])
         lob = list(f.read(res['length']))
     return lob
+
+
+def split_id(id):
+    cluster = ((id >> 24) - 1) & 0xff
+    group = (id >> 16) & 0xff
+    res_id = id & 0xffff
+    return cluster, group, res_id
 
 
 def get_frame(lob, number):
@@ -165,28 +156,46 @@ def read_font(clusters):
     return font
 
 
-def get_message(clusters, id):
-    english_id = 0x03000000 + (id // 0x10000)
-    lob = get_resource(clusters, english_id)
-    idx = SIZE_OF_HEADER
-    idx += read_uint_le(lob, idx + ((id & ITM_ID) + 1) * 4)
+# it's not really used now, but maybe it'll proved useful later, so keeping it
+def get_message(clusters, msg_id):
+    id = get_id_from_msg_id(msg_id)
+    lob = get_resource(clusters, id)
+    idx = SIZE_OF_HEADER + read_uint_le(lob, get_msg_idx(msg_id))
 
-    return {'id': hex(id), 'msg': read_string(lob, idx)}
+    return {'id': hex(msg_id), 'msg': read_string(lob, idx)}
 
 
-def write_messages(clusters, workingdir):
-    with open(os.path.join(workingdir, 'messages.csv'), 'w', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=['id', 'msg', 'translation', 'comment'],
-                                     quoting=csv.QUOTE_ALL)
-        dict_writer.writeheader()
+def get_msg_idx(msg_id):
+    return SIZE_OF_HEADER + ((msg_id & ITM_ID) + 1) * 4
 
-        # last char so far is 0x100430067
-        for i in range(0xfffffffff):
-            try:
-                msg = get_message(clusters, i)
-                dict_writer.writerow(msg)
-            except:
-                pass
+
+def get_id_from_msg_id(msg_id):
+    return 0x03000000 + (msg_id // 0x10000)
+
+
+def export_messages(clusters, workingdir):
+    cluster = clusters[2]
+    assert cluster['label'] == 'text'
+    with open(cluster['path'], "rb") as f:
+        with open(os.path.join(workingdir, 'messages.csv'), 'w', newline='', encoding='utf-8') as output_file:
+            dict_writer = csv.DictWriter(output_file, fieldnames=['res', 'id', 'msg', 'translation', 'comment'],
+                                         quoting=csv.QUOTE_ALL)
+            dict_writer.writeheader()
+
+            # 0 is English, ignore other languages
+            group = cluster['groups'][0]
+            for res in group['resources']:
+                f.seek(res['offset'])
+                lob = list(f.read(res['length']))
+                i = 0
+                while True:
+                    idx = SIZE_OF_HEADER + read_uint_le(lob, get_msg_idx(i))
+                    if idx > len(lob):
+                        break
+                    msg = {'res': res['i'], 'id': i, 'msg': read_string(lob, idx)}
+                    print(msg)
+                    dict_writer.writerow(msg)
+                    i += 1
 
 
 if __name__ == '__main__':
@@ -200,6 +209,6 @@ if __name__ == '__main__':
 
     write_font(clusters, args.workingdir)
     if not args.skip_messages:
-        write_messages(clusters, args.workingdir)
+        export_messages(clusters, args.workingdir)
 
 
