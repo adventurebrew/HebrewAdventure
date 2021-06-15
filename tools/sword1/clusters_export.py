@@ -189,13 +189,13 @@ def export_messages(clusters, workingdir):
                 i = 0
                 while True:
                     idx = read_uint_le(lob, get_msg_idx(i))
-                    i += 1
                     if idx > len(lob):
                         break
                     elif idx != 0:
                         msg = {'res': res['i'], 'id': i, 'msg': read_string(lob, idx + SIZE_OF_HEADER)}
                         print(msg)
                         dict_writer.writerow(msg)
+                    i += 1
 
 
 if __name__ == '__main__':
