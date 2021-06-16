@@ -15,17 +15,7 @@ def to_byte(i):
 
 
 def get_font(workingdir):
-    # from clusters_export import read_font, open_clu_desc
-    # clusters = open_clu_desc(args.gamedir)
-    # font = read_font(clusters)
-    # font[-32:] = font[65-32:65]
-    # return font
-    # chars = range(32, 255 + 1)
-    # from shared.font_grid import save_font
-    # save_font(chars, font, os.path.join(workingdir, 'temp.png'))
-
-    return load_font(os.path.join(workingdir, 'temp.png'))
-    # return load_font(os.path.join(workingdir, 'font.png'))
+    return load_font(os.path.join(workingdir, 'font.png'))
 
 
 def from_color(pixel):
@@ -52,10 +42,7 @@ def font_import(gamedir, workingdir):
     offsets = []
 
     lob = b''
-    i = 0
     for char in font:
-        print(i)
-        i += 1
         offsets.append(len(lob))
 
         assert char[0]['x1'] == char[0]['y1'] == 0
@@ -98,7 +85,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                      description="Writes font to cluster files", )
     parser.add_argument("gamedir", help="directory containing the game files")
-    parser.add_argument("workingdir", help="directory containing the new font file")
+    parser.add_argument("workingdir", help="directory containing the updated 'font.png' file")
     args = parser.parse_args()
 
     font_import(args.gamedir, args.workingdir)
