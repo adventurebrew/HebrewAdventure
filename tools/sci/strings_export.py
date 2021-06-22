@@ -8,7 +8,7 @@ import csv
 from sci.config import scripts_strings_csv_filename, scripts_strings_keys
 
 
-def strings_export(srcdir, pattern, csvdir):
+def strings_export(srcdir, csvdir, pattern='*.sc'):
     with open(os.path.join(csvdir, scripts_strings_csv_filename), 'w', newline='') as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=scripts_strings_keys.values())
         dict_writer.writeheader()
@@ -51,4 +51,4 @@ add 'name {blah}' property to inventory items that miss it
     parser.add_argument("csvdir", help="directory to write .csv file")
     args = parser.parse_args()
 
-    strings_export(args.srcdir, args.pattern, args.csvdir)
+    strings_export(args.srcdir, args.csvdir, args.pattern)

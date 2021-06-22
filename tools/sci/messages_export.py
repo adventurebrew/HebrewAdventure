@@ -55,9 +55,9 @@ def write_csv(csvdir, entries):
                     print(e, entry)
 
 
-def messages_export(srcdir, csvdir):
+def messages_export(gamedir, csvdir):
     entries = {}
-    for filename in glob.iglob(os.path.join(srcdir, MESSAGES_PATTERN)):
+    for filename in glob.iglob(os.path.join(gamedir, MESSAGES_PATTERN)):
         try:
             room = int(os.path.basename(filename).split('.')[0])
         except:
@@ -132,8 +132,8 @@ def messages_export(srcdir, csvdir):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                      description='Exports text from messages files (*.msg) to csv file',)
-    parser.add_argument("srcdir", help="src directory containing the logic files")
+    parser.add_argument("gamedir", help="directory containing the game files (as patches - see below)")
     parser.add_argument("csvdir", help="directory to write messages.csv")
     args = parser.parse_args()
 
-    messages_export(args.srcdir, args.csvdir)
+    messages_export(args.gamedir, args.csvdir)
