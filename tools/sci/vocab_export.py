@@ -8,16 +8,16 @@
 # this exports vocab file to a csv
 # see also vocab_import.py
 import argparse
+import glob
 import os
 import pathlib
 import csv
+import re
 
 from sci import config
+from sci.strings_import import get_room_number
 
 VOCAB_FILE = "vocab.000"
-
-#TODO: generate 'said_per_room.txt'
-SAID_PER_ROOM_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\said_per_room.txt"
 
 classes = {
     0x004: 'CONJUNCTION',
@@ -40,30 +40,28 @@ def get_classes(i):
             result.append(classes[k])
     return result
 
-def get_said_per_room():
-    words = {}
-    try:
-        with open(SAID_PER_ROOM_FILE) as f:
-            for line in f:
-                if line.strip():
-                    sp = line.replace('"', '').split()
-                    assert sp[1] == 'said'
-                    room = sp[0]
-                    words_in_line = sp[2:]
-                    for word in words_in_line:
-                        if word.isalnum():
-                            cur = words.get(word, [])
-                            cur.append((room, line.strip()))
-                            words[word] = cur
-    except FileNotFoundError:
-        pass
-    return words
+
+def get_said_per_room(gamedir):
+    result = {}
+    srcdir = os.path.join(gamedir, 'src')
+    for filename in glob.iglob(os.path.join(srcdir, '*.sc')):
+        with open(filename) as f:
+            text = f.read()
+            text_dense = text.replace('\n', '').replace('\t','')
+            room = get_room_number(text)
+            saids = re.findall(r"\(Said\s'(.*?)'", text_dense)
+            words_in_room = set([w for l in [re.split('\W+', said) for said in saids] for w in l if w])
+            for word in words_in_room:
+                cur = result.get(word, [])
+                cur.append((room, [said for said in saids if word in said]))
+                result[word] = cur
+    return result
 
 
 def vocab_export(gamedir, csvdir):
     global keys
     in_vocab = list(pathlib.Path(os.path.join(gamedir, VOCAB_FILE)).read_bytes())
-    said_per_room = get_said_per_room()
+    said_per_room = get_said_per_room(gamedir)
     # TODO: automatic recognize file kind, and support exporting new kind
     kind = "old"
     if kind == "old":
