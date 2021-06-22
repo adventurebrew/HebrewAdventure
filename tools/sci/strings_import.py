@@ -7,7 +7,7 @@ import os
 import csv
 import re
 
-from sci.config import scripts_strings_csv_filename, scripts_strings_keys
+from config import scripts_strings_csv_filename, scripts_strings_keys
 
 #TODO: del
 # INPUT_CSV_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\scripts_strings.csv"

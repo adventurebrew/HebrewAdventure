@@ -14,8 +14,8 @@ import pathlib
 import csv
 import re
 
-from sci import config
-from sci.strings_import import get_room_number
+import config
+from strings_import import get_room_number
 
 VOCAB_FILE = "vocab.000"
 

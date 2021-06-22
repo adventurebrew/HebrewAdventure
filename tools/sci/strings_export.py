@@ -5,7 +5,7 @@ import os
 import glob
 import csv
 
-from sci.config import scripts_strings_csv_filename, scripts_strings_keys
+from config import scripts_strings_csv_filename, scripts_strings_keys
 
 
 def strings_export(srcdir, csvdir, pattern='*.sc'):

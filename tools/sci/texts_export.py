@@ -8,7 +8,7 @@ import os
 from functools import partial
 from itertools import takewhile
 
-from sci import config
+import config
 
 KEYS = ('room', 'idx', 'original', 'translated', 'comments')
 ENCODING_IN = 'windows-1252'

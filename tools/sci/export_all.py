@@ -12,7 +12,7 @@ import messages_export
 import texts_export
 import vocab_export
 
-from sci import config
+import config
 
 
 def write_excel(csvdir):
