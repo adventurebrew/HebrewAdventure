@@ -38,10 +38,11 @@ if __name__ == "__main__":
                                      description='Exports resources for translation',
                                      epilog='''
 
-1. You need to work with Kawa's latest SCICompanion (at lease 3.2.3.2, from http://helmet.kafuka.org/sci/SCICompanion.exe)
+1. You need to work with Kawa's latest SCICompanion 
+    (at lease 3.2.3.2, from http://helmet.kafuka.org/sci/SCICompanion.exe)
 2. Enable Game->Properties->Manage resources as patch files->Yes
 3. Script->Manage decompilation->Decompile->Yes
-4. Make sure that Script->Compile all succeeds. 
+4. Make sure that 'Script->Compile all' succeeds. 
     If encountering problems, you can report at https://github.com/Kawa-oneechan/SCICompanion/issues
     Or, debug with comparing to https://github.com/EricOakford/SCI-Decompilation-Archive 
 5. For SCI0: Make some changes to Main.sc:
@@ -55,14 +56,17 @@ if __name__ == "__main__":
                         choices=['SCI0', 'SCI32'],
                         required=True)
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see below)")
-    parser.add_argument("csvdir", help="directory to write .csv file")
+    parser.add_argument("csvdir", help="directory to write .csv and combined .xlsx files")
     args = parser.parse_args()
 
     strings_export.strings_export(os.path.join(args.gamedir, 'src'), args.csvdir)
 
     if args.generation == "SCI0":
         texts_export.texts_export(args.gamedir, args.csvdir)
-        vocab_export.vocab_export(args.gamedir, args.csvdir)
+        try:
+            vocab_export.vocab_export(args.gamedir, args.csvdir)
+        except FileNotFoundError:
+            print("Missing vocab file. Have you followed the instructions at this script's help?")
     elif args.generation == "SCI32":
         messages_export.messages_export(args.gamedir, args.csvdir)
     else:
