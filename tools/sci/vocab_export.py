@@ -17,7 +17,7 @@ from sci import config
 VOCAB_FILE = "vocab.000"
 
 #TODO: generate 'said_per_room.txt'
-SAID_PER_ROOM_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\said_per_room.txt"
+SAID_PER_ROOM_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\said_per_room.txtZZZ"
 
 classes = {
     0x004: 'CONJUNCTION',
@@ -42,18 +42,21 @@ def get_classes(i):
 
 def get_said_per_room():
     words = {}
-    with open(SAID_PER_ROOM_FILE) as f:
-        for line in f:
-            if line.strip():
-                sp = line.replace('"', '').split()
-                assert sp[1] == 'said'
-                room = sp[0]
-                words_in_line = sp[2:]
-                for word in words_in_line:
-                    if word.isalnum():
-                        cur = words.get(word, [])
-                        cur.append((room, line.strip()))
-                        words[word] = cur
+    try:
+        with open(SAID_PER_ROOM_FILE) as f:
+            for line in f:
+                if line.strip():
+                    sp = line.replace('"', '').split()
+                    assert sp[1] == 'said'
+                    room = sp[0]
+                    words_in_line = sp[2:]
+                    for word in words_in_line:
+                        if word.isalnum():
+                            cur = words.get(word, [])
+                            cur.append((room, line.strip()))
+                            words[word] = cur
+    except FileNotFoundError:
+        pass
     return words
 
 
