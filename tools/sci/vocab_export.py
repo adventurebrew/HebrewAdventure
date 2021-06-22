@@ -17,7 +17,7 @@ from sci import config
 VOCAB_FILE = "vocab.000"
 
 #TODO: generate 'said_per_room.txt'
-SAID_PER_ROOM_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\said_per_room.txtZZZ"
+SAID_PER_ROOM_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\said_per_room.txt"
 
 classes = {
     0x004: 'CONJUNCTION',
@@ -130,6 +130,7 @@ def vocab_export(gamedir, csvdir):
         entry['comments'] = ''
 
         sorted_vocab.append(entry)
+    sorted_vocab = sorted(sorted_vocab, key=lambda k: (k['rooms'] == "", k['rooms']))
     keys = sorted_vocab[0].keys()
     with open(os.path.join(csvdir, config.vocab_csv_filename), 'w', newline='') as output_file:
         dict_writer = csv.DictWriter(output_file, keys, quoting=csv.QUOTE_ALL)
