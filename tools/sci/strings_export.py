@@ -9,7 +9,7 @@ from sci.config import scripts_strings_csv_filename, scripts_strings_keys
 
 
 def strings_export(srcdir, csvdir, pattern='*.sc'):
-    with open(os.path.join(csvdir, scripts_strings_csv_filename), 'w', newline='') as output_file:
+    with open(os.path.join(csvdir, scripts_strings_csv_filename), 'w', newline='', encoding='UTF-8') as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=scripts_strings_keys.values())
         dict_writer.writeheader()
 

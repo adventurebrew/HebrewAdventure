@@ -7,3 +7,10 @@ scripts_strings_keys = {'filename': 'קובץ', 'idx': 'אינדקס', 'original
 
 texts_csv_filename = "texts.csv"
 vocab_csv_filename = "vocab.csv"
+
+csvs_info = (
+    (u'הודעות לפי חדרים', 'messages.csv'),
+    (u'טקסטים לפי חדרים', 'texts.csv'),
+    (u'טקסטים מסקריפטים', 'scripts_strings.csv'),
+    (u'מילון לשורת פקודה', 'vocab.csv'),
+)

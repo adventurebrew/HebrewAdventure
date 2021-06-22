@@ -2,12 +2,36 @@
 # C:\Zvika\Games\gk1 "C:\Zvika\Games\GK mess" -g SCI32
 
 import argparse
+import glob
 import os
+import pandas as pd
+import xlsxwriter
 
 import strings_export
 import messages_export
 import texts_export
 import vocab_export
+
+from sci import config
+
+
+def write_excel(csvdir):
+    # Sierra is using ASCII codes below 32 for special symbols.
+    # the default engine, Openpyxl, refuses to cooperate with this
+    # Googling revealed that xlsxwriter is less conservative about that.
+    writer = pd.ExcelWriter(os.path.join(csvdir, "translation.xlsx"), engine='xlsxwriter')
+
+    for filename in glob.glob(os.path.join(csvdir, "*.csv")):
+        df_csv = pd.read_csv(filename)
+
+        (_, f_name) = os.path.split(filename)
+        # (f_shortname, _) = os.path.splitext(f_name)
+        tab_name = [e for e in config.csvs_info if e[1] == f_name][0][0]
+
+        df_csv.to_excel(writer, tab_name, index=False)
+
+    writer.save()
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.RawTextHelpFormatter,
@@ -43,4 +67,6 @@ if __name__ == "__main__":
         messages_export.messages_export(args.gamedir, args.csvdir)
     else:
         assert False
+
+    write_excel(args.csvdir)
 

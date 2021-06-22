@@ -11,7 +11,8 @@ from itertools import takewhile
 from sci import config
 
 KEYS = ('room', 'idx', 'original', 'translated', 'comments')
-ENCODING = 'windows-1255'
+ENCODING_IN = 'windows-1252'
+ENCODING_OUT = 'utf-8'
 SIERRA_TEXT_HEADER = b'\x83'
 TEXTS_PATTERN = "text.*"
 
@@ -31,13 +32,13 @@ def safe_readcstr(stream):
 def loop_strings(stream):
     while True:
         try:
-            yield safe_readcstr(stream).decode(ENCODING)
+            yield safe_readcstr(stream).decode(ENCODING_IN)
         except EOFError as e:
             break
 
 
 def texts_export(gamedir, csvdir):
-    with open(os.path.join(csvdir, config.texts_csv_filename) , 'w', newline='') as output_file:
+    with open(os.path.join(csvdir, config.texts_csv_filename) , 'w', newline='', encoding=ENCODING_OUT) as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=KEYS)
         dict_writer.writeheader()
 
@@ -46,7 +47,7 @@ def texts_export(gamedir, csvdir):
             with open(filename, 'rb') as f:
                 for idx, message in enumerate(loop_strings(f)):
                     if idx == 0:
-                        assert message.encode(ENCODING) == SIERRA_TEXT_HEADER
+                        assert message.encode(ENCODING_IN) == SIERRA_TEXT_HEADER
                     else:
                         dict_writer.writerow({KEYS[0]: room, KEYS[1]: idx - 1, KEYS[2]: message, KEYS[3]: ''})
 
