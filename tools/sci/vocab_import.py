@@ -1,13 +1,18 @@
 # see details in vocab_export.py
-# this imports from csv to fake vocab.000
+import argparse
+import os
 import shutil
+import csv
 
-INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
-OUTPUT_FILE1 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
-OUTPUT_FILE2 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
+import config
+
+VOCAB_OLD = 'vocab.900'
+VOCAB_NEW = 'vocab.000'
+# INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
+# OUTPUT_FILE1 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
+# OUTPUT_FILE2 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
 ENCODING = 'windows-1255'
 
-import csv
 
 classes = {
     'CONJUNCTION': 0x004,
@@ -39,17 +44,20 @@ def get_entry_with_word(entries, word):
             return entry
 
 
-def read_csv_file():
-    with open(INPUT_FILE, newline='', encoding='utf-8') as csvfile:
+def my_int(s):
+    return int(float(s))
+
+
+def read_csv_file(csvdir):
+    with open(os.path.join(csvdir, config.vocab_csv_filename), newline='', encoding='utf-8') as csvfile:
         vocab = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
     # for duplicate word checking
     words = []
     # group number to be used for new entries without group number, start after current maximum
-    next_group = max([int(e['group']) for e in vocab if e['group'] != '']) + 1
+    next_group = max([my_int(e['group']) for e in vocab if e['group'] != '']) + 1
 
     entries = []
-    rooms_to_recompile = []
     for entry in vocab:
         new_entry = {}
         new_entry['cls'] = get_class(entry['class'])
@@ -57,7 +65,7 @@ def read_csv_file():
             new_entry['group'] = next_group
             next_group += 1
         else:
-            new_entry['group'] = int(entry['group'])
+            new_entry['group'] = my_int(entry['group'])
 
         new_entry['words'] = []
         duplicated = None
@@ -85,16 +93,14 @@ def read_csv_file():
             existing_entry['words'].extend(new_entry['words'])
             assert duplicated in existing_entry['words']
             rooms = [r.strip() for r in entry['rooms'].split('in')[1].split(',')]
-            rooms_to_recompile.extend(rooms)
-            rooms_to_recompile = sorted(list(set(rooms_to_recompile)))
             #print(entry)
         else:
             entries.append(new_entry)
 
-    return (entries, rooms_to_recompile)
+    return entries
 
 
-def write_vocab_file(entries):
+def write_vocab_file(entries, patchesdir, output_game_dir):
     binary_vocab = [0x86, 0x00]  # vocab signature
     # vocab.900 starts with 255 16-bit pointers
     # they aren't interesting...
@@ -119,19 +125,27 @@ def write_vocab_file(entries):
             binary_vocab.append(byte2)
             binary_vocab.append(byte3)
 
-    with open(OUTPUT_FILE1, "wb") as out_file:
+    output_file1 = os.path.join(patchesdir, VOCAB_NEW)
+    output_file2 = os.path.join(output_game_dir, VOCAB_OLD)
+    with open(output_file1, "wb") as out_file:
         out_file.write(bytes(binary_vocab))
-    shutil.copyfile(OUTPUT_FILE1, OUTPUT_FILE2)
+    shutil.copyfile(output_file1, output_file2)
 
 
-def vocab_import():
-    (entries, rooms_to_recompile) = read_csv_file()
-    write_vocab_file(entries)
-    return rooms_to_recompile
+def vocab_import(csvdir, patchesdir, output_game_dir):
+    entries = read_csv_file(csvdir)
+    write_vocab_file(entries, patchesdir, output_game_dir)
 
 
 if __name__ == "__main__":
-    print(vocab_import())
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+                                     description="Imports scripts' strings from csv file",)
+    parser.add_argument("csvdir", help=f"directory to read {config.vocab_csv_filename} from")
+    parser.add_argument("patchesdir", help="directory to write the texts patches files to")
+    parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")
+    args = parser.parse_args()
+
+    vocab_import(args.csvdir, args.patchesdir, args.output_game_dir)
 
 
 

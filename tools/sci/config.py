@@ -14,3 +14,5 @@ csvs_info = (
     (u'טקסטים מסקריפטים', 'scripts_strings.csv'),
     (u'מילון לשורת פקודה', 'vocab.csv'),
 )
+
+makensis_exe = r"C:\Program Files (x86)\NSIS\Bin\makensis.exe"

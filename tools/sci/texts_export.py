@@ -38,7 +38,7 @@ def loop_strings(stream):
 
 
 def texts_export(gamedir, csvdir):
-    with open(os.path.join(csvdir, config.texts_csv_filename) , 'w', newline='', encoding=ENCODING_OUT) as output_file:
+    with open(os.path.join(csvdir, config.texts_csv_filename), 'w', newline='', encoding=ENCODING_OUT) as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=KEYS)
         dict_writer.writeheader()
 
