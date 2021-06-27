@@ -6,7 +6,9 @@ import glob
 import os
 import shutil
 import subprocess
+import sys
 
+sys.path.append("..")
 from shared import google_drive
 
 import config
