@@ -13,6 +13,7 @@ import config
 import vocab_import
 import texts_import
 import strings_import
+import messages_import
 
 
 def create_installer(workingdir):
@@ -47,15 +48,14 @@ if __name__ == "__main__":
     google_drive.update_local_csvs(args.workingdir, args.skip_download, config)
 
     patches_dir = os.path.join(args.workingdir, "PATCHES")
-    try:
-        shutil.rmtree(patches_dir)
-    except FileNotFoundError:
-        pass
-    os.mkdir(patches_dir)
+    os.makedirs(patches_dir, exist_ok=True)
 
     for filename in glob.glob(os.path.join(args.workingdir, "*.csv")):
         csvname = os.path.splitext(os.path.split(filename)[1])[0]
-        if csvname == 'texts':
+        if csvname == 'messages':
+            print("\n**** Messages import ****")
+            messages_import.messages_import(args.workingdir, args.input_game_dir, patches_dir)
+        elif csvname == 'texts':
             print("\n**** Texts import ****")
             texts_import.texts_import(args.workingdir, patches_dir)
         elif csvname == 'scripts_strings':

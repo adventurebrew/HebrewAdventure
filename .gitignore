@@ -149,6 +149,7 @@ sq3.ini
 
 *.zip
 client_secrets.json
+google_drive_file_id.txt
 
 .*swp
 .*swo

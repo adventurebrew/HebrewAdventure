@@ -3,18 +3,12 @@
 
 import argparse
 import csv
-import glob
 import io
 import os
-import re
-import shutil
 import binascii
-from sys import byteorder
-
 
 import config
 
-MESSAGES_PATTERN = "*.msg"
 SIERRA_MESSAGE_HEADER = b'\x8f\00'
 SIERRA_CODEPAGE = 'CP437'
 
@@ -83,7 +77,7 @@ def update_msg(original, entries):
             extra += len(origm) + 1
         for idx, (off, entry) in enumerate(zip(offs, entries)):
             index_entry = (
-                bytes([int(entry[key]) for key in keys]) +
+                bytes([my_int(entry[key]) for key in keys]) +
                 off.to_bytes(2, byteorder='little', signed=False) +
                 binascii.unhexlify(entry[config.messages_keys['padding']])
             )
@@ -100,17 +94,21 @@ def update_msg(original, entries):
         # assert ostr.getvalue() == original[:extra], (original[:extra], ostr.getvalue())
         return ostr.getvalue() + original[extra:]
 
-def messages_import(srcdir, pattern, csvdir):
 
-    patchdir = os.path.join(srcdir, 'PATCHES')
-    os.makedirs(patchdir, exist_ok=True)
+def my_int(s):
+    if s:
+        return int(float(s))
+    else:
+        return s
 
+
+def messages_import(csvdir, input_game_dir, output_game_dir):
     with open(os.path.join(csvdir, config.messages_csv_filename), newline='', encoding='utf-8-sig') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
-    rooms = sorted(list(set([entry[config.messages_keys['room']] for entry in texts])))
+    rooms = sorted(list(set([my_int(entry[config.messages_keys['room']]) for entry in texts if entry[config.messages_keys['room']]])))
     for room in rooms:
-        entries = [entry for entry in texts if entry[config.messages_keys['room']] == room]
+        entries = [entry for entry in texts if my_int(entry[config.messages_keys['room']]) == room]
 
         # if set([entry[config.messages_keys['translation']] for entry in entries]) == {''}:
         #     # there is no translated entry, no need to do anything, skip this room
@@ -119,8 +117,8 @@ def messages_import(srcdir, pattern, csvdir):
         print(room)
 
         filename = f"{room}.MSG"
-        orig_filename = os.path.join(srcdir, filename)
-        patch_filename = os.path.join(patchdir, filename)
+        orig_filename = os.path.join(input_game_dir, filename)
+        patch_filename = os.path.join(output_game_dir, filename)
 
         with open(orig_filename, 'rb') as f:
             original = f.read()
@@ -130,12 +128,13 @@ def messages_import(srcdir, pattern, csvdir):
         with open(patch_filename, 'wb') as output:
             output.write(content)
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description='Impors text messages from csv file to messages files (*.msg)',)
-    parser.add_argument("srcdir", help="src directory containing the logic files")
-    parser.add_argument("--pattern", default='*.msg', help="logic files pattern")
-    parser.add_argument("csvdir", help="directory to read messages.csv")
+                                     description='Imports text messages from csv file to messages files (*.msg)',)
+    parser.add_argument("csvdir", help=f"directory to read {config.texts_csv_filename} from")
+    parser.add_argument("input_game_dir", help="directory containing CLEAN game dir (probably used for 'export_all') - won't be modified")
+    parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")
     args = parser.parse_args()
 
-    messages_import(args.srcdir, args.pattern, args.csvdir)
+    messages_import(args.csvdir, args.input_game_dir, args.output_game_dir)

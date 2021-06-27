@@ -28,7 +28,6 @@ def read_string(lob, idx):
     result = ""
     while lob[idx] != 0:
         result += (lob[idx]).to_bytes(1, "little").decode(SIERRA_CODEPAGE)
-        # result += chr(lob[idx])
         idx += 1
     return result
 
