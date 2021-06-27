@@ -1,4 +1,6 @@
-﻿!include MUI2.nsh
+﻿#TODO: fix uninstaller!
+
+!include MUI2.nsh
 
 !define BACKUPDIR "SIERRA_ORIG_ENGLISH"
 !define UNINSTALLER_NAME "GK1_heb_uninstaller.exe"
