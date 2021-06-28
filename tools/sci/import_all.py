@@ -7,6 +7,7 @@ import os
 import shutil
 import subprocess
 import sys
+import re
 
 sys.path.append("..")
 from shared import google_drive
@@ -27,9 +28,21 @@ def create_installer(workingdir):
 
 
 def copy_compiled_scripts(workingdir, output_game_dir):
-    for filename in glob.glob(os.path.join(args.workingdir, "script.*")):
+    for filename in [f for f in os.listdir(output_game_dir) if
+                     re.match(r'\d+\.(HEP|SCR)', f, re.IGNORECASE) or
+                     re.match(r'SCRIPT\.\d+', f, re.IGNORECASE)]:
         shutil.copyfile(os.path.join(output_game_dir, filename),
                         os.path.join(workingdir, filename))
+
+
+def run_installer(workingdir):
+    installers = glob.glob(os.path.join(args.workingdir, "*-hebrew-installer.exe"))
+    if len(installers) == 0:
+        print("Couldn't find the created installer. Not running it")
+    elif len(installers) > 1:
+        print(f"Found too many potential installers: {installers} . Ignoring them all")
+    else:
+        subprocess.run([installers[0]], shell=True)
 
 
 if __name__ == "__main__":
@@ -74,7 +87,7 @@ if __name__ == "__main__":
     input("\n\nPress Enter when done...\n")
     print("... continuing")
 
-    copy_compiled_scripts(args.workingdir, args.output_game_dir)
+    copy_compiled_scripts(args.workingdir, patches_dir)
 
     print("\n**** Creating installer ****")
     create_installer(args.workingdir)
@@ -83,3 +96,5 @@ if __name__ == "__main__":
         print("\n*******************************************************************")
         print("Skipped download from Google Drive")
         print("*******************************************************************\n")
+
+    run_installer(args.workingdir)

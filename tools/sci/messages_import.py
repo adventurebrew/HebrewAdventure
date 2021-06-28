@@ -114,7 +114,7 @@ def messages_import(csvdir, input_game_dir, output_game_dir):
         #     # there is no translated entry, no need to do anything, skip this room
         #     continue
 
-        print(room)
+        # print(room)
 
         filename = f"{room}.MSG"
         orig_filename = os.path.join(input_game_dir, filename)

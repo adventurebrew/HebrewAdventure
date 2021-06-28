@@ -69,9 +69,17 @@ Section "Update file"
         MessageBox MB_OK "אשר סיום הסרת התקנה ישנה"
 
 
-    IfFileExists $INSTDIR\PATCHES 0 +3
+    IfFileExists $INSTDIR\PATCHES\0.fon 0 +3
+        MessageBox MB_ICONSTOP "נראה כי זו לא התקנה נקיה של ~GAME~! יש להתחיל מהתקנה נקיה"
+		abort		
+
+    IfFileExists "$INSTDIR\${BACKUPDIR}\*.*" 0 +3
         MessageBox MB_ICONSTOP "נראה כי זו לא התקנה נקיה של ~GAME~! יש להתחיל מהתקנה נקיה"
 		abort
+
+	CreateDirectory "$INSTDIR\${BACKUPDIR}\PATCHES"
+	CopyFiles /SILENT "$INSTDIR\PATCHES\*.*" "$INSTDIR\${BACKUPDIR}\PATCHES"
+		
 
 
     ; Set output path to the installation directory
@@ -91,7 +99,8 @@ SectionEnd
 
 Section "Uninstall"
     Rmdir /r $INSTDIR\PATCHES
-    CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR
+	CreateDirectory $INSTDIR\PATCHES
+    CopyFiles /SILENT "$INSTDIR\${BACKUPDIR}\PATCHES\*.*" $INSTDIR\PATCHES
     Rmdir /r "$INSTDIR\${BACKUPDIR}"
     Delete $INSTDIR\${UNINSTALLER_NAME}
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\~GAME~_Hebrew"

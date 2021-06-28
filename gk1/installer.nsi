@@ -1,6 +1,4 @@
-﻿#TODO: fix uninstaller!
-
-!include MUI2.nsh
+﻿!include MUI2.nsh
 
 !define BACKUPDIR "SIERRA_ORIG_ENGLISH"
 !define UNINSTALLER_NAME "GK1_heb_uninstaller.exe"
@@ -73,7 +71,15 @@ Section "Update file"
 
     IfFileExists $INSTDIR\PATCHES\0.fon 0 +3
         MessageBox MB_ICONSTOP "נראה כי זו לא התקנה נקיה של GK1! יש להתחיל מהתקנה נקיה"
+		abort		
+
+    IfFileExists "$INSTDIR\${BACKUPDIR}\*.*" 0 +3
+        MessageBox MB_ICONSTOP "נראה כי זו לא התקנה נקיה של GK1! יש להתחיל מהתקנה נקיה"
 		abort
+
+	CreateDirectory "$INSTDIR\${BACKUPDIR}\PATCHES"
+	CopyFiles /SILENT "$INSTDIR\PATCHES\*.*" "$INSTDIR\${BACKUPDIR}\PATCHES"
+		
 
 
     ; Set output path to the installation directory
@@ -93,7 +99,8 @@ SectionEnd
 
 Section "Uninstall"
     Rmdir /r $INSTDIR\PATCHES
-    CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR
+	CreateDirectory $INSTDIR\PATCHES
+    CopyFiles /SILENT "$INSTDIR\${BACKUPDIR}\PATCHES\*.*" $INSTDIR\PATCHES
     Rmdir /r "$INSTDIR\${BACKUPDIR}"
     Delete $INSTDIR\${UNINSTALLER_NAME}
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\GK1_Hebrew"
