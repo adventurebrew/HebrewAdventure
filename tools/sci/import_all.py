@@ -27,12 +27,12 @@ def create_installer(workingdir):
         subprocess.run([config.makensis_exe, nsis_path])
 
 
-def copy_compiled_scripts(workingdir, output_game_dir):
+def copy_compiled_scripts(output_game_dir, patches_dir):
     for filename in [f for f in os.listdir(output_game_dir) if
                      re.match(r'\d+\.(HEP|SCR)', f, re.IGNORECASE) or
                      re.match(r'SCRIPT\.\d+', f, re.IGNORECASE)]:
         shutil.copyfile(os.path.join(output_game_dir, filename),
-                        os.path.join(workingdir, filename))
+                        os.path.join(patches_dir, filename))
 
 
 def run_installer(workingdir):
@@ -52,6 +52,7 @@ if __name__ == "__main__":
     parser.add_argument("input_game_dir", help="directory containing CLEAN game dir (probably used for 'export_all') - won't be modified")
     parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")
     parser.add_argument("--skip_download", "-s",  action='store_true', help="Skip downloading from Google Drive")
+    parser.add_argument("--dont_copy", "-d",  action='store_true', help="Dont copy scripts from 'output_game_dir' (useful for SCI32 games)")
     args = parser.parse_args()
 
     if args.skip_download:
@@ -84,10 +85,13 @@ if __name__ == "__main__":
 
 
     print(f"\n*******************\nPlease run SCICompanion (on {args.output_game_dir}), and compile all scripts")
+    if args.dont_copy:
+        print(f"* 'dont_copy' enabled, you might want to manually copy now few scripts from '{args.output_game_dir}' to '{patches_dir}'")
     input("\n\nPress Enter when done...\n")
     print("... continuing")
 
-    copy_compiled_scripts(args.workingdir, patches_dir)
+    if not args.dont_copy:
+        copy_compiled_scripts(args.output_game_dir, patches_dir)
 
     print("\n**** Creating installer ****")
     create_installer(args.workingdir)
