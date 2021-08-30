@@ -1,24 +1,23 @@
 ﻿# In order to create the patches, run:
 #
 # "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" "C:\Zvika\Games\Broken Sword - Shadow of the Templars - GOG.clean\clusters\general.clu" "C:\Zvika\Games\Broken Sword - The Shadow of the Templars\clusters\general.clu" general.clu.patch /r
-# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" "C:\Zvika\Games\Broken Sword - Shadow of the Templars - GOG.clean\clusters\swordres.rif" "C:\Zvika\Games\Broken Sword - The Shadow of the Templars\clusters\swordres.rif" swordres.rif.patch
-# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" "C:\Zvika\Games\Broken Sword - Shadow of the Templars - GOG.clean\clusters\text.clu" "C:\Zvika\Games\Broken Sword - The Shadow of the Templars\clusters\text.clu" text.clu.patch
+# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" "C:\Zvika\Games\Broken Sword - Shadow of the Templars - GOG.clean\clusters\swordres.rif" "C:\Zvika\Games\Broken Sword - The Shadow of the Templars\clusters\swordres.rif" swordres.rif.patch /r
+# "C:\Program Files (x86)\NSIS\Bin\GenPat.exe" "C:\Zvika\Games\Broken Sword - Shadow of the Templars - GOG.clean\clusters\text.clu" "C:\Zvika\Games\Broken Sword - The Shadow of the Templars\clusters\text.clu" text.clu.patch /r
 
 !include MUI2.nsh
 
 !define BACKUPDIR "ORIG_ENGLISH"
 !define UNINSTALLER_NAME "bs1_heb_uninsaller.exe"
 
-!macro BackupAndUpdateFile FILE 
-    IfFileExists "$INSTDIR\${BACKUPDIR}\*.*" +2
-        CreateDirectory "$INSTDIR\${BACKUPDIR}"
-		
-	DetailPrint "Z source: $INSTDIR\${FILE}"
-	DetailPrint "Z dest: $INSTDIR\${BACKUPDIR}\${FILE}"
+;;;;; this nsis file isn't standard, and shouldn't (usually) be used as a simple template for other files!!!
 
-	; note the unique 'clusters' for Broken Sword!!
+; note the unique 'clusters' for Broken Sword all over this file!!
+!macro BackupAndUpdateFile FILE 
+    IfFileExists "$INSTDIR\${BACKUPDIR}\clusters\*.*" +2
+        CreateDirectory "$INSTDIR\${BACKUPDIR}\clusters"
+		
     IfFileExists "$INSTDIR\${BACKUPDIR}\${FILE}" +2
-        CopyFiles "$INSTDIR\clusters\${FILE}" "$INSTDIR\${BACKUPDIR}\${FILE}"
+        CopyFiles "$INSTDIR\clusters\${FILE}" "$INSTDIR\${BACKUPDIR}\clusters\${FILE}"
 
     DetailPrint "Updating ${FILE} using patch..."
     !insertmacro VPatchFile ${FILE}.patch "$INSTDIR\clusters\${FILE}" "$INSTDIR\clusters\${FILE}.tmp"
@@ -34,8 +33,6 @@ OutFile "bs1-hebrew-installer.exe"
 BrandingText "הרפתקה עברית"
  
 Unicode true
-
-#InstallDir "C:\Zvika\Games\PoliceQuest\AGI.check"  #TODO remove this
 
 !define MUI_TEXT_WELCOME_INFO_TEXT "ברוכים הבאים.$\r$\n \
 $\r$\n \
@@ -89,11 +86,20 @@ Section "Update file"
     !insertmacro BackupAndUpdateFile general.clu
     !insertmacro BackupAndUpdateFile swordres.rif
     !insertmacro BackupAndUpdateFile text.clu
+	
+	CreateDirectory "$INSTDIR\${BACKUPDIR}\video"
+	CopyFiles $INSTDIR\video\*.txt "$INSTDIR\${BACKUPDIR}\video" 
+	File /r video
 SectionEnd
 
 Section "Uninstall"
+	Delete $INSTDIR\video\intro.txt
+	Delete $INSTDIR\video\finale.txt
+	Delete $INSTDIR\video\ferrari.txt
+	Delete $INSTDIR\video\history.txt
+	
 	; note the unique 'clusters' for Broken Sword!!
-    CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR\clusters
+    CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR
     Rmdir /r "$INSTDIR\${BACKUPDIR}"
     Delete $INSTDIR\${UNINSTALLER_NAME}
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BS1_Hebrew"
