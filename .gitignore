@@ -159,5 +159,6 @@ qfg1vga/*
 !qfg1vga/src
 
 broken_sword1/*.patch
+broken_sword1/video/intro.smk
 
 OLD

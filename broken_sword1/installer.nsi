@@ -89,6 +89,9 @@ Section "Update file"
 	
 	CreateDirectory "$INSTDIR\${BACKUPDIR}\video"
 	CopyFiles $INSTDIR\video\*.txt "$INSTDIR\${BACKUPDIR}\video" 
+	CopyFiles $INSTDIR\video\intro.* "$INSTDIR\${BACKUPDIR}\video" 
+	Delete $INSTDIR\video\intro.dxa
+	Delete $INSTDIR\video\intro.fla
 	File /r video
 SectionEnd
 
@@ -97,6 +100,7 @@ Section "Uninstall"
 	Delete $INSTDIR\video\finale.txt
 	Delete $INSTDIR\video\ferrari.txt
 	Delete $INSTDIR\video\history.txt
+	Delete $INSTDIR\video\intro.smk
 	
 	; note the unique 'clusters' for Broken Sword!!
     CopyFiles "$INSTDIR\${BACKUPDIR}\*.*" $INSTDIR
