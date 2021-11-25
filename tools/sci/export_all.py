@@ -52,8 +52,8 @@ if __name__ == "__main__":
 ''')
     parser.add_argument("--generation", "-g",
                         help="interpreter generation (Consult https://wiki.scummvm.org/index.php/Sierra_Game_Versions)\n"
-                             "currently supported: 'SCI0', 'SCI32' (for SCI2/SCI3)",
-                        choices=['SCI0', 'SCI32'],
+                             "currently supported: 'SCI0', 'SCI1', 'SCI32' (for SCI2/SCI3)",
+                        choices=['SCI0', 'SCI1', 'SCI32'],
                         required=True)
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see below)")
     parser.add_argument("csvdir", help="directory to write .csv and combined .xlsx files")
@@ -67,6 +67,8 @@ if __name__ == "__main__":
             vocab_export.vocab_export(args.gamedir, args.csvdir)
         except FileNotFoundError:
             print("Missing vocab file. Have you followed the instructions at this script's help?")
+    elif args.generation == "SCI1":
+        texts_export.texts_export(args.gamedir, args.csvdir, texts_pattern="*.tex")
     elif args.generation == "SCI32":
         messages_export.messages_export(args.gamedir, args.csvdir)
     else:

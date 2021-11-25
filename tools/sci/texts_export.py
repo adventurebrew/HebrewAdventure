@@ -37,12 +37,12 @@ def loop_strings(stream):
             break
 
 
-def texts_export(gamedir, csvdir):
+def texts_export(gamedir, csvdir, texts_pattern=TEXTS_PATTERN):
     with open(os.path.join(csvdir, config.texts_csv_filename), 'w', newline='', encoding=ENCODING_OUT) as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=KEYS)
         dict_writer.writeheader()
 
-        for filename in glob.iglob(os.path.join(gamedir, TEXTS_PATTERN)):
+        for filename in glob.iglob(os.path.join(gamedir, texts_pattern)):
             room = os.path.basename(filename).split('.')[1]
             with open(filename, 'rb') as f:
                 for idx, message in enumerate(loop_strings(f)):
