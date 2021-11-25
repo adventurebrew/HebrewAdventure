@@ -7,6 +7,7 @@ import operator
 import os
 from functools import partial
 from itertools import takewhile
+from pathlib import Path
 
 import config
 
@@ -14,7 +15,7 @@ KEYS = ('room', 'idx', 'original', 'translated', 'comments')
 ENCODING_IN = 'windows-1252'
 ENCODING_OUT = 'utf-8'
 SIERRA_TEXT_HEADER = b'\x83'
-TEXTS_PATTERN = "text.*"
+TEXTS_PATTERNS = ["text.*", "*.tex"]
 
 
 def read_char(stream):
@@ -37,13 +38,14 @@ def loop_strings(stream):
             break
 
 
-def texts_export(gamedir, csvdir, texts_pattern=TEXTS_PATTERN):
+def texts_export(gamedir, csvdir):
     with open(os.path.join(csvdir, config.texts_csv_filename), 'w', newline='', encoding=ENCODING_OUT) as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=KEYS)
         dict_writer.writeheader()
 
-        for filename in glob.iglob(os.path.join(gamedir, texts_pattern)):
-            room = os.path.basename(filename).split('.')[1]
+        for filename in [filename for pattern in TEXTS_PATTERNS for filename in Path(gamedir).glob(pattern)]:
+            suffix = filename.suffix[1:]
+            room = filename.stem if suffix == "tex" else suffix
             with open(filename, 'rb') as f:
                 for idx, message in enumerate(loop_strings(f)):
                     if idx == 0:
@@ -54,7 +56,7 @@ def texts_export(gamedir, csvdir, texts_pattern=TEXTS_PATTERN):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description=f'Exports texts from old SCI text files ({TEXTS_PATTERN}) to csv file',)
+                                     description=f'Exports texts from old SCI text files ({TEXTS_PATTERNS}) to csv file',)
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see 'export_all.py' help)")
     parser.add_argument("csvdir", help=f"directory to write {config.texts_csv_filename}")
     args = parser.parse_args()

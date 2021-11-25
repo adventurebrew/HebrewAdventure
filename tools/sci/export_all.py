@@ -61,14 +61,13 @@ if __name__ == "__main__":
 
     strings_export.strings_export(os.path.join(args.gamedir, 'src'), args.csvdir)
 
-    if args.generation == "SCI0":
+    if args.generation in ["SCI0", "SCI1"]:
         texts_export.texts_export(args.gamedir, args.csvdir)
         try:
             vocab_export.vocab_export(args.gamedir, args.csvdir)
         except FileNotFoundError:
-            print("Missing vocab file. Have you followed the instructions at this script's help?")
-    elif args.generation == "SCI1":
-        texts_export.texts_export(args.gamedir, args.csvdir, texts_pattern="*.tex")
+            if args.generation == "SCI0":
+                print("Missing vocab file. Have you followed the instructions at this script's help?")
     elif args.generation == "SCI32":
         messages_export.messages_export(args.gamedir, args.csvdir)
     else:
