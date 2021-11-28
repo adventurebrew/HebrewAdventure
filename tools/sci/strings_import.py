@@ -24,9 +24,12 @@ ENCODING_OUTPUT = 'windows-1255'
 def check_replace(s, s_from, s_to):
     s_new = s.replace("{%s}" % s_from, "{%s}" % s_to, 1)
     if s_new == s:
-        s_new = re.sub(r'{\s*%s\s*}' % s_from, '{%s}' % s_to, s)
-        if s_new == s:
-            print("WARNING: failed to replace '%s' to '%s'" % (s_from, s_to))
+        try:
+            s_new = re.sub(r'{\s*%s\s*}|"\s*%s\s*"' % (s_from, s_from), '{%s}' % s_to, s)
+            if s_new == s:
+                print("WARNING: failed to replace '%s' to '%s'" % (s_from, s_to))
+        except:
+            print("WARNING (exception): failed to replace '%s' to '%s'" % (s_from, s_to))
     return s_new
 
 

@@ -1,3 +1,5 @@
+# C:\Zvika\ScummVM-dev\HebrewAdventure\gk1 "C:\Zvika\Games\GK Hebrew\Gabriel Knight [GOG].patches" "C:\Zvika\Games\GK Hebrew\gk1.trans" -d
+
 #TODO: drive - keep token
 #TODO: check if can remove some patches from SVM
 
@@ -47,7 +49,7 @@ def run_installer(workingdir):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description="Downloads translation excel, runs all game's import scripts, compiles and creates an installer",)
+                                     description="Downloads translation excel, runs all game's import scripts, compiles and creates an installer.",)
     parser.add_argument("workingdir", help="directory to put excel, csv and patches files, and installer")
     parser.add_argument("input_game_dir", help="directory containing CLEAN game dir (probably used for 'export_all') - won't be modified")
     parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")

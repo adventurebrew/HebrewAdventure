@@ -18,14 +18,16 @@ def strings_export(srcdir, csvdir, pattern='*.sc'):
                 basename = os.path.basename(filename)
 
                 text = f.read().replace('\n', '\t')
-                entries = re.findall(r'\{.*?\}', text)
+                entries = re.findall(r'\{(.*?)\}', text) + re.findall(r'"(.*?)"', text)
+                if '\\"' in text or '\\{' in text or '\\}' in text:
+                    print("WARNING: unescaped string delimiter in text! ", filename)
 
                 for idx, entry in enumerate(entries):
                     if entry.strip():
                         dict_writer.writerow({
                             scripts_strings_keys['filename']: basename,
                             scripts_strings_keys['idx']: idx,
-                            scripts_strings_keys['original']: entry.strip('{}'),
+                            scripts_strings_keys['original']: entry,
                         })
 
 
@@ -41,9 +43,8 @@ Notes for SCI0:
 export scripts strings (except 'said's) to csv
 
 it's based on Kawa's latest SCICompanion
-need to make some changes to the original src.english Main.sc:
-replace "" strings to {}
-add 'name {blah}' property to inventory items that miss it
+might need to make some changes to the original Main.sc:
+add 'name {blah}' property to inventory items that miss it  (otherwise the item's name will be in English)
 
 ''')
     parser.add_argument("srcdir", help="src directory containing the scripts files")
