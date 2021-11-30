@@ -1,11 +1,12 @@
 # based on http://sciprogramming.com/community/index.php?topic=1986.msg14363#msg14363
 # also, CP437 is assumed, based on http://sciprogramming.com/community/index.php?topic=1790.msg11815#msg11815
 
+#TODO: verify that it's still working well for OK and BEST (after adding support to LAME)
+
 import argparse
 import csv
 import glob
 import os
-import re
 import binascii
 
 import config
@@ -13,6 +14,7 @@ import config
 MESSAGES_PATTERN = "*.msg"
 SIERRA_MESSAGE_HEADER = b'\x8f\00'
 SIERRA_CODEPAGE = 'CP437'
+
 
 def error(s):
     import sys
@@ -32,24 +34,20 @@ def read_string(lob, idx):
     return result
 
 
-def write_csv(csvdir, entries):
+def write_csv(kind, csvdir, entries):
     with open(os.path.join(csvdir, config.messages_csv_filename), 'w', newline='', encoding='UTF-8-sig') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=config.messages_keys.values())
+        keys = ['room', 'noun', 'verb', ]
+        if kind in ['ok', 'best']:
+            keys.extend(['condition', 'sequence', 'talker', 'padding'])
+        keys.extend(['original', 'translation', 'comments'])
+        dict_writer = csv.DictWriter(output_file, fieldnames=[config.messages_keys[key] for key in keys])
         dict_writer.writeheader()
 
         for room in sorted(entries.keys()):
             for entry in entries[room]:
+                row = {config.messages_keys[key]: entry[key] for key in keys}
                 try:
-                    dict_writer.writerow({
-                        config.messages_keys['room']: entry['room'],
-                        config.messages_keys['noun']: entry['noun'],
-                        config.messages_keys['verb']: entry['verb'],
-                        config.messages_keys['condition']: entry['condition'],
-                        config.messages_keys['sequence']: entry['sequence'],
-                        config.messages_keys['talker']: entry['talker'],
-                        config.messages_keys['original']: entry['text'],
-                        config.messages_keys['padding']: entry['padding']
-                    })
+                    dict_writer.writerow(row)
                 except UnicodeEncodeError as e:
                     print(e, entry)
 
@@ -61,7 +59,7 @@ def messages_export(gamedir, csvdir):
             room = int(os.path.basename(filename).split('.')[0])
         except:
             continue
-            
+
         entries[room] = []
 
         with open(filename, "rb") as f:
@@ -79,13 +77,10 @@ def messages_export(gamedir, csvdir):
         # Kawa's taxonomy :-)
         if version <= 2101:
             kind = "lame"
-        elif version <=3411:
+        elif version <= 3411:
             kind = "ok"
         else:
             kind = "best"
-
-        if kind == "lame":
-            error(f"Unfortunately, {kind} isn't supported yet")
 
         if kind == "ok":
             index += 2
@@ -105,32 +100,31 @@ def messages_export(gamedir, csvdir):
 
         # print(amount)
         for i in range(amount):
-            noun = lob[index]
-            verb = lob[index + 1]
-            condition = lob[index + 2]
-            sequence = lob[index + 3]
-            talker = lob[index + 4]
-            offset = read_le(lob, index + 5)
-            padding = binascii.hexlify(bytes(lob[index + 7: index + 7 + padding_size])).decode('UTF-8-sig')
-            index += 7 + padding_size
+            entry = {'room': room,
+                     'translation': '',
+                     'comments': ''}
+            entry['noun'] = lob[index]
+            entry['verb'] = lob[index + 1]
+            if kind == 'lame':
+                entry['offset'] = read_le(lob, index + 2)
+                index += 4
+            else:
+                entry['condition'] = lob[index + 2]
+                entry['sequence'] = lob[index + 3]
+                entry['talker'] = lob[index + 4]
+                entry['offset'] = read_le(lob, index + 5)
+                entry['padding'] = binascii.hexlify(bytes(lob[index + 7: index + 7 + padding_size])).decode('UTF-8-sig')
+                index += 7 + padding_size
 
-            text = read_string(lob, offset)
-            entries[room].append({'room': room,
-                                  'noun': noun,
-                                  'verb': verb,
-                                  'condition': condition,
-                                  'sequence': sequence,
-                                  'talker': talker,
-                                  'text': text,
-                                  'padding': padding
-                                 })
-            # print(room, noun, verb, condition, sequence, talker, text)
-    write_csv(csvdir, entries)
+            entry['original'] = read_string(lob, entry['offset'])
+            entries[room].append(entry)
+            # print(entry)
+    write_csv(kind, csvdir, entries)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description='Exports text from messages files (*.msg) to csv file',)
+                                     description='Exports text from messages files (*.msg) to csv file', )
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see below)")
     parser.add_argument("csvdir", help="directory to write messages.csv")
     args = parser.parse_args()

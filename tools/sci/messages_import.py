@@ -42,7 +42,7 @@ def update_msg(original, entries):
         kind = "best"
 
     if kind == "lame":
-        error(f"Unfortunately, {kind} isn't supported yet")
+        error(f"Unfortunately, {kind} isn't supported yet")     #TODO add support
 
     if kind == "ok":
         index += 2
