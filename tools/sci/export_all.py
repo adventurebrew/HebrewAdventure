@@ -50,28 +50,17 @@ if __name__ == "__main__":
     add 'name {blah}' property to inventory items that miss it
 
 ''')
-    parser.add_argument("--generation", "-g",
-                        help="interpreter generation (Consult https://wiki.scummvm.org/index.php/Sierra_Game_Versions)\n"
-                             "currently supported: 'SCI0', 'SCI1', 'SCI32' (for SCI2/SCI3)",
-                        choices=['SCI0', 'SCI1', 'SCI32'],
-                        required=True)
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see below)")
     parser.add_argument("csvdir", help="directory to write .csv and combined .xlsx files")
     args = parser.parse_args()
 
     strings_export.strings_export(os.path.join(args.gamedir, 'src'), args.csvdir)
-
-    if args.generation in ["SCI0", "SCI1"]:
-        texts_export.texts_export(args.gamedir, args.csvdir)
-        try:
-            vocab_export.vocab_export(args.gamedir, args.csvdir)
-        except FileNotFoundError:
-            if args.generation == "SCI0":
-                print("Missing vocab file. Have you followed the instructions at this script's help?")
-    elif args.generation == "SCI32":
-        messages_export.messages_export(args.gamedir, args.csvdir)
-    else:
-        assert False
+    texts_export.texts_export(args.gamedir, args.csvdir)
+    try:
+        vocab_export.vocab_export(args.gamedir, args.csvdir)
+    except FileNotFoundError:
+        pass
+    messages_export.messages_export(args.gamedir, args.csvdir)
 
     write_excel(args.csvdir)
 
