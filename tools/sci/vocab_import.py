@@ -57,10 +57,12 @@ def read_csv_file(csvdir):
     # group number to be used for new entries without group number, start after current maximum
     next_group = max([my_int(e['group']) for e in vocab if e['group'] != '']) + 1
 
+    warnings_multi_words = []
+    warnings_duplicates = []
     entries = []
     for entry in vocab:
-        new_entry = {}
-        new_entry['cls'] = get_class(entry['class'])
+        new_entry = {'rooms': set([int(room) for room in entry['rooms'].replace("in ", "").split(',')] if entry['rooms'] else []),
+                     'cls': get_class(entry['class'])}
         if entry['group'] == '':
             new_entry['group'] = next_group
             next_group += 1
@@ -75,8 +77,7 @@ def read_csv_file(csvdir):
                 # empty word, it's OK - just a redundant |
                 pass
             elif len(word.split()) > 1:
-                print("Warning: multy word '%s' at: " % word.strip())
-                print(entry)
+                warnings_multi_words.append(word.strip())
             elif word not in words:
                 words.append(word)
                 new_entry['words'].append(word)
@@ -88,15 +89,22 @@ def read_csv_file(csvdir):
             # we combine the two entries
             # note - we don't do `new_entry['words'].append(duplicated)` - because `duplicated` already exists in existing_entry
             existing_entry = get_entry_with_word(entries, duplicated.strip())
+            common_rooms = existing_entry['rooms'].intersection(new_entry['rooms'])
+            if common_rooms:
+                warnings_duplicates.append((duplicated.strip(), sorted(common_rooms)))
             if existing_entry['cls'] != new_entry['cls']:
                 existing_entry['cls'] = existing_entry['cls'] | new_entry['cls']
             existing_entry['words'].extend(new_entry['words'])
             assert duplicated in existing_entry['words']
-            rooms = [r.strip() for r in entry['rooms'].split('in')[1].split(',')]
-            #print(entry)
         else:
             entries.append(new_entry)
 
+    if warnings_multi_words:
+        print(f"There are {len(warnings_multi_words)} multi words:")
+        print(warnings_multi_words)
+    if warnings_duplicates:
+        print(f"There are {len(warnings_duplicates)} duplicates:")
+        print('\n'.join([word + "\t" + str(rooms) for word, rooms in warnings_duplicates]))
     return entries
 
 
