@@ -39,29 +39,29 @@ def loop_strings(stream):
 
 
 def texts_export(gamedir, csvdir):
-    with open(os.path.join(csvdir, config.texts_csv_filename), 'w', newline='', encoding=ENCODING_OUT) as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=KEYS)
-        dict_writer.writeheader()
+    filenames = [filename for pattern in TEXTS_PATTERNS for filename in Path(gamedir).glob(pattern)]
+    if filenames:
+        with open(os.path.join(csvdir, config.texts_csv_filename), 'w', newline='',
+                  encoding=ENCODING_OUT) as output_file:
+            dict_writer = csv.DictWriter(output_file, fieldnames=KEYS)
+            dict_writer.writeheader()
 
-        for filename in [filename for pattern in TEXTS_PATTERNS for filename in Path(gamedir).glob(pattern)]:
-            suffix = filename.suffix[1:]
-            room = filename.stem if suffix == "tex" else suffix
-            with open(filename, 'rb') as f:
-                for idx, message in enumerate(loop_strings(f)):
-                    if idx == 0:
-                        assert message.encode(ENCODING_IN) == SIERRA_TEXT_HEADER
-                    else:
-                        dict_writer.writerow({KEYS[0]: room, KEYS[1]: idx - 1, KEYS[2]: message, KEYS[3]: ''})
+            for filename in filenames:
+                suffix = filename.suffix[1:]
+                room = filename.stem if suffix == "tex" else suffix
+                with open(filename, 'rb') as f:
+                    for idx, message in enumerate(loop_strings(f)):
+                        if idx == 0:
+                            assert message.encode(ENCODING_IN) == SIERRA_TEXT_HEADER
+                        else:
+                            dict_writer.writerow({KEYS[0]: room, KEYS[1]: idx - 1, KEYS[2]: message, KEYS[3]: ''})
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description=f'Exports texts from old SCI text files ({TEXTS_PATTERNS}) to csv file',)
+                                     description=f'Exports texts from old SCI text files ({TEXTS_PATTERNS}) to csv file', )
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see 'export_all.py' help)")
     parser.add_argument("csvdir", help=f"directory to write {config.texts_csv_filename}")
     args = parser.parse_args()
 
     texts_export(args.gamedir, args.csvdir)
-
-
-

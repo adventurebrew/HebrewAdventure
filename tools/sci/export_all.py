@@ -6,6 +6,7 @@ import glob
 import os
 import pandas as pd
 import xlsxwriter
+from pathlib import Path
 
 import strings_export
 import messages_export
@@ -58,8 +59,9 @@ if __name__ == "__main__":
     texts_export.texts_export(args.gamedir, args.csvdir)
     try:
         vocab_export.vocab_export(args.gamedir, args.csvdir)
-    except FileNotFoundError:
-        pass
+    except FileNotFoundError as e:
+        if Path(e.filename).stem != 'vocab':
+            print("export_all.py: ", e)
     messages_export.messages_export(args.gamedir, args.csvdir)
 
     write_excel(args.csvdir)

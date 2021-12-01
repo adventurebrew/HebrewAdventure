@@ -1,8 +1,6 @@
 # based on http://sciprogramming.com/community/index.php?topic=1986.msg14363#msg14363
 # also, CP437 is assumed, based on http://sciprogramming.com/community/index.php?topic=1790.msg11815#msg11815
 
-#TODO: verify that it's still working well for OK and BEST (after adding support to LAME)
-
 import argparse
 import csv
 import glob
@@ -119,7 +117,8 @@ def messages_export(gamedir, csvdir):
             entry['original'] = read_string(lob, entry['offset'])
             entries[room].append(entry)
             # print(entry)
-    write_csv(kind, csvdir, entries)
+    if entries:
+        write_csv(kind, csvdir, entries)
 
 
 if __name__ == "__main__":
