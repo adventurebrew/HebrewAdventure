@@ -47,7 +47,6 @@ if __name__ == "__main__":
     If encountering problems, you can report at https://github.com/Kawa-oneechan/SCICompanion/issues
     Or, debug with comparing to https://github.com/EricOakford/SCI-Decompilation-Archive 
 5. For SCI0: Make some changes to Main.sc:
-    replace "" strings to {}
     add 'name {blah}' property to inventory items that miss it
 
 ''')

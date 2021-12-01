@@ -20,7 +20,7 @@ def strings_export(srcdir, csvdir, pattern='*.sc'):
                 text = f.read().replace('\n', '\t')
                 entries = re.findall(r'\{(.*?)\}', text) + re.findall(r'"(.*?)"', text)
                 if '\\"' in text or '\\{' in text or '\\}' in text:
-                    print("WARNING: unescaped string delimiter in text! ", filename)
+                    print("WARNING: unsupported (yet) escaped string delimiter in text! ", filename)
 
                 for idx, entry in enumerate(entries):
                     if entry.strip():
