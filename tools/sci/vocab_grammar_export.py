@@ -1,10 +1,12 @@
 # see http://sci.sierrahelp.com/Documentation/SCISpecifications/27-TheParser.html
 
-import pathlib
+import argparse
+from pathlib import Path
 import csv
 
-INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
-OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab_parse.csv"
+# INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
+# OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab_parse.csv"
+CSV_FILE_NAME = "vocab_grammar.csv"
 SIERRA_VOCAB_HEADER = b'\x86\0'
 
 
@@ -20,8 +22,8 @@ def read_le(l, idx):
     return l[idx + 1] * 256 + l[idx]
 
 
-def read_vocab_file():
-    in_vocab = list(pathlib.Path(INPUT_FILE).read_bytes())
+def read_vocab_file(gamedir, vocab):
+    in_vocab = list((Path(gamedir) / vocab).read_bytes())
     assert bytes(in_vocab[:2]) == SIERRA_VOCAB_HEADER
     in_vocab = in_vocab[2:]
 
@@ -35,24 +37,32 @@ def read_vocab_file():
         for i in range(9):
             entry_data.append(hex(read_le(in_vocab, idx)))
             idx += 2
-        entry_data.append(hex(0))     # always terminate (taken from ScummVM)
+        entry_data.append(hex(0))  # always terminate (taken from ScummVM)
         data.append((entry_id, entry_data))
 
     return data
 
 
-def write_csv_file(data):
+def write_csv_file(data, csvdir):
     keys = ['id', 'data']
-    with open(OUTPUT_FILE, 'w', newline='') as output_file:
+    with open(Path(csvdir) / CSV_FILE_NAME, 'w', newline='') as output_file:
         writer = csv.writer(output_file, keys)
         writer.writerow(keys)
         writer.writerows(data)
 
 
-def vocab_suffix_export():
-    data = read_vocab_file()
-    write_csv_file(data)
+def vocab_grammar_export(gamedir, csvdir, vocab):
+    data = read_vocab_file(gamedir, vocab)
+    write_csv_file(data, csvdir)
 
 
-if __name__ == "__main__":
-    vocab_suffix_export()
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
+                                     description='Exports grammar rules ("parse tree branches") for SCI parser to csv file', )
+    parser.add_argument("gamedir", help="directory containing the game files (as patches - see 'export_all.py' help)")
+    parser.add_argument("csvdir", help=f"directory to write {CSV_FILE_NAME}")
+    parser.add_argument("--vocab", default='vocab.900',
+                        help="'parse tree branches' file name. See comment at start of ScummVM's sci\engine\kernel.h for details")
+    args = parser.parse_args()
+
+    vocab_grammar_export(args.gamedir, args.csvdir, args.vocab)
