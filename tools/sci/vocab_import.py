@@ -3,11 +3,12 @@ import argparse
 import os
 import shutil
 import csv
+from pathlib import Path
 
 import config
 
-VOCAB_OLD = 'vocab.900'
-VOCAB_NEW = 'vocab.000'
+VOCAB_NEW = 'vocab.900'
+VOCAB_OLD = 'vocab.000'
 # INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
 # OUTPUT_FILE1 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
 # OUTPUT_FILE2 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
@@ -133,8 +134,9 @@ def write_vocab_file(entries, patchesdir, output_game_dir):
             binary_vocab.append(byte2)
             binary_vocab.append(byte3)
 
-    output_file1 = os.path.join(patchesdir, VOCAB_NEW)
-    output_file2 = os.path.join(output_game_dir, VOCAB_OLD)
+    output_file1 = os.path.join(patchesdir, VOCAB_OLD)
+    (Path(output_game_dir) / VOCAB_OLD).unlink(missing_ok=True)
+    output_file2 = os.path.join(output_game_dir, VOCAB_NEW)
     with open(output_file1, "wb") as out_file:
         out_file.write(bytes(binary_vocab))
     shutil.copyfile(output_file1, output_file2)
