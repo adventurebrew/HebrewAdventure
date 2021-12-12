@@ -1,13 +1,28 @@
 # see http://sci.sierrahelp.com/Documentation/SCISpecifications/27-TheParser.html
 
 import argparse
+import json
 from pathlib import Path
-import csv
 
-# INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
-# OUTPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab_parse.csv"
-CSV_FILE_NAME = "vocab_grammar.csv"
+from vocab_export import classes
+
+CSV_FILE_NAME = "vocab_grammar.json"
 SIERRA_VOCAB_HEADER = b'\x86\0'
+
+# first rule is 0x13f (at least in SQ3 and LB1). I guess that it stands for 'S'
+ID_DELTA = 0x13f - ord('S')
+
+
+semantics = {
+    0x141: "verb",
+    0x142: "dobj",  # direct object
+    0x143: "iobj",  # indirect object
+    0x144: "ref",
+    0x145: "unk",   # unknown to me...
+    0x146: "class",
+    0x14d: "GROUP-UNHANDLED!",  # can be handled, but why bother, if it doesn't exist
+    0x154: "debug", # "Force storage": Apparently, this was only used for debugging.
+}
 
 
 def read_string(lob, idx):
@@ -22,6 +37,20 @@ def read_le(l, idx):
     return l[idx + 1] * 256 + l[idx]
 
 
+def chop_zeroes(lst):
+    if not lst or lst[-1] != 0:
+        return lst
+    else:
+        return chop_zeroes(lst[:-1])
+
+
+def id_to_letter(entry_id):
+    result = chr(entry_id - ID_DELTA)
+    if result <= 'A' or result >= 'Z':
+        print(f"WARNING: problematic entry_id {hex(entry_id)}: {result}")
+    return result
+
+
 def read_vocab_file(gamedir, vocab):
     in_vocab = list((Path(gamedir) / vocab).read_bytes())
     assert bytes(in_vocab[:2]) == SIERRA_VOCAB_HEADER
@@ -31,29 +60,40 @@ def read_vocab_file(gamedir, vocab):
     data = []
     assert len(data) % 20 == 0
     while idx < len(in_vocab):
-        entry_id = hex(read_le(in_vocab, idx))
+        entry_id = read_le(in_vocab, idx)
         idx += 2
-        entry_data = []
+        raw_data = []
         for i in range(9):
-            entry_data.append(hex(read_le(in_vocab, idx)))
+            raw_data.append(read_le(in_vocab, idx))
             idx += 2
-        entry_data.append(hex(0))  # always terminate (taken from ScummVM)
-        data.append((entry_id, entry_data))
+        # raw_data.append(0)  # always terminate (taken from ScummVM)
+        raw_data = chop_zeroes(raw_data)
+        if raw_data:
+            assert len(raw_data) % 2 == 0
+            it = iter(raw_data)
+            entry_data = []
+            for semantic, symbol in zip(it, it):
+                if semantics[semantic] == 'class':
+                    symbol = classes[symbol]
+                else:
+                    symbol = id_to_letter(symbol)
+                entry_data.append((semantics[semantic], symbol))
+
+            data.append({'num_id': hex(entry_id), 'id': id_to_letter(entry_id), 'data': entry_data})
 
     return data
 
 
-def write_csv_file(data, csvdir):
-    keys = ['id', 'data']
-    with open(Path(csvdir) / CSV_FILE_NAME, 'w', newline='') as output_file:
-        writer = csv.writer(output_file, keys)
-        writer.writerow(keys)
-        writer.writerows(data)
+def write_json_file(data, csvdir):
+    with open(Path(csvdir) / CSV_FILE_NAME, 'w') as file:
+        for entry in data:
+            file.write(json.dumps(entry))
+            file.write('\n')
 
 
 def vocab_grammar_export(gamedir, csvdir, vocab):
     data = read_vocab_file(gamedir, vocab)
-    write_csv_file(data, csvdir)
+    write_json_file(data, csvdir)
 
 
 if __name__ == '__main__':
