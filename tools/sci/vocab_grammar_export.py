@@ -6,7 +6,7 @@ from pathlib import Path
 
 from vocab_export import classes
 
-CSV_FILE_NAME = "vocab_grammar.json"
+JSON_FILE_NAME = "vocab_grammar.json"
 SIERRA_VOCAB_HEADER = b'\x86\0'
 
 # first rule is 0x13f (at least in SQ3 and LB1). I guess that it stands for 'S'
@@ -85,7 +85,7 @@ def read_vocab_file(gamedir, vocab):
 
 
 def write_json_file(data, csvdir):
-    with open(Path(csvdir) / CSV_FILE_NAME, 'w') as file:
+    with open(Path(csvdir) / JSON_FILE_NAME, 'w') as file:
         for entry in data:
             file.write(json.dumps(entry))
             file.write('\n')
@@ -98,11 +98,11 @@ def vocab_grammar_export(gamedir, csvdir, vocab):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description='Exports grammar rules ("parse tree branches") for SCI parser to csv file', )
+                                     description='Exports grammar rules ("parse tree branches") for SCI parser to json file', )
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see 'export_all.py' help)")
-    parser.add_argument("csvdir", help=f"directory to write {CSV_FILE_NAME}")
+    parser.add_argument("csvdir", help=f"directory to write {JSON_FILE_NAME}")
     parser.add_argument("--vocab", default='vocab.900',
-                        help="'parse tree branches' file name. See comment at start of ScummVM's sci\engine\kernel.h for details")
+                        help=r"'parse tree branches' file name. See comment at start of ScummVM's sci\engine\kernel.h for details")
     args = parser.parse_args()
 
     vocab_grammar_export(args.gamedir, args.csvdir, args.vocab)
