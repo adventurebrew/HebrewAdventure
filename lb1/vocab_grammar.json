@@ -11,6 +11,7 @@
 {"num_id": "0x13c", "id": "P", "data": [["dobj", "Q"], ["iobj", "R"]]}
 {"num_id": "0x13c", "id": "P", "data": [["ref", "O"], ["ref", "Q"], ["ref", "G"], ["verb", "P"]]}
 {"num_id": "0x13c", "id": "P", "data": [["ref", "Q"], ["verb", "P"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"]]}
 {"num_id": "0x13d", "id": "Q", "data": [["unk", "E"], ["verb", "M"]]}
 {"num_id": "0x13d", "id": "Q", "data": [["unk", "E"], ["ref", "N"], ["verb", "M"]]}
 {"num_id": "0x13d", "id": "Q", "data": [["ref", "N"], ["verb", "M"]]}
