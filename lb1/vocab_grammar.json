@@ -1,5 +1,4 @@
 {"num_id": "0x13f", "id": "S", "data": [["verb", "P"]]}
-{"num_id": "0x13c", "id": "P", "data": [["verb", "O"]]}
 {"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "G"]]}
 {"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "N"]]}
 {"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "K"]]}
