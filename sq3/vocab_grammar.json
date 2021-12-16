@@ -1,0 +1,60 @@
+{"num_id": "0x13f", "id": "S", "data": [["verb", "P"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "G"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "N"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "K"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["ref", "G"], ["iobj", "Q"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["iobj", "Q"], ["dobj", "Q"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["dobj", "Q"], ["iobj", "R"]]}
+{"num_id": "0x13c", "id": "P", "data": [["verb", "O"], ["iobj", "R"]]}
+{"num_id": "0x13c", "id": "P", "data": [["dobj", "Q"]]}
+{"num_id": "0x13c", "id": "P", "data": [["dobj", "Q"], ["iobj", "R"]]}
+{"num_id": "0x13c", "id": "P", "data": [["ref", "O"], ["ref", "Q"], ["ref", "G"], ["verb", "P"]]}
+{"num_id": "0x13c", "id": "P", "data": [["ref", "Q"], ["verb", "P"]]}
+{"num_id": "0x13d", "id": "Q", "data": [["unk", "E"], ["verb", "M"]]}
+{"num_id": "0x13d", "id": "Q", "data": [["unk", "E"], ["ref", "N"], ["verb", "M"]]}
+{"num_id": "0x13d", "id": "Q", "data": [["ref", "N"], ["verb", "M"]]}
+{"num_id": "0x13d", "id": "Q", "data": [["verb", "N"]]}
+{"num_id": "0x13d", "id": "Q", "data": [["verb", "M"]]}
+{"num_id": "0x13e", "id": "R", "data": [["ref", "L"], ["verb", "Q"]]}
+{"num_id": "0x13e", "id": "R", "data": [["ref", "J"], ["verb", "Q"]]}
+{"num_id": "0x13e", "id": "R", "data": [["ref", "L"], ["verb", "J"], ["ref", "Q"]]}
+{"num_id": "0x13e", "id": "R", "data": [["ref", "L"], ["verb", "J"], ["ref", "F"]]}
+{"num_id": "0x13e", "id": "R", "data": [["verb", "O"]]}
+{"num_id": "0x13e", "id": "R", "data": [["ref", "O"], ["verb", "R"]]}
+{"num_id": "0x13e", "id": "R", "data": [["ref", "L"], ["verb", "Q"], ["ref", "G"], ["ref", "Q"]]}
+{"num_id": "0x139", "id": "M", "data": [["verb", "D"], ["unk", "I"], ["verb", "Q"]]}
+{"num_id": "0x139", "id": "M", "data": [["verb", "D"], ["ref", "M"]], "comment": "modified for Hebrew"}
+{"num_id": "0x139", "id": "M", "data": [["verb", "D"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "J"], ["verb", "O"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "J"], ["ref", "D"], ["verb", "O"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "J"], ["ref", "Q"], ["ref", "G"], ["verb", "O"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "J"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "J"], ["ref", "G"], ["verb", "C"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "J"], ["ref", "G"], ["ref", "G"], ["verb", "C"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["ref", "G"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["ref", "G"], ["ref", "G"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["ref", "K"], ["ref", "G"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["ref", "N"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["ref", "K"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "K"], ["ref", "K"], ["verb", "O"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "K"], ["verb", "O"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "K"]]}
+{"num_id": "0x13b", "id": "O", "data": [["ref", "K"], ["ref", "D"], ["verb", "O"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["unk", "I"], ["verb", "C"]]}
+{"num_id": "0x13b", "id": "O", "data": [["verb", "C"], ["verb", "C"], ["unk", "I"], ["verb", "C"]]}
+{"num_id": "0x13a", "id": "N", "data": [["verb", "F"]]}
+{"num_id": "0x13a", "id": "N", "data": [["ref", "F"], ["verb", "N"]]}
+{"num_id": "0x137", "id": "K", "data": [["class", "ADVERB"]]}
+{"num_id": "0x12f", "id": "C", "data": [["class", "IMPERATIVE_VERB"]]}
+{"num_id": "0x12f", "id": "C", "data": [["class", "INDICATIVE_VERB"]]}
+{"num_id": "0x136", "id": "J", "data": [["class", "INDICATIVE_VERB"]]}
+{"num_id": "0x130", "id": "D", "data": [["class", "NOUN"]]}
+{"num_id": "0x134", "id": "H", "data": [["class", "PRONOUN"]]}
+{"num_id": "0x132", "id": "F", "data": [["class", "ADJECTIVE"]]}
+{"num_id": "0x131", "id": "E", "data": [["class", "ARTICLE"]]}
+{"num_id": "0x133", "id": "G", "data": [["class", "PREPOSITION"]]}
+{"num_id": "0x138", "id": "L", "data": [["class", "ASSOCIATION"]]}
+{"num_id": "0x135", "id": "I", "data": [["class", "CONJUNCTION"]]}
