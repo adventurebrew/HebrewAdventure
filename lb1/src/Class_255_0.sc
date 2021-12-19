@@ -184,6 +184,10 @@
 			(if (== -1 temp6) (newDialog nsLeft?) else temp6)
 			(if (== -1 temp7) 10 else temp7)
 	)
+	
+	;Z expand text item to surrounding's dialog width (its right minus its left, minus twice border (4) pixels)
+	(newDText setSize: (- (- (newDialog nsRight?) (newDialog nsLeft?)) (* 2 4)))
+		
 	(= temp11 (GetPort))
 	(newDialog
 		open: (if (newDialog text?) 4 else 0) (if theGTheNewDialog 15 else -1)
