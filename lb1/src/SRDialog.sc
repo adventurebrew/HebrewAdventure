@@ -146,31 +146,64 @@ code_0706:
 			)
 			(self add: editI setSize:)
 		)
-		(selectorI
-			text: param2
-			font: global23
-			setSize:
-			moveTo: 4 (+ nsBottom 4)
-			state: 2
-		)
-		(= local1 (+ (selectorI nsRight?) 4))
+	;Z original code:
+;		(selectorI
+;			text: param2
+;			font: global23
+;			setSize:
+;			moveTo: 4 (+ nsBottom 4)
+;			state: 2
+;		)
+;		(= local1 (+ (selectorI nsRight?) 4))
+;		(okI
+;			text: [local5 local4]
+;			setSize:
+;			moveTo: local1 (selectorI nsTop?)
+;			state: (if (== local4 3) 0 else 3)
+;		)
+;		(cancelI
+;			setSize:
+;			moveTo: local1 (+ (okI nsBottom?) 4)
+;			state: (& (cancelI state?) $fff7)
+;		)
+;		(changeDirI
+;			setSize:
+;			moveTo: local1 (+ (cancelI nsBottom?) 4)
+;			state: (& (changeDirI state?) $fff7)
+;		)
+
+		;Z I've changed it, to relocate the button to the left of the games list
 		(okI
 			text: [local5 local4]
 			setSize:
-			moveTo: local1 (selectorI nsTop?)
+			moveTo: 4 (+ nsBottom 4)
 			state: (if (== local4 3) 0 else 3)
 		)
 		(cancelI
 			setSize:
-			moveTo: local1 (+ (okI nsBottom?) 4)
+			moveTo: 4 (+ (okI nsBottom?) 4)
 			state: (& (cancelI state?) $fff7)
 		)
 		(changeDirI
 			setSize:
-			moveTo: local1 (+ (cancelI nsBottom?) 4)
+			moveTo: 4 (+ (cancelI nsBottom?) 4)
 			state: (& (changeDirI state?) $fff7)
 		)
-		(self add: selectorI okI cancelI changeDirI setSize:)
+
+		(selectorI
+			text: param2
+			font: global23
+			setSize:
+			moveTo: (+ (okI nsRight?) 4) (okI nsTop?)
+			state: 2
+		)
+		
+		;Z move the edit line to be right aligned
+		(editI move: (+ (okI nsRight?) 4) 0)
+
+		;Z original: (self add: selectorI okI cancelI changeDirI setSize:)
+		(self add: selectorI okI cancelI setSize:) ;Z removed changeDir, as it is useless and ugly
+		
 		(textI
 			text: [local9 local4]
 			setSize: (- (- nsRight nsLeft) 8)
@@ -574,10 +607,12 @@ code_03ff:
 		(button1 nsLeft: 0 nsTop: 0 setSize:)
 		(button2 nsLeft: 0 nsTop: 0 setSize:)
 		(button2
-			moveTo: (- nsRight (+ (button2 nsRight?) 4)) nsBottom
+			;Z original: moveTo: (- nsRight (+ (button2 nsRight?) 4)) nsBottom
+			moveTo: 4 nsBottom
 		)
 		(button1
-			moveTo: (- (button2 nsLeft?) (+ (button1 nsRight?) 4)) nsBottom
+			;Z original: moveTo: (- (button2 nsLeft?) (+ (button1 nsRight?) 4)) nsBottom
+			moveTo: (+ 4 (button2 nsRight?)) nsBottom
 		)
 		(self add: button1 button2 setSize: center: open: 0 15)
 		(= temp0 (super doit: newName))
