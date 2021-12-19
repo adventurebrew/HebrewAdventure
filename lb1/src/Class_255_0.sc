@@ -71,8 +71,21 @@
 			(83
 				(Animate (gCast elements?) 0)
 			)
+			;#edit
 			(41
 				(++ temp5)
+				;Z move "Enter input" to the right:	
+				;Z TODO make sure translation sheet has "Enter input" at this script (and it's same translation as its other occurence)
+				(if (== STRINGS_EQUAL (StrCmp @temp21 {Enter input}))
+					(newDText moveTo: 210 4)
+					(= newDText (DText new:))
+					(newDText
+						text: {}
+						moveTo: 4 18
+					)
+					(newDialog add: newDText)
+				)
+				
 				((= newDEdit (DEdit new:)) text: [param1 temp5])
 				(++ temp5)
 				(newDEdit max: [param1 temp5] setSize:)
@@ -114,6 +127,7 @@
 	)
 	(if newDIcon
 		(newDIcon moveTo: 4 4)
+		
 		(newDText moveTo: 4 (+ (newDIcon nsBottom?) 1))
 		(newDialog add: newDIcon)
 	)
@@ -124,20 +138,33 @@
 		)
 		(newDialog add: newDEdit setSize:)
 	)
-	(= temp20
-		(if (> temp18 (newDialog nsRight?))
-			4
-		else
-			(- (newDialog nsRight?) temp18)
-		)
-	)
-	(= temp5 0)
-	(while (< temp5 temp19)
+	;(= temp20
+	;	(if (> temp18 (newDialog nsRight?))
+	;		4
+	;	else
+	;		(- (newDialog nsRight?) temp18)
+	;	)
+	;)
+	
+	;Z always align buttons to the left
+	(= temp20 4)
+
+;	(= temp5 0)
+;	(while (< temp5 temp19)
+;		([newDButton temp5] moveTo: temp20 (newDialog nsBottom?))
+;		(newDialog add: [newDButton temp5])
+;		(= temp20 (+ 4 ([newDButton temp5] nsRight?)))
+;		(++ temp5)
+;	)
+
+	;Z reverse the buttons order
+	(= temp5 (- temp19 1))
+	(while (> temp5 -1)
 		([newDButton temp5] moveTo: temp20 (newDialog nsBottom?))
 		(newDialog add: [newDButton temp5])
 		(= temp20 (+ 4 ([newDButton temp5] nsRight?)))
-		(++ temp5)
-	)
+		(-- temp5)
+	)	
 	(newDialog setSize: center:)
 	(if newDIcon
 		(newDIcon

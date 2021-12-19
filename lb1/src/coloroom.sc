@@ -128,7 +128,8 @@
 		(return
 			(if (== (pEvent type?) evSAID)
 				(cond 
-					((Said 'get,move,press/wheelchair') (proc255_0 240 1))
+					;Z ((Said 'get,move,press/wheelchair') (proc255_0 240 1))
+					((Said 'get,move,press/chair<wheel') (proc255_0 240 1))
 					((Said 'examine/butt') (proc0_5 13) (proc255_0 240 2))
 					((Said 'hear/colonel') (proc255_0 240 3))
 					((Said 'get/butt') (proc255_0 240 4))

@@ -302,7 +302,8 @@
 	
 	(method (handleEvent pEvent)
 		(cond 
-			((Said 'get,move,press/wheelchair') (proc255_0 231 9))
+			;Z ((Said 'get,move,press/wheelchair') (proc255_0 231 9))
+			((Said 'get,move,press/chair<wheel') (proc255_0 231 9))
 			(
 				(and
 					(proc255_5 self pEvent 3)

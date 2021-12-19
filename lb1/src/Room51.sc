@@ -112,8 +112,10 @@
 						((Said '/boulder') (proc255_0 51 4))
 					)
 				)
-				((Said 'open/trapdoor') (proc255_0 51 5))
-				((Said 'close/trapdoor') (proc255_0 51 6))
+				;Z ((Said 'open/trapdoor') (proc255_0 51 5))
+				((Said 'open/door<starim') (proc255_0 51 5))
+				;Z ((Said 'close/trapdoor') (proc255_0 51 6))
+				((Said 'close/door<starim') (proc255_0 51 6))
 				((Said 'climb/stair') (proc255_0 51 7))
 			)
 		)
@@ -220,7 +222,8 @@
 		(if
 			(or
 				(proc255_5 self pEvent 3)
-				(Said 'examine/trapdoor')
+				;Z (Said 'examine/trapdoor')
+				(Said 'examine/door<starim')
 				(Said 'examine<up')
 			)
 			(pEvent claimed: 1)

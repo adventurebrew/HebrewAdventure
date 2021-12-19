@@ -509,9 +509,10 @@
 	
 	(method (handleEvent pEvent)
 		(cond 
-			((Said 'close/trapdoor') (if global147 (proc255_0 65 36) else (proc255_0 65 37)))
-			((Said 'open/trapdoor') (if global147 (proc0_16) else (proc255_0 65 37)))
-			((Said 'examine<(in,down)/trapdoor')
+			;Z modified the following 'trapdoor' occurences to 'door<starim'
+			((Said 'close/door<starim') (if global147 (proc255_0 65 36) else (proc255_0 65 37)))
+			((Said 'open/door<starim') (if global147 (proc0_16) else (proc255_0 65 37)))
+			((Said 'examine<(in,down)/door<starim')
 				(if global147
 					(if (< (gEgo distanceTo: Trap) 60)
 						(proc255_0 65 38)
@@ -531,7 +532,8 @@
 			)
 			(
 				(or
-					(Said 'examine,find/trapdoor')
+					;Z (Said 'examine,find/trapdoor')
+					(Said 'examine,find/door<starim')
 					(proc255_5 self pEvent 3)
 				)
 				(pEvent claimed: 1)

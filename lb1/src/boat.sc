@@ -145,11 +145,18 @@
 		(Display
 			780
 			0
+			
+			;Z added:
+			dsALIGN
+			1
+
+
 			dsCOORD
 			100
 			30
 			dsWIDTH
-			240
+			;Z 240
+			120
 			dsCOLOR
 			15
 			dsBACKGROUND

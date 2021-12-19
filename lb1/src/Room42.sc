@@ -232,7 +232,8 @@
 						((Said '/elevator,lift') (proc255_0 42 4))
 						((Said '/archway') (proc255_0 42 5))
 						((Said '/blind') (proc255_0 42 6))
-						((and global193 (Said '/wheelchair')) (proc255_0 42 7))
+						;Z ((and global193 (Said '/wheelchair')) (proc255_0 42 7))
+						((and global193 (Said '/chair<wheel')) (proc255_0 42 7))
 						((Said '/eye,(boy<eye)') (proc255_0 42 8))
 						((Said '<behind,below/boy') (proc255_0 42 9))
 						((or (Said '/boy') (Said 'examine/boy/boy')) (proc255_0 42 10))
@@ -240,7 +241,8 @@
 				)
 				((Said 'move,get/boy') (proc255_0 42 11))
 				(
-				(and (not global193) (Said 'get,move,press/wheelchair')) (proc255_0 42 12))
+				;Z (and (not global193) (Said 'get,move,press/wheelchair')) (proc255_0 42 12))
+				(and (not global193) (Said 'get,move,press/chair<wheel')) (proc255_0 42 12))
 				((Said 'get>')
 					(cond 
 						((Said '/key[<brass]')
@@ -265,7 +267,8 @@
 						((Said '/cannon') (proc255_0 42 15))
 					)
 				)
-				((and (not global193) (Said 'sit/wheelchair')) (proc255_0 42 16))
+				;Z ((and (not global193) (Said 'sit/wheelchair')) (proc255_0 42 16))
+				((and (not global193) (Said 'sit/chair<wheel')) (proc255_0 42 16))
 				(global193
 					(cond 
 						(
@@ -275,8 +278,10 @@
 							(localproc_000c 42 17)
 						)
 						((Said 'smoke/butt') (proc255_0 42 18))
-						((Said 'sit[<down,in<in]/wheelchair') (proc255_0 42 19))
-						((Said 'press,move/wheelchair,colonel') (proc255_0 42 20))
+						;Z ((Said 'sit[<down,in<in]/wheelchair') (proc255_0 42 19))
+						((Said 'sit[<down,in<in]/chair<wheel') (proc255_0 42 19))
+						;Z ((Said 'press,move/wheelchair,colonel') (proc255_0 42 20))
+						((Said 'press,move/chair<wheel,colonel') (proc255_0 42 20))
 					)
 				)
 			)
@@ -526,7 +531,8 @@
 		(if
 			(or
 				(proc255_5 self pEvent 3)
-				(Said 'examine/wheelchair')
+				;Z (Said 'examine/wheelchair')
+				(Said 'examine/chair<wheel')
 			)
 			(pEvent claimed: 1)
 			(proc255_0 42 32)

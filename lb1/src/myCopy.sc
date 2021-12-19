@@ -263,8 +263,14 @@
 					(Display
 						414
 						1
+						
+						;Z added:
+						dsALIGN
+						1
+
 						dsCOORD
-						90
+						;Z 90
+						35
 						16
 						dsWIDTH
 						256
@@ -321,108 +327,111 @@
 				)
 			)
 			(5
-				(SetCursor 1 1 10 39)
-				(= local102 0)
-				(Display 414 3 108 local2)
-				(Display 414 3 108 local3)
-				(Display
-					414
-					4
-					dsCOORD
-					32
-					8
-					dsWIDTH
-					256
-					dsCOLOR
-					15
-					dsBACKGROUND
-					-1
-					dsFONT
-					4
-					dsALIGN
-					1
-					dsSAVEPIXELS
-				)
-				(Display
-					414
-					5
-					dsCOORD
-					5
-					40
-					dsWIDTH
-					101
-					dsCOLOR
-					15
-					dsBACKGROUND
-					-1
-					dsFONT
-					4
-					dsSAVEPIXELS
-				)
-				(Display
-					414
-					6
-					dsCOORD
-					40
-					170
-					dsWIDTH
-					320
-					dsCOLOR
-					15
-					dsBACKGROUND
-					-1
-					dsFONT
-					4
-					dsSAVEPIXELS
-				)
-				(Display
-					414
-					7
-					dsCOORD
-					140
-					170
-					dsWIDTH
-					320
-					dsCOLOR
-					15
-					dsBACKGROUND
-					-1
-					dsFONT
-					4
-					dsSAVEPIXELS
-				)
-				(Display
-					414
-					8
-					dsCOORD
-					230
-					170
-					dsWIDTH
-					320
-					dsCOLOR
-					15
-					dsBACKGROUND
-					-1
-					dsFONT
-					4
-					dsSAVEPIXELS
-				)
-				(Display
-					414
-					9
-					dsCOORD
-					255
-					40
-					dsWIDTH
-					101
-					dsCOLOR
-					15
-					dsBACKGROUND
-					-1
-					dsFONT
-					4
-					dsSAVEPIXELS
-				)
+				;we now skip the copy protection automatically		;;EricOakford
+				(self cue:)
+				
+;				(SetCursor 1 1 10 39)
+;				(= local102 0)
+;				(Display 414 3 108 local2)
+;				(Display 414 3 108 local3)
+;				(Display
+;					414
+;					4
+;					dsCOORD
+;					32
+;					8
+;					dsWIDTH
+;					256
+;					dsCOLOR
+;					15
+;					dsBACKGROUND
+;					-1
+;					dsFONT
+;					4
+;					dsALIGN
+;					1
+;					dsSAVEPIXELS
+;				)
+;				(Display
+;					414
+;					5
+;					dsCOORD
+;					5
+;					40
+;					dsWIDTH
+;					101
+;					dsCOLOR
+;					15
+;					dsBACKGROUND
+;					-1
+;					dsFONT
+;					4
+;					dsSAVEPIXELS
+;				)
+;				(Display
+;					414
+;					6
+;					dsCOORD
+;					40
+;					170
+;					dsWIDTH
+;					320
+;					dsCOLOR
+;					15
+;					dsBACKGROUND
+;					-1
+;					dsFONT
+;					4
+;					dsSAVEPIXELS
+;				)
+;				(Display
+;					414
+;					7
+;					dsCOORD
+;					140
+;					170
+;					dsWIDTH
+;					320
+;					dsCOLOR
+;					15
+;					dsBACKGROUND
+;					-1
+;					dsFONT
+;					4
+;					dsSAVEPIXELS
+;				)
+;				(Display
+;					414
+;					8
+;					dsCOORD
+;					230
+;					170
+;					dsWIDTH
+;					320
+;					dsCOLOR
+;					15
+;					dsBACKGROUND
+;					-1
+;					dsFONT
+;					4
+;					dsSAVEPIXELS
+;				)
+;				(Display
+;					414
+;					9
+;					dsCOORD
+;					255
+;					40
+;					dsWIDTH
+;					101
+;					dsCOLOR
+;					15
+;					dsBACKGROUND
+;					-1
+;					dsFONT
+;					4
+;					dsSAVEPIXELS
+;				)
 			)
 			(6
 				(= local104 1)
