@@ -6,6 +6,7 @@ import csv
 from pathlib import Path
 
 import config
+from vocab_export import write_csv
 
 VOCAB_NEW = 'vocab.900'
 VOCAB_OLD = 'vocab.000'
@@ -142,9 +143,15 @@ def write_vocab_file(entries, patchesdir, output_game_dir):
     shutil.copyfile(output_file1, output_file2)
 
 
-def vocab_import(csvdir, patchesdir, output_game_dir):
+def vocab_import(csvdir, patchesdir, output_game_dir, debug):
     entries = read_csv_file(csvdir)
     write_vocab_file(entries, patchesdir, output_game_dir)
+    if debug:
+        def expand(e):
+            e['hex_group'] = hex(e['group'])
+            return e
+        entries = [expand(e) for e in entries]
+        write_csv(csvdir, entries, "vocab_debug.csv")
 
 
 if __name__ == "__main__":
@@ -153,9 +160,10 @@ if __name__ == "__main__":
     parser.add_argument("csvdir", help=f"directory to read {config.vocab_csv_filename} from")
     parser.add_argument("patchesdir", help="directory to write the texts patches files to")
     parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")
+    parser.add_argument("--debug", action='store_true', help="create debug files")
     args = parser.parse_args()
 
-    vocab_import(args.csvdir, args.patchesdir, args.output_game_dir)
+    vocab_import(args.csvdir, args.patchesdir, args.output_game_dir, args.debug)
 
 
 

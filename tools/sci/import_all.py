@@ -55,6 +55,7 @@ if __name__ == "__main__":
     parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")
     parser.add_argument("--skip_download", "-s",  action='store_true', help="Skip downloading from Google Drive")
     parser.add_argument("--dont_copy", "-d",  action='store_true', help="Dont copy scripts from 'output_game_dir' (useful for SCI32 games)")
+    parser.add_argument("--debug", action='store_true', help="create debug files")
     args = parser.parse_args()
 
     if args.skip_download:
@@ -81,7 +82,7 @@ if __name__ == "__main__":
             strings_import.strings_import(args.workingdir, args.input_game_dir, args.output_game_dir)
         elif csvname == 'vocab':
             print("\n**** Vocab import: ****")
-            vocab_import.vocab_import(args.workingdir, patches_dir, args.output_game_dir)
+            vocab_import.vocab_import(args.workingdir, patches_dir, args.output_game_dir, args.debug)
         else:
             print(f"\n*************    Not implemented yet '{csvname}' import   ********************")
 

@@ -59,7 +59,6 @@ def get_said_per_room(gamedir):
 
 
 def vocab_export(gamedir, csvdir):
-    global keys
     in_vocab = list(pathlib.Path(os.path.join(gamedir, VOCAB_FILE)).read_bytes())
     said_per_room = get_said_per_room(gamedir)
     # TODO: automatic recognize file kind, and support exporting new kind
@@ -129,11 +128,14 @@ def vocab_export(gamedir, csvdir):
 
         sorted_vocab.append(entry)
     sorted_vocab = sorted(sorted_vocab, key=lambda k: (k['rooms'] == "", k['rooms']))
-    keys = sorted_vocab[0].keys()
-    with open(os.path.join(csvdir, config.vocab_csv_filename), 'w', newline='') as output_file:
-        dict_writer = csv.DictWriter(output_file, keys, quoting=csv.QUOTE_ALL)
+    write_csv(csvdir, sorted_vocab, config.vocab_csv_filename)
+
+
+def write_csv(csvdir, vocab, vocab_csv_filename):
+    with open(os.path.join(csvdir, vocab_csv_filename), 'w', newline='') as output_file:
+        dict_writer = csv.DictWriter(output_file, vocab[0].keys(), quoting=csv.QUOTE_ALL)
         dict_writer.writeheader()
-        dict_writer.writerows(sorted_vocab)
+        dict_writer.writerows(vocab)
 
 
 if __name__ == '__main__':
