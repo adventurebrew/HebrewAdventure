@@ -41,9 +41,6 @@ def update_msg(original, entries):
     else:
         kind = "best"
 
-    if kind == "lame":
-        error(f"Unfortunately, {kind} isn't supported yet")     #TODO add support
-
     if kind == "ok":
         index += 2
     elif kind == "best":
@@ -63,10 +60,10 @@ def update_msg(original, entries):
 
     with io.BytesIO() as ostr, io.BytesIO() as mstr:
         offs = []
-        base = index + (7 + padding_size) * amount
+        entry_size = 4 if kind == 'lame' else 7 + padding_size
+        base = index + entry_size * amount
         extra = base + 2
         ostr.write(SIERRA_MESSAGE_HEADER + lob[:index])
-        keys = [config.messages_keys[x] for x in ('noun', 'verb', 'condition', 'sequence', 'talker')]
         for entry in entries:
             offs.append(mstr.tell() + base)
             message = entry[config.messages_keys['translation']].encode('windows-1255')
@@ -76,11 +73,19 @@ def update_msg(original, entries):
             mstr.write(message + b'\0')
             extra += len(origm) + 1
         for idx, (off, entry) in enumerate(zip(offs, entries)):
-            index_entry = (
-                bytes([my_int(entry[key]) for key in keys]) +
-                off.to_bytes(2, byteorder='little', signed=False) +
-                binascii.unhexlify(entry[config.messages_keys['padding']])
-            )
+            if kind in ['ok', 'best']:
+                keys = [config.messages_keys[x] for x in ('noun', 'verb', 'condition', 'sequence', 'talker')]
+                index_entry = (
+                    bytes([my_int(entry[key]) for key in keys]) +
+                    off.to_bytes(2, byteorder='little', signed=False) +
+                    binascii.unhexlify(entry[config.messages_keys['padding']])
+                )
+            else:
+                keys = [config.messages_keys[x] for x in ('noun', 'verb')]
+                index_entry = (
+                    bytes([my_int(entry[key]) for key in keys]) +
+                    off.to_bytes(2, byteorder='little', signed=False)
+                )
             ostr.write(index_entry)
             # assert original.startswith(ostr.getvalue()), (
             #     idx,

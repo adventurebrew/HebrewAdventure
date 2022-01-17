@@ -13,8 +13,8 @@ def texts_import(csvdir, patchesdir):
     with open(os.path.join(csvdir, config.texts_csv_filename), newline='', encoding='utf-8') as csvfile:
         texts = [{k: v for k, v in row.items()}
                  for row in csv.DictReader(csvfile, skipinitialspace=True)]
-    rooms = list(set([entry['room'] for entry in texts]))
-    rooms.sort(key=int)
+    rooms = list(set([entry['room'] for entry in texts if entry['room'] != '']))
+    rooms.sort(key=float)
     for room in rooms:
         entries = [entry for entry in texts if entry['room'] == room]
         output_file = os.path.join(patchesdir, 'text.' + room.zfill(3))
