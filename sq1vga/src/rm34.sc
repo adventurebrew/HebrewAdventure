@@ -597,11 +597,21 @@
 			)
 			(3
 				(proc255_0 34 31 67 10 80 70 100)
-				(proc0_1
-					(oratPart posn: (gEgo x?) (gEgo y?) init:)
-					1
-					61
-				)
+				;Z that's the original decompilation. but it got the game to stuck here
+				;Z(proc0_1
+				;Z	(oratPart posn: (gEgo x?) (gEgo y?) init:)
+				;Z	1
+				;Z	61
+				;Z)
+				;Z
+				;Z fixing according to EricOakford's code:
+				;Z 
+				;Z (NormalEgo 1 1 61)
+				;Z (oratPart init: posn: (ego x?) (ego y?))
+				;Z(= cycles 3)
+				(proc0_1 1 1 61)
+				(oratPart init: posn: (gEgo x?) (gEgo y?))
+				(= cycles 3)
 			)
 			(4
 				(proc255_0 34 32)
