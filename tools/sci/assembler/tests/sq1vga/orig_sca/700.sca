@@ -1,0 +1,4053 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+CLASS arcadaRegion of 0x42
+code_6294  ; lsp
+OBJECT detonationBox of 0x2e
+
+.CODE
+Sarien::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x30, 0x4
+		pushi	0x0094
+		push2	
+		class	0x56
+		push	
+		pushi	0x01e0
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x00a0
+		push1	
+		class	0x4f
+		push	
+		pushi	0x04
+		push1	
+		pushi	0x0151
+		self	0x1a
+		ret	
+
+Sarien::266:
+		lsp	0x1
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_81
+		push2	
+		pushi	0x02bc
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_171
+code_81:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_100
+		push2	
+		pushi	0x02bc
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_171
+code_100:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_119
+		push2	
+		pushi	0x02bc
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_171
+code_119:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_160
+		lsg	0xa6
+		lag	0xad
+		eq?	
+		bnt	code_148
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x30, 0x6
+		jmp	code_171
+code_148:
+		push2	
+		pushi	0x02bc
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_171
+code_160:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x30, 0x6
+code_171:
+		toss	
+		ret	
+
+Sarien::60:
+		link	0x01
+		pushi	0x3c
+		push0	
+		super	0x30, 0x4
+		pTos	0x2e
+		ldi	0x019a
+		eq?	
+		bnt	code_590
+		pTos	0x70
+		pToa	0x32
+		ne?	
+		bnt	code_590
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x00
+		eq?	
+		bnt	code_227
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		push2	
+		pushi	0x06
+		calle	0x03e7, 0x0005, 0x06
+code_227:
+		bt	code_421
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_259
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		push2	
+		pushi	0x06
+		calle	0x03e7, 0x0005, 0x06
+code_259:
+		bt	code_421
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x02
+		eq?	
+		bnt	code_291
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		push2	
+		pushi	0x05
+		calle	0x03e7, 0x0005, 0x06
+code_291:
+		bt	code_421
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x04
+		eq?	
+		bnt	code_323
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		push1	
+		pushi	0x05
+		calle	0x03e7, 0x0005, 0x06
+code_323:
+		bt	code_421
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x05
+		eq?	
+		bnt	code_355
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		push1	
+		pushi	0x05
+		calle	0x03e7, 0x0005, 0x06
+code_355:
+		bt	code_421
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x06
+		eq?	
+		bnt	code_388
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		pushi	0x03
+		pushi	0x06
+		calle	0x03e7, 0x0005, 0x06
+code_388:
+		bt	code_421
+		pushi	0x06
+		push0	
+		self	0x4
+		push	
+		ldi	0x07
+		eq?	
+		bnt	code_590
+		pushi	0x03
+		pushi	0x07
+		push0	
+		self	0x4
+		push	
+		pushi	0x03
+		pushi	0x06
+		calle	0x03e7, 0x0005, 0x06
+code_421:
+		bnt	code_590
+		pTos	0x8
+		ldi	0x00
+		le?	
+		bnt	code_439
+		ldi	0x00
+		sat	0x0
+		jmp	code_469
+code_439:
+		pTos	0x8
+		ldi	0x02
+		div	
+		sat	0x0
+		push	
+		ldi	0x7f
+		gt?	
+		bnt	code_457
+		ldi	0x7f
+		sat	0x0
+code_457:
+		lst	0x0
+		ldi	0x00
+		lt?	
+		bnt	code_469
+		ldi	0x00
+		sat	0x0
+code_469:
+		pushi	0x2b
+		push1	
+		pushi	0x0139
+		pushi	0x06
+		push1	
+		push1	
+		lofsa	sarienSteps
+		send	0xc
+		pTos	0x8
+		ldi	0x0140
+		gt?	
+		bt	code_498
+		pTos	0x8
+		ldi	0x00
+		lt?	
+code_498:
+		bnt	code_566
+		pushi	0x03
+		pTos	0x72
+		push1	
+		push2	
+		calle	0x03e7, 0x0005, 0x06
+		bnt	code_566
+		pTos	0x72
+		ldi	0x01
+		eq?	
+		bnt	code_545
+		pTos	0x74
+		ldi	0x0a
+		add	
+		aTop	0x74
+		push	
+		ldi	0x7f
+		gt?	
+		bnt	code_570
+		ldi	0x7f
+		aTop	0x74
+		jmp	code_570
+code_545:
+		pTos	0x74
+		ldi	0x0a
+		sub	
+		aTop	0x74
+		push	
+		ldi	0x00
+		lt?	
+		bnt	code_570
+		ldi	0x00
+		aTop	0x74
+		jmp	code_570
+code_566:
+		ldi	0x7f
+		aTop	0x74
+code_570:
+		pushi	0x2a
+		push1	
+		pTos	0x74
+		pushi	0x00a1
+		pushi	0x03
+		push2	
+		pushi	0x0a
+		lst	0x0
+		lofsa	sarienSteps
+		send	0x10
+code_590:
+		pTos	0x2e
+		ldi	0x019b
+		eq?	
+		bnt	code_628
+		pTos	0x30
+		ldi	0x03
+		le?	
+		bnt	code_612
+		pTos	0x32
+		ldi	0x05
+		eq?	
+code_612:
+		bt	code_686
+		pTos	0x30
+		ldi	0x03
+		gt?	
+		bnt	code_628
+		pTos	0x32
+		ldi	0x06
+		eq?	
+code_628:
+		bt	code_686
+		pTos	0x2e
+		ldi	0x019c
+		eq?	
+		bnt	code_669
+		pTos	0x30
+		ldi	0x01
+		le?	
+		bnt	code_653
+		pTos	0x32
+		ldi	0x04
+		eq?	
+code_653:
+		bt	code_686
+		pTos	0x30
+		ldi	0x01
+		gt?	
+		bnt	code_669
+		pTos	0x32
+		ldi	0x05
+		eq?	
+code_669:
+		bt	code_686
+		pTos	0x2e
+		ldi	0x019d
+		eq?	
+		bnt	code_706
+		pTos	0x32
+		ldi	0x05
+		eq?	
+code_686:
+		bnt	code_706
+		pushi	0x2b
+		push1	
+		pushi	0x0138
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+code_706:
+		pToa	0x32
+		aTop	0x70
+		ret	
+
+		bnot	
+
+.CLASS Sarien of 0x30
+Function area offset: 0xee
+Selectors [59]:
+  [0x0] = 0x78
+  [0x1] = 0x30
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Sarien', 'id': 'string_2'}
+  [0x4] = 0x0
+  [0x3] = 0x0
+  [0x55] = 0x0
+  [0x3a] = 0x0
+  [0x10b] = 0x0
+  [0x9] = 0x0
+  [0xa] = 0x0
+  [0xb] = 0x0
+  [0xc] = 0x0
+  [0x10c] = {'val': 'sarien', 'id': 'string_0'}
+  [0x10d] = 0x6789
+  [0x109] = 0x0
+  [0x10e] = 0x6789
+  [0x10f] = 0x0
+  [0x110] = 0x0
+  [0x111] = 0x0
+  [0x112] = 0x6789
+  [0x113] = {'val': "These guys look scary. But then, don't most other beings packing weapons?", 'id': 'string_1'}
+  [0x37] = 0x2
+  [0x5] = 0x0
+  [0x6] = 0x0
+  [0x7] = 0x0
+  [0x3f] = 0x0
+  [0x8] = 0x0
+  [0x11] = 0x0
+  [0xd] = 0x0
+  [0xe] = 0x0
+  [0xf] = 0x0
+  [0x10] = 0x0
+  [0x13] = 0x0
+  [0x14] = 0x0
+  [0x15] = 0x0
+  [0x16] = 0x0
+  [0x5b] = 0x0
+  [0xd9] = 0x4
+  [0x88] = 0x0
+  [0xda] = 0x0
+  [0x83] = 0x0
+  [0x123] = 0x0
+  [0x12] = 0x8000
+  [0xde] = 0x0
+  [0xdf] = 0x0
+  [0x36] = 0x3
+  [0x38] = 0x4
+  [0x124] = 0x0
+  [0x125] = 0x0
+  [0x3b] = 0x0
+  [0x3e] = 0x0
+  [0x126] = 0x0
+  [0x127] = 0x0
+  [0x128] = 0x0
+  [0x225] = 0x0
+  [0x226] = 0x0
+  [0x227] = 0x1
+  [0x228] = 0x3c
+Overriden functions: 3
+  [0x6b]  = Sarien::107   	 ; @0x16
+  [0x3c]  = Sarien::60   	 ; @0xad
+  [0x10a]  = Sarien::266   	 ; @0x3c
+
+.CODE
+arcadaRegion::375:
+		pushi	0x0d
+		lsp	0x1
+		pushi	0x03
+		pushi	0x04
+		pushi	0x05
+		pushi	0x06
+		pushi	0x07
+		pushi	0x08
+		pushi	0x09
+		pushi	0x0a
+		pushi	0x0b
+		pushi	0x0c
+		pushi	0x0d
+		pushi	0x67
+		calle	0x03e7, 0x0005, 0x1a
+		aTop	0xe
+		ldi	0x00
+		aTop	0x10
+		sag	0xad
+		aTop	0x1a
+		aTop	0x1c
+		ldi	0xff
+		aTop	0x18
+		pToa	0x8
+		bnt	code_1040
+		pushi	0x6c
+		push0	
+		send	0x4
+code_1040:
+		pushi	0x0230
+		push1	
+		push0	
+		pushi	0x0231
+		push1	
+		pushi	0x0151
+		pushi	0x0233
+		push1	
+		pushi	0x0151
+		pushi	0x0232
+		push1	
+		push0	
+		pushi	0x0234
+		push1	
+		push0	
+		pushi	0x0235
+		push1	
+		push0	
+		pushi	0x0236
+		push1	
+		push0	
+		pushi	0x0237
+		push1	
+		push0	
+		pushi	0x0238
+		push1	
+		push0	
+		pushi	0x022e
+		push1	
+		push0	
+		pushi	0x022f
+		push1	
+		push0	
+		self	0x42
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0163
+		ne?	
+		bnt	code_1159
+		pushi	0x04
+		lsp	0x1
+		pushi	0x07
+		pushi	0x0b
+		pushi	0x0d
+		calle	0x03e7, 0x0005, 0x08
+		bt	code_1140
+		lsp	0x1
+		ldi	0x07
+		eq?	
+code_1140:
+		bnt	code_1159
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x009d
+		push0	
+		pushi	0x2b
+		push1	
+		push0	
+		lag	0x64
+		send	0x10
+code_1159:
+		pToa	0x3e
+		bnt	code_1194
+		pushi	0x04
+		pushi	0x02bc
+		pushi	0x03
+		pushi	0x6c
+		push	
+		callk	0x1b, 0x8
+		push2	
+		pushi	0x1b
+		push0	
+		lag	0x5
+		send	0x4
+		push	
+		push0	
+		callk	0xb, 0x4
+		ldi	0x00
+		aTop	0x3e
+code_1194:
+		pushi	0x0177
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x42, 0x6
+		ret	
+
+arcadaRegion::107:
+		link	0x01
+		pushi	0x04
+		pushi	0x0084
+		pushi	0x0134
+		pushi	0x016c
+		pushi	0x016d
+		callk	0x0, 0x8
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x42, 0x4
+		pToa	0x34
+		bnt	code_1449
+		lsg	0xb
+		ldi	0x67
+		ne?	
+		bnt	code_1449
+		pushi	0x6b
+		push0	
+		lofsa	detonationBox
+		send	0x4
+		lsg	0xac
+		ldi	0x0258
+		gt?	
+		bnt	code_1276
+		push2	
+		pushi	0x0084
+		pushi	0x03e5
+		callk	0x0, 0x4
+		jmp	code_1449
+code_1276:
+		lsg	0xac
+		ldi	0x012c
+		gt?	
+		bnt	code_1298
+		push2	
+		pushi	0x0084
+		pushi	0x03e4
+		callk	0x0, 0x4
+		jmp	code_1449
+code_1298:
+		lsg	0xac
+		ldi	0x00f0
+		gt?	
+		bnt	code_1320
+		push2	
+		pushi	0x0084
+		pushi	0x03e3
+		callk	0x0, 0x4
+		jmp	code_1449
+code_1320:
+		lsg	0xac
+		ldi	0x00b4
+		gt?	
+		bnt	code_1342
+		push2	
+		pushi	0x0084
+		pushi	0x03e2
+		callk	0x0, 0x4
+		jmp	code_1449
+code_1342:
+		lsg	0xac
+		ldi	0x78
+		gt?	
+		bnt	code_1363
+		push2	
+		pushi	0x0084
+		pushi	0x03e1
+		callk	0x0, 0x4
+		jmp	code_1449
+code_1363:
+		lsg	0xac
+		ldi	0x3c
+		gt?	
+		bnt	code_1384
+		push2	
+		pushi	0x0084
+		pushi	0x03e0
+		callk	0x0, 0x4
+		jmp	code_1449
+code_1384:
+		lsg	0xac
+		ldi	0x1e
+		gt?	
+		bnt	code_1415
+		pushi	0x04
+		pushi	0x0084
+		pushi	0x03df
+		pushi	0x03de
+		pushi	0x03dd
+		calle	0x03be, 0x0000, 0x08
+		jmp	code_1449
+code_1415:
+		lsg	0xac
+		ldi	0x0a
+		gt?	
+		bnt	code_1449
+		pushi	0x06
+		pushi	0x0084
+		pushi	0x03d8
+		pushi	0x03d9
+		pushi	0x03da
+		pushi	0x03db
+		pushi	0x03dc
+		calle	0x03be, 0x0000, 0x0c
+code_1449:
+		pToa	0x34
+		bnt	code_1613
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0163
+		ne?	
+		bnt	code_1613
+		pushi	0x05
+		lsg	0xb
+		pushi	0x08
+		pushi	0x09
+		pushi	0x0a
+		pushi	0x0c
+		calle	0x03e7, 0x0005, 0x0a
+		bnt	code_1510
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0168
+		ne?	
+		bnt	code_1510
+		ldi	0x0168
+		sat	0x0
+code_1510:
+		bt	code_1556
+		pushi	0x06
+		lsg	0xb
+		pushi	0x03
+		pushi	0x04
+		pushi	0x05
+		pushi	0x06
+		pushi	0x67
+		calle	0x03e7, 0x0005, 0x0c
+		bnt	code_1613
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x012c
+		ne?	
+		bnt	code_1613
+		ldi	0x012c
+		sat	0x0
+code_1556:
+		bnt	code_1613
+		pushi	0x2b
+		push1	
+		lst	0x0
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x009c
+		push1	
+		push0	
+		pushi	0x2a
+		push1	
+		pushi	0x1e
+		pushi	0x009d
+		pushi	0x04
+		pushi	0x7f
+		pushi	0x19
+		pushi	0x0a
+		push0	
+		lag	0x64
+		send	0x24
+		lst	0x0
+		ldi	0x0168
+		eq?	
+		bnt	code_1613
+		pushi	0x009c
+		push1	
+		push1	
+		lag	0x64
+		send	0x6
+code_1613:
+		pushi	0x07
+		lsg	0xb
+		pushi	0x04
+		pushi	0x05
+		pushi	0x06
+		pushi	0x08
+		pushi	0x0a
+		pushi	0x0b
+		calle	0x03e7, 0x0005, 0x0e
+		bnt	code_1664
+		push2	
+		pushi	0x0084
+		pushi	0x013b
+		callk	0x0, 0x4
+		pushi	0x6b
+		push0	
+		lofsa	UpperElevFeat
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	LowElevFeat
+		send	0x4
+code_1664:
+		lsg	0xac
+		ldi	0x3c
+		gt?	
+		bnt	code_1873
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		not	
+		bnt	code_1873
+		pTos	0x14
+		ldi	0x04
+		and	
+		bnt	code_1873
+		pushi	0x04
+		lsg	0xb
+		pushi	0x04
+		pushi	0x06
+		pushi	0x09
+		calle	0x03e7, 0x0005, 0x08
+		bnt	code_1873
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		not	
+		bnt	code_1873
+		lsg	0xc
+		ldi	0x0a
+		ne?	
+		bnt	code_1873
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x019a
+		pushi	0x01e0
+		calle	0x03be, 0x0000, 0x06
+		push2	
+		pushi	0x0084
+		pushi	0x0139
+		callk	0x0, 0x4
+		pTos	0x22
+		ldi	0x01
+		eq?	
+		bnt	code_1778
+		pTos	0x24
+		ldi	0x0164
+		sub	
+		aTop	0x24
+		pTos	0x28
+		ldi	0x0164
+		sub	
+		aTop	0x28
+code_1778:
+		lsg	0x57
+		ldi	0x01
+		ge?	
+		bnt	code_1812
+		pushi	0x6b
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x0231
+		push0	
+		self	0x4
+		push	
+		pushi	0x69
+		push0	
+		pushi	0x0225
+		push1	
+		push0	
+		lofsa	sarien1
+		send	0x14
+code_1812:
+		pushi	0x6b
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x0233
+		push0	
+		self	0x4
+		push	
+		pushi	0x69
+		push0	
+		pushi	0x0225
+		push1	
+		pushi	0x04
+		lofsa	sarien2
+		send	0x14
+		lag	0xa6
+		sag	0xad
+		lsg	0xc
+		ldi	0x07
+		ne?	
+		bnt	code_1885
+		ldi	0x02
+		aTop	0x1a
+		pushi	0x023f
+		push1	
+		push2	
+		pushi	0x03
+		pushi	0x05
+		callk	0x3c, 0x4
+		push	
+		self	0x6
+		jmp	code_1885
+code_1873:
+		ldi	0x01
+		aTop	0x1a
+		ldi	0x00
+		sag	0xad
+		ldi	0xff
+		aTop	0x18
+code_1885:
+		ret	
+
+arcadaRegion::60:
+		link	0x0a
+		pushi	0x3c
+		push0	
+		super	0x42, 0x4
+		lal	0x2
+		not	
+		bnt	code_2177
+		pToa	0x34
+		bnt	code_2177
+		lsg	0xac
+		ldi	0x00
+		ge?	
+		bnt	code_2177
+		pTos	0x3c
+		push1	
+		push1	
+		callk	0x42, 0x2
+		aTop	0x3a
+		ne?	
+		bnt	code_2199
+		pToa	0x3a
+		aTop	0x3c
+		pushi	0x77
+		push1	
+		lofsa	detonationBox
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_2035
+		pToa	0x3e
+		bnt	code_1962
+		pushi	0x04
+		pushi	0x02bc
+		pushi	0x03
+		pushi	0x6c
+		push	
+		callk	0x1b, 0x8
+code_1962:
+		pushi	0x09
+		pushi	0x05
+		lea	0x4, 0x0
+		push	
+		pushi	0x02bc
+		pushi	0x04
+		lsg	0xac
+		ldi	0x3c
+		div	
+		push	
+		lsg	0xac
+		ldi	0x3c
+		mod	
+		push	
+		callk	0x48, 0xa
+		push	
+		pushi	0x64
+		pushi	0x04
+		push0	
+		lofsa	detonationBox
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		lofsa	detonationBox
+		send	0x4
+		push	
+		pushi	0x55
+		push0	
+		lofsa	detonationBox
+		send	0x4
+		sub	
+		push	
+		pushi	0x66
+		lsg	0x88
+		pushi	0x69
+		push2	
+		pushi	0x6b
+		callk	0x1b, 0x12
+		aTop	0x3e
+code_2035:
+		pushi	0x11
+		lsg	0xac
+		push1	
+		push2	
+		pushi	0x03
+		pushi	0x04
+		pushi	0x05
+		pushi	0x0a
+		pushi	0x0f
+		pushi	0x1e
+		pushi	0x3c
+		pushi	0x78
+		pushi	0x00b4
+		pushi	0x00f0
+		pushi	0x012c
+		pushi	0x0258
+		pushi	0x0384
+		pushi	0x0708
+		calle	0x03e7, 0x0005, 0x22
+		bnt	code_2100
+		pushi	0x008c
+		pushi	0x03
+		lofsa	DoCountDown
+		push	
+		push0	
+		lsg	0xac
+		lag	0x0
+		send	0xa
+code_2100:
+		-ag	0xac
+		push	
+		ldi	0x00
+		lt?	
+		bnt	code_2133
+		ldi	0x00
+		aTop	0x34
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0x4
+		pushi	0x008c
+		push1	
+		lofsa	timesUp
+		push	
+		lag	0x2
+		send	0x6
+code_2133:
+		pTos	0x18
+		ldi	0xff
+		ne?	
+		bnt	code_2143
+		dpToa	0x18
+code_2143:
+		lsg	0xb
+		ldi	0x67
+		ne?	
+		bnt	code_2199
+		pushi	0x77
+		push1	
+		lofsa	detonationBox
+		push	
+		lag	0x5
+		send	0x6
+		not	
+		bnt	code_2199
+		pushi	0x6b
+		push0	
+		lofsa	detonationBox
+		send	0x4
+		jmp	code_2199
+code_2177:
+		pushi	0x77
+		push1	
+		lofsa	detonationBox
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_2199
+		pushi	0x6c
+		push0	
+		lofsa	detonationBox
+		send	0x4
+code_2199:
+		pToa	0x36
+		bnt	code_2320
+		pToa	0x34
+		bnt	code_2320
+		dpToa	0x36
+		not	
+		bnt	code_2320
+		push2	
+		push0	
+		push2	
+		callk	0x3c, 0x4
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2243
+		pushi	0x2b
+		push1	
+		pushi	0x0134
+		lofsa	explosionSound
+		send	0x6
+		jmp	code_2282
+code_2243:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2264
+		pushi	0x2b
+		push1	
+		pushi	0x016c
+		lofsa	explosionSound
+		send	0x6
+		jmp	code_2282
+code_2264:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2282
+		pushi	0x2b
+		push1	
+		pushi	0x016d
+		lofsa	explosionSound
+		send	0x6
+code_2282:
+		toss	
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	explosionSound
+		send	0xa
+		push2	
+		pushi	0x06
+		push2	
+		push1	
+		pushi	0x03
+		callk	0x3c, 0x4
+		push	
+		callk	0x66, 0x4
+		push2	
+		pushi	0x32
+		pushi	0x03e8
+		callk	0x3c, 0x4
+		aTop	0x36
+code_2320:
+		pToa	0x8
+		not	
+		bnt	code_2600
+		pTos	0x1a
+		ldi	0x01
+		ne?	
+		bnt	code_2600
+		pTos	0x1a
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2420
+		pToa	0x1e
+		bnt	code_2354
+		pushi	0x63
+		push1	
+		push	
+		self	0x6
+code_2354:
+		bt	code_2362
+		pTos	0x18
+		ldi	0xff
+		eq?	
+code_2362:
+		bnt	code_2599
+		push2	
+		pushi	0x02bc
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		pushi	0x0227
+		push1	
+		push1	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	sarien2
+		send	0x12
+		pushi	0x023f
+		push1	
+		push2	
+		pushi	0x03
+		pushi	0x06
+		callk	0x3c, 0x4
+		push	
+		self	0x6
+		ldi	0x03
+		aTop	0x1a
+		jmp	code_2599
+code_2420:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2462
+		pToa	0x20
+		bnt	code_2438
+		pushi	0x63
+		push1	
+		push	
+		self	0x6
+code_2438:
+		bt	code_2446
+		pTos	0x18
+		ldi	0xff
+		eq?	
+code_2446:
+		bnt	code_2599
+		pushi	0x008c
+		push1	
+		lofsa	callGuards
+		push	
+		self	0x6
+		jmp	code_2599
+code_2462:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2578
+		pushi	0x63
+		push1	
+		pTos	0x1c
+		self	0x6
+		bnt	code_2565
+		pTos	0x18
+		ldi	0xff
+		eq?	
+		bnt	code_2599
+		lsg	0xb
+		ldi	0x06
+		eq?	
+		bnt	code_2558
+		lsg	0xa6
+		lag	0xad
+		ne?	
+		bnt	code_2558
+		lsg	0xad
+		ldi	0x02
+		eq?	
+		bnt	code_2525
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pTos	0x30
+		ldi	0x05
+		add	
+		lt?	
+code_2525:
+		bt	code_2550
+		lsg	0xad
+		ldi	0x01
+		eq?	
+		bnt	code_2558
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pTos	0x30
+		ldi	0x05
+		sub	
+		gt?	
+code_2550:
+		bnt	code_2558
+		ldi	0x00
+		jmp	code_2599
+code_2558:
+		ldi	0x05
+		aTop	0x1a
+		jmp	code_2599
+code_2565:
+		pushi	0x008c
+		push1	
+		lofsa	shootEgoDead
+		push	
+		self	0x6
+		jmp	code_2599
+code_2578:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2599
+		ldi	0x01
+		aTop	0x1a
+		pushi	0x008c
+		push1	
+		lofsa	removeGuards
+		push	
+		self	0x6
+code_2599:
+		toss	
+code_2600:
+		ret	
+
+arcadaRegion::575:
+		push0	
+		callk	0x27, 0x0
+		not	
+		bnt	code_2616
+		lsp	0x1
+		ldi	0x01
+		add	
+		sap	0x1
+code_2616:
+		lap	0x1
+		aTop	0x18
+		ret	
+
+		bnot	
+
+.CLASS arcadaRegion of 0x42
+Exported
+Function area offset: 0x86
+Selectors [33]:
+  [0x0] = 0x79
+  [0x1] = 0x42
+  [0x2] = 0x8000
+  [0x17] = {'val': 'arcadaRegion', 'id': 'string_3'}
+  [0x88] = 0x0
+  [0x2b] = 0x0
+  [0x83] = 0x0
+  [0x17f] = 0x0
+  [0x180] = 0x0
+  [0x113] = 0x0
+  [0x229] = 0x0
+  [0x22a] = 0x0
+  [0x22b] = 0xffff
+  [0x22c] = 0x0
+  [0x22d] = 0x0
+  [0x22e] = 0x0
+  [0x22f] = 0x0
+  [0x230] = 0x0
+  [0x231] = 0x151
+  [0x232] = 0x0
+  [0x233] = 0x151
+  [0x234] = 0x0
+  [0x235] = 0x0
+  [0x236] = 0x0
+  [0x237] = 0x0
+  [0x238] = 0x0
+  [0x239] = 0x0
+  [0x23a] = 0x190
+  [0x23b] = 0x0
+  [0x23c] = 0x0
+  [0x92] = 0x0
+  [0x23d] = 0x0
+  [0x23e] = 0x0
+Overriden functions: 4
+  [0x6b]  = arcadaRegion::107   	 ; @0x4b6
+  [0x3c]  = arcadaRegion::60   	 ; @0x75e
+  [0x177]  = arcadaRegion::375   	 ; @0x3d4
+  [0x23f]  = arcadaRegion::575   	 ; @0xa29
+
+.CODE
+code_2790:
+		pushi	0x023d
+		push0	
+		class	0x79
+		send	0x4
+		bnt	code_2831
+		pushi	0x04
+		pushi	0x02bc
+		pushi	0x03
+		pushi	0x6c
+		pushi	0x023d
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		callk	0x1b, 0x8
+		pushi	0x023d
+		push1	
+		push0	
+		class	0x79
+		send	0x6
+code_2831:
+		pushi	0x04
+		push1	
+		pushi	0x0140
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		gt?	
+		bnt	code_2853
+		pprev	
+		ldi	0x00a0
+		gt?	
+code_2853:
+		bt	code_2867
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00
+		lt?	
+code_2867:
+		bnt	code_2875
+		ldi	0x1e
+		jmp	code_2878
+code_2875:
+		ldi	0x0108
+code_2878:
+		push	
+		lofsa	detonationBox
+		send	0x6
+		pushi	0x03
+		push1	
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_2901
+		ldi	0x00be
+		jmp	code_2903
+code_2901:
+		ldi	0x2c
+code_2903:
+		push	
+		pushi	0x011c
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	detonationBox
+		send	0xe
+		ret	
+
+callGuards::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		lsg	0xb
+		ldi	0x04
+		eq?	
+		bnt	code_2977
+		lsg	0xad
+		ldi	0x02
+		eq?	
+		bnt	code_2977
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_2964
+		pushi	0x42
+		push1	
+		pushi	0x03
+		lofsa	sarien1
+		send	0x6
+code_2964:
+		pushi	0x42
+		push1	
+		pushi	0x03
+		lofsa	sarien2
+		send	0x6
+		jmp	code_3011
+code_2977:
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3001
+		pushi	0x42
+		push1	
+		pushi	0xff
+		lofsa	sarien1
+		send	0x6
+code_3001:
+		pushi	0x42
+		push1	
+		pushi	0xff
+		lofsa	sarien2
+		send	0x6
+code_3011:
+		pTos	0xa
+		ldi	0x00
+		eq?	
+		bnt	code_3129
+		pushi	0x0230
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3089
+		lsg	0xad
+		lag	0xa6
+		ne?	
+		bt	code_3077
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		gt?	
+		bt	code_3077
+		lsg	0xb
+		ldi	0x09
+		eq?	
+		bnt	code_3125
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x6d
+		le?	
+code_3077:
+		bnt	code_3125
+		pushi	0x008b
+		push0	
+		self	0x4
+		jmp	code_3125
+code_3089:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3125
+		lsg	0xad
+		lag	0xa6
+		ne?	
+		bt	code_3116
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		lt?	
+code_3116:
+		bnt	code_3125
+		pushi	0x008b
+		push0	
+		self	0x4
+code_3125:
+		toss	
+		jmp	code_3360
+code_3129:
+		lsg	0xad
+		lag	0xa6
+		eq?	
+		bnt	code_3360
+		pushi	0x0230
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3267
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		lt?	
+		bnt	code_3359
+		pushi	0x04
+		push0	
+		lofsa	sarien2
+		send	0x4
+		push	
+		ldi	0x0a
+		gt?	
+		bnt	code_3359
+		lsg	0xb
+		ldi	0x09
+		eq?	
+		bnt	code_3210
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x6d
+		lt?	
+		bnt	code_3210
+		ldi	0x00
+		jmp	code_3359
+code_3210:
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3234
+		pushi	0x0119
+		push1	
+		push0	
+		lofsa	sarien1
+		send	0x6
+code_3234:
+		pushi	0x0119
+		push1	
+		push0	
+		lofsa	sarien2
+		send	0x6
+		pushi	0x023f
+		push1	
+		push0	
+		pushi	0x022c
+		push1	
+		pushi	0x04
+		class	0x79
+		send	0xc
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_3359
+code_3267:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3359
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		gt?	
+		bnt	code_3359
+		pushi	0x04
+		push0	
+		lofsa	sarien1
+		send	0x4
+		push	
+		ldi	0x0136
+		lt?	
+		bnt	code_3359
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3329
+		pushi	0x0119
+		push1	
+		push0	
+		lofsa	sarien1
+		send	0x6
+code_3329:
+		pushi	0x0119
+		push1	
+		push0	
+		lofsa	sarien2
+		send	0x6
+		pushi	0x023f
+		push1	
+		push0	
+		pushi	0x022c
+		push1	
+		pushi	0x04
+		class	0x79
+		send	0xc
+		pushi	0x6c
+		push0	
+		self	0x4
+code_3359:
+		toss	
+code_3360:
+		ret	
+
+callGuards::108:
+		pushi	0x0230
+		push1	
+		push0	
+		class	0x79
+		send	0x6
+		pushi	0x6c
+		push0	
+		super	0x6, 0x4
+		ret	
+
+callGuards::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3394
+		ldi	0x00
+		jmp	code_3626
+code_3394:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3470
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3436
+		pushi	0x00c0
+		push0	
+		pushi	0x03
+		push1	
+		pushi	0x0232
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		lofsa	sarien1
+		send	0xa
+code_3436:
+		pushi	0x00c0
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x04
+		pushi	0x03
+		push1	
+		pushi	0x0234
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		lofsa	sarien2
+		send	0x10
+		ldi	0x03
+		aTop	0x10
+		jmp	code_3626
+code_3470:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3587
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3532
+		pushi	0x0227
+		push1	
+		pushi	0x03
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0235
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushi	0x0236
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushSelf	
+		lofsa	sarien1
+		send	0x12
+		jmp	code_3536
+code_3532:
+		ldi	0x01
+		aTop	0x10
+code_3536:
+		pushi	0x0227
+		push1	
+		pushi	0x03
+		pushi	0x0094
+		push2	
+		class	0x56
+		push	
+		pushi	0x01e0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0237
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushi	0x0238
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushSelf	
+		lofsa	sarien2
+		send	0x1a
+		jmp	code_3626
+code_3587:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3599
+		ldi	0x00
+		jmp	code_3626
+code_3599:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_3626
+		pushi	0x023f
+		push1	
+		push2	
+		pushi	0x022c
+		push1	
+		pushi	0x04
+		class	0x79
+		send	0xc
+		pushi	0x6c
+		push0	
+		self	0x4
+code_3626:
+		toss	
+		ret	
+
+
+.OBJECT callGuards of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'callGuards', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 3
+  [0x3c]  = callGuards::60   	 ; @0xb66
+  [0x6c]  = callGuards::108   	 ; @0xd21
+  [0x8a]  = callGuards::138   	 ; @0xd31
+
+.CODE
+removeGuards::138:
+		link	0x01
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3806
+		pushi	0x3a
+		push0	
+		lofsa	sarien2
+		send	0x4
+		push	
+		ldi	0x00b4
+		gt?	
+		bnt	code_3764
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3749
+		pushi	0x00e2
+		push1	
+		pushi	0x5a
+		lofsa	sarien1
+		send	0x6
+code_3749:
+		pushi	0x00e2
+		push2	
+		pushi	0x5a
+		pushSelf	
+		lofsa	sarien2
+		send	0x8
+		jmp	code_4023
+code_3764:
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3790
+		pushi	0x00e2
+		push1	
+		pushi	0x010e
+		lofsa	sarien1
+		send	0x6
+code_3790:
+		pushi	0x00e2
+		push2	
+		pushi	0x010e
+		pushSelf	
+		lofsa	sarien2
+		send	0x8
+		jmp	code_4023
+code_3806:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3902
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3840
+		push2	
+		pushi	0x02bc
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_3850
+code_3840:
+		push2	
+		pushi	0x02bc
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+code_3850:
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3895
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x0231
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushi	0x0232
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		lofsa	sarien1
+		send	0xa
+code_3895:
+		ldi	0x02
+		aTop	0x10
+		jmp	code_4023
+code_3902:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3949
+		pushi	0x0227
+		push1	
+		push2	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0233
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushi	0x0234
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		pushSelf	
+		lofsa	sarien2
+		send	0x12
+		jmp	code_4023
+code_3949:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4003
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_3978
+		pushi	0x6c
+		push0	
+		lofsa	sarien1
+		send	0x4
+code_3978:
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	sarien2
+		send	0xc
+		ldi	0x02
+		aTop	0x12
+		jmp	code_4023
+code_4003:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4023
+		pushi	0x6c
+		push0	
+		lofsa	sarien2
+		send	0x4
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4023:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT removeGuards of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'removeGuards', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = removeGuards::138   	 ; @0xe6e
+
+.CODE
+shootEgoDead::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		pTos	0xa
+		ldi	0x00
+		eq?	
+		bnt	code_4116
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		not	
+		bnt	code_4116
+		pushi	0x008b
+		push0	
+		self	0x4
+code_4116:
+		ret	
+
+shootEgoDead::138:
+		link	0x01
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4136
+		ldi	0x00
+		jmp	code_4919
+code_4136:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4286
+		pushi	0x63
+		push1	
+		pushi	0x022d
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		self	0x6
+		not	
+		bnt	code_4269
+		ldi	0x01
+		sal	0x2
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		pushi	0x75
+		push2	
+		pushi	0x6f
+		class	0x73
+		push	
+		lag	0x5
+		send	0x8
+		sat	0x0
+		bnt	code_4201
+		pushi	0x20
+		push1	
+		push0	
+		send	0x6
+code_4201:
+		push2	
+		lsg	0x0
+		lofsa	sarien2
+		push	
+		callb	0xd, 0x4
+		pushi	0x03
+		lofsa	sarien2
+		push	
+		lsg	0x0
+		pushSelf	
+		callb	0xd, 0x6
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_4262
+		pushi	0x03
+		lsg	0x0
+		lofsa	sarien1
+		push	
+		pushSelf	
+		callb	0xd, 0x6
+		push2	
+		lofsa	sarien1
+		push	
+		lsg	0x0
+		callb	0xd, 0x4
+		jmp	code_4919
+code_4262:
+		ldi	0x02
+		aTop	0x10
+		jmp	code_4919
+code_4269:
+		pushi	0x023f
+		push1	
+		push2	
+		class	0x79
+		send	0x6
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_4919
+code_4286:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4298
+		ldi	0x00
+		jmp	code_4919
+code_4298:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4584
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_4450
+		pushi	0x05
+		push1	
+		pushi	0x69
+		pushi	0x3a
+		push0	
+		lofsa	sarien1
+		send	0x4
+		ge?	
+		bnt	code_4340
+		pprev	
+		ldi	0x4b
+		ge?	
+code_4340:
+		bt	code_4363
+		pushi	0x011d
+		pushi	0x3a
+		push0	
+		lofsa	sarien1
+		send	0x4
+		ge?	
+		bnt	code_4372
+		pprev	
+		ldi	0x00ff
+		ge?	
+code_4363:
+		bnt	code_4372
+		ldi	0x019b
+		jmp	code_4403
+code_4372:
+		pushi	0x00ff
+		pushi	0x3a
+		push0	
+		lofsa	sarien1
+		send	0x4
+		gt?	
+		bnt	code_4400
+		pprev	
+		ldi	0x4b
+		gt?	
+		bnt	code_4400
+		ldi	0x019c
+		jmp	code_4403
+code_4400:
+		ldi	0x019d
+code_4403:
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0x0225
+		push0	
+		lofsa	sarien1
+		send	0x4
+		push	
+		pushi	0x3a
+		push0	
+		lofsa	sarien1
+		send	0x4
+		push	
+		ldi	0x00b4
+		ge?	
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push1	
+		lofsa	sarien1
+		send	0x1a
+code_4450:
+		pushi	0x05
+		push1	
+		pushi	0x69
+		pushi	0x3a
+		push0	
+		lofsa	sarien2
+		send	0x4
+		ge?	
+		bnt	code_4471
+		pprev	
+		ldi	0x4b
+		ge?	
+code_4471:
+		bt	code_4494
+		pushi	0x011d
+		pushi	0x3a
+		push0	
+		lofsa	sarien2
+		send	0x4
+		ge?	
+		bnt	code_4503
+		pprev	
+		ldi	0x00ff
+		ge?	
+code_4494:
+		bnt	code_4503
+		ldi	0x019b
+		jmp	code_4534
+code_4503:
+		pushi	0x00ff
+		pushi	0x3a
+		push0	
+		lofsa	sarien2
+		send	0x4
+		ge?	
+		bnt	code_4531
+		pprev	
+		ldi	0x4b
+		ge?	
+		bnt	code_4531
+		ldi	0x019c
+		jmp	code_4534
+code_4531:
+		ldi	0x019d
+code_4534:
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0x0225
+		push0	
+		lofsa	sarien2
+		send	0x4
+		push	
+		pushi	0x3a
+		push0	
+		lofsa	sarien2
+		send	0x4
+		push	
+		ldi	0x00b4
+		ge?	
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	sarien2
+		send	0x1a
+		jmp	code_4919
+code_4584:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4729
+		pushi	0x05
+		push0	
+		lofsa	sarien2
+		send	0x4
+		push	
+		ldi	0x019b
+		eq?	
+		bnt	code_4627
+		pushi	0x0094
+		pushi	0x03
+		class	0x19
+		push	
+		pushi	0x05
+		pushi	0xff
+		lofsa	sarien2
+		send	0xa
+		jmp	code_4644
+code_4627:
+		pushi	0x0094
+		pushi	0x03
+		class	0x19
+		push	
+		pushi	0x04
+		pushi	0xff
+		lofsa	sarien2
+		send	0xa
+code_4644:
+		pushi	0x05
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00a0
+		push1	
+		pushi	0x0131
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0100
+		and	
+		bnt	code_4678
+		ldi	0x02
+		jmp	code_4700
+code_4678:
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		ge?	
+		bnt	code_4698
+		ldi	0x01
+		jmp	code_4700
+code_4698:
+		ldi	0x00
+code_4700:
+		push	
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x2a
+		jmp	code_4919
+code_4729:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_4810
+		pushi	0x0131
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0080
+		and	
+		bnt	code_4764
+		pushi	0x00a0
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		jmp	code_4790
+code_4764:
+		pushi	0x0131
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x4000
+		and	
+		bnt	code_4790
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		lag	0x0
+		send	0x6
+code_4790:
+		pushi	0x07
+		push1	
+		pushi	0x03
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_4919
+code_4810:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_4870
+		pushi	0x77
+		push1	
+		lofsa	sarien1
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_4844
+		push2	
+		pushi	0x02bc
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_4854
+code_4844:
+		push2	
+		pushi	0x02bc
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+code_4854:
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	sarien2
+		send	0x8
+		jmp	code_4919
+code_4870:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_4919
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_4904
+		pushi	0x05
+		pushi	0x03ac
+		push1	
+		push0	
+		pushi	0x02bc
+		pushi	0x0a
+		callb	0xa, 0xa
+		jmp	code_4919
+code_4904:
+		pushi	0x05
+		pushi	0x03ac
+		push0	
+		push0	
+		pushi	0x02bc
+		pushi	0x0a
+		callb	0xa, 0xa
+code_4919:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT shootEgoDead of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'shootEgoDead', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = shootEgoDead::60   	 ; @0xff4
+  [0x8a]  = shootEgoDead::138   	 ; @0x1015
+
+.CODE
+timesUp::107:
+		pushi	0x03
+		pushi	0x0084
+		pushi	0x0324
+		pushi	0x0325
+		calle	0x03be, 0x0000, 0x06
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		ret	
+
+timesUp::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		lal	0x1
+		bnt	code_5044
+		pushi	0x03
+		push0	
+		lofsa	deltaur
+		send	0x4
+		push	
+		ldi	0xe7
+		lt?	
+		bnt	code_5044
+		ldi	0x00
+		sal	0x1
+		ldi	0x01
+		aTop	0x10
+code_5044:
+		lal	0x0
+		bnt	code_5087
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0163
+		eq?	
+		bnt	code_5087
+		pushi	0x0098
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0xff
+		eq?	
+		bnt	code_5087
+		ldi	0x00
+		sal	0x0
+		ldi	0x01
+		aTop	0x10
+code_5087:
+		ret	
+
+timesUp::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_5232
+		push0	
+		callb	0x2, 0x0
+		pushi	0x77
+		push1	
+		lofsa	detonationBox
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_5126
+		pushi	0x6c
+		push0	
+		lofsa	detonationBox
+		send	0x4
+code_5126:
+		pushi	0x009a
+		push0	
+		lofsa	sampledVoice
+		send	0x4
+		pushi	0x018a
+		push2	
+		pushi	0x10
+		pushi	0x0a
+		lag	0x2
+		send	0x8
+		pushi	0x74
+		push1	
+		pushi	0x6c
+		lag	0x5
+		send	0x6
+		pushi	0x6b
+		push0	
+		lofsa	deltaurArm
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	arcada
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	deltaur
+		send	0x4
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	star1
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	star2
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	star3
+		send	0xa
+		ldi	0x04
+		aTop	0x12
+		jmp	code_5484
+code_5232:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_5352
+		pushi	0x2b
+		push1	
+		pushi	0x0324
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x04
+		push0	
+		lofsa	deltaur
+		send	0x4
+		push	
+		ldi	0x32
+		sub	
+		push	
+		pushi	0x03
+		push0	
+		lofsa	deltaur
+		send	0x4
+		push	
+		ldi	0x78
+		sub	
+		push	
+		lofsa	deltaur
+		send	0x10
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x04
+		push0	
+		lofsa	deltaurArm
+		send	0x4
+		push	
+		ldi	0x32
+		sub	
+		push	
+		pushi	0x03
+		push0	
+		lofsa	deltaurArm
+		send	0x4
+		push	
+		ldi	0x78
+		sub	
+		push	
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	deltaurArm
+		send	0x10
+		ldi	0x01
+		sal	0x1
+		jmp	code_5484
+code_5352:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_5366
+		ldi	0x01
+		sal	0x0
+		jmp	code_5484
+code_5366:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5410
+		pushi	0x2b
+		push1	
+		pushi	0x0325
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x66
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x16
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	arcada
+		send	0x8
+		jmp	code_5484
+code_5410:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_5432
+		pushi	0x6c
+		push0	
+		lofsa	arcada
+		send	0x4
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_5484
+code_5432:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5484
+		push2	
+		pushi	0x02bc
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02bc
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02bc
+		pushi	0x0d
+		calle	0xff, 0x00, 0x04
+		pushi	0x05
+		pushi	0x03b1
+		push0	
+		push0	
+		pushi	0x02bc
+		pushi	0x0e
+		callb	0xa, 0xa
+code_5484:
+		toss	
+		ret	
+
+
+.OBJECT timesUp of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'timesUp', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 3
+  [0x6b]  = timesUp::107   	 ; @0x1378
+  [0x3c]  = timesUp::60   	 ; @0x1392
+  [0x8a]  = timesUp::138   	 ; @0x13e0
+
+.CODE
+DoCountDown::108:
+		ldi	0x00
+		aTop	0x1a
+		lsg	0xac
+		ldi	0x0258
+		gt?	
+		bnt	code_5578
+		push2	
+		pushi	0x0084
+		pushi	0x03e5
+		callk	0x0, 0x4
+		jmp	code_5811
+code_5578:
+		lsg	0xac
+		ldi	0x012c
+		gt?	
+		bnt	code_5610
+		push2	
+		pushi	0x0084
+		pushi	0x03e5
+		callk	0x1, 0x4
+		push2	
+		pushi	0x0084
+		pushi	0x03e4
+		callk	0x0, 0x4
+		jmp	code_5811
+code_5610:
+		lsg	0xac
+		ldi	0x00f0
+		gt?	
+		bnt	code_5642
+		push2	
+		pushi	0x0084
+		pushi	0x03e4
+		callk	0x1, 0x4
+		push2	
+		pushi	0x0084
+		pushi	0x03e3
+		callk	0x0, 0x4
+		jmp	code_5811
+code_5642:
+		lsg	0xac
+		ldi	0x00b4
+		gt?	
+		bnt	code_5674
+		push2	
+		pushi	0x0084
+		pushi	0x03e3
+		callk	0x1, 0x4
+		push2	
+		pushi	0x0084
+		pushi	0x03e2
+		callk	0x0, 0x4
+		jmp	code_5811
+code_5674:
+		lsg	0xac
+		ldi	0x78
+		gt?	
+		bnt	code_5705
+		push2	
+		pushi	0x0084
+		pushi	0x03e2
+		callk	0x1, 0x4
+		push2	
+		pushi	0x0084
+		pushi	0x03e1
+		callk	0x0, 0x4
+		jmp	code_5811
+code_5705:
+		lsg	0xac
+		ldi	0x3c
+		gt?	
+		bnt	code_5736
+		push2	
+		pushi	0x0084
+		pushi	0x03e1
+		callk	0x1, 0x4
+		push2	
+		pushi	0x0084
+		pushi	0x03e0
+		callk	0x0, 0x4
+		jmp	code_5811
+code_5736:
+		lsg	0xac
+		ldi	0x1e
+		gt?	
+		bnt	code_5777
+		push2	
+		pushi	0x0084
+		pushi	0x03e0
+		callk	0x1, 0x4
+		pushi	0x04
+		pushi	0x0084
+		pushi	0x03df
+		pushi	0x03de
+		pushi	0x03dd
+		calle	0x03be, 0x0000, 0x08
+		jmp	code_5811
+code_5777:
+		lsg	0xac
+		ldi	0x0a
+		gt?	
+		bnt	code_5811
+		pushi	0x06
+		pushi	0x0084
+		pushi	0x03d8
+		pushi	0x03d9
+		pushi	0x03da
+		pushi	0x03db
+		pushi	0x03dc
+		calle	0x03be, 0x0000, 0x0c
+code_5811:
+		pushi	0x6c
+		push0	
+		super	0x6, 0x4
+		ret	
+
+DoCountDown::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_6093
+		pTos	0x1a
+		ldi	0x1e
+		eq?	
+		bnt	code_5859
+		pushi	0x2b
+		push1	
+		pushi	0x0163
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x66
+		push1	
+		push0	
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x16
+code_5859:
+		pushi	0x2b
+		push1	
+		pTos	0x1a
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_5877
+		ldi	0x03d8
+		jmp	code_6075
+code_5877:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_5890
+		ldi	0x03d9
+		jmp	code_6075
+code_5890:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5903
+		ldi	0x03da
+		jmp	code_6075
+code_5903:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_5916
+		ldi	0x03db
+		jmp	code_6075
+code_5916:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5929
+		ldi	0x03dc
+		jmp	code_6075
+code_5929:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_5942
+		ldi	0x03dd
+		jmp	code_6075
+code_5942:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_5955
+		ldi	0x03de
+		jmp	code_6075
+code_5955:
+		dup	
+		ldi	0x1e
+		eq?	
+		bnt	code_5968
+		ldi	0x03df
+		jmp	code_6075
+code_5968:
+		dup	
+		ldi	0x3c
+		eq?	
+		bnt	code_5981
+		ldi	0x03e0
+		jmp	code_6075
+code_5981:
+		dup	
+		ldi	0x78
+		eq?	
+		bnt	code_5994
+		ldi	0x03e1
+		jmp	code_6075
+code_5994:
+		dup	
+		ldi	0x00b4
+		eq?	
+		bnt	code_6008
+		ldi	0x03e2
+		jmp	code_6075
+code_6008:
+		dup	
+		ldi	0x00f0
+		eq?	
+		bnt	code_6022
+		ldi	0x03e3
+		jmp	code_6075
+code_6022:
+		dup	
+		ldi	0x012c
+		eq?	
+		bnt	code_6036
+		ldi	0x03e4
+		jmp	code_6075
+code_6036:
+		dup	
+		ldi	0x0258
+		eq?	
+		bnt	code_6050
+		ldi	0x03e5
+		jmp	code_6075
+code_6050:
+		dup	
+		ldi	0x0384
+		eq?	
+		bnt	code_6064
+		ldi	0x03e6
+		jmp	code_6075
+code_6064:
+		dup	
+		ldi	0x0708
+		eq?	
+		bnt	code_6075
+		ldi	0x03d6
+code_6075:
+		toss	
+		push	
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lofsa	sampledVoice
+		send	0x12
+		jmp	code_6229
+code_6093:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_6138
+		pTos	0x1a
+		ldi	0x05
+		gt?	
+		bnt	code_6130
+		pushi	0x2b
+		push1	
+		pushi	0x03d7
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lofsa	sampledVoice
+		send	0x12
+		jmp	code_6229
+code_6130:
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_6229
+code_6138:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_6229
+		lag	0x57
+		bnt	code_6156
+		pTos	0x1a
+		ldi	0x0384
+		eq?	
+code_6156:
+		bt	code_6171
+		lag	0x57
+		not	
+		bnt	code_6187
+		pTos	0x1a
+		ldi	0x0708
+		eq?	
+code_6171:
+		bnt	code_6187
+		pushi	0x008b
+		push0	
+		push2	
+		pushi	0x04
+		push1	
+		callk	0x2, 0x4
+		send	0x4
+code_6187:
+		lsg	0xb
+		ldi	0x0d
+		ne?	
+		bnt	code_6224
+		lsg	0xac
+		ldi	0x0f
+		lt?	
+		bnt	code_6224
+		pushi	0x0239
+		push1	
+		push0	
+		class	0x79
+		send	0x6
+		pushi	0x008c
+		push1	
+		lofsa	timesUp
+		push	
+		lag	0x2
+		send	0x6
+code_6224:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_6229:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT DoCountDown of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'DoCountDown', 'id': 'string_8'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x6c]  = DoCountDown::108   	 ; @0x15b0
+  [0x8a]  = DoCountDown::138   	 ; @0x16ba
+
+.CODE
+; exported
+code_6294:
+		lsp	0x1
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		lap	0x2
+		and	
+		bnt	code_6314
+		ldi	0x01
+		ret	
+
+		jmp	code_6317
+code_6314:
+		ldi	0x00
+		ret	
+
+code_6317:
+		ret	
+
+
+.OBJECT star1 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'star1', 'id': 'string_9'}
+  [#4] = 0x9b
+  [#5] = 0x33
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xd8
+  [#24] = 0x4
+  [#25] = 0x3
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x5810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x14
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT star2 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'star2', 'id': 'string_10'}
+  [#4] = 0x10f
+  [#5] = 0x72
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xd8
+  [#24] = 0x4
+  [#25] = 0x1
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x5810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x18
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT star3 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'star3', 'id': 'string_11'}
+  [#4] = 0x69
+  [#5] = 0x9a
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xd8
+  [#24] = 0x4
+  [#25] = 0x2
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x5810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x10
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT arcada of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'arcada', 'id': 'string_12'}
+  [#4] = 0xf7
+  [#5] = 0x64
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xd8
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x6800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x5
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.CODE
+detonationBox::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2e, 0x4
+		push0	
+		call	code_2790, 0
+		ret	
+
+detonationBox::60:
+		pushi	0x3c
+		push0	
+		super	0x2e, 0x4
+		pTos	0x8
+		ldi	0x00a0
+		lt?	
+		bnt	code_6771
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		lt?	
+code_6771:
+		bt	code_6795
+		pTos	0x8
+		ldi	0x00a0
+		gt?	
+		bnt	code_6803
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		gt?	
+code_6795:
+		bnt	code_6803
+		push0	
+		call	code_2790, 0
+code_6803:
+		ret	
+
+detonationBox::266:
+		link	0x32
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_6862
+		pushi	0x03
+		pushi	0x05
+		lea	0x4, 0x0
+		push	
+		pushi	0x02bc
+		pushi	0x0f
+		lsg	0xac
+		ldi	0x01
+		add	
+		push	
+		ldi	0x3c
+		div	
+		push	
+		lsg	0xac
+		ldi	0x01
+		add	
+		push	
+		ldi	0x3c
+		mod	
+		push	
+		callk	0x48, 0xa
+		push	
+		pushi	0x1e
+		push1	
+		calle	0xff, 0x00, 0x06
+		jmp	code_6873
+code_6862:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2e, 0x6
+code_6873:
+		toss	
+		ret	
+
+detonationBox::108:
+		pushi	0x023d
+		push0	
+		class	0x79
+		send	0x4
+		bnt	code_6907
+		pushi	0x04
+		pushi	0x02bc
+		pushi	0x03
+		pushi	0x6c
+		pushi	0x023d
+		push0	
+		class	0x79
+		send	0x4
+		push	
+		callk	0x1b, 0x8
+code_6907:
+		pushi	0x6c
+		push0	
+		super	0x2e, 0x4
+		ret	
+
+
+.OBJECT detonationBox of 0x2e
+Exported
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'detonationBox', 'id': 'string_14'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x1d
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'countdown window', 'id': 'string_13'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x3
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x6011
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 4
+  [0x6b]  = detonationBox::107   	 ; @0x1a4a
+  [0x3c]  = detonationBox::60   	 ; @0x1a58
+  [0x6c]  = detonationBox::108   	 ; @0x1adb
+  [0x10a]  = detonationBox::266   	 ; @0x1a94
+
+.OBJECT sarien1 of 0x78
+Function area offset: 0x78
+Selectors [59]:
+  [#0] = 0x78
+  [#1] = 0x78
+  [#2] = 0x0
+  [#3] = {'val': 'sarien1', 'id': 'string_15'}
+  [#4] = 0x151
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sarien', 'id': 'string_0'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "These guys look scary. But then, don't most other beings packing weapons?", 'id': 'string_1'}
+  [#22] = 0x2
+  [#23] = 0x19a
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x4
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x1
+  [#58] = 0x3c
+Overriden functions: 0
+
+.OBJECT sarien2 of 0x78
+Function area offset: 0x78
+Selectors [59]:
+  [#0] = 0x78
+  [#1] = 0x78
+  [#2] = 0x0
+  [#3] = {'val': 'sarien2', 'id': 'string_16'}
+  [#4] = 0x151
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sarien', 'id': 'string_0'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "These guys look scary. But then, don't most other beings packing weapons?", 'id': 'string_1'}
+  [#22] = 0x2
+  [#23] = 0x19a
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x4
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x1
+  [#58] = 0x3c
+Overriden functions: 0
+
+.OBJECT deltaur of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'deltaur', 'id': 'string_17'}
+  [#4] = 0xfd
+  [#5] = 0x31
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xd8
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x6800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x1
+  [#47] = 0x4
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.OBJECT deltaurArm of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'deltaurArm', 'id': 'string_18'}
+  [#4] = 0xfd
+  [#5] = 0x31
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xd8
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0xc
+  [#27] = 0x0
+  [#28] = 0x7810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x4
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.CODE
+UpperElevFeat::266:
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_7568
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+		jmp	code_7578
+code_7568:
+		push2	
+		pushi	0x02bc
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+code_7578:
+		ret	
+
+		bnot	
+
+.OBJECT UpperElevFeat of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'UpperElevFeat', 'id': 'string_21'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator shaft', 'id': 'string_19'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x20
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is an elevator shaft. Elevators are known to have traveled these parts, mostly up and down.', 'id': 'string_20'}
+Overriden functions: 1
+  [0x10a]  = UpperElevFeat::266   	 ; @0x1d7a
+
+.CODE
+LowElevFeat::266:
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_7670
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+		jmp	code_7680
+code_7670:
+		push2	
+		pushi	0x02bc
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+code_7680:
+		ret	
+
+		bnot	
+
+.OBJECT LowElevFeat of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'LowElevFeat', 'id': 'string_23'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator shaft', 'id': 'string_19'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is an elevator shaft.', 'id': 'string_22'}
+Overriden functions: 1
+  [0x10a]  = LowElevFeat::266   	 ; @0x1de0
+
+.OBJECT sarienSteps of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'sarienSteps', 'id': 'string_24'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.OBJECT explosionSound of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'explosionSound', 'id': 'string_25'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x134
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.OBJECT sampledVoice of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'sampledVoice', 'id': 'string_26'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "sarien"
+string_1: "These guys look scary. But then, don't most other beings packing weapons?"
+string_2: "Sarien"		 ; special
+string_3: "arcadaRegion"		 ; special
+string_4: "callGuards"		 ; special
+string_5: "removeGuards"		 ; special
+string_6: "shootEgoDead"		 ; special
+string_7: "timesUp"		 ; special
+string_8: "DoCountDown"		 ; special
+string_9: "star1"		 ; special
+string_10: "star2"		 ; special
+string_11: "star3"		 ; special
+string_12: "arcada"		 ; special
+string_13: "countdown window"
+string_14: "detonationBox"		 ; special
+string_15: "sarien1"		 ; special
+string_16: "sarien2"		 ; special
+string_17: "deltaur"		 ; special
+string_18: "deltaurArm"		 ; special
+string_19: "elevator shaft"
+string_20: "This is an elevator shaft. Elevators are known to have traveled these parts, mostly up and down."
+string_21: "UpperElevFeat"		 ; special
+string_22: "This is an elevator shaft."
+string_23: "LowElevFeat"		 ; special
+string_24: "sarienSteps"		 ; special
+string_25: "explosionSound"		 ; special
+string_26: "sampledVoice"		 ; special
+string_unused_27: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0, 0x0, 0x0
+
+.RELOCATION
+num of pointers: 138
+0x1e0, 0x24a, 0x2da, 0x2ee, 0x2fe, 0x4e2, 0x674, 0x67c, 0x710, 0x72b, 0x78e, 0x7cd, 0x7d6, 0x7df, 0x82a, 0x84e, 0x86b, 0x87a, 0x885, 0x893, 0x8bc, 0x8d1, 0x8e6, 0x8f3, 0x95a, 0x996, 0xa0a, 0xa22, 0xa50, 0xb40, 0xb61, 0xb80, 0xb90, 0xb9a, 0xba5, 0xbb5, 0xbbf, 0xc64, 0xc8e, 0xc9e, 0xca8, 0xcdd, 0xced, 0xcfd, 0xd07, 0xd4d, 0xd68, 0xd83, 0xd99, 0xdc5, 0xdfc, 0xe3e, 0xe80, 0xe90, 0xea1, 0xead, 0xeb8, 0xeca, 0xed7, 0xee9, 0xf0e, 0xf33, 0xf66, 0xf78, 0xf86, 0xf98, 0xfae, 0xfcc, 0x106d, 0x1076, 0x1083, 0x1092, 0x109b, 0x10d5, 0x10e8, 0x10fe, 0x111b, 0x113d, 0x1146, 0x115e, 0x116b, 0x1181, 0x119e, 0x11c0, 0x11c9, 0x11e1, 0x11f3, 0x120c, 0x1220, 0x12d5, 0x12ff, 0x134c, 0x13a1, 0x13f4, 0x1402, 0x140b, 0x1428, 0x1430, 0x1438, 0x1447, 0x1456, 0x1465, 0x1498, 0x14a5, 0x14af, 0x14bf, 0x14cc, 0x14dd, 0x151b, 0x152d, 0x1580, 0x17c6, 0x17eb, 0x1849, 0x186a, 0x18c0, 0x1926, 0x198c, 0x19f2, 0x1b14, 0x1b28, 0x1b80, 0x1b94, 0x1ba4, 0x1c06, 0x1c1a, 0x1c2a, 0x1c8c, 0x1d0a, 0x1dae, 0x1dc2, 0x1dd2, 0x1e14, 0x1e28, 0x1e38, 0x1e54, 0x1e8a, 0x1ec0

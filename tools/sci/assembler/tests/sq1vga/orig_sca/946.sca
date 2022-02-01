@@ -1,0 +1,73 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+Polygon::107:
+		link	0x02
+		lsp	0x0
+		ldi	0x02
+		div	
+		aTop	0x8
+		push2	
+		push1	
+		push2	
+		lap	0x0
+		mul	
+		push	
+		callk	0x72, 0x4
+		aTop	0xa
+		pushi	0x03
+		pTos	0xa
+		lea	0x6, 0x1
+		push	
+		lsp	0x0
+		ldi	0x02
+		mul	
+		neg	
+		push	
+		callk	0x47, 0x6
+		ldi	0x01
+		aTop	0xe
+		ret	
+
+Polygon::108:
+		pToa	0xe
+		bnt	code_66
+		pToa	0xa
+		bnt	code_66
+		push2	
+		pushi	0x03
+		pTos	0xa
+		callk	0x72, 0x4
+code_66:
+		pushi	0x6c
+		push0	
+		super	0x0, 0x4
+		ret	
+
+		bnot	
+
+.CLASS Polygon of 0x0
+Function area offset: 0x22
+Selectors [8]:
+  [0x0] = 0x23
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Polygon', 'id': 'string_0'}
+  [0x59] = 0x0
+  [0x5a] = 0x0
+  [0x22] = 0x1
+  [0xe5] = 0x0
+Overriden functions: 2
+  [0x6b]  = Polygon::107   	 ; @0x4
+  [0x6c]  = Polygon::108   	 ; @0x30
+
+.STRINGS
+string_0: "Polygon"		 ; special
+string_unused_1: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x5c

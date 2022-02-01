@@ -1,0 +1,3048 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm31 of 0x74
+
+.CODE
+rm31::107:
+		pushi	0x04
+		pushi	0x0080
+		pushi	0x01ac
+		pushi	0x15
+		pushi	0x0a
+		calle	0x03be, 0x0000, 0x08
+		pushi	0x06
+		pushi	0x0084
+		pushi	0x01c1
+		pushi	0x01a9
+		pushi	0x01c2
+		pushi	0x01aa
+		pushi	0x01c3
+		calle	0x03be, 0x0000, 0x0c
+		lsg	0xc
+		ldi	0x20
+		eq?	
+		bnt	code_73
+		ldi	0x0c
+		aTop	0x16
+		jmp	code_105
+code_73:
+		lsg	0xc
+		ldi	0x1e
+		eq?	
+		bnt	code_101
+		pushi	0x011a
+		push2	
+		pushi	0x0134
+		pushi	0x7b
+		lag	0x0
+		send	0x8
+		ldi	0x0b
+		aTop	0x16
+		jmp	code_105
+code_101:
+		ldi	0x0b
+		aTop	0x16
+code_105:
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_230
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x12
+		push0	
+		push0	
+		pushi	0x013f
+		push1	
+		pushi	0x013f
+		pushi	0x2c
+		pushi	0x00fe
+		pushi	0x2b
+		pushi	0x00cf
+		pushi	0x30
+		pushi	0x00cb
+		pushi	0x39
+		pushi	0x00bd
+		pushi	0x37
+		pushi	0x76
+		pushi	0x3c
+		push0	
+		pushi	0x3c
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x32
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0c
+		push0	
+		pushi	0x49
+		pushi	0x00c5
+		pushi	0x41
+		pushi	0x0100
+		pushi	0x38
+		pushi	0x013f
+		pushi	0x32
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x26
+		push	
+		self	0x8
+		jmp	code_380
+code_230:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x14
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x1c
+		pushi	0x00b4
+		pushi	0x75
+		pushi	0x0093
+		pushi	0x0098
+		pushi	0x009d
+		pushi	0x00a3
+		pushi	0x009c
+		pushi	0x00ba
+		pushi	0x00a1
+		pushi	0x00b4
+		pushi	0x00aa
+		pushi	0x00df
+		pushi	0x00b6
+		pushi	0x013f
+		pushi	0x0098
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x36
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x14
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x64
+		pushi	0x00e8
+		pushi	0x6c
+		pushi	0x00d8
+		pushi	0x0084
+		pushi	0x00ad
+		pushi	0x008f
+		dup	
+		pushi	0x0089
+		pushi	0x75
+		pushi	0x0090
+		pushi	0x1c
+		pushi	0x00b2
+		push0	
+		pushi	0x00b4
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x36
+		push	
+		self	0x8
+code_380:
+		pushi	0x6b
+		push0	
+		lofsa	grate
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	frontOfGrate
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	upperledge
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	lowerLedge
+		send	0x4
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push1	
+		pushi	0x48
+		callb	0x6, 0x2
+		bnt	code_436
+		pushi	0x6b
+		push0	
+		lofsa	stickyPlant
+		send	0x4
+code_436:
+		push1	
+		pushi	0x1f
+		callb	0x6, 0x2
+		bnt	code_565
+		pushi	0x6b
+		push0	
+		lofsa	grateMonster1
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	grateMonster2
+		send	0x4
+		pushi	0x6b
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	waveYourEyeStalk
+		push	
+		lofsa	eyeStalk
+		send	0xa
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		bnt	code_520
+		pushi	0x2b
+		push1	
+		pushi	0x01c1
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x008c
+		push1	
+		lofsa	tentacleStuck
+		push	
+		lofsa	grateMonster1
+		send	0x6
+		jmp	code_565
+code_520:
+		pushi	0x2b
+		push1	
+		pushi	0x01a9
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		lofsa	tentacle1
+		send	0x8
+		pushi	0x008c
+		pushi	0x03
+		lofsa	tentacleWave
+		push	
+		push0	
+		push0	
+		lofsa	tentacle1
+		send	0xa
+code_565:
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		push0	
+		callb	0x3, 0x0
+		ret	
+
+rm31::60:
+		pToa	0x8
+		bnt	code_589
+		pushi	0x3c
+		push0	
+		send	0x4
+		jmp	code_819
+code_589:
+		pushi	0x0131
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x08
+		and	
+		bnt	code_618
+		pushi	0x0177
+		push1	
+		pushi	0x22
+		lag	0x2
+		send	0x6
+		jmp	code_819
+code_618:
+		push1	
+		pushi	0x1f
+		callb	0x6, 0x2
+		not	
+		bnt	code_734
+		pushi	0x0131
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x2000
+		and	
+		bnt	code_734
+		pushi	0x2b
+		push1	
+		pushi	0x01a9
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		push1	
+		pushi	0x1f
+		callb	0x7, 0x2
+		pushi	0x6b
+		push0	
+		lofsa	grateMonster1
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	grateMonster2
+		send	0x4
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	waveYourEyeStalk
+		push	
+		lofsa	eyeStalk
+		send	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		lofsa	tentacle1
+		send	0x8
+		pushi	0x008c
+		pushi	0x03
+		lofsa	tentacleWave
+		push	
+		push0	
+		push0	
+		lofsa	tentacle1
+		send	0xa
+		jmp	code_819
+code_734:
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		not	
+		bnt	code_778
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x4000
+		and	
+		bnt	code_778
+		push0	
+		callb	0x2, 0x0
+		pushi	0x008c
+		push1	
+		lofsa	monsterGrabsEgo
+		push	
+		self	0x6
+		jmp	code_819
+code_778:
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		not	
+		bnt	code_819
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x0200
+		and	
+		bnt	code_819
+		push0	
+		callb	0x2, 0x0
+		pushi	0x008c
+		push1	
+		lofsa	monsterGrabsEgoSide
+		push	
+		self	0x6
+code_819:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rm31::375:
+		pushi	0x009d
+		push0	
+		lag	0x9a
+		send	0x4
+		pushi	0x0177
+		push1	
+		lsp	0x1
+		super	0x74, 0x6
+		ret	
+
+rm31::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_864
+		push2	
+		pushi	0x1f
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_930
+code_864:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_882
+		push2	
+		pushi	0x1f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_930
+code_882:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_900
+		push2	
+		pushi	0x1f
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_930
+code_900:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_919
+		push2	
+		pushi	0x1f
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_930
+code_919:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x74, 0x6
+code_930:
+		toss	
+		ret	
+
+
+.OBJECT rm31 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm31', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is another large chamber in the underground complex. Paths run along the top and bottom ledges.', 'id': 'string_0'}
+  [#10] = 0x1f
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x1e
+  [#16] = 0x0
+  [#17] = 0x20
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 4
+  [0x6b]  = rm31::107   	 ; @0xe
+  [0x3c]  = rm31::60   	 ; @0x240
+  [0x10a]  = rm31::266   	 ; @0x34c
+  [0x177]  = rm31::375   	 ; @0x33a
+
+.CODE
+tentacleWave::138:
+		link	0x01
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1057
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		bnt	code_1046
+		ldi	0x04
+		aTop	0xa
+		jmp	code_1050
+code_1046:
+		pToa	0x1a
+		aTop	0xa
+code_1050:
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1366
+code_1057:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1131
+		push2	
+		push2	
+		push0	
+		pushi	0x03
+		callk	0x3c, 0x4
+		mul	
+		sat	0x0
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		pushi	0x00c0
+		push0	
+		pushi	0x04
+		push1	
+		lsli	0x0
+		pushi	0x03
+		push1	
+		push	
+		ldi	0x01
+		add	
+		lsli	0x0
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00c0
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle1
+		send	0x28
+		ldi	0x01
+		aTop	0x1a
+		ldi	0xff
+		aTop	0xa
+		jmp	code_1366
+code_1131:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1179
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x06
+		pushi	0x08
+		callk	0x3c, 0x4
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle1
+		send	0x14
+		ldi	0x02
+		aTop	0x1a
+		ldi	0xff
+		aTop	0xa
+		jmp	code_1366
+code_1179:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1210
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	tentacle1
+		send	0x8
+		ldi	0x03
+		aTop	0x1a
+		ldi	0xff
+		aTop	0xa
+		jmp	code_1366
+code_1210:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1242
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		dup	
+		push1	
+		push1	
+		lofsa	tentacle1
+		send	0xc
+		ldi	0x00
+		aTop	0x1a
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1366
+code_1242:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1265
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	tentacle1
+		send	0x8
+		jmp	code_1366
+code_1265:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1297
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		dup	
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	tentacle1
+		send	0x14
+		jmp	code_1366
+code_1297:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1333
+		pushi	0x69
+		push0	
+		lofsa	tentacle1
+		send	0x4
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		not	
+		bnt	code_1326
+		ldi	0xff
+		aTop	0xa
+code_1326:
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1366
+code_1333:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_1354
+		pushi	0x008c
+		push2	
+		lofsa	tentacleGetsStuck
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_1366
+code_1354:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_1366
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1366:
+		toss	
+		ret	
+
+
+.OBJECT tentacleWave of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'tentacleWave', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = tentacleWave::138   	 ; @0x3f8
+
+.CODE
+tentacleGetsStuck::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1489
+		pushi	0x6b
+		push0	
+		pushi	0x00c0
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x0096
+		pushi	0x03
+		push1	
+		pushi	0x00af
+		pushi	0x00a0
+		push1	
+		pushi	0x09
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle2
+		send	0x2e
+		jmp	code_1550
+code_1489:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1517
+		pushi	0x2b
+		push1	
+		pushi	0x01c2
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lag	0x9a
+		send	0x12
+		jmp	code_1550
+code_1517:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1538
+		pushi	0x008c
+		push2	
+		lofsa	tentacleStuck
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_1550
+code_1538:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1550
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1550:
+		toss	
+		ret	
+
+
+.OBJECT tentacleGetsStuck of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'tentacleGetsStuck', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = tentacleGetsStuck::138   	 ; @0x592
+
+.CODE
+tentacleStuck::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1686
+		pushi	0x2b
+		push1	
+		pushi	0x01c1
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x0096
+		pushi	0x03
+		push1	
+		pushi	0x00af
+		pushi	0x00a0
+		push1	
+		pushi	0x0a
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	tentacle2
+		send	0x28
+		jmp	code_1698
+code_1686:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1698
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1698:
+		toss	
+		ret	
+
+
+.OBJECT tentacleStuck of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'tentacleStuck', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = tentacleStuck::138   	 ; @0x64a
+
+.CODE
+waveYourEyeStalk::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1819
+		pushi	0x69
+		push0	
+		pushi	0x04
+		push1	
+		push2	
+		pushi	0x50
+		pushi	0x0096
+		callk	0x3c, 0x4
+		push	
+		pushi	0x03
+		push1	
+		push2	
+		pushi	0x00aa
+		pushi	0x00be
+		callk	0x3c, 0x4
+		push	
+		lofsa	eyeStalk
+		send	0x10
+		push2	
+		pushi	0x3c
+		pushi	0x00b4
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_1967
+code_1819:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1855
+		pushi	0x00c0
+		push0	
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	eyeStalk
+		send	0x18
+		jmp	code_1967
+code_1855:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1887
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	eyeStalk
+		send	0x14
+		jmp	code_1967
+code_1887:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1922
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push2	
+		pushSelf	
+		lofsa	eyeStalk
+		send	0x16
+		jmp	code_1967
+code_1922:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1955
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	eyeStalk
+		send	0x14
+		jmp	code_1967
+code_1955:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1967
+		pushi	0x6b
+		push0	
+		self	0x4
+code_1967:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT waveYourEyeStalk of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'waveYourEyeStalk', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = waveYourEyeStalk::138   	 ; @0x6de
+
+.CODE
+stickyPlant::107:
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x00ab
+		pushi	0x00a3
+		self	0x10
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x30, 0x4
+		ret	
+
+
+.OBJECT stickyPlant of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'stickyPlant', 'id': 'string_8'}
+  [#4] = 0xd3
+  [#5] = 0x75
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sticky plant thing', 'id': 'string_6'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A piece of sticky plant is stuck to the floor.', 'id': 'string_7'}
+  [#22] = 0xd
+  [#23] = 0x15
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0xb
+  [#27] = 0x0
+  [#28] = 0x4810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x3
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0xd
+  [#47] = 0x3
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x6b]  = stickyPlant::107   	 ; @0x7ec
+
+.CODE
+grateMonster1::107:
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x73
+		pushi	0x00bd
+		self	0x16
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x30, 0x4
+		ret	
+
+grateMonster1::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2272
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		bnt	code_2260
+		push2	
+		pushi	0x1f
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_2388
+code_2260:
+		push2	
+		pushi	0x1f
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_2388
+code_2272:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2297
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		lofsa	grate
+		send	0x8
+		jmp	code_2388
+code_2297:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_2316
+		push2	
+		pushi	0x1f
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_2388
+code_2316:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_2335
+		push2	
+		pushi	0x1f
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_2388
+code_2335:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2375
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		bnt	code_2363
+		push2	
+		pushi	0x1f
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_2388
+code_2363:
+		push2	
+		pushi	0x1f
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_2388
+code_2375:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x30, 0x8
+code_2388:
+		toss	
+		ret	
+
+
+.OBJECT grateMonster1 of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'grateMonster1', 'id': 'string_10'}
+  [#4] = 0x73
+  [#5] = 0xc8
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'grate monster 1', 'id': 'string_9'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1ac
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 2
+  [0x6b]  = grateMonster1::107   	 ; @0x892
+  [0x10a]  = grateMonster1::266   	 ; @0x8b6
+
+.CODE
+grateMonster2::107:
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x73
+		pushi	0x00bd
+		self	0x16
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x30, 0x4
+		ret	
+
+grateMonster2::266:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		lofsa	grateMonster1
+		send	0x8
+		ret	
+
+
+.OBJECT grateMonster2 of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'grateMonster2', 'id': 'string_12'}
+  [#4] = 0x73
+  [#5] = 0xc8
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'grate monster 2', 'id': 'string_11'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1ac
+  [#24] = 0x0
+  [#25] = 0x5
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xa
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 2
+  [0x6b]  = grateMonster2::107   	 ; @0x9e0
+  [0x10a]  = grateMonster2::266   	 ; @0xa04
+
+.CODE
+tentacle1::266:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		lofsa	grateMonster1
+		send	0x8
+		ret	
+
+
+.OBJECT tentacle1 of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'tentacle1', 'id': 'string_15'}
+  [#4] = 0x7e
+  [#5] = 0xa4
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'tentacle 1', 'id': 'string_13'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Hey, this puppy has some keen-looking tentacles.', 'id': 'string_14'}
+  [#22] = 0x2
+  [#23] = 0x1ac
+  [#24] = 0x7
+  [#25] = 0x0
+  [#26] = 0xe
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x10a]  = tentacle1::266   	 ; @0xa9c
+
+.CODE
+tentacle2::266:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		lofsa	grateMonster1
+		send	0x8
+		ret	
+
+
+.OBJECT tentacle2 of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'tentacle2', 'id': 'string_17'}
+  [#4] = 0xa1
+  [#5] = 0xb2
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'tentacle 2', 'id': 'string_16'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Hey, this puppy has some keen-looking tentacles.', 'id': 'string_14'}
+  [#22] = 0x2
+  [#23] = 0x1ac
+  [#24] = 0x7
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x10a]  = tentacle2::266   	 ; @0xb30
+
+.CODE
+eyeStalk::266:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		lofsa	grateMonster1
+		send	0x8
+		ret	
+
+
+.OBJECT eyeStalk of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'eyeStalk', 'id': 'string_20'}
+  [#4] = 0x7d
+  [#5] = 0xb3
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'creature eyestalk', 'id': 'string_18'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's got the cutest little grey eye you've ever seen.", 'id': 'string_19'}
+  [#22] = 0x2
+  [#23] = 0x1ac
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = eyeStalk::266   	 ; @0xbc4
+
+.CODE
+upperledge::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3181
+		pushi	0x0131
+		push1	
+		push2	
+		lag	0x0
+		send	0x6
+		bnt	code_3169
+		push2	
+		pushi	0x1f
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_3192
+code_3169:
+		push2	
+		pushi	0x1f
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_3192
+code_3181:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3192:
+		toss	
+		ret	
+
+
+.OBJECT upperledge of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'upperledge', 'id': 'string_22'}
+  [#4] = 0x86
+  [#5] = 0x37
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'upper ledge', 'id': 'string_21'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = upperledge::266   	 ; @0xc40
+
+.CODE
+lowerLedge::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3309
+		pushi	0x0131
+		push1	
+		pushi	0x2010
+		lag	0x0
+		send	0x6
+		bnt	code_3297
+		push2	
+		pushi	0x1f
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		jmp	code_3320
+code_3297:
+		push2	
+		pushi	0x1f
+		pushi	0x0d
+		calle	0xff, 0x00, 0x04
+		jmp	code_3320
+code_3309:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3320:
+		toss	
+		ret	
+
+
+.OBJECT lowerLedge of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'lowerLedge', 'id': 'string_24'}
+  [#4] = 0x9c
+  [#5] = 0x8e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'lowerledge', 'id': 'string_23'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2010
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = lowerLedge::266   	 ; @0xcbe
+
+.OBJECT genericItem of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'genericItem', 'id': 'string_25'}
+  [#4] = 0xcd
+  [#5] = 0x64
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x32a
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x5
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x5
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.CODE
+frontOfGrate::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3537
+		push2	
+		pushi	0x1f
+		pushi	0x0e
+		calle	0xff, 0x00, 0x04
+		jmp	code_3566
+code_3537:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_3566
+		lsp	0x2
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_3565
+		pushi	0x008c
+		push1	
+		lofsa	egoThrowsPlant
+		push	
+		lag	0x0
+		send	0x6
+code_3565:
+		toss	
+code_3566:
+		toss	
+		ret	
+
+
+.OBJECT frontOfGrate of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'frontOfGrate', 'id': 'string_27'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'front of grate area', 'id': 'string_26'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = frontOfGrate::266   	 ; @0xdbc
+
+.CODE
+grate::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3678
+		push1	
+		pushi	0x1f
+		callb	0x6, 0x2
+		bnt	code_3666
+		push2	
+		pushi	0x1f
+		pushi	0x0f
+		calle	0xff, 0x00, 0x04
+		jmp	code_3964
+code_3666:
+		push2	
+		pushi	0x1f
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+		jmp	code_3964
+code_3678:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3697
+		push2	
+		pushi	0x1f
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_3964
+code_3697:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_3951
+		lsp	0x2
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_3728
+		pushi	0x008c
+		push1	
+		lofsa	egoThrowsPlant
+		push	
+		lag	0x0
+		send	0x6
+		jmp	code_3947
+code_3728:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_3747
+		push2	
+		pushi	0x1f
+		pushi	0x11
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3747:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3766
+		push2	
+		pushi	0x1f
+		pushi	0x12
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3766:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_3785
+		push2	
+		pushi	0x1f
+		pushi	0x13
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3785:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3804
+		push2	
+		pushi	0x1f
+		pushi	0x14
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3804:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_3823
+		push2	
+		pushi	0x1f
+		pushi	0x15
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3823:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_3842
+		push2	
+		pushi	0x1f
+		pushi	0x16
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3842:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_3861
+		push2	
+		pushi	0x1f
+		pushi	0x17
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3861:
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		bnt	code_3882
+		push2	
+		pushi	0x1f
+		pushi	0x18
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3882:
+		push1	
+		pushi	0x1f
+		callb	0x6, 0x2
+		bnt	code_3938
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_3911
+		push2	
+		pushi	0x1f
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_3947
+code_3911:
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		lofsa	tentacle2
+		send	0x8
+		pushi	0x008c
+		push1	
+		lofsa	egoThrowsWrongItem
+		push	
+		lofsa	tentacle2
+		send	0x6
+		jmp	code_3947
+code_3938:
+		push2	
+		pushi	0x1f
+		pushi	0x1a
+		calle	0xff, 0x00, 0x04
+code_3947:
+		toss	
+		jmp	code_3964
+code_3951:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2c, 0x8
+code_3964:
+		toss	
+		ret	
+
+
+.OBJECT grate of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'grate', 'id': 'string_29'}
+  [#4] = 0x6a
+  [#5] = 0xb5
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'grate on floor', 'id': 'string_28'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = grate::266   	 ; @0xe34
+
+.CODE
+monsterGrabsEgoSide::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4128
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x19
+		pushi	0x00b7
+		pushSelf	
+		lag	0x0
+		send	0x12
+		pushi	0x6b
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x3d
+		pushi	0x03
+		push1	
+		pushi	0x00bd
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x05
+		push1	
+		pushi	0x15
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x03
+		class	0x19
+		push	
+		push1	
+		push1	
+		lofsa	tentacle2
+		send	0x32
+		jmp	code_4333
+code_4128:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4155
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		push1	
+		pushSelf	
+		lofsa	tentacle2
+		send	0xc
+		jmp	code_4333
+code_4155:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4186
+		pushi	0x07
+		push1	
+		pushi	0x04
+		lofsa	tentacle2
+		send	0x6
+		pushi	0x69
+		push0	
+		lag	0x0
+		send	0x4
+		ldi	0x01
+		aTop	0x10
+		jmp	code_4333
+code_4186:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4213
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x07
+		push1	
+		pushSelf	
+		lofsa	tentacle2
+		send	0xc
+		jmp	code_4333
+code_4213:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4258
+		pushi	0x2b
+		push1	
+		pushi	0x016e
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x07
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle2
+		send	0xe
+		jmp	code_4333
+code_4258:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_4298
+		pushi	0x2b
+		push1	
+		pushi	0x01aa
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		push2	
+		pushi	0x1f
+		pushi	0x1b
+		calle	0xff, 0x00, 0x04
+		ldi	0x04
+		aTop	0x12
+		jmp	code_4333
+code_4298:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_4333
+		push2	
+		pushi	0x1f
+		pushi	0x1c
+		calle	0xff, 0x00, 0x04
+		pushi	0x05
+		pushi	0x03af
+		push0	
+		push0	
+		pushi	0x1f
+		pushi	0x1d
+		callb	0xa, 0xa
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4333:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT monsterGrabsEgoSide of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'monsterGrabsEgoSide', 'id': 'string_30'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = monsterGrabsEgoSide::138   	 ; @0xfc2
+
+.CODE
+monsterGrabsEgo::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4428
+		pushi	0x0119
+		push1	
+		push0	
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		lag	0x0
+		send	0xc
+		ldi	0x03
+		aTop	0x10
+		jmp	code_4699
+code_4428:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4503
+		pushi	0x6b
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x01ac
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		dup	
+		push1	
+		push0	
+		pushi	0x00c0
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x23
+		sub	
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x07
+		add	
+		push	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle2
+		send	0x2e
+		jmp	code_4699
+code_4503:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4545
+		pushi	0x05
+		push1	
+		pushi	0x15
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		push1	
+		pushSelf	
+		lofsa	tentacle2
+		send	0x1e
+		jmp	code_4699
+code_4545:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4584
+		pushi	0x69
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x07
+		push1	
+		pushi	0x04
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x07
+		push1	
+		pushSelf	
+		lofsa	tentacle2
+		send	0x12
+		jmp	code_4699
+code_4584:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4629
+		pushi	0x2b
+		push1	
+		pushi	0x016e
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x07
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle2
+		send	0xe
+		jmp	code_4699
+code_4629:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_4669
+		pushi	0x2b
+		push1	
+		pushi	0x01aa
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		push2	
+		pushi	0x1f
+		pushi	0x1b
+		calle	0xff, 0x00, 0x04
+		ldi	0x04
+		aTop	0x12
+		jmp	code_4699
+code_4669:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_4699
+		push2	
+		pushi	0x1f
+		pushi	0x1c
+		calle	0xff, 0x00, 0x04
+		pushi	0x05
+		pushi	0x03af
+		push0	
+		push0	
+		pushi	0x1f
+		pushi	0x1d
+		callb	0xa, 0xa
+code_4699:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT monsterGrabsEgo of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'monsterGrabsEgo', 'id': 'string_31'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = monsterGrabsEgo::138   	 ; @0x112a
+
+.CODE
+egoThrowsWrongItem::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4794
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x00fa
+		pushi	0x008a
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_5145
+code_4794:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4818
+		push2	
+		lsg	0x0
+		lofsa	grateMonster1
+		push	
+		callb	0xd, 0x4
+		ldi	0x03
+		aTop	0x10
+		jmp	code_5145
+code_4818:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4868
+		pushi	0x05
+		push1	
+		pushi	0x15
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x05
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		pushi	0x008c
+		push1	
+		lofsa	tentacleKnocksItBack
+		push	
+		self	0x6
+		jmp	code_5145
+code_4868:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4882
+		ldi	0x0a
+		aTop	0x16
+		jmp	code_5145
+code_4882:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4954
+		pushi	0x6b
+		push0	
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		pushi	0x36
+		push1	
+		pushi	0x06
+		pushi	0x37
+		push1	
+		pushi	0x06
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x00d9
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00b0
+		pushi	0x008b
+		pushSelf	
+		lofsa	genericItem
+		send	0x2e
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lag	0x0
+		send	0x6
+		jmp	code_5145
+code_4954:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_4984
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00cd
+		pushi	0x0094
+		pushSelf	
+		lofsa	genericItem
+		send	0xc
+		jmp	code_5145
+code_4984:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_5014
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00d2
+		pushi	0x008c
+		pushSelf	
+		lofsa	genericItem
+		send	0xc
+		jmp	code_5145
+code_5014:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_5044
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00d8
+		pushi	0x008f
+		pushSelf	
+		lofsa	genericItem
+		send	0xc
+		jmp	code_5145
+code_5044:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_5084
+		pushi	0x05
+		push1	
+		pushi	0x0a
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_5145
+code_5084:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_5114
+		pushi	0x6c
+		push0	
+		lofsa	genericItem
+		send	0x4
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_5145
+code_5114:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_5145
+		push2	
+		pushi	0x1f
+		pushi	0x1e
+		calle	0xff, 0x00, 0x04
+		push1	
+		pushi	0x1f
+		callb	0x7, 0x2
+		pushi	0x03
+		push1	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+code_5145:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT egoThrowsWrongItem of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoThrowsWrongItem', 'id': 'string_32'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoThrowsWrongItem::138   	 ; @0x1298
+
+.CODE
+tentacleKnocksItBack::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_5267
+		pushi	0x00c0
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x04
+		dup	
+		push1	
+		pushi	0x008a
+		pushi	0x03
+		push1	
+		pushi	0x00aa
+		pushi	0x05
+		push1	
+		pushi	0x01ac
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	tentacle2
+		send	0x28
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_5345
+code_5267:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_5290
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	tentacle2
+		send	0x8
+		jmp	code_5345
+code_5290:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_5330
+		pushi	0x2b
+		push1	
+		pushi	0x01c3
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	tentacle2
+		send	0x8
+		jmp	code_5345
+code_5330:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5345
+		pushi	0x69
+		push0	
+		lofsa	tentacle2
+		send	0x4
+code_5345:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT tentacleKnocksItBack of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'tentacleKnocksItBack', 'id': 'string_33'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = tentacleKnocksItBack::138   	 ; @0x1456
+
+.CODE
+egoThrowsPlant::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_5496
+		push1	
+		pushi	0x15
+		callb	0x6, 0x2
+		bnt	code_5443
+		push2	
+		pushi	0x1f
+		dup	
+		calle	0xff, 0x00, 0x04
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_5665
+code_5443:
+		push1	
+		pushi	0x1f
+		callb	0x6, 0x2
+		not	
+		bnt	code_5470
+		push2	
+		pushi	0x1f
+		pushi	0x20
+		calle	0xff, 0x00, 0x04
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_5665
+code_5470:
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x00f9
+		pushi	0x0084
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_5665
+code_5496:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_5520
+		push2	
+		lsg	0x0
+		lofsa	grateMonster1
+		push	
+		callb	0xd, 0x4
+		ldi	0x03
+		aTop	0x10
+		jmp	code_5665
+code_5520:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_5560
+		pushi	0x05
+		push1	
+		pushi	0x15
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x05
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_5665
+code_5560:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5626
+		pushi	0x6b
+		push0	
+		lofsa	stickyPlant
+		send	0x4
+		pushi	0x0146
+		push2	
+		pushi	0x10
+		pushi	0x1f
+		lag	0x0
+		send	0x8
+		push1	
+		pushi	0x1f
+		callb	0x6, 0x2
+		bnt	code_5611
+		push1	
+		pushi	0x15
+		callb	0x7, 0x2
+		push2	
+		pushi	0x05
+		pushi	0x0090
+		callb	0xb, 0x4
+code_5611:
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_5665
+code_5626:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_5649
+		pushi	0x03
+		push1	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		ldi	0x08
+		aTop	0x12
+		jmp	code_5665
+code_5649:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5665
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_5665:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT egoThrowsPlant of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoThrowsPlant', 'id': 'string_34'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoThrowsPlant::138   	 ; @0x151e
+
+.STRINGS
+string_0: "This is another large chamber in the underground complex. Paths run along the top and bottom ledges."
+string_1: "rm31"		 ; special
+string_2: "tentacleWave"		 ; special
+string_3: "tentacleGetsStuck"		 ; special
+string_4: "tentacleStuck"		 ; special
+string_5: "waveYourEyeStalk"		 ; special
+string_6: "sticky plant thing"
+string_7: "A piece of sticky plant is stuck to the floor."
+string_8: "stickyPlant"		 ; special
+string_9: "grate monster 1"
+string_10: "grateMonster1"		 ; special
+string_11: "grate monster 2"
+string_12: "grateMonster2"		 ; special
+string_13: "tentacle 1"
+string_14: "Hey, this puppy has some keen-looking tentacles."
+string_15: "tentacle1"		 ; special
+string_16: "tentacle 2"
+string_17: "tentacle2"		 ; special
+string_18: "creature eyestalk"
+string_19: "It's got the cutest little grey eye you've ever seen."
+string_20: "eyeStalk"		 ; special
+string_21: "upper ledge"
+string_22: "upperledge"		 ; special
+string_23: "lowerledge"
+string_24: "lowerLedge"		 ; special
+string_25: "genericItem"		 ; special
+string_26: "front of grate area"
+string_27: "frontOfGrate"		 ; special
+string_28: "grate on floor"
+string_29: "grate"		 ; special
+string_30: "monsterGrabsEgoSide"		 ; special
+string_31: "monsterGrabsEgo"		 ; special
+string_32: "egoThrowsWrongItem"		 ; special
+string_33: "tentacleKnocksItBack"		 ; special
+string_34: "egoThrowsPlant"		 ; special
+string_unused_35: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x72, 0xa0, 0x85, 0xa9, 0x9d, 0xb1, 0xab, 0xb7
+
+.RELOCATION
+num of pointers: 107
+0x180, 0x188, 0x190, 0x198, 0x1b0, 0x1c1, 0x1c9, 0x1d5, 0x1d9, 0x1fd, 0x201, 0x221, 0x22b, 0x231, 0x2a1, 0x2a9, 0x2b8, 0x2bc, 0x2c7, 0x2d1, 0x2d7, 0x302, 0x32e, 0x3b6, 0x3c2, 0x45c, 0x48c, 0x4ab, 0x4cb, 0x4ea, 0x50a, 0x51c, 0x541, 0x56a, 0x5ca, 0x5f9, 0x622, 0x68f, 0x6b6, 0x709, 0x738, 0x758, 0x77b, 0x79c, 0x7c4, 0x81e, 0x832, 0x842, 0x8f2, 0x968, 0x97c, 0xa0d, 0xa24, 0xa38, 0xaa5, 0xabc, 0xad0, 0xae0, 0xb39, 0xb50, 0xb64, 0xb74, 0xbcd, 0xbe4, 0xbf8, 0xc08, 0xc8c, 0xca0, 0xd0c, 0xd20, 0xd4c, 0xde6, 0xe02, 0xe16, 0xe86, 0xf4e, 0xf57, 0xf5b, 0xf90, 0xfa4, 0x1019, 0x1034, 0x1048, 0x106e, 0x109b, 0x1102, 0x1190, 0x11ba, 0x11e1, 0x120e, 0x1270, 0x12c5, 0x12fc, 0x1348, 0x1371, 0x138f, 0x13ad, 0x13e7, 0x142e, 0x1488, 0x14a3, 0x14cb, 0x14dd, 0x14f6, 0x1583, 0x15c3, 0x1636

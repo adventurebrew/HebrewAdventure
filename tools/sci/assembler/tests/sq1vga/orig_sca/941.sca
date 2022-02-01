@@ -1,0 +1,139 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+RandCycle::107:
+		pushi	0x6b
+		push1	
+		lsp	0x1
+		super	0x16, 0x6
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_39
+		lap	0x2
+		aTop	0x12
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_43
+		lap	0x3
+		aTop	0xa
+		jmp	code_43
+code_39:
+		ldi	0xff
+		aTop	0x12
+code_43:
+		ret	
+
+RandCycle::60:
+		ipToa	0xe
+		pTos	0xe
+		pushi	0x00d9
+		push0	
+		pToa	0x8
+		send	0x4
+		gt?	
+		bnt	code_101
+		pToa	0x12
+		bnt	code_95
+		push	
+		ldi	0x00
+		gt?	
+		bnt	code_74
+		dpToa	0x12
+code_74:
+		pushi	0x07
+		push1	
+		pushi	0x00d6
+		push0	
+		self	0x4
+		push	
+		pToa	0x8
+		send	0x6
+		ldi	0x00
+		aTop	0xe
+		jmp	code_101
+code_95:
+		pushi	0x00d7
+		push0	
+		self	0x4
+code_101:
+		ret	
+
+RandCycle::214:
+		link	0x01
+		push1	
+		pTos	0x8
+		callk	0xe, 0x2
+		push	
+		ldi	0x01
+		ne?	
+		bnt	code_150
+code_117:
+		push2	
+		push0	
+		pushi	0x00db
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		callk	0x3c, 0x4
+		sat	0x0
+		push	
+		pushi	0x07
+		push0	
+		pToa	0x8
+		send	0x4
+		eq?	
+		bnt	code_148
+		jmp	code_117
+code_148:
+		lat	0x0
+code_150:
+		ret	
+
+RandCycle::215:
+		ldi	0x01
+		aTop	0x10
+		pToa	0xa
+		bnt	code_167
+		ldi	0x01
+		sag	0x25
+		jmp	code_173
+code_167:
+		pushi	0x00d8
+		push0	
+		self	0x4
+code_173:
+		ret	
+
+
+.CLASS RandCycle of 0x16
+Function area offset: 0x2a
+Selectors [10]:
+  [0x0] = 0x5e
+  [0x1] = 0x16
+  [0x2] = 0x8000
+  [0x17] = {'val': 'RandCycle', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x1ba] = 0xffff
+Overriden functions: 4
+  [0x6b]  = RandCycle::107   	 ; @0x4
+  [0x3c]  = RandCycle::60   	 ; @0x2c
+  [0xd6]  = RandCycle::214   	 ; @0x66
+  [0xd7]  = RandCycle::215   	 ; @0x97
+
+.STRINGS
+string_0: "RandCycle"		 ; special
+string_unused_1: ""
+
+
+.RELOCATION
+num of pointers: 1
+0xc0

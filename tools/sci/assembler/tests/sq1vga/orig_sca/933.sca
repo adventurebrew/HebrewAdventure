@@ -1,0 +1,285 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+PseudoMouse::129:
+		pushi	0x0142
+		push0	
+		lag	0x50
+		send	0x4
+		bnt	code_180
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x40
+		and	
+		bnt	code_180
+		lag	0x45
+		not	
+		bt	code_52
+		pushi	0x28
+		push0	
+		pushi	0x00cc
+		push0	
+		lag	0x45
+		send	0x4
+		send	0x4
+		push	
+		ldi	0x01
+		ne?	
+code_52:
+		bnt	code_67
+		pushi	0x28
+		push0	
+		lap	0x1
+		send	0x4
+		aTop	0xe
+		jmp	code_68
+code_67:
+		ret	
+
+code_68:
+		aTop	0xe
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x04
+		and	
+		bnt	code_108
+		pushi	0x40
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x03
+		and	
+		bnt	code_103
+		pToa	0xa
+		jmp	code_110
+code_103:
+		pToa	0xc
+		jmp	code_110
+code_108:
+		pToa	0x10
+code_110:
+		aTop	0x8
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x04
+		and	
+		bnt	code_151
+		pToa	0xe
+		bnt	code_139
+		pushi	0x3c
+		push0	
+		self	0x4
+		jmp	code_171
+code_139:
+		pushi	0x4c
+		push1	
+		push0	
+		lap	0x1
+		send	0x6
+		ret	
+
+		jmp	code_171
+code_151:
+		pToa	0xe
+		bnt	code_165
+		pushi	0x0082
+		push0	
+		self	0x4
+		jmp	code_171
+code_165:
+		pushi	0x009a
+		push0	
+		self	0x4
+code_171:
+		pushi	0x4c
+		push1	
+		push1	
+		lap	0x1
+		send	0x6
+		ret	
+
+code_180:
+		ret	
+
+PseudoMouse::130:
+		lap	0x0
+		bnt	code_190
+		lap	0x1
+		aTop	0xe
+code_190:
+		pushi	0x73
+		push1	
+		pushSelf	
+		lag	0x4e
+		send	0x6
+		ret	
+
+PseudoMouse::154:
+		ldi	0x00
+		aTop	0xe
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x4e
+		send	0x6
+		ret	
+
+PseudoMouse::60:
+		link	0x02
+		pushi	0x04
+		push0	
+		lag	0x18
+		send	0x4
+		sat	0x0
+		pushi	0x03
+		push0	
+		lag	0x18
+		send	0x4
+		sat	0x1
+		pTos	0xe
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_251
+		lst	0x1
+		pToa	0x8
+		sub	
+		sat	0x1
+		jmp	code_395
+code_251:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_275
+		lst	0x0
+		pToa	0x8
+		add	
+		sat	0x0
+		lst	0x1
+		pToa	0x8
+		sub	
+		sat	0x1
+		jmp	code_395
+code_275:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_292
+		lst	0x0
+		pToa	0x8
+		add	
+		sat	0x0
+		jmp	code_395
+code_292:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_316
+		lst	0x0
+		pToa	0x8
+		add	
+		sat	0x0
+		lst	0x1
+		pToa	0x8
+		add	
+		sat	0x1
+		jmp	code_395
+code_316:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_333
+		lst	0x1
+		pToa	0x8
+		add	
+		sat	0x1
+		jmp	code_395
+code_333:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_357
+		lst	0x0
+		pToa	0x8
+		sub	
+		sat	0x0
+		lst	0x1
+		pToa	0x8
+		add	
+		sat	0x1
+		jmp	code_395
+code_357:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_374
+		lst	0x0
+		pToa	0x8
+		sub	
+		sat	0x0
+		jmp	code_395
+code_374:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_395
+		lst	0x0
+		pToa	0x8
+		sub	
+		sat	0x0
+		lst	0x1
+		pToa	0x8
+		sub	
+		sat	0x1
+code_395:
+		toss	
+		pushi	0x00b9
+		pushi	0x04
+		lsg	0x13
+		push1	
+		lst	0x0
+		lst	0x1
+		lag	0x1
+		send	0xc
+		ret	
+
+		bnot	
+
+.CLASS PseudoMouse of 0x1
+Function area offset: 0x26
+Selectors [9]:
+  [0x0] = 0x6a
+  [0x1] = 0x1
+  [0x2] = 0x8000
+  [0x17] = {'val': 'PseudoMouse', 'id': 'string_0'}
+  [0x1f3] = 0x2
+  [0x1f4] = 0x2
+  [0x1f5] = 0x14
+  [0x13b] = 0x0
+  [0x1f6] = 0x5
+Overriden functions: 4
+  [0x3c]  = PseudoMouse::60   	 ; @0xd4
+  [0x81]  = PseudoMouse::129   	 ; @0x4
+  [0x82]  = PseudoMouse::130   	 ; @0xb5
+  [0x9a]  = PseudoMouse::154   	 ; @0xc7
+
+.STRINGS
+string_0: "PseudoMouse"		 ; special
+string_unused_1: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x1b0

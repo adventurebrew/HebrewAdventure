@@ -1,0 +1,151 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+CLASS RangeOsc of 0x16
+
+.CODE
+RangeOsc::107:
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_26
+		lap	0x2
+		aTop	0x12
+code_26:
+		lsp	0x0
+		ldi	0x05
+		ge?	
+		bnt	code_38
+		lap	0x5
+		aTop	0xa
+code_38:
+		pushi	0x6b
+		push1	
+		lsp	0x1
+		super	0x16, 0x6
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_99
+		lap	0x3
+		aTop	0x14
+		lsp	0x0
+		ldi	0x04
+		ge?	
+		bnt	code_89
+		lap	0x4
+		bnt	code_76
+		aTop	0x16
+		jmp	code_99
+code_76:
+		pushi	0x00db
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x16
+		jmp	code_99
+code_89:
+		pushi	0x00db
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x16
+code_99:
+		pushi	0x07
+		push1	
+		pTos	0x14
+		pToa	0x8
+		send	0x6
+		ret	
+
+RangeOsc::60:
+		link	0x01
+		pushi	0x00d6
+		push0	
+		self	0x4
+		sat	0x0
+		push	
+		pToa	0x16
+		gt?	
+		bt	code_131
+		lst	0x0
+		pToa	0x14
+		lt?	
+code_131:
+		bnt	code_148
+		pToa	0xc
+		neg	
+		aTop	0xc
+		pushi	0x00d7
+		push0	
+		self	0x4
+		jmp	code_157
+code_148:
+		pushi	0x07
+		push1	
+		lst	0x0
+		pToa	0x8
+		send	0x6
+code_157:
+		ret	
+
+RangeOsc::215:
+		pToa	0x12
+		bnt	code_190
+		pushi	0x07
+		push1	
+		pushi	0x00d6
+		push0	
+		self	0x4
+		push	
+		pToa	0x8
+		send	0x6
+		pTos	0x12
+		ldi	0x00
+		gt?	
+		bnt	code_200
+		dpToa	0x12
+		jmp	code_200
+code_190:
+		ldi	0x01
+		aTop	0x10
+		pushi	0x00d8
+		push0	
+		self	0x4
+code_200:
+		ret	
+
+		bnot	
+
+.CLASS RangeOsc of 0x16
+Exported
+Function area offset: 0x32
+Selectors [12]:
+  [0x0] = 0x7a
+  [0x1] = 0x16
+  [0x2] = 0x8000
+  [0x17] = {'val': 'RangeOsc', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x1bc] = 0xffff
+  [0x240] = 0x0
+  [0x241] = 0x0
+Overriden functions: 3
+  [0x6b]  = RangeOsc::107   	 ; @0xe
+  [0x3c]  = RangeOsc::60   	 ; @0x6d
+  [0xd7]  = RangeOsc::215   	 ; @0x9e
+
+.STRINGS
+string_0: "RangeOsc"		 ; special
+string_unused_1: ""
+string_unused_2: ""
+
+
+.RELOCATION
+num of pointers: 1
+0xdc

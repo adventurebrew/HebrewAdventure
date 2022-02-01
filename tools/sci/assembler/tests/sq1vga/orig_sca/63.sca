@@ -1,0 +1,1257 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm63 of 0x74
+
+.CODE
+rm63::107:
+		pushi	0x0187
+		push1	
+		pushi	0x02bf
+		self	0x6
+		push0	
+		callb	0x2, 0x0
+		push2	
+		pushi	0x0084
+		pushi	0x06
+		callk	0x0, 0x4
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x019a
+		pushi	0x00a3
+		calle	0x03be, 0x0000, 0x06
+		pushi	0x73
+		pushi	0x05
+		lofsa	panelOfLights
+		push	
+		lofsa	variousMachines
+		push	
+		lofsa	transmission
+		push	
+		lofsa	rearViewMirror
+		push	
+		lofsa	globes
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		lag	0x20
+		send	0x14
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x1c
+		pushi	0x00dd
+		pushi	0x4e
+		pushi	0x009f
+		pushi	0x4e
+		pushi	0x00d2
+		pushi	0x32
+		pushi	0x00bc
+		pushi	0x32
+		pushi	0x0092
+		pushi	0x4e
+		pushi	0x37
+		pushi	0x4f
+		pushi	0x29
+		pushi	0x4f
+		push0	
+		pushi	0x4f
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		push0	
+		pushi	0x57
+		pushi	0x00d9
+		pushi	0x57
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x46
+		push	
+		self	0x6
+		lsg	0xc
+		pToa	0x22
+		eq?	
+		bnt	code_194
+		pushi	0x04
+		push1	
+		pushi	0x0a
+		lag	0x0
+		send	0x6
+		ldi	0x03
+		aTop	0x16
+code_194:
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	panel
+		send	0xa
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x008c
+		push1	
+		lofsa	switchit
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	orbs
+		send	0x10
+		pushi	0x008c
+		push1	
+		lofsa	walkGuard
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	walkingGuard
+		send	0xa
+		lsg	0xc
+		pToa	0x22
+		ne?	
+		bnt	code_269
+		pushi	0x011a
+		push2	
+		pushi	0x00c3
+		pushi	0x37
+		lag	0x0
+		send	0x8
+code_269:
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x73
+		push1	
+		lofsa	standingGuard
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		pushi	0x3c
+		push0	
+		lag	0xa
+		send	0x10
+		lsg	0xc
+		pToa	0x22
+		ne?	
+		bnt	code_322
+		pushi	0x008c
+		push1	
+		lofsa	fromDoor
+		push	
+		self	0x6
+		jmp	code_331
+code_322:
+		pushi	0x011f
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+code_331:
+		ret	
+
+rm63::60:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x74, 0x4
+		pushi	0x0123
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		ldi	0x01
+		gt?	
+		bnt	code_410
+		pushi	0x0088
+		push0	
+		lofsa	walkingGuard
+		send	0x4
+		not	
+		bnt	code_381
+		pushi	0x008c
+		push1	
+		lofsa	walkGuard
+		push	
+		lofsa	walkingGuard
+		send	0x6
+code_381:
+		pushi	0x0088
+		push0	
+		lofsa	orbs
+		send	0x4
+		not	
+		bnt	code_481
+		pushi	0x008c
+		push1	
+		lofsa	switchit
+		push	
+		lofsa	orbs
+		send	0x6
+		jmp	code_481
+code_410:
+		pushi	0x0088
+		push0	
+		lofsa	walkingGuard
+		send	0x4
+		bnt	code_441
+		pushi	0x06
+		push1	
+		pushi	0x05
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x008c
+		push1	
+		push0	
+		lofsa	walkingGuard
+		send	0x12
+code_441:
+		pushi	0x0088
+		push0	
+		lofsa	orbs
+		send	0x4
+		bnt	code_481
+		pushi	0x00c0
+		push0	
+		lofsa	orbs
+		send	0x4
+		pushi	0x00c0
+		push0	
+		lofsa	panel
+		send	0x4
+		pushi	0x008c
+		push1	
+		push0	
+		lofsa	orbs
+		send	0x6
+code_481:
+		pushi	0x0088
+		push0	
+		self	0x4
+		bt	code_498
+		pushi	0x0088
+		push0	
+		lag	0x0
+		send	0x4
+code_498:
+		bnt	code_506
+		ldi	0x00
+		jmp	code_532
+code_506:
+		pushi	0x0131
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x02
+		and	
+		bnt	code_532
+		pushi	0x008c
+		push1	
+		lofsa	intoDoor
+		push	
+		self	0x6
+code_532:
+		ret	
+
+		bnot	
+
+.OBJECT rm63 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm63', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': "You don't really like the way the red floor and green walls clash but, all in all, its a pretty nice looking room.", 'id': 'string_0'}
+  [#10] = 0x3f
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x3d
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 2
+  [0x6b]  = rm63::107   	 ; @0xe
+  [0x3c]  = rm63::60   	 ; @0x14c
+
+.CODE
+fromDoor::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_656
+		push0	
+		callb	0x2, 0x0
+		pushi	0x42
+		push1	
+		push1	
+		pushi	0x06
+		push1	
+		pushi	0x05
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x00a0
+		pushi	0x4d
+		pushSelf	
+		lag	0x0
+		send	0x18
+		jmp	code_686
+code_656:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_686
+		pushi	0x011f
+		push1	
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0xff
+		lag	0x0
+		send	0xc
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_686:
+		toss	
+		ret	
+
+
+.OBJECT fromDoor of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'fromDoor', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = fromDoor::138   	 ; @0x262
+
+.CODE
+intoDoor::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_788
+		push0	
+		callb	0x2, 0x0
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x00c3
+		pushi	0x37
+		pushSelf	
+		lag	0x0
+		send	0x12
+		jmp	code_805
+code_788:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_805
+		pushi	0x0177
+		push1	
+		pushi	0x3e
+		lag	0x2
+		send	0x6
+code_805:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT intoDoor of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'intoDoor', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = intoDoor::138   	 ; @0x2ea
+
+.CODE
+switchit::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_916
+		push2	
+		push1	
+		pushi	0x04
+		callk	0x3c, 0x4
+		aTop	0x12
+		pushi	0x00c0
+		push0	
+		lofsa	orbs
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x06
+		dup	
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lofsa	beamSound
+		send	0x10
+		jmp	code_956
+code_916:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_956
+		pTos	0xa
+		ldi	0x02
+		sub	
+		aTop	0xa
+		pushi	0x009a
+		push0	
+		lofsa	beamSound
+		send	0x4
+		pushi	0x69
+		push0	
+		lofsa	orbs
+		send	0x4
+		push2	
+		push1	
+		pushi	0x04
+		callk	0x3c, 0x4
+		aTop	0x12
+code_956:
+		toss	
+		ret	
+
+
+.OBJECT switchit of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'switchit', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = switchit::138   	 ; @0x362
+
+.CODE
+walkGuard::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1040
+		push2	
+		push1	
+		pushi	0x0a
+		callk	0x3c, 0x4
+		aTop	0x12
+		jmp	code_1135
+code_1040:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1082
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0085
+		pushi	0x00b4
+		pushSelf	
+		lofsa	walkingGuard
+		send	0x18
+		jmp	code_1135
+code_1082:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1096
+		ldi	0x03
+		aTop	0x12
+		jmp	code_1135
+code_1096:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1135
+		pTos	0xa
+		ldi	0x04
+		sub	
+		aTop	0xa
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x015e
+		pushi	0x00b4
+		pushSelf	
+		lofsa	walkingGuard
+		send	0x12
+code_1135:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT walkGuard of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'walkGuard', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = walkGuard::138   	 ; @0x3f8
+
+.CODE
+panel::266:
+		lsp	0x1
+		ldi	0x02
+		eq?	
+		bnt	code_1218
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+		jmp	code_1226
+code_1218:
+		push2	
+		pushi	0x3f
+		push0	
+		calle	0xff, 0x00, 0x04
+code_1226:
+		ret	
+
+		bnot	
+
+.OBJECT panel of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'panel', 'id': 'string_7'}
+  [#4] = 0x108
+  [#5] = 0x41
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A panel of flashing lights.', 'id': 'string_6'}
+  [#22] = 0x2
+  [#23] = 0xa3
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 1
+  [0x10a]  = panel::266   	 ; @0x4ac
+
+.CODE
+orbs::266:
+		lsp	0x1
+		ldi	0x02
+		eq?	
+		bnt	code_1360
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+		jmp	code_1368
+code_1360:
+		push2	
+		pushi	0x3f
+		push0	
+		calle	0xff, 0x00, 0x04
+code_1368:
+		ret	
+
+		bnot	
+
+.OBJECT orbs of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'orbs', 'id': 'string_9'}
+  [#4] = 0x86
+  [#5] = 0x82
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Fantastic technology... isn't it?", 'id': 'string_8'}
+  [#22] = 0x2
+  [#23] = 0xa3
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 1
+  [0x10a]  = orbs::266   	 ; @0x53a
+
+.CODE
+panelOfLights::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_1507
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_1507
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1520
+code_1507:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x7b, 0x8
+code_1520:
+		ret	
+
+		bnot	
+
+.OBJECT panelOfLights of 0x7b
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x7b
+  [#1] = 0x7b
+  [#2] = 0x0
+  [#3] = {'val': 'panelOfLights', 'id': 'string_12'}
+  [#4] = 0xfe
+  [#5] = 0x2c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'panel of lights', 'id': 'string_10'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's a panel of lights.", 'id': 'string_11'}
+  [#22] = 0x4
+Overriden functions: 1
+  [0x10a]  = panelOfLights::266   	 ; @0x5c8
+
+.CODE
+variousMachines::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_1619
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_1619
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1632
+code_1619:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x7b, 0x8
+code_1632:
+		ret	
+
+		bnot	
+
+.OBJECT variousMachines of 0x7b
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x7b
+  [#1] = 0x7b
+  [#2] = 0x0
+  [#3] = {'val': 'variousMachines', 'id': 'string_15'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'various machines', 'id': 'string_13'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Since your X-ray Vision Specs have not yet arrived in the mail, you don't even know this room is over here, so quit messing around and do something useful.", 'id': 'string_14'}
+  [#22] = 0x4
+Overriden functions: 1
+  [0x10a]  = variousMachines::266   	 ; @0x638
+
+.CODE
+transmission::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_1731
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_1731
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1744
+code_1731:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x7b, 0x8
+code_1744:
+		ret	
+
+		bnot	
+
+.OBJECT transmission of 0x7b
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x7b
+  [#1] = 0x7b
+  [#2] = 0x0
+  [#3] = {'val': 'transmission', 'id': 'string_16'}
+  [#4] = 0x49
+  [#5] = 0x9b
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'transmission', 'id': 'string_16'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x1000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "You're uncertain whether this is a Walwoodian cryobaric hypersleep chamber or the transmission out of a late model Buick Skylark.", 'id': 'string_17'}
+  [#22] = 0x4
+Overriden functions: 1
+  [0x10a]  = transmission::266   	 ; @0x6a8
+
+.CODE
+rearViewMirror::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_1843
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_1843
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1856
+code_1843:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x7b, 0x8
+code_1856:
+		ret	
+
+		bnot	
+
+.OBJECT rearViewMirror of 0x7b
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x7b
+  [#1] = 0x7b
+  [#2] = 0x0
+  [#3] = {'val': 'rearViewMirror', 'id': 'string_20'}
+  [#4] = 0x15
+  [#5] = 0x7f
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'rear view mirror', 'id': 'string_18'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x800
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'It appears to be a standard driver-side rear view mirror, probably standard on all ships of this class.', 'id': 'string_19'}
+  [#22] = 0x4
+Overriden functions: 1
+  [0x10a]  = rearViewMirror::266   	 ; @0x718
+
+.CODE
+globes::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_1955
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_1955
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1968
+code_1955:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x7b, 0x8
+code_1968:
+		ret	
+
+		bnot	
+
+.OBJECT globes of 0x7b
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x7b
+  [#1] = 0x7b
+  [#2] = 0x0
+  [#3] = {'val': 'globes', 'id': 'string_23'}
+  [#4] = 0x85
+  [#5] = 0x69
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'globes-o-power', 'id': 'string_21'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Two zapping, crackling globes spew forth gargantuan amounts of sizzling raw energy. Kinda neat, huh?', 'id': 'string_22'}
+  [#22] = 0x4
+Overriden functions: 1
+  [0x10a]  = globes::266   	 ; @0x788
+
+.CODE
+walkingGuard::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_2067
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_2067
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_2080
+code_2067:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x30, 0x8
+code_2080:
+		ret	
+
+		bnot	
+
+.OBJECT walkingGuard of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'walkingGuard', 'id': 'string_26'}
+  [#4] = 0x15e
+  [#5] = 0xb4
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'guard', 'id': 'string_24'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'You surmise this is a Sarien enlisted being.', 'id': 'string_25'}
+  [#22] = 0x2
+  [#23] = 0x19a
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x10a]  = walkingGuard::266   	 ; @0x7f8
+
+.CODE
+standingGuard::266:
+		lsp	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_2243
+		lsp	0x2
+		ldi	0x0c
+		eq?	
+		bnt	code_2243
+		push2	
+		pushi	0x3f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_2256
+code_2243:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2d, 0x8
+code_2256:
+		ret	
+
+		bnot	
+
+.OBJECT standingGuard of 0x2d
+Function area offset: 0x3a
+Selectors [28]:
+  [#0] = 0x2d
+  [#1] = 0x2d
+  [#2] = 0x0
+  [#3] = {'val': 'standingGuard', 'id': 'string_28'}
+  [#4] = 0x125
+  [#5] = 0x4c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'guard', 'id': 'string_24'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'One of those gruesome red-suited Sariens is patrolling the hallways, looking for intruders to toast.', 'id': 'string_27'}
+  [#22] = 0x19a
+  [#23] = 0x4
+  [#24] = 0x0
+  [#25] = 0xf
+  [#26] = 0x10
+  [#27] = 0x0
+Overriden functions: 1
+  [0x10a]  = standingGuard::266   	 ; @0x8a8
+
+.OBJECT beamSound of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'beamSound', 'id': 'string_29'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "You don't really like the way the red floor and green walls clash but, all in all, its a pretty nice looking room."
+string_1: "rm63"		 ; special
+string_2: "fromDoor"		 ; special
+string_3: "intoDoor"		 ; special
+string_4: "switchit"		 ; special
+string_5: "walkGuard"		 ; special
+string_6: "A panel of flashing lights."
+string_7: "panel"		 ; special
+string_8: "Fantastic technology... isn't it?"
+string_9: "orbs"		 ; special
+string_10: "panel of lights"
+string_11: "It's a panel of lights."
+string_12: "panelOfLights"		 ; special
+string_13: "various machines"
+string_14: "Since your X-ray Vision Specs have not yet arrived in the mail, you don't even know this room is over here, so quit messing around and do something useful."
+string_15: "variousMachines"		 ; special
+string_16: "transmission"		 ; special
+string_17: "You're uncertain whether this is a Walwoodian cryobaric hypersleep chamber or the transmission out of a late model Buick Skylark."
+string_18: "rear view mirror"
+string_19: "It appears to be a standard driver-side rear view mirror, probably standard on all ships of this class."
+string_20: "rearViewMirror"		 ; special
+string_21: "globes-o-power"
+string_22: "Two zapping, crackling globes spew forth gargantuan amounts of sizzling raw energy. Kinda neat, huh?"
+string_23: "globes"		 ; special
+string_24: "guard"
+string_25: "You surmise this is a Sarien enlisted being."
+string_26: "walkingGuard"		 ; special
+string_27: "One of those gruesome red-suited Sariens is patrolling the hallways, looking for intruders to toast."
+string_28: "standingGuard"		 ; special
+string_29: "beamSound"		 ; special
+string_unused_30: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 63
+0x3a, 0x3e, 0x42, 0x46, 0x4a, 0xcd, 0xdd, 0xe4, 0xed, 0xf4, 0x11e, 0x13a, 0x168, 0x175, 0x179, 0x182, 0x18f, 0x193, 0x19f, 0x1b5, 0x1be, 0x1ca, 0x1d3, 0x1dd, 0x20f, 0x228, 0x234, 0x2c2, 0x33a, 0x37c, 0x38d, 0x3a7, 0x3af, 0x3d0, 0x433, 0x46b, 0x484, 0x4de, 0x502, 0x56c, 0x590, 0x604, 0x618, 0x628, 0x674, 0x688, 0x698, 0x6e4, 0x6f8, 0x708, 0x754, 0x768, 0x778, 0x7c4, 0x7d8, 0x7e8, 0x834, 0x848, 0x858, 0x8e4, 0x8f8, 0x908, 0x930

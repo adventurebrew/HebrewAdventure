@@ -1,0 +1,399 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm21 of 0x74
+
+.CODE
+rm21::107:
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_163
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x2a
+		push0	
+		pushi	0x77
+		pushi	0x7a
+		pushi	0x77
+		pushi	0x00cf
+		pushi	0x0088
+		pushi	0x010a
+		pushi	0x0094
+		pushi	0x010c
+		pushi	0x00a3
+		pushi	0x00fa
+		pushi	0x00a7
+		pushi	0x00d4
+		pushi	0x00a8
+		pushi	0x00b7
+		pushi	0x00a8
+		pushi	0x0098
+		pushi	0x00ac
+		pushi	0x0098
+		pushi	0x00ae
+		pushi	0x008f
+		pushi	0x00b1
+		pushi	0x008b
+		pushi	0x00b9
+		pushi	0x7e
+		pushi	0x00ba
+		pushi	0x70
+		pushi	0x00b9
+		pushi	0x5b
+		pushi	0x00bc
+		pushi	0x54
+		pushi	0x00b9
+		pushi	0x44
+		pushi	0x00b6
+		pushi	0x46
+		pushi	0x00b2
+		pushi	0x2f
+		pushi	0x00ab
+		pushi	0x0a
+		pushi	0x00ad
+		push0	
+		pushi	0x00b0
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x62
+		push	
+		self	0x6
+		jmp	code_270
+code_163:
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x22
+		push0	
+		pushi	0x6a
+		pushi	0x26
+		pushi	0x62
+		pushi	0x7a
+		pushi	0x53
+		pushi	0x0095
+		pushi	0x56
+		pushi	0x0084
+		pushi	0x4c
+		pushi	0x6d
+		pushi	0x4d
+		pushi	0x61
+		pushi	0x4c
+		pushi	0x5b
+		pushi	0x50
+		pushi	0x47
+		pushi	0x54
+		pushi	0x3a
+		pushi	0x50
+		pushi	0x29
+		pushi	0x53
+		pushi	0x22
+		pushi	0x52
+		push0	
+		pushi	0x5b
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x52
+		push	
+		self	0x6
+		push2	
+		pushi	0x0080
+		pushi	0x2d
+		calle	0x03be, 0x0000, 0x04
+code_270:
+		lsg	0xc
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_290
+		ldi	0x0c
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_312
+code_290:
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_308
+		ldi	0x0e
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_312
+code_308:
+		ldi	0x0a
+		aTop	0x16
+code_312:
+		toss	
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		lofsa	thingy
+		send	0x4
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rm21::60:
+		pToa	0x8
+		bnt	code_354
+		ldi	0x00
+		jmp	code_400
+code_354:
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_400
+		pushi	0x0130
+		pushi	0x04
+		pushi	0x59
+		pushi	0x4b
+		pushi	0x74
+		pushi	0x59
+		lag	0x0
+		send	0xc
+		bnt	code_400
+		push2	
+		push2	
+		pushi	0x008f
+		callb	0xb, 0x4
+		pushi	0x008c
+		push1	
+		lofsa	enterCaves
+		push	
+		self	0x6
+code_400:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+		bnot	
+
+.OBJECT rm21 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm21', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is the northeast corner of the boneyard. Bones and sand dominate the scenery. At the east end of the vertebral path are two extremely pointed spurs of broken rib.', 'id': 'string_0'}
+  [#10] = 0x15
+  [#11] = 0xffff
+  [#12] = 0x14
+  [#13] = 0x0
+  [#14] = 0x26
+  [#15] = 0x8a
+  [#16] = 0x18
+  [#17] = 0x14
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x1
+Overriden functions: 2
+  [0x6b]  = rm21::107   	 ; @0xe
+  [0x3c]  = rm21::60   	 ; @0x158
+
+.CODE
+enterCaves::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_520
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x67
+		pushi	0x53
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_596
+code_520:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_579
+		pushi	0x2b
+		push1	
+		pushi	0x019e
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+		pushi	0x05
+		push1	
+		pushi	0x2d
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x03
+		pushi	0x38
+		push1	
+		pushi	0x03
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_596
+code_579:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_596
+		pushi	0x0177
+		push1	
+		pushi	0x1d
+		lag	0x2
+		send	0x6
+code_596:
+		toss	
+		ret	
+
+
+.OBJECT enterCaves of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'enterCaves', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = enterCaves::138   	 ; @0x1e4
+
+.CODE
+thingy::107:
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_682
+		pushi	0x0117
+		pushi	0x04
+		pushi	0x03
+		pushi	0x05
+		pushi	0x0c
+		pushi	0x0b
+		self	0xc
+		jmp	code_687
+code_682:
+		ldi	0x0096
+		aTop	0xa
+code_687:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT thingy of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'thingy', 'id': 'string_5'}
+  [#4] = 0x9f
+  [#5] = 0x40
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'shiny thingy', 'id': 'string_3'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x8e
+  [#18] = 0x54
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'It looks interesting. Although hard to tell from where you are standing, it may be a sign. If you got closer, maybe you could read it.', 'id': 'string_4'}
+Overriden functions: 1
+  [0x6b]  = thingy::107   	 ; @0x290
+
+.STRINGS
+string_0: "This is the northeast corner of the boneyard. Bones and sand dominate the scenery. At the east end of the vertebral path are two extremely pointed spurs of broken rib."
+string_1: "rm21"		 ; special
+string_2: "enterCaves"		 ; special
+string_3: "shiny thingy"
+string_4: "It looks interesting. Although hard to tell from where you are standing, it may be a sign. If you got closer, maybe you could read it."
+string_5: "thingy"		 ; special
+string_unused_6: ""
+string_unused_7: ""
+
+
+.RELOCATION
+num of pointers: 8
+0x14d, 0x18b, 0x1aa, 0x1b6, 0x268, 0x2ca, 0x2de, 0x2ee

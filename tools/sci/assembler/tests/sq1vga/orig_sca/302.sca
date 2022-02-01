@@ -1,0 +1,847 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT forwardScript of 0x6
+OBJECT drum of 0x2e
+OBJECT ZZTop of 0x2f
+OBJECT ZZTop2 of 0x2f
+OBJECT ZZTop3 of 0x2f
+
+.OBJECT forwardScript of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'forwardScript', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 0
+
+.CODE
+FROR::107:
+		pushi	0x6b
+		push1	
+		lsp	0x1
+		super	0x16, 0x6
+		lsp	0x0
+		ldi	0x01
+		gt?	
+		bnt	code_136
+		lap	0x2
+		aTop	0x16
+		lsp	0x0
+		ldi	0x02
+		gt?	
+		bnt	code_136
+		lap	0x3
+		aTop	0x18
+		lsp	0x0
+		ldi	0x03
+		gt?	
+		bnt	code_136
+		lap	0x4
+		aTop	0x12
+		lsp	0x0
+		ldi	0x04
+		gt?	
+		bnt	code_136
+		lap	0x5
+		aTop	0x14
+code_136:
+		ret	
+
+FROR::60:
+		link	0x01
+		dpToa	0x1a
+		not	
+		bnt	code_187
+		push2	
+		pTos	0x16
+		pTos	0x18
+		callk	0x3c, 0x4
+		aTop	0x1a
+		push1	
+		push2	
+		push0	
+		push2	
+		callk	0x3c, 0x4
+		sub	
+		aTop	0xc
+		pToa	0xc
+		not	
+		bnt	code_187
+		pushi	0x07
+		push1	
+		push2	
+		pTos	0x12
+		pTos	0x14
+		callk	0x3c, 0x4
+		push	
+		pToa	0x8
+		send	0x6
+code_187:
+		pushi	0x00d6
+		push0	
+		self	0x4
+		sat	0x0
+		pToa	0xc
+		bnt	code_255
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_219
+		pushi	0x07
+		push1	
+		lst	0x0
+		pToa	0x8
+		send	0x6
+		jmp	code_255
+code_219:
+		lst	0x0
+		ldi	0x00
+		lt?	
+		bnt	code_246
+		pushi	0x07
+		push1	
+		pushi	0x00db
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x8
+		send	0x6
+		jmp	code_255
+code_246:
+		pushi	0x07
+		push1	
+		lst	0x0
+		pToa	0x8
+		send	0x6
+code_255:
+		ret	
+
+
+.CLASS FROR of 0x16
+Function area offset: 0x3a
+Selectors [14]:
+  [0x0] = 0x87
+  [0x1] = 0x16
+  [0x2] = 0x8000
+  [0x17] = {'val': 'FROR', 'id': 'string_1'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x273] = 0x0
+  [0x274] = 0x0
+  [0x275] = 0x64
+  [0x276] = 0xfa
+  [0x277] = 0x1
+Overriden functions: 2
+  [0x6b]  = FROR::107   	 ; @0x50
+  [0x3c]  = FROR::60   	 ; @0x89
+
+.OBJECT drum of 0x2e
+Exported
+Function area offset: 0x50
+Selectors [39]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'drum', 'id': 'string_2'}
+  [#4] = 0x70
+  [#5] = 0x43
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'drum', 'id': 'string_2'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "On stage are two heavily-bearded gents and a relatively clean-shaven drummer. They're one of the hottest bands in the quadrant.", 'id': 'string_3'}
+  [#22] = 0x2
+  [#23] = 0x215
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+Overriden functions: 0
+
+.CODE
+ZZTop::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_455
+		push2	
+		pushi	0x012e
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_728
+code_455:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_474
+		push2	
+		pushi	0x012e
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_728
+code_474:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_493
+		push2	
+		pushi	0x012e
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_728
+code_493:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_513
+		push2	
+		pushi	0x012e
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_728
+code_513:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_717
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_542
+		push2	
+		pushi	0x012e
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_542:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_562
+		push2	
+		pushi	0x012e
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_562:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_582
+		push2	
+		pushi	0x012e
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_582:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_602
+		push2	
+		pushi	0x012e
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_602:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_622
+		push2	
+		pushi	0x012e
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_622:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_642
+		push2	
+		pushi	0x012e
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_642:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_662
+		push2	
+		pushi	0x012e
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_662:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_682
+		push2	
+		pushi	0x012e
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_682:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_702
+		push2	
+		pushi	0x012e
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_713
+code_702:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_713:
+		toss	
+		jmp	code_728
+code_717:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2f, 0x6
+code_728:
+		toss	
+		ret	
+
+
+.OBJECT ZZTop of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'ZZTop', 'id': 'string_5'}
+  [#4] = 0x70
+  [#5] = 0x31
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'drummer', 'id': 'string_4'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "On stage are two heavily-bearded gents and a relatively clean-shaven drummer. They're one of the hottest bands in the quadrant.", 'id': 'string_3'}
+  [#22] = 0x2
+  [#23] = 0x1b1
+  [#24] = 0x0
+  [#25] = 0x5
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x3
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = ZZTop::266   	 ; @0x1b2
+
+.CODE
+ZZTop2::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_863
+		push2	
+		pushi	0x012e
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1136
+code_863:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_882
+		push2	
+		pushi	0x012e
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1136
+code_882:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_901
+		push2	
+		pushi	0x012e
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1136
+code_901:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_921
+		push2	
+		pushi	0x012e
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_1136
+code_921:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1125
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_950
+		push2	
+		pushi	0x012e
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_950:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_970
+		push2	
+		pushi	0x012e
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_970:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_990
+		push2	
+		pushi	0x012e
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_990:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1010
+		push2	
+		pushi	0x012e
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_1010:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1030
+		push2	
+		pushi	0x012e
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_1030:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1050
+		push2	
+		pushi	0x012e
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_1050:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1070
+		push2	
+		pushi	0x012e
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_1070:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_1090
+		push2	
+		pushi	0x012e
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_1090:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_1110
+		push2	
+		pushi	0x012e
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1121
+code_1110:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_1121:
+		toss	
+		jmp	code_1136
+code_1125:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2f, 0x6
+code_1136:
+		toss	
+		ret	
+
+
+.OBJECT ZZTop2 of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'ZZTop2', 'id': 'string_7'}
+  [#4] = 0x85
+  [#5] = 0x5d
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'guitar', 'id': 'string_6'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "On stage are two heavily-bearded gents and a relatively clean-shaven drummer. They're one of the hottest bands in the quadrant.", 'id': 'string_3'}
+  [#22] = 0x2
+  [#23] = 0x1b1
+  [#24] = 0x1
+  [#25] = 0x5
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = ZZTop2::266   	 ; @0x34a
+
+.CODE
+ZZTop3::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1271
+		push2	
+		pushi	0x012e
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1544
+code_1271:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1290
+		push2	
+		pushi	0x012e
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1544
+code_1290:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_1309
+		push2	
+		pushi	0x012e
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1544
+code_1309:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1329
+		push2	
+		pushi	0x012e
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_1544
+code_1329:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1533
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_1358
+		push2	
+		pushi	0x012e
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1358:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1378
+		push2	
+		pushi	0x012e
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1378:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_1398
+		push2	
+		pushi	0x012e
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1398:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1418
+		push2	
+		pushi	0x012e
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1418:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1438
+		push2	
+		pushi	0x012e
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1438:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1458
+		push2	
+		pushi	0x012e
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1458:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1478
+		push2	
+		pushi	0x012e
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1478:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_1498
+		push2	
+		pushi	0x012e
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1498:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_1518
+		push2	
+		pushi	0x012e
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1529
+code_1518:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_1529:
+		toss	
+		jmp	code_1544
+code_1533:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2f, 0x6
+code_1544:
+		toss	
+		ret	
+
+
+.OBJECT ZZTop3 of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'ZZTop3', 'id': 'string_8'}
+  [#4] = 0xa1
+  [#5] = 0x58
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'guitar', 'id': 'string_6'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "On stage are two heavily-bearded gents and a relatively clean-shaven drummer. They're one of the hottest bands in the quadrant.", 'id': 'string_3'}
+  [#22] = 0x2
+  [#23] = 0x1b1
+  [#24] = 0x2
+  [#25] = 0x3
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = ZZTop3::266   	 ; @0x4e2
+
+.STRINGS
+string_0: "forwardScript"		 ; special
+string_1: "FROR"		 ; special
+string_2: "drum"		 ; special
+string_3: "On stage are two heavily-bearded gents and a relatively clean-shaven drummer. They're one of the hottest bands in the quadrant."
+string_4: "drummer"
+string_5: "ZZTop"		 ; special
+string_6: "guitar"
+string_7: "ZZTop2"		 ; special
+string_8: "ZZTop3"		 ; special
+string_unused_9: ""
+string_unused_10: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 14
+0x2c, 0x112, 0x162, 0x176, 0x186, 0x2ec, 0x300, 0x310, 0x484, 0x498, 0x4a8, 0x61c, 0x630, 0x640

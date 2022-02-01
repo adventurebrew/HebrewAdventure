@@ -1,0 +1,143 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+CLASS StopWalk of 0x17
+
+.CODE
+StopWalk::107:
+		lap	0x0
+		bnt	code_42
+		pushi	0x05
+		push0	
+		lap	0x1
+		aTop	0x8
+		send	0x4
+		aTop	0x12
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_42
+		lap	0x2
+		aTop	0x14
+code_42:
+		pushi	0x6b
+		push1	
+		pTos	0x8
+		super	0x17, 0x6
+		ret	
+
+StopWalk::108:
+		pushi	0x05
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x14
+		eq?	
+		bnt	code_74
+		pushi	0x05
+		push1	
+		pTos	0x12
+		pToa	0x8
+		send	0x6
+code_74:
+		pushi	0x6c
+		push0	
+		super	0x17, 0x4
+		ret	
+
+StopWalk::60:
+		link	0x02
+		pushi	0x00dc
+		push0	
+		pToa	0x8
+		send	0x4
+		bnt	code_157
+		pushi	0x05
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x12
+		eq?	
+		bnt	code_186
+		pushi	0x05
+		push1	
+		pTos	0x14
+		pToa	0x8
+		send	0x6
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		sat	0x1
+		bnt	code_148
+		pushi	0x00d5
+		push0	
+		send	0x4
+		not	
+		bnt	code_148
+		pushi	0x0119
+		push1	
+		push0	
+		pToa	0x8
+		send	0x6
+code_148:
+		pushi	0x3c
+		push0	
+		super	0x17, 0x4
+		jmp	code_186
+code_157:
+		pushi	0x05
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x14
+		eq?	
+		bnt	code_180
+		pushi	0x05
+		push1	
+		pTos	0x12
+		pToa	0x8
+		send	0x6
+code_180:
+		pushi	0x3c
+		push0	
+		super	0x17, 0x4
+code_186:
+		ret	
+
+		bnot	
+
+.CLASS StopWalk of 0x17
+Exported
+Function area offset: 0x2e
+Selectors [11]:
+  [0x0] = 0x56
+  [0x1] = 0x17
+  [0x2] = 0x8000
+  [0x17] = {'val': 'StopWalk', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x1b8] = 0x0
+  [0x1b9] = 0x0
+Overriden functions: 3
+  [0x6b]  = StopWalk::107   	 ; @0xe
+  [0x3c]  = StopWalk::60   	 ; @0x51
+  [0x6c]  = StopWalk::108   	 ; @0x33
+
+.STRINGS
+string_0: "StopWalk"		 ; special
+string_unused_1: ""
+string_unused_2: ""
+
+
+.RELOCATION
+num of pointers: 1
+0xce

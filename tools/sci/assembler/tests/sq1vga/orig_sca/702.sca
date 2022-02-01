@@ -1,0 +1,1466 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT ulenceRegion of 0x42
+OBJECT robot of 0x30
+
+.CODE
+ulenceRegion::107:
+		pushi	0x6b
+		push0	
+		super	0x42, 0x4
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0259
+		ne?	
+		bnt	code_111
+		pushi	0x07
+		lsg	0xb
+		pushi	0x28
+		pushi	0x29
+		pushi	0x2a
+		pushi	0x2d
+		pushi	0x2e
+		pushi	0x2f
+		calle	0x03e7, 0x0005, 0x0e
+		bnt	code_111
+		pushi	0x09
+		lsg	0xc
+		pushi	0x28
+		pushi	0x29
+		pushi	0x2a
+		pushi	0x2b
+		pushi	0x2d
+		pushi	0x2e
+		pushi	0x2f
+		pushi	0x30
+		calle	0x03e7, 0x0005, 0x12
+		bnt	code_111
+		pushi	0x2b
+		push1	
+		pushi	0x0259
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+code_111:
+		push1	
+		pushi	0x21
+		callb	0x6, 0x2
+		bnt	code_296
+		pushi	0x6b
+		push0	
+		pushi	0x12
+		push1	
+		pushi	0x03
+		lsg	0xb
+		pushi	0x2e
+		pushi	0x2d
+		calle	0x03e7, 0x0005, 0x06
+		bnt	code_148
+		ldi	0x40
+		jmp	code_150
+code_148:
+		ldi	0x00
+code_150:
+		push	
+		pushi	0x011a
+		push2	
+		pushi	0x0144
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_180
+		lsg	0xa3
+		ldi	0x013f
+		add	
+		jmp	code_203
+code_180:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_196
+		lsg	0xa3
+		ldi	0x013f
+		sub	
+		jmp	code_203
+code_196:
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+code_203:
+		toss	
+		push	
+		pushi	0x0144
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_236
+		pushi	0x0134
+		push0	
+		lag	0x2
+		send	0x4
+		push	
+		ldi	0x0a
+		sub	
+		jmp	code_251
+code_236:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_249
+		ldi	0x0118
+		jmp	code_251
+code_249:
+		lag	0xa4
+code_251:
+		toss	
+		push	
+		pushi	0x00a0
+		push1	
+		lofsa	roboGroop
+		push	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0119
+		pushi	0x03
+		class	0x6c
+		push	
+		lsg	0x0
+		pushi	0x37
+		lofsa	robot
+		send	0x28
+		pushi	0x0129
+		push1	
+		class	0x6d
+		push	
+		lag	0x0
+		send	0x6
+code_296:
+		pushi	0x6b
+		push0	
+		lofsa	mountains
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	keronaSky
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	bigMoon
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	smallMoon
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	radarPost
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	desert
+		send	0x4
+		ret	
+
+ulenceRegion::60:
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_361
+		ldi	0x00
+		jmp	code_390
+code_361:
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x4000
+		eq?	
+		bnt	code_390
+		pushi	0x008c
+		push1	
+		lofsa	zapEgo
+		push	
+		lag	0x2
+		send	0x6
+code_390:
+		pushi	0x3c
+		push0	
+		super	0x42, 0x4
+		ret	
+
+ulenceRegion::375:
+		lsp	0x1
+		ldi	0x2d
+		ne?	
+		bnt	code_439
+		pushi	0x07
+		lsp	0x1
+		pushi	0x28
+		pushi	0x29
+		pushi	0x2a
+		pushi	0x2d
+		pushi	0x2e
+		pushi	0x2f
+		calle	0x03e7, 0x0005, 0x0e
+		not	
+		bnt	code_439
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0x4
+code_439:
+		pushi	0x0177
+		push1	
+		lsp	0x1
+		super	0x42, 0x6
+		ret	
+
+ulenceRegion::108:
+		pushi	0x04
+		push0	
+		lofsa	robot
+		send	0x4
+		sag	0xa3
+		pushi	0x03
+		push0	
+		lofsa	robot
+		send	0x4
+		sag	0xa4
+		pushi	0x08
+		lsg	0xd
+		pushi	0x28
+		pushi	0x29
+		pushi	0x2a
+		pushi	0x2c
+		pushi	0x2d
+		pushi	0x2e
+		pushi	0x2f
+		calle	0x03e7, 0x0005, 0x10
+		aTop	0xe
+		pushi	0x6c
+		push0	
+		rest	0x1
+		super	0x42, 0x4
+		ret	
+
+
+.OBJECT ulenceRegion of 0x42
+Exported
+Function area offset: 0x16
+Selectors [10]:
+  [#0] = 0x42
+  [#1] = 0x42
+  [#2] = 0x0
+  [#3] = {'val': 'ulenceRegion', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+Overriden functions: 4
+  [0x6b]  = ulenceRegion::107   	 ; @0x12
+  [0x3c]  = ulenceRegion::60   	 ; @0x159
+  [0x6c]  = ulenceRegion::108   	 ; @0x1c1
+  [0x177]  = ulenceRegion::375   	 ; @0x18d
+
+.CODE
+mountains::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_611
+		push2	
+		pushi	0x02be
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_680
+code_611:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_630
+		push2	
+		pushi	0x02be
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_680
+code_630:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_649
+		push2	
+		pushi	0x02be
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_680
+code_649:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_669
+		push2	
+		pushi	0x02be
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_680
+code_669:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_680:
+		toss	
+		ret	
+
+
+.OBJECT mountains of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'mountains', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'mountains', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x80
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'In the distance is the galaxy-famous Skihairy mountain range. Nestled in its southernmost slopes is the renowned YoMammy National Park, usually hip-deep in tourists this time of year. Oh, well - maybe next trip.', 'id': 'string_2'}
+Overriden functions: 1
+  [0x10a]  = mountains::266   	 ; @0x230
+
+.CODE
+keronaSky::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_802
+		push2	
+		pushi	0x02be
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_873
+code_802:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_822
+		push2	
+		pushi	0x02be
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_873
+code_822:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_842
+		push2	
+		pushi	0x02be
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_873
+code_842:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_862
+		push2	
+		pushi	0x02be
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_873
+code_862:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_873:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT keronaSky of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'keronaSky', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sky', 'id': 'string_3'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x200
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "What a sky this planet has! You've never seen its like outside a toxic waste dump.", 'id': 'string_4'}
+Overriden functions: 1
+  [0x10a]  = keronaSky::266   	 ; @0x2ee
+
+.CODE
+bigMoon::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT bigMoon of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bigMoon', 'id': 'string_8'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'big moon', 'id': 'string_6'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x100
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Kerona has two moons. This one's the bigger of two.", 'id': 'string_7'}
+Overriden functions: 1
+  [0x10a]  = bigMoon::266   	 ; @0x3b0
+
+.CODE
+smallMoon::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT smallMoon of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'smallMoon', 'id': 'string_11'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'small moon', 'id': 'string_9'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Kerona has two moons. This one's the smaller of two.", 'id': 'string_10'}
+Overriden functions: 1
+  [0x10a]  = smallMoon::266   	 ; @0x41c
+
+.CODE
+radarPost::107:
+		lsg	0xb
+		ldi	0x29
+		eq?	
+		bnt	code_1174
+		ldi	0x00c8
+		jmp	code_1176
+code_1174:
+		ldi	0x00
+code_1176:
+		aTop	0xa
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+radarPost::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pTos	0xa
+		ldi	0x00c8
+		ne?	
+		bnt	code_1226
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+code_1226:
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT radarPost of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'radarPost', 'id': 'string_14'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'radar post', 'id': 'string_12'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The settlement of Ulence Flats is surrounded by these force field generators. They repel such undesirables such as the grell which thrive below the sands. It will allow only airborne vehicles in or out.', 'id': 'string_13'}
+Overriden functions: 2
+  [0x6b]  = radarPost::107   	 ; @0x488
+  [0x10a]  = radarPost::266   	 ; @0x4a3
+
+.CODE
+desert::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT desert of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'desert', 'id': 'string_15'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'desert', 'id': 'string_15'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x800
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Kerona's relatively flat desert stretches out into the distance.", 'id': 'string_16'}
+Overriden functions: 1
+  [0x10a]  = desert::266   	 ; @0x51c
+
+.CODE
+robot::266:
+		lsp	0x1
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1438
+		push2	
+		pushi	0x02be
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_1560
+code_1438:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1458
+		push2	
+		pushi	0x02be
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_1560
+code_1458:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1509
+		pushi	0x03
+		lsp	0x2
+		pushi	0x04
+		pushi	0x0f
+		calle	0x03e7, 0x0005, 0x06
+		bnt	code_1495
+		push2	
+		pushi	0x02be
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_1560
+code_1495:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x30, 0x8
+		jmp	code_1560
+code_1509:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_1529
+		push2	
+		pushi	0x02be
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1560
+code_1529:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1549
+		push2	
+		pushi	0x02be
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		jmp	code_1560
+code_1549:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x30, 0x8
+code_1560:
+		toss	
+		ret	
+
+
+.OBJECT robot of 0x30
+Exported
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'robot', 'id': 'string_19'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'your pilot droid', 'id': 'string_17'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Your new pilot droid appears to be a bit dinged up, but functional. You hope that he knows more about piloting a spaceship than you do.', 'id': 'string_18'}
+  [#22] = 0x2
+  [#23] = 0x1c3
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x2000
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x10a]  = robot::266   	 ; @0x588
+
+.OBJECT roboGroop of 0x4f
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x4f
+  [#1] = 0x4f
+  [#2] = 0x0
+  [#3] = {'val': 'roboGroop', 'id': 'string_20'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+Overriden functions: 0
+
+.CODE
+zapEgo::60:
+		pushi	0x11
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0400
+		and	
+		bnt	code_1751
+		pushi	0x008a
+		push1	
+		pushi	0x03
+		self	0x6
+code_1751:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		ret	
+
+zapEgo::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2065
+		push0	
+		callb	0x2, 0x0
+		+ag	0x65
+		push	
+		ldi	0x04
+		lt?	
+		bt	code_1790
+		lsg	0xb
+		ldi	0x2f
+		eq?	
+code_1790:
+		bnt	code_1902
+		pushi	0x05
+		push1	
+		pushi	0x3a
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		le?	
+		bnt	code_1844
+		pprev	
+		ldi	0x5a
+		le?	
+		bnt	code_1844
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b2
+		lt?	
+		bnt	code_1844
+		ldi	0x00
+		jmp	code_1886
+code_1844:
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		le?	
+		bnt	code_1864
+		ldi	0x04
+		jmp	code_1886
+code_1864:
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x010e
+		le?	
+		bnt	code_1884
+		ldi	0x05
+		jmp	code_1886
+code_1884:
+		ldi	0x01
+code_1886:
+		push	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_1956
+code_1902:
+		pushi	0x05
+		push1	
+		pushi	0x1d
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00a0
+		push1	
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		lt?	
+		bnt	code_1935
+		ldi	0x02
+		jmp	code_1937
+code_1935:
+		ldi	0x03
+code_1937:
+		push	
+		pushi	0x00d9
+		push1	
+		pushi	0x07
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+code_1956:
+		pushi	0x2b
+		push1	
+		pushi	0x025a
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	zapSound
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x20
+		sub	
+		push	
+		pushi	0x42
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x04
+		ge?	
+		bnt	code_2038
+		pushi	0x3f
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		add	
+		jmp	code_2049
+code_2038:
+		pushi	0x3f
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		sub	
+code_2049:
+		push	
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	zap
+		send	0x22
+		jmp	code_2505
+code_2065:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2131
+		lsg	0x65
+		ldi	0x04
+		ge?	
+		bnt	code_2097
+		pushi	0x05
+		pushi	0x1d
+		push2	
+		push0	
+		pushi	0x02be
+		pushi	0x0d
+		callb	0xa, 0xa
+		jmp	code_2505
+code_2097:
+		pushi	0x06
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x14
+		jmp	code_2505
+code_2131:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2392
+		pushi	0x05
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2208
+		pushi	0x011a
+		push2	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x12
+		sub	
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x03
+		add	
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x3a
+		push1	
+		pushi	0x00e1
+		lag	0x0
+		send	0x14
+		jmp	code_2366
+code_2208:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2262
+		pushi	0x011a
+		push2	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x12
+		add	
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x03
+		add	
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		pushi	0x3a
+		push1	
+		pushi	0x0087
+		lag	0x0
+		send	0x14
+		jmp	code_2366
+code_2262:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_2316
+		pushi	0x011a
+		push2	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0b
+		sub	
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		sub	
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x3a
+		push1	
+		pushi	0x0145
+		lag	0x0
+		send	0x14
+		jmp	code_2366
+code_2316:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_2366
+		pushi	0x011a
+		push2	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0b
+		add	
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		sub	
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		pushi	0x3a
+		push1	
+		pushi	0x2d
+		lag	0x0
+		send	0x14
+code_2366:
+		toss	
+		pushi	0x0094
+		push1	
+		class	0x1f
+		push	
+		pushi	0x0119
+		pushi	0x03
+		class	0x5c
+		push	
+		pushi	0x0a
+		pushSelf	
+		lag	0x0
+		send	0x10
+		jmp	code_2505
+code_2392:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2463
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		aTop	0x1a
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		pTos	0x1a
+		lag	0x0
+		send	0x6
+		pushi	0x6c
+		push0	
+		lofsa	zap
+		send	0x4
+		push1	
+		pushi	0x26
+		callb	0x6, 0x2
+		not	
+		bnt	code_2451
+		ldi	0x08
+		aTop	0x10
+		jmp	code_2505
+code_2451:
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_2505
+code_2463:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2505
+		push2	
+		pushi	0x02be
+		pushi	0x0e
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02be
+		pushi	0x0f
+		calle	0xff, 0x00, 0x04
+		push1	
+		pushi	0x26
+		callb	0x7, 0x2
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2505:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT zapEgo of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'zapEgo', 'id': 'string_21'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = zapEgo::60   	 ; @0x6c0
+  [0x8a]  = zapEgo::138   	 ; @0x6e0
+
+.OBJECT zap of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'zap', 'id': 'string_22'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x3a
+  [#24] = 0x8
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x6000
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT zapSound of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'zapSound', 'id': 'string_23'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x25a
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "ulenceRegion"		 ; special
+string_1: "mountains"		 ; special
+string_2: "In the distance is the galaxy-famous Skihairy mountain range. Nestled in its southernmost slopes is the renowned YoMammy National Park, usually hip-deep in tourists this time of year. Oh, well - maybe next trip."
+string_3: "sky"
+string_4: "What a sky this planet has! You've never seen its like outside a toxic waste dump."
+string_5: "keronaSky"		 ; special
+string_6: "big moon"
+string_7: "Kerona has two moons. This one's the bigger of two."
+string_8: "bigMoon"		 ; special
+string_9: "small moon"
+string_10: "Kerona has two moons. This one's the smaller of two."
+string_11: "smallMoon"		 ; special
+string_12: "radar post"
+string_13: "The settlement of Ulence Flats is surrounded by these force field generators. They repel such undesirables such as the grell which thrive below the sands. It will allow only airborne vehicles in or out."
+string_14: "radarPost"		 ; special
+string_15: "desert"		 ; special
+string_16: "Kerona's relatively flat desert stretches out into the distance."
+string_17: "your pilot droid"
+string_18: "Your new pilot droid appears to be a bit dinged up, but functional. You hope that he knows more about piloting a spaceship than you do."
+string_19: "robot"		 ; special
+string_20: "roboGroop"		 ; special
+string_21: "zapEgo"		 ; special
+string_22: "zap"		 ; special
+string_23: "zapSound"		 ; special
+string_unused_24: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 40
+0x102, 0x119, 0x12c, 0x134, 0x13c, 0x144, 0x14c, 0x154, 0x17f, 0x1c5, 0x1cf, 0x20a, 0x2bc, 0x2d0, 0x2e0, 0x37e, 0x392, 0x3a2, 0x3ea, 0x3fe, 0x40e, 0x456, 0x46a, 0x47a, 0x4e6, 0x4fa, 0x50a, 0x556, 0x56a, 0x57a, 0x62c, 0x640, 0x650, 0x6ae, 0x7b2, 0x80a, 0x97e, 0x9de, 0xa18, 0xa7e

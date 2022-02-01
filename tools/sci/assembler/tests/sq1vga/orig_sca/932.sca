@@ -1,0 +1,323 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+code_42  ; push1
+code_51  ; push1
+code_165  ; pushi
+code_241  ; link
+code_276  ; link
+code_312  ; link
+code_354  ; link
+code_490  ; pushi
+
+.CODE
+; exported
+code_42:
+		push1	
+		push0	
+		rest	0x1
+		call	code_60, 2
+		ret	
+
+; exported
+code_51:
+		push1	
+		push1	
+		rest	0x1
+		call	code_60, 2
+		ret	
+
+code_60:
+		link	0x02
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		sat	0x1
+		pushi	0x58
+		push1	
+		push0	
+		lag	0x1
+		send	0x6
+		lap	0x1
+		bnt	code_93
+		push0	
+		rest	0x2
+		callk	0x1b, 0x0
+		jmp	code_102
+code_93:
+		push1	
+		rest	0x2
+		pushi	0x79
+		calle	0xff, 0x00, 0x02
+code_102:
+		lat	0x1
+		bnt	code_155
+		pushi	0x57
+		push0	
+		lag	0x1
+		send	0x4
+		sat	0x0
+		pushi	0x57
+		push1	
+		lst	0x1
+		lag	0x1
+		send	0x6
+		lap	0x1
+		bnt	code_139
+		push0	
+		rest	0x2
+		callk	0x1b, 0x0
+		jmp	code_146
+code_139:
+		push0	
+		rest	0x2
+		calle	0xff, 0x00, 0x00
+code_146:
+		pushi	0x57
+		push1	
+		lst	0x0
+		lag	0x1
+		send	0x6
+code_155:
+		pushi	0x58
+		push1	
+		lst	0x1
+		lag	0x1
+		send	0x6
+		ret	
+
+; exported
+code_165:
+		pushi	0x57
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_211
+		lsp	0x0
+		ldi	0x03
+		lt?	
+		bt	code_198
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		ldi	0x00
+		eq?	
+code_198:
+		bnt	code_206
+		lap	0x1
+		jmp	code_240
+code_206:
+		lap	0x3
+		jmp	code_240
+code_211:
+		lsp	0x0
+		ldi	0x04
+		lt?	
+		bt	code_230
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		ldi	0x00
+		eq?	
+code_230:
+		bnt	code_238
+		lap	0x2
+		jmp	code_240
+code_238:
+		lap	0x4
+code_240:
+		ret	
+
+; exported
+code_241:
+		link	0x01
+		lal	0x0
+		not	
+		bnt	code_273
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		sat	0x0
+		bnt	code_273
+		lat	0x0
+		sal	0x0
+		pushi	0x58
+		push1	
+		push0	
+		lag	0x1
+		send	0x6
+code_273:
+		lat	0x0
+		ret	
+
+; exported
+code_276:
+		link	0x01
+		lal	0x0
+		sat	0x0
+		bnt	code_309
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		not	
+		bnt	code_309
+		pushi	0x58
+		push1	
+		lsl	0x0
+		lag	0x1
+		send	0x6
+		ldi	0x00
+		sal	0x0
+code_309:
+		lat	0x0
+		ret	
+
+; exported
+code_312:
+		link	0x01
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		sat	0x0
+		bnt	code_353
+		pushi	0x58
+		push1	
+		pushi	0x57
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		lag	0x1
+		send	0x6
+		pushi	0x57
+		push1	
+		lst	0x0
+		lag	0x1
+		send	0x6
+		ldi	0x01
+		ret	
+
+code_353:
+		ret	
+
+; exported
+code_354:
+		link	0x03eb
+		lsp	0x0
+		ldi	0x04
+		eq?	
+		bnt	code_381
+		pushi	0x03
+		lea	0x4, 0x3
+		push	
+		lsp	0x3
+		lsp	0x4
+		callk	0x49, 0x6
+		jmp	code_391
+code_381:
+		push2	
+		lea	0x4, 0x3
+		push	
+		lsp	0x3
+		callk	0x47, 0x4
+code_391:
+		pushi	0x57
+		push0	
+		lag	0x1
+		send	0x4
+		sat	0x0
+		pushi	0x58
+		push0	
+		lag	0x1
+		send	0x4
+		sat	0x1
+		pushi	0x57
+		push1	
+		push1	
+		pushi	0x58
+		push1	
+		push0	
+		lag	0x1
+		send	0xc
+		pushi	0x03
+		lsp	0x1
+		lea	0x4, 0x3
+		push	
+		push0	
+		callk	0x7b, 0x6
+		ldi	0x00
+		sat	0x2
+		bnt	code_463
+		pushi	0x57
+		push1	
+		push	
+		lag	0x1
+		send	0x6
+		pushi	0x03
+		lsp	0x2
+		lea	0x4, 0x3
+		push	
+		push0	
+		callk	0x7b, 0x6
+		jmp	code_473
+code_463:
+		push2	
+		lsp	0x2
+		lofsa	string_0		; ""
+		push	
+		callk	0x47, 0x4
+code_473:
+		pushi	0x57
+		push1	
+		lst	0x0
+		pushi	0x58
+		push1	
+		lst	0x1
+		lag	0x1
+		send	0xc
+		lap	0x1
+		ret	
+
+; exported
+code_490:
+		pushi	0x56
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_509
+		lap	0x1
+		jmp	code_511
+code_509:
+		lap	0x2
+code_511:
+		ret	
+
+
+.STRINGS
+string_0: ""
+string_unused_1: ""
+string_unused_2: ""
+
+
+.LOCAL_VARS
+0x0, 0x0
+
+.RELOCATION
+num of pointers: 1
+0x1d3

@@ -1,0 +1,1538 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT launchBayScript of 0x6
+OBJECT printGuard of 0x6
+
+.CODE
+launchBayScript::108:
+		pushi	0x6c
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		push1	
+		pushi	0x02c1
+		callk	0x3, 0x2
+		ret	
+
+launchBayScript::138:
+		link	0x0a
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		lt?	
+		bnt	code_94
+		lofsa	guardTl
+		sat	0x0
+		lofsa	guardBustl
+		sat	0x1
+		lofsa	guardMouthl
+		sat	0x2
+		lofsa	guardEyesl
+		sat	0x3
+		lofsa	egoTl
+		sat	0x4
+		lofsa	egoBustl
+		sat	0x5
+		lofsa	egoMouthl
+		sat	0x6
+		lofsa	egoEyesl
+		sat	0x7
+		jmp	code_134
+code_94:
+		lofsa	guardTr
+		sat	0x0
+		lofsa	guardBustr
+		sat	0x1
+		lofsa	guardMouthr
+		sat	0x2
+		lofsa	guardEyesr
+		sat	0x3
+		lofsa	egoTr
+		sat	0x4
+		lofsa	egoBustr
+		sat	0x5
+		lofsa	egoMouthr
+		sat	0x6
+		lofsa	egoEyesr
+		sat	0x7
+code_134:
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x78
+		gt?	
+		bnt	code_177
+		pushi	0x09
+		push1	
+		push1	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		lat	0x4
+		send	0xc
+		pushi	0x09
+		push1	
+		push1	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		lat	0x0
+		send	0xc
+		jmp	code_205
+code_177:
+		pushi	0x09
+		push1	
+		pushi	0x55
+		pushi	0x03
+		push1	
+		pushi	0x60
+		lat	0x0
+		send	0xc
+		pushi	0x09
+		push1	
+		pushi	0x55
+		pushi	0x03
+		push1	
+		pushi	0x60
+		lat	0x4
+		send	0xc
+code_205:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_246
+		push0	
+		callb	0x2, 0x0
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		pushi	0x0a
+		push0	
+		push0	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_340
+code_246:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_278
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		pushi	0x0b
+		push0	
+		push1	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_340
+code_278:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_310
+		pushi	0x6b
+		pushi	0x08
+		lst	0x5
+		lst	0x6
+		lst	0x7
+		pushi	0x00aa
+		pushi	0x0c
+		push0	
+		push1	
+		pushSelf	
+		lat	0x4
+		send	0x14
+		jmp	code_340
+code_310:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_324
+		ldi	0x01
+		aTop	0x12
+		jmp	code_340
+code_324:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_340
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_340:
+		toss	
+		ret	
+
+
+.OBJECT launchBayScript of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'launchBayScript', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x6c]  = launchBayScript::108   	 ; @0x12
+  [0x8a]  = launchBayScript::138   	 ; @0x22
+
+.CODE
+printGuard::108:
+		pushi	0x6c
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		push1	
+		pushi	0x02c1
+		callk	0x3, 0x2
+		ret	
+
+printGuard::138:
+		link	0x0a
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		lt?	
+		bnt	code_480
+		lofsa	guardTl
+		sat	0x0
+		lofsa	guardBustl
+		sat	0x1
+		lofsa	guardMouthl
+		sat	0x2
+		lofsa	guardEyesl
+		sat	0x3
+		lofsa	egoTl
+		sat	0x4
+		lofsa	egoBustl
+		sat	0x5
+		lofsa	egoMouthl
+		sat	0x6
+		lofsa	egoEyesl
+		sat	0x7
+		jmp	code_520
+code_480:
+		lofsa	guardTr
+		sat	0x0
+		lofsa	guardBustr
+		sat	0x1
+		lofsa	guardMouthr
+		sat	0x2
+		lofsa	guardEyesr
+		sat	0x3
+		lofsa	egoTr
+		sat	0x4
+		lofsa	egoBustr
+		sat	0x5
+		lofsa	egoMouthr
+		sat	0x6
+		lofsa	egoEyesr
+		sat	0x7
+code_520:
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x78
+		gt?	
+		bnt	code_563
+		pushi	0x09
+		push1	
+		push1	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		lat	0x4
+		send	0xc
+		pushi	0x09
+		push1	
+		push1	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		lat	0x0
+		send	0xc
+		jmp	code_591
+code_563:
+		pushi	0x09
+		push1	
+		pushi	0x55
+		pushi	0x03
+		push1	
+		pushi	0x60
+		lat	0x0
+		send	0xc
+		pushi	0x09
+		push1	
+		pushi	0x55
+		pushi	0x03
+		push1	
+		pushi	0x60
+		lat	0x4
+		send	0xc
+code_591:
+		pTos	0x1a
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_725
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_629
+		push0	
+		callb	0x2, 0x0
+		pushi	0x03
+		lsg	0x0
+		pTos	0x8
+		pushSelf	
+		callb	0xd, 0x6
+		jmp	code_721
+code_629:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_660
+		pushi	0x6b
+		pushi	0x08
+		lst	0x5
+		lst	0x6
+		lst	0x7
+		pushi	0x00aa
+		push0	
+		push0	
+		push1	
+		pushSelf	
+		lat	0x4
+		send	0x14
+		jmp	code_721
+code_660:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_691
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		push1	
+		push0	
+		push1	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_721
+code_691:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_705
+		ldi	0x01
+		aTop	0x12
+		jmp	code_721
+code_705:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_721
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_721:
+		toss	
+		jmp	code_1284
+code_725:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_867
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_761
+		push0	
+		callb	0x2, 0x0
+		pushi	0x03
+		lsg	0x0
+		pTos	0x8
+		pushSelf	
+		callb	0xd, 0x6
+		jmp	code_863
+code_761:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_792
+		pushi	0x6b
+		pushi	0x08
+		lst	0x5
+		lst	0x6
+		lst	0x7
+		pushi	0x00aa
+		push2	
+		push0	
+		push1	
+		pushSelf	
+		lat	0x4
+		send	0x14
+		jmp	code_863
+code_792:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_824
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		pushi	0x03
+		push0	
+		push1	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_863
+code_824:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_838
+		ldi	0x01
+		aTop	0x12
+		jmp	code_863
+code_838:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_863
+		push2	
+		pushi	0x02c1
+		push0	
+		calle	0xff, 0x00, 0x04
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_863:
+		toss	
+		jmp	code_1284
+code_867:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_978
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_903
+		push0	
+		callb	0x2, 0x0
+		pushi	0x03
+		lsg	0x0
+		pTos	0x8
+		pushSelf	
+		callb	0xd, 0x6
+		jmp	code_974
+code_903:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_935
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		pushi	0x04
+		push0	
+		push1	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_974
+code_935:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_949
+		ldi	0x01
+		aTop	0x12
+		jmp	code_974
+code_949:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_974
+		push2	
+		pushi	0x02c1
+		push1	
+		calle	0xff, 0x00, 0x04
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_974:
+		toss	
+		jmp	code_1284
+code_978:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1153
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1014
+		push0	
+		callb	0x2, 0x0
+		pushi	0x03
+		lsg	0x0
+		pTos	0x8
+		pushSelf	
+		callb	0xd, 0x6
+		jmp	code_1149
+code_1014:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1046
+		pushi	0x6b
+		pushi	0x08
+		lst	0x5
+		lst	0x6
+		lst	0x7
+		pushi	0x00aa
+		pushi	0x05
+		push0	
+		push1	
+		pushSelf	
+		lat	0x4
+		send	0x14
+		jmp	code_1149
+code_1046:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1078
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		pushi	0x06
+		push0	
+		push1	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_1149
+code_1078:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1110
+		pushi	0x6b
+		pushi	0x08
+		lst	0x5
+		lst	0x6
+		lst	0x7
+		pushi	0x00aa
+		pushi	0x07
+		push0	
+		push1	
+		pushSelf	
+		lat	0x4
+		send	0x14
+		jmp	code_1149
+code_1110:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1124
+		ldi	0x01
+		aTop	0x12
+		jmp	code_1149
+code_1124:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1149
+		push2	
+		pushi	0x02c1
+		push2	
+		calle	0xff, 0x00, 0x04
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1149:
+		toss	
+		jmp	code_1284
+code_1153:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1284
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1189
+		push0	
+		callb	0x2, 0x0
+		pushi	0x03
+		lsg	0x0
+		pTos	0x8
+		pushSelf	
+		callb	0xd, 0x6
+		jmp	code_1283
+code_1189:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1221
+		pushi	0x6b
+		pushi	0x08
+		lst	0x1
+		lst	0x2
+		lst	0x3
+		pushi	0x00aa
+		pushi	0x08
+		push0	
+		push1	
+		pushSelf	
+		lat	0x0
+		send	0x14
+		jmp	code_1283
+code_1221:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1253
+		pushi	0x6b
+		pushi	0x08
+		lst	0x5
+		lst	0x6
+		lst	0x7
+		pushi	0x00aa
+		pushi	0x09
+		push0	
+		push1	
+		pushSelf	
+		lat	0x4
+		send	0x14
+		jmp	code_1283
+code_1253:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1267
+		ldi	0x01
+		aTop	0x12
+		jmp	code_1283
+code_1267:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1283
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1283:
+		toss	
+code_1284:
+		toss	
+		ret	
+
+
+.OBJECT printGuard of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'printGuard', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x6c]  = printGuard::108   	 ; @0x194
+  [0x8a]  = printGuard::138   	 ; @0x1a4
+
+.OBJECT guardTr of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'guardTr', 'id': 'string_2'}
+  [#4] = 0x78
+  [#5] = 0x3
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x1
+  [#10] = 0x9
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT guardBustr of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'guardBustr', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT guardMouthr of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'guardMouthr', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x28
+  [#10] = 0x23
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x5
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x24
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT guardEyesr of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'guardEyesr', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x18
+  [#10] = 0x22
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x5a
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT guardTl of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'guardTl', 'id': 'string_6'}
+  [#4] = 0x3
+  [#5] = 0x3
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x1
+  [#10] = 0xe4
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT guardBustl of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'guardBustl', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT guardMouthl of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'guardMouthl', 'id': 'string_8'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x28
+  [#10] = 0x13
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT guardEyesl of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'guardEyesl', 'id': 'string_9'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x18
+  [#10] = 0xd
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1f8
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1e
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT egoTl of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'egoTl', 'id': 'string_10'}
+  [#4] = 0x3
+  [#5] = 0x3
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x1
+  [#10] = 0xee
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT egoBustl of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'egoBustl', 'id': 'string_11'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT egoMouthl of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'egoMouthl', 'id': 'string_12'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x33
+  [#10] = 0x17
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT egoEyesl of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'egoEyesl', 'id': 'string_13'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x20
+  [#10] = 0xa
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1e
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT egoTr of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'egoTr', 'id': 'string_14'}
+  [#4] = 0x78
+  [#5] = 0x3
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x1
+  [#10] = 0x9
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT egoBustr of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'egoBustr', 'id': 'string_15'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT egoMouthr of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'egoMouthr', 'id': 'string_16'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x33
+  [#10] = 0x2a
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT egoEyesr of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'egoEyesr', 'id': 'string_17'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x20
+  [#10] = 0x18
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fb
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1e
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "launchBayScript"		 ; special
+string_1: "printGuard"		 ; special
+string_2: "guardTr"		 ; special
+string_3: "guardBustr"		 ; special
+string_4: "guardMouthr"		 ; special
+string_5: "guardEyesr"		 ; special
+string_6: "guardTl"		 ; special
+string_7: "guardBustl"		 ; special
+string_8: "guardMouthl"		 ; special
+string_9: "guardEyesl"		 ; special
+string_10: "egoTl"		 ; special
+string_11: "egoBustl"		 ; special
+string_12: "egoMouthl"		 ; special
+string_13: "egoEyesl"		 ; special
+string_14: "egoTr"		 ; special
+string_15: "egoBustr"		 ; special
+string_16: "egoMouthr"		 ; special
+string_17: "egoEyesr"		 ; special
+string_unused_18: ""
+string_unused_19: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 50
+0x34, 0x39, 0x3e, 0x43, 0x48, 0x4d, 0x52, 0x57, 0x5f, 0x64, 0x69, 0x6e, 0x73, 0x78, 0x7d, 0x82, 0x168, 0x1b6, 0x1bb, 0x1c0, 0x1c5, 0x1ca, 0x1cf, 0x1d4, 0x1d9, 0x1e1, 0x1e6, 0x1eb, 0x1f0, 0x1f5, 0x1fa, 0x1ff, 0x204, 0x518, 0x552, 0x5c4, 0x620, 0x686, 0x6ec, 0x75e, 0x7ba, 0x820, 0x886, 0x8f8, 0x954, 0x9ba, 0xa20, 0xa92, 0xaee, 0xb54

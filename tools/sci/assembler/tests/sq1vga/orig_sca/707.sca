@@ -1,0 +1,407 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT dropGrenade of 0x6
+OBJECT egoShot of 0x6
+
+.CODE
+dropGrenade::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_125
+		ldi	0x00
+		bnt	code_47
+		pushi	0x00a0
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		jmp	code_56
+code_47:
+		pushi	0x00a0
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+code_56:
+		pushi	0x0242
+		push0	
+		class	0x7c
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_91
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		add	
+		push	
+		lag	0x0
+		send	0x6
+code_91:
+		pushi	0x05
+		push1	
+		pushi	0x4b
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x07
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_274
+code_125:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_193
+		pushi	0x2b
+		push1	
+		pushi	0x0206
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x2b
+		push1	
+		pushi	0x0207
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x07
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		pushi	0x03
+		class	0x19
+		push	
+		pushi	0x0c
+		push1	
+		lag	0x0
+		send	0x10
+		ldi	0x02
+		aTop	0x12
+		jmp	code_274
+code_193:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_219
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x0d
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_274
+code_219:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_248
+		pushi	0x0094
+		pushi	0x05
+		class	0x7a
+		push	
+		pushi	0x03
+		pushi	0x0e
+		pushi	0x0f
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_274
+code_248:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_274
+		pushi	0x04
+		pushi	0x03a6
+		push0	
+		push0	
+		lofsa	string_0		; "Although you've always had an appreciation for the gases of the universe, this one proved a bit overwhelming. It really was a great idea, though. However, you should have chosen a victim not so close to yourself. Better choice next time."
+		push	
+		callb	0xa, 0x8
+		pushi	0x6c
+		push0	
+		self	0x4
+code_274:
+		toss	
+		ret	
+
+
+.OBJECT dropGrenade of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'dropGrenade', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = dropGrenade::138   	 ; @0x12
+
+.CODE
+egoShot::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_618
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0242
+		push0	
+		class	0x7c
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_417
+		pushi	0x05
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		push0	
+		pushi	0x04
+		pushi	0x06
+		pushi	0x03
+		calle	0x03e7, 0x0005, 0x0a
+		bnt	code_404
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		lag	0x0
+		send	0x6
+		jmp	code_541
+code_404:
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		lag	0x0
+		send	0x6
+		jmp	code_541
+code_417:
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x03
+		gt?	
+		bnt	code_454
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		sub	
+		push	
+		lag	0x0
+		send	0x6
+		jmp	code_541
+code_454:
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_496
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		lal	0x0
+		gt?	
+		bnt	code_540
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		lag	0x0
+		send	0x6
+		jmp	code_540
+code_496:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_540
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		lal	0x0
+		gt?	
+		bnt	code_530
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		lag	0x0
+		send	0x6
+		jmp	code_540
+code_530:
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		lag	0x0
+		send	0x6
+code_540:
+		toss	
+code_541:
+		pushi	0x0242
+		push0	
+		class	0x7c
+		send	0x4
+		push	
+		ldi	0x02
+		eq?	
+		bnt	code_568
+		pushi	0x05
+		push1	
+		pushi	0x32
+		lag	0x0
+		send	0x6
+		jmp	code_582
+code_568:
+		pushi	0x05
+		push1	
+		pushi	0x30
+		pushi	0x00a0
+		push1	
+		push1	
+		lag	0x0
+		send	0xc
+code_582:
+		pushi	0x2b
+		push1	
+		pushi	0x0170
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_644
+code_618:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_644
+		pushi	0x04
+		pushi	0x03ac
+		push2	
+		push0	
+		lofsa	string_2		; "BLAMMO! Those pulseray pistols sure are effective little weapons. Even after it kills you, your meat continues to cook to nice golden brown. Try not to get shot in the future. Even if your life isn't worth much, think about the rest of the universe."
+		push	
+		callb	0xa, 0x8
+		pushi	0x6c
+		push0	
+		self	0x4
+code_644:
+		toss	
+		ret	
+
+
+.OBJECT egoShot of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoShot', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoShot::138   	 ; @0x14e
+
+.STRINGS
+string_0: "Although you've always had an appreciation for the gases of the universe, this one proved a bit overwhelming. It really was a great idea, though. However, you should have chosen a victim not so close to yourself. Better choice next time."
+string_1: "dropGrenade"		 ; special
+string_2: "BLAMMO! Those pulseray pistols sure are effective little weapons. Even after it kills you, your meat continues to cook to nice golden brown. Try not to get shot in the future. Even if your life isn't worth much, think about the rest of the universe."
+string_3: "egoShot"		 ; special
+string_unused_4: ""
+
+
+.LOCAL_VARS
+0x0, 0x0, 0x0
+
+.RELOCATION
+num of pointers: 4
+0x107, 0x126, 0x279, 0x298

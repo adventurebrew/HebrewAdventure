@@ -1,0 +1,109 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm338 of 0x74
+
+.CODE
+rm338::107:
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x73
+		push1	
+		lofsa	pod
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		pushi	0x3c
+		push0	
+		lag	0xa
+		send	0x10
+		ret	
+
+
+.OBJECT rm338 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm338', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x26
+  [#11] = 0x8
+  [#12] = 0x96
+  [#13] = 0x0
+  [#14] = 0x25
+  [#15] = 0x12
+  [#16] = 0x8a
+  [#17] = 0xee
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 1
+  [0x6b]  = rm338::107   	 ; @0xe
+
+.OBJECT pod of 0x2d
+Function area offset: 0x3a
+Selectors [28]:
+  [#0] = 0x2d
+  [#1] = 0x2d
+  [#2] = 0x0
+  [#3] = {'val': 'pod', 'id': 'string_3'}
+  [#4] = 0x8b
+  [#5] = 0x7c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'escape pod', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The escape pod is destined to remain a monument to your visit.', 'id': 'string_2'}
+  [#22] = 0x8a
+  [#23] = 0x1
+  [#24] = 0x0
+  [#25] = 0xffff
+  [#26] = 0x0
+  [#27] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "rm338"		 ; special
+string_1: "escape pod"
+string_2: "The escape pod is destined to remain a monument to your visit."
+string_3: "pod"		 ; special
+string_unused_4: ""
+
+
+.RELOCATION
+num of pointers: 5
+0x28, 0x4a, 0x8e, 0xa2, 0xb2

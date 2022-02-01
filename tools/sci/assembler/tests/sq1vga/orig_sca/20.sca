@@ -1,0 +1,624 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm20 of 0x74
+
+.CODE
+rm20::107:
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_223
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x34
+		push0	
+		pushi	0x47
+		pushi	0x40
+		pushi	0x4d
+		pushi	0x7e
+		pushi	0x5c
+		pushi	0x013f
+		pushi	0x6c
+		pushi	0x013f
+		pushi	0x00ab
+		pushi	0x013c
+		pushi	0x00b0
+		pushi	0x0125
+		pushi	0x00b0
+		pushi	0x0120
+		pushi	0x00ac
+		pushi	0x0114
+		pushi	0x00aa
+		pushi	0x0115
+		pushi	0x00ad
+		pushi	0x00fb
+		pushi	0x00ad
+		pushi	0x00fa
+		pushi	0x00aa
+		pushi	0x00d4
+		pushi	0x00a9
+		pushi	0x00ce
+		pushi	0x00a4
+		pushi	0x00c1
+		pushi	0x00a3
+		pushi	0x00ae
+		pushi	0x009a
+		pushi	0x0082
+		pushi	0x009b
+		pushi	0x0087
+		pushi	0x0097
+		pushi	0x6c
+		pushi	0x0094
+		pushi	0x65
+		pushi	0x0091
+		pushi	0x56
+		pushi	0x0091
+		pushi	0x56
+		pushi	0x0095
+		pushi	0x42
+		pushi	0x0097
+		pushi	0x3a
+		pushi	0x009d
+		pushi	0x21
+		pushi	0x0098
+		push0	
+		pushi	0x009a
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x76
+		push	
+		self	0x6
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x48
+		pushi	0x78
+		calle	0x03be, 0x0000, 0x06
+		pushi	0x03
+		pushi	0x0084
+		pushi	0x019a
+		pushi	0x0196
+		calle	0x03be, 0x0000, 0x06
+		jmp	code_399
+code_223:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x22
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x5c
+		pushi	0x012a
+		pushi	0x58
+		pushi	0x00de
+		pushi	0x57
+		pushi	0x00ca
+		pushi	0x56
+		pushi	0x00bc
+		pushi	0x52
+		pushi	0x0095
+		pushi	0x4f
+		pushi	0x0089
+		pushi	0x48
+		pushi	0x75
+		pushi	0x46
+		pushi	0x5f
+		pushi	0x3c
+		pushi	0x58
+		pushi	0x3f
+		pushi	0x43
+		pushi	0x3e
+		pushi	0x34
+		pushi	0x3c
+		pushi	0x19
+		pushi	0x3c
+		pushi	0x09
+		pushi	0x33
+		push0	
+		pushi	0x36
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x52
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x18
+		push0	
+		pushi	0x41
+		pushi	0x3c
+		pushi	0x41
+		pushi	0x74
+		pushi	0x4e
+		pushi	0x0089
+		pushi	0x54
+		pushi	0x009f
+		pushi	0x56
+		pushi	0x00bb
+		pushi	0x5f
+		pushi	0x00d6
+		pushi	0x5e
+		pushi	0x00eb
+		pushi	0x62
+		pushi	0x0135
+		pushi	0x64
+		pushi	0x013f
+		pushi	0x66
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x3e
+		push	
+		self	0x8
+code_399:
+		lsg	0xc
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_419
+		ldi	0x0b
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_459
+code_419:
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_437
+		ldi	0x0c
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_459
+code_437:
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_455
+		ldi	0x0e
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_459
+code_455:
+		ldi	0x0a
+		aTop	0x16
+code_459:
+		toss	
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		lsg	0xa6
+		ldi	0x01
+		ne?	
+		bnt	code_512
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x64
+		gt?	
+		bnt	code_512
+		pushi	0x6b
+		push0	
+		lofsa	hole
+		send	0x4
+code_512:
+		ret	
+
+		bnot	
+
+.OBJECT rm20 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm20', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is the north-central boundary of a massive skeletal structure surrounded by arid terra not-so-firma.', 'id': 'string_0'}
+  [#10] = 0x14
+  [#11] = 0xffff
+  [#12] = 0x14
+  [#13] = 0x0
+  [#14] = 0x26
+  [#15] = 0x15
+  [#16] = 0x17
+  [#17] = 0x13
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x1
+Overriden functions: 1
+  [0x6b]  = rm20::107   	 ; @0xe
+
+.CODE
+hole::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		lsg	0xa6
+		ldi	0x01
+		ne?	
+		bnt	code_625
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x64
+		gt?	
+		bnt	code_625
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push1	
+		self	0x8
+code_625:
+		ret	
+
+hole::266:
+		lsg	0xa6
+		ldi	0x01
+		ne?	
+		bnt	code_777
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x64
+		gt?	
+		bnt	code_777
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_668
+		push2	
+		pushi	0x14
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_773
+code_668:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_706
+		lag	0xb5
+		bnt	code_691
+		push2	
+		pushi	0x14
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_773
+code_691:
+		pushi	0x008c
+		push1	
+		lofsa	enterHole
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_773
+code_706:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_724
+		push2	
+		pushi	0x14
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_773
+code_724:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_743
+		push2	
+		pushi	0x14
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_773
+code_743:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_762
+		push2	
+		pushi	0x14
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_773
+code_762:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_773:
+		toss	
+		jmp	code_786
+code_777:
+		push2	
+		pushi	0x14
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+code_786:
+		ret	
+
+		bnot	
+
+.OBJECT hole of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'hole', 'id': 'string_2'}
+  [#4] = 0x2e
+  [#5] = 0x88
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'hole', 'id': 'string_2'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x38
+  [#18] = 0x9d
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 2
+  [0x6b]  = hole::107   	 ; @0x24a
+  [0x10a]  = hole::266   	 ; @0x272
+
+.CODE
+enterHole::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_958
+		push2	
+		pushi	0x14
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		pushi	0x74
+		push1	
+		pushi	0x009d
+		lag	0x8
+		send	0x6
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x48
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x10
+		pushi	0x38
+		push1	
+		pushi	0x10
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		pushi	0x0132
+		push2	
+		pushi	0x03
+		push2	
+		pushi	0x42
+		push1	
+		pushi	0x07
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x1e
+		pushi	0x78
+		pushSelf	
+		lag	0x0
+		send	0x3e
+		jmp	code_1136
+code_958:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_993
+		pushi	0x69
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x019a
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lag	0xb1
+		send	0x12
+		jmp	code_1136
+code_993:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1007
+		ldi	0x02
+		aTop	0x12
+		jmp	code_1136
+code_1007:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1066
+		pushi	0x00c0
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x78
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x40
+		pushi	0x0091
+		pushi	0x42
+		push1	
+		pushi	0xff
+		pushi	0x00d9
+		push1	
+		pushi	0x19
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x04
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x30
+		jmp	code_1136
+code_1066:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1115
+		pushi	0x2b
+		push1	
+		pushi	0x0196
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x07
+		push1	
+		pushi	0x05
+		pushi	0x011a
+		push2	
+		pushi	0x55
+		pushi	0x00af
+		lag	0x0
+		send	0xe
+		ldi	0x02
+		aTop	0x12
+		jmp	code_1136
+code_1115:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1136
+		pushi	0x05
+		pushi	0x03af
+		push0	
+		push0	
+		pushi	0x14
+		pushi	0x07
+		callb	0xa, 0xa
+code_1136:
+		toss	
+		ret	
+
+
+.OBJECT enterHole of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'enterHole', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = enterHole::138   	 ; @0x35c
+
+.STRINGS
+string_0: "This is the north-central boundary of a massive skeletal structure surrounded by arid terra not-so-firma."
+string_1: "rm20"		 ; special
+string_2: "hole"		 ; special
+string_3: "enterHole"		 ; special
+string_unused_4: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 7
+0x1fc, 0x214, 0x220, 0x2b8, 0x326, 0x33a, 0x484

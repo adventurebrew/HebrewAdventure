@@ -1,0 +1,670 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+Inertia::107:
+		lap	0x0
+		bnt	code_16
+		lap	0x1
+		aTop	0x8
+		jmp	code_20
+code_16:
+		lag	0x0
+		aTop	0x8
+code_20:
+		ldi	0x00
+		aTop	0x12
+		aTop	0x1a
+		aTop	0x14
+		aTop	0xa
+		aTop	0x18
+		aTop	0x16
+		pushi	0x3a
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0xe
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		bnt	code_62
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x12
+code_62:
+		pTos	0x8
+		lag	0x0
+		eq?	
+		bnt	code_82
+		pushi	0x008c
+		push1	
+		lofsa	inertiaScript
+		push	
+		pToa	0x8
+		send	0x6
+code_82:
+		pushi	0x0128
+		push1	
+		pushSelf	
+		pToa	0x8
+		send	0x6
+		ret	
+
+Inertia::108:
+		pushi	0x38
+		push1	
+		pTos	0x10
+		pushi	0x0128
+		push1	
+		push0	
+		pToa	0x8
+		send	0xc
+		pTos	0x8
+		lag	0x0
+		eq?	
+		bnt	code_123
+		pushi	0x008c
+		push1	
+		push0	
+		pToa	0x8
+		send	0x6
+code_123:
+		ldi	0x00
+		aTop	0x8
+		pushi	0x6c
+		push0	
+		super	0x1, 0x4
+		ret	
+
+Inertia::60:
+		link	0x01
+		pushi	0x3d
+		push0	
+		pToa	0x8
+		send	0x4
+		bnt	code_154
+		pushi	0x64
+		push0	
+		self	0x4
+		jmp	code_407
+code_154:
+		pToa	0x1a
+		bnt	code_241
+		pushi	0x3a
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0xe
+		eq?	
+		bnt	code_191
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		bnt	code_191
+		pushi	0x64
+		push0	
+		self	0x4
+		jmp	code_407
+code_191:
+		pTos	0x14
+		ldi	0x00
+		gt?	
+		bnt	code_210
+		pushi	0x025e
+		push0	
+		self	0x4
+		dpToa	0x14
+		jmp	code_407
+code_210:
+		pTos	0xa
+		ldi	0x00
+		gt?	
+		bnt	code_233
+		pushi	0x025e
+		push0	
+		self	0x4
+		dpToa	0xa
+		pToa	0xa
+		aTop	0x14
+		jmp	code_407
+code_233:
+		pushi	0x64
+		push0	
+		self	0x4
+		jmp	code_407
+code_241:
+		pTos	0xa
+		pToa	0xc
+		lt?	
+		bnt	code_291
+		ipToa	0x14
+		push	
+		pushi	0x38
+		push0	
+		pToa	0x8
+		send	0x4
+		ge?	
+		bnt	code_291
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		bnt	code_291
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x12
+		ldi	0x00
+		aTop	0x14
+		ipToa	0xa
+		jmp	code_407
+code_291:
+		pushi	0x3a
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0xe
+		ne?	
+		bt	code_318
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		not	
+		bnt	code_407
+		pToa	0x12
+code_318:
+		bnt	code_407
+		ldi	0x00
+		sat	0x0
+code_325:
+		lst	0x0
+		ldi	0x11
+		lt?	
+		bnt	code_384
+		lat	0x0
+		lsli	0x0
+		pToa	0xe
+		ge?	
+		bnt	code_374
+		pprev	
+		lst	0x0
+		ldi	0x01
+		add	
+		lali	0x0
+		ge?	
+		bnt	code_374
+		lat	0x0
+		lali	0x12
+		aTop	0x16
+		lst	0x0
+		ldi	0x01
+		add	
+		lali	0x12
+		aTop	0x18
+		ldi	0x11
+		sat	0x0
+code_374:
+		lst	0x0
+		ldi	0x02
+		add	
+		sat	0x0
+		jmp	code_325
+code_384:
+		ldi	0x01
+		aTop	0x1a
+		pToa	0xa
+		aTop	0x14
+		pushi	0x38
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x10
+		pushi	0x025e
+		push0	
+		self	0x4
+code_407:
+		ret	
+
+Inertia::606:
+		pushi	0x38
+		push1	
+		pTos	0xa
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pushi	0x36
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x16
+		mul	
+		add	
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pushi	0x37
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x18
+		mul	
+		add	
+		push	
+		pToa	0x8
+		send	0x12
+		ret	
+
+Inertia::100:
+		pushi	0x38
+		push1	
+		pTos	0x10
+		pToa	0x8
+		send	0x6
+		pushi	0x3a
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0xe
+		ldi	0x00
+		aTop	0x12
+		aTop	0x1a
+		aTop	0x14
+		aTop	0xa
+		aTop	0x18
+		aTop	0x16
+		ret	
+
+		bnot	
+
+.CLASS Inertia of 0x1
+Function area offset: 0x3a
+Selectors [14]:
+  [0x0] = 0x7e
+  [0x1] = 0x1
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Inertia', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x256] = 0x0
+  [0x257] = 0x0
+  [0x258] = 0x0
+  [0x259] = 0x0
+  [0x1ab] = 0x0
+  [0x25a] = 0x0
+  [0x25b] = 0x0
+  [0x25c] = 0x0
+  [0x25d] = 0x0
+Overriden functions: 5
+  [0x6b]  = Inertia::107   	 ; @0x4
+  [0x3c]  = Inertia::60   	 ; @0x86
+  [0x6c]  = Inertia::108   	 ; @0x5c
+  [0x25e]  = Inertia::606   	 ; @0x198
+  [0x64]  = Inertia::100   	 ; @0x1d2
+
+.CODE
+Swim::60:
+		pushi	0x3b
+		push0	
+		pToa	0x8
+		send	0x4
+		bnt	code_623
+		pushi	0x3d
+		push0	
+		pToa	0x8
+		send	0x4
+		not	
+		bnt	code_623
+		pushi	0x3c
+		push0	
+		super	0x17, 0x4
+code_623:
+		ret	
+
+
+.CLASS Swim of 0x17
+Function area offset: 0x26
+Selectors [9]:
+  [0x0] = 0x7f
+  [0x1] = 0x17
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Swim', 'id': 'string_1'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+Overriden functions: 1
+  [0x3c]  = Swim::60   	 ; @0x254
+
+.CODE
+InertTo::225:
+		pTos	0xc
+		ldi	0x0a
+		add	
+		push	
+		pushi	0x04
+		push0	
+		pToa	0x8
+		send	0x4
+		ge?	
+		bnt	code_735
+		pprev	
+		pTos	0xc
+		ldi	0x0a
+		sub	
+		ge?	
+		bnt	code_735
+		pTos	0xe
+		ldi	0x0a
+		add	
+		push	
+		pushi	0x03
+		push0	
+		pToa	0x8
+		send	0x4
+		ge?	
+		bnt	code_735
+		pprev	
+		pTos	0xe
+		ldi	0x0a
+		sub	
+		ge?	
+code_735:
+		ret	
+
+InertTo::60:
+		link	0x01
+		pushi	0x00e1
+		push0	
+		self	0x4
+		bnt	code_755
+		pushi	0x64
+		push0	
+		self	0x4
+		jmp	code_802
+code_755:
+		pushi	0x3a
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pushi	0x04
+		dup	
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pTos	0xc
+		pTos	0xe
+		callk	0x3f, 0x8
+		ne?	
+		bnt	code_796
+		push1	
+		pushSelf	
+		callk	0x4f, 0x2
+code_796:
+		pushi	0x3c
+		push0	
+		super	0x1d, 0x4
+code_802:
+		ret	
+
+		bnot	
+
+.OBJECT InertTo of 0x1d
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0x1d
+  [#1] = 0x1d
+  [#2] = 0x0
+  [#3] = {'val': 'InertTo', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 2
+  [0x3c]  = InertTo::60   	 ; @0x2e0
+  [0xe1]  = InertTo::225   	 ; @0x2ac
+
+.CODE
+inertiaScript::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		pushi	0x7d
+		push1	
+		pushSelf	
+		lag	0x4a
+		send	0x6
+		ret	
+
+inertiaScript::108:
+		pushi	0x6c
+		push0	
+		lofsa	jetSound
+		send	0x4
+		pushi	0x6c
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x4a
+		send	0x6
+		ret	
+
+inertiaScript::129:
+		pushi	0x4c
+		push0	
+		lap	0x1
+		send	0x4
+		bnt	code_926
+		ret	
+
+		jmp	code_1102
+code_926:
+		pushi	0x00cc
+		push0	
+		lag	0x45
+		send	0x4
+		push	
+		pushi	0x43
+		push1	
+		push0	
+		lag	0x45
+		send	0x6
+		ne?	
+		bt	code_981
+		pushi	0x0139
+		push0	
+		class	0x31
+		send	0x4
+		not	
+		bt	code_981
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x4000
+		ne?	
+		bt	code_981
+		pushi	0x40
+		push0	
+		lap	0x1
+		send	0x4
+code_981:
+		bnt	code_1028
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x40
+		and	
+		bnt	code_1016
+		pushi	0x2b
+		push1	
+		pushi	0x01f6
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	jetSound
+		send	0x10
+code_1016:
+		pushi	0x0081
+		push1	
+		lsp	0x1
+		super	0x6, 0x6
+		jmp	code_1102
+code_1028:
+		pushi	0x0119
+		pushi	0x03
+		lag	0x43
+		bnt	code_1043
+		class	0x24
+		jmp	code_1046
+code_1043:
+		lofsa	InertTo
+code_1046:
+		push	
+		pushi	0x04
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		pToa	0x8
+		send	0xa
+		pushi	0x2b
+		push1	
+		pushi	0x01f6
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	jetSound
+		send	0x10
+		pushi	0x013b
+		push1	
+		push0	
+		class	0x31
+		send	0x6
+		pushi	0x4c
+		push1	
+		push1	
+		lap	0x1
+		send	0x6
+code_1102:
+		ret	
+
+		bnot	
+
+.OBJECT inertiaScript of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'inertiaScript', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 3
+  [0x6b]  = inertiaScript::107   	 ; @0x366
+  [0x6c]  = inertiaScript::108   	 ; @0x377
+  [0x81]  = inertiaScript::129   	 ; @0x390
+
+.OBJECT jetSound of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'jetSound', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "Inertia"		 ; special
+string_1: "Swim"		 ; special
+string_2: "InertTo"		 ; special
+string_3: "inertiaScript"		 ; special
+string_4: "jetSound"		 ; special
+string_unused_5: ""
+
+
+.LOCAL_VARS
+0x167, 0x152, 0x16, 0x0, 0x43, 0x17, 0x70, 0x44, 0x9d, 0x71, 0xca, 0x9e, 0xf7, 0xcb, 0x124, 0xf8, 0x151, 0x125, 0x0, 0xffff, 0x0, 0xffff, 0x1, 0xffff, 0x1, 0x0, 0x1, 0x1, 0x0, 0x1, 0xffff, 0x1, 0xffff, 0x0, 0xffff, 0xffff
+
+.RELOCATION
+num of pointers: 10
+0x4b, 0x206, 0x282, 0x336, 0x37b, 0x3f4, 0x414, 0x439, 0x462, 0x4a0

@@ -1,0 +1,3993 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT keronaRegion of 0x42
+OBJECT plant of 0x2c
+OBJECT plant2 of 0x2c
+OBJECT spider of 0x77
+OBJECT drinkScript of 0x6
+
+.OBJECT spiderPolyA of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'spiderPolyA', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.OBJECT spiderPolyB of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'spiderPolyB', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.CODE
+code_94:
+		pushi	0x07
+		lsp	0x1
+		pushi	0x12
+		pushi	0x25
+		pushi	0x26
+		pushi	0x008a
+		pushi	0x00ee
+		pushi	0x0152
+		calle	0x03e7, 0x0005, 0x0e
+		bnt	code_128
+		ldi	0x0191
+		jmp	code_197
+code_128:
+		pushi	0x0a
+		lsp	0x1
+		pushi	0x13
+		pushi	0x14
+		pushi	0x15
+		pushi	0x16
+		pushi	0x17
+		pushi	0x18
+		pushi	0x19
+		pushi	0x1a
+		pushi	0x1b
+		calle	0x03e7, 0x0005, 0x14
+		bnt	code_165
+		ldi	0x01c0
+		jmp	code_197
+code_165:
+		push2	
+		lsp	0x1
+		pushi	0x1c
+		calle	0x03e7, 0x0005, 0x04
+		bnt	code_197
+		push1	
+		pushi	0x3b
+		callb	0x6, 0x2
+		bnt	code_194
+		ldi	0x01a4
+		jmp	code_197
+code_194:
+		ldi	0x019f
+code_197:
+		sal	0x3
+		ret	
+
+code_200:
+		pushi	0x7a
+		push0	
+		lag	0x70
+		send	0x4
+		lsg	0xb
+		dup	
+		ldi	0x13
+		eq?	
+		bnt	code_247
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x93
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x0c
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x73
+		push1	
+		lofsa	spiderPolyA
+		push	
+		lag	0x70
+		send	0x6
+		jmp	code_669
+code_247:
+		dup	
+		ldi	0x14
+		eq?	
+		bnt	code_285
+		pushi	0x5a
+		push1	
+		lea	0x2, 0xab
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x0b
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x73
+		push1	
+		lofsa	spiderPolyA
+		push	
+		lag	0x70
+		send	0x6
+		jmp	code_669
+code_285:
+		dup	
+		ldi	0x15
+		eq?	
+		bnt	code_323
+		pushi	0x5a
+		push1	
+		lea	0x2, 0xc1
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x0c
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x73
+		push1	
+		lofsa	spiderPolyA
+		push	
+		lag	0x70
+		send	0x6
+		jmp	code_669
+code_323:
+		dup	
+		ldi	0x16
+		eq?	
+		bnt	code_382
+		pushi	0x5a
+		push1	
+		lea	0x2, 0xd9
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x04
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0xe1
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x0e
+		lofsa	spiderPolyB
+		send	0xc
+		pushi	0x73
+		push2	
+		lofsa	spiderPolyA
+		push	
+		lofsa	spiderPolyB
+		push	
+		lag	0x70
+		send	0x8
+		jmp	code_669
+code_382:
+		dup	
+		ldi	0x17
+		eq?	
+		bnt	code_443
+		pushi	0x5a
+		push1	
+		lea	0x2, 0xfd
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x04
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x5
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x09
+		lofsa	spiderPolyB
+		send	0xc
+		pushi	0x73
+		push2	
+		lofsa	spiderPolyA
+		push	
+		lofsa	spiderPolyB
+		push	
+		lag	0x70
+		send	0x8
+		jmp	code_669
+code_443:
+		dup	
+		ldi	0x18
+		eq?	
+		bnt	code_506
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x17
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x09
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x29
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x06
+		lofsa	spiderPolyB
+		send	0xc
+		pushi	0x73
+		push2	
+		lofsa	spiderPolyA
+		push	
+		lofsa	spiderPolyB
+		push	
+		lag	0x70
+		send	0x8
+		jmp	code_669
+code_506:
+		dup	
+		ldi	0x19
+		eq?	
+		bnt	code_569
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x35
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x06
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x41
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x09
+		lofsa	spiderPolyB
+		send	0xc
+		pushi	0x73
+		push2	
+		lofsa	spiderPolyA
+		push	
+		lofsa	spiderPolyB
+		push	
+		lag	0x70
+		send	0x8
+		jmp	code_669
+code_569:
+		dup	
+		ldi	0x1a
+		eq?	
+		bnt	code_609
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x53
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x12
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x73
+		push1	
+		lofsa	spiderPolyA
+		push	
+		lag	0x70
+		send	0x6
+		jmp	code_669
+code_609:
+		dup	
+		ldi	0x1b
+		eq?	
+		bnt	code_669
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x77
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x08
+		lofsa	spiderPolyA
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0, 0x87
+		bnot	
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x07
+		lofsa	spiderPolyB
+		send	0xc
+		pushi	0x73
+		push2	
+		lofsa	spiderPolyA
+		push	
+		lofsa	spiderPolyB
+		push	
+		lag	0x70
+		send	0x8
+code_669:
+		toss	
+		ret	
+
+keronaRegion::107:
+		link	0x03
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bt	code_686
+		lsg	0xc
+		lag	0xb5
+		ne?	
+code_686:
+		bnt	code_696
+		ldi	0x00
+		sag	0xb5
+		jmp	code_717
+code_696:
+		pushi	0x03
+		pushi	0x0084
+		pushi	0x019b
+		pushi	0x0169
+		calle	0x03be, 0x0000, 0x06
+		lag	0xb
+		sag	0xb5
+code_717:
+		pushi	0x13
+		lag	0xb
+		le?	
+		bnt	code_729
+		pprev	
+		ldi	0x1b
+		le?	
+code_729:
+		not	
+		bnt	code_738
+		ldi	0x00
+		jmp	code_1004
+code_738:
+		lag	0xb5
+		bnt	code_925
+		push0	
+		call	code_200, 0
+		pushi	0x011a
+		push2	
+		pushi	0x0144
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_777
+		lsg	0xb3
+		ldi	0x013f
+		add	
+		jmp	code_795
+code_777:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_793
+		lsg	0xb3
+		ldi	0x013f
+		sub	
+		jmp	code_795
+code_793:
+		lag	0xa3
+code_795:
+		toss	
+		push	
+		pushi	0x0144
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_822
+		lsg	0xb4
+		ldi	0x00be
+		sub	
+		jmp	code_840
+code_822:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_838
+		lsg	0xb4
+		ldi	0x00be
+		add	
+		jmp	code_840
+code_838:
+		lag	0xb4
+code_840:
+		toss	
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x00c0
+		push0	
+		pushi	0x38
+		push1	
+		lsg	0x57
+		ldi	0x02
+		add	
+		push	
+		pushi	0x00d9
+		push1	
+		lsg	0x57
+		ldi	0x02
+		add	
+		push	
+		pushi	0x55
+		push1	
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x01a6
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x00a0
+		push1	
+		pushi	0xff
+		pushi	0x00a0
+		push1	
+		lofsa	spiderGroop
+		push	
+		pushi	0x0119
+		pushi	0x05
+		class	0x6b
+		push	
+		lsg	0x0
+		pushi	0x18
+		lofsa	spider
+		push	
+		lsg	0x70
+		lofsa	spider
+		send	0x48
+		jmp	code_1004
+code_925:
+		push1	
+		pushi	0x37
+		callb	0x6, 0x2
+		bnt	code_1004
+		pushi	0x05
+		push1	
+		pushi	0x01a6
+		pushi	0x00a0
+		push1	
+		pushi	0xff
+		pushi	0x38
+		push1	
+		lsg	0x57
+		ldi	0x02
+		add	
+		push	
+		pushi	0x00d9
+		push1	
+		lsg	0x57
+		ldi	0x02
+		add	
+		push	
+		pushi	0x00a0
+		push1	
+		lofsa	spiderGroop
+		push	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0222
+		push1	
+		lofsa	spiderRegionPather
+		push	
+		pushi	0x0119
+		push1	
+		lofsa	spiderRegionPather
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	spider
+		send	0x34
+code_1004:
+		pushi	0x00d3
+		push1	
+		pushi	0x10
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_1027
+		push2	
+		pushi	0x0080
+		pushi	0x0d
+		callk	0x0, 0x4
+code_1027:
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x0f
+		pushi	0x10
+		calle	0x03be, 0x0000, 0x06
+		lag	0xb5
+		bt	code_1058
+		lag	0xb2
+		bt	code_1058
+		push1	
+		pushi	0x37
+		callb	0x6, 0x2
+code_1058:
+		bnt	code_1107
+		pushi	0x04
+		pushi	0x0080
+		pushi	0x01a6
+		pushi	0x0148
+		pushi	0x38
+		calle	0x03be, 0x0000, 0x08
+		pushi	0x03
+		pushi	0x0084
+		pushi	0x0193
+		pushi	0x0194
+		calle	0x03be, 0x0000, 0x06
+		push2	
+		pushi	0x0082
+		pushi	0x03a2
+		callk	0x0, 0x4
+code_1107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x42, 0x4
+		pushi	0x6b
+		push0	
+		lofsa	mountains
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	keronaSky
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	moon
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	farSand
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	nearSand
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	dune
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	bones
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	base
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	plant
+		send	0x4
+		lsg	0xb
+		ldi	0x16
+		eq?	
+		bnt	code_1203
+		pushi	0x6b
+		push0	
+		lofsa	plant2
+		send	0x4
+code_1203:
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		push1	
+		lsg	0xb
+		call	code_94, 2
+		ne?	
+		bnt	code_1264
+		lag	0xb5
+		not	
+		bnt	code_1264
+		pushi	0x2b
+		push1	
+		pushi	0x0223
+		push0	
+		lofsa	spider
+		send	0x4
+		bnt	code_1249
+		ldi	0x0194
+		jmp	code_1251
+code_1249:
+		lal	0x3
+code_1251:
+		push	
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+code_1264:
+		ret	
+
+keronaRegion::60:
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		lal	0x3
+		eq?	
+		bnt	code_1323
+		lag	0xb5
+		bt	code_1302
+		push1	
+		pushi	0x37
+		callb	0x6, 0x2
+		bnt	code_1323
+		pushi	0x0223
+		push0	
+		lofsa	spider
+		send	0x4
+code_1302:
+		bnt	code_1323
+		pushi	0x2b
+		push1	
+		pushi	0x0194
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+code_1323:
+		pushi	0x0098
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0xff
+		eq?	
+		bnt	code_1370
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0194
+		eq?	
+		bnt	code_1370
+		pushi	0x2b
+		push1	
+		lsl	0x3
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+code_1370:
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_1386
+		ldi	0x00
+		jmp	code_1698
+code_1386:
+		lag	0xb5
+		bnt	code_1477
+		lal	0x4
+		not	
+		bnt	code_1477
+		lsg	0xb
+		ldi	0x1b
+		ne?	
+		bnt	code_1477
+		pushi	0x03
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x05
+		pushi	0x04
+		calle	0x03e7, 0x0005, 0x06
+		bnt	code_1477
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x02
+		and	
+		bnt	code_1477
+		ldi	0x01
+		sal	0x4
+		pushi	0x008c
+		pushi	0x03
+		lofsa	egoFallDown
+		push	
+		push0	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x05
+		eq?	
+		push	
+		lag	0x2
+		send	0xa
+		jmp	code_1698
+code_1477:
+		lag	0xb2
+		bnt	code_1591
+		pushi	0x13
+		lag	0xb
+		le?	
+		bnt	code_1698
+		pprev	
+		ldi	0x1b
+		le?	
+		bnt	code_1698
+		-ag	0xb2
+		not	
+		bnt	code_1698
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bt	code_1566
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x5a
+		lt?	
+		bt	code_1566
+		push2	
+		pushi	0x15
+		pushi	0x20
+		calle	0x03e7, 0x0005, 0x04
+		bnt	code_1551
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00a0
+		lt?	
+code_1551:
+		bt	code_1566
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		gt?	
+code_1566:
+		bnt	code_1584
+		pushi	0x008c
+		push1	
+		lofsa	spiderFalls
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_1698
+code_1584:
+		ldi	0x28
+		sag	0xb2
+		jmp	code_1698
+code_1591:
+		lag	0xb7
+		bnt	code_1698
+		-ag	0xb7
+		not	
+		bnt	code_1658
+		pushi	0x0130
+		pushi	0x04
+		pushi	0x28
+		pushi	0x1e
+		pushi	0x00b4
+		pushi	0x00be
+		lag	0x0
+		send	0xc
+		bnt	code_1651
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		not	
+		bnt	code_1651
+		pushi	0x008c
+		push1	
+		lofsa	egoDiesOfThirst
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_1698
+code_1651:
+		ldi	0x32
+		sag	0xb7
+		jmp	code_1698
+code_1658:
+		lsg	0xb7
+		dup	
+		ldi	0x04b0
+		eq?	
+		bnt	code_1680
+		push2	
+		pushi	0x02c0
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1697
+code_1680:
+		dup	
+		ldi	0x01f4
+		eq?	
+		bnt	code_1697
+		push2	
+		pushi	0x02c0
+		push1	
+		calle	0xff, 0x00, 0x04
+code_1697:
+		toss	
+code_1698:
+		pushi	0x3c
+		push0	
+		super	0x42, 0x4
+		ret	
+
+keronaRegion::375:
+		pushi	0x7a
+		push0	
+		lag	0x70
+		send	0x4
+		pushi	0x0c
+		lsp	0x1
+		pushi	0x25
+		pushi	0x12
+		pushi	0x13
+		pushi	0x14
+		pushi	0x15
+		pushi	0x16
+		pushi	0x17
+		pushi	0x18
+		pushi	0x19
+		pushi	0x1a
+		pushi	0x1b
+		calle	0x03e7, 0x0005, 0x18
+		aTop	0xe
+		ldi	0x00
+		aTop	0x10
+		lag	0xb5
+		not	
+		bnt	code_1818
+		push1	
+		pushi	0x0222
+		push0	
+		lofsa	spider
+		send	0x4
+		push	
+		callk	0x6, 0x2
+		bnt	code_1818
+		pushi	0x0201
+		push0	
+		pushi	0x0222
+		push0	
+		lofsa	spider
+		send	0x4
+		send	0x4
+		push	
+		lap	0x1
+		ne?	
+		bnt	code_1818
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0194
+		eq?	
+		bnt	code_1818
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0x4
+code_1818:
+		ldi	0x00
+		sal	0x4
+		pushi	0x0177
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x42, 0x6
+		ret	
+
+keronaRegion::108:
+		pushi	0x6c
+		push0	
+		lag	0x70
+		send	0x4
+		pushi	0x6c
+		push0	
+		rest	0x1
+		super	0x42, 0x4
+		ret	
+
+
+.OBJECT keronaRegion of 0x42
+Exported
+Function area offset: 0x16
+Selectors [10]:
+  [#0] = 0x42
+  [#1] = 0x42
+  [#2] = 0x0
+  [#3] = {'val': 'keronaRegion', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+Overriden functions: 4
+  [0x6b]  = keronaRegion::107   	 ; @0x29f
+  [0x3c]  = keronaRegion::60   	 ; @0x4f1
+  [0x6c]  = keronaRegion::108   	 ; @0x72a
+  [0x177]  = keronaRegion::375   	 ; @0x6a9
+
+.CODE
+mountains::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT mountains of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'mountains', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'mountains', 'id': 'string_3'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x80
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Mountains generously dappled with spires of unknown formational origin loom at your visual terminus.', 'id': 'string_4'}
+Overriden functions: 1
+  [0x10a]  = mountains::266   	 ; @0x772
+
+.CODE
+keronaSky::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT keronaSky of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'keronaSky', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sky', 'id': 'string_5'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x20
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "The lovely crisp green of the Keronian atmosphere reminds you that you'll need to do some laundry when (or if) you get back home.", 'id': 'string_6'}
+Overriden functions: 1
+  [0x10a]  = keronaSky::266   	 ; @0x7de
+
+.CODE
+moon::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT moon of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'moon', 'id': 'string_10'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'big moon', 'id': 'string_8'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Loitering about the horizon is the second and closest moon of Kerona. It is much less hospitable than the sphere you presently roam.', 'id': 'string_9'}
+Overriden functions: 1
+  [0x10a]  = moon::266   	 ; @0x84a
+
+.CODE
+farSand::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT farSand of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'farSand', 'id': 'string_13'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'distant desert', 'id': 'string_11'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x100
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Spread before you is a seemingly endless expanse of sand.', 'id': 'string_12'}
+Overriden functions: 1
+  [0x10a]  = farSand::266   	 ; @0x8b6
+
+.CODE
+nearSand::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT nearSand of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'nearSand', 'id': 'string_16'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sand', 'id': 'string_14'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x200
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The sand of Kerona has a reddish-orange color. Were you a geologist instead of a janitor, you might find this fact interesting.', 'id': 'string_15'}
+Overriden functions: 1
+  [0x10a]  = nearSand::266   	 ; @0x922
+
+.CODE
+dune::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT dune of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'dune', 'id': 'string_19'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'small dune', 'id': 'string_17'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Nomads of the desert, dunes are spread about in nearly every direction.', 'id': 'string_18'}
+Overriden functions: 1
+  [0x10a]  = dune::266   	 ; @0x98e
+
+.CODE
+bones::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2605
+		push2	
+		pushi	0x02c0
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_2676
+code_2605:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_2625
+		push2	
+		pushi	0x02c0
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_2676
+code_2625:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2645
+		push2	
+		pushi	0x02c0
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_2676
+code_2645:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_2665
+		push2	
+		pushi	0x02c0
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_2676
+code_2665:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2676:
+		toss	
+		ret	
+
+
+.OBJECT bones of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bones', 'id': 'string_20'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'bones', 'id': 'string_20'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "A wide selection of skeletal accessories awaits your perusal. Vertebrae, ribs, and who knows what else rest upon the Keronian soil. The average height of this structure looks to be at least 7 meters. Good thing you didn't meet this thing in its heyday.", 'id': 'string_21'}
+Overriden functions: 1
+  [0x10a]  = bones::266   	 ; @0x9fa
+
+.CODE
+base::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT base of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'base', 'id': 'string_24'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sandy base', 'id': 'string_22'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Upon a very narrow width of Keronian soil, able to resist erosion through the eons, rests the skeletal remains of this mammoth has-been.', 'id': 'string_23'}
+Overriden functions: 1
+  [0x10a]  = base::266   	 ; @0xaba
+
+.CODE
+plant::107:
+		pushi	0x0117
+		push1	
+		pushi	0x03
+		self	0x6
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+plant::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2989
+		pushi	0x00d3
+		push1	
+		pushi	0x10
+		lag	0x0
+		send	0x6
+		bnt	code_2936
+		push2	
+		pushi	0x02c0
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_3040
+code_2936:
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		push	
+		lofsa	bigBang
+		eq?	
+		bt	code_2957
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+code_2957:
+		bnt	code_2974
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+		jmp	code_3040
+code_2974:
+		pushi	0x008c
+		push1	
+		lofsa	pickPlant
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_3040
+code_2989:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3009
+		push2	
+		pushi	0x02c0
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_3040
+code_3009:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3029
+		push2	
+		pushi	0x02c0
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_3040
+code_3029:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3040:
+		toss	
+		ret	
+
+
+.OBJECT plant of 0x2c
+Exported
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'plant', 'id': 'string_25'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'plant', 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Oddly enough, a plant grows in isolated spots in this inhospitable environment.', 'id': 'string_26'}
+Overriden functions: 2
+  [0x6b]  = plant::107   	 ; @0xb26
+  [0x10a]  = plant::266   	 ; @0xb37
+
+.CODE
+plant2::107:
+		lsg	0xa6
+		ldi	0x01
+		ne?	
+		bnt	code_3130
+		pushi	0x0117
+		push1	
+		pushi	0x03
+		self	0x6
+code_3130:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+plant2::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3240
+		pushi	0x00d3
+		push1	
+		pushi	0x10
+		lag	0x0
+		send	0x6
+		bnt	code_3204
+		push2	
+		pushi	0x02c0
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_3291
+code_3204:
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		push	
+		lofsa	bigBang
+		eq?	
+		bnt	code_3225
+		ldi	0x00
+		jmp	code_3291
+code_3225:
+		pushi	0x008c
+		push1	
+		lofsa	pickPlant
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_3291
+code_3240:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3260
+		push2	
+		pushi	0x02c0
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_3291
+code_3260:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3280
+		push2	
+		pushi	0x02c0
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_3291
+code_3280:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3291:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT plant2 of 0x2c
+Exported
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'plant2', 'id': 'string_28'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'plant', 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Oddly enough, a rather bright plant grows in this otherwise flora-free area.', 'id': 'string_27'}
+Overriden functions: 2
+  [0x6b]  = plant2::107   	 ; @0xc2a
+  [0x10a]  = plant2::266   	 ; @0xc43
+
+.CODE
+pickPlant::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		pTos	0xa
+		ldi	0x01
+		eq?	
+		bnt	code_3468
+		pushi	0x03
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x04
+		pushi	0x0a
+		calle	0x03e7, 0x0005, 0x06
+		bnt	code_3468
+		lsl	0x5
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		ne?	
+		bnt	code_3468
+		pushi	0x2b
+		push0	
+		lag	0xb1
+		send	0x4
+		push	
+		ldi	0x01c8
+		eq?	
+		bnt	code_3451
+		pushi	0x2b
+		push1	
+		pushi	0x01c9
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		jmp	code_3468
+code_3451:
+		pushi	0x2b
+		push1	
+		pushi	0x01c8
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+code_3468:
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		sal	0x5
+		ret	
+
+pickPlant::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3528
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x0d
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_3686
+code_3528:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3574
+		push2	
+		pushi	0x02c0
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x19
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_3686
+code_3574:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3611
+		pushi	0x06
+		push1	
+		pushi	0x03
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_3686
+code_3611:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3686
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		push	
+		selfID	
+		eq?	
+		bnt	code_3681
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push2	
+		push2	
+		pushi	0x008e
+		callb	0xb, 0x4
+		pushi	0x0145
+		push1	
+		pushi	0x10
+		lag	0x0
+		send	0x6
+		push2	
+		pushi	0x02c0
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		push0	
+		callb	0x3, 0x0
+code_3681:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_3686:
+		toss	
+		ret	
+
+
+.OBJECT pickPlant of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'pickPlant', 'id': 'string_29'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = pickPlant::60   	 ; @0xd26
+  [0x8a]  = pickPlant::138   	 ; @0xd96
+
+.CODE
+egoFallDown::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3806
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x38
+		pushi	0x00a0
+		push1	
+		pTos	0x1a
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0c
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x06
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x24
+		jmp	code_4003
+code_3806:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3845
+		pushi	0x2b
+		push1	
+		pushi	0x0193
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_4003
+code_3845:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3859
+		ldi	0x0e
+		aTop	0x10
+		jmp	code_4003
+code_3859:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3944
+		pushi	0x04
+		push1	
+		pToa	0x1a
+		bnt	code_3888
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x21
+		sub	
+		jmp	code_3899
+code_3888:
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x21
+		add	
+code_3899:
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0b
+		add	
+		push	
+		pushi	0x00a0
+		push1	
+		pTos	0x1a
+		ldi	0x02
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_4003
+code_3944:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4003
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		push	
+		selfID	
+		eq?	
+		bnt	code_3998
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		pToa	0x1a
+		bnt	code_3987
+		ldi	0x05
+		jmp	code_3989
+code_3987:
+		ldi	0x04
+code_3989:
+		push	
+		lag	0x0
+		send	0x6
+		push0	
+		callb	0x3, 0x0
+code_3998:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4003:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT egoFallDown of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoFallDown', 'id': 'string_30'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoFallDown::138   	 ; @0xea6
+
+.CODE
+egoDiesOfThirst::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4126
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		push1	
+		push0	
+		pushi	0x00e2
+		push2	
+		push0	
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		lt?	
+		bnt	code_4114
+		pprev	
+		ldi	0x00b5
+		lt?	
+		bnt	code_4114
+		ldi	0x5a
+		jmp	code_4117
+code_4114:
+		ldi	0x010e
+code_4117:
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_4243
+code_4126:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4170
+		push2	
+		pushi	0x02c0
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02c0
+		pushi	0x0d
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02c0
+		pushi	0x0e
+		calle	0xff, 0x00, 0x04
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_4243
+code_4170:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4207
+		pushi	0x05
+		push1	
+		pushi	0x0f
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_4243
+code_4207:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4221
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_4243
+code_4221:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4243
+		pushi	0x05
+		pushi	0x03b4
+		push0	
+		push0	
+		pushi	0x02c0
+		pushi	0x0f
+		callb	0xa, 0xa
+code_4243:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT egoDiesOfThirst of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoDiesOfThirst', 'id': 'string_31'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoDiesOfThirst::138   	 ; @0xfe0
+
+.CODE
+drinkScript::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4371
+		push0	
+		callb	0x2, 0x0
+		ldi	0x1f40
+		sag	0xb7
+		pushi	0x0119
+		push1	
+		push0	
+		pushi	0x00e2
+		push2	
+		push0	
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		lt?	
+		bnt	code_4359
+		pprev	
+		ldi	0x00b5
+		lt?	
+		bnt	code_4359
+		ldi	0x5a
+		jmp	code_4362
+code_4359:
+		ldi	0x010e
+code_4362:
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_4579
+code_4371:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4408
+		pushi	0x05
+		push1	
+		pushi	0x10
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_4579
+code_4408:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4452
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x16
+		jmp	code_4579
+code_4452:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4505
+		push2	
+		pushi	0x02c0
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		sub	
+		push	
+		pushi	0x07
+		push1	
+		pushi	0x09
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x14
+		jmp	code_4579
+code_4505:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_4579
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		push	
+		selfID	
+		eq?	
+		bnt	code_4574
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		aTop	0x1a
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		pTos	0x1a
+		lag	0x0
+		send	0x6
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_4570
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		lag	0x0
+		send	0x6
+code_4570:
+		push0	
+		callb	0x3, 0x0
+code_4574:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4579:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT drinkScript of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'drinkScript', 'id': 'string_32'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = drinkScript::138   	 ; @0x10d0
+
+.CODE
+spiderFalls::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4810
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push2	
+		pushi	0x02c0
+		pushi	0x11
+		calle	0xff, 0x00, 0x04
+		pushi	0x2b
+		push1	
+		pushi	0x01d6
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	spiderSound
+		send	0x10
+		lsg	0xb
+		dup	
+		ldi	0x13
+		eq?	
+		bnt	code_4709
+		ldi	0xec
+		sal	0x0
+		jmp	code_4802
+code_4709:
+		dup	
+		ldi	0x14
+		eq?	
+		bnt	code_4727
+		ldi	0x28
+		sal	0x1
+		ldi	0x0d
+		sal	0x2
+		jmp	code_4802
+code_4727:
+		dup	
+		ldi	0x15
+		eq?	
+		bnt	code_4750
+		ldi	0x00c8
+		sal	0x0
+		ldi	0xd8
+		sal	0x1
+		ldi	0x05
+		sal	0x2
+		jmp	code_4802
+code_4750:
+		dup	
+		ldi	0x16
+		eq?	
+		bnt	code_4768
+		ldi	0x14
+		sal	0x1
+		ldi	0x0b
+		sal	0x2
+		jmp	code_4802
+code_4768:
+		dup	
+		ldi	0x18
+		eq?	
+		bnt	code_4791
+		ldi	0x00c8
+		sal	0x0
+		ldi	0x1e
+		sal	0x1
+		ldi	0x0c
+		sal	0x2
+		jmp	code_4802
+code_4791:
+		dup	
+		ldi	0x1b
+		eq?	
+		bnt	code_4802
+		ldi	0xec
+		sal	0x0
+code_4802:
+		toss	
+		ldi	0x1e
+		aTop	0x10
+		jmp	code_5426
+code_4810:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4900
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		lofsa	spider
+		send	0x8
+		pushi	0x011a
+		push2	
+		lsl	0x0
+		ldi	0x02
+		add	
+		push	
+		lsl	0x1
+		ldi	0x3f
+		add	
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x42
+		push1	
+		lsl	0x2
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x20
+		lal	0x0
+		add	
+		push	
+		lsl	0x1
+		ldi	0x50
+		add	
+		push	
+		pushSelf	
+		lofsa	shadow
+		send	0x1e
+		pushi	0x0119
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push2	
+		lsg	0x0
+		lofsa	shadow
+		push	
+		callb	0xd, 0x4
+		jmp	code_5426
+code_4900:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4965
+		pushi	0x42
+		push1	
+		lsl	0x2
+		pushi	0x011a
+		push2	
+		lsl	0x0
+		ldi	0x29
+		add	
+		push	
+		lsl	0x1
+		ldi	0x3e
+		add	
+		push	
+		pushi	0x00c0
+		push0	
+		lofsa	spider
+		send	0x12
+		pushi	0x011a
+		push2	
+		lsl	0x0
+		ldi	0x29
+		add	
+		push	
+		lsl	0x1
+		ldi	0x76
+		add	
+		push	
+		lofsa	shadow
+		send	0x8
+		ldi	0x06
+		aTop	0x10
+		jmp	code_5426
+code_4965:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5026
+		pushi	0x011a
+		push2	
+		lsl	0x0
+		ldi	0x42
+		add	
+		push	
+		lsl	0x1
+		ldi	0x72
+		add	
+		push	
+		lofsa	spider
+		send	0x8
+		pushi	0x07
+		push1	
+		push1	
+		pushi	0x011a
+		push2	
+		lsl	0x0
+		ldi	0x42
+		add	
+		push	
+		lsl	0x1
+		ldi	0x0083
+		add	
+		push	
+		lofsa	shadow
+		send	0xe
+		ldi	0x06
+		aTop	0x10
+		jmp	code_5426
+code_5026:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_5104
+		pushi	0x69
+		push0	
+		lofsa	spider
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x01d7
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	spiderSound
+		send	0x10
+		pushi	0x0119
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push2	
+		lsg	0x0
+		lofsa	shadow
+		push	
+		callb	0xd, 0x4
+		pushi	0x07
+		push1	
+		push2	
+		pushi	0x00d9
+		push1	
+		pushi	0x1a
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	shadow
+		send	0x14
+		jmp	code_5426
+code_5104:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5118
+		ldi	0x03
+		aTop	0x12
+		jmp	code_5426
+code_5118:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_5191
+		pushi	0x6c
+		push0	
+		lofsa	shadow
+		send	0x4
+		pushi	0x011a
+		push2	
+		lsl	0x0
+		ldi	0x42
+		add	
+		push	
+		lsl	0x1
+		ldi	0x0083
+		add	
+		push	
+		pushi	0x00c0
+		push0	
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x1a
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0x26
+		push1	
+		pushi	0x37
+		callb	0x7, 0x2
+		jmp	code_5426
+code_5191:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_5375
+		push2	
+		pushi	0x02c0
+		pushi	0x12
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02c0
+		pushi	0x13
+		calle	0xff, 0x00, 0x04
+		pushi	0x05
+		push1	
+		pushi	0x01a6
+		pushi	0x00a0
+		push1	
+		pushi	0xff
+		pushi	0x00a0
+		push1	
+		lofsa	spiderGroop
+		push	
+		pushi	0x06
+		push1	
+		push2	
+		pushi	0x3a
+		push1	
+		pushi	0x00b4
+		pushi	0x00d9
+		push1	
+		lsg	0x57
+		ldi	0x02
+		add	
+		push	
+		pushi	0x38
+		push1	
+		lsg	0x57
+		ldi	0x02
+		add	
+		push	
+		pushi	0x42
+		push1	
+		pushi	0xff
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		lofsa	spider
+		send	0x36
+		push0	
+		call	code_200, 0
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_5339
+		pushi	0x55
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x05
+		class	0x6b
+		push	
+		lsg	0x0
+		pushi	0x18
+		lofsa	spider
+		push	
+		lsg	0x70
+		lofsa	spider
+		send	0x14
+		lag	0xb
+		sag	0xb5
+		ipToa	0xa
+		pushi	0x008b
+		push0	
+		self	0x4
+		jmp	code_5426
+code_5339:
+		pushi	0x0119
+		pushi	0x06
+		class	0x24
+		push	
+		pushi	0x04
+		push0	
+		lofsa	spider
+		send	0x4
+		push	
+		pushi	0x00f0
+		pushSelf	
+		push1	
+		lsg	0x70
+		lofsa	spider
+		send	0x10
+		ldi	0x00
+		sag	0xb5
+		jmp	code_5426
+code_5375:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_5410
+		pushi	0x0222
+		push1	
+		lofsa	spiderRegionPather
+		push	
+		pushi	0x0119
+		push1	
+		lofsa	spiderRegionPather
+		push	
+		lofsa	spider
+		send	0xc
+		ldi	0x01
+		aTop	0x10
+		jmp	code_5426
+code_5410:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_5426
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_5426:
+		toss	
+		ret	
+
+
+.OBJECT spiderFalls of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'spiderFalls', 'id': 'string_33'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = spiderFalls::138   	 ; @0x1220
+
+.CODE
+bigBang::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_5590
+		push0	
+		callb	0x2, 0x0
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x019b
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x05
+		push1	
+		pushi	0x0148
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0119
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x10
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lofsa	spider
+		send	0x2a
+		lsg	0xb
+		ldi	0x1b
+		eq?	
+		bnt	code_6039
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		lofsa	spider
+		send	0x6
+		jmp	code_6039
+code_5590:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_5648
+		pushi	0x6c
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x011a
+		push2	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		sag	0xa3
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		add	
+		sag	0xa4
+		push	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0x10
+		jmp	code_6039
+code_5648:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_5662
+		ldi	0x04
+		aTop	0x12
+		jmp	code_6039
+code_5662:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5751
+		pushi	0x42
+		push1	
+		pushi	0x3f
+		push0	
+		lofsa	spider
+		send	0x4
+		push	
+		pushi	0x05
+		push1	
+		pushi	0x01a7
+		pushi	0x011a
+		push2	
+		lsg	0xa3
+		pushi	0xfa
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x0132
+		push2	
+		push1	
+		pushi	0x0a
+		pushi	0x00d9
+		push1	
+		pushi	0x07
+		pushi	0x38
+		push1	
+		pushi	0x03
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		lsg	0xa3
+		lsg	0xa4
+		ldi	0x07
+		sub	
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0x40
+		jmp	code_6039
+code_5751:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_5820
+		pushi	0x2b
+		push1	
+		pushi	0x0169
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		pushi	0x0094
+		push1	
+		class	0x1f
+		push	
+		pushi	0x0132
+		push2	
+		push1	
+		pushi	0x03
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		lsg	0xa3
+		lsg	0xa4
+		ldi	0x14
+		sub	
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0x20
+		jmp	code_6039
+code_5820:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5852
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		lsg	0xa3
+		lsg	0xa4
+		ldi	0x07
+		sub	
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0xc
+		jmp	code_6039
+code_5852:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_5920
+		pushi	0x2b
+		push1	
+		pushi	0x0169
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x00d9
+		push1	
+		pushi	0x0e
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x0132
+		push2	
+		push1	
+		push2	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		lsg	0xa3
+		lsg	0xa4
+		ldi	0x0f
+		sub	
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0x20
+		jmp	code_6039
+code_5920:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_5952
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		lsg	0xa3
+		lsg	0xa4
+		ldi	0x07
+		sub	
+		push	
+		pushSelf	
+		lofsa	spider
+		send	0xc
+		jmp	code_6039
+code_5952:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_6003
+		pushi	0x2b
+		push1	
+		pushi	0x0169
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x00d9
+		push1	
+		pushi	0x14
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		pushi	0xff
+		pushSelf	
+		lofsa	spider
+		send	0x12
+		jmp	code_6039
+code_6003:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_6017
+		ldi	0x1e
+		aTop	0x16
+		jmp	code_6039
+code_6017:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_6039
+		pushi	0x05
+		pushi	0x03b4
+		push0	
+		push0	
+		pushi	0x02c0
+		pushi	0x14
+		callb	0xa, 0xa
+code_6039:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT bigBang of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'bigBang', 'id': 'string_34'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = bigBang::138   	 ; @0x156e
+
+.CODE
+spiderRP::548:
+		pToa	0x6e
+		bnt	code_6161
+code_6105:
+		pushi	0x43
+		push1	
+		pushi	0x4d
+		push0	
+		pToa	0x6e
+		send	0x4
+		push	
+		ldi	0x01
+		add	
+		push	
+		pToa	0x6e
+		send	0x6
+		push	
+		ldi	0x7fff
+		ne?	
+		bnt	code_6154
+		pushi	0x01a6
+		push0	
+		pToa	0x6e
+		send	0x4
+		not	
+		bnt	code_6154
+		pushi	0x44
+		push0	
+		pToa	0x6e
+		send	0x4
+		jmp	code_6105
+code_6154:
+		pushi	0x64
+		push0	
+		pToa	0x6e
+		send	0x4
+code_6161:
+		ret	
+
+spiderRP::547:
+		push1	
+		pTos	0x6e
+		callk	0x6, 0x2
+		bnt	code_6186
+		lsg	0xb
+		pushi	0x0201
+		push0	
+		pToa	0x6e
+		send	0x4
+		eq?	
+		ret	
+
+		jmp	code_6189
+code_6186:
+		ldi	0x00
+		ret	
+
+code_6189:
+		ret	
+
+
+.CLASS spiderRP of 0x30
+Function area offset: 0xe2
+Selectors [56]:
+  [0x0] = 0x77
+  [0x1] = 0x30
+  [0x2] = 0x8000
+  [0x17] = {'val': 'spiderRP', 'id': 'string_35'}
+  [0x4] = 0x0
+  [0x3] = 0x0
+  [0x55] = 0x0
+  [0x3a] = 0x0
+  [0x10b] = 0x0
+  [0x9] = 0x0
+  [0xa] = 0x0
+  [0xb] = 0x0
+  [0xc] = 0x0
+  [0x10c] = 0x0
+  [0x10d] = 0x6789
+  [0x109] = 0x0
+  [0x10e] = 0x6789
+  [0x10f] = 0x0
+  [0x110] = 0x0
+  [0x111] = 0x0
+  [0x112] = 0x6789
+  [0x113] = 0x0
+  [0x37] = 0x2
+  [0x5] = 0x0
+  [0x6] = 0x0
+  [0x7] = 0x0
+  [0x3f] = 0x0
+  [0x8] = 0x0
+  [0x11] = 0x0
+  [0xd] = 0x0
+  [0xe] = 0x0
+  [0xf] = 0x0
+  [0x10] = 0x0
+  [0x13] = 0x0
+  [0x14] = 0x0
+  [0x15] = 0x0
+  [0x16] = 0x0
+  [0x5b] = 0x0
+  [0xd9] = 0x3
+  [0x88] = 0x0
+  [0xda] = 0x0
+  [0x83] = 0x0
+  [0x123] = 0x0
+  [0x12] = 0x8000
+  [0xde] = 0x0
+  [0xdf] = 0x0
+  [0x36] = 0x3
+  [0x38] = 0x3
+  [0x124] = 0x0
+  [0x125] = 0x0
+  [0x3b] = 0x0
+  [0x3e] = 0x0
+  [0x126] = 0x0
+  [0x127] = 0x0
+  [0x128] = 0x0
+  [0x222] = 0x0
+Overriden functions: 2
+  [0x224]  = spiderRP::548   	 ; @0x17d4
+  [0x223]  = spiderRP::547   	 ; @0x1812
+
+.CODE
+spider::60:
+		pToa	0x4e
+		bnt	code_6452
+		ldi	0x00
+		jmp	code_6550
+code_6452:
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_6468
+		ldi	0x00
+		jmp	code_6550
+code_6468:
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_6494
+		lag	0xb5
+		bnt	code_6494
+		pushi	0x008c
+		push1	
+		lofsa	moveToPath
+		push	
+		self	0x6
+		jmp	code_6550
+code_6494:
+		lag	0xb5
+		not	
+		bnt	code_6550
+		pushi	0x0223
+		push0	
+		self	0x4
+		bnt	code_6550
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_6550
+		lag	0xb
+		sag	0xb5
+		push0	
+		call	code_200, 0
+		pushi	0x55
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x05
+		class	0x6b
+		push	
+		lsg	0x0
+		pushi	0x18
+		lofsa	spider
+		push	
+		lsg	0x70
+		self	0x14
+code_6550:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x77, 0x4
+		ret	
+
+spider::139:
+		lag	0xb5
+		bnt	code_6594
+		pushi	0x00e4
+		push1	
+		lsg	0x0
+		self	0x6
+		push	
+		ldi	0x19
+		le?	
+		bnt	code_6594
+		pushi	0x008c
+		push1	
+		lofsa	bigBang
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_6603
+code_6594:
+		pushi	0x008b
+		push0	
+		rest	0x1
+		super	0x77, 0x4
+code_6603:
+		ret	
+
+spider::108:
+		pToa	0x8
+		sag	0xb3
+		pToa	0xa
+		sag	0xb4
+		pushi	0x6c
+		push0	
+		rest	0x1
+		super	0x77, 0x4
+		ret	
+
+spider::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6643
+		push2	
+		pushi	0x02c0
+		pushi	0x15
+		calle	0xff, 0x00, 0x04
+		jmp	code_6927
+code_6643:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_6673
+		push2	
+		pushi	0x02c0
+		pushi	0x16
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x02c0
+		pushi	0x17
+		calle	0xff, 0x00, 0x04
+		jmp	code_6927
+code_6673:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_6693
+		push2	
+		pushi	0x02c0
+		pushi	0x18
+		calle	0xff, 0x00, 0x04
+		jmp	code_6927
+code_6693:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_6713
+		push2	
+		pushi	0x02c0
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_6927
+code_6713:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_6916
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_6742
+		push2	
+		pushi	0x02c0
+		pushi	0x1a
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6742:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_6762
+		push2	
+		pushi	0x02c0
+		pushi	0x1b
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6762:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_6782
+		push2	
+		pushi	0x02c0
+		pushi	0x1c
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6782:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_6802
+		push2	
+		pushi	0x02c0
+		pushi	0x1d
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6802:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6822
+		push2	
+		pushi	0x02c0
+		pushi	0x1e
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6822:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_6842
+		push2	
+		pushi	0x02c0
+		pushi	0x1f
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6842:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_6862
+		push2	
+		pushi	0x02c0
+		pushi	0x20
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6862:
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_6882
+		push2	
+		pushi	0x02c0
+		pushi	0x21
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6882:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_6902
+		push2	
+		pushi	0x02c0
+		pushi	0x22
+		calle	0xff, 0x00, 0x04
+		jmp	code_6912
+code_6902:
+		push2	
+		pushi	0x02c0
+		pushi	0x23
+		calle	0xff, 0x00, 0x04
+code_6912:
+		toss	
+		jmp	code_6927
+code_6916:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x77, 0x8
+code_6927:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT spider of 0x77
+Exported
+Function area offset: 0x72
+Selectors [56]:
+  [#0] = 0x77
+  [#1] = 0x77
+  [#2] = 0x0
+  [#3] = {'val': 'spider', 'id': 'string_38'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'spider droid', 'id': 'string_36'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The spider is quite relentless in its pursuit of organic beings. Your quandry is that, to the best of your knowledge, you are the only one in the area fitting that description.', 'id': 'string_37'}
+  [#22] = 0x2
+  [#23] = 0x1a7
+  [#24] = 0x0
+  [#25] = 0x5
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x7800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x3
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x3
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+Overriden functions: 4
+  [0x3c]  = spider::60   	 ; @0x192a
+  [0x6c]  = spider::108   	 ; @0x19cc
+  [0x10a]  = spider::266   	 ; @0x19dd
+  [0x8b]  = spider::139   	 ; @0x199f
+
+.OBJECT spiderGroop of 0x4f
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x4f
+  [#1] = 0x4f
+  [#2] = 0x0
+  [#3] = {'val': 'spiderGroop', 'id': 'string_39'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+Overriden functions: 0
+
+.CODE
+spiderRegionPather::67:
+		lap	0x1
+		lali	0x6
+		ret	
+
+spiderRegionPather::519:
+		pushi	0x0207
+		push0	
+		rest	0x1
+		super	0x70, 0x4
+		pTos	0x26
+		lag	0xb
+		eq?	
+		bnt	code_7153
+		pushi	0x2b
+		push1	
+		pushi	0x0194
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+		jmp	code_7176
+code_7153:
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0194
+		eq?	
+		bnt	code_7176
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0x4
+code_7176:
+		ret	
+
+		bnot	
+
+.OBJECT spiderRegionPather of 0x70
+Function area offset: 0x3a
+Selectors [28]:
+  [#0] = 0x70
+  [#1] = 0x70
+  [#2] = 0x0
+  [#3] = {'val': 'spiderRegionPather', 'id': 'string_40'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x1
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xffff
+  [#21] = 0x1
+  [#22] = 0x0
+  [#23] = 0x0
+  [#24] = 0x0
+  [#25] = 0x2c0
+  [#26] = 0x0
+  [#27] = 0x0
+Overriden functions: 2
+  [0x207]  = spiderRegionPather::519   	 ; @0x1bcb
+  [0x43]  = spiderRegionPather::67   	 ; @0x1bc6
+
+.CODE
+moveToPath::138:
+		link	0x02
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_7301
+		pushi	0x0119
+		pushi	0x06
+		class	0x24
+		push	
+		pushi	0xf6
+		pushi	0x00b4
+		pushSelf	
+		push1	
+		lsg	0x70
+		lofsa	spider
+		send	0x10
+		jmp	code_7336
+code_7301:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_7336
+		pushi	0x0222
+		push1	
+		lsl	0x6
+		pushi	0x0119
+		push1	
+		lofsa	spiderRegionPather
+		push	
+		lofsa	spider
+		send	0xc
+		ldi	0x00
+		sag	0xb5
+		pushi	0x6c
+		push0	
+		self	0x4
+code_7336:
+		toss	
+		ret	
+
+
+.OBJECT moveToPath of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'moveToPath', 'id': 'string_41'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = moveToPath::138   	 ; @0x1c5e
+
+.OBJECT shadow of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'shadow', 'id': 'string_42'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x6
+  [#23] = 0x1a7
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x7800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x7
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x6
+  [#47] = 0x7
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.OBJECT spiderSound of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'spiderSound', 'id': 'string_43'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "spiderPolyA"		 ; special
+string_1: "spiderPolyB"		 ; special
+string_2: "keronaRegion"		 ; special
+string_3: "mountains"		 ; special
+string_4: "Mountains generously dappled with spires of unknown formational origin loom at your visual terminus."
+string_5: "sky"
+string_6: "The lovely crisp green of the Keronian atmosphere reminds you that you'll need to do some laundry when (or if) you get back home."
+string_7: "keronaSky"		 ; special
+string_8: "big moon"
+string_9: "Loitering about the horizon is the second and closest moon of Kerona. It is much less hospitable than the sphere you presently roam."
+string_10: "moon"		 ; special
+string_11: "distant desert"
+string_12: "Spread before you is a seemingly endless expanse of sand."
+string_13: "farSand"		 ; special
+string_14: "sand"
+string_15: "The sand of Kerona has a reddish-orange color. Were you a geologist instead of a janitor, you might find this fact interesting."
+string_16: "nearSand"		 ; special
+string_17: "small dune"
+string_18: "Nomads of the desert, dunes are spread about in nearly every direction."
+string_19: "dune"		 ; special
+string_20: "bones"		 ; special
+string_21: "A wide selection of skeletal accessories awaits your perusal. Vertebrae, ribs, and who knows what else rest upon the Keronian soil. The average height of this structure looks to be at least 7 meters. Good thing you didn't meet this thing in its heyday."
+string_22: "sandy base"
+string_23: "Upon a very narrow width of Keronian soil, able to resist erosion through the eons, rests the skeletal remains of this mammoth has-been."
+string_24: "base"		 ; special
+string_25: "plant"		 ; special
+string_26: "Oddly enough, a plant grows in isolated spots in this inhospitable environment."
+string_27: "Oddly enough, a rather bright plant grows in this otherwise flora-free area."
+string_28: "plant2"		 ; special
+string_29: "pickPlant"		 ; special
+string_30: "egoFallDown"		 ; special
+string_31: "egoDiesOfThirst"		 ; special
+string_32: "drinkScript"		 ; special
+string_33: "spiderFalls"		 ; special
+string_34: "bigBang"		 ; special
+string_35: "spiderRP"		 ; special
+string_36: "spider droid"
+string_37: "The spider is quite relentless in its pursuit of organic beings. Your quandry is that, to the best of your knowledge, you are the only one in the area fitting that description."
+string_38: "spider"		 ; special
+string_39: "spiderGroop"		 ; special
+string_40: "spiderRegionPather"		 ; special
+string_41: "moveToPath"		 ; special
+string_42: "shadow"		 ; special
+string_43: "spiderSound"		 ; special
+string_unused_44: ""
+string_unused_45: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0, 0x0, 0x7, 0x0, 0x0, 0x0, 0x7fff, 0x1a, 0x15e, 0xaf, 0xa2, 0x9b, 0x52, 0xfff6, 0x7fff, 0x17, 0x52, 0xdc, 0x5f, 0xa9, 0x9d, 0x84, 0xf8, 0xa7, 0x22, 0x5f, 0x6c, 0xfff9, 0x5f, 0xb7, 0x12, 0xfff6, 0x7fff, 0x14, 0x12, 0xdc, 0x3e, 0xa7, 0x7fff, 0x13, 0x15e, 0xa7, 0x116, 0xdc, 0x7fff, 0x16, 0x136, 0x30, 0x15e, 0x76, 0x7fff, 0x17, 0xfff6, 0x76, 0x5e, 0xb7, 0x61, 0xb7, 0x37, 0xb6, 0x2b, 0xdc, 0x7fff, 0x1a, 0x2b, 0xfff6, 0x4a, 0x5a, 0xfff6, 0x7f, 0x7fff, 0x19, 0x15e, 0x7f, 0x71, 0xa0, 0x23, 0x69, 0x17, 0x2b, 0x65, 0xfff6, 0x7fff, 0x16, 0x65, 0xc8, 0x2, 0x72, 0x16, 0xfff6, 0x7fff, 0x13, 0x16, 0xdc, 0x20, 0x8d, 0x3c, 0x50, 0x98, 0x31, 0x15e, 0x20, 0x7fff, 0x14, 0xfff6, 0x20, 0xa8, 0x29, 0x87, 0x3b, 0xc5, 0x4b, 0x15e, 0x36, 0x7fff, 0x15, 0xfff6, 0x36, 0xf1, 0x4b, 0x129, 0x6f, 0x118, 0xdc, 0x7fff, 0x18, 0x118, 0xfff6, 0x5f, 0x4c, 0x8d, 0x92, 0xb5, 0xdc, 0x7fff, 0x1b, 0xa7, 0xfff6, 0xa1, 0x31, 0xe3, 0x8d, 0xba, 0xaa, 0xfff6, 0xaf, 0x8000, 0xffce, 0x12c, 0x30, 0xbd, 0x66, 0x73, 0xd5, 0x41, 0x13f, 0x39, 0x2bc, 0x14, 0x2bc, 0xb4, 0x13f, 0xa3, 0x12a, 0xad, 0x102, 0xb2, 0x101, 0xbd, 0x15e, 0x12c, 0xfe3e, 0x3, 0x0, 0x35, 0xa3, 0x58, 0x320, 0x28, 0x320, 0x8c, 0x13f, 0x63, 0x13f, 0xb5, 0xd0, 0xaf, 0x95, 0x99, 0x0, 0x9e, 0xfe3e, 0xb4, 0xff06, 0x32, 0x0, 0x67, 0x7f, 0x60, 0xd9, 0x76, 0x127, 0x8c, 0x11f, 0xac, 0xa9, 0xaf, 0x86, 0xbd, 0x3e, 0xbd, 0x29, 0xb0, 0x0, 0xb5, 0xff06, 0xc8, 0x13f, 0xbd, 0x129, 0xbd, 0x115, 0xa5, 0x13f, 0x92, 0x78, 0xbd, 0x54, 0xaa, 0x40, 0x82, 0x15, 0x7f, 0x0, 0x67, 0xe, 0x48, 0x3e, 0x3c, 0x3e, 0x1a, 0x2f, 0x0, 0xa7, 0x0, 0x138, 0x6c, 0x13e, 0x8c, 0x10e, 0xa2, 0x11d, 0xbd, 0x0, 0xbd, 0x0, 0x9f, 0x22, 0xa7, 0x10, 0xbd, 0x3c, 0x12c, 0x55, 0xbd, 0x6a, 0xa6, 0x10d, 0xa5, 0xd8, 0x93, 0xcb, 0x78, 0x13f, 0x40, 0x1f4, 0x28, 0x1f4, 0x12c, 0x13f, 0x81, 0x90, 0x8a, 0x7c, 0x6d, 0xd1, 0x6d, 0xbe, 0x63, 0x78, 0x66, 0x68, 0x51, 0xc7, 0x3d, 0x13f, 0x36, 0xff06, 0x12c, 0xff06, 0xa, 0x0, 0x26, 0x40, 0x49, 0x9b, 0xbd, 0xfa, 0x12c, 0x10c, 0x0, 0x117, 0xb, 0x102, 0x20, 0xa5, 0x20, 0x81, 0x8, 0x81, 0x0, 0x106, 0x90, 0x8f, 0x90, 0x36, 0x63, 0x12, 0x3f, 0x12, 0x24, 0x116, 0x24, 0x13d, 0x4b, 0x13d, 0x71, 0x106, 0x71, 0x3c, 0xffb0, 0x190, 0xffb0, 0x190, 0x55, 0x13f, 0x3d, 0x119, 0x41, 0x10b, 0x56, 0x13f, 0x7e, 0x13f, 0x9d, 0x126, 0xad, 0x103, 0xa4, 0xee, 0x92, 0xf1, 0x83, 0xaa, 0x63, 0xaa, 0x45, 0xca, 0x37, 0xdf, 0x17, 0x7f, 0x14, 0x52, 0x0, 0x64, 0xffb0, 0x7b, 0x0, 0xdb, 0x92, 0x73, 0xa5, 0x22, 0x87, 0x0, 0x35, 0xff9c, 0x5a, 0xff9c, 0xffb0, 0x107, 0x23, 0x13c, 0x58, 0x11d, 0x77, 0xe0, 0x77, 0xb1, 0x48, 0xb1, 0x45, 0xb1, 0x23
+
+.RELOCATION
+num of pointers: 143
+0x2c, 0x4c, 0xe5, 0xed, 0x10b, 0x113, 0x131, 0x139, 0x157, 0x168, 0x170, 0x174, 0x192, 0x1a5, 0x1ad, 0x1b1, 0x1d1, 0x1e4, 0x1ec, 0x1f0, 0x210, 0x223, 0x22b, 0x22f, 0x24f, 0x257, 0x277, 0x28a, 0x292, 0x296, 0x380, 0x390, 0x396, 0x3ca, 0x3d9, 0x3e1, 0x3e8, 0x45f, 0x467, 0x46f, 0x477, 0x47f, 0x487, 0x48f, 0x497, 0x49f, 0x4af, 0x4d4, 0x512, 0x5ae, 0x626, 0x669, 0x6e2, 0x6f6, 0x74c, 0x7ac, 0x7c0, 0x7d0, 0x818, 0x82c, 0x83c, 0x884, 0x898, 0x8a8, 0x8f0, 0x904, 0x914, 0x95c, 0x970, 0x980, 0x9c8, 0x9dc, 0x9ec, 0xa88, 0xa9c, 0xaac, 0xaf4, 0xb08, 0xb18, 0xb82, 0xba3, 0xbf4, 0xc08, 0xc18, 0xc8e, 0xc9e, 0xcf0, 0xd04, 0xd14, 0xe7a, 0xfb8, 0x10a8, 0x11f8, 0x1251, 0x12d8, 0x130a, 0x131b, 0x1345, 0x135a, 0x137d, 0x1397, 0x13ad, 0x13bf, 0x13d0, 0x13e9, 0x1409, 0x143a, 0x1473, 0x14a0, 0x14c2, 0x14c8, 0x14e7, 0x14f4, 0x150b, 0x1513, 0x1517, 0x1546, 0x15bd, 0x15cf, 0x1609, 0x162c, 0x1670, 0x16b5, 0x16d5, 0x1719, 0x1739, 0x176c, 0x17ac, 0x1840, 0x1956, 0x198f, 0x19b8, 0x1b24, 0x1b38, 0x1b48, 0x1bb4, 0x1c1c, 0x1c7e, 0x1c97, 0x1c9b, 0x1cbc, 0x1cf2, 0x1d70

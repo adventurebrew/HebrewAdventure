@@ -1,0 +1,432 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+Sound::106:
+		pushi	0x0099
+		push1	
+		lap	0x0
+		bnt	code_18
+		lap	0x1
+		jmp	code_20
+code_18:
+		ldi	0x00
+code_20:
+		push	
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		super	0x0, 0x4
+		send	0xa
+		ret	
+
+Sound::107:
+		ldi	0x00
+		aTop	0x16
+		aTop	0x18
+		pushi	0x73
+		push1	
+		pushSelf	
+		lag	0x8
+		send	0x6
+		push2	
+		pushi	0x06
+		pushSelf	
+		callk	0x2d, 0x4
+		ret	
+
+Sound::42:
+		link	0x01
+		lap	0x0
+		sat	0x0
+		lap	0x0
+		bnt	code_93
+		push1	
+		push	
+		ldi	0x01
+		sub	
+		lspi	0x1
+		callk	0x6, 0x2
+		bnt	code_93
+		lsp	0x0
+		ldi	0x01
+		sub	
+		sat	0x0
+		lapi	0x1
+		aTop	0x22
+		jmp	code_97
+code_93:
+		ldi	0x00
+		aTop	0x22
+code_97:
+		pushi	0x6b
+		push0	
+		self	0x4
+		pToa	0x14
+		not	
+		bnt	code_112
+		ldi	0x01
+		aTop	0x14
+code_112:
+		lat	0x0
+		bnt	code_124
+		lap	0x1
+		aTop	0x10
+		jmp	code_128
+code_124:
+		ldi	0x7f
+		aTop	0x10
+code_128:
+		pushi	0x03
+		pushi	0x08
+		pushSelf	
+		push0	
+		callk	0x2d, 0x6
+		ret	
+
+Sound::154:
+		pToa	0xa
+		bnt	code_157
+		push2	
+		pushi	0x11
+		pushSelf	
+		callk	0x2d, 0x4
+		push2	
+		pushi	0x09
+		pushSelf	
+		callk	0x2d, 0x4
+code_157:
+		ret	
+
+Sound::155:
+		lap	0x0
+		not	
+		bnt	code_168
+		ldi	0x01
+		sap	0x1
+code_168:
+		pushi	0x03
+		pushi	0x0a
+		pushi	0x70
+		push1	
+		class	0xa
+		push	
+		self	0x6
+		bnt	code_187
+		selfID	
+		jmp	code_189
+code_187:
+		ldi	0x00
+code_189:
+		push	
+		lsp	0x1
+		callk	0x2d, 0x6
+		ret	
+
+Sound::156:
+		lap	0x0
+		not	
+		bnt	code_206
+		ldi	0x01
+		sap	0x1
+code_206:
+		pushi	0x03
+		pushi	0x0c
+		pushSelf	
+		lsp	0x1
+		callk	0x2d, 0x6
+		ret	
+
+Sound::122:
+		pushi	0x03
+		pushi	0x0c
+		pushSelf	
+		push0	
+		callk	0x2d, 0x6
+		ret	
+
+Sound::157:
+		link	0x01
+		lap	0x0
+		sat	0x0
+		lap	0x0
+		bnt	code_262
+		push1	
+		push	
+		ldi	0x01
+		sub	
+		lspi	0x1
+		callk	0x6, 0x2
+		bnt	code_262
+		lsp	0x0
+		ldi	0x01
+		sub	
+		sat	0x0
+		lapi	0x1
+		aTop	0x22
+code_262:
+		lat	0x0
+		bnt	code_286
+		pushi	0x06
+		pushi	0x0b
+		pushSelf	
+		lsp	0x1
+		lsp	0x2
+		lsp	0x3
+		lsp	0x4
+		callk	0x2d, 0xc
+		jmp	code_300
+code_286:
+		pushi	0x06
+		pushi	0x0b
+		pushSelf	
+		push0	
+		pushi	0x19
+		pushi	0x0a
+		push1	
+		callk	0x2d, 0xc
+code_300:
+		ret	
+
+Sound::158:
+		lap	0x0
+		not	
+		bnt	code_311
+		ldi	0x01
+		sap	0x1
+code_311:
+		pushi	0x03
+		pushi	0x0d
+		pushSelf	
+		lsp	0x1
+		callk	0x2d, 0x6
+		ret	
+
+Sound::159:
+		pushi	0x03
+		pushi	0x0e
+		pushSelf	
+		lsp	0x1
+		callk	0x2d, 0x6
+		ret	
+
+Sound::66:
+		pushi	0x03
+		pushi	0x0f
+		pushSelf	
+		lsp	0x1
+		callk	0x2d, 0x6
+		ret	
+
+Sound::160:
+		pushi	0x03
+		pushi	0x10
+		pushSelf	
+		lsp	0x1
+		callk	0x2d, 0x6
+		ret	
+
+Sound::161:
+		push1	
+		lap	0x1
+		le?	
+		bnt	code_414
+		pprev	
+		ldi	0x0f
+		le?	
+		bnt	code_414
+		lsp	0x2
+		ldi	0x0080
+		lt?	
+		bnt	code_398
+		pushi	0x06
+		pushi	0x12
+		pushSelf	
+		lsp	0x1
+		pushi	0x00b0
+		lsp	0x2
+		lsp	0x3
+		callk	0x2d, 0xc
+		jmp	code_414
+code_398:
+		pushi	0x06
+		pushi	0x12
+		pushSelf	
+		lsp	0x1
+		lsp	0x2
+		lsp	0x3
+		lsp	0x4
+		callk	0x2d, 0xc
+code_414:
+		ret	
+
+Sound::162:
+		pToa	0xa
+		bnt	code_427
+		push2	
+		pushi	0x11
+		pushSelf	
+		callk	0x2d, 0x4
+code_427:
+		pToa	0x16
+		bnt	code_456
+		aTop	0x18
+		ldi	0x00
+		aTop	0x16
+		push1	
+		pTos	0x22
+		callk	0x6, 0x2
+		bnt	code_456
+		pushi	0x008b
+		push1	
+		pushSelf	
+		pToa	0x22
+		send	0x6
+code_456:
+		ret	
+
+Sound::163:
+		pToa	0x24
+		not	
+		bt	code_468
+		pTos	0x24
+		lap	0x1
+		eq?	
+code_468:
+		bnt	code_476
+		pushi	0x6c
+		push0	
+		self	0x4
+code_476:
+		ret	
+
+Sound::108:
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x8
+		send	0x6
+		pToa	0x8
+		bnt	code_501
+		push2	
+		pushi	0x07
+		pushSelf	
+		callk	0x2d, 0x4
+		ldi	0x00
+		aTop	0x8
+code_501:
+		pushi	0x6c
+		push0	
+		super	0x0, 0x4
+		ret	
+
+Sound::164:
+		link	0x01
+		lap	0x0
+		sat	0x0
+		lap	0x0
+		bnt	code_546
+		push1	
+		push	
+		ldi	0x01
+		sub	
+		lspi	0x1
+		callk	0x6, 0x2
+		bnt	code_546
+		lsp	0x0
+		ldi	0x01
+		sub	
+		sat	0x0
+		lapi	0x1
+		aTop	0x22
+		jmp	code_550
+code_546:
+		ldi	0x00
+		aTop	0x22
+code_550:
+		pushi	0x6b
+		push0	
+		self	0x4
+		pToa	0x14
+		not	
+		bnt	code_565
+		ldi	0x01
+		aTop	0x14
+code_565:
+		lat	0x0
+		bnt	code_577
+		lap	0x1
+		aTop	0x10
+		jmp	code_581
+code_577:
+		ldi	0x7f
+		aTop	0x10
+code_581:
+		pushi	0x03
+		pushi	0x08
+		pushSelf	
+		push1	
+		callk	0x2d, 0x6
+		ret	
+
+Sound::138:
+		push2	
+		pushi	0x14
+		pushSelf	
+		callk	0x2d, 0x4
+		ret	
+
+		bnot	
+
+.CLASS Sound of 0x0
+Function area offset: 0x4e
+Selectors [19]:
+  [0x0] = 0xa
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Sound', 'id': 'string_0'}
+  [0x2c] = 0x0
+  [0x5d] = 0x0
+  [0x66] = 0x0
+  [0x2b] = 0x0
+  [0x61] = 0x7f
+  [0x3f] = 0x0
+  [0x6] = 0x1
+  [0x11] = 0x0
+  [0x98] = 0x0
+  [0x5c] = 0x0
+  [0x5e] = 0x0
+  [0x5f] = 0x0
+  [0x60] = 0x0
+  [0x2d] = 0x0
+  [0x99] = 0x0
+Overriden functions: 18
+  [0x6a]  = Sound::106   	 ; @0x4
+  [0x6b]  = Sound::107   	 ; @0x21
+  [0x6c]  = Sound::108   	 ; @0x1dd
+  [0x2a]  = Sound::42   	 ; @0x37
+  [0x9a]  = Sound::154   	 ; @0x8a
+  [0x9b]  = Sound::155   	 ; @0x9e
+  [0x9c]  = Sound::156   	 ; @0xc4
+  [0x7a]  = Sound::122   	 ; @0xd9
+  [0x9d]  = Sound::157   	 ; @0xe3
+  [0x9e]  = Sound::158   	 ; @0x12d
+  [0x9f]  = Sound::159   	 ; @0x142
+  [0x42]  = Sound::66   	 ; @0x14d
+  [0xa0]  = Sound::160   	 ; @0x158
+  [0xa1]  = Sound::161   	 ; @0x163
+  [0xa2]  = Sound::162   	 ; @0x19f
+  [0xa3]  = Sound::163   	 ; @0x1c9
+  [0xa4]  = Sound::164   	 ; @0x1fc
+  [0x8a]  = Sound::138   	 ; @0x24f
+
+.STRINGS
+string_0: "Sound"		 ; special
+string_unused_1: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x26a

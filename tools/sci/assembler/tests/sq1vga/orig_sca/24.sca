@@ -1,0 +1,552 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm24 of 0x74
+
+.CODE
+rm24::107:
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_180
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x22
+		pushi	0x013f
+		pushi	0x7f
+		pushi	0x00c2
+		pushi	0x7f
+		pushi	0x0088
+		pushi	0x0080
+		pushi	0x0098
+		pushi	0x73
+		pushi	0x00d1
+		pushi	0x72
+		pushi	0x0110
+		pushi	0x6b
+		pushi	0x0101
+		pushi	0x64
+		pushi	0x00e0
+		pushi	0x6a
+		pushi	0x00cb
+		pushi	0x69
+		pushi	0x00a0
+		pushi	0x5e
+		pushi	0x0081
+		pushi	0x5e
+		pushi	0x71
+		pushi	0x5e
+		pushi	0x0086
+		pushi	0x51
+		pushi	0x00a0
+		pushi	0x51
+		pushi	0x00c7
+		pushi	0x3d
+		pushi	0x0115
+		pushi	0x36
+		pushi	0x013f
+		pushi	0x4c
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x52
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0a
+		push0	
+		pushi	0x00bd
+		push0	
+		pushi	0x37
+		pushi	0x25
+		pushi	0x3e
+		pushi	0x0080
+		pushi	0x00a0
+		pushi	0x7e
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x22
+		push	
+		self	0x8
+		jmp	code_306
+code_180:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x1a
+		pushi	0x5d
+		pushi	0x00bd
+		pushi	0x56
+		pushi	0x00ad
+		pushi	0x3d
+		pushi	0x0094
+		pushi	0x32
+		pushi	0x0082
+		pushi	0x3a
+		pushi	0x0080
+		pushi	0x35
+		pushi	0x79
+		pushi	0x25
+		pushi	0x78
+		pushi	0x0e
+		pushi	0x63
+		pushi	0x0d
+		pushi	0x58
+		push0	
+		pushi	0x4c
+		push0	
+		push0	
+		pushi	0x013e
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x42
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0a
+		push0	
+		pushi	0x66
+		pushi	0x24
+		pushi	0x008f
+		pushi	0x34
+		pushi	0x00aa
+		pushi	0x3a
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x22
+		push	
+		self	0x8
+code_306:
+		lsg	0xc
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_333
+		ldi	0x0c
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		jmp	code_501
+code_333:
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_430
+		ldi	0x0e
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		pushi	0x71
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		lt?	
+		bnt	code_385
+		pprev	
+		ldi	0x0083
+		lt?	
+		bnt	code_385
+		pushi	0x6b
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x0083
+		lag	0x0
+		send	0xa
+		jmp	code_501
+code_385:
+		pushi	0x5a
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		lt?	
+		bnt	code_420
+		pprev	
+		ldi	0x6e
+		lt?	
+		bnt	code_420
+		pushi	0x6b
+		push0	
+		pushi	0x04
+		push1	
+		pushi	0x59
+		lag	0x0
+		send	0xa
+		jmp	code_501
+code_420:
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		jmp	code_501
+code_430:
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_455
+		ldi	0x0d
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		jmp	code_501
+code_455:
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_480
+		ldi	0x08
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		jmp	code_501
+code_480:
+		ldi	0x0a
+		aTop	0x16
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x008c
+		push1	
+		lofsa	outOfCave
+		push	
+		self	0x6
+code_501:
+		toss	
+		pushi	0x6b
+		push0	
+		lofsa	teeth
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	skull
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rm24::60:
+		pToa	0x8
+		bnt	code_544
+		ldi	0x00
+		jmp	code_569
+code_544:
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x4000
+		and	
+		bnt	code_569
+		pushi	0x0177
+		push1	
+		pushi	0x1c
+		self	0x6
+code_569:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+
+.OBJECT rm24 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm24', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'A section of vertebra, near where the head used to be attached, extends north and south. To the east is the ominous-looking skull.', 'id': 'string_0'}
+  [#10] = 0x18
+  [#11] = 0xffff
+  [#12] = 0x14
+  [#13] = 0x0
+  [#14] = 0x15
+  [#15] = 0x26
+  [#16] = 0x1b
+  [#17] = 0x17
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x1
+Overriden functions: 2
+  [0x6b]  = rm24::107   	 ; @0xe
+  [0x3c]  = rm24::60   	 ; @0x216
+
+.CODE
+outOfCave::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_694
+		pushi	0x011a
+		push2	
+		pushi	0x00f0
+		pushi	0x70
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0099
+		pushi	0x6c
+		pushSelf	
+		lag	0x0
+		send	0x14
+		jmp	code_710
+code_694:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_710
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_710:
+		toss	
+		ret	
+
+
+.OBJECT outOfCave of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'outOfCave', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = outOfCave::138   	 ; @0x28c
+
+.CODE
+teeth::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_820
+		push2	
+		pushi	0x18
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_831
+code_820:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_831:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT teeth of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'teeth', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'teeth', 'id': 'string_3'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "No doubt about it. Those are some serious teeth. It could've used a little dental work - maybe some braces even. It's just a good thing you never had the opportunity to be on the business end of these things when it was still a living being.", 'id': 'string_4'}
+Overriden functions: 1
+  [0x10a]  = teeth::266   	 ; @0x302
+
+.CODE
+skull::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_952
+		push2	
+		pushi	0x18
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_963
+code_952:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_963:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT skull of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'skull', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'skull', 'id': 'string_5'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x1000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This must be the skull previously attached to the rest of the mammoth bones partially assembled here.', 'id': 'string_6'}
+Overriden functions: 1
+  [0x10a]  = skull::266   	 ; @0x386
+
+.STRINGS
+string_0: "A section of vertebra, near where the head used to be attached, extends north and south. To the east is the ominous-looking skull."
+string_1: "rm24"		 ; special
+string_2: "outOfCave"		 ; special
+string_3: "teeth"		 ; special
+string_4: "No doubt about it. Those are some serious teeth. It could've used a little dental work - maybe some braces even. It's just a good thing you never had the opportunity to be on the business end of these things when it was still a living being."
+string_5: "skull"		 ; special
+string_6: "This must be the skull previously attached to the rest of the mammoth bones partially assembled here."
+string_unused_7: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 12
+0x1f0, 0x1fa, 0x202, 0x252, 0x25e, 0x2da, 0x354, 0x368, 0x378, 0x3d8, 0x3ec, 0x3fc

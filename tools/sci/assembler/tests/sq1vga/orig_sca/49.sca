@@ -1,0 +1,1971 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm49 of 0x43
+OBJECT openingScript of 0x6
+OBJECT robotAsksScript of 0x6
+OBJECT pushButtons of 0x6
+OBJECT holdLever of 0x6
+OBJECT scratchHead of 0x6
+OBJECT doHyperSpace of 0x6
+OBJECT jetSound of 0xa
+
+.CODE
+rm49::107:
+		pushi	0x6b
+		push0	
+		super	0x43, 0x4
+		pushi	0x73
+		push1	
+		lofsa	keronaATP_u
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		pushi	0x3c
+		push0	
+		lag	0xa
+		send	0x10
+		pushi	0x008c
+		push1	
+		lofsa	openingScript
+		push	
+		self	0x6
+		ret	
+
+
+.OBJECT rm49 of 0x43
+Exported
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x43
+  [#1] = 0x43
+  [#2] = 0x0
+  [#3] = {'val': 'rm49', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x10
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+Overriden functions: 1
+  [0x6b]  = rm49::107   	 ; @0x2a
+
+.CODE
+openingScript::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_210
+		pushi	0x2b
+		push1	
+		pushi	0x0215
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lofsa	jetSound
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0xd9
+		pushi	0x4b
+		pushSelf	
+		lofsa	ship1
+		send	0x16
+		jmp	code_699
+code_210:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_237
+		pushi	0x018a
+		push2	
+		pushi	0x11
+		pushi	0x8009
+		lag	0x2
+		send	0x8
+		ldi	0x02
+		aTop	0x10
+		jmp	code_699
+code_237:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_333
+		pushi	0x011a
+		push2	
+		pushi	0x017c
+		pushi	0x6e
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x0132
+		push2	
+		pushi	0x06
+		dup	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x70
+		pushi	0xd8
+		pushSelf	
+		lofsa	ship1
+		send	0x22
+		pushi	0x2b
+		push1	
+		pushi	0x01d0
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0147
+		pushi	0xf1
+		pushSelf	
+		lofsa	satelite
+		send	0x16
+		jmp	code_699
+code_333:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_345
+		ldi	0x00
+		jmp	code_699
+code_345:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_383
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x6c
+		push0	
+		lofsa	ship1
+		send	0x4
+		pushi	0x6c
+		push0	
+		lofsa	satelite
+		send	0x4
+		ldi	0x01
+		aTop	0x16
+		jmp	code_699
+code_383:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_494
+		pushi	0x009d
+		push0	
+		lofsa	jetSound
+		send	0x4
+		pushi	0x018a
+		push2	
+		pushi	0x31
+		pushi	0x8008
+		lag	0x2
+		send	0x8
+		pushi	0x6b
+		push0	
+		lofsa	arm
+		send	0x4
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	dial0
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	dial1
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	dial2
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	screen
+		send	0xa
+		pushi	0x008c
+		push2	
+		lofsa	robotAsksScript
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_699
+code_494:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_526
+		push2	
+		pushi	0x31
+		push0	
+		calle	0xff, 0x00, 0x04
+		pushi	0x008c
+		pushi	0x03
+		lofsa	holdLever
+		push	
+		pushSelf	
+		pushi	0x0a
+		self	0xa
+		jmp	code_699
+code_526:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_654
+		lsg	0xbd
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_560
+		pushi	0x008c
+		push1	
+		push2	
+		pushi	0x0191
+		push0	
+		callk	0x2, 0x4
+		push	
+		self	0x6
+		jmp	code_650
+code_560:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_625
+		push2	
+		push0	
+		push1	
+		callk	0x3c, 0x4
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_599
+		pushi	0x008c
+		push1	
+		push2	
+		pushi	0x0192
+		push0	
+		callk	0x2, 0x4
+		push	
+		self	0x6
+		jmp	code_621
+code_599:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_621
+		pushi	0x008c
+		push1	
+		push2	
+		pushi	0x0191
+		push0	
+		callk	0x2, 0x4
+		push	
+		self	0x6
+code_621:
+		toss	
+		jmp	code_650
+code_625:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_650
+		pushi	0x008c
+		pushi	0x03
+		push2	
+		pushi	0x0191
+		push0	
+		callk	0x2, 0x4
+		push	
+		pushSelf	
+		push1	
+		self	0xa
+code_650:
+		toss	
+		jmp	code_699
+code_654:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_675
+		pushi	0x008c
+		push2	
+		lofsa	approachDeltaur
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_699
+code_675:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_699
+		pushi	0x05
+		push2	
+		pushi	0x03
+		push2	
+		pushi	0x31
+		push1	
+		callb	0xa, 0xa
+		pushi	0x6c
+		push0	
+		self	0x4
+code_699:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT openingScript of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'openingScript', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = openingScript::138   	 ; @0x94
+
+.CODE
+robotAsksScript::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		pushi	0x7d
+		push1	
+		pushSelf	
+		lag	0x48
+		send	0x6
+		pushi	0x7d
+		push1	
+		pushSelf	
+		lag	0x49
+		send	0x6
+		ret	
+
+robotAsksScript::108:
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x48
+		send	0x6
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x49
+		send	0x6
+		pushi	0x6c
+		push0	
+		super	0x6, 0x4
+		ret	
+
+robotAsksScript::129:
+		pToa	0x1a
+		bnt	code_862
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		bnt	code_862
+		lag	0x19
+		bnt	code_843
+		pushi	0x0085
+		push1	
+		push0	
+		pushi	0x0089
+		push1	
+		push0	
+		pushi	0x6c
+		push0	
+		send	0x10
+code_843:
+		ldi	0x00
+		aTop	0x1a
+		ldi	0x01
+		aTop	0x10
+		pushi	0x4c
+		push1	
+		push1	
+		lap	0x1
+		send	0x6
+		jmp	code_871
+code_862:
+		pushi	0x0081
+		push1	
+		lsp	0x1
+		super	0x6, 0x6
+code_871:
+		ret	
+
+robotAsksScript::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_970
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	arm
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	dial0
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	dial1
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	dial2
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	screen
+		send	0xa
+		pushi	0x008c
+		push2	
+		lofsa	pushButtons
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_1083
+code_970:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_999
+		push2	
+		pushi	0x31
+		push2	
+		calle	0xff, 0x00, 0x04
+		pushi	0x008c
+		push2	
+		lofsa	holdLever
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_1083
+code_999:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1042
+		pushi	0x06
+		pushi	0x31
+		pushi	0x03
+		pushi	0x43
+		pushi	0x4c
+		pushi	0x0a
+		pushi	0x6c
+		calle	0xff, 0x00, 0x0c
+		pushi	0x008c
+		push1	
+		push2	
+		pushi	0x0190
+		push0	
+		callk	0x2, 0x4
+		push	
+		self	0x6
+		jmp	code_1083
+code_1042:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1054
+		ldi	0x00
+		jmp	code_1083
+code_1054:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1083
+		lsg	0xbd
+		ldi	0x00
+		eq?	
+		bnt	code_1078
+		push2	
+		pushi	0x31
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+code_1078:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1083:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT robotAsksScript of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'robotAsksScript', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 4
+  [0x6b]  = robotAsksScript::107   	 ; @0x2f8
+  [0x6c]  = robotAsksScript::108   	 ; @0x311
+  [0x8a]  = robotAsksScript::138   	 ; @0x368
+  [0x81]  = robotAsksScript::129   	 ; @0x328
+
+.CODE
+pushButtons::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1195
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lofsa	arm
+		send	0x18
+		jmp	code_1285
+code_1195:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1218
+		pushi	0x07
+		push1	
+		push1	
+		lofsa	arm
+		send	0x6
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_1285
+code_1218:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1241
+		pushi	0x07
+		push1	
+		push2	
+		lofsa	arm
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1285
+code_1241:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1264
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	arm
+		send	0x8
+		jmp	code_1285
+code_1264:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1285
+		pushi	0x011b
+		push0	
+		lofsa	arm
+		send	0x4
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1285:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT pushButtons of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'pushButtons', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = pushButtons::138   	 ; @0x484
+
+.CODE
+holdLever::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1382
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	arm
+		send	0x14
+		jmp	code_1466
+code_1382:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1418
+		pToa	0x1a
+		bnt	code_1411
+		pushi	0x008c
+		pushi	0x03
+		lofsa	doHyperSpace
+		push	
+		pushSelf	
+		pTos	0x1a
+		self	0xa
+		jmp	code_1466
+code_1411:
+		ldi	0x04
+		aTop	0x12
+		jmp	code_1466
+code_1418:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1441
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	arm
+		send	0x8
+		jmp	code_1466
+code_1441:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1466
+		ldi	0x00
+		aTop	0x1a
+		pushi	0x011b
+		push0	
+		lofsa	arm
+		send	0x4
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1466:
+		toss	
+		ret	
+
+
+.OBJECT holdLever of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'holdLever', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = holdLever::138   	 ; @0x542
+
+.CODE
+scratchHead::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1566
+		pushi	0x011d
+		push0	
+		pushi	0x06
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	arm
+		send	0x18
+		jmp	code_1674
+code_1566:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1614
+		pushi	0x6b
+		push0	
+		pushi	0x06
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push1	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	droidHand
+		send	0x16
+		pushi	0x06
+		push1	
+		pushi	0x03
+		lofsa	arm
+		send	0x6
+		ldi	0x03
+		aTop	0x12
+		jmp	code_1674
+code_1614:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1653
+		pushi	0x6c
+		push0	
+		lofsa	droidHand
+		send	0x4
+		pushi	0x06
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	arm
+		send	0x14
+		jmp	code_1674
+code_1653:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1674
+		pushi	0x011b
+		push0	
+		lofsa	arm
+		send	0x4
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1674:
+		toss	
+		ret	
+
+
+.OBJECT scratchHead of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'scratchHead', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = scratchHead::138   	 ; @0x5f6
+
+.CODE
+doHyperSpace::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		pTos	0xa
+		ldi	0x00
+		eq?	
+		bnt	code_1778
+		pushi	0x0098
+		push0	
+		lag	0x9a
+		send	0x4
+		push	
+		ldi	0x0a
+		eq?	
+		bnt	code_1778
+		pushi	0x0098
+		push1	
+		push0	
+		lag	0x64
+		send	0x6
+		pushi	0x008b
+		push0	
+		self	0x4
+code_1778:
+		pushi	0x04
+		pushi	0x06
+		pushi	0x00ee
+		pushi	0x00ff
+		pushi	0xff
+		callk	0x6f, 0x8
+		ret	
+
+doHyperSpace::108:
+		ldi	0x00
+		aTop	0x1a
+		pushi	0x6c
+		push0	
+		super	0x6, 0x4
+		ret	
+
+doHyperSpace::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1853
+		push0	
+		callb	0x2, 0x0
+		pushi	0x009b
+		push0	
+		lag	0x64
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x014c
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x66
+		push1	
+		push0	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x16
+		jmp	code_2014
+code_1853:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1880
+		pushi	0x018b
+		push2	
+		pushi	0x0095
+		pushi	0x07
+		lag	0x2
+		send	0x8
+		ldi	0x01
+		aTop	0x10
+		jmp	code_2014
+code_1880:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1897
+		pTos	0x1a
+		ldi	0x02
+		sub	
+		aTop	0x12
+		jmp	code_2014
+code_1897:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1955
+		lsg	0xbd
+		ldi	0x00
+		eq?	
+		bnt	code_1948
+		push2	
+		pushi	0x31
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		pushi	0x0089
+		push1	
+		push0	
+		self	0x6
+		pushi	0x008c
+		push1	
+		push2	
+		pushi	0x0191
+		push0	
+		callk	0x2, 0x4
+		push	
+		pToa	0x8
+		send	0x6
+		jmp	code_2014
+code_1948:
+		ldi	0x02
+		aTop	0x12
+		jmp	code_2014
+code_1955:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2014
+		pushi	0x009d
+		push0	
+		lag	0x9a
+		send	0x4
+		pushi	0x009f
+		push1	
+		pushi	0x28
+		pushi	0x009b
+		push1	
+		push0	
+		pushi	0x009d
+		pushi	0x04
+		pushi	0x7f
+		pushi	0x19
+		pushi	0x0a
+		push0	
+		lag	0x64
+		send	0x18
+		pushi	0x018a
+		push2	
+		pushi	0x31
+		pushi	0x07
+		lag	0x2
+		send	0x8
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2014:
+		toss	
+		ret	
+
+
+.OBJECT doHyperSpace of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'doHyperSpace', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 3
+  [0x3c]  = doHyperSpace::60   	 ; @0x6c6
+  [0x6c]  = doHyperSpace::108   	 ; @0x702
+  [0x8a]  = doHyperSpace::138   	 ; @0x70d
+
+.CODE
+approachDeltaur::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2225
+		pushi	0x018a
+		push2	
+		pushi	0x31
+		pushi	0x07
+		lag	0x2
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x00c0
+		push0	
+		pushi	0x06
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0x05
+		pushi	0x011b
+		push0	
+		lofsa	arm
+		send	0x1e
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		pushi	0x00c0
+		push0	
+		lofsa	dial0
+		send	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		pushi	0x00c0
+		push0	
+		lofsa	dial1
+		send	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		pushi	0x00c0
+		push0	
+		lofsa	dial2
+		send	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		pushi	0x00c0
+		push0	
+		lofsa	screen
+		send	0xe
+		pushi	0x008c
+		push2	
+		lofsa	pushButtons
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_2495
+code_2225:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2284
+		push2	
+		pushi	0x31
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		pushi	0x009a
+		push0	
+		lag	0x64
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x01f4
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x66
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x16
+		pushi	0x008c
+		push2	
+		lofsa	scratchHead
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_2495
+code_2284:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2337
+		pushi	0x6b
+		push0	
+		pushi	0x0132
+		push2	
+		pushi	0x05
+		dup	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0160
+		pushi	0x00f9
+		pushSelf	
+		lofsa	deltaur
+		send	0x18
+		pushi	0x008c
+		push1	
+		lofsa	holdLever
+		push	
+		lofsa	arm
+		send	0x6
+		jmp	code_2495
+code_2337:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2387
+		pushi	0x0132
+		push2	
+		pushi	0x03
+		dup	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0138
+		pushi	0x00a9
+		pushSelf	
+		lofsa	deltaur
+		send	0x14
+		pushi	0x008c
+		push1	
+		lofsa	pushButtons
+		push	
+		lofsa	arm
+		send	0x6
+		jmp	code_2495
+code_2387:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2422
+		pushi	0x0132
+		push2	
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00fa
+		pushi	0x6b
+		pushSelf	
+		lofsa	deltaur
+		send	0x14
+		jmp	code_2495
+code_2422:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2495
+		push2	
+		pushi	0x31
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		pushi	0x08
+		pushi	0x31
+		pushi	0x08
+		pushi	0x51
+		lofsa	string_7		; " OK. "
+		push	
+		push1	
+		pushi	0x51
+		lofsa	string_8		; " No. "
+		push	
+		push0	
+		calle	0xff, 0x00, 0x10
+		bnt	code_2473
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_2495
+code_2473:
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		pushi	0x0177
+		push1	
+		pushi	0x32
+		lag	0x2
+		send	0x6
+code_2495:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT approachDeltaur of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'approachDeltaur', 'id': 'string_9'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = approachDeltaur::138   	 ; @0x822
+
+.OBJECT keronaATP_u of 0x2d
+Function area offset: 0x3a
+Selectors [28]:
+  [#0] = 0x2d
+  [#1] = 0x2d
+  [#2] = 0x0
+  [#3] = {'val': 'keronaATP', 'id': 'string_10'}
+  [#4] = 0xe3
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x75
+  [#23] = 0x2
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x4010
+  [#27] = 0x0
+Overriden functions: 0
+
+.OBJECT keronaATP of 0x2d
+Function area offset: 0x3a
+Selectors [28]:
+  [#0] = 0x2d
+  [#1] = 0x2d
+  [#2] = 0x0
+  [#3] = {'val': 'keronaATP', 'id': 'string_10'}
+  [#4] = 0xe3
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x75
+  [#23] = 0x2
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x10
+  [#27] = 0x0
+Overriden functions: 0
+
+.OBJECT satelite of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'satelite', 'id': 'string_11'}
+  [#4] = 0xffd4
+  [#5] = 0xb4
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x8
+  [#23] = 0x76
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0xe
+  [#27] = 0x0
+  [#28] = 0x2810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x3
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x8
+  [#47] = 0x3
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.OBJECT deltaur of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'deltaur', 'id': 'string_12'}
+  [#4] = 0x15d
+  [#5] = 0xeb
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xf9
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x2
+  [#27] = 0x0
+  [#28] = 0x5810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x2
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x2
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.OBJECT arm of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'arm', 'id': 'string_13'}
+  [#4] = 0xcf
+  [#5] = 0x6d
+  [#6] = 0xffc8
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x95
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x5
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x2
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT droidHand of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'droidHand', 'id': 'string_14'}
+  [#4] = 0xdc
+  [#5] = 0x62
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x95
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x5
+  [#27] = 0x0
+  [#28] = 0x6010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x2
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT dial0 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'dial0', 'id': 'string_15'}
+  [#4] = 0x3a
+  [#5] = 0xb0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x95
+  [#24] = 0x8
+  [#25] = 0x0
+  [#26] = 0x4
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x1
+Overriden functions: 0
+
+.OBJECT dial1 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'dial1', 'id': 'string_16'}
+  [#4] = 0xbd
+  [#5] = 0x54
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x95
+  [#24] = 0x7
+  [#25] = 0x1
+  [#26] = 0x4
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x3
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT dial2 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'dial2', 'id': 'string_17'}
+  [#4] = 0xf8
+  [#5] = 0x84
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x95
+  [#24] = 0x6
+  [#25] = 0x4
+  [#26] = 0x4
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x2
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT screen of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'screen', 'id': 'string_18'}
+  [#4] = 0x74
+  [#5] = 0x83
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x95
+  [#24] = 0x5
+  [#25] = 0x3
+  [#26] = 0x4
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x3
+Overriden functions: 0
+
+.OBJECT ship1 of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'ship1', 'id': 'string_19'}
+  [#4] = 0x8e
+  [#5] = 0xd5
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x4
+  [#23] = 0x9c
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0xe
+  [#27] = 0x0
+  [#28] = 0x2810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x3
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x4
+  [#47] = 0x3
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.OBJECT jetSound of 0xa
+Exported
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'jetSound', 'id': 'string_20'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "rm49"		 ; special
+string_1: "openingScript"		 ; special
+string_2: "robotAsksScript"		 ; special
+string_3: "pushButtons"		 ; special
+string_4: "holdLever"		 ; special
+string_5: "scratchHead"		 ; special
+string_6: "doHyperSpace"		 ; special
+string_7: " OK. "
+string_8: " No. "
+string_9: "approachDeltaur"		 ; special
+string_10: "keronaATP"		 ; special
+string_11: "satelite"		 ; special
+string_12: "deltaur"		 ; special
+string_13: "arm"		 ; special
+string_14: "droidHand"		 ; special
+string_15: "dial0"		 ; special
+string_16: "dial1"		 ; special
+string_17: "dial2"		 ; special
+string_18: "screen"		 ; special
+string_19: "ship1"		 ; special
+string_20: "jetSound"		 ; special
+string_unused_21: ""
+string_unused_22: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 75
+0x34, 0x48, 0x60, 0xaf, 0xcb, 0x117, 0x146, 0x16c, 0x174, 0x18b, 0x1a0, 0x1af, 0x1be, 0x1cd, 0x1dc, 0x1e5, 0x203, 0x29a, 0x2d0, 0x37c, 0x38b, 0x39a, 0x3a9, 0x3b8, 0x3c1, 0x3de, 0x450, 0x4a4, 0x4b7, 0x4ce, 0x4e9, 0x4fc, 0x51a, 0x55f, 0x578, 0x59a, 0x5b1, 0x5ce, 0x617, 0x639, 0x643, 0x659, 0x66e, 0x681, 0x69e, 0x7f2, 0x853, 0x866, 0x879, 0x88c, 0x89f, 0x8a8, 0x8e3, 0x90d, 0x916, 0x91a, 0x93f, 0x948, 0x94c, 0x96f, 0x98f, 0x996, 0x9d4, 0xa0a, 0xa52, 0xa9a, 0xb18, 0xb96, 0xbfc, 0xc62, 0xcc8, 0xd2e, 0xd94, 0xdfa, 0xe78

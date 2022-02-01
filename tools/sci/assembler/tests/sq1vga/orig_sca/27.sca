@@ -1,0 +1,590 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm27 of 0x74
+
+.CODE
+rm27::107:
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x15
+		lofsa	polyBottom1
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x2a
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x0e
+		lofsa	polyBottom2
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x46
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x1f
+		lofsa	polyTop
+		send	0xc
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_90
+		pushi	0x0174
+		push2	
+		lofsa	polyBottom1
+		push	
+		lofsa	polyBottom2
+		push	
+		self	0x8
+		jmp	code_100
+code_90:
+		pushi	0x0174
+		push1	
+		lofsa	polyTop
+		push	
+		self	0x6
+code_100:
+		pushi	0x6b
+		push0	
+		lofsa	ramp
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	claw
+		send	0x4
+		lsg	0xc
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_136
+		ldi	0x0c
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_273
+code_136:
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_245
+		ldi	0x0d
+		aTop	0x16
+		pushi	0x00d1
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		le?	
+		bnt	code_207
+		pprev	
+		ldi	0x0115
+		le?	
+		bnt	code_207
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00f6
+		lt?	
+		bnt	code_197
+		pushi	0x04
+		push1	
+		pushi	0x00d1
+		lag	0x0
+		send	0x6
+		jmp	code_207
+code_197:
+		pushi	0x04
+		push1	
+		pushi	0x0115
+		lag	0x0
+		send	0x6
+code_207:
+		pushi	0x6c
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		lt?	
+		bnt	code_238
+		pprev	
+		ldi	0x0087
+		lt?	
+		bnt	code_238
+		pushi	0x04
+		push1	
+		pushi	0x0082
+		lag	0x0
+		send	0x6
+code_238:
+		push0	
+		callb	0x3, 0x0
+		jmp	code_273
+code_245:
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_269
+		pushi	0x04
+		push1	
+		pushi	0x00a0
+		lag	0x0
+		send	0x6
+		ldi	0x0a
+		aTop	0x16
+		jmp	code_273
+code_269:
+		ldi	0x0a
+		aTop	0x16
+code_273:
+		toss	
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_321
+		lsg	0xc
+		pToa	0x1c
+		eq?	
+		bnt	code_321
+		pushi	0x04
+		push1	
+		pushi	0x6a
+		lag	0x0
+		send	0x6
+code_321:
+		ret	
+
+rm27::60:
+		link	0x01
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		sat	0x0
+		pToa	0x8
+		bnt	code_345
+		ldi	0x00
+		jmp	code_385
+code_345:
+		lst	0x0
+		ldi	0x4000
+		and	
+		bnt	code_385
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_375
+		pushi	0x008c
+		push1	
+		lofsa	goUp
+		push	
+		self	0x6
+		jmp	code_385
+code_375:
+		pushi	0x008c
+		push1	
+		lofsa	goDown
+		push	
+		self	0x6
+code_385:
+		lst	0x0
+		ldi	0x4002
+		and	
+		bnt	code_403
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		lag	0x0
+		send	0x6
+code_403:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+
+.OBJECT rm27 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm27', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'The cervical portion of the spinal column takes a dive into the sand right about here.', 'id': 'string_0'}
+  [#10] = 0x1b
+  [#11] = 0xffff
+  [#12] = 0x14
+  [#13] = 0x0
+  [#14] = 0x18
+  [#15] = 0x26
+  [#16] = 0x12
+  [#17] = 0x1a
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x1
+Overriden functions: 2
+  [0x6b]  = rm27::107   	 ; @0xe
+  [0x3c]  = rm27::60   	 ; @0x142
+
+.CODE
+goUp::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_527
+		push0	
+		callb	0x2, 0x0
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x7d
+		pushi	0x62
+		pushSelf	
+		lag	0x0
+		send	0x12
+		jmp	code_599
+code_527:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_583
+		ldi	0x01
+		sag	0xa6
+		pushi	0x54
+		push2	
+		lofsa	polyBottom1
+		push	
+		lofsa	polyBottom2
+		push	
+		pushi	0x00e8
+		push0	
+		pToa	0x8
+		send	0x4
+		send	0x8
+		pushi	0x73
+		push1	
+		lofsa	polyTop
+		push	
+		pushi	0x00e8
+		push0	
+		pToa	0x8
+		send	0x4
+		send	0x6
+		ldi	0x06
+		aTop	0x10
+		jmp	code_599
+code_583:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_599
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_599:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT goUp of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'goUp', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = goUp::138   	 ; @0x1e6
+
+.CODE
+goDown::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_698
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00af
+		pushi	0x0096
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_779
+code_698:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_763
+		pushi	0x42
+		push1	
+		pushi	0xff
+		lag	0x0
+		send	0x6
+		ldi	0x02
+		sag	0xa6
+		pushi	0x54
+		push1	
+		lofsa	polyTop
+		push	
+		pushi	0x00e8
+		push0	
+		pToa	0x8
+		send	0x4
+		send	0x6
+		pushi	0x73
+		push2	
+		lofsa	polyBottom1
+		push	
+		lofsa	polyBottom2
+		push	
+		pushi	0x00e8
+		push0	
+		pToa	0x8
+		send	0x4
+		send	0x8
+		ldi	0x06
+		aTop	0x10
+		jmp	code_779
+code_763:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_779
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_779:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT goDown of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'goDown', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = goDown::138   	 ; @0x294
+
+.OBJECT ramp of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'ramp', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'neck bone', 'id': 'string_4'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4002
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Cervical vertebrae taper off and appear to vanish gradually into the sand.', 'id': 'string_5'}
+Overriden functions: 0
+
+.CODE
+claw::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_920
+		push2	
+		pushi	0x1b
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_931
+code_920:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_931:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT claw of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'claw', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'claw', 'id': 'string_7'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "These foreclaws were once razor-sharp, but the forces of the elements have reduced them to over-sized blunt toe nails. It's a good thing you didn't come here in an earlier time. These things would have torn you a new one.", 'id': 'string_8'}
+Overriden functions: 1
+  [0x10a]  = claw::266   	 ; @0x384
+
+.OBJECT polyBottom1 of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'polyBottom1', 'id': 'string_9'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.OBJECT polyBottom2 of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'polyBottom2', 'id': 'string_10'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.OBJECT polyTop of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'polyTop', 'id': 'string_11'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "The cervical portion of the spinal column takes a dive into the sand right about here."
+string_1: "rm27"		 ; special
+string_2: "goUp"		 ; special
+string_3: "goDown"		 ; special
+string_4: "neck bone"
+string_5: "Cervical vertebrae taper off and appear to vanish gradually into the sand."
+string_6: "ramp"		 ; special
+string_7: "claw"		 ; special
+string_8: "These foreclaws were once razor-sharp, but the forces of the elements have reduced them to over-sized blunt toe nails. It's a good thing you didn't come here in an earlier time. These things would have torn you a new one."
+string_9: "polyBottom1"		 ; special
+string_10: "polyBottom2"		 ; special
+string_11: "polyTop"		 ; special
+string_unused_12: ""
+string_unused_13: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x79, 0xffff, 0x77, 0x2c, 0x94, 0x60, 0xa8, 0x71, 0xc0, 0x8c, 0xaa, 0x8c, 0x86, 0x5c, 0x60, 0xc, 0x3c, 0x1b, 0x96, 0x93, 0x89, 0x96, 0x6e, 0x95, 0x44, 0x85, 0x3a, 0x7b, 0x3c, 0x6c, 0x3a, 0x69, 0x28, 0x60, 0x25, 0x50, 0x15, 0x3a, 0x0, 0x35, 0x0, 0x0, 0x103, 0x2d, 0x123, 0x52, 0x126, 0x62, 0x11f, 0x6b, 0x113, 0x6e, 0x100, 0x6b, 0xeb, 0x6e, 0xd8, 0x69, 0xe9, 0x5f, 0xcd, 0x5c, 0xd0, 0x4c, 0xe0, 0x48, 0xcc, 0x3d, 0xc7, 0x2d, 0x36, 0x0, 0x40, 0xb, 0x43, 0x17, 0x3e, 0x1e, 0x46, 0x22, 0x4d, 0x30, 0x4f, 0x3a, 0x57, 0x3d, 0x5a, 0x48, 0x57, 0x4b, 0x64, 0x51, 0x63, 0x60, 0x6e, 0x63, 0x74, 0x71, 0x83, 0x80, 0x9d, 0x79, 0x99, 0x6f, 0x8f, 0x69, 0x85, 0x55, 0x87, 0x4d, 0x81, 0x45, 0x79, 0x38, 0x78, 0x2f, 0x6e, 0x28, 0x68, 0x1a, 0x69, 0xd, 0x63, 0x0, 0x13f, 0x0, 0x13f, 0xbd, 0x0, 0xbd, 0x0, 0x0
+
+.RELOCATION
+num of pointers: 29
+0x1b, 0x2c, 0x3d, 0x4e, 0x52, 0x5f, 0x68, 0x70, 0x16f, 0x17c, 0x1ac, 0x1b8, 0x21e, 0x222, 0x233, 0x26c, 0x2d2, 0x2e3, 0x2e7, 0x320, 0x356, 0x36a, 0x37a, 0x3b8, 0x3cc, 0x3dc, 0x3f8, 0x418, 0x438
