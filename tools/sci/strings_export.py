@@ -1,34 +1,39 @@
+# TODO check spaces in 36.sca
 
 import argparse
 import re
 import os
-import glob
 import csv
+from pathlib import Path
 
+from assembler.misc import de_escape_string
 from config import scripts_strings_csv_filename, scripts_strings_keys
 
 
-def strings_export(srcdir, csvdir, pattern='*.sc'):
+def strings_export(asm_path, csvdir):
+    if not asm_path.exists():
+        print(f"ERROR: strings_export: {asm_path} doesn't exist")
+
     with open(os.path.join(csvdir, scripts_strings_csv_filename), 'w', newline='', encoding='UTF-8') as output_file:
         dict_writer = csv.DictWriter(output_file, fieldnames=scripts_strings_keys.values())
         dict_writer.writeheader()
 
-        for filename in glob.iglob(os.path.join(srcdir, pattern)):
-            with open(filename) as f:
-                basename = os.path.basename(filename)
+        for filename in asm_path.glob('*.sca'):
+            text = filename.read_text().splitlines()
 
-                text = f.read().replace('\n', '\t')
-                entries = re.findall(r'\{(.*?)\}', text) + re.findall(r'"(.*?)"', text)
-                if '\\"' in text or '\\{' in text or '\\}' in text:
-                    print("WARNING: unsupported (yet) escaped string delimiter in text! ", filename)
+            entries = [l for l in text if l.startswith('string_')]
+            entries = [e for e in entries if not e.endswith('; special') and not e.startswith('string_unused_')]
 
-                for idx, entry in enumerate(entries):
-                    if entry.strip():
-                        dict_writer.writerow({
-                            scripts_strings_keys['filename']: basename,
-                            scripts_strings_keys['idx']: idx,
-                            scripts_strings_keys['original']: entry,
-                        })
+            for entry in entries:
+                if entry.strip():
+                    s = re.split('(.*): "(.*)"', entry)
+                    assert len(s) == 4
+                    assert s[0] == s[3] == ''
+                    dict_writer.writerow({
+                        scripts_strings_keys['filename']: filename.stem,
+                        scripts_strings_keys['idx']: s[1],
+                        scripts_strings_keys['original']: de_escape_string(s[2])
+                    })
 
 
 if __name__ == "__main__":
@@ -37,19 +42,10 @@ if __name__ == "__main__":
                                      epilog='''
 Some scripts file have strings hard wired into them.
 This exports all these messages to a csv file, to be translated.
-
-Notes for SCI0:
-===============
-export scripts strings (except 'said's) to csv
-
-it's based on Kawa's latest SCICompanion
-might need to make some changes to the original Main.sc:
-add 'name {blah}' property to inventory items that miss it  (otherwise the item's name will be in English)
-
 ''')
-    parser.add_argument("srcdir", help="src directory containing the scripts files")
-    parser.add_argument("--pattern", default='*.sc', help="scripts files pattern")
-    parser.add_argument("csvdir", help="directory to write .csv file")
+    parser.add_argument("asmdir",
+                        help="src directory containing the assembly (.sca) files (created by disassembling the .scr files)")
+    parser.add_argument("csvdir", help="directory to write .csv file, and intermediate assembly (.sca) files")
     args = parser.parse_args()
 
-    strings_export(args.srcdir, args.csvdir, args.pattern)
+    strings_export(Path(args.asmdir), args.csvdir)

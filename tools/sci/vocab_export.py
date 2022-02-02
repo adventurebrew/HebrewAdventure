@@ -15,7 +15,6 @@ import csv
 import re
 
 import config
-from strings_import import get_room_number
 
 VOCAB_FILE = "vocab.000"
 
@@ -31,6 +30,15 @@ classes = {
     0x400: 'ADVERB',
     0x800: 'IMPERATIVE_VERB'
 }
+
+# TODO del?
+def get_room_number(script):
+    room = re.search(r'\(script#\s*(.+)\)', script).group(1)
+    if room.isdigit():
+        return room.zfill(3)
+    else:
+        print("strings_import: get_room_number need to add support to define: ", room)
+        return room
 
 
 def get_classes(i):

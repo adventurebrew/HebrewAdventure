@@ -1,15 +1,16 @@
 # C:\Zvika\ScummVM-dev\HebrewAdventure\gk1 "C:\Zvika\Games\GK Hebrew\Gabriel Knight [GOG].patches" "C:\Zvika\Games\GK Hebrew\gk1.trans" -d
 
-#TODO: drive - keep token
-#TODO: check if can remove some patches from SVM
+#TODO: fail on asm-ing errors
+
+# TODO: drive - keep token
+# TODO: check if can remove some patches from SVM
 
 import argparse
 import glob
 import os
-import shutil
 import subprocess
 import sys
-import re
+from pathlib import Path
 
 sys.path.append("..")
 from shared import google_drive
@@ -19,6 +20,7 @@ import vocab_import
 import texts_import
 import strings_import
 import messages_import
+import assembler.script_asm
 
 
 def create_installer(workingdir):
@@ -29,16 +31,8 @@ def create_installer(workingdir):
         subprocess.run([config.makensis_exe, nsis_path])
 
 
-def copy_compiled_scripts(output_game_dir, patches_dir):
-    for filename in [f for f in os.listdir(output_game_dir) if
-                     re.match(r'\d+\.(HEP|SCR)', f, re.IGNORECASE) or
-                     re.match(r'SCRIPT\.\d+', f, re.IGNORECASE)]:
-        shutil.copyfile(os.path.join(output_game_dir, filename),
-                        os.path.join(patches_dir, filename))
-
-
 def run_installer(workingdir):
-    installers = glob.glob(os.path.join(args.workingdir, "*-hebrew-installer.exe"))
+    installers = glob.glob(os.path.join(workingdir, "*-hebrew-installer.exe"))
     if len(installers) == 0:
         print("Couldn't find the created installer. Not running it")
     elif len(installers) > 1:
@@ -49,12 +43,11 @@ def run_installer(workingdir):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
-                                     description="Downloads translation excel, runs all game's import scripts, compiles and creates an installer.",)
+                                     description="Downloads translation excel, runs all game's import scripts, compiles and creates an installer.", )
+    parser.add_argument("input_game_dir",
+                        help="directory containing CLEAN game dir (probably used for 'export_all') - won't be modified")
     parser.add_argument("workingdir", help="directory to put excel, csv and patches files, and installer")
-    parser.add_argument("input_game_dir", help="directory containing CLEAN game dir (probably used for 'export_all') - won't be modified")
-    parser.add_argument("output_game_dir", help="copy of 'input_game_dir', that will be modified by this script, and manually recompiled in SCICompanion")
-    parser.add_argument("--skip_download", "-s",  action='store_true', help="Skip downloading from Google Drive")
-    parser.add_argument("--dont_copy", "-d",  action='store_true', help="Dont copy scripts from 'output_game_dir' (useful for SCI32 games)")
+    parser.add_argument("--skip_download", "-s", action='store_true', help="Skip downloading from Google Drive")
     parser.add_argument("--debug", action='store_true', help="create debug files")
     args = parser.parse_args()
 
@@ -79,22 +72,13 @@ if __name__ == "__main__":
             texts_import.texts_import(args.workingdir, patches_dir)
         elif csvname == 'scripts_strings':
             print("\n**** Scripts' strings import: ****")
-            strings_import.strings_import(args.workingdir, args.input_game_dir, args.output_game_dir)
+            strings_import.strings_import(args.workingdir)
+            assembler.script_asm.asm_all(Path(args.workingdir) / 'asm' / 'modified', patches_dir)
         elif csvname == 'vocab':
             print("\n**** Vocab import: ****")
             vocab_import.vocab_import(args.workingdir, patches_dir, args.output_game_dir, args.debug)
         else:
             print(f"\n*************    Not implemented yet '{csvname}' import   ********************")
-
-
-    print(f"\n*******************\nPlease run SCICompanion (on {args.output_game_dir}), and compile all scripts")
-    if args.dont_copy:
-        print(f"* 'dont_copy' enabled, you might want to manually copy now few scripts from '{args.output_game_dir}' to '{patches_dir}'")
-    input("\n\nPress Enter when done...\n")
-    print("... continuing")
-
-    if not args.dont_copy:
-        copy_compiled_scripts(args.output_game_dir, patches_dir)
 
     print("\n**** Creating installer ****")
     create_installer(args.workingdir)

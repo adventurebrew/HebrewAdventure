@@ -507,7 +507,7 @@ def disasm(orig_script_file):
 def disasm_all(srcdir, asmdir):
     scr_files = Path(srcdir).glob('*.scr')
     asm_path = Path(asmdir)
-    asm_path.mkdir(exist_ok=True)
+    asm_path.mkdir(exist_ok=True, parents=True)
     for scr in scr_files:
         if scr.name.lower() != 'install.scr':  # and scr.name == '45.scr':  # TODO
             print("--------")
