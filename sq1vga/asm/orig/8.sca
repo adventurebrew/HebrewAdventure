@@ -1,0 +1,737 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm8 of 0x74
+
+.CODE
+rm8::107:
+		push2	
+		pushi	0x0080
+		pushi	0x6c
+		callk	0x0, 0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02bc
+		self	0x6
+		ldi	0x02
+		sag	0xa6
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	monitor
+		send	0xa
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	dials
+		send	0xa
+		lsg	0xc
+		ldi	0x09
+		eq?	
+		bnt	code_79
+		ldi	0x0b
+		jmp	code_81
+code_79:
+		ldi	0x0a
+code_81:
+		aTop	0x16
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x34
+		pushi	0x013f
+		pushi	0x77
+		pushi	0x0106
+		pushi	0x5d
+		pushi	0x00f4
+		pushi	0x64
+		pushi	0x00dc
+		pushi	0x67
+		pushi	0x00d2
+		pushi	0x65
+		pushi	0x00c3
+		pushi	0x6a
+		pushi	0x00ba
+		pushi	0x67
+		pushi	0x00b2
+		pushi	0x65
+		pushi	0x00a9
+		pushi	0x70
+		pushi	0x009b
+		pushi	0x73
+		pushi	0x0095
+		pushi	0x60
+		pushi	0x0087
+		pushi	0x60
+		pushi	0x008a
+		pushi	0x70
+		pushi	0x0083
+		pushi	0x75
+		pushi	0x77
+		pushi	0x70
+		pushi	0x56
+		pushi	0x7b
+		pushi	0x3e
+		pushi	0x78
+		pushi	0x3a
+		pushi	0x0083
+		pushi	0x1b
+		pushi	0x0084
+		pushi	0x1b
+		pushi	0x009e
+		pushi	0x7b
+		pushi	0x00ba
+		pushi	0x013f
+		pushi	0x00ba
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x76
+		push	
+		self	0x6
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x73
+		pushi	0x05
+		lofsa	pipes
+		push	
+		lofsa	conduit
+		push	
+		lofsa	thing1
+		push	
+		lofsa	thing2
+		push	
+		lofsa	mouseThing
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		lag	0x20
+		send	0x14
+		pushi	0x020c
+		push1	
+		lsg	0xc
+		ldi	0x09
+		ne?	
+		push	
+		pushi	0x020a
+		push1	
+		lofsa	elevatorLight
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x0208
+		push1	
+		pushi	0x04
+		lofsa	door
+		send	0x16
+		lsg	0xc
+		ldi	0x04
+		ne?	
+		bnt	code_324
+		push0	
+		callb	0x3, 0x0
+code_324:
+		ret	
+
+rm8::60:
+		pToa	0x8
+		bnt	code_335
+		ldi	0x00
+		jmp	code_356
+code_335:
+		pushi	0x021a
+		push0	
+		lofsa	door
+		send	0x4
+		bnt	code_356
+		pushi	0x00b3
+		push0	
+		lofsa	door
+		send	0x4
+code_356:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rm8::380:
+		lsg	0xc
+		ldi	0x04
+		eq?	
+		bnt	code_375
+		push0	
+		callb	0x2, 0x0
+code_375:
+		ret	
+
+
+.OBJECT rm8 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm8', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is a section of one of the lower levels of Arcada.', 'id': 'string_0'}
+  [#10] = 0x8
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x9
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 3
+  [0x6b]  = rm8::107   	 ; @0xe
+  [0x3c]  = rm8::60   	 ; @0x145
+  [0x17c]  = rm8::380   	 ; @0x16b
+
+.OBJECT elevatorLight of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'elevatorLight', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator light', 'id': 'string_2'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This elevator must go up.', 'id': 'string_3'}
+  [#22] = 0x2
+  [#23] = 0x6c
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT door of 0x73
+Function area offset: 0x80
+Selectors [63]:
+  [#0] = 0x73
+  [#1] = 0x73
+  [#2] = 0x0
+  [#3] = {'val': 'door', 'id': 'string_7'}
+  [#4] = 0x90
+  [#5] = 0x6f
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator', 'id': 'string_5'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is one way to change your altitude.', 'id': 'string_6'}
+  [#22] = 0x2
+  [#23] = 0x6c
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x2
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x13b
+  [#50] = 0x137
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x0
+  [#58] = 0x0
+  [#59] = 0x0
+  [#60] = 0x0
+  [#61] = 0x0
+  [#62] = 0x0
+Overriden functions: 0
+
+.OBJECT monitor of 0x2f
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'monitor', 'id': 'string_8'}
+  [#4] = 0x5b
+  [#5] = 0x5a
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'monitor', 'id': 'string_8'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This monitor gives a readout about the ship's status. Only the lab scientist really knows... er... knew exactly what it monitored.", 'id': 'string_9'}
+  [#22] = 0x2
+  [#23] = 0x6c
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x7
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 0
+
+.OBJECT dials of 0x2f
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'dials', 'id': 'string_12'}
+  [#4] = 0xeb
+  [#5] = 0x51
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'lights', 'id': 'string_10'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A pair of viewing ports protrude from the materials testing device.', 'id': 'string_11'}
+  [#22] = 0x2
+  [#23] = 0x6c
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 0
+
+.CODE
+pipes::266:
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		self	0xc
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2c, 0x8
+		ret	
+
+
+.OBJECT pipes of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'pipes', 'id': 'string_13'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pipes', 'id': 'string_13'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Pipes whose purpose is known only to the architect wrap around the upper back of the room.', 'id': 'string_14'}
+Overriden functions: 1
+  [0x10a]  = pipes::266   	 ; @0x382
+
+.CODE
+conduit::266:
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		self	0xc
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2c, 0x8
+		ret	
+
+
+.OBJECT conduit of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'conduit', 'id': 'string_15'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'conduit', 'id': 'string_15'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A designer conduit system runs through here. It carries the ventilation ducting as well as different type of wiring.', 'id': 'string_16'}
+Overriden functions: 1
+  [0x10a]  = conduit::266   	 ; @0x3f8
+
+.CODE
+thing1::266:
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		self	0xc
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2c, 0x8
+		ret	
+
+
+.OBJECT thing1 of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'thing1', 'id': 'string_19'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'thing in foreground', 'id': 'string_17'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'It appears to be some sort of wiring harness. You never cared much for electrical hardware.', 'id': 'string_18'}
+Overriden functions: 1
+  [0x10a]  = thing1::266   	 ; @0x46e
+
+.CODE
+thing2::266:
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		self	0xc
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2c, 0x8
+		ret	
+
+
+.OBJECT thing2 of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'thing2', 'id': 'string_22'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'round thing', 'id': 'string_20'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Who knows what this is.', 'id': 'string_21'}
+Overriden functions: 1
+  [0x10a]  = thing2::266   	 ; @0x4e4
+
+.OBJECT mouseThing of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'mouseThing', 'id': 'string_25'}
+  [#4] = 0xe1
+  [#5] = 0x4c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x37
+  [#10] = 0xc6
+  [#11] = 0x61
+  [#12] = 0xfc
+  [#13] = {'val': 'mouse thing', 'id': 'string_23'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This interesting device was used to test materials early in the project.', 'id': 'string_24'}
+Overriden functions: 0
+
+.STRINGS
+string_0: "This is a section of one of the lower levels of Arcada."
+string_1: "rm8"		 ; special
+string_2: "elevator light"
+string_3: "This elevator must go up."
+string_4: "elevatorLight"		 ; special
+string_5: "elevator"
+string_6: "This is one way to change your altitude."
+string_7: "door"		 ; special
+string_8: "monitor"		 ; special
+string_9: "This monitor gives a readout about the ship's status. Only the lab scientist really knows... er... knew exactly what it monitored."
+string_10: "lights"
+string_11: "A pair of viewing ports protrude from the materials testing device."
+string_12: "dials"		 ; special
+string_13: "pipes"		 ; special
+string_14: "Pipes whose purpose is known only to the architect wrap around the upper back of the room."
+string_15: "conduit"		 ; special
+string_16: "A designer conduit system runs through here. It carries the ventilation ducting as well as different type of wiring."
+string_17: "thing in foreground"
+string_18: "It appears to be some sort of wiring harness. You never cared much for electrical hardware."
+string_19: "thing1"		 ; special
+string_20: "round thing"
+string_21: "Who knows what this is."
+string_22: "thing2"		 ; special
+string_23: "mouse thing"
+string_24: "This interesting device was used to test materials early in the project."
+string_25: "mouseThing"		 ; special
+string_unused_26: ""
+
+
+.RELOCATION
+num of pointers: 40
+0x2f, 0x3e, 0xfc, 0x100, 0x104, 0x108, 0x10c, 0x127, 0x134, 0x154, 0x160, 0x18a, 0x196, 0x1d6, 0x1ea, 0x1fa, 0x232, 0x246, 0x256, 0x2c0, 0x2d4, 0x2e4, 0x328, 0x33c, 0x34c, 0x3c6, 0x3da, 0x3ea, 0x43c, 0x450, 0x460, 0x4b2, 0x4c6, 0x4d6, 0x528, 0x53c, 0x54c, 0x568, 0x57c, 0x58c

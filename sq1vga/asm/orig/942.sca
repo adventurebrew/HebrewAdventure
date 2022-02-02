@@ -1,0 +1,203 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+MCyc::107:
+		link	0x02
+		lap	0x1
+		aTop	0x8
+		lap	0x2
+		aTop	0x14
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_61
+		lsp	0x0
+		ldi	0x04
+		ge?	
+		bnt	code_41
+		lap	0x4
+		aTop	0xc
+		lap	0x3
+		aTop	0xa
+		jmp	code_61
+code_41:
+		push1	
+		lsp	0x3
+		callk	0x6, 0x2
+		bnt	code_57
+		lap	0x3
+		aTop	0xa
+		jmp	code_61
+code_57:
+		lap	0x3
+		aTop	0xc
+code_61:
+		ldi	0x00
+		aTop	0x16
+code_65:
+		push2	
+		pTos	0x14
+		pTos	0x16
+		calle	0x03e7, 0x0006, 0x04
+		push	
+		ldi	0x8000
+		ne?	
+		bnt	code_89
+		ipToa	0x16
+		jmp	code_65
+code_89:
+		pTos	0xc
+		ldi	0x01
+		eq?	
+		bnt	code_104
+		ldi	0x00
+		aTop	0x12
+		jmp	code_111
+code_104:
+		pTos	0x16
+		ldi	0x04
+		sub	
+		aTop	0x12
+code_111:
+		pushi	0x6b
+		push0	
+		super	0x16, 0x4
+		ret	
+
+MCyc::60:
+		ipToa	0xe
+		push	
+		pushi	0x00d9
+		push0	
+		pToa	0x8
+		send	0x4
+		gt?	
+		bnt	code_143
+		ldi	0x00
+		aTop	0xe
+		pushi	0x00d6
+		push0	
+		self	0x4
+code_143:
+		ret	
+
+MCyc::214:
+		pushi	0x06
+		push1	
+		push2	
+		pTos	0x14
+		pTos	0x12
+		calle	0x03e7, 0x0006, 0x04
+		push	
+		pushi	0x07
+		push1	
+		push2	
+		pTos	0x14
+		pTos	0x12
+		ldi	0x01
+		add	
+		push	
+		calle	0x03e7, 0x0006, 0x04
+		push	
+		pushi	0x04
+		push1	
+		push2	
+		pTos	0x14
+		pTos	0x12
+		ldi	0x02
+		add	
+		push	
+		calle	0x03e7, 0x0006, 0x04
+		push	
+		pushi	0x03
+		push1	
+		push2	
+		pTos	0x14
+		pTos	0x12
+		ldi	0x03
+		add	
+		push	
+		calle	0x03e7, 0x0006, 0x04
+		push	
+		pToa	0x8
+		send	0x18
+		pTos	0x12
+		pTos	0xc
+		ldi	0x04
+		mul	
+		add	
+		aTop	0x12
+		pTos	0xc
+		ldi	0x01
+		eq?	
+		bnt	code_243
+		pTos	0x12
+		pToa	0x16
+		ge?	
+code_243:
+		bt	code_259
+		pTos	0xc
+		ldi	0xff
+		eq?	
+		bnt	code_268
+		pTos	0x12
+		ldi	0x00
+		lt?	
+code_259:
+		bnt	code_268
+		pushi	0x00d7
+		push0	
+		self	0x4
+code_268:
+		ret	
+
+MCyc::215:
+		ldi	0x01
+		aTop	0x10
+		ldi	0x00
+		aTop	0x12
+		pToa	0xa
+		bnt	code_289
+		ldi	0x01
+		sag	0x25
+		jmp	code_295
+code_289:
+		pushi	0x00d8
+		push0	
+		self	0x4
+code_295:
+		ret	
+
+
+.CLASS MCyc of 0x16
+Function area offset: 0x32
+Selectors [12]:
+  [0x0] = 0x5d
+  [0x1] = 0x16
+  [0x2] = 0x8000
+  [0x17] = {'val': 'MCyc', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x4d] = 0x0
+  [0x5a] = 0x0
+  [0x59] = 0x0
+Overriden functions: 4
+  [0x6b]  = MCyc::107   	 ; @0x4
+  [0x3c]  = MCyc::60   	 ; @0x76
+  [0xd6]  = MCyc::214   	 ; @0x90
+  [0xd7]  = MCyc::215   	 ; @0x10d
+
+.STRINGS
+string_0: "MCyc"		 ; special
+string_unused_1: ""
+string_unused_2: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x13a

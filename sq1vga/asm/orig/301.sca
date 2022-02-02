@@ -1,0 +1,540 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT madonnaScript of 0x6
+OBJECT madonna of 0x2f
+OBJECT madonnaFace of 0x2f
+
+.CODE
+madonnaScript::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_68
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	madonna
+		send	0x12
+		push2	
+		pushi	0x03
+		pushi	0x05
+		callk	0x3c, 0x4
+		aTop	0x12
+		jmp	code_425
+code_68:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_91
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	madonna
+		send	0x8
+		jmp	code_425
+code_91:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_160
+		pushi	0x06
+		push0	
+		lofsa	madonna
+		send	0x4
+		push	
+		ldi	0x06
+		ne?	
+		bnt	code_150
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lofsa	madonna
+		send	0x4
+		push	
+		ldi	0x01
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	madonna
+		send	0x14
+		jmp	code_425
+code_150:
+		pushi	0x008a
+		push1	
+		push0	
+		self	0x6
+		jmp	code_425
+code_160:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_390
+		pushi	0x00a1
+		pushi	0x03
+		pushi	0x06
+		pushi	0x4e
+		push0	
+		lag	0x64
+		send	0xa
+		pushi	0x06
+		push0	
+		lofsa	madonna
+		send	0x4
+		push	
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_220
+		pushi	0x011a
+		push2	
+		pushi	0x008c
+		pushi	0x34
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		lofsa	madonnaFace
+		send	0xe
+		jmp	code_367
+code_220:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_250
+		pushi	0x011a
+		push2	
+		pushi	0x0093
+		pushi	0x3c
+		pushi	0x00a0
+		push1	
+		pushi	0x08
+		lofsa	madonnaFace
+		send	0xe
+		jmp	code_367
+code_250:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_280
+		pushi	0x011a
+		push2	
+		pushi	0x008c
+		pushi	0x32
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		lofsa	madonnaFace
+		send	0xe
+		jmp	code_367
+code_280:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_310
+		pushi	0x011a
+		push2	
+		pushi	0x0087
+		pushi	0x35
+		pushi	0x00a0
+		push1	
+		pushi	0x08
+		lofsa	madonnaFace
+		send	0xe
+		jmp	code_367
+code_310:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_340
+		pushi	0x011a
+		push2	
+		pushi	0x0082
+		pushi	0x3c
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		lofsa	madonnaFace
+		send	0xe
+		jmp	code_367
+code_340:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_367
+		pushi	0x011a
+		push2	
+		pushi	0x008c
+		pushi	0x32
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		lofsa	madonnaFace
+		send	0xe
+code_367:
+		toss	
+		pushi	0x00c0
+		push0	
+		lofsa	madonnaFace
+		send	0x4
+		push2	
+		pushi	0x5a
+		pushi	0x78
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_425
+code_390:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_425
+		pushi	0x00a1
+		pushi	0x03
+		pushi	0x06
+		pushi	0x4e
+		push1	
+		lag	0x64
+		send	0xa
+		pushi	0x69
+		push0	
+		lofsa	madonnaFace
+		send	0x4
+		ldi	0x01
+		aTop	0xa
+		aTop	0x10
+code_425:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT madonnaScript of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'madonnaScript', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = madonnaScript::138   	 ; @0x16
+
+.CODE
+madonna::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_507
+		push2	
+		pushi	0x012d
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_780
+code_507:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_526
+		push2	
+		pushi	0x012d
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_780
+code_526:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_545
+		push2	
+		pushi	0x012d
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_780
+code_545:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_565
+		push2	
+		pushi	0x012d
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_780
+code_565:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_769
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_594
+		push2	
+		pushi	0x012d
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_594:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_614
+		push2	
+		pushi	0x012d
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_614:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_634
+		push2	
+		pushi	0x012d
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_634:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_654
+		push2	
+		pushi	0x012d
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_654:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_674
+		push2	
+		pushi	0x012d
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_674:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_694
+		push2	
+		pushi	0x012d
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_694:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_714
+		push2	
+		pushi	0x012d
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_714:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_734
+		push2	
+		pushi	0x012d
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_734:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_754
+		push2	
+		pushi	0x012d
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_765
+code_754:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_765:
+		toss	
+		jmp	code_780
+code_769:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2f, 0x6
+code_780:
+		toss	
+		ret	
+
+
+.OBJECT madonna of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'madonna', 'id': 'string_3'}
+  [#4] = 0x8a
+  [#5] = 0x5b
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'humanoid', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "On stage, a strangely attired woman performs her act (if that's what you want to call it). You haven't had a girlfriend for a long time (more like forever), but even that's not enough to make her attractive.", 'id': 'string_2'}
+  [#22] = 0x2
+  [#23] = 0x1b3
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4800
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = madonna::266   	 ; @0x1e6
+
+.CODE
+madonnaFace::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	madonna
+		send	0x6
+		ret	
+
+
+.OBJECT madonnaFace of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'madonnaFace', 'id': 'string_4'}
+  [#4] = 0x8e
+  [#5] = 0x5b
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'humanoid', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "On stage, a strangely attired woman performs her act (if that's what you want to call it). You haven't had a girlfriend for a long time (more like forever), but even that's not enough to make her attractive.", 'id': 'string_2'}
+  [#22] = 0x2
+  [#23] = 0x1b3
+  [#24] = 0x7
+  [#25] = 0x0
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = madonnaFace::266   	 ; @0x37e
+
+.STRINGS
+string_0: "madonnaScript"		 ; special
+string_1: "humanoid"
+string_2: "On stage, a strangely attired woman performs her act (if that's what you want to call it). You haven't had a girlfriend for a long time (more like forever), but even that's not enough to make her attractive."
+string_3: "madonna"		 ; special
+string_4: "madonnaFace"		 ; special
+string_unused_5: ""
+string_unused_6: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 22
+0x33, 0x54, 0x66, 0x79, 0x8f, 0xb9, 0xd5, 0xf3, 0x111, 0x12f, 0x14d, 0x16b, 0x175, 0x19f, 0x1be, 0x320, 0x334, 0x344, 0x387, 0x39e, 0x3b2, 0x3c2

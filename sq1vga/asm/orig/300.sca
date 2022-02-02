@@ -1,0 +1,629 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT bluesBrothers of 0x6
+OBJECT jakeBlue of 0x2f
+OBJECT elwoodBlue of 0x2f
+
+.CODE
+bluesBrothers::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_69
+		pushi	0x00a0
+		push1	
+		pTos	0x1a
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pToa	0x8
+		send	0x12
+		push2	
+		pushi	0x2d
+		pushi	0x0096
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_296
+code_69:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_91
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x8
+		jmp	code_296
+code_91:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_127
+		pushi	0x00a0
+		push1	
+		pTos	0x1a
+		ldi	0x01
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x14
+		jmp	code_296
+code_127:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_209
+		pToa	0x1a
+		not	
+		bnt	code_157
+		pushi	0x00a1
+		pushi	0x03
+		pushi	0x05
+		pushi	0x4e
+		push0	
+		lag	0x64
+		send	0xa
+		jmp	code_171
+code_157:
+		pushi	0x00a1
+		pushi	0x03
+		pushi	0x04
+		pushi	0x4e
+		push0	
+		lag	0x64
+		send	0xa
+code_171:
+		pushi	0x00a0
+		push1	
+		pTos	0x1a
+		ldi	0x02
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push2	
+		push2	
+		pushi	0x0f
+		callk	0x3c, 0x4
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x16
+		jmp	code_296
+code_209:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_296
+		pToa	0x1a
+		not	
+		bnt	code_239
+		pushi	0x00a1
+		pushi	0x03
+		pushi	0x05
+		pushi	0x4e
+		push1	
+		lag	0x64
+		send	0xa
+		jmp	code_253
+code_239:
+		pushi	0x00a1
+		pushi	0x03
+		pushi	0x04
+		pushi	0x4e
+		push1	
+		lag	0x64
+		send	0xa
+code_253:
+		ldi	0xff
+		aTop	0xa
+		pushi	0x00a0
+		push1	
+		pTos	0x1a
+		ldi	0x01
+		add	
+		push	
+		pushi	0x07
+		push1	
+		pToa	0x1a
+		not	
+		bnt	code_281
+		ldi	0x02
+		jmp	code_283
+code_281:
+		ldi	0x03
+code_283:
+		push	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x14
+code_296:
+		toss	
+		ret	
+
+
+.OBJECT bluesBrothers of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'bluesBrothers', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = bluesBrothers::138   	 ; @0x16
+
+.CODE
+jakeBlue::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_377
+		push2	
+		pushi	0x012c
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_650
+code_377:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_396
+		push2	
+		pushi	0x012c
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_650
+code_396:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_415
+		push2	
+		pushi	0x012c
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_650
+code_415:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_435
+		push2	
+		pushi	0x012c
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_650
+code_435:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_639
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_464
+		push2	
+		pushi	0x012c
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_464:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_484
+		push2	
+		pushi	0x012c
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_484:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_504
+		push2	
+		pushi	0x012c
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_504:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_524
+		push2	
+		pushi	0x012c
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_524:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_544
+		push2	
+		pushi	0x012c
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_544:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_564
+		push2	
+		pushi	0x012c
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_564:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_584
+		push2	
+		pushi	0x012c
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_584:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_604
+		push2	
+		pushi	0x012c
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_604:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_624
+		push2	
+		pushi	0x012c
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_635
+code_624:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_635:
+		toss	
+		jmp	code_650
+code_639:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2f, 0x6
+code_650:
+		toss	
+		ret	
+
+
+.OBJECT jakeBlue of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'jakeBlue', 'id': 'string_3'}
+  [#4] = 0x88
+  [#5] = 0x5f
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'humanoids', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'There are a couple of non-galactic looking humanoids cranking out some unfamiliar sounding tunes. They seem interested solely in the music they are performing.', 'id': 'string_2'}
+  [#22] = 0x2
+  [#23] = 0x1b2
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = jakeBlue::266   	 ; @0x164
+
+.CODE
+elwoodBlue::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_786
+		push2	
+		pushi	0x012c
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		jmp	code_1059
+code_786:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_805
+		push2	
+		pushi	0x012c
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1059
+code_805:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_824
+		push2	
+		pushi	0x012c
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1059
+code_824:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_844
+		push2	
+		pushi	0x012c
+		pushi	0x0d
+		calle	0xff, 0x00, 0x04
+		jmp	code_1059
+code_844:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1048
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_873
+		push2	
+		pushi	0x012c
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_873:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_893
+		push2	
+		pushi	0x012c
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_893:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_913
+		push2	
+		pushi	0x012c
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_913:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_933
+		push2	
+		pushi	0x012c
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_933:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_953
+		push2	
+		pushi	0x012c
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_953:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_973
+		push2	
+		pushi	0x012c
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_973:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_993
+		push2	
+		pushi	0x012c
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_993:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_1013
+		push2	
+		pushi	0x012c
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_1013:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_1033
+		push2	
+		pushi	0x012c
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1044
+code_1033:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_1044:
+		toss	
+		jmp	code_1059
+code_1048:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2f, 0x6
+code_1059:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT elwoodBlue of 0x2f
+Exported
+Function area offset: 0x5a
+Selectors [44]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'elwoodBlue', 'id': 'string_4'}
+  [#4] = 0xa3
+  [#5] = 0x5a
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'humanoids', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'There are a couple of non-galactic looking humanoids cranking out some unfamiliar sounding tunes. They seem interested solely in the music they are performing.', 'id': 'string_2'}
+  [#22] = 0x2
+  [#23] = 0x1b2
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+  [#43] = 0x0
+Overriden functions: 1
+  [0x10a]  = elwoodBlue::266   	 ; @0x2fc
+
+.STRINGS
+string_0: "bluesBrothers"		 ; special
+string_1: "humanoids"
+string_2: "There are a couple of non-galactic looking humanoids cranking out some unfamiliar sounding tunes. They seem interested solely in the music they are performing."
+string_3: "jakeBlue"		 ; special
+string_4: "elwoodBlue"		 ; special
+string_unused_5: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 7
+0x13c, 0x29e, 0x2b2, 0x2c2, 0x438, 0x44c, 0x45c

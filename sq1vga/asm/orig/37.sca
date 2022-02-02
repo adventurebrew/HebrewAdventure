@@ -1,0 +1,1873 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm37 of 0x74
+
+.CODE
+rm37::107:
+		push1	
+		pushi	0x44
+		callb	0x6, 0x2
+		not	
+		bnt	code_41
+		pushi	0x03
+		pushi	0x0084
+		pushi	0x032a
+		pushi	0x0199
+		calle	0x03be, 0x0000, 0x06
+code_41:
+		pushi	0x6b
+		push0	
+		lofsa	shipHull
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	doorway
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	windshield
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	engines
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	rocks
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	ridge
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	ridgeEdge
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	mountains
+		send	0x4
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x40
+		pushi	0x013f
+		pushi	0x5b
+		pushi	0x012f
+		pushi	0x5b
+		pushi	0x011e
+		pushi	0x66
+		pushi	0x00fa
+		pushi	0x6c
+		pushi	0x00df
+		pushi	0x72
+		pushi	0x00e3
+		pushi	0x75
+		pushi	0x00dc
+		pushi	0x78
+		pushi	0x00c2
+		pushi	0x79
+		pushi	0x00bf
+		pushi	0x0080
+		pushi	0x00b5
+		pushi	0x0084
+		pushi	0x00a9
+		pushi	0x0082
+		pushi	0x00a3
+		pushi	0x0081
+		pushi	0x009a
+		pushi	0x0085
+		pushi	0x0094
+		pushi	0x008f
+		pushi	0x008a
+		pushi	0x0093
+		pushi	0x009a
+		pushi	0x0092
+		pushi	0x00a4
+		pushi	0x0094
+		pushi	0x00a0
+		pushi	0x009f
+		pushi	0x0095
+		pushi	0x00a5
+		pushi	0x008c
+		pushi	0x00a1
+		pushi	0x73
+		pushi	0x00a3
+		pushi	0x65
+		pushi	0x009e
+		pushi	0x3a
+		pushi	0x00a0
+		pushi	0x2b
+		pushi	0x009b
+		pushi	0x36
+		pushi	0x0097
+		pushi	0x1c
+		pushi	0x0091
+		pushi	0x14
+		pushi	0x008d
+		pushi	0x48
+		pushi	0x7a
+		pushi	0x4e
+		pushi	0x74
+		push0	
+		pushi	0x60
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x8e
+		push	
+		self	0x6
+		push2	
+		pushi	0x0080
+		pushi	0x0a
+		callk	0x0, 0x4
+		lsg	0xc
+		dup	
+		ldi	0x0e
+		eq?	
+		bnt	code_390
+		ldi	0x8007
+		aTop	0x16
+		pushi	0x011f
+		push0	
+		pushi	0x019a
+		push1	
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x0c
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x00a1
+		pushi	0x0082
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x11
+		push1	
+		pushi	0x4000
+		lag	0x0
+		send	0x3e
+		pushi	0x008c
+		push1	
+		lofsa	exitShip
+		push	
+		self	0x6
+		jmp	code_454
+code_390:
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_430
+		pushi	0x07
+		push1	
+		pushi	0x03
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	door
+		send	0xe
+		pushi	0x04
+		push1	
+		pushi	0x0133
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0xa
+		jmp	code_454
+code_430:
+		pushi	0x07
+		push1	
+		pushi	0x03
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	door
+		send	0xe
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+code_454:
+		toss	
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		push1	
+		pushi	0x07
+		callb	0x6, 0x2
+		not	
+		bnt	code_501
+		push1	
+		pushi	0x07
+		callb	0x7, 0x2
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	smoke
+		send	0xa
+code_501:
+		pushi	0x00d3
+		push1	
+		pushi	0x06
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_523
+		pushi	0x6b
+		push0	
+		lofsa	glass
+		send	0x4
+code_523:
+		pushi	0x00d3
+		push1	
+		pushi	0x03
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_545
+		pushi	0x6b
+		push0	
+		lofsa	kit
+		send	0x4
+code_545:
+		ldi	0x02
+		sag	0xa6
+		ret	
+
+rm37::375:
+		pushi	0x77
+		push1	
+		lofsa	grell
+		push	
+		lag	0x5
+		send	0x6
+		bt	code_578
+		lsp	0x1
+		pToa	0x1c
+		eq?	
+		bt	code_578
+		push1	
+		pushi	0x44
+		callb	0x6, 0x2
+code_578:
+		bnt	code_593
+		pushi	0x0177
+		push1	
+		lsp	0x1
+		super	0x74, 0x6
+		jmp	code_613
+code_593:
+		push1	
+		pushi	0x44
+		callb	0x7, 0x2
+		pushi	0x008c
+		pushi	0x03
+		lofsa	grellYells
+		push	
+		push0	
+		lsp	0x1
+		self	0xa
+code_613:
+		ret	
+
+rm37::60:
+		pToa	0x8
+		bnt	code_624
+		ldi	0x00
+		jmp	code_650
+code_624:
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x02
+		and	
+		bnt	code_650
+		pushi	0x008c
+		push1	
+		lofsa	walkAwayFromEdge
+		push	
+		self	0x6
+code_650:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x74, 0x4
+		ret	
+
+		bnot	
+
+.OBJECT rm37 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm37', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x25
+  [#11] = 0x8
+  [#12] = 0x5d
+  [#13] = 0x0
+  [#14] = 0x26
+  [#15] = 0x13
+  [#16] = 0x152
+  [#17] = 0x8a
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 3
+  [0x6b]  = rm37::107   	 ; @0xe
+  [0x3c]  = rm37::60   	 ; @0x266
+  [0x177]  = rm37::375   	 ; @0x226
+
+.OBJECT smoke of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'smoke', 'id': 'string_3'}
+  [#4] = 0xc3
+  [#5] = 0x39
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'exhaust fumes', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The spent drives of the pod vent fumes after the long escape from the Arcada.', 'id': 'string_2'}
+  [#22] = 0x2
+  [#23] = 0x89
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xf
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.CODE
+door::139:
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x011b
+		push0	
+		self	0x4
+		pushi	0x008b
+		push0	
+		lofsa	exitShip
+		send	0x4
+		ret	
+
+
+.OBJECT door of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'door', 'id': 'string_6'}
+  [#4] = 0x7e
+  [#5] = 0x62
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': "ship's hatch", 'id': 'string_4'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is the door of the escape pod. Due to its special design, the door retained a reserve cache of power sufficient to open one more time. Now, however, it will no longer function.', 'id': 'string_5'}
+  [#22] = 0x2
+  [#23] = 0x89
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0xc
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1a
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x8b]  = door::139   	 ; @0x34a
+
+.CODE
+glass::107:
+		pushi	0x0117
+		push1	
+		pushi	0x03
+		self	0x6
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		ret	
+
+glass::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1017
+		pushi	0x008c
+		push1	
+		lofsa	getGlass
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_1028
+code_1017:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_1028:
+		toss	
+		ret	
+
+
+.OBJECT glass of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'glass', 'id': 'string_9'}
+  [#4] = 0x55
+  [#5] = 0x98
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'piece of glass', 'id': 'string_7'}
+  [#14] = 0x5a
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x49
+  [#18] = 0xa2
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "A chunk of the highly reflective windscreen rests on the sand at the front of the pod. It, along with your teeth, was jarred loose as a result of the the landing's impact.", 'id': 'string_8'}
+  [#22] = 0x2
+  [#23] = 0x89
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 2
+  [0x6b]  = glass::107   	 ; @0x3d0
+  [0x10a]  = glass::266   	 ; @0x3e1
+
+.OBJECT grell of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'grell', 'id': 'string_10'}
+  [#4] = 0xf8
+  [#5] = 0xa7
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1a4
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.CODE
+kit::107:
+		pushi	0x0117
+		push1	
+		pushi	0x03
+		self	0x6
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2e, 0x4
+		ret	
+
+kit::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1287
+		pushi	0x008c
+		push1	
+		lofsa	getKit
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_1298
+code_1287:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2e, 0x6
+code_1298:
+		toss	
+		ret	
+
+
+.OBJECT kit of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'kit', 'id': 'string_13'}
+  [#4] = 0x8e
+  [#5] = 0x76
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'emergency survival kit', 'id': 'string_11'}
+  [#14] = 0x5a
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0xac
+  [#18] = 0x7d
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The rugged landing liberated the survival kit from its mounting fixture.', 'id': 'string_12'}
+  [#22] = 0x2
+  [#23] = 0x89
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 2
+  [0x6b]  = kit::107   	 ; @0x4de
+  [0x10a]  = kit::266   	 ; @0x4ef
+
+.CODE
+shipHull::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1454
+		push2	
+		pushi	0x25
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1465
+code_1454:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_1465:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT shipHull of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'shipHull', 'id': 'string_16'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': "pod's hull", 'id': 'string_14'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The hull of the pod has an exquisite sheen. Too bad it is destined to remain a monument to your visit.', 'id': 'string_15'}
+Overriden functions: 1
+  [0x10a]  = shipHull::266   	 ; @0x57c
+
+.CODE
+doorway::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT doorway of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'doorway', 'id': 'string_19'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'hatchway', 'id': 'string_17'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is the entry way to the pod.', 'id': 'string_18'}
+Overriden functions: 1
+  [0x10a]  = doorway::266   	 ; @0x600
+
+.CODE
+ridgeEdge::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT ridgeEdge of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'ridgeEdge', 'id': 'string_22'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': "ridge's edge", 'id': 'string_20'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Your highly-honed preservation instincts tell you that going near the edge would be disasterous.', 'id': 'string_21'}
+Overriden functions: 1
+  [0x10a]  = ridgeEdge::266   	 ; @0x66c
+
+.CODE
+windshield::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1802
+		push2	
+		pushi	0x25
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1831
+code_1802:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1820
+		push2	
+		pushi	0x25
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1831
+code_1820:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_1831:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT windshield of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'windshield', 'id': 'string_24'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': "pod's windshield", 'id': 'string_23'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x1000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = windshield::266   	 ; @0x6d8
+
+.CODE
+engines::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1953
+		push2	
+		pushi	0x25
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_1964
+code_1953:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_1964:
+		toss	
+		ret	
+
+
+.OBJECT engines of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'engines', 'id': 'string_27'}
+  [#4] = 0x0
+  [#5] = 0x3c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': "pod's engines", 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x800
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The engines seem to have performed their jobs well. They will now stand silent for eternity.', 'id': 'string_26'}
+Overriden functions: 1
+  [0x10a]  = engines::266   	 ; @0x76e
+
+.CODE
+rocks::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2085
+		push2	
+		pushi	0x25
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_2096
+code_2085:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2096:
+		toss	
+		ret	
+
+
+.OBJECT rocks of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'rocks', 'id': 'string_28'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'rocks', 'id': 'string_28'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The rocks lying on the ground here are made of crumbling sandstone.', 'id': 'string_29'}
+Overriden functions: 1
+  [0x10a]  = rocks::266   	 ; @0x7f2
+
+.CODE
+ridge::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT ridge of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'ridge', 'id': 'string_30'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'ridge', 'id': 'string_30'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x200
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This ridge of sand helped stop the pod.', 'id': 'string_31'}
+Overriden functions: 1
+  [0x10a]  = ridge::266   	 ; @0x876
+
+.CODE
+mountains::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT mountains of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'mountains', 'id': 'string_32'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'mountains', 'id': 'string_32'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x80
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'In the distance rises a unique formation of mountains. They look to be hundreds of kilometers away.', 'id': 'string_33'}
+Overriden functions: 1
+  [0x10a]  = mountains::266   	 ; @0x8e2
+
+.CODE
+exitShip::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2413
+		push0	
+		callb	0x2, 0x0
+		pushi	0x6b
+		push0	
+		lofsa	door
+		send	0x4
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2548
+code_2413:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2456
+		pushi	0x2b
+		push1	
+		pushi	0x0144
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lofsa	door
+		send	0xc
+		jmp	code_2548
+code_2456:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2498
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		lofsa	door
+		push	
+		lofsa	door
+		send	0x8
+		pushi	0x00c0
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_2548
+code_2498:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2510
+		ldi	0x00
+		jmp	code_2548
+code_2510:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2548
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x019a
+		push1	
+		push1	
+		pushi	0x06
+		push1	
+		push2	
+		lag	0x0
+		send	0xc
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2548:
+		toss	
+		ret	
+
+
+.OBJECT exitShip of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'exitShip', 'id': 'string_34'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = exitShip::138   	 ; @0x94e
+
+.CODE
+getGlass::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2637
+		push0	
+		callb	0x2, 0x0
+		pushi	0x00e2
+		push2	
+		push0	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_2765
+code_2637:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2682
+		pushi	0x05
+		push1	
+		pushi	0x0a
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x14
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x24
+		jmp	code_2765
+code_2682:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2731
+		pushi	0x6c
+		push0	
+		lofsa	glass
+		send	0x4
+		push2	
+		pushi	0x03
+		pushi	0x008d
+		callb	0xb, 0x4
+		pushi	0x0145
+		push1	
+		pushi	0x06
+		lag	0x0
+		send	0x6
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_2765
+code_2731:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2765
+		push0	
+		callb	0x3, 0x0
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		pushi	0x03
+		lag	0x0
+		send	0x6
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2765:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT getGlass of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'getGlass', 'id': 'string_35'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = getGlass::138   	 ; @0xa30
+
+.CODE
+getKit::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2857
+		push0	
+		callb	0x2, 0x0
+		pushi	0x00e2
+		push2	
+		pushi	0x010e
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_2989
+code_2857:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2903
+		pushi	0x05
+		push1	
+		pushi	0x0a
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x14
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push1	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x24
+		jmp	code_2989
+code_2903:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2956
+		pushi	0x6c
+		push0	
+		lofsa	kit
+		send	0x4
+		push2	
+		push2	
+		pushi	0x008c
+		callb	0xb, 0x4
+		pushi	0x0145
+		push1	
+		pushi	0x03
+		lag	0x0
+		send	0x6
+		pushi	0x07
+		push1	
+		pushi	0x03
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_2989
+code_2956:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2989
+		push0	
+		callb	0x3, 0x0
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2989:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT getKit of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'getKit', 'id': 'string_36'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = getKit::138   	 ; @0xb0a
+
+.CODE
+walkAwayFromEdge::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3111
+		push0	
+		callb	0x2, 0x0
+		push2	
+		pushi	0x25
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0a
+		add	
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_3136
+code_3111:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3136
+		push2	
+		pushi	0x25
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		pushi	0x6c
+		push0	
+		self	0x4
+		push0	
+		callb	0x3, 0x0
+code_3136:
+		toss	
+		ret	
+
+
+.OBJECT walkAwayFromEdge of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'walkAwayFromEdge', 'id': 'string_37'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = walkAwayFromEdge::138   	 ; @0xbea
+
+.CODE
+grellYells::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3244
+		pushi	0x2b
+		push1	
+		pushi	0x032a
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	grell
+		send	0xc
+		jmp	code_3486
+code_3244:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3291
+		pushi	0x2b
+		push1	
+		pushi	0x0199
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x07
+		push1	
+		pushi	0x07
+		lofsa	grell
+		send	0x6
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_3486
+code_3291:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3314
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	grell
+		send	0x8
+		jmp	code_3486
+code_3314:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3342
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x06
+		pushi	0xff
+		pushSelf	
+		lofsa	grell
+		send	0xc
+		jmp	code_3486
+code_3342:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_3365
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	grell
+		send	0x8
+		jmp	code_3486
+code_3365:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_3395
+		pushi	0x07
+		push1	
+		pushi	0x07
+		lofsa	grell
+		send	0x6
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_3486
+code_3395:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_3425
+		pushi	0x07
+		push1	
+		pushi	0x08
+		lofsa	grell
+		send	0x6
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_3486
+code_3425:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_3455
+		pushi	0x07
+		push1	
+		pushi	0x07
+		lofsa	grell
+		send	0x6
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_3486
+code_3455:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_3469
+		ldi	0x03
+		aTop	0x12
+		jmp	code_3486
+code_3469:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_3486
+		pushi	0x0177
+		push1	
+		pTos	0x1a
+		lag	0x2
+		send	0x6
+code_3486:
+		toss	
+		ret	
+
+
+.OBJECT grellYells of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'grellYells', 'id': 'string_38'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = grellYells::138   	 ; @0xc7c
+
+.STRINGS
+string_0: "rm37"		 ; special
+string_1: "exhaust fumes"
+string_2: "The spent drives of the pod vent fumes after the long escape from the Arcada."
+string_3: "smoke"		 ; special
+string_4: "ship's hatch"
+string_5: "This is the door of the escape pod. Due to its special design, the door retained a reserve cache of power sufficient to open one more time. Now, however, it will no longer function."
+string_6: "door"		 ; special
+string_7: "piece of glass"
+string_8: "A chunk of the highly reflective windscreen rests on the sand at the front of the pod. It, along with your teeth, was jarred loose as a result of the the landing's impact."
+string_9: "glass"		 ; special
+string_10: "grell"		 ; special
+string_11: "emergency survival kit"
+string_12: "The rugged landing liberated the survival kit from its mounting fixture."
+string_13: "kit"		 ; special
+string_14: "pod's hull"
+string_15: "The hull of the pod has an exquisite sheen. Too bad it is destined to remain a monument to your visit."
+string_16: "shipHull"		 ; special
+string_17: "hatchway"
+string_18: "This is the entry way to the pod."
+string_19: "doorway"		 ; special
+string_20: "ridge's edge"
+string_21: "Your highly-honed preservation instincts tell you that going near the edge would be disasterous."
+string_22: "ridgeEdge"		 ; special
+string_23: "pod's windshield"
+string_24: "windshield"		 ; special
+string_25: "pod's engines"
+string_26: "The engines seem to have performed their jobs well. They will now stand silent for eternity."
+string_27: "engines"		 ; special
+string_28: "rocks"		 ; special
+string_29: "The rocks lying on the ground here are made of crumbling sandstone."
+string_30: "ridge"		 ; special
+string_31: "This ridge of sand helped stop the pod."
+string_32: "mountains"		 ; special
+string_33: "In the distance rises a unique formation of mountains. They look to be hundreds of kilometers away."
+string_34: "exitShip"		 ; special
+string_35: "getGlass"		 ; special
+string_36: "getKit"		 ; special
+string_37: "walkAwayFromEdge"		 ; special
+string_38: "grellYells"		 ; special
+string_unused_39: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 76
+0x2d, 0x35, 0x3d, 0x45, 0x4d, 0x55, 0x5d, 0x65, 0x17e, 0x19a, 0x1bb, 0x1f1, 0x207, 0x21d, 0x22a, 0x25d, 0x285, 0x2a6, 0x2f2, 0x306, 0x316, 0x35d, 0x374, 0x388, 0x398, 0x3ef, 0x418, 0x42c, 0x43c, 0x486, 0x4fd, 0x526, 0x53a, 0x54a, 0x5ce, 0x5e2, 0x5f2, 0x63a, 0x64e, 0x65e, 0x6a6, 0x6ba, 0x6ca, 0x73c, 0x750, 0x7c0, 0x7d4, 0x7e4, 0x844, 0x858, 0x868, 0x8b0, 0x8c4, 0x8d4, 0x91c, 0x930, 0x940, 0x962, 0x991, 0x9a7, 0x9ab, 0xa08, 0xa85, 0xae2, 0xb62, 0xbc2, 0xc54, 0xca5, 0xcca, 0xceb, 0xd07, 0xd1e, 0xd32, 0xd50, 0xd6e, 0xdb2

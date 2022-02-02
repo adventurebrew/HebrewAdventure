@@ -1,0 +1,1352 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+code_42  ; lsp
+code_61  ; lsp
+code_91  ; link
+code_124  ; link
+code_157  ; lsp
+code_221  ; link
+code_264  ; push2
+code_279  ; lsp
+
+.CODE
+; exported
+code_42:
+		lsp	0x1
+		ldi	0x00
+		lt?	
+		bnt	code_55
+		ldi	0xff
+		jmp	code_60
+code_55:
+		lsp	0x1
+		ldi	0x00
+		gt?	
+code_60:
+		ret	
+
+; exported
+code_61:
+		lsp	0x1
+		lsp	0x2
+		lsp	0x1
+		lap	0x2
+		div	
+		mul	
+		sub	
+		sap	0x1
+		push	
+		ldi	0x00
+		lt?	
+		bnt	code_88
+		lsp	0x1
+		lap	0x2
+		add	
+		sap	0x1
+code_88:
+		lap	0x1
+		ret	
+
+; exported
+code_91:
+		link	0x01
+		lsp	0x0
+		ldi	0x01
+		eq?	
+		bt	code_113
+		lsp	0x1
+		push0	
+		rest	0x2
+		call	code_91, 0
+		sat	0x0
+		lt?	
+code_113:
+		bnt	code_121
+		lap	0x1
+		jmp	code_123
+code_121:
+		lat	0x0
+code_123:
+		ret	
+
+; exported
+code_124:
+		link	0x01
+		lsp	0x0
+		ldi	0x01
+		eq?	
+		bt	code_146
+		lsp	0x1
+		push0	
+		rest	0x2
+		call	code_124, 0
+		sat	0x0
+		gt?	
+code_146:
+		bnt	code_154
+		lap	0x1
+		jmp	code_156
+code_154:
+		lat	0x0
+code_156:
+		ret	
+
+; exported
+code_157:
+		lsp	0x1
+		lsp	0x0
+		ldi	0x06
+		lt?	
+		bnt	code_177
+		pushi	0x04
+		push0	
+		lap	0x5
+		send	0x4
+		jmp	code_179
+code_177:
+		lap	0x5
+code_179:
+		le?	
+		bnt	code_220
+		pprev	
+		lap	0x3
+		le?	
+		bnt	code_220
+		lsp	0x2
+		lsp	0x0
+		ldi	0x06
+		lt?	
+		bnt	code_210
+		pushi	0x03
+		push0	
+		lap	0x5
+		send	0x4
+		jmp	code_212
+code_210:
+		lap	0x6
+code_212:
+		le?	
+		bnt	code_220
+		pprev	
+		lap	0x4
+		le?	
+code_220:
+		ret	
+
+; exported
+code_221:
+		link	0x01
+		ldi	0x00
+		sat	0x0
+code_227:
+		lst	0x0
+		lsp	0x0
+		ldi	0x01
+		sub	
+		lt?	
+		bnt	code_261
+		lsp	0x1
+		lat	0x0
+		lapi	0x2
+		eq?	
+		bnt	code_256
+		lap	0x1
+		bt	code_255
+		ldi	0x01
+code_255:
+		ret	
+
+code_256:
+		+at	0x0
+		jmp	code_227
+code_261:
+		ldi	0x00
+		ret	
+
+; exported
+code_264:
+		push2	
+		pushi	0x05
+		lsp	0x1
+		push2	
+		lap	0x2
+		mul	
+		add	
+		push	
+		callk	0x72, 0x4
+		ret	
+
+; exported
+code_279:
+		lsp	0x2
+		push0	
+		rest	0x3
+		lap	0x1
+		send	0x4
+		ret	
+
+Obj::106:
+		push1	
+		pushSelf	
+		callk	0x4, 0x2
+		ret	
+
+Obj::107:
+		ret	
+
+Obj::60:
+		selfID	
+		ret	
+
+Obj::108:
+		push1	
+		pushSelf	
+		callk	0x5, 0x2
+		ret	
+
+Obj::109:
+		push2	
+		lsp	0x1
+		pTos	0x6
+		callk	0x47, 0x4
+		ret	
+
+Obj::110:
+		link	0xc8
+		push1	
+		pushi	0x6d
+		push1	
+		lea	0x4, 0x0
+		push	
+		self	0x6
+		push	
+		calle	0xff, 0x00, 0x02
+		ret	
+
+Obj::99:
+		pushi	0x3c
+		push1	
+		pushSelf	
+		rest	0x2
+		lap	0x1
+		send	0x6
+		ret	
+
+Obj::113:
+		push2	
+		pushSelf	
+		lsp	0x1
+		callk	0x7, 0x4
+		ret	
+
+Obj::112:
+		push2	
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x8000
+		and	
+		bnt	code_383
+		pTos	0x4
+		ldi	0x8000
+		and	
+		not	
+		bnt	code_383
+		pTos	0x0
+		push0	
+		push0	
+		lap	0x1
+		send	0x4
+		eq?	
+code_383:
+		ret	
+
+Obj::111:
+		link	0x01
+		push1	
+		push0	
+		self	0x4
+		sat	0x0
+		pTos	0x0
+		push0	
+		push0	
+		lap	0x1
+		send	0x4
+		eq?	
+		bt	code_422
+		push1	
+		lst	0x0
+		callk	0x6, 0x2
+		bnt	code_422
+		pushi	0x6f
+		push1	
+		lsp	0x1
+		lat	0x0
+		send	0x6
+code_422:
+		ret	
+
+Obj::114:
+		selfID	
+		ret	
+
+		bnot	
+
+.CLASS Obj of 0xffff
+Function area offset: 0x12
+Selectors [4]:
+  [0x0] = 0x0
+  [0x1] = 0xffff
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Obj', 'id': 'string_0'}
+Overriden functions: 11
+  [0x6a]  = Obj::106   	 ; @0x121
+  [0x6b]  = Obj::107   	 ; @0x127
+  [0x3c]  = Obj::60   	 ; @0x128
+  [0x6c]  = Obj::108   	 ; @0x12a
+  [0x6d]  = Obj::109   	 ; @0x130
+  [0x6e]  = Obj::110   	 ; @0x139
+  [0x63]  = Obj::99   	 ; @0x14b
+  [0x6f]  = Obj::111   	 ; @0x180
+  [0x70]  = Obj::112   	 ; @0x15e
+  [0x71]  = Obj::113   	 ; @0x156
+  [0x72]  = Obj::114   	 ; @0x1a7
+
+.CODE
+Code::60:
+		ret	
+
+		bnot	
+
+.CLASS Code of 0x0
+Function area offset: 0x12
+Selectors [4]:
+  [0x0] = 0x1
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Code', 'id': 'string_1'}
+Overriden functions: 1
+  [0x3c]  = Code::60   	 ; @0x1fa
+
+.CODE
+Collect::60:
+		pushi	0x74
+		push1	
+		pushi	0x3c
+		rest	0x1
+		self	0x6
+		ret	
+
+Collect::109:
+		pushi	0x05
+		lsp	0x1
+		pushi	0x03e7
+		push0	
+		pTos	0x6
+		pTos	0xa
+		callk	0x48, 0xa
+		ret	
+
+Collect::110:
+		link	0x28
+		push1	
+		pushi	0x6d
+		push1	
+		lea	0x4, 0x0
+		push	
+		self	0x6
+		push	
+		calle	0xff, 0x00, 0x02
+		pushi	0x74
+		push1	
+		pushi	0x6e
+		self	0x6
+		ret	
+
+Collect::115:
+		link	0x03
+		pToa	0x8
+		not	
+		bnt	code_613
+		push0	
+		callk	0x2e, 0x0
+		aTop	0x8
+code_613:
+		ldi	0x00
+		sat	0x1
+code_617:
+		lst	0x1
+		lap	0x0
+		lt?	
+		bnt	code_649
+		push2	
+		pTos	0x8
+		push2	
+		lat	0x1
+		lspi	0x1
+		lspi	0x1
+		callk	0x30, 0x4
+		push	
+		callk	0x39, 0x4
+		ipToa	0xa
+		+at	0x1
+		jmp	code_617
+code_649:
+		selfID	
+		ret	
+
+Collect::84:
+		link	0x01
+		ldi	0x00
+		sat	0x0
+code_657:
+		lst	0x0
+		lap	0x0
+		lt?	
+		bnt	code_685
+		push2	
+		pTos	0x8
+		lat	0x0
+		lspi	0x1
+		callk	0x3b, 0x4
+		bnt	code_680
+		dpToa	0xa
+code_680:
+		+at	0x0
+		jmp	code_657
+code_685:
+		selfID	
+		ret	
+
+Collect::108:
+		pToa	0x8
+		bnt	code_705
+		pushi	0x74
+		push1	
+		pushi	0x6c
+		self	0x6
+		push1	
+		pTos	0x8
+		callk	0x2f, 0x2
+code_705:
+		ldi	0x00
+		aTop	0x8
+		aTop	0xa
+		pushi	0x6c
+		push0	
+		super	0x0, 0x4
+		ret	
+
+Collect::121:
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		ret	
+
+Collect::68:
+		push1	
+		lsp	0x1
+		callk	0x34, 0x2
+		ret	
+
+Collect::120:
+		pTos	0x8
+		ldi	0x00
+		eq?	
+		bt	code_746
+		push1	
+		pTos	0x8
+		callk	0x33, 0x2
+code_746:
+		ret	
+
+Collect::119:
+		push2	
+		pTos	0x8
+		lsp	0x1
+		callk	0x3a, 0x4
+		ret	
+
+Collect::116:
+		link	0x03
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x0
+code_766:
+		lat	0x0
+		bnt	code_812
+		push1	
+		push	
+		callk	0x34, 0x2
+		sat	0x1
+		push1	
+		push1	
+		lst	0x0
+		callk	0x36, 0x2
+		sat	0x2
+		push	
+		callk	0x6, 0x2
+		not	
+		bnt	code_796
+		ret	
+
+code_796:
+		lsp	0x1
+		push0	
+		rest	0x2
+		lat	0x2
+		send	0x4
+		lat	0x1
+		sat	0x0
+		jmp	code_766
+code_812:
+		ret	
+
+Collect::117:
+		link	0x03
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x0
+code_823:
+		lat	0x0
+		bnt	code_863
+		push1	
+		push	
+		callk	0x34, 0x2
+		sat	0x1
+		push1	
+		lst	0x0
+		callk	0x36, 0x2
+		sat	0x2
+		lsp	0x1
+		push0	
+		rest	0x2
+		send	0x4
+		bnt	code_856
+		lat	0x2
+		ret	
+
+code_856:
+		lat	0x1
+		sat	0x0
+		jmp	code_823
+code_863:
+		ldi	0x00
+		ret	
+
+Collect::118:
+		link	0x03
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x0
+code_876:
+		lat	0x0
+		bnt	code_917
+		push1	
+		push	
+		callk	0x34, 0x2
+		sat	0x1
+		push1	
+		lst	0x0
+		callk	0x36, 0x2
+		sat	0x2
+		lsp	0x1
+		push0	
+		rest	0x2
+		send	0x4
+		not	
+		bnt	code_910
+		ldi	0x00
+		ret	
+
+code_910:
+		lat	0x1
+		sat	0x0
+		jmp	code_876
+code_917:
+		ldi	0x01
+		ret	
+
+Collect::122:
+		link	0x02
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x0
+code_930:
+		lat	0x0
+		bnt	code_961
+		push1	
+		push	
+		callk	0x34, 0x2
+		sat	0x1
+		pushi	0x54
+		push1	
+		push1	
+		lst	0x0
+		callk	0x36, 0x2
+		push	
+		self	0x6
+		lat	0x1
+		sat	0x0
+		jmp	code_930
+code_961:
+		ret	
+
+
+.CLASS Collect of 0x0
+Function area offset: 0x1a
+Selectors [6]:
+  [0x0] = 0x2
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Collect', 'id': 'string_2'}
+  [0x1b] = 0x0
+  [0x59] = 0x0
+Overriden functions: 14
+  [0x3c]  = Collect::60   	 ; @0x224
+  [0x6c]  = Collect::108   	 ; @0x2af
+  [0x6d]  = Collect::109   	 ; @0x22e
+  [0x6e]  = Collect::110   	 ; @0x23e
+  [0x73]  = Collect::115   	 ; @0x257
+  [0x54]  = Collect::84   	 ; @0x28b
+  [0x74]  = Collect::116   	 ; @0x2f4
+  [0x75]  = Collect::117   	 ; @0x32d
+  [0x76]  = Collect::118   	 ; @0x362
+  [0x77]  = Collect::119   	 ; @0x2eb
+  [0x78]  = Collect::120   	 ; @0x2dc
+  [0x79]  = Collect::121   	 ; @0x2ce
+  [0x44]  = Collect::68   	 ; @0x2d5
+  [0x7a]  = Collect::122   	 ; @0x398
+
+.CODE
+List::109:
+		pushi	0x05
+		lsp	0x1
+		pushi	0x03e7
+		push1	
+		pTos	0x6
+		pTos	0xa
+		callk	0x48, 0xa
+		ret	
+
+List::67:
+		link	0x01
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x0
+code_1088:
+		lap	0x1
+		bnt	code_1111
+		lat	0x0
+		bnt	code_1111
+		-ap	0x1
+		push1	
+		lst	0x0
+		callk	0x34, 0x2
+		sat	0x0
+		jmp	code_1088
+code_1111:
+		lat	0x0
+		bnt	code_1124
+		push1	
+		push	
+		callk	0x36, 0x2
+		jmp	code_1126
+code_1124:
+		ldi	0x00
+code_1126:
+		ret	
+
+List::123:
+		push1	
+		pTos	0x8
+		callk	0x32, 0x2
+		ret	
+
+List::124:
+		push1	
+		lsp	0x1
+		callk	0x35, 0x2
+		ret	
+
+List::125:
+		link	0x01
+		pToa	0x8
+		not	
+		bnt	code_1155
+		push0	
+		callk	0x2e, 0x0
+		aTop	0x8
+code_1155:
+		lsp	0x0
+		ldi	0x01
+		sub	
+		sat	0x0
+code_1162:
+		push0	
+		lat	0x0
+		le?	
+		bnt	code_1193
+		push2	
+		pTos	0x8
+		push2	
+		lat	0x0
+		lspi	0x1
+		lspi	0x1
+		callk	0x30, 0x4
+		push	
+		callk	0x38, 0x4
+		ipToa	0xa
+		-at	0x0
+		jmp	code_1162
+code_1193:
+		selfID	
+		ret	
+
+List::126:
+		link	0x01
+		pToa	0x8
+		not	
+		bnt	code_1209
+		push0	
+		callk	0x2e, 0x0
+		aTop	0x8
+code_1209:
+		ldi	0x00
+		sat	0x0
+code_1213:
+		lst	0x0
+		lap	0x0
+		lt?	
+		bnt	code_1245
+		push2	
+		pTos	0x8
+		push2	
+		lat	0x0
+		lspi	0x1
+		lspi	0x1
+		callk	0x30, 0x4
+		push	
+		callk	0x39, 0x4
+		ipToa	0xa
+		+at	0x0
+		jmp	code_1213
+code_1245:
+		selfID	
+		ret	
+
+List::127:
+		link	0x03
+		push2	
+		pTos	0x8
+		lsp	0x1
+		callk	0x3a, 0x4
+		sat	0x2
+		bnt	code_1305
+		-ap	0x0
+		ldi	0x00
+		sat	0x0
+code_1268:
+		lst	0x0
+		lap	0x0
+		lt?	
+		bnt	code_1305
+		pushi	0x03
+		pTos	0x8
+		lst	0x2
+		push2	
+		lat	0x0
+		lspi	0x2
+		lspi	0x2
+		callk	0x30, 0x4
+		push	
+		callk	0x37, 0x6
+		sat	0x2
+		ipToa	0xa
+		+at	0x0
+		jmp	code_1268
+code_1305:
+		selfID	
+		ret	
+
+List::128:
+		link	0x02
+		ldi	0x00
+		sat	0x0
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x1
+code_1321:
+		lat	0x1
+		bnt	code_1353
+		lsp	0x1
+		push1	
+		push	
+		callk	0x36, 0x2
+		eq?	
+		bnt	code_1340
+		lat	0x0
+		ret	
+
+code_1340:
+		+at	0x0
+		push1	
+		lst	0x1
+		callk	0x34, 0x2
+		sat	0x1
+		jmp	code_1321
+code_1353:
+		ldi	0xff
+		ret	
+
+
+.CLASS List of 0x2
+Function area offset: 0x1a
+Selectors [6]:
+  [0x0] = 0x3
+  [0x1] = 0x2
+  [0x2] = 0x8000
+  [0x17] = {'val': 'List', 'id': 'string_3'}
+  [0x1b] = 0x0
+  [0x59] = 0x0
+Overriden functions: 8
+  [0x6d]  = List::109   	 ; @0x426
+  [0x43]  = List::67   	 ; @0x436
+  [0x7b]  = List::123   	 ; @0x467
+  [0x7c]  = List::124   	 ; @0x46e
+  [0x7d]  = List::125   	 ; @0x475
+  [0x7e]  = List::126   	 ; @0x4ab
+  [0x7f]  = List::127   	 ; @0x4df
+  [0x80]  = List::128   	 ; @0x51b
+
+.CODE
+Set::109:
+		pushi	0x05
+		lsp	0x1
+		pushi	0x03e7
+		push2	
+		pTos	0x6
+		pTos	0xa
+		callk	0x48, 0xa
+		ret	
+
+Set::115:
+		link	0x03
+		pToa	0x8
+		not	
+		bnt	code_1462
+		push0	
+		callk	0x2e, 0x0
+		aTop	0x8
+code_1462:
+		ldi	0x00
+		sat	0x1
+code_1466:
+		lst	0x1
+		lap	0x0
+		lt?	
+		bnt	code_1511
+		lat	0x1
+		lapi	0x1
+		sat	0x2
+		pushi	0x77
+		push1	
+		push	
+		self	0x6
+		not	
+		bnt	code_1506
+		push2	
+		pTos	0x8
+		push2	
+		lst	0x2
+		dup	
+		callk	0x30, 0x4
+		push	
+		callk	0x39, 0x4
+		ipToa	0xa
+code_1506:
+		+at	0x1
+		jmp	code_1466
+code_1511:
+		ret	
+
+
+.CLASS Set of 0x3
+Function area offset: 0x1a
+Selectors [6]:
+  [0x0] = 0x4
+  [0x1] = 0x3
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Set', 'id': 'string_4'}
+  [0x1b] = 0x0
+  [0x59] = 0x0
+Overriden functions: 2
+  [0x6d]  = Set::109   	 ; @0x598
+  [0x73]  = Set::115   	 ; @0x5a8
+
+.CODE
+EventHandler::129:
+		link	0x03
+		push1	
+		pTos	0x8
+		callk	0x31, 0x2
+		sat	0x0
+code_1574:
+		lat	0x0
+		bnt	code_1632
+		pushi	0x4c
+		push0	
+		lap	0x1
+		send	0x4
+		not	
+		bnt	code_1632
+		push1	
+		lst	0x0
+		callk	0x34, 0x2
+		sat	0x1
+		push1	
+		push1	
+		lst	0x0
+		callk	0x36, 0x2
+		sat	0x2
+		push	
+		callk	0x6, 0x2
+		not	
+		bt	code_1632
+		pushi	0x0081
+		push1	
+		lsp	0x1
+		lat	0x2
+		send	0x6
+		lat	0x1
+		sat	0x0
+		jmp	code_1574
+code_1632:
+		pushi	0x4c
+		push0	
+		lap	0x1
+		send	0x4
+		ret	
+
+
+.CLASS EventHandler of 0x4
+Function area offset: 0x1a
+Selectors [6]:
+  [0x0] = 0x5
+  [0x1] = 0x4
+  [0x2] = 0x8000
+  [0x17] = {'val': 'EventHandler', 'id': 'string_5'}
+  [0x1b] = 0x0
+  [0x59] = 0x0
+Overriden functions: 1
+  [0x81]  = EventHandler::129   	 ; @0x61c
+
+.CODE
+Script::60:
+		link	0x01
+		pToa	0x1c
+		bnt	code_1700
+		pushi	0x3c
+		push0	
+		send	0x4
+code_1700:
+		pToa	0x10
+		bnt	code_1720
+		dpToa	0x10
+		not	
+		bnt	code_1793
+		pushi	0x008b
+		push0	
+		self	0x4
+		jmp	code_1793
+code_1720:
+		pToa	0x12
+		bnt	code_1757
+		push1	
+		push1	
+		callk	0x42, 0x2
+		sat	0x0
+		pTos	0x14
+		ne?	
+		bnt	code_1793
+		lat	0x0
+		aTop	0x14
+		dpToa	0x12
+		not	
+		bnt	code_1793
+		pushi	0x008b
+		push0	
+		self	0x4
+		jmp	code_1793
+code_1757:
+		pToa	0x16
+		bnt	code_1793
+		push	
+		push1	
+		lsg	0x58
+		pToa	0x18
+		sub	
+		push	
+		callk	0x3d, 0x2
+		sub	
+		aTop	0x16
+		push	
+		ldi	0x00
+		le?	
+		bnt	code_1793
+		ldi	0x00
+		aTop	0x16
+		pushi	0x008b
+		push0	
+		self	0x4
+code_1793:
+		lag	0x58
+		aTop	0x18
+		ret	
+
+Script::107:
+		lsp	0x0
+		ldi	0x01
+		ge?	
+		bnt	code_1841
+		pushi	0x0088
+		push1	
+		pushSelf	
+		lap	0x1
+		aTop	0x8
+		send	0x6
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_1841
+		lap	0x2
+		aTop	0x1e
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_1841
+		lap	0x3
+		aTop	0x1a
+code_1841:
+		pushi	0x008a
+		push1	
+		pTos	0xc
+		self	0x6
+		ret	
+
+Script::108:
+		link	0x01
+		push1	
+		pTos	0x1c
+		callk	0x6, 0x2
+		bnt	code_1868
+		pushi	0x6c
+		push0	
+		pToa	0x1c
+		send	0x4
+code_1868:
+		push1	
+		pTos	0xe
+		callk	0x6, 0x2
+		bnt	code_1884
+		pushi	0x6c
+		push0	
+		pToa	0xe
+		send	0x4
+code_1884:
+		push1	
+		pTos	0x8
+		callk	0x6, 0x2
+		bnt	code_1966
+		pushi	0x0088
+		push1	
+		push1	
+		pTos	0x20
+		callk	0x6, 0x2
+		bnt	code_1911
+		pToa	0x20
+		jmp	code_1921
+code_1911:
+		pToa	0x20
+		bnt	code_1921
+		push1	
+		push	
+		callk	0x2, 0x2
+code_1921:
+		sat	0x0
+		push	
+		pToa	0x8
+		send	0x6
+		lat	0x0
+		not	
+		bnt	code_1939
+		ldi	0x00
+		jmp	code_1966
+code_1939:
+		lsg	0xd
+		lag	0xb
+		eq?	
+		bnt	code_1959
+		pushi	0x6b
+		push1	
+		pTos	0x8
+		lat	0x0
+		send	0x6
+		jmp	code_1966
+code_1959:
+		pushi	0x6c
+		push0	
+		lat	0x0
+		send	0x4
+code_1966:
+		push1	
+		pTos	0x1e
+		callk	0x6, 0x2
+		bnt	code_1993
+		lsg	0xd
+		lag	0xb
+		eq?	
+		bnt	code_1993
+		pushi	0x008b
+		push1	
+		pTos	0x1a
+		pToa	0x1e
+		send	0x6
+code_1993:
+		ldi	0x00
+		aTop	0x1e
+		aTop	0x20
+		aTop	0x8
+		aTop	0xe
+		aTop	0x1c
+		pushi	0x6c
+		push0	
+		super	0x0, 0x4
+		ret	
+
+Script::138:
+		lap	0x1
+		aTop	0xa
+		ret	
+
+Script::139:
+		pToa	0x8
+		bnt	code_2036
+		pushi	0x008a
+		push1	
+		pTos	0xa
+		ldi	0x01
+		add	
+		push	
+		rest	0x1
+		self	0x6
+code_2036:
+		ret	
+
+Script::140:
+		push1	
+		pTos	0x1c
+		callk	0x6, 0x2
+		bnt	code_2053
+		pushi	0x6c
+		push0	
+		pToa	0x1c
+		send	0x4
+code_2053:
+		lap	0x1
+		bnt	code_2066
+		pushi	0x6b
+		push1	
+		pushSelf	
+		rest	0x2
+		send	0x6
+code_2066:
+		ret	
+
+Script::129:
+		pToa	0x1c
+		bnt	code_2080
+		pushi	0x0081
+		push1	
+		lsp	0x1
+		send	0x6
+code_2080:
+		pushi	0x4c
+		push0	
+		lap	0x1
+		send	0x4
+		ret	
+
+
+.CLASS Script of 0x0
+Function area offset: 0x46
+Selectors [17]:
+  [0x0] = 0x6
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Script', 'id': 'string_6'}
+  [0x2d] = 0x0
+  [0x20] = 0xffff
+  [0x82] = 0x0
+  [0x83] = 0x0
+  [0x84] = 0x0
+  [0x85] = 0x0
+  [0x86] = 0x0
+  [0x1fb] = 0x0
+  [0x200] = 0x0
+  [0x87] = 0x0
+  [0x88] = 0x0
+  [0x89] = 0x0
+  [0x44] = 0x0
+Overriden functions: 7
+  [0x6b]  = Script::107   	 ; @0x706
+  [0x3c]  = Script::60   	 ; @0x698
+  [0x6c]  = Script::108   	 ; @0x73a
+  [0x8a]  = Script::138   	 ; @0x7dc
+  [0x8b]  = Script::139   	 ; @0x7e1
+  [0x81]  = Script::129   	 ; @0x813
+  [0x8c]  = Script::140   	 ; @0x7f5
+
+.CODE
+Event::106:
+		link	0x01
+		pushi	0x6a
+		push0	
+		super	0x0, 0x4
+		sat	0x0
+		push2	
+		lap	0x0
+		bnt	code_2225
+		lap	0x1
+		jmp	code_2228
+code_2225:
+		ldi	0x7fff
+code_2228:
+		push	
+		lst	0x0
+		callk	0x1c, 0x4
+		lat	0x0
+		ret	
+
+Event::142:
+		link	0x01
+		pTos	0x8
+		ldi	0x4000
+		ne?	
+		bnt	code_2302
+		push0	
+		callk	0x14, 0x0
+		sat	0x0
+		pToa	0x14
+		not	
+		bnt	code_2268
+		push1	
+		pushSelf	
+		callk	0x1d, 0x2
+		jmp	code_2298
+code_2268:
+		pTos	0x14
+		lat	0x0
+		ne?	
+		bnt	code_2298
+		push1	
+		pTos	0x14
+		callk	0x15, 0x2
+		push1	
+		pushSelf	
+		callk	0x1e, 0x2
+		push1	
+		lst	0x0
+		callk	0x15, 0x2
+		push1	
+		pushSelf	
+		callk	0x1d, 0x2
+code_2298:
+		lat	0x0
+		aTop	0x14
+code_2302:
+		selfID	
+		ret	
+
+Event::143:
+		link	0x01
+		pTos	0x8
+		ldi	0x4000
+		ne?	
+		bnt	code_2360
+		push0	
+		callk	0x14, 0x0
+		sat	0x0
+		pTos	0x14
+		eq?	
+		bnt	code_2335
+		push1	
+		pushSelf	
+		callk	0x1e, 0x2
+		jmp	code_2356
+code_2335:
+		pToa	0x14
+		bnt	code_2356
+		push1	
+		push	
+		callk	0x15, 0x2
+		push1	
+		pushSelf	
+		callk	0x1e, 0x2
+		push1	
+		lst	0x0
+		callk	0x15, 0x2
+code_2356:
+		ldi	0x00
+		aTop	0x14
+code_2360:
+		selfID	
+		ret	
+
+
+.CLASS Event of 0x0
+Function area offset: 0x2e
+Selectors [11]:
+  [0x0] = 0x7
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Event', 'id': 'string_7'}
+  [0x22] = 0x0
+  [0x28] = 0x0
+  [0x40] = 0x0
+  [0x3] = 0x0
+  [0x4] = 0x0
+  [0x4c] = 0x0
+  [0x8d] = 0x0
+Overriden functions: 3
+  [0x6a]  = Event::106   	 ; @0x89c
+  [0x8e]  = Event::142   	 ; @0x8bd
+  [0x8f]  = Event::143   	 ; @0x900
+
+.STRINGS
+string_0: "Obj"		 ; special
+string_1: "Code"		 ; special
+string_2: "Collect"		 ; special
+string_3: "List"		 ; special
+string_4: "Set"		 ; special
+string_5: "EventHandler"		 ; special
+string_6: "Script"		 ; special
+string_7: "Event"		 ; special
+string_unused_8: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 8
+0x1bc, 0x20e, 0x3d4, 0x55e, 0x5fa, 0x67a, 0x83a, 0x94c

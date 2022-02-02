@@ -1,0 +1,113 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+Osc::107:
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_28
+		lap	0x2
+		aTop	0x12
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_28
+		lap	0x3
+		aTop	0xa
+code_28:
+		pushi	0x6b
+		push1	
+		lsp	0x1
+		super	0x16, 0x6
+		ret	
+
+Osc::60:
+		link	0x01
+		pushi	0x00d6
+		push0	
+		self	0x4
+		sat	0x0
+		push	
+		pushi	0x00db
+		push0	
+		pToa	0x8
+		send	0x4
+		gt?	
+		bt	code_65
+		lst	0x0
+		ldi	0x00
+		lt?	
+code_65:
+		bnt	code_82
+		pToa	0xc
+		neg	
+		aTop	0xc
+		pushi	0x00d7
+		push0	
+		self	0x4
+		jmp	code_91
+code_82:
+		pushi	0x07
+		push1	
+		lst	0x0
+		pToa	0x8
+		send	0x6
+code_91:
+		ret	
+
+Osc::215:
+		pToa	0x12
+		bnt	code_124
+		pushi	0x07
+		push1	
+		pushi	0x00d6
+		push0	
+		self	0x4
+		push	
+		pToa	0x8
+		send	0x6
+		pTos	0x12
+		ldi	0x00
+		gt?	
+		bnt	code_134
+		dpToa	0x12
+		jmp	code_134
+code_124:
+		ldi	0x01
+		aTop	0x10
+		pushi	0x00d8
+		push0	
+		self	0x4
+code_134:
+		ret	
+
+		bnot	
+
+.CLASS Osc of 0x16
+Function area offset: 0x2a
+Selectors [10]:
+  [0x0] = 0x5f
+  [0x1] = 0x16
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Osc', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x1bc] = 0xffff
+Overriden functions: 3
+  [0x6b]  = Osc::107   	 ; @0x4
+  [0x3c]  = Osc::60   	 ; @0x25
+  [0xd7]  = Osc::215   	 ; @0x5c
+
+.STRINGS
+string_0: "Osc"		 ; special
+string_unused_1: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x9a

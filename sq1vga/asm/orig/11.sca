@@ -1,0 +1,2603 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm11 of 0x43
+
+.CODE
+rm11::107:
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x09
+		pushi	0x6f
+		calle	0x03be, 0x0000, 0x06
+		ldi	0x02
+		sag	0xa6
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		not	
+		bnt	code_67
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	helmet
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	spaceSuit
+		send	0x8
+code_67:
+		pushi	0x6b
+		push0	
+		lofsa	drawerFeature
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	drawerButton
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	BayButton
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	controlPanel
+		send	0x4
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	control
+		send	0xa
+		push1	
+		pushi	0x0a
+		callb	0x6, 0x2
+		bnt	code_135
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	lights
+		send	0x6
+code_135:
+		pushi	0x6b
+		push0	
+		lofsa	lights
+		send	0x4
+		push2	
+		pushi	0x0229
+		pushi	0x0080
+		calle	0x02bc, 0x0001, 0x04
+		bnt	code_208
+		pushi	0x6b
+		push0	
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		pushi	0x06
+		pushi	0x011b
+		push0	
+		lofsa	closetDoor
+		send	0x14
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		lofsa	helmet
+		send	0x8
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		lofsa	spaceSuit
+		send	0x8
+		jmp	code_220
+code_208:
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	closetDoor
+		send	0x8
+code_220:
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	drawer
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x011e
+		push1	
+		pushi	0x00db
+		push0	
+		lofsa	bigRedDoor
+		send	0x4
+		push	
+		pushi	0x0117
+		push1	
+		pushi	0x03
+		lofsa	bigRedDoor
+		send	0x10
+		pushi	0x0187
+		push1	
+		pushi	0x02bc
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x42
+		pushi	0x04
+		pushi	0x64
+		pushi	0x16
+		pushi	0x64
+		pushi	0x16
+		pushi	0x71
+		pushi	0x04
+		pushi	0x73
+		pushi	0x04
+		pushi	0x7e
+		pushi	0x0e
+		pushi	0x0096
+		pushi	0x3a
+		pushi	0x00b3
+		pushi	0x5d
+		pushi	0x00bb
+		pushi	0x00ac
+		pushi	0x00bb
+		pushi	0x0126
+		pushi	0x0096
+		pushi	0x0121
+		pushi	0x0087
+		pushi	0x00ff
+		pushi	0x7e
+		pushi	0x00da
+		pushi	0x6b
+		pushi	0x00c2
+		pushi	0x68
+		pushi	0x00c3
+		pushi	0x5c
+		pushi	0x00da
+		pushi	0x54
+		pushi	0x00ad
+		pushi	0x4c
+		pushi	0x7f
+		pushi	0x59
+		pushi	0x79
+		pushi	0x56
+		pushi	0x4e
+		pushi	0x61
+		pushi	0x62
+		pushi	0x69
+		pushi	0x48
+		pushi	0x70
+		pushi	0x38
+		pushi	0x6c
+		pushi	0x30
+		pushi	0x70
+		pushi	0x26
+		pushi	0x72
+		pushi	0x23
+		pushi	0x62
+		pushi	0x06
+		pushi	0x62
+		pushi	0x06
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		push0	
+		push0	
+		pushi	0x04
+		push0	
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x92
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0e
+		pushi	0x5b
+		pushi	0x00a2
+		pushi	0x59
+		pushi	0x009c
+		pushi	0x74
+		pushi	0x0093
+		pushi	0x00a4
+		pushi	0x00aa
+		pushi	0x00a1
+		pushi	0x00b2
+		pushi	0x0091
+		pushi	0x00b7
+		pushi	0x0083
+		pushi	0x00b7
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x2a
+		push	
+		self	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x12
+		push1	
+		push0	
+		lag	0x0
+		send	0xa
+		pushi	0x6b
+		push0	
+		super	0x43, 0x4
+		lsg	0xc
+		ldi	0x0c
+		eq?	
+		bnt	code_538
+		push0	
+		callb	0x2, 0x0
+		pushi	0x008c
+		push1	
+		lofsa	enterFromHanger
+		push	
+		self	0x6
+code_538:
+		pushi	0x020c
+		push1	
+		lsg	0xc
+		ldi	0x0c
+		ne?	
+		bnt	code_555
+		ldi	0x01
+		jmp	code_557
+code_555:
+		ldi	0x00
+code_557:
+		push	
+		pushi	0x020a
+		push1	
+		lofsa	doorLight
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0x07
+		pushi	0x0208
+		push1	
+		pushi	0x0a
+		lofsa	elevatorDoor
+		send	0x1c
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0163
+		ne?	
+		bnt	code_618
+		pushi	0x2b
+		push1	
+		pushi	0x0143
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+code_618:
+		ret	
+
+rm11::108:
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0163
+		ne?	
+		bnt	code_646
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0xa
+code_646:
+		pushi	0x6c
+		push0	
+		super	0x43, 0x4
+		ret	
+
+rm11::60:
+		pToa	0x8
+		bnt	code_663
+		ldi	0x00
+		jmp	code_684
+code_663:
+		pushi	0x021a
+		push0	
+		lofsa	elevatorDoor
+		send	0x4
+		bnt	code_684
+		pushi	0x00b3
+		push0	
+		lofsa	elevatorDoor
+		send	0x4
+code_684:
+		pushi	0x3c
+		push0	
+		super	0x43, 0x4
+		ret	
+
+rm11::380:
+		lsg	0xc
+		ldi	0x0a
+		eq?	
+		bnt	code_703
+		push0	
+		callb	0x2, 0x0
+code_703:
+		ret	
+
+
+.OBJECT rm11 of 0x43
+Exported
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x43
+  [#1] = 0x43
+  [#2] = 0x0
+  [#3] = {'val': 'rm11', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is the airlock of the Arcada.', 'id': 'string_0'}
+  [#10] = 0xb
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0xc
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+Overriden functions: 4
+  [0x6b]  = rm11::107   	 ; @0xe
+  [0x3c]  = rm11::60   	 ; @0x28d
+  [0x6c]  = rm11::108   	 ; @0x26b
+  [0x17c]  = rm11::380   	 ; @0x2b3
+
+.CODE
+putOnSpacesuit::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_849
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		eq?	
+		bnt	code_849
+		pushi	0x77
+		push1	
+		lofsa	spaceSuit
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_849
+		pushi	0x0112
+		push1	
+		pushi	0x6789
+		pushi	0x6c
+		push0	
+		lofsa	spaceSuit
+		send	0xa
+code_849:
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		eq?	
+		bnt	code_906
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x03
+		eq?	
+		bnt	code_906
+		pushi	0x77
+		push1	
+		lofsa	helmet
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_906
+		pushi	0x0112
+		push1	
+		pushi	0x6789
+		pushi	0x6c
+		push0	
+		lofsa	helmet
+		send	0xa
+code_906:
+		ret	
+
+putOnSpacesuit::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_966
+		push0	
+		callb	0x2, 0x0
+		push2	
+		push2	
+		pushi	0x0088
+		callb	0xb, 0x4
+		pushi	0x05
+		push1	
+		pushi	0x09
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_1102
+code_966:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_997
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x14
+		jmp	code_1102
+code_997:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1054
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	closetDoor
+		send	0x8
+		pushi	0x0229
+		push1	
+		pushi	0x0229
+		push0	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x4
+		push	
+		ldi	0xff7f
+		and	
+		push	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x6
+		jmp	code_1102
+code_1054:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1102
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x011b
+		push0	
+		lofsa	closetDoor
+		send	0x4
+		pushi	0x03
+		dup	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		push1	
+		pushi	0x10
+		callb	0x7, 0x2
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1102:
+		toss	
+		ret	
+
+
+.OBJECT putOnSpacesuit of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'putOnSpacesuit', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = putOnSpacesuit::60   	 ; @0x312
+  [0x8a]  = putOnSpacesuit::138   	 ; @0x38b
+
+.CODE
+leaveToHanger::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1258
+		push0	
+		callb	0x2, 0x0
+		pushi	0x01b8
+		push0	
+		pushi	0x00da
+		push0	
+		lag	0x0
+		send	0x4
+		send	0x4
+		sal	0x0
+		pushi	0x01b9
+		push0	
+		pushi	0x00da
+		push0	
+		lag	0x0
+		send	0x4
+		send	0x4
+		sal	0x1
+		pushi	0x05
+		push1	
+		pushi	0x09
+		pushi	0x00a0
+		push1	
+		lsl	0x0
+		ldi	0x00
+		eq?	
+		bnt	code_1236
+		ldi	0x06
+		jmp	code_1238
+code_1236:
+		ldi	0x07
+code_1238:
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_1577
+code_1258:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1315
+		pushi	0x2b
+		push1	
+		pushi	0x0137
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x2b
+		push1	
+		pushi	0x0142
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	bigRedDoor
+		send	0x8
+		jmp	code_1577
+code_1315:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1349
+		pushi	0x42
+		push1	
+		pushi	0x3f
+		push0	
+		lofsa	bigRedDoor
+		send	0x4
+		push	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_1577
+code_1349:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1420
+		push0	
+		callb	0x1, 0x0
+		pushi	0x42
+		push1	
+		pushi	0x3f
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		sub	
+		push	
+		lofsa	bigRedDoor
+		send	0x6
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x05
+		push1	
+		lsl	0x0
+		pushi	0x0094
+		push2	
+		class	0x56
+		push	
+		lsl	0x1
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00dc
+		pushi	0x72
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_1577
+code_1420:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1448
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0110
+		pushi	0x72
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1577
+code_1448:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1533
+		pushi	0x2b
+		push1	
+		pushi	0x0137
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x42
+		push1	
+		pushi	0xff
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	bigRedDoor
+		send	0xe
+		push1	
+		pushi	0x0a
+		callb	0x6, 0x2
+		bnt	code_1507
+		pushi	0x009d
+		push0	
+		lag	0x9a
+		send	0x4
+code_1507:
+		pushi	0x42
+		push1	
+		pushi	0xff
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0132
+		pushi	0x72
+		pushSelf	
+		lag	0x0
+		send	0x12
+		jmp	code_1577
+code_1533:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1545
+		ldi	0x00
+		jmp	code_1577
+code_1545:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1577
+		pushi	0x12
+		push1	
+		pushi	0x8000
+		pushi	0x011f
+		push1	
+		push0	
+		lag	0x0
+		send	0xc
+		pushi	0x0177
+		push1	
+		pushi	0x0c
+		lag	0x2
+		send	0x6
+code_1577:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT leaveToHanger of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'leaveToHanger', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = leaveToHanger::138   	 ; @0x48e
+
+.CODE
+enterFromHanger::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1696
+		pushi	0x011a
+		push2	
+		pushi	0x0132
+		pushi	0x72
+		pushi	0x42
+		push1	
+		pushi	0x3f
+		push0	
+		lofsa	bigRedDoor
+		send	0x4
+		push	
+		ldi	0x01
+		sub	
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0104
+		pushi	0x72
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_1825
+code_1696:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1736
+		pushi	0x2b
+		push1	
+		pushi	0x0137
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	bigRedDoor
+		send	0x8
+		jmp	code_1825
+code_1736:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1769
+		pushi	0x42
+		push1	
+		pushi	0xff
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00d5
+		pushi	0x72
+		pushSelf	
+		lag	0x0
+		send	0x12
+		jmp	code_1825
+code_1769:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1809
+		pushi	0x2b
+		push1	
+		pushi	0x0137
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	bigRedDoor
+		send	0x8
+		jmp	code_1825
+code_1809:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1825
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1825:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT enterFromHanger of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'enterFromHanger', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = enterFromHanger::138   	 ; @0x666
+
+.CODE
+openClosetDoor::60:
+		pushi	0x3c
+		push0	
+		super	0x6, 0x4
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_1947
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_1947
+		pushi	0x77
+		push1	
+		lofsa	spaceSuit
+		push	
+		lag	0x5
+		send	0x6
+		not	
+		bnt	code_1947
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	spaceSuit
+		send	0x8
+code_1947:
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		eq?	
+		bnt	code_2002
+		pushi	0x07
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x03
+		eq?	
+		bnt	code_2002
+		pushi	0x77
+		push1	
+		lofsa	helmet
+		push	
+		lag	0x5
+		send	0x6
+		not	
+		bnt	code_2002
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	helmet
+		send	0x8
+code_2002:
+		ret	
+
+openClosetDoor::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2028
+		pushi	0x00e2
+		push2	
+		push0	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_2530
+code_2028:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2083
+		pushi	0x05
+		push1	
+		pushi	0x09
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_2058
+		ldi	0x05
+		jmp	code_2060
+code_2058:
+		ldi	0x00
+code_2060:
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_2530
+code_2083:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2134
+		pushi	0x2b
+		push1	
+		pushi	0x013e
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push1	
+		class	0x1b
+		push	
+		lag	0x0
+		send	0x6
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	closetDoor
+		send	0x8
+		jmp	code_2530
+code_2134:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2329
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x0229
+		push1	
+		pushi	0x0229
+		push0	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x4
+		push	
+		ldi	0x0080
+		or	
+		push	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x6
+		pushi	0x011f
+		push1	
+		push1	
+		lofsa	closetDoor
+		send	0x6
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_2232
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x009f
+		pushi	0x50
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_2530
+code_2232:
+		push2	
+		pushi	0x0229
+		pushi	0x40
+		calle	0x02bc, 0x0001, 0x04
+		not	
+		bnt	code_2289
+		push2	
+		pushi	0x0b
+		push0	
+		calle	0xff, 0x00, 0x04
+		pushi	0x0229
+		push1	
+		pushi	0x0229
+		push0	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x4
+		push	
+		ldi	0x40
+		or	
+		push	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x6
+code_2289:
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		lofsa	helmet
+		send	0x8
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		lofsa	spaceSuit
+		send	0x8
+		pushi	0x03
+		dup	
+		push0	
+		pushi	0x3c
+		callb	0x1, 0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2530
+code_2329:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2393
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_2381
+		pushi	0x05
+		push1	
+		pushi	0x09
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		pushi	0x0a
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_2530
+code_2381:
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_2530
+code_2393:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2425
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x14
+		jmp	code_2530
+code_2425:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_2497
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	closetDoor
+		send	0x8
+		pushi	0x0229
+		push1	
+		pushi	0x0229
+		push0	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x4
+		push	
+		ldi	0xff7f
+		and	
+		push	
+		push2	
+		pushi	0x02bc
+		push0	
+		callk	0x2, 0x4
+		send	0x6
+		push1	
+		pushi	0x10
+		callb	0x8, 0x2
+		pushi	0x03
+		dup	
+		push0	
+		pushi	0x3c
+		callb	0x1, 0x6
+		jmp	code_2530
+code_2497:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_2530
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x011b
+		push0	
+		lofsa	closetDoor
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2530:
+		toss	
+		ret	
+
+
+.OBJECT openClosetDoor of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'openClosetDoor', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = openClosetDoor::60   	 ; @0x75e
+  [0x8a]  = openClosetDoor::138   	 ; @0x7d3
+
+.CODE
+openDrawer::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2658
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x09
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_2632
+		ldi	0x04
+		jmp	code_2634
+code_2632:
+		ldi	0x03
+code_2634:
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x05
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_2866
+code_2658:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2714
+		pushi	0x2b
+		push1	
+		pushi	0x014a
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		pushi	0x07
+		push0	
+		lofsa	drawer
+		send	0x4
+		bnt	code_2702
+		class	0x1b
+		jmp	code_2704
+code_2702:
+		class	0x1a
+code_2704:
+		push	
+		pushSelf	
+		lofsa	drawer
+		send	0x8
+		jmp	code_2866
+code_2714:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2820
+		pushi	0x07
+		push0	
+		lofsa	drawer
+		send	0x4
+		not	
+		bnt	code_2748
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_2866
+code_2748:
+		pushi	0x00d3
+		push1	
+		push2	
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_2801
+		push2	
+		pushi	0x0b
+		push1	
+		calle	0xff, 0x00, 0x04
+		pushi	0x0145
+		push1	
+		push2	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		push2	
+		push2	
+		pushi	0x0089
+		callb	0xb, 0x4
+		ldi	0xff
+		aTop	0xa
+		jmp	code_2866
+code_2801:
+		push2	
+		pushi	0x0b
+		push2	
+		calle	0xff, 0x00, 0x04
+		ldi	0x03
+		aTop	0x10
+		ldi	0x00
+		aTop	0xa
+		jmp	code_2866
+code_2820:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2866
+		push0	
+		callb	0x3, 0x0
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_2852
+		pushi	0x03
+		dup	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		jmp	code_2861
+code_2852:
+		pushi	0x03
+		dup	
+		push0	
+		pushi	0x3c
+		callb	0x1, 0x6
+code_2861:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2866:
+		toss	
+		ret	
+
+
+.OBJECT openDrawer of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'openDrawer', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = openDrawer::138   	 ; @0xa22
+
+.CODE
+spaceSuit::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2975
+		pushi	0x07
+		push0	
+		lofsa	closetDoor
+		send	0x4
+		bnt	code_2961
+		pushi	0x008c
+		push1	
+		lofsa	putOnSpacesuit
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_2986
+code_2961:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2e, 0x6
+		jmp	code_2986
+code_2975:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2e, 0x6
+code_2986:
+		toss	
+		ret	
+
+
+.OBJECT spaceSuit of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'spaceSuit', 'id': 'string_9'}
+  [#4] = 0x89
+  [#5] = 0x4c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'space suit', 'id': 'string_7'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x9f
+  [#18] = 0x50
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "A space suit hangs in the closet. It won't be used by anyone else on the ship anymore.", 'id': 'string_8'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x7
+  [#25] = 0x0
+  [#26] = 0x2
+  [#27] = 0x0
+  [#28] = 0x4011
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 1
+  [0x10a]  = spaceSuit::266   	 ; @0xb6e
+
+.CODE
+helmet::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3113
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	spaceSuit
+		send	0x6
+		jmp	code_3124
+code_3113:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2e, 0x6
+code_3124:
+		toss	
+		ret	
+
+
+.OBJECT helmet of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'helmet', 'id': 'string_10'}
+  [#4] = 0x87
+  [#5] = 0x1d
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'helmet', 'id': 'string_10'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x9f
+  [#18] = 0x50
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's a fish bowl - no, it's a space suit helmet!.", 'id': 'string_11'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x7
+  [#25] = 0x1
+  [#26] = 0x2
+  [#27] = 0x0
+  [#28] = 0x4011
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 1
+  [0x10a]  = helmet::266   	 ; @0xc10
+
+.OBJECT doorLight of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'doorLight', 'id': 'string_14'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator light.', 'id': 'string_12'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This elevator indicator points up.', 'id': 'string_13'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.CODE
+bigRedDoor::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3346
+		push0	
+		callb	0x2, 0x0
+		pushi	0x008c
+		push1	
+		lofsa	leaveToHanger
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_3357
+code_3346:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_3357:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT bigRedDoor of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'bigRedDoor', 'id': 'string_17'}
+  [#4] = 0xe5
+  [#5] = 0x69
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'big door.', 'id': 'string_15'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0xf5
+  [#18] = 0x79
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'These large red doors serve as the airlock entrance which empties out to the pod bay.', 'id': 'string_16'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4011
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = bigRedDoor::266   	 ; @0xcf6
+
+.CODE
+drawer::107:
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		ret	
+
+drawer::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3512
+		pushi	0x008c
+		push1	
+		lofsa	openDrawer
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_3523
+code_3512:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_3523:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT drawer of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'drawer', 'id': 'string_18'}
+  [#4] = 0x5b
+  [#5] = 0x5a
+  [#6] = 0x16
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'drawer', 'id': 'string_18'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x7a
+  [#18] = 0x60
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A small drawer is located just beneath a button.', 'id': 'string_19'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 2
+  [0x6b]  = drawer::107   	 ; @0xd8e
+  [0x10a]  = drawer::266   	 ; @0xda0
+
+.CODE
+closetDoor::107:
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		ret	
+
+closetDoor::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3706
+		pToa	0x32
+		not	
+		bnt	code_3692
+		push0	
+		callb	0x2, 0x0
+		pushi	0x008c
+		push1	
+		lofsa	openClosetDoor
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_3717
+code_3692:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+		jmp	code_3717
+code_3706:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_3717:
+		toss	
+		ret	
+
+closetDoor::148:
+		pushi	0x0094
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		pushi	0x2b
+		push1	
+		pushi	0x0149
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		ret	
+
+closetDoor::139:
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		ret	
+
+		bnot	
+
+.OBJECT closetDoor of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'closetDoor', 'id': 'string_22'}
+  [#4] = 0x88
+  [#5] = 0x51
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'closet door', 'id': 'string_20'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x9a
+  [#18] = 0x56
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "The image on the closet door looks familiar, but you can't quite place it.", 'id': 'string_21'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x3
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x5
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 4
+  [0x6b]  = closetDoor::107   	 ; @0xe38
+  [0x10a]  = closetDoor::266   	 ; @0xe4a
+  [0x94]  = closetDoor::148   	 ; @0xe87
+  [0x8b]  = closetDoor::139   	 ; @0xea2
+
+.CODE
+lights::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		pushi	0x0117
+		push1	
+		push2	
+		self	0x6
+		ret	
+
+
+.OBJECT lights of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'lights', 'id': 'string_23'}
+  [#4] = 0x86
+  [#5] = 0xa7
+  [#6] = 0x1c
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'lights', 'id': 'string_23'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x6f
+  [#18] = 0xad
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Flashing lights adorn this strange yet familiar-looking console.', 'id': 'string_24'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x6
+  [#25] = 0x0
+  [#26] = 0xd
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x14
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 1
+  [0x6b]  = lights::107   	 ; @0xf26
+
+.CODE
+control::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		pushi	0x0117
+		push2	
+		push2	
+		pushi	0x03
+		self	0x8
+		ret	
+
+control::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4047
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	controlPanel
+		send	0x6
+		jmp	code_4081
+code_4047:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4070
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	controlPanel
+		send	0x6
+		jmp	code_4081
+code_4070:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_4081:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT control of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'control', 'id': 'string_25'}
+  [#4] = 0x7b
+  [#5] = 0xa8
+  [#6] = 0x13
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'control', 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x6f
+  [#18] = 0xad
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It doesn't do anything but it sure looks cool.", 'id': 'string_26'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x5
+  [#25] = 0x0
+  [#26] = 0xc
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x18
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 2
+  [0x6b]  = control::107   	 ; @0xfa4
+  [0x10a]  = control::266   	 ; @0xfb6
+
+.OBJECT elevatorDoor of 0x73
+Function area offset: 0x80
+Selectors [63]:
+  [#0] = 0x73
+  [#1] = 0x73
+  [#2] = 0x0
+  [#3] = {'val': 'elevatorDoor', 'id': 'string_29'}
+  [#4] = 0x1e
+  [#5] = 0x6d
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'door', 'id': 'string_27'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is another elevator door. This one goes up.', 'id': 'string_28'}
+  [#22] = 0x2
+  [#23] = 0x6f
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x2
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x13b
+  [#50] = 0x137
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x0
+  [#58] = 0x0
+  [#59] = 0x0
+  [#60] = 0x0
+  [#61] = 0x0
+  [#62] = 0x0
+Overriden functions: 0
+
+.CODE
+controlPanel::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		push2	
+		pushi	0x03
+		self	0x8
+		ret	
+
+controlPanel::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4379
+		push2	
+		pushi	0x0b
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_4390
+code_4379:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_4390:
+		toss	
+		ret	
+
+
+.OBJECT controlPanel of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'controlPanel', 'id': 'string_30'}
+  [#4] = 0xa0
+  [#5] = 0x64
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0xbe
+  [#12] = 0x140
+  [#13] = {'val': 'controlPanel', 'id': 'string_30'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x6f
+  [#18] = 0xad
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The control panel has many confusing gauges on it. The only one you can read says \\"CAUTION: LAUNCH BAY DECOMPRESSED!\\"', 'id': 'string_31'}
+Overriden functions: 2
+  [0x6b]  = controlPanel::107   	 ; @0x10f4
+  [0x10a]  = controlPanel::266   	 ; @0x1106
+
+.CODE
+drawerButton::107:
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+drawerButton::266:
+		lsp	0x1
+		ldi	0x02
+		ne?	
+		bnt	code_4506
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	drawer
+		send	0x6
+		jmp	code_4517
+code_4506:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_4517:
+		ret	
+
+
+.OBJECT drawerButton of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'drawerButton', 'id': 'string_33'}
+  [#4] = 0x65
+  [#5] = 0x59
+  [#6] = 0x22
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x32
+  [#10] = 0x60
+  [#11] = 0x3d
+  [#12] = 0x6a
+  [#13] = {'val': 'drawer', 'id': 'string_18'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x7a
+  [#18] = 0x60
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'There is a button above the rectangular object below.', 'id': 'string_32'}
+Overriden functions: 2
+  [0x6b]  = drawerButton::107   	 ; @0x1170
+  [0x10a]  = drawerButton::266   	 ; @0x1182
+
+.CODE
+BayButton::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		push2	
+		pushi	0x03
+		self	0x8
+		ret	
+
+BayButton::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4636
+		push0	
+		callb	0x2, 0x0
+		pushi	0x008c
+		push1	
+		lofsa	leaveToHanger
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_4647
+code_4636:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_4647:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT BayButton of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'BayButton', 'id': 'string_34'}
+  [#4] = 0x109
+  [#5] = 0x7d
+  [#6] = 0x1f
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x58
+  [#10] = 0x105
+  [#11] = 0x65
+  [#12] = 0x10d
+  [#13] = {'val': 'BayButton', 'id': 'string_34'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0xf5
+  [#18] = 0x79
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This button might have some function involving the adjacent doors.', 'id': 'string_35'}
+Overriden functions: 2
+  [0x6b]  = BayButton::107   	 ; @0x11ee
+  [0x10a]  = BayButton::266   	 ; @0x1200
+
+.CODE
+drawerFeature::266:
+		lsp	0x1
+		ldi	0x02
+		eq?	
+		bnt	code_4766
+		pushi	0x04
+		push1	
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		pushi	0x03
+		push1	
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		push	
+		self	0xc
+code_4766:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+		ret	
+
+
+.OBJECT drawerFeature of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'drawerFeature', 'id': 'string_37'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'drawer', 'id': 'string_18'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'You notice a drawer and a button.', 'id': 'string_36'}
+Overriden functions: 1
+  [0x10a]  = drawerFeature::266   	 ; @0x1272
+
+.STRINGS
+string_0: "This is the airlock of the Arcada."
+string_1: "rm11"		 ; special
+string_2: "putOnSpacesuit"		 ; special
+string_3: "leaveToHanger"		 ; special
+string_4: "enterFromHanger"		 ; special
+string_5: "openClosetDoor"		 ; special
+string_6: "openDrawer"		 ; special
+string_7: "space suit"
+string_8: "A space suit hangs in the closet. It won't be used by anyone else on the ship anymore."
+string_9: "spaceSuit"		 ; special
+string_10: "helmet"		 ; special
+string_11: "It's a fish bowl - no, it's a space suit helmet!."
+string_12: "elevator light."
+string_13: "This elevator indicator points up."
+string_14: "doorLight"		 ; special
+string_15: "big door."
+string_16: "These large red doors serve as the airlock entrance which empties out to the pod bay."
+string_17: "bigRedDoor"		 ; special
+string_18: "drawer"		 ; special
+string_19: "A small drawer is located just beneath a button."
+string_20: "closet door"
+string_21: "The image on the closet door looks familiar, but you can't quite place it."
+string_22: "closetDoor"		 ; special
+string_23: "lights"		 ; special
+string_24: "Flashing lights adorn this strange yet familiar-looking console."
+string_25: "control"		 ; special
+string_26: "It doesn't do anything but it sure looks cool."
+string_27: "door"
+string_28: "This is another elevator door. This one goes up."
+string_29: "elevatorDoor"		 ; special
+string_30: "controlPanel"		 ; special
+string_31: "The control panel has many confusing gauges on it. The only one you can read says \"CAUTION: LAUNCH BAY DECOMPRESSED!\""
+string_32: "There is a button above the rectangular object below."
+string_33: "drawerButton"		 ; special
+string_34: "BayButton"		 ; special
+string_35: "This button might have some function involving the adjacent doors."
+string_36: "You notice a drawer and a button."
+string_37: "drawerFeature"		 ; special
+string_unused_38: ""
+string_unused_39: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0, 0x0
+
+.RELOCATION
+num of pointers: 103
+0x33, 0x3f, 0x47, 0x4f, 0x57, 0x5f, 0x6e, 0x83, 0x8b, 0xb1, 0xbd, 0xc9, 0xd8, 0xe4, 0xf4, 0x100, 0x215, 0x233, 0x245, 0x29c, 0x2a8, 0x2d2, 0x2de, 0x338, 0x34d, 0x371, 0x386, 0x3f5, 0x432, 0x462, 0x51c, 0x531, 0x560, 0x5ce, 0x63e, 0x682, 0x6c1, 0x70a, 0x736, 0x784, 0x797, 0x7bb, 0x7ce, 0x84f, 0x88d, 0x8f9, 0x905, 0x989, 0x9d5, 0x9f6, 0xa82, 0xa93, 0xaa5, 0xb46, 0xb7b, 0xb87, 0xbbe, 0xbd2, 0xbe2, 0xc22, 0xc48, 0xc5c, 0xc6c, 0xca8, 0xcbc, 0xccc, 0xd08, 0xd32, 0xd46, 0xd56, 0xdae, 0xdd8, 0xdec, 0xdfc, 0xe62, 0xebe, 0xed2, 0xee2, 0xf48, 0xf5c, 0xf6c, 0xfc8, 0xfdf, 0x1006, 0x101a, 0x102a, 0x1074, 0x1088, 0x1098, 0x113a, 0x114e, 0x115e, 0x1193, 0x11b8, 0x11cc, 0x11dc, 0x1212, 0x123c, 0x1250, 0x1260, 0x12bc, 0x12d0, 0x12e0

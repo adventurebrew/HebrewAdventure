@@ -1,0 +1,559 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+CLASS SmoothLooper of 0x1
+
+.CODE
+SmoothLooper::60:
+		link	0x02
+		pushi	0x11
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x0800
+		and	
+		bnt	code_32
+		ret	
+
+code_32:
+		ldi	0x00
+		sat	0x1
+		pToa	0x14
+		bnt	code_72
+		pToa	0x10
+		bnt	code_51
+		pushi	0x6c
+		push0	
+		send	0x4
+code_51:
+		pushi	0x3b
+		push0	
+		lap	0x1
+		send	0x4
+		aTop	0x10
+		pushi	0x3b
+		push1	
+		push0	
+		lap	0x1
+		send	0x6
+		ret	
+
+		jmp	code_95
+code_72:
+		pToa	0x16
+		not	
+		bnt	code_87
+		pushi	0x05
+		push0	
+		lap	0x1
+		send	0x4
+		aTop	0x16
+code_87:
+		lap	0x1
+		aTop	0xa
+		ldi	0x01
+		aTop	0x14
+code_95:
+		pushi	0x06
+		push0	
+		pToa	0xa
+		send	0x4
+		push	
+		ldi	0x03
+		gt?	
+		bnt	code_164
+		pushi	0x05
+		push0	
+		pToa	0xa
+		send	0x4
+		push	
+		pToa	0x16
+		eq?	
+		bnt	code_164
+		pToa	0x14
+		bnt	code_147
+		push1	
+		pTos	0xe
+		callk	0x6, 0x2
+		bnt	code_164
+		pushi	0x6c
+		push0	
+		pToa	0xe
+		send	0x4
+		jmp	code_164
+code_147:
+		pushi	0x05
+		push1	
+		pTos	0x16
+		pToa	0xa
+		send	0x6
+		push2	
+		pTos	0xa
+		lsp	0x2
+		callk	0x4c, 0x4
+code_164:
+		pushi	0x06
+		push0	
+		pToa	0xa
+		send	0x4
+		sat	0x0
+		push	
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_291
+		pushi	0x010f
+		lap	0x2
+		le?	
+		bnt	code_201
+		pprev	
+		ldi	0x0167
+		le?	
+		bnt	code_201
+		jmp	code_643
+code_201:
+		push0	
+		lap	0x2
+		le?	
+		bnt	code_230
+		pprev	
+		ldi	0x5a
+		le?	
+		bnt	code_230
+		ldi	0x04
+		sat	0x0
+		ldi	0x00
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_230:
+		pushi	0x5b
+		lap	0x2
+		le?	
+		bnt	code_261
+		pprev	
+		ldi	0x00b4
+		le?	
+		bnt	code_261
+		ldi	0x04
+		sat	0x0
+		ldi	0x10
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_261:
+		pushi	0x00b5
+		lap	0x2
+		le?	
+		bnt	code_643
+		pprev	
+		ldi	0x010e
+		le?	
+		bnt	code_643
+		ldi	0x05
+		sat	0x0
+		ldi	0x01
+		aTop	0x8
+		sat	0x1
+		jmp	code_643
+code_291:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_410
+		pushi	0x010f
+		lap	0x2
+		le?	
+		bnt	code_330
+		pprev	
+		ldi	0x0167
+		le?	
+		bnt	code_330
+		ldi	0x06
+		sat	0x0
+		ldi	0x03
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_330:
+		push0	
+		lap	0x2
+		le?	
+		bnt	code_347
+		pprev	
+		ldi	0x5a
+		le?	
+		bnt	code_347
+		jmp	code_643
+code_347:
+		pushi	0x5b
+		lap	0x2
+		le?	
+		bnt	code_378
+		pprev	
+		ldi	0x00b4
+		le?	
+		bnt	code_378
+		ldi	0x00
+		sat	0x0
+		ldi	0x02
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_378:
+		pushi	0x00b5
+		lap	0x2
+		le?	
+		bnt	code_643
+		pprev	
+		ldi	0x010e
+		le?	
+		bnt	code_643
+		ldi	0x06
+		sat	0x0
+		ldi	0x15
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_410:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_529
+		pushi	0x010f
+		lap	0x2
+		le?	
+		bnt	code_449
+		pprev	
+		ldi	0x0167
+		le?	
+		bnt	code_449
+		ldi	0x07
+		sat	0x0
+		ldi	0x03
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_449:
+		push0	
+		lap	0x2
+		le?	
+		bnt	code_478
+		pprev	
+		ldi	0x5a
+		le?	
+		bnt	code_478
+		ldi	0x01
+		sat	0x0
+		ldi	0x12
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_478:
+		pushi	0x5b
+		lap	0x2
+		le?	
+		bnt	code_509
+		pprev	
+		ldi	0x00b4
+		le?	
+		bnt	code_509
+		ldi	0x01
+		sat	0x0
+		ldi	0x02
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_509:
+		pushi	0x00b5
+		lap	0x2
+		le?	
+		bnt	code_643
+		pprev	
+		ldi	0x010e
+		le?	
+		bnt	code_643
+		jmp	code_643
+code_529:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_643
+		pushi	0x010f
+		lap	0x2
+		le?	
+		bnt	code_568
+		pprev	
+		ldi	0x0167
+		le?	
+		bnt	code_568
+		ldi	0x03
+		sat	0x0
+		ldi	0x17
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_568:
+		push0	
+		lap	0x2
+		le?	
+		bnt	code_597
+		pprev	
+		ldi	0x5a
+		le?	
+		bnt	code_597
+		ldi	0x02
+		sat	0x0
+		ldi	0x00
+		aTop	0x8
+		ldi	0x01
+		sat	0x1
+		jmp	code_643
+code_597:
+		pushi	0x5b
+		lap	0x2
+		le?	
+		bnt	code_616
+		pprev	
+		ldi	0x00b4
+		le?	
+		bnt	code_616
+		jmp	code_643
+code_616:
+		pushi	0x00b5
+		lap	0x2
+		le?	
+		bnt	code_643
+		pprev	
+		ldi	0x010e
+		le?	
+		bnt	code_643
+		ldi	0x03
+		sat	0x0
+		ldi	0x01
+		aTop	0x8
+		sat	0x1
+code_643:
+		toss	
+		lat	0x1
+		bnt	code_721
+		pushi	0x00da
+		push0	
+		pToa	0xa
+		send	0x4
+		aTop	0xc
+		pushi	0x3b
+		push0	
+		pToa	0xa
+		send	0x4
+		aTop	0xe
+		pushi	0x00d9
+		push0	
+		pToa	0xa
+		send	0x4
+		aTop	0x12
+		pushi	0x05
+		push1	
+		pTos	0x18
+		pushi	0x00d9
+		push1	
+		push0	
+		pushi	0x3b
+		push1	
+		push0	
+		pushi	0x00da
+		push1	
+		push0	
+		pushi	0x06
+		push1	
+		lst	0x0
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0xa
+		send	0x2c
+		jmp	code_725
+code_721:
+		ldi	0x00
+		aTop	0x14
+code_725:
+		ret	
+
+SmoothLooper::139:
+		link	0x02
+		pTos	0x8
+		ldi	0x0f
+		lt?	
+		bnt	code_796
+		pushi	0x05
+		push1	
+		pTos	0x16
+		pushi	0x06
+		push1	
+		pTos	0x8
+		pushi	0x3b
+		push1	
+		pTos	0xe
+		pushi	0x00da
+		push1	
+		pTos	0xc
+		pushi	0x00d9
+		push1	
+		pTos	0x12
+		pToa	0xa
+		send	0x1e
+		ldi	0x00
+		aTop	0xe
+		aTop	0xc
+		aTop	0x14
+		pToa	0x10
+		bnt	code_874
+		pushi	0x0119
+		push1	
+		push	
+		pToa	0xa
+		send	0x6
+		ldi	0x00
+		aTop	0x10
+		jmp	code_874
+code_796:
+		pTos	0x8
+		ldi	0x10
+		sub	
+		aTop	0x8
+		pushi	0x06
+		push1	
+		pTos	0x8
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0xa
+		send	0x14
+		pTos	0x8
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_838
+		ldi	0x02
+		jmp	code_871
+code_838:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_850
+		ldi	0x01
+		jmp	code_871
+code_850:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_862
+		ldi	0x00
+		jmp	code_871
+code_862:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_871
+		ldi	0x03
+code_871:
+		toss	
+		aTop	0x8
+code_874:
+		ret	
+
+SmoothLooper::108:
+		pToa	0xe
+		bnt	code_885
+		pushi	0x6c
+		push0	
+		send	0x4
+code_885:
+		pToa	0x10
+		bnt	code_895
+		pushi	0x6c
+		push0	
+		send	0x4
+code_895:
+		pToa	0xc
+		bnt	code_905
+		pushi	0x6c
+		push0	
+		send	0x4
+code_905:
+		pushi	0x05
+		push1	
+		pTos	0x16
+		pushi	0x3e
+		push1	
+		push0	
+		pToa	0xa
+		send	0xc
+		push2	
+		pTos	0xa
+		pushi	0x3a
+		push0	
+		pToa	0xa
+		send	0x4
+		push	
+		callk	0x4c, 0x4
+		pushi	0x6c
+		push0	
+		super	0x1, 0x4
+		ret	
+
+		bnot	
+
+.CLASS SmoothLooper of 0x1
+Exported
+Function area offset: 0x36
+Selectors [13]:
+  [0x0] = 0x51
+  [0x1] = 0x1
+  [0x2] = 0x8000
+  [0x17] = {'val': 'SmoothLooper', 'id': 'string_0'}
+  [0x1af] = 0x0
+  [0x2d] = 0x0
+  [0x1aa] = 0x0
+  [0x1ab] = 0x0
+  [0x1b0] = 0x0
+  [0x1b1] = 0x0
+  [0x1b2] = 0x0
+  [0x1b3] = 0x0
+  [0x1b4] = 0x0
+Overriden functions: 3
+  [0x3c]  = SmoothLooper::60   	 ; @0xe
+  [0x6c]  = SmoothLooper::108   	 ; @0x36b
+  [0x8b]  = SmoothLooper::139   	 ; @0x2d6
+
+.STRINGS
+string_0: "SmoothLooper"		 ; special
+string_unused_1: ""
+string_unused_2: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x3be

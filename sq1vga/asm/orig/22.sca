@@ -1,0 +1,617 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm22 of 0x74
+
+.CODE
+rm22::107:
+		lsg	0xc
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_41
+		ldi	0x0d
+		aTop	0x16
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		jmp	code_151
+code_41:
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_66
+		ldi	0x0e
+		aTop	0x16
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		jmp	code_151
+code_66:
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_91
+		ldi	0x0b
+		aTop	0x16
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		jmp	code_151
+code_91:
+		dup	
+		ldi	0x22
+		eq?	
+		bnt	code_136
+		ldi	0x0bb8
+		sag	0xb7
+		ldi	0x02
+		sag	0xa6
+		ldi	0x07
+		aTop	0x16
+		push2	
+		pushi	0x0080
+		pushi	0x2d
+		calle	0x03be, 0x0000, 0x04
+		pushi	0x008c
+		push1	
+		lofsa	outOfHole
+		push	
+		self	0x6
+		jmp	code_151
+code_136:
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		ldi	0x0a
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+code_151:
+		toss	
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x04
+		push1	
+		pushi	0x46
+		pushi	0x03
+		push1	
+		pushi	0x4c
+		pushi	0x010f
+		push1	
+		pushi	0x41
+		pushi	0x0110
+		push1	
+		pushi	0x4c
+		push2	
+		pushi	0x02c0
+		push1	
+		callk	0x2, 0x4
+		send	0x18
+		pushi	0x04
+		push1	
+		pushi	0x0f
+		pushi	0x03
+		push1	
+		pushi	0x64
+		pushi	0x010f
+		push1	
+		pushi	0x0a
+		pushi	0x0110
+		push1	
+		pushi	0x64
+		push2	
+		pushi	0x02c0
+		push2	
+		callk	0x2, 0x4
+		send	0x18
+		pushi	0x6b
+		push0	
+		lofsa	exitHole
+		send	0x4
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_459
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x08
+		pushi	0x013f
+		pushi	0x00bd
+		pushi	0x0135
+		pushi	0x00bd
+		pushi	0x0123
+		pushi	0x009f
+		pushi	0x013f
+		pushi	0x009f
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x1e
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x38
+		pushi	0x008b
+		pushi	0x00bd
+		pushi	0x0088
+		pushi	0x00b8
+		pushi	0x7f
+		pushi	0x00b5
+		pushi	0x6d
+		pushi	0x00b1
+		pushi	0x60
+		pushi	0x00a2
+		pushi	0x72
+		pushi	0x0093
+		pushi	0x6b
+		pushi	0x008f
+		pushi	0x5c
+		pushi	0x0090
+		pushi	0x4c
+		pushi	0x0088
+		pushi	0x3e
+		pushi	0x0088
+		pushi	0x19
+		pushi	0x0081
+		pushi	0x1d
+		pushi	0x77
+		pushi	0x16
+		pushi	0x69
+		pushi	0x0a
+		pushi	0x64
+		pushi	0x0f
+		pushi	0x56
+		pushi	0x54
+		pushi	0x4e
+		pushi	0x41
+		pushi	0x2c
+		pushi	0x4d
+		pushi	0x25
+		pushi	0x4e
+		pushi	0x19
+		pushi	0x38
+		push0	
+		pushi	0x0093
+		push0	
+		pushi	0x0121
+		pushi	0x53
+		pushi	0x0135
+		pushi	0x0086
+		pushi	0x012e
+		pushi	0x0092
+		pushi	0x0115
+		pushi	0x0095
+		pushi	0x0107
+		pushi	0x00a3
+		pushi	0x010e
+		pushi	0x00a8
+		pushi	0x0119
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x7e
+		push	
+		self	0x8
+		jmp	code_607
+code_459:
+		lsg	0xc
+		pToa	0x1c
+		eq?	
+		bnt	code_480
+		pushi	0x011a
+		push2	
+		pushi	0x0103
+		pushi	0x33
+		lag	0x0
+		send	0x8
+code_480:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x14
+		pushi	0x013f
+		pushi	0x3f
+		pushi	0x012d
+		pushi	0x34
+		pushi	0x0120
+		pushi	0x35
+		pushi	0x010d
+		pushi	0x32
+		pushi	0x00fb
+		pushi	0x28
+		pushi	0x0100
+		pushi	0x23
+		pushi	0x00f6
+		pushi	0x20
+		pushi	0x00ca
+		pushi	0x0b
+		pushi	0x00b2
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x36
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0e
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		push0	
+		push0	
+		pushi	0x0091
+		push0	
+		pushi	0x00d3
+		pushi	0x24
+		pushi	0x00f1
+		pushi	0x3b
+		pushi	0x013f
+		pushi	0x49
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x2a
+		push	
+		self	0x8
+code_607:
+		ret	
+
+
+.OBJECT rm22 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm22', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': "Were you a proctologist, you might know what these oddly shaped bones are called. To you, though, they're just bones.", 'id': 'string_0'}
+  [#10] = 0x16
+  [#11] = 0xffff
+  [#12] = 0x14
+  [#13] = 0x0
+  [#14] = 0x13
+  [#15] = 0x17
+  [#16] = 0x19
+  [#17] = 0x26
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x1
+Overriden functions: 1
+  [0x6b]  = rm22::107   	 ; @0xe
+
+.CODE
+outOfHole::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_699
+		ldi	0x02
+		aTop	0x12
+		jmp	code_918
+code_699:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_773
+		pushi	0x2b
+		push1	
+		pushi	0x016e
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x0127
+		pushi	0x009a
+		pushi	0x05
+		push1	
+		pushi	0x2d
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x30
+		jmp	code_918
+code_773:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_813
+		pushi	0x2b
+		push1	
+		pushi	0x0329
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x07
+		push1	
+		pushi	0x03
+		lag	0x0
+		send	0x6
+		ldi	0x12
+		aTop	0x10
+		jmp	code_918
+code_813:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_841
+		pushi	0x00d9
+		push1	
+		pushi	0x07
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_918
+code_841:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_902
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		pushi	0x04
+		pushi	0x3a
+		push1	
+		pushi	0x0087
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0134
+		pushi	0x00a0
+		pushSelf	
+		lag	0x0
+		send	0x18
+		push1	
+		pushi	0x05
+		push0	
+		lag	0x74
+		send	0x4
+		push	
+		callb	0x9, 0x2
+		jmp	code_918
+code_902:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_918
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_918:
+		toss	
+		ret	
+
+
+.OBJECT outOfHole of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'outOfHole', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = outOfHole::138   	 ; @0x2a8
+
+.CODE
+exitHole::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1019
+		push1	
+		pushi	0x0092
+		callb	0x6, 0x2
+		bnt	code_1008
+		push2	
+		pushi	0x16
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1105
+code_1008:
+		push2	
+		pushi	0x16
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1105
+code_1019:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1037
+		push2	
+		pushi	0x16
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1105
+code_1037:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1056
+		push2	
+		pushi	0x16
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_1105
+code_1056:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_1075
+		push2	
+		pushi	0x16
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_1105
+code_1075:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1094
+		push2	
+		pushi	0x16
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_1105
+code_1094:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_1105:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT exitHole of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'exitHole', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'exit hole', 'id': 'string_3'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x1000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = exitHole::266   	 ; @0x3d2
+
+.STRINGS
+string_0: "Were you a proctologist, you might know what these oddly shaped bones are called. To you, though, they're just bones."
+string_1: "rm22"		 ; special
+string_2: "outOfHole"		 ; special
+string_3: "exit hole"
+string_4: "exitHole"		 ; special
+string_unused_5: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 7
+0x80, 0xeb, 0x272, 0x27e, 0x3aa, 0x466, 0x47a

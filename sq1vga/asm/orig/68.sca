@@ -1,0 +1,2845 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm68 of 0x43
+
+.CODE
+rm68::107:
+		pushi	0x06
+		pushi	0x0080
+		pushi	0x2c
+		pushi	0x01d4
+		pushi	0x01d6
+		pushi	0x01d8
+		pushi	0x0204
+		calle	0x03be, 0x0000, 0x0c
+		pushi	0x6b
+		push0	
+		lofsa	greenBldg
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	twoGuys
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	stadium
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	blueBldg
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	apartments
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	guy1
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	cheerers
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	bubbleGum
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	guy2
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	clarkKent
+		send	0x4
+		push2	
+		pushi	0x0084
+		pushi	0x0217
+		callk	0x0, 0x4
+		pushi	0x6b
+		push0	
+		pushi	0x019a
+		push1	
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x2c
+		pushi	0x00d9
+		push1	
+		pushi	0x03
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x00a7
+		pushi	0x0089
+		pushi	0x42
+		push1	
+		pushi	0x08
+		lag	0x0
+		send	0x30
+		pushi	0x6b
+		push0	
+		lofsa	xenonLeader
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	greenGirl
+		send	0x4
+		pushi	0x6b
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x9c
+		pushi	0x28
+		pushi	0x36
+		push1	
+		pushi	0x0d
+		pushi	0x37
+		push1	
+		pushi	0x06
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	ship
+		send	0x1e
+		pushi	0x008c
+		push1	
+		lofsa	roomControl
+		push	
+		self	0x6
+		pushi	0x6b
+		push0	
+		lofsa	xen6
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	xen9
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	xen8
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	xen3
+		send	0x4
+		pushi	0x6b
+		push0	
+		super	0x43, 0x4
+		push0	
+		callb	0x2, 0x0
+		ret	
+
+
+.OBJECT rm68 of 0x43
+Exported
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x43
+  [#1] = 0x43
+  [#2] = 0x0
+  [#3] = {'val': 'rm68', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x44
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+Overriden functions: 1
+  [0x6b]  = rm68::107   	 ; @0xe
+
+.CODE
+crowdGoesWild::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_419
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	xen6
+		send	0x8
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		lofsa	xen8
+		send	0xc
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	xen9
+		send	0x6
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push2	
+		lofsa	xen3
+		send	0x8
+		jmp	code_591
+code_419:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_433
+		ldi	0x02
+		aTop	0x12
+		jmp	code_591
+code_433:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_499
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	xen6
+		send	0x8
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		lofsa	xen8
+		send	0xc
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	xen9
+		send	0x6
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push2	
+		lofsa	xen3
+		send	0x8
+		jmp	code_591
+code_499:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_513
+		ldi	0x02
+		aTop	0x12
+		jmp	code_591
+code_513:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_579
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	xen6
+		send	0x8
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		lofsa	xen8
+		send	0xc
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	xen9
+		send	0x6
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push2	
+		lofsa	xen3
+		send	0x8
+		jmp	code_591
+code_579:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_591
+		pushi	0x6c
+		push0	
+		self	0x4
+code_591:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT crowdGoesWild of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'crowdGoesWild', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = crowdGoesWild::138   	 ; @0x15c
+
+.CODE
+roomControl::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_671
+		ldi	0x0f
+		aTop	0x10
+		jmp	code_846
+code_671:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_692
+		pushi	0x008c
+		push2	
+		lofsa	lottaPraise
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_846
+code_692:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_729
+		pushi	0x008c
+		push1	
+		lofsa	greenGirlGives
+		push	
+		lofsa	greenGirl
+		send	0x6
+		pushi	0x008c
+		push2	
+		lofsa	xenonLeaderReceives
+		push	
+		pushSelf	
+		lofsa	xenonLeader
+		send	0x8
+		jmp	code_846
+code_729:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_754
+		pushi	0x03
+		pushi	0x44
+		push0	
+		pushi	0x6c
+		calle	0xff, 0x00, 0x06
+		ldi	0x08
+		aTop	0x12
+		jmp	code_846
+code_754:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_789
+		lag	0x19
+		bnt	code_771
+		pushi	0x6c
+		push0	
+		send	0x4
+code_771:
+		pushi	0x03
+		pushi	0x44
+		push1	
+		pushi	0x6c
+		calle	0xff, 0x00, 0x06
+		ldi	0x08
+		aTop	0x12
+		jmp	code_846
+code_789:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_824
+		lag	0x19
+		bnt	code_806
+		pushi	0x6c
+		push0	
+		send	0x4
+code_806:
+		pushi	0x03
+		pushi	0x44
+		push2	
+		pushi	0x6c
+		calle	0xff, 0x00, 0x06
+		ldi	0x08
+		aTop	0x12
+		jmp	code_846
+code_824:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_846
+		lag	0x19
+		bnt	code_841
+		pushi	0x6c
+		push0	
+		send	0x4
+code_841:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_846:
+		toss	
+		ret	
+
+
+.OBJECT roomControl of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'roomControl', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = roomControl::138   	 ; @0x28c
+
+.CODE
+lottaPraise::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_957
+		pushi	0x011a
+		push2	
+		pushi	0x78
+		dup	
+		pushi	0x6b
+		pushi	0x08
+		lofsa	leaderBust
+		push	
+		lofsa	leaderMouth
+		push	
+		lofsa	leaderEyes
+		push	
+		lofsa	string_3		; "\"Roger Wilco, we, the people of Xenon, extend our limitless appreciation and eternal gratitude for your acts of heroism.\""
+		push	
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	leaderTalker
+		send	0x1c
+		jmp	code_1092
+code_957:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1011
+		pushi	0x01fd
+		pushi	0x05
+		lofsa	string_4		; "\"Because of your bravery, the planet Xenon, and indeed the entire galaxy, has been saved from domination by the evil (not to mention ugly) Sariens.\""
+		push	
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	leaderTalker
+		send	0xe
+		pushi	0x00d3
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_1092
+		pushi	0x01fd
+		push1	
+		lofsa	string_5		; "\"Now, if you'd only been smart enough to bring along the data cartridge containing the construction specifications, we'd be able build a new Star Generator, thereby saving Xenon from the horrors of a rapidly cooling planet. Oh, well. You are just a janitor.\""
+		push	
+		lofsa	leaderTalker
+		send	0x6
+		jmp	code_1092
+code_1011:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1039
+		pushi	0x01fd
+		pushi	0x05
+		lofsa	string_6		; "\"It is my honor to present you with the coveted Golden Mop, a symbol of pride and accomplishment to members of your esteemed profession.\""
+		push	
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	leaderTalker
+		send	0xe
+		jmp	code_1092
+code_1039:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1067
+		pushi	0x01fd
+		pushi	0x05
+		lofsa	string_7		; "\"Henceforth and for all time you will be known as Hero of Xenon.\""
+		push	
+		push0	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	leaderTalker
+		send	0xe
+		jmp	code_1092
+code_1067:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1092
+		pushi	0x008c
+		push1	
+		lofsa	zoomingRockets
+		push	
+		lofsa	ship
+		send	0x6
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1092:
+		toss	
+		ret	
+
+
+.OBJECT lottaPraise of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'lottaPraise', 'id': 'string_8'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = lottaPraise::138   	 ; @0x38a
+
+.CODE
+greenGirlGives::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1185
+		pushi	0x00d9
+		push1	
+		pushi	0x0a
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0xe
+		jmp	code_1271
+code_1185:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1220
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pToa	0x8
+		send	0xc
+		pushi	0x6b
+		push0	
+		lofsa	greenGirlBodyPart
+		send	0x4
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1271
+code_1220:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1241
+		push2	
+		pushi	0x1e
+		pushi	0x0096
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_1271
+code_1241:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1271
+		ldi	0x01
+		aTop	0xa
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	greenGirlBodyPart
+		send	0xe
+code_1271:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT greenGirlGives of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'greenGirlGives', 'id': 'string_9'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = greenGirlGives::138   	 ; @0x480
+
+.CODE
+xenonLeaderReceives::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1366
+		pushi	0x00d9
+		push1	
+		pushi	0x0a
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	xenonLeader
+		send	0xe
+		jmp	code_1576
+code_1366:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1403
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0a
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x05
+		push1	
+		pushSelf	
+		lofsa	xenonLeader
+		send	0x18
+		jmp	code_1576
+code_1403:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1447
+		pushi	0x00d9
+		push1	
+		pushi	0x0a
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lag	0x0
+		send	0xc
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x0a
+		push1	
+		pushSelf	
+		lofsa	xenonLeader
+		send	0xc
+		jmp	code_1576
+code_1447:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1474
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		lag	0x0
+		send	0xc
+		ldi	0x03
+		aTop	0x12
+		jmp	code_1576
+code_1474:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1515
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lag	0x0
+		send	0x6
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x07
+		push1	
+		pushi	0x0a
+		lofsa	xenonLeader
+		send	0xc
+		ldi	0x02
+		aTop	0x10
+		jmp	code_1576
+code_1515:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1550
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x8
+		pushi	0x008c
+		push2	
+		lofsa	egoReceivesAward
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1576
+code_1550:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1564
+		ldi	0x03
+		aTop	0x12
+		jmp	code_1576
+code_1564:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1576
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1576:
+		toss	
+		ret	
+
+
+.OBJECT xenonLeaderReceives of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'xenonLeaderReceives', 'id': 'string_10'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = xenonLeaderReceives::138   	 ; @0x534
+
+.CODE
+egoReceivesAward::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1703
+		pushi	0x6b
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	rocketsRedGlare1
+		push	
+		lofsa	fireworks1
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	rocketsRedGlare2
+		push	
+		lofsa	fireworks2
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	rocketsRedGlare3
+		push	
+		lofsa	fireworks3
+		send	0xa
+		ldi	0x0a
+		aTop	0x10
+		jmp	code_1736
+code_1703:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1724
+		pushi	0x008c
+		push2	
+		lofsa	crowdGoesWild
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_1736
+code_1724:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1736
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1736:
+		toss	
+		ret	
+
+
+.OBJECT egoReceivesAward of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoReceivesAward', 'id': 'string_11'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoReceivesAward::138   	 ; @0x664
+
+.CODE
+rocketsRedGlare1::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1839
+		pushi	0x2b
+		push1	
+		pushi	0x0216
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	fire1
+		send	0x10
+		push2	
+		pushi	0x0a
+		pushi	0x3c
+		callk	0x3c, 0x4
+		aTop	0x16
+		jmp	code_1953
+code_1839:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1912
+		pushi	0x2b
+		push1	
+		pushi	0x0217
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	fire1
+		send	0x10
+		pushi	0x00c0
+		push0	
+		pushi	0x04
+		push1	
+		push2	
+		pushi	0x14
+		pushi	0x012c
+		callk	0x3c, 0x4
+		push	
+		pushi	0x03
+		push1	
+		push2	
+		pushi	0x0a
+		pushi	0x3c
+		callk	0x3c, 0x4
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x1e
+		jmp	code_1953
+code_1912:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1939
+		pushi	0x69
+		push0	
+		pToa	0x8
+		send	0x4
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_1953
+code_1939:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1953
+		pushi	0x008a
+		push1	
+		push0	
+		self	0x6
+code_1953:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT rocketsRedGlare1 of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'rocketsRedGlare1', 'id': 'string_12'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = rocketsRedGlare1::138   	 ; @0x704
+
+.CODE
+rocketsRedGlare2::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2057
+		pushi	0x2b
+		push1	
+		pushi	0x0216
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	fire2
+		send	0x10
+		push2	
+		pushi	0x0a
+		pushi	0x3c
+		callk	0x3c, 0x4
+		aTop	0x16
+		jmp	code_2171
+code_2057:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2130
+		pushi	0x2b
+		push1	
+		pushi	0x0217
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	fire2
+		send	0x10
+		pushi	0x00c0
+		push0	
+		pushi	0x04
+		push1	
+		push2	
+		pushi	0x14
+		pushi	0x012c
+		callk	0x3c, 0x4
+		push	
+		pushi	0x03
+		push1	
+		push2	
+		pushi	0x0a
+		pushi	0x3c
+		callk	0x3c, 0x4
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x1e
+		jmp	code_2171
+code_2130:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2157
+		pushi	0x69
+		push0	
+		pToa	0x8
+		send	0x4
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_2171
+code_2157:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2171
+		pushi	0x008a
+		push1	
+		push0	
+		self	0x6
+code_2171:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT rocketsRedGlare2 of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'rocketsRedGlare2', 'id': 'string_13'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = rocketsRedGlare2::138   	 ; @0x7de
+
+.CODE
+rocketsRedGlare3::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2275
+		pushi	0x2b
+		push1	
+		pushi	0x0216
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	fire3
+		send	0x10
+		push2	
+		pushi	0x0a
+		pushi	0x3c
+		callk	0x3c, 0x4
+		aTop	0x16
+		jmp	code_2389
+code_2275:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2348
+		pushi	0x2b
+		push1	
+		pushi	0x0217
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lofsa	fire3
+		send	0x10
+		pushi	0x00c0
+		push0	
+		pushi	0x04
+		push1	
+		push2	
+		pushi	0x14
+		pushi	0x012c
+		callk	0x3c, 0x4
+		push	
+		pushi	0x03
+		push1	
+		push2	
+		pushi	0x0a
+		pushi	0x3c
+		callk	0x3c, 0x4
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0x1e
+		jmp	code_2389
+code_2348:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2375
+		pushi	0x69
+		push0	
+		pToa	0x8
+		send	0x4
+		push2	
+		pushi	0x05
+		pushi	0x0f
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_2389
+code_2375:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2389
+		pushi	0x008a
+		push1	
+		push0	
+		self	0x6
+code_2389:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT rocketsRedGlare3 of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'rocketsRedGlare3', 'id': 'string_14'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = rocketsRedGlare3::138   	 ; @0x8b8
+
+.CODE
+zoomingRockets::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2493
+		pushi	0x6b
+		push0	
+		pushi	0x00a0
+		push1	
+		pushi	0x0a
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0190
+		pushi	0x28
+		pushSelf	
+		lofsa	ship
+		send	0x16
+		jmp	code_2816
+code_2493:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2520
+		pushi	0x011a
+		push2	
+		pushi	0x9c
+		pushi	0x28
+		lofsa	ship
+		send	0x8
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_2816
+code_2520:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2560
+		pushi	0x36
+		push1	
+		pushi	0x0a
+		pushi	0x00a0
+		push1	
+		pushi	0x0a
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00d7
+		pushi	0x28
+		pushSelf	
+		lofsa	ship
+		send	0x18
+		jmp	code_2816
+code_2560:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2682
+		pushi	0x00c0
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0x0a
+		pushi	0x011a
+		push2	
+		pushi	0x00e1
+		pushi	0x28
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push1	
+		lofsa	fireworks1
+		send	0x1a
+		pushi	0x00c0
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0x0a
+		pushi	0x011a
+		push2	
+		pushi	0x00e1
+		pushi	0x28
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push1	
+		lofsa	fireworks2
+		send	0x1a
+		pushi	0x00c0
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0x0a
+		pushi	0x011a
+		push2	
+		pushi	0x00e1
+		pushi	0x28
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push1	
+		lofsa	fireworks3
+		send	0x1a
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00eb
+		pushi	0x28
+		pushSelf	
+		lofsa	ship
+		send	0xc
+		jmp	code_2816
+code_2682:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2775
+		pushi	0x6b
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x00e6
+		pushi	0x41
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	explosion
+		send	0x14
+		pushi	0x42
+		push1	
+		push1	
+		pushi	0x69
+		push0	
+		lofsa	fireworks1
+		send	0xa
+		pushi	0x42
+		push1	
+		push1	
+		pushi	0x69
+		push0	
+		lofsa	fireworks2
+		send	0xa
+		pushi	0x42
+		push1	
+		push1	
+		pushi	0x69
+		push0	
+		lofsa	fireworks3
+		send	0xa
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00f0
+		pushi	0x50
+		lofsa	ship
+		push	
+		lofsa	ship
+		send	0xc
+		jmp	code_2816
+code_2775:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2804
+		pushi	0x6c
+		push0	
+		lofsa	explosion
+		send	0x4
+		pushi	0x008c
+		push2	
+		lofsa	closingCredits
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_2816
+code_2804:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_2816
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2816:
+		toss	
+		ret	
+
+
+.OBJECT zoomingRockets of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'zoomingRockets', 'id': 'string_15'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = zoomingRockets::138   	 ; @0x992
+
+.CODE
+closingCredits::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2895
+		ldi	0x19
+		aTop	0x12
+		jmp	code_2916
+code_2895:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2916
+		pushi	0x0177
+		push1	
+		push2	
+		lag	0x2
+		send	0x6
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2916:
+		toss	
+		ret	
+
+
+.OBJECT closingCredits of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'closingCredits', 'id': 'string_16'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = closingCredits::138   	 ; @0xb3c
+
+.OBJECT leaderTalker of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'leaderTalker', 'id': 'string_17'}
+  [#4] = 0x10e
+  [#5] = 0x73
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x5
+  [#10] = 0xe6
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x204
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT leaderBust of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'leaderBust', 'id': 'string_18'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x204
+  [#24] = 0x1
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT leaderMouth of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'leaderMouth', 'id': 'string_19'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x44
+  [#10] = 0x16
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x204
+  [#24] = 0x5
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT leaderEyes of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'leaderEyes', 'id': 'string_20'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x2f
+  [#10] = 0x12
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x204
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1e
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT xenonLeader of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'xenonLeader', 'id': 'string_21'}
+  [#4] = 0xcf
+  [#5] = 0x87
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'xenonLeader', 'id': 'string_21'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d6
+  [#24] = 0x0
+  [#25] = 0xb
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT greenGirl of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'greenGirl', 'id': 'string_22'}
+  [#4] = 0xf3
+  [#5] = 0x88
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'greenGirl', 'id': 'string_22'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d8
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT greenGirlBodyPart of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'greenGirlBodyPart', 'id': 'string_23'}
+  [#4] = 0xf4
+  [#5] = 0x71
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'greenGirlBodyPart', 'id': 'string_23'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d8
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x6
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT king of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'king', 'id': 'string_24'}
+  [#4] = 0x81
+  [#5] = 0x5c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'king', 'id': 'string_24'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d4
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x7
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT fireworks1 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'fireworks1', 'id': 'string_25'}
+  [#4] = 0x27
+  [#5] = 0x1e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'fireworks1', 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d4
+  [#24] = 0x7
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT fireworks2 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'fireworks2', 'id': 'string_26'}
+  [#4] = 0xf6
+  [#5] = 0x2d
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'fireworks2', 'id': 'string_26'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d4
+  [#24] = 0x8
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT fireworks3 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'fireworks3', 'id': 'string_27'}
+  [#4] = 0xb6
+  [#5] = 0x27
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'fireworks3', 'id': 'string_27'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d4
+  [#24] = 0x9
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.CODE
+ship::139:
+		pushi	0x69
+		push0	
+		self	0x4
+		ret	
+
+
+.OBJECT ship of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'ship', 'id': 'string_28'}
+  [#4] = 0xfa
+  [#5] = 0x3c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'ship', 'id': 'string_28'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d4
+  [#24] = 0xa
+  [#25] = 0x0
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x6
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x8b]  = ship::139   	 ; @0x1004
+
+.OBJECT explosion of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'explosion', 'id': 'string_29'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'explosion', 'id': 'string_29'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1d4
+  [#24] = 0xc
+  [#25] = 0x0
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x6
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.OBJECT fire1 of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'fire1', 'id': 'string_30'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.OBJECT fire2 of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'fire2', 'id': 'string_31'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.OBJECT fire3 of 0xa
+Function area offset: 0x28
+Selectors [19]:
+  [#0] = 0xa
+  [#1] = 0xa
+  [#2] = 0x0
+  [#3] = {'val': 'fire3', 'id': 'string_32'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x7f
+  [#9] = 0x0
+  [#10] = 0x1
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+Overriden functions: 0
+
+.OBJECT greenBldg of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'greenBldg', 'id': 'string_34'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'green bldg', 'id': 'string_33'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT twoGuys of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'twoGuys', 'id': 'string_36'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'two guys', 'id': 'string_35'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT stadium of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'stadium', 'id': 'string_37'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'stadium', 'id': 'string_37'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x1000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT blueBldg of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'blueBldg', 'id': 'string_39'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'blue bldg', 'id': 'string_38'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT apartments of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'apartments', 'id': 'string_41'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'apartment buildings', 'id': 'string_40'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x200
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT guy1 of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'guy1', 'id': 'string_43'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'guy 1', 'id': 'string_42'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x800
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT cheerers of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'cheerers', 'id': 'string_44'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'cheerers', 'id': 'string_44'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT bubbleGum of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bubbleGum', 'id': 'string_46'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'bubbleGum chewer', 'id': 'string_45'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT guy2 of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'guy2', 'id': 'string_48'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'guy 2', 'id': 'string_47'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT clarkKent of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'clarkKent', 'id': 'string_50'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'clark Kent', 'id': 'string_49'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 0
+
+.OBJECT xen6 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'xen6', 'id': 'string_51'}
+  [#4] = 0x7c
+  [#5] = 0xb5
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xa8
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT xen9 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'xen9', 'id': 'string_52'}
+  [#4] = 0x3a
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x10c
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT xen8 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'xen8', 'id': 'string_53'}
+  [#4] = 0xd9
+  [#5] = 0x9f
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xa8
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT xen3 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'xen3', 'id': 'string_54'}
+  [#4] = 0x13a
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xa8
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "rm68"		 ; special
+string_1: "crowdGoesWild"		 ; special
+string_2: "roomControl"		 ; special
+string_3: "\"Roger Wilco, we, the people of Xenon, extend our limitless appreciation and eternal gratitude for your acts of heroism.\""
+string_4: "\"Because of your bravery, the planet Xenon, and indeed the entire galaxy, has been saved from domination by the evil (not to mention ugly) Sariens.\""
+string_5: "\"Now, if you'd only been smart enough to bring along the data cartridge containing the construction specifications, we'd be able build a new Star Generator, thereby saving Xenon from the horrors of a rapidly cooling planet. Oh, well. You are just a janitor.\""
+string_6: "\"It is my honor to present you with the coveted Golden Mop, a symbol of pride and accomplishment to members of your esteemed profession.\""
+string_7: "\"Henceforth and for all time you will be known as Hero of Xenon.\""
+string_8: "lottaPraise"		 ; special
+string_9: "greenGirlGives"		 ; special
+string_10: "xenonLeaderReceives"		 ; special
+string_11: "egoReceivesAward"		 ; special
+string_12: "rocketsRedGlare1"		 ; special
+string_13: "rocketsRedGlare2"		 ; special
+string_14: "rocketsRedGlare3"		 ; special
+string_15: "zoomingRockets"		 ; special
+string_16: "closingCredits"		 ; special
+string_17: "leaderTalker"		 ; special
+string_18: "leaderBust"		 ; special
+string_19: "leaderMouth"		 ; special
+string_20: "leaderEyes"		 ; special
+string_21: "xenonLeader"		 ; special
+string_22: "greenGirl"		 ; special
+string_23: "greenGirlBodyPart"		 ; special
+string_24: "king"		 ; special
+string_25: "fireworks1"		 ; special
+string_26: "fireworks2"		 ; special
+string_27: "fireworks3"		 ; special
+string_28: "ship"		 ; special
+string_29: "explosion"		 ; special
+string_30: "fire1"		 ; special
+string_31: "fire2"		 ; special
+string_32: "fire3"		 ; special
+string_33: "green bldg"
+string_34: "greenBldg"		 ; special
+string_35: "two guys"
+string_36: "twoGuys"		 ; special
+string_37: "stadium"		 ; special
+string_38: "blue bldg"
+string_39: "blueBldg"		 ; special
+string_40: "apartment buildings"
+string_41: "apartments"		 ; special
+string_42: "guy 1"
+string_43: "guy1"		 ; special
+string_44: "cheerers"		 ; special
+string_45: "bubbleGum chewer"
+string_46: "bubbleGum"		 ; special
+string_47: "guy 2"
+string_48: "guy2"		 ; special
+string_49: "clark Kent"
+string_50: "clarkKent"		 ; special
+string_51: "xen6"		 ; special
+string_52: "xen9"		 ; special
+string_53: "xen8"		 ; special
+string_54: "xen3"		 ; special
+string_unused_55: ""
+string_unused_56: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 146
+0x2b, 0x33, 0x3b, 0x43, 0x4b, 0x53, 0x5b, 0x63, 0x6b, 0x73, 0xb4, 0xbc, 0xdd, 0xe6, 0xef, 0xf7, 0xff, 0x107, 0x128, 0x171, 0x183, 0x18f, 0x19c, 0x1c1, 0x1d3, 0x1df, 0x1ec, 0x211, 0x223, 0x22f, 0x23c, 0x264, 0x2ab, 0x2c0, 0x2c4, 0x2cd, 0x2d2, 0x362, 0x3a2, 0x3a6, 0x3aa, 0x3ae, 0x3b6, 0x3ca, 0x3d2, 0x3e8, 0x3ec, 0x400, 0x408, 0x41c, 0x424, 0x437, 0x43b, 0x458, 0x4b9, 0x4f3, 0x50c, 0x54f, 0x574, 0x5a0, 0x5e0, 0x603, 0x63c, 0x678, 0x67c, 0x688, 0x68c, 0x698, 0x69c, 0x6b3, 0x6dc, 0x71e, 0x744, 0x7b6, 0x7f8, 0x81e, 0x890, 0x8d2, 0x8f8, 0x96a, 0x9b6, 0x9cd, 0x9f9, 0xa22, 0xa41, 0xa60, 0xa73, 0xa96, 0xaa2, 0xaae, 0xaba, 0xacc, 0xad0, 0xae2, 0xaeb, 0xb14, 0xb78, 0xbae, 0xc20, 0xc7c, 0xce2, 0xd48, 0xd5c, 0xdae, 0xdc2, 0xe14, 0xe28, 0xe7a, 0xe8e, 0xee0, 0xef4, 0xf46, 0xf5a, 0xfac, 0xfc0, 0x101c, 0x1030, 0x109e, 0x10b2, 0x111c, 0x1152, 0x1188, 0x11be, 0x11d2, 0x11fa, 0x120e, 0x1236, 0x124a, 0x1272, 0x1286, 0x12ae, 0x12c2, 0x12ea, 0x12fe, 0x1326, 0x133a, 0x1362, 0x1376, 0x139e, 0x13b2, 0x13da, 0x13ee, 0x1416, 0x147c, 0x14e2, 0x1548

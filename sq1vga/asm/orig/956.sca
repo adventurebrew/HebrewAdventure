@@ -1,0 +1,69 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+ForwardCounter::107:
+		pushi	0x6b
+		push1	
+		lsp	0x1
+		super	0x17, 0x6
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_36
+		lap	0x2
+		aTop	0x12
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_36
+		lap	0x3
+		aTop	0xa
+code_36:
+		ret	
+
+ForwardCounter::215:
+		dpToa	0x12
+		bnt	code_52
+		pushi	0x00d7
+		push0	
+		super	0x17, 0x4
+		jmp	code_62
+code_52:
+		ldi	0x01
+		aTop	0x10
+		pushi	0x00d8
+		push0	
+		self	0x4
+code_62:
+		ret	
+
+		bnot	
+
+.CLASS ForwardCounter of 0x17
+Function area offset: 0x2a
+Selectors [10]:
+  [0x0] = 0x59
+  [0x1] = 0x17
+  [0x2] = 0x8000
+  [0x17] = {'val': 'ForwardCounter', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0x1
+  [0x90] = 0x0
+  [0xd5] = 0x0
+  [0x1ba] = 0x0
+Overriden functions: 2
+  [0x6b]  = ForwardCounter::107   	 ; @0x4
+  [0xd7]  = ForwardCounter::215   	 ; @0x25
+
+.STRINGS
+string_0: "ForwardCounter"		 ; special
+string_unused_1: ""
+string_unused_2: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x52

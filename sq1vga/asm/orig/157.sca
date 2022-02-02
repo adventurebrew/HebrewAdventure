@@ -1,0 +1,339 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT killEgo of 0x6
+OBJECT guard of 0x30
+
+.CODE
+guard::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x30, 0x4
+		pushi	0x69
+		push0	
+		pushi	0x011a
+		pushi	0x04
+		pushi	0x0147
+		pushi	0x00df
+		pTos	0x5e
+		pushi	0x0176
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		pushi	0x00d9
+		push1	
+		pushi	0x0176
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x00a0
+		push1	
+		class	0x4f
+		push	
+		self	0x22
+		ret	
+
+guard::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_102
+		push2	
+		pushi	0x009d
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_190
+code_102:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_121
+		push2	
+		pushi	0x009d
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_190
+code_121:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_140
+		push2	
+		pushi	0x009d
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_190
+code_140:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_159
+		push2	
+		pushi	0x009d
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_190
+code_159:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_179
+		push2	
+		pushi	0x009d
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_190
+code_179:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x30, 0x6
+code_190:
+		toss	
+		ret	
+
+
+.OBJECT guard of 0x30
+Exported
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'guard', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1a1
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x3
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x4
+  [#47] = 0x3
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 2
+  [0x6b]  = guard::107   	 ; @0x12
+  [0x10a]  = guard::266   	 ; @0x51
+
+.CODE
+killEgo::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_376
+		push0	
+		callb	0x2, 0x0
+		pushi	0x6b
+		push0	
+		pushi	0x00c0
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x010e
+		pushi	0x00af
+		pushSelf	
+		lofsa	guard
+		send	0x14
+		jmp	code_559
+code_376:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_398
+		pushi	0x03
+		lsg	0x0
+		lofsa	guard
+		push	
+		pushSelf	
+		callb	0xd, 0x6
+		jmp	code_559
+code_398:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_501
+		pushi	0x0131
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x10
+		and	
+		bnt	code_434
+		pushi	0x00a0
+		push1	
+		push1	
+		lofsa	guard
+		send	0x6
+		jmp	code_475
+code_434:
+		pushi	0x0131
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x40
+		and	
+		bnt	code_464
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		lofsa	guard
+		send	0x6
+		jmp	code_475
+code_464:
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		lofsa	guard
+		send	0x6
+code_475:
+		pushi	0x05
+		push1	
+		pushi	0x019f
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guard
+		send	0x14
+		jmp	code_559
+code_501:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_543
+		pushi	0x05
+		push1	
+		pushi	0x30
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x00d9
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_559
+code_543:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_559
+		push0	
+		callb	0xa, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_559:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT killEgo of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'killEgo', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = killEgo::138   	 ; @0x14a
+
+.STRINGS
+string_0: "guard"		 ; special
+string_1: "killEgo"		 ; special
+string_unused_2: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 8
+0xd2, 0x171, 0x184, 0x1ab, 0x1c9, 0x1d7, 0x1ee, 0x244

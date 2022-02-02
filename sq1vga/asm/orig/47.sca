@@ -1,0 +1,1090 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm47 of 0x74
+
+.CODE
+rm47::107:
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x20
+		push0	
+		pushi	0x31
+		pushi	0x00d5
+		pushi	0x31
+		pushi	0x013f
+		pushi	0x0089
+		pushi	0x011d
+		pushi	0x0095
+		pushi	0x0124
+		pushi	0x0099
+		pushi	0x0113
+		pushi	0x00a4
+		pushi	0x00ed
+		pushi	0x00a8
+		pushi	0x00a3
+		pushi	0x00a4
+		pushi	0x0094
+		pushi	0x009e
+		pushi	0x0085
+		pushi	0x009e
+		pushi	0x009a
+		pushi	0x00b0
+		pushi	0x7e
+		pushi	0x00b3
+		pushi	0x79
+		pushi	0x00b0
+		pushi	0x6f
+		pushi	0x00b1
+		pushi	0x2a
+		pushi	0x00b4
+		push0	
+		pushi	0x00b3
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x4e
+		push	
+		self	0x6
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		lsg	0xc
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_150
+		ldi	0x0a
+		aTop	0x16
+		jmp	code_191
+code_150:
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_177
+		ldi	0x0c
+		aTop	0x16
+		pushi	0x04
+		push1	
+		pushi	0x14
+		lag	0x0
+		send	0x6
+		push0	
+		callb	0x3, 0x0
+		jmp	code_191
+code_177:
+		ldi	0x08
+		aTop	0x16
+		pushi	0x008c
+		push1	
+		lofsa	outaDBU
+		push	
+		self	0x6
+code_191:
+		toss	
+		pushi	0x0187
+		push1	
+		pushi	0x02be
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	radar
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	robot1
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	robot2
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	neonhand
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	lefteye
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	righteye
+		send	0xa
+		pushi	0x6b
+		push0	
+		lofsa	pickupArea
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	store
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	bigSign
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	smallSign
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	storeWindow
+		send	0x4
+		push1	
+		pushi	0x21
+		callb	0x6, 0x2
+		bnt	code_373
+		lsg	0xc
+		ldi	0x30
+		eq?	
+		bnt	code_373
+		pushi	0x011a
+		push2	
+		pushi	0x75
+		pushi	0x00b8
+		push2	
+		pushi	0x02be
+		push1	
+		callk	0x2, 0x4
+		send	0x8
+code_373:
+		ret	
+
+rm47::60:
+		pToa	0x8
+		bnt	code_384
+		ldi	0x00
+		jmp	code_411
+code_384:
+		pushi	0x0131
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		and	
+		bnt	code_411
+		pushi	0x008c
+		push1	
+		lofsa	intoDBU
+		push	
+		lag	0x2
+		send	0x6
+code_411:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+
+.OBJECT rm47 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm47', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'You are outside the Droids-B-Us store.', 'id': 'string_0'}
+  [#10] = 0x2f
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x2a
+  [#17] = 0x2e
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 2
+  [0x6b]  = rm47::107   	 ; @0xe
+  [0x3c]  = rm47::60   	 ; @0x176
+
+.CODE
+outaDBU::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_570
+		push0	
+		callb	0x2, 0x0
+		pushi	0x011a
+		push2	
+		pushi	0x0084
+		pushi	0x00aa
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00c6
+		pushi	0x00ae
+		pushSelf	
+		lag	0x0
+		send	0x14
+		push1	
+		pushi	0x21
+		callb	0x6, 0x2
+		bnt	code_586
+		pushi	0x011a
+		push2	
+		pushi	0x1c
+		pushi	0x00b3
+		push2	
+		pushi	0x02be
+		push1	
+		callk	0x2, 0x4
+		send	0x8
+		jmp	code_586
+code_570:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_586
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_586:
+		toss	
+		ret	
+
+
+.OBJECT outaDBU of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'outaDBU', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = outaDBU::138   	 ; @0x1ee
+
+.CODE
+intoDBU::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_684
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x00a3
+		pushi	0x00a8
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_758
+code_684:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_713
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0098
+		pushi	0x00a4
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_758
+code_713:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_741
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x7b
+		pushi	0x00a6
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_758
+code_741:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_758
+		pushi	0x0177
+		push1	
+		pushi	0x30
+		lag	0x2
+		send	0x6
+code_758:
+		toss	
+		ret	
+
+
+.OBJECT intoDBU of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'intoDBU', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = intoDBU::138   	 ; @0x286
+
+.CODE
+radar::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_838
+		push2	
+		pushi	0x2f
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_903
+code_838:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_856
+		push2	
+		pushi	0x2f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_903
+code_856:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_874
+		push2	
+		pushi	0x2f
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_903
+code_874:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_892
+		push2	
+		pushi	0x2f
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_903
+code_892:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_903:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT radar of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'radar', 'id': 'string_6'}
+  [#4] = 0x136
+  [#5] = 0x73
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'force field sensor', 'id': 'string_4'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The settlement of Ulence Flats is surrounded by these force field generators. They repel undesirables, such as the grell, which thrive below the sands. It will allow only airborne vehicles in or out.', 'id': 'string_5'}
+  [#22] = 0x2
+  [#23] = 0x93
+  [#24] = 0x2
+  [#25] = 0x4
+  [#26] = 0x2
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = radar::266   	 ; @0x332
+
+.OBJECT robot1 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'robot1', 'id': 'string_9'}
+  [#4] = 0x23
+  [#5] = 0x8e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'robot', 'id': 'string_7'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This robot is a security droid. He can scan an area in infra-red, ultra-violet, and infra-ultra-chartreuse.', 'id': 'string_8'}
+  [#22] = 0x2
+  [#23] = 0x1c4
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0xa
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xb
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT robot2 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'robot2', 'id': 'string_11'}
+  [#4] = 0x42
+  [#5] = 0x90
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'robot', 'id': 'string_7'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'It\'s a robot that seems to be saying, \\"Buy me. Take me home.\\"', 'id': 'string_10'}
+  [#22] = 0x2
+  [#23] = 0x1c4
+  [#24] = 0x1
+  [#25] = 0x2
+  [#26] = 0xa
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x9
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x1
+Overriden functions: 0
+
+.CODE
+neonhand::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1240
+		push2	
+		pushi	0x2f
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1251
+code_1240:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_1251:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT neonhand of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'neonhand', 'id': 'string_14'}
+  [#4] = 0x7c
+  [#5] = 0x74
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'neon hand', 'id': 'string_12'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The neon hand waves \\"Hello\\" to you.', 'id': 'string_13'}
+  [#22] = 0x2
+  [#23] = 0x93
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0xd
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x9
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = neonhand::266   	 ; @0x4c4
+
+.OBJECT lefteye of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'lefteye', 'id': 'string_17'}
+  [#4] = 0x88
+  [#5] = 0x62
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'eye', 'id': 'string_15'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's just part of the animated sign.", 'id': 'string_16'}
+  [#22] = 0x2
+  [#23] = 0x93
+  [#24] = 0x0
+  [#25] = 0x2
+  [#26] = 0xe
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x7
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT righteye of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'righteye', 'id': 'string_18'}
+  [#4] = 0x9e
+  [#5] = 0x61
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'eye', 'id': 'string_15'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's just part of the animated sign.", 'id': 'string_16'}
+  [#22] = 0x2
+  [#23] = 0x93
+  [#24] = 0x1
+  [#25] = 0x2
+  [#26] = 0xe
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x7
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.CODE
+pickupArea::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT pickupArea of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'pickupArea', 'id': 'string_21'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'Droids-B-Us warehouse and pickup area', 'id': 'string_19'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'That is the Droids-B-Us warehouse and pickup area.', 'id': 'string_20'}
+Overriden functions: 1
+  [0x10a]  = pickupArea::266   	 ; @0x620
+
+.CODE
+store::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT store of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'store', 'id': 'string_24'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'Droids-B-Us store', 'id': 'string_22'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is the Droids-B-Us storefront.  They sell droids for all purposes.', 'id': 'string_23'}
+Overriden functions: 1
+  [0x10a]  = store::266   	 ; @0x68c
+
+.CODE
+bigSign::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT bigSign of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bigSign', 'id': 'string_27'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'Droids-B-Us sign', 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The big sign over the door says \\"Droids-B-Us\\".', 'id': 'string_26'}
+Overriden functions: 1
+  [0x10a]  = bigSign::266   	 ; @0x6f8
+
+.CODE
+smallSign::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT smallSign of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'smallSign', 'id': 'string_30'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'small posted sign', 'id': 'string_28'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x20
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The sign says \\"ALL SALES FINAL!\\" in 1,438 languages.', 'id': 'string_29'}
+Overriden functions: 1
+  [0x10a]  = smallSign::266   	 ; @0x764
+
+.CODE
+storeWindow::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT storeWindow of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'storeWindow', 'id': 'string_33'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'window', 'id': 'string_31'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'You can see only bits and pieces of droids through the small window.  But it looks safe enough in there.', 'id': 'string_32'}
+Overriden functions: 1
+  [0x10a]  = storeWindow::266   	 ; @0x7d0
+
+.STRINGS
+string_0: "You are outside the Droids-B-Us store."
+string_1: "rm47"		 ; special
+string_2: "outaDBU"		 ; special
+string_3: "intoDBU"		 ; special
+string_4: "force field sensor"
+string_5: "The settlement of Ulence Flats is surrounded by these force field generators. They repel undesirables, such as the grell, which thrive below the sands. It will allow only airborne vehicles in or out."
+string_6: "radar"		 ; special
+string_7: "robot"
+string_8: "This robot is a security droid. He can scan an area in infra-red, ultra-violet, and infra-ultra-chartreuse."
+string_9: "robot1"		 ; special
+string_10: "It's a robot that seems to be saying, \"Buy me. Take me home.\""
+string_11: "robot2"		 ; special
+string_12: "neon hand"
+string_13: "The neon hand waves \"Hello\" to you."
+string_14: "neonhand"		 ; special
+string_15: "eye"
+string_16: "It's just part of the animated sign."
+string_17: "lefteye"		 ; special
+string_18: "righteye"		 ; special
+string_19: "Droids-B-Us warehouse and pickup area"
+string_20: "That is the Droids-B-Us warehouse and pickup area."
+string_21: "pickupArea"		 ; special
+string_22: "Droids-B-Us store"
+string_23: "This is the Droids-B-Us storefront.  They sell droids for all purposes."
+string_24: "store"		 ; special
+string_25: "Droids-B-Us sign"
+string_26: "The big sign over the door says \"Droids-B-Us\"."
+string_27: "bigSign"		 ; special
+string_28: "small posted sign"
+string_29: "The sign says \"ALL SALES FINAL!\" in 1,438 languages."
+string_30: "smallSign"		 ; special
+string_31: "window"
+string_32: "You can see only bits and pieces of droids through the small window.  But it looks safe enough in there."
+string_33: "storeWindow"		 ; special
+string_unused_34: ""
+string_unused_35: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 50
+0xba, 0xda, 0xe9, 0xf8, 0x107, 0x116, 0x125, 0x12d, 0x135, 0x13d, 0x145, 0x14d, 0x194, 0x1b4, 0x1c0, 0x25e, 0x30a, 0x39c, 0x3b0, 0x3c0, 0x406, 0x41a, 0x42a, 0x46c, 0x480, 0x490, 0x4f8, 0x50c, 0x51c, 0x562, 0x576, 0x586, 0x5c8, 0x5dc, 0x5ec, 0x65a, 0x66e, 0x67e, 0x6c6, 0x6da, 0x6ea, 0x732, 0x746, 0x756, 0x79e, 0x7b2, 0x7c2, 0x80a, 0x81e, 0x82e

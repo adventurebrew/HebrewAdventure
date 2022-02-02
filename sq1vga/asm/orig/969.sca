@@ -1,0 +1,66 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+Rev::60:
+		link	0x01
+		pushi	0x00d6
+		push0	
+		self	0x4
+		sat	0x0
+		push	
+		ldi	0x00
+		lt?	
+		bnt	code_30
+		pushi	0x00d7
+		push0	
+		self	0x4
+		jmp	code_39
+code_30:
+		pushi	0x07
+		push1	
+		lst	0x0
+		pToa	0x8
+		send	0x6
+code_39:
+		ret	
+
+Rev::215:
+		pushi	0x07
+		push1	
+		pushi	0x00db
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pToa	0x8
+		send	0x6
+		ret	
+
+		bnot	
+
+.CLASS Rev of 0x16
+Function area offset: 0x26
+Selectors [9]:
+  [0x0] = 0x1f
+  [0x1] = 0x16
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Rev', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0xd4] = 0xffff
+  [0x90] = 0x0
+  [0xd5] = 0x0
+Overriden functions: 2
+  [0x3c]  = Rev::60   	 ; @0x4
+  [0xd7]  = Rev::215   	 ; @0x28
+
+.STRINGS
+string_0: "Rev"		 ; special
+string_unused_1: ""
+
+
+.RELOCATION
+num of pointers: 1
+0x4c

@@ -1,0 +1,1131 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm5 of 0x74
+
+.CODE
+rm5::107:
+		pushi	0x04
+		pushi	0x0080
+		pushi	0x69
+		pushi	0x0190
+		pushi	0x04
+		calle	0x03be, 0x0000, 0x08
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x12
+		lofsa	upperPoly
+		send	0xc
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x24
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x14
+		lofsa	lowerPoly
+		send	0xc
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	body
+		send	0x8
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	alertSign
+		send	0xa
+		lsg	0xc
+		pToa	0x22
+		eq?	
+		bnt	code_106
+		ldi	0x0c
+		jmp	code_108
+code_106:
+		ldi	0x0b
+code_108:
+		aTop	0x16
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x020c
+		push1	
+		pushi	0x03
+		lsg	0xc
+		pTos	0x22
+		pTos	0x1e
+		calle	0x03e7, 0x0005, 0x06
+		not	
+		bnt	code_150
+		ldi	0x01
+		jmp	code_152
+code_150:
+		ldi	0x00
+code_152:
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x0208
+		push1	
+		lofsa	lowerDoor
+		push	
+		pushi	0x020f
+		push1	
+		lofsa	changeToUpper
+		push	
+		lofsa	upperDoor
+		send	0x16
+		pushi	0x6b
+		push0	
+		pushi	0x0208
+		push1	
+		lofsa	upperDoor
+		push	
+		pushi	0x020f
+		push1	
+		lofsa	changeToLower
+		push	
+		lofsa	lowerDoor
+		send	0x10
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_367
+		lsg	0xc
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_231
+		pushi	0x0174
+		push1	
+		lofsa	upperPoly
+		push	
+		self	0x6
+		jmp	code_363
+code_231:
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_363
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x38
+		lt?	
+		bnt	code_261
+		pushi	0x03
+		push1	
+		pushi	0x38
+		lag	0x0
+		send	0x6
+code_261:
+		pushi	0x0117
+		pushi	0x03
+		push2	
+		pushi	0x03
+		pushi	0x05
+		lofsa	body
+		send	0xa
+		pushi	0x0112
+		push1	
+		pushi	0x6789
+		lofsa	upperDoor
+		send	0x6
+		pushi	0x0112
+		push1	
+		pushi	0x6789
+		lofsa	lowerDoor
+		send	0x6
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x10
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x33
+		pushi	0x0121
+		pushi	0x3a
+		pushi	0x011b
+		pushi	0x44
+		pushi	0x013f
+		pushi	0x44
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x2e
+		push	
+		self	0x6
+code_363:
+		toss	
+		jmp	code_487
+code_367:
+		lsg	0xc
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_469
+		pushi	0x0112
+		push1	
+		pushi	0x6789
+		lofsa	upperDoor
+		send	0x6
+		pushi	0x0112
+		push1	
+		pushi	0x6789
+		lofsa	lowerDoor
+		send	0x6
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x12
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		push0	
+		pushi	0x00bb
+		pushi	0x24
+		pushi	0x00bb
+		pushi	0x38
+		pushi	0x00b2
+		pushi	0x18
+		pushi	0x00a1
+		push0	
+		pushi	0x00a1
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x32
+		push	
+		self	0x6
+		jmp	code_486
+code_469:
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_486
+		pushi	0x0174
+		push1	
+		lofsa	lowerPoly
+		push	
+		self	0x6
+code_486:
+		toss	
+code_487:
+		pushi	0x0187
+		push1	
+		pushi	0x02bc
+		self	0x6
+		push0	
+		callb	0x3, 0x0
+		ret	
+
+rm5::60:
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_547
+		pushi	0x0131
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x10
+		and	
+		bnt	code_535
+		pushi	0x42
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		jmp	code_583
+code_535:
+		pushi	0x42
+		push1	
+		pushi	0xff
+		lag	0x0
+		send	0x6
+		jmp	code_583
+code_547:
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x08
+		and	
+		bnt	code_574
+		pushi	0x42
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		jmp	code_583
+code_574:
+		pushi	0x42
+		push1	
+		pushi	0xff
+		lag	0x0
+		send	0x6
+code_583:
+		pToa	0x8
+		bnt	code_593
+		ldi	0x00
+		jmp	code_638
+code_593:
+		pushi	0x021a
+		push0	
+		lofsa	lowerDoor
+		send	0x4
+		bnt	code_617
+		pushi	0x00b3
+		push0	
+		lofsa	lowerDoor
+		send	0x4
+		jmp	code_638
+code_617:
+		pushi	0x021a
+		push0	
+		lofsa	upperDoor
+		send	0x4
+		bnt	code_638
+		pushi	0x00b3
+		push0	
+		lofsa	upperDoor
+		send	0x4
+code_638:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+		bnot	
+
+.OBJECT rm5 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm5', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is another hallway aboard the Arcada. There is an elevator door nearby.', 'id': 'string_0'}
+  [#10] = 0x5
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x6
+  [#16] = 0x0
+  [#17] = 0x4
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 2
+  [0x6b]  = rm5::107   	 ; @0xe
+  [0x3c]  = rm5::60   	 ; @0x1f5
+
+.CODE
+changeToUpper::60:
+		ldi	0x01
+		sag	0xa6
+		pushi	0x54
+		push1	
+		lofsa	lowerPoly
+		push	
+		pushi	0x73
+		push1	
+		lofsa	upperPoly
+		push	
+		pushi	0x00e8
+		push0	
+		lag	0x2
+		send	0x4
+		send	0xc
+		ret	
+
+		bnot	
+
+.OBJECT changeToUpper of 0x1
+Function area offset: 0xa
+Selectors [4]:
+  [#0] = 0x1
+  [#1] = 0x1
+  [#2] = 0x0
+  [#3] = {'val': 'changeToUpper', 'id': 'string_2'}
+Overriden functions: 1
+  [0x3c]  = changeToUpper::60   	 ; @0x2d2
+
+.CODE
+changeToLower::60:
+		ldi	0x02
+		sag	0xa6
+		pushi	0x54
+		push1	
+		lofsa	upperPoly
+		push	
+		pushi	0x73
+		push1	
+		lofsa	lowerPoly
+		push	
+		pushi	0x00e8
+		push0	
+		lag	0x2
+		send	0x4
+		send	0xc
+		ret	
+
+		bnot	
+
+.OBJECT changeToLower of 0x1
+Function area offset: 0xa
+Selectors [4]:
+  [#0] = 0x1
+  [#1] = 0x1
+  [#2] = 0x0
+  [#3] = {'val': 'changeToLower', 'id': 'string_3'}
+Overriden functions: 1
+  [0x3c]  = changeToLower::60   	 ; @0x310
+
+.CODE
+searchBody::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_875
+		push0	
+		callb	0x2, 0x0
+		pushi	0x00e2
+		push2	
+		push0	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1089
+code_875:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1004
+		pToa	0x1a
+		bnt	code_953
+		pushi	0x03
+		pushi	0x05
+		push0	
+		pushi	0x00d3
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_911
+		lofsa	string_4		; "a keycard."
+		jmp	code_914
+code_911:
+		lofsa	string_5		; "nothing."
+code_914:
+		push	
+		calle	0xff, 0x04, 0x06
+		pushi	0x00d3
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		not	
+		bnt	code_949
+		push2	
+		push1	
+		pushi	0x0084
+		callb	0xb, 0x4
+		pushi	0x0145
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+code_949:
+		ldi	0x02
+		aTop	0xa
+code_953:
+		pushi	0x05
+		push1	
+		pushi	0x04
+		pushi	0x06
+		push1	
+		pushi	0x04
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		pushi	0x38
+		push1	
+		pushi	0x05
+		pushi	0x07
+		push1	
+		pTos	0x1a
+		pushi	0x0094
+		push2	
+		pToa	0x1a
+		bnt	code_993
+		class	0x1b
+		jmp	code_995
+code_993:
+		class	0x1a
+code_995:
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x26
+		jmp	code_1089
+code_1004:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1055
+		pushi	0x06
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		add	
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push2	
+		pushSelf	
+		lag	0x0
+		send	0x16
+		ldi	0x00
+		aTop	0xa
+		ldi	0x03
+		aTop	0x1a
+		jmp	code_1089
+code_1055:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1089
+		push0	
+		callb	0x3, 0x0
+		ldi	0xff
+		aTop	0xa
+		ldi	0x00
+		aTop	0x1a
+		pushi	0x03
+		pushi	0x07
+		push0	
+		pushi	0x3c
+		callb	0x1, 0x6
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1089:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT searchBody of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'searchBody', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = searchBody::138   	 ; @0x34e
+
+.CODE
+body::266:
+		lsg	0xc
+		ldi	0x06
+		eq?	
+		bnt	code_1401
+		lsg	0xa6
+		ldi	0x01
+		eq?	
+		bnt	code_1401
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1213
+		pTos	0x28
+		ldi	0x6789
+		ne?	
+		bnt	code_1199
+		pushi	0x008c
+		push1	
+		lofsa	searchBody
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_1397
+code_1199:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2e, 0x6
+		jmp	code_1397
+code_1213:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1231
+		push2	
+		pushi	0x05
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1397
+code_1231:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_1249
+		push2	
+		pushi	0x05
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1397
+code_1249:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1268
+		push2	
+		pushi	0x05
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_1397
+code_1268:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1386
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_1296
+		push2	
+		pushi	0x05
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_1382
+code_1296:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1314
+		push2	
+		pushi	0x05
+		dup	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1382
+code_1314:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1333
+		push2	
+		pushi	0x05
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_1382
+code_1333:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_1352
+		push2	
+		pushi	0x05
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_1382
+code_1352:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1371
+		push2	
+		pushi	0x05
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_1382
+code_1371:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2e, 0x8
+code_1382:
+		toss	
+		jmp	code_1397
+code_1386:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x3
+		super	0x2e, 0x6
+code_1397:
+		toss	
+		jmp	code_1410
+code_1401:
+		push2	
+		pushi	0x05
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+code_1410:
+		ret	
+
+		bnot	
+
+.OBJECT body of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'body', 'id': 'string_9'}
+  [#4] = 0x12d
+  [#5] = 0x36
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'Jerry', 'id': 'string_7'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x13d
+  [#18] = 0x3a
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's all that remains of Jerry, one of the few technodudes aboard who sometimes tolerated your company. Your low clearance excluded you from visiting him during the performance of his duties in the elegant lower level airlock of the Arcada.", 'id': 'string_8'}
+  [#22] = 0x2
+  [#23] = 0x190
+  [#24] = 0x1
+  [#25] = 0x5
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4000
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 1
+  [0x10a]  = body::266   	 ; @0x47e
+
+.CODE
+alertSign::266:
+		lsg	0xa6
+		ldi	0x02
+		eq?	
+		bnt	code_1534
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+		jmp	code_1543
+code_1534:
+		push2	
+		pushi	0x05
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+code_1543:
+		ret	
+
+
+.OBJECT alertSign of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'alertSign', 'id': 'string_12'}
+  [#4] = 0xe1
+  [#5] = 0x66
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'alert sign', 'id': 'string_10'}
+  [#14] = 0x5a
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Gee! The sign seems to be flashing. Could it be a warning of some kind? Who knows? You're always slower than normal after a nap.", 'id': 'string_11'}
+  [#22] = 0x2
+  [#23] = 0x69
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 1
+  [0x10a]  = alertSign::266   	 ; @0x5e8
+
+.CODE
+upperDoor::266:
+		lsg	0xa6
+		pToa	0x58
+		eq?	
+		bnt	code_1698
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1683
+		push2	
+		pushi	0x05
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_1694
+code_1683:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x73, 0x6
+code_1694:
+		toss	
+		jmp	code_1707
+code_1698:
+		push2	
+		pushi	0x05
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+code_1707:
+		ret	
+
+
+.OBJECT upperDoor of 0x73
+Function area offset: 0x80
+Selectors [63]:
+  [#0] = 0x73
+  [#1] = 0x73
+  [#2] = 0x0
+  [#3] = {'val': 'upperDoor', 'id': 'string_15'}
+  [#4] = 0xa2
+  [#5] = 0x2e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator door', 'id': 'string_13'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'These appear to be doors to an elevator.', 'id': 'string_14'}
+  [#22] = 0x2
+  [#23] = 0x69
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x1
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x13b
+  [#50] = 0x137
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x0
+  [#58] = 0x0
+  [#59] = 0x0
+  [#60] = 0x0
+  [#61] = 0x0
+  [#62] = 0x0
+Overriden functions: 1
+  [0x10a]  = upperDoor::266   	 ; @0x676
+
+.CODE
+lowerDoor::266:
+		lsg	0xa6
+		pToa	0x58
+		eq?	
+		bnt	code_1902
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1887
+		push2	
+		pushi	0x05
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		jmp	code_1898
+code_1887:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x73, 0x6
+code_1898:
+		toss	
+		jmp	code_1911
+code_1902:
+		push2	
+		pushi	0x05
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+code_1911:
+		ret	
+
+
+.OBJECT lowerDoor of 0x73
+Function area offset: 0x80
+Selectors [63]:
+  [#0] = 0x73
+  [#1] = 0x73
+  [#2] = 0x0
+  [#3] = {'val': 'lowerDoor', 'id': 'string_17'}
+  [#4] = 0xa2
+  [#5] = 0x8a
+  [#6] = 0x1
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator door', 'id': 'string_13'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'elevator', 'id': 'string_16'}
+  [#22] = 0x2
+  [#23] = 0x69
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x2
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x13b
+  [#50] = 0x137
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x0
+  [#58] = 0x0
+  [#59] = 0x0
+  [#60] = 0x0
+  [#61] = 0x0
+  [#62] = 0x0
+Overriden functions: 1
+  [0x10a]  = lowerDoor::266   	 ; @0x742
+
+.OBJECT upperPoly of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'upperPoly', 'id': 'string_18'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.OBJECT lowerPoly of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'lowerPoly', 'id': 'string_19'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "This is another hallway aboard the Arcada. There is an elevator door nearby."
+string_1: "rm5"		 ; special
+string_2: "changeToUpper"		 ; special
+string_3: "changeToLower"		 ; special
+string_4: "a keycard."
+string_5: "nothing."
+string_6: "searchBody"		 ; special
+string_7: "Jerry"
+string_8: "It's all that remains of Jerry, one of the few technodudes aboard who sometimes tolerated your company. Your low clearance excluded you from visiting him during the performance of his duties in the elegant lower level airlock of the Arcada."
+string_9: "body"		 ; special
+string_10: "alert sign"
+string_11: "Gee! The sign seems to be flashing. Could it be a warning of some kind? Who knows? You're always slower than normal after a nap."
+string_12: "alertSign"		 ; special
+string_13: "elevator door"
+string_14: "These appear to be doors to an elevator."
+string_15: "upperDoor"		 ; special
+string_16: "elevator"
+string_17: "lowerDoor"		 ; special
+string_18: "upperPoly"		 ; special
+string_19: "lowerPoly"		 ; special
+string_unused_20: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0, 0x0, 0x13f, 0x0, 0x13f, 0xbd, 0x0, 0xbd, 0x0, 0x4a, 0x20, 0x43, 0x101, 0x43, 0x107, 0x30, 0xbc, 0x30, 0xb8, 0x32, 0xa9, 0x32, 0xa9, 0x1c, 0x9a, 0x1c, 0x9a, 0x32, 0x8b, 0x32, 0x87, 0x2d, 0x1f, 0x2d, 0x0, 0x34, 0x31, 0x9d, 0x4c, 0xa9, 0x6b, 0x9c, 0x104, 0x9c, 0x13f, 0xa7, 0x13f, 0xbd, 0x0, 0xbd, 0x0, 0x0, 0x13f, 0x0, 0x13f, 0x93, 0xf3, 0x84, 0xbd, 0x85, 0xb8, 0x90, 0xab, 0x90, 0xa6, 0x80, 0x9c, 0x80, 0x97, 0x90, 0x8b, 0x90, 0x87, 0x86, 0x6e, 0x86
+
+.RELOCATION
+num of pointers: 47
+0x2d, 0x3e, 0x4a, 0x59, 0xa1, 0xa9, 0xad, 0xb9, 0xc1, 0xc5, 0xdf, 0x110, 0x11c, 0x128, 0x180, 0x18c, 0x1e1, 0x256, 0x262, 0x26e, 0x27a, 0x298, 0x2a4, 0x2da, 0x2e1, 0x302, 0x318, 0x31f, 0x340, 0x38a, 0x390, 0x456, 0x4a5, 0x596, 0x5aa, 0x5ba, 0x61a, 0x62e, 0x63e, 0x6be, 0x6d2, 0x6e2, 0x78a, 0x79e, 0x7ae, 0x81c, 0x83c

@@ -1,0 +1,362 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+RegionPath::107:
+		link	0x01
+		pToa	0x20
+		bnt	code_122
+		lap	0x0
+		bnt	code_56
+		lap	0x1
+		aTop	0x8
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_56
+		lap	0x2
+		aTop	0xa
+		lsp	0x0
+		ldi	0x03
+		ge?	
+		bnt	code_56
+		lap	0x3
+		aTop	0x2c
+		lsp	0x0
+		ldi	0x04
+		ge?	
+		bnt	code_56
+		lap	0x4
+		aTop	0x2a
+code_56:
+		pToa	0x2e
+		not	
+		bnt	code_113
+		pushi	0x0207
+		push0	
+		pushi	0x0180
+		push1	
+		push1	
+		self	0xa
+		pToa	0x30
+		not	
+		bnt	code_101
+		pushi	0x12
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x34
+		pushi	0x11
+		push0	
+		pToa	0x8
+		send	0x4
+		aTop	0x36
+		ldi	0x01
+		aTop	0x30
+code_101:
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x011f
+		push0	
+		pToa	0x8
+		send	0xa
+code_113:
+		ldi	0x00
+		aTop	0x20
+		pushi	0x44
+		push0	
+		self	0x4
+code_122:
+		pushi	0x6b
+		push0	
+		super	0x1e, 0x4
+		pushi	0x55
+		push0	
+		pToa	0x8
+		send	0x4
+		sat	0x0
+		pTos	0x26
+		lag	0xb
+		eq?	
+		bnt	code_181
+		lst	0x0
+		ldi	0x03e8
+		ge?	
+		bnt	code_213
+		pushi	0x55
+		push1	
+		lst	0x0
+		ldi	0x03e8
+		sub	
+		push	
+		pushi	0x12
+		push1	
+		pTos	0x34
+		pushi	0x11
+		push1	
+		pTos	0x36
+		pToa	0x8
+		send	0x12
+		jmp	code_213
+code_181:
+		lst	0x0
+		ldi	0x03e8
+		lt?	
+		bnt	code_213
+		pushi	0x55
+		push1	
+		lst	0x0
+		ldi	0x03e8
+		add	
+		push	
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x011f
+		push1	
+		push1	
+		pToa	0x8
+		send	0x12
+code_213:
+		ret	
+
+RegionPath::68:
+		pushi	0x43
+		push1	
+		ipToa	0x28
+		push	
+		self	0x6
+		aTop	0xc
+		pushi	0x43
+		push1	
+		ipToa	0x28
+		push	
+		self	0x6
+		aTop	0xe
+		ret	
+
+RegionPath::519:
+		pushi	0x0201
+		push1	
+		pushi	0x43
+		push1	
+		pTos	0x28
+		ldi	0x02
+		add	
+		aTop	0x28
+		push	
+		self	0x6
+		push	
+		pushi	0x44
+		push0	
+		self	0xa
+		pTos	0x26
+		lag	0xb
+		ne?	
+		bnt	code_310
+		pushi	0x55
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		ldi	0x03e8
+		lt?	
+		bnt	code_310
+		pushi	0x55
+		push1	
+		pushi	0x55
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		ldi	0x03e8
+		add	
+		push	
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x011f
+		push1	
+		push1	
+		pToa	0x8
+		send	0x12
+code_310:
+		pushi	0x011a
+		push2	
+		pTos	0xc
+		pTos	0xe
+		pToa	0x8
+		send	0x8
+		ret	
+
+RegionPath::100:
+		ldi	0x01
+		aTop	0x20
+		pushi	0x01a6
+		push0	
+		self	0x4
+		bnt	code_370
+		pushi	0x4d
+		push1	
+		pushi	0xff
+		pushi	0x0180
+		push1	
+		push0	
+		self	0xc
+		pToa	0x2a
+		bnt	code_361
+		pushi	0x6b
+		push0	
+		self	0x4
+		jmp	code_419
+code_361:
+		pushi	0x64
+		push0	
+		super	0x1e, 0x4
+		jmp	code_419
+code_370:
+		pToa	0x2c
+		bnt	code_389
+		pushi	0x008b
+		push1	
+		pTos	0x28
+		ldi	0x02
+		div	
+		push	
+		pToa	0x2c
+		send	0x6
+code_389:
+		pushi	0x43
+		push1	
+		pTos	0x28
+		ldi	0x01
+		add	
+		push	
+		self	0x6
+		push	
+		ldi	0x7fff
+		eq?	
+		bnt	code_414
+		pushi	0x0207
+		push0	
+		self	0x4
+code_414:
+		pushi	0x6b
+		push0	
+		self	0x4
+code_419:
+		ret	
+
+RegionPath::422:
+		pushi	0x43
+		push1	
+		pTos	0x28
+		ldi	0x01
+		add	
+		push	
+		self	0x6
+		push	
+		ldi	0x8000
+		eq?	
+		bt	code_455
+		pushi	0x43
+		push1	
+		pTos	0x28
+		ldi	0x02
+		add	
+		push	
+		self	0x6
+		push	
+		ldi	0x8000
+		eq?	
+code_455:
+		ret	
+
+RegionPath::67:
+		pushi	0x03
+		pushi	0x0326
+		push0	
+		pTos	0x6
+		calle	0xff, 0x04, 0x06
+		ldi	0x00
+		ret	
+
+RegionPath::108:
+		pToa	0x32
+		bnt	code_500
+		pushi	0x017f
+		push0	
+		push1	
+		push	
+		callk	0x2, 0x2
+		send	0x4
+		not	
+		bnt	code_512
+		pushi	0x6c
+		push0	
+		super	0x1e, 0x4
+		jmp	code_512
+code_500:
+		pushi	0x03
+		pushi	0x0326
+		push1	
+		pTos	0x6
+		calle	0xff, 0x00, 0x06
+code_512:
+		ret	
+
+		bnot	
+
+.CLASS RegionPath of 0x1e
+Function area offset: 0x72
+Selectors [28]:
+  [0x0] = 0x70
+  [0x1] = 0x1e
+  [0x2] = 0x8000
+  [0x17] = {'val': 'RegionPath', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x89] = 0x0
+  [0x4] = 0x0
+  [0x3] = 0x0
+  [0x2e] = 0x0
+  [0x2f] = 0x0
+  [0x30] = 0x0
+  [0x31] = 0x0
+  [0x32] = 0x0
+  [0x33] = 0x0
+  [0x34] = 0x0
+  [0x35] = 0x0
+  [0xd5] = 0x1
+  [0xde] = 0x0
+  [0xdf] = 0x0
+  [0x201] = 0x0
+  [0x4d] = 0xffff
+  [0x202] = 0x1
+  [0x1a5] = 0x0
+  [0x180] = 0x0
+  [0x203] = 0x0
+  [0x204] = 0x0
+  [0x205] = 0x0
+  [0x206] = 0x0
+Overriden functions: 7
+  [0x6b]  = RegionPath::107   	 ; @0x4
+  [0x6c]  = RegionPath::108   	 ; @0x1d7
+  [0x64]  = RegionPath::100   	 ; @0x143
+  [0x44]  = RegionPath::68   	 ; @0xd6
+  [0x1a6]  = RegionPath::422   	 ; @0x1a4
+  [0x207]  = RegionPath::519   	 ; @0xeb
+  [0x43]  = RegionPath::67   	 ; @0x1c8
+
+.STRINGS
+string_0: "RegionPath"		 ; special
+string_unused_1: ""
+string_unused_2: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 1
+0x214

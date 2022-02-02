@@ -1,0 +1,47 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT aboutCode of 0x1
+
+.CODE
+aboutCode::60:
+		pushi	0x03
+		pushi	0x032b
+		push0	
+		lsg	0x1b
+		calle	0xff, 0x04, 0x06
+		push2	
+		pushi	0x032b
+		push1	
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x032b
+		push2	
+		calle	0xff, 0x00, 0x04
+		ret	
+
+		bnot	
+
+.OBJECT aboutCode of 0x1
+Exported
+Function area offset: 0xa
+Selectors [4]:
+  [#0] = 0x1
+  [#1] = 0x1
+  [#2] = 0x0
+  [#3] = {'val': 'aboutCode', 'id': 'string_0'}
+Overriden functions: 1
+  [0x3c]  = aboutCode::60   	 ; @0xe
+
+.STRINGS
+string_0: "aboutCode"		 ; special
+string_unused_1: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 1
+0x40

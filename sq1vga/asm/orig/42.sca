@@ -1,0 +1,2650 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm42 of 0x74
+
+.CODE
+rm42::107:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x18
+		push0	
+		pushi	0x0082
+		pushi	0x00c0
+		pushi	0x0083
+		pushi	0x00d5
+		pushi	0x0089
+		pushi	0x00d1
+		pushi	0x0092
+		pushi	0x00df
+		pushi	0x0094
+		pushi	0x00dc
+		pushi	0x0099
+		pushi	0x00c5
+		pushi	0x0099
+		pushi	0x00b5
+		pushi	0x00a1
+		pushi	0x0088
+		pushi	0x00a1
+		pushi	0x6b
+		pushi	0x00a6
+		pushi	0x3e
+		pushi	0x00ab
+		push0	
+		pushi	0x00aa
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x3e
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0a
+		pushi	0x013f
+		pushi	0x00bd
+		pushi	0x0126
+		pushi	0x00bd
+		pushi	0x011e
+		pushi	0x00b5
+		pushi	0x0123
+		pushi	0x00ae
+		pushi	0x013f
+		pushi	0x00ae
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x22
+		push	
+		self	0x8
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x0a
+		pushi	0x008e
+		calle	0x03be, 0x0000, 0x06
+		lsg	0xc
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_207
+		ldi	0x0a
+		aTop	0x16
+		pushi	0x011a
+		push2	
+		pushi	0x00e6
+		pTos	0x18
+		ldi	0x05
+		add	
+		push	
+		lag	0x0
+		send	0x8
+		jmp	code_330
+code_207:
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_283
+		ldi	0x0c
+		aTop	0x16
+		pushi	0x04
+		push1	
+		pushi	0x14
+		lag	0x0
+		send	0x6
+		push1	
+		pushi	0x28
+		callb	0x6, 0x2
+		bnt	code_276
+		pushi	0x04
+		pushi	0x0080
+		pushi	0x1d
+		pushi	0x01b0
+		pushi	0x0203
+		calle	0x03be, 0x0000, 0x08
+		pushi	0x6b
+		push0	
+		lofsa	mugger
+		send	0x4
+		pushi	0x008c
+		push1	
+		lofsa	mugEgo
+		push	
+		self	0x6
+		jmp	code_330
+code_276:
+		push0	
+		callb	0x3, 0x0
+		jmp	code_330
+code_283:
+		dup	
+		ldi	0x2b
+		eq?	
+		bnt	code_308
+		pushi	0x008c
+		pushi	0x03
+		lofsa	dumpDust
+		push	
+		push0	
+		push1	
+		lag	0x2
+		send	0xa
+		jmp	code_330
+code_308:
+		ldi	0x08
+		aTop	0x16
+		pushi	0x011a
+		push2	
+		pushi	0x00dc
+		pushi	0x00b4
+		lag	0x0
+		send	0x8
+		push0	
+		callb	0x3, 0x0
+code_330:
+		toss	
+		pushi	0x0187
+		push1	
+		pushi	0x02be
+		self	0x6
+		lsg	0xc
+		ldi	0x2b
+		ne?	
+		bnt	code_355
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+code_355:
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		lofsa	robotArm
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	dumpDust
+		push	
+		lofsa	hole
+		send	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	radar1
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	radar2
+		send	0xa
+		pushi	0x6b
+		push0	
+		lofsa	pile
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	pickup
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	toDBU
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	droidStore
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	barBack
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	scribbles
+		send	0x4
+		ret	
+
+rm42::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_491
+		push2	
+		pushi	0x2a
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_557
+code_491:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_509
+		push2	
+		pushi	0x2a
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_557
+code_509:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_527
+		push2	
+		pushi	0x2a
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_557
+code_527:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_546
+		push2	
+		pushi	0x2a
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_557
+code_546:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x74, 0x6
+code_557:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT rm42 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm42', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is the back of the bar at the southeast corner of Ulence Flats.', 'id': 'string_0'}
+  [#10] = 0x2a
+  [#11] = 0xffff
+  [#12] = 0x8c
+  [#13] = 0x0
+  [#14] = 0x2f
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x29
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 2
+  [0x6b]  = rm42::107   	 ; @0xe
+  [0x10a]  = rm42::266   	 ; @0x1d7
+
+.CODE
+dumpDust::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_673
+		pToa	0x1a
+		bnt	code_660
+		ldi	0x06
+		aTop	0x10
+		jmp	code_1036
+code_660:
+		push2	
+		pushi	0x0a
+		pushi	0x23
+		callk	0x3c, 0x4
+		aTop	0x12
+		jmp	code_1036
+code_673:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_746
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_705
+		pToa	0x1a
+		not	
+		bnt	code_705
+		pushi	0x6b
+		push0	
+		self	0x4
+		jmp	code_1036
+code_705:
+		push0	
+		callb	0x2, 0x0
+		pushi	0x2b
+		push1	
+		pushi	0x025b
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	hole
+		send	0xe
+		jmp	code_1036
+code_746:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_799
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		push2	
+		lsg	0x0
+		lofsa	hole
+		push	
+		callb	0xd, 0x4
+		pushi	0x00c0
+		push0	
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	robotArm
+		send	0x18
+		jmp	code_1036
+code_799:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_813
+		ldi	0x18
+		aTop	0x10
+		jmp	code_1036
+code_813:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_848
+		pushi	0x06
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		push1	
+		pushSelf	
+		lofsa	robotArm
+		send	0x18
+		jmp	code_1036
+code_848:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_888
+		pushi	0x2b
+		push1	
+		pushi	0x025c
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x9a
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	robotArm
+		send	0x8
+		jmp	code_1036
+code_888:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_920
+		pushi	0x06
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	robotArm
+		send	0x14
+		jmp	code_1036
+code_920:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_960
+		pushi	0x2b
+		push1	
+		pushi	0x025b
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	hole
+		send	0x8
+		jmp	code_1036
+code_960:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_999
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x011b
+		push0	
+		lofsa	hole
+		send	0x4
+		pushi	0x69
+		push0	
+		lofsa	robotArm
+		send	0x4
+		ldi	0x02
+		aTop	0x12
+		jmp	code_1036
+code_999:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_1036
+		pToa	0x1a
+		bnt	code_1027
+		pushi	0x05
+		pushi	0x4e
+		push0	
+		push0	
+		pushi	0x2a
+		pushi	0x04
+		callb	0xa, 0xa
+		jmp	code_1036
+code_1027:
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6b
+		push0	
+		self	0x4
+code_1036:
+		toss	
+		ret	
+
+
+.OBJECT dumpDust of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'dumpDust', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = dumpDust::138   	 ; @0x27c
+
+.CODE
+searchDust::138:
+		link	0x01
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1153
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x0a
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x12
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x24
+		jmp	code_1419
+code_1153:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1179
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push1	
+		pushi	0xff
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1419
+code_1179:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1204
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1419
+code_1204:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1230
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push1	
+		pushi	0xff
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1419
+code_1230:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1256
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x06
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1419
+code_1256:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1270
+		ldi	0x0c
+		aTop	0x10
+		jmp	code_1419
+code_1270:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1337
+		lsg	0xb0
+		ldi	0x03
+		ge?	
+		bnt	code_1321
+		push2	
+		push2	
+		lsg	0xb0
+		callk	0x3c, 0x4
+		sat	0x0
+		lsg	0xb0
+		sub	
+		sag	0xb0
+		lsg	0xa5
+		lat	0x0
+		add	
+		sag	0xa5
+		pushi	0x03
+		pushi	0x2a
+		pushi	0x05
+		lst	0x0
+		calle	0xff, 0x04, 0x06
+		jmp	code_1330
+code_1321:
+		push2	
+		pushi	0x2a
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+code_1330:
+		ldi	0x02
+		aTop	0x12
+		jmp	code_1419
+code_1337:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1359
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1419
+code_1359:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_1419
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pToa	0x1a
+		bnt	code_1402
+		pushi	0x0119
+		pushi	0x03
+		class	0x6c
+		push	
+		lsg	0x0
+		pushi	0x37
+		push2	
+		pushi	0x02be
+		push1	
+		callk	0x2, 0x4
+		send	0xa
+code_1402:
+		pushi	0x06
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1419:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT searchDust of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'searchDust', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = searchDust::138   	 ; @0x448
+
+.CODE
+mugEgo::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1517
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x7d
+		pushi	0x00ab
+		pushSelf	
+		lag	0x0
+		send	0xc
+		ldi	0x1e
+		aTop	0x10
+		jmp	code_2073
+code_1517:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1540
+		pushi	0x0094
+		push2	
+		class	0x5f
+		push	
+		push1	
+		lofsa	mugger
+		send	0x8
+		jmp	code_2073
+code_1540:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1579
+		pushi	0x6b
+		pushi	0x08
+		lofsa	muggerBust
+		push	
+		lofsa	muggerEyes
+		push	
+		lofsa	muggerMouth
+		push	
+		lofsa	string_4		; "\"Come on over here, pal. Wait'll ya see this!\""
+		push	
+		push0	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0x14
+		jmp	code_2073
+code_1579:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1600
+		pushi	0x00e2
+		push2	
+		pushi	0x5a
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_2073
+code_1600:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1633
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x14
+		jmp	code_2073
+code_1633:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1664
+		pushi	0x05
+		push1	
+		pushi	0x1d
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x14
+		jmp	code_2073
+code_1664:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1697
+		pushi	0x00a0
+		push1	
+		pushi	0x05
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x14
+		jmp	code_2073
+code_1697:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1736
+		pushi	0x6b
+		pushi	0x08
+		lofsa	muggerBust
+		push	
+		lofsa	muggerEyes
+		push	
+		lofsa	muggerMouth
+		push	
+		lofsa	string_5		; "\"Hold it right there, pal! This is a stick-up! I'll just relieve you of your cash, thank you very much.\""
+		push	
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0x14
+		jmp	code_2073
+code_1736:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_1773
+		ldi	0x01
+		sal	0x0
+		push0	
+		callb	0x3, 0x0
+		pushi	0x00c7
+		pushi	0x04
+		push0	
+		push1	
+		pushi	0x03
+		pushi	0x04
+		lag	0x45
+		send	0xc
+		ldi	0x04
+		aTop	0x12
+		jmp	code_2073
+code_1773:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_1801
+		pushi	0x01fd
+		pushi	0x05
+		lofsa	string_6		; "\"C'mon, c'mon, I ain't got all day.\""
+		push	
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0xe
+		jmp	code_2073
+code_1801:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_1815
+		ldi	0x05
+		aTop	0x12
+		jmp	code_2073
+code_1815:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_1848
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push2	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x14
+		jmp	code_2073
+code_1848:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_1884
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		lag	0x0
+		send	0xc
+		pushi	0x07
+		push1	
+		push1	
+		lofsa	mugger
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2073
+code_1884:
+		dup	
+		ldi	0x0d
+		eq?	
+		bnt	code_1915
+		pushi	0x07
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	mugger
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2073
+code_1915:
+		dup	
+		ldi	0x0e
+		eq?	
+		bnt	code_1946
+		pushi	0x07
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		pushi	0x07
+		push1	
+		push1	
+		lofsa	mugger
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2073
+code_1946:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_1977
+		pushi	0x07
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	mugger
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2073
+code_1977:
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_2008
+		pushi	0x07
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		pushi	0x07
+		push1	
+		push1	
+		lofsa	mugger
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_2073
+code_2008:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_2052
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	mugger
+		send	0xc
+		jmp	code_2073
+code_2052:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_2073
+		pushi	0x05
+		pushi	0x03ac
+		push1	
+		push0	
+		pushi	0x2a
+		pushi	0x07
+		callb	0xa, 0xa
+code_2073:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT mugEgo of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'mugEgo', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = mugEgo::138   	 ; @0x5c8
+
+.CODE
+egoGivesMoney::138:
+		link	0x50
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2190
+		push1	
+		pushi	0x28
+		callb	0x8, 0x2
+		push1	
+		pushi	0x29
+		callb	0x7, 0x2
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_2701
+code_2190:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2217
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		pushi	0xff
+		pushSelf	
+		lofsa	mugger
+		send	0xc
+		jmp	code_2701
+code_2217:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2257
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x04
+		lea	0x4, 0x0
+		push	
+		pushi	0x2a
+		pushi	0x08
+		lsg	0xa5
+		callk	0x48, 0x8
+		push	
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0xe
+		jmp	code_2701
+code_2257:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2280
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x8
+		jmp	code_2701
+code_2280:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2315
+		pushi	0x07
+		push1	
+		pushi	0x05
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x07
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x12
+		ldi	0x05
+		sag	0xa5
+		jmp	code_2701
+code_2315:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2342
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x05
+		pushi	0xff
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_2701
+code_2342:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_2374
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x8
+		jmp	code_2701
+code_2374:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_2402
+		pushi	0x01fd
+		pushi	0x05
+		lofsa	string_8		; "\"Well, you've got to be leaving now. Go straight back the way you came in. Deviate from that path and you're Grell kibble!\""
+		push	
+		push0	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0xe
+		jmp	code_2701
+code_2402:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_2436
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		pushi	0x05
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x14
+		jmp	code_2701
+code_2436:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_2463
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		push1	
+		pushSelf	
+		lofsa	mugger
+		send	0xc
+		jmp	code_2701
+code_2463:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_2502
+		pushi	0x6b
+		pushi	0x08
+		lofsa	muggerBust
+		push	
+		lofsa	muggerEyes
+		push	
+		lofsa	muggerMouth
+		push	
+		lofsa	string_9		; "\"And if ya try followin' me, you'll get a nasty taste of my blaster. Got it? Good.\""
+		push	
+		push0	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0x14
+		jmp	code_2701
+code_2502:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_2525
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	mugger
+		send	0x8
+		jmp	code_2701
+code_2525:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_2567
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00d8
+		pushi	0x009f
+		pushSelf	
+		lofsa	mugger
+		send	0x18
+		jmp	code_2701
+code_2567:
+		dup	
+		ldi	0x0d
+		eq?	
+		bnt	code_2597
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0102
+		pushi	0x0096
+		pushSelf	
+		lofsa	mugger
+		send	0xc
+		jmp	code_2701
+code_2597:
+		dup	
+		ldi	0x0e
+		eq?	
+		bnt	code_2631
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00d7
+		pushi	0x7a
+		pushSelf	
+		lofsa	mugger
+		send	0x12
+		jmp	code_2701
+code_2631:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_2660
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0098
+		pushi	0x72
+		pushSelf	
+		lofsa	mugger
+		send	0xc
+		jmp	code_2701
+code_2660:
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_2701
+		pushi	0x6c
+		push0	
+		lofsa	mugger
+		send	0x4
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2701:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT egoGivesMoney of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoGivesMoney', 'id': 'string_10'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = egoGivesMoney::138   	 ; @0x856
+
+.CODE
+mugger::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2800
+		lal	0x0
+		bnt	code_2788
+		push2	
+		pushi	0x2a
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_2919
+code_2788:
+		push2	
+		pushi	0x2a
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_2919
+code_2800:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2819
+		push2	
+		pushi	0x2a
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		jmp	code_2919
+code_2819:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2908
+		lsp	0x2
+		ldi	0x0a
+		eq?	
+		bnt	code_2887
+		push1	
+		pushi	0x29
+		callb	0x6, 0x2
+		bnt	code_2855
+		push2	
+		pushi	0x2a
+		pushi	0x0c
+		calle	0xff, 0x00, 0x04
+		jmp	code_2919
+code_2855:
+		lal	0x0
+		bnt	code_2875
+		pushi	0x008c
+		push1	
+		lofsa	egoGivesMoney
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_2919
+code_2875:
+		push2	
+		pushi	0x2a
+		pushi	0x0d
+		calle	0xff, 0x00, 0x04
+		jmp	code_2919
+code_2887:
+		push2	
+		pushi	0x2a
+		pushi	0x0e
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x2a
+		pushi	0x0f
+		calle	0xff, 0x00, 0x04
+		jmp	code_2919
+code_2908:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x30, 0x8
+code_2919:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT mugger of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'mugger', 'id': 'string_12'}
+  [#4] = 0xaa
+  [#5] = 0xa6
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'alien wolf-creature', 'id': 'string_11'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1b0
+  [#24] = 0x8
+  [#25] = 0x7
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x6000
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x4
+  [#47] = 0x6
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x10a]  = mugger::266   	 ; @0xaca
+
+.CODE
+hole::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3077
+		push2	
+		pushi	0x2a
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+		jmp	code_3126
+code_3077:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3096
+		push2	
+		pushi	0x2a
+		pushi	0x11
+		calle	0xff, 0x00, 0x04
+		jmp	code_3126
+code_3096:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3115
+		push2	
+		pushi	0x2a
+		pushi	0x12
+		calle	0xff, 0x00, 0x04
+		jmp	code_3126
+code_3115:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_3126:
+		toss	
+		ret	
+
+
+.OBJECT hole of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'hole', 'id': 'string_15'}
+  [#4] = 0xaf
+  [#5] = 0x61
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'waste disposal port', 'id': 'string_13'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This waste disposal port looks as though it's used quite often.", 'id': 'string_14'}
+  [#22] = 0x2
+  [#23] = 0x8e
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0xa
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xa
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = hole::266   	 ; @0xbf0
+
+.CODE
+robotArm::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3259
+		push2	
+		pushi	0x2a
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+		jmp	code_3327
+code_3259:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3278
+		push2	
+		pushi	0x2a
+		pushi	0x13
+		calle	0xff, 0x00, 0x04
+		jmp	code_3327
+code_3278:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_3297
+		push2	
+		pushi	0x2a
+		pushi	0x14
+		calle	0xff, 0x00, 0x04
+		jmp	code_3327
+code_3297:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3316
+		push2	
+		pushi	0x2a
+		pushi	0x13
+		calle	0xff, 0x00, 0x04
+		jmp	code_3327
+code_3316:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_3327:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT robotArm of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'robotArm', 'id': 'string_18'}
+  [#4] = 0xb0
+  [#5] = 0x6c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'robot arm', 'id': 'string_16'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A robot arm reaches out to dump another load of dust into an already large pile. That must be one very dirty bar.', 'id': 'string_17'}
+  [#22] = 0x2
+  [#23] = 0x8e
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0xa
+  [#27] = 0x0
+  [#28] = 0x6010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xa
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = robotArm::266   	 ; @0xca6
+
+.CODE
+radar1::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3461
+		push2	
+		pushi	0x2a
+		pushi	0x15
+		calle	0xff, 0x00, 0x04
+		jmp	code_3529
+code_3461:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_3480
+		push2	
+		pushi	0x2a
+		pushi	0x16
+		calle	0xff, 0x00, 0x04
+		jmp	code_3529
+code_3480:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3499
+		push2	
+		pushi	0x2a
+		pushi	0x15
+		calle	0xff, 0x00, 0x04
+		jmp	code_3529
+code_3499:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3518
+		push2	
+		pushi	0x2a
+		pushi	0x15
+		calle	0xff, 0x00, 0x04
+		jmp	code_3529
+code_3518:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_3529:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT radar1 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'radar1', 'id': 'string_21'}
+  [#4] = 0x1b
+  [#5] = 0xad
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'force field sensor', 'id': 'string_19'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "The force field's sensors detect any moving, ground-based animals to prevent them from entering - or leaving - Ulence Flats.", 'id': 'string_20'}
+  [#22] = 0x2
+  [#23] = 0x8e
+  [#24] = 0x3
+  [#25] = 0x7
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = radar1::266   	 ; @0xd70
+
+.CODE
+radar2::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	radar1
+		send	0x6
+		ret	
+
+
+.OBJECT radar2 of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'radar2', 'id': 'string_22'}
+  [#4] = 0x12e
+  [#5] = 0x89
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "The force field's sensors detect any moving, ground-based animals to prevent them from entering - or leaving - Ulence Flats.", 'id': 'string_20'}
+  [#22] = 0x2
+  [#23] = 0x8e
+  [#24] = 0x4
+  [#25] = 0x6
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = radar2::266   	 ; @0xe3a
+
+.CODE
+pile::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push1	
+		pushi	0x03
+		self	0x6
+		ret	
+
+pile::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3862
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_3847
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+		jmp	code_3911
+code_3847:
+		pushi	0x008c
+		push1	
+		lofsa	searchDust
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_3911
+code_3862:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3881
+		push2	
+		pushi	0x2a
+		pushi	0x17
+		calle	0xff, 0x00, 0x04
+		jmp	code_3911
+code_3881:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3900
+		push2	
+		pushi	0x2a
+		pushi	0x18
+		calle	0xff, 0x00, 0x04
+		jmp	code_3911
+code_3900:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3911:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT pile of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'pile', 'id': 'string_25'}
+  [#4] = 0xc8
+  [#5] = 0x93
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pile of dust', 'id': 'string_23'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0xe7
+  [#18] = 0x93
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'There is a strange pile of very fine white powder here. It has a strange, burnt smell to it.', 'id': 'string_24'}
+Overriden functions: 2
+  [0x6b]  = pile::107   	 ; @0xeb6
+  [0x10a]  = pile::266   	 ; @0xec7
+
+.CODE
+pickup::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	droidStore
+		send	0x6
+		ret	
+
+
+.OBJECT pickup of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'pickup', 'id': 'string_28'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pickup building', 'id': 'string_26'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "It's a Droids-B-Us store.", 'id': 'string_27'}
+Overriden functions: 1
+  [0x10a]  = pickup::266   	 ; @0xf92
+
+.CODE
+toDBU::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	droidStore
+		send	0x6
+		ret	
+
+
+.OBJECT toDBU of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'toDBU', 'id': 'string_31'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'way to the Droids-B-Us store', 'id': 'string_29'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "That's the way to the Droids-B-Us store.", 'id': 'string_30'}
+Overriden functions: 1
+  [0x10a]  = toDBU::266   	 ; @0xfe4
+
+.CODE
+droidStore::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4171
+		push2	
+		pushi	0x2a
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_4239
+code_4171:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_4190
+		push1	
+		lofsa	string_34		; "You can't do that from here."
+		push	
+		calle	0xff, 0x00, 0x02
+		jmp	code_4239
+code_4190:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_4209
+		push1	
+		lofsa	string_34		; "You can't do that from here."
+		push	
+		calle	0xff, 0x00, 0x02
+		jmp	code_4239
+code_4209:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_4228
+		push1	
+		lofsa	string_34		; "You can't do that from here."
+		push	
+		calle	0xff, 0x00, 0x02
+		jmp	code_4239
+code_4228:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2c, 0x8
+code_4239:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT droidStore of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'droidStore', 'id': 'string_35'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'Droids-B-Us store', 'id': 'string_32'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'In the distance you see the familiar shape of a Droids-B-Us store.', 'id': 'string_33'}
+Overriden functions: 1
+  [0x10a]  = droidStore::266   	 ; @0x1036
+
+.CODE
+barBack::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_4331
+		push2	
+		pushi	0x2a
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_4399
+code_4331:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_4350
+		push2	
+		pushi	0x2a
+		pushi	0x11
+		calle	0xff, 0x00, 0x04
+		jmp	code_4399
+code_4350:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_4369
+		push2	
+		pushi	0x2a
+		pushi	0x12
+		calle	0xff, 0x00, 0x04
+		jmp	code_4399
+code_4369:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_4388
+		push2	
+		pushi	0x2a
+		pushi	0x1a
+		calle	0xff, 0x00, 0x04
+		jmp	code_4399
+code_4388:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2c, 0x8
+code_4399:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT barBack of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'barBack', 'id': 'string_38'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'bar building', 'id': 'string_36'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The back of the bar looks about as dingy as the front did.', 'id': 'string_37'}
+Overriden functions: 1
+  [0x10a]  = barBack::266   	 ; @0x10d6
+
+.CODE
+scribbles::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	barBack
+		send	0x6
+		ret	
+
+
+.OBJECT scribbles of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'scribbles', 'id': 'string_41'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'graffiti', 'id': 'string_39'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x1000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'It appears to be in Sarienese. Your Sarienese is a little rusty, but you decide it must say \\"Xenon Bites!\\"', 'id': 'string_40'}
+Overriden functions: 1
+  [0x10a]  = scribbles::266   	 ; @0x1176
+
+.OBJECT muggerTalker of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'muggerTalker', 'id': 'string_42'}
+  [#4] = 0x7
+  [#5] = 0x2e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x5
+  [#10] = 0xcf
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerBust of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'muggerBust', 'id': 'string_43'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerMouth of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'muggerMouth', 'id': 'string_44'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x2c
+  [#10] = 0x13
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerEyes of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'muggerEyes', 'id': 'string_45'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x20
+  [#10] = 0xf
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x10
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "This is the back of the bar at the southeast corner of Ulence Flats."
+string_1: "rm42"		 ; special
+string_2: "dumpDust"		 ; special
+string_3: "searchDust"		 ; special
+string_4: "\"Come on over here, pal. Wait'll ya see this!\""
+string_5: "\"Hold it right there, pal! This is a stick-up! I'll just relieve you of your cash, thank you very much.\""
+string_6: "\"C'mon, c'mon, I ain't got all day.\""
+string_7: "mugEgo"		 ; special
+string_8: "\"Well, you've got to be leaving now. Go straight back the way you came in. Deviate from that path and you're Grell kibble!\""
+string_9: "\"And if ya try followin' me, you'll get a nasty taste of my blaster. Got it? Good.\""
+string_10: "egoGivesMoney"		 ; special
+string_11: "alien wolf-creature"
+string_12: "mugger"		 ; special
+string_13: "waste disposal port"
+string_14: "This waste disposal port looks as though it's used quite often."
+string_15: "hole"		 ; special
+string_16: "robot arm"
+string_17: "A robot arm reaches out to dump another load of dust into an already large pile. That must be one very dirty bar."
+string_18: "robotArm"		 ; special
+string_19: "force field sensor"
+string_20: "The force field's sensors detect any moving, ground-based animals to prevent them from entering - or leaving - Ulence Flats."
+string_21: "radar1"		 ; special
+string_22: "radar2"		 ; special
+string_23: "pile of dust"
+string_24: "There is a strange pile of very fine white powder here. It has a strange, burnt smell to it."
+string_25: "pile"		 ; special
+string_26: "pickup building"
+string_27: "It's a Droids-B-Us store."
+string_28: "pickup"		 ; special
+string_29: "way to the Droids-B-Us store"
+string_30: "That's the way to the Droids-B-Us store."
+string_31: "toDBU"		 ; special
+string_32: "Droids-B-Us store"
+string_33: "In the distance you see the familiar shape of a Droids-B-Us store."
+string_34: "You can't do that from here."
+string_35: "droidStore"		 ; special
+string_36: "bar building"
+string_37: "The back of the bar looks about as dingy as the front did."
+string_38: "barBack"		 ; special
+string_39: "graffiti"
+string_40: "It appears to be in Sarienese. Your Sarienese is a little rusty, but you decide it must say \"Xenon Bites!\""
+string_41: "scribbles"		 ; special
+string_42: "muggerTalker"		 ; special
+string_43: "muggerBust"		 ; special
+string_44: "muggerMouth"		 ; special
+string_45: "muggerEyes"		 ; special
+string_unused_46: ""
+string_unused_47: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0
+
+.RELOCATION
+num of pointers: 114
+0x103, 0x10c, 0x128, 0x170, 0x180, 0x184, 0x193, 0x1a2, 0x1aa, 0x1b2, 0x1ba, 0x1c2, 0x1ca, 0x1d2, 0x242, 0x24e, 0x2e3, 0x2fd, 0x318, 0x349, 0x371, 0x391, 0x3b9, 0x3d4, 0x3dc, 0x420, 0x5a0, 0x5fd, 0x610, 0x614, 0x618, 0x61c, 0x624, 0x65a, 0x69a, 0x6ad, 0x6b1, 0x6b5, 0x6b9, 0x6c1, 0x6fa, 0x702, 0x731, 0x751, 0x770, 0x78f, 0x7ae, 0x7cd, 0x7fd, 0x82e, 0x8a2, 0x8ca, 0x8e1, 0x93f, 0x953, 0x95b, 0x97d, 0x998, 0x9ab, 0x9af, 0x9b3, 0x9b7, 0x9bf, 0x9d6, 0xa00, 0xa1e, 0xa40, 0xa5d, 0xa6f, 0xaa2, 0xb31, 0xb7c, 0xb90, 0xc4a, 0xc5e, 0xc6e, 0xd14, 0xd28, 0xd38, 0xdde, 0xdf2, 0xe02, 0xe43, 0xe5a, 0xe7e, 0xf0c, 0xf5c, 0xf70, 0xf80, 0xf9b, 0xfb2, 0xfc6, 0xfd6, 0xfed, 0x1004, 0x1018, 0x1028, 0x1054, 0x1067, 0x107a, 0x10a4, 0x10b8, 0x10c8, 0x1144, 0x1158, 0x1168, 0x117f, 0x1196, 0x11aa, 0x11ba, 0x11d6, 0x1248, 0x12a4, 0x130a

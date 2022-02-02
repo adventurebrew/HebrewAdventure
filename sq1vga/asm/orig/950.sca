@@ -1,0 +1,678 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+CueObj::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_73
+		pushi	0x00e2
+		push2	
+		pushi	0x04
+		dup	
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x04
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		pToa	0x8
+		send	0x4
+		push	
+		callk	0x3f, 0x8
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		pushi	0x73
+		push1	
+		pushSelf	
+		lag	0x4e
+		send	0x6
+		jmp	code_159
+code_73:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_87
+		ldi	0x03
+		aTop	0x10
+		jmp	code_159
+code_87:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_159
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x4e
+		send	0x6
+		pToa	0x8
+		bnt	code_139
+		push1	
+		pushi	0x0109
+		push0	
+		send	0x4
+		push	
+		callk	0x6, 0x2
+		bnt	code_139
+		pushi	0x010a
+		push2	
+		pTos	0x1e
+		pTos	0x20
+		pushi	0x0109
+		push0	
+		pToa	0x8
+		send	0x4
+		send	0x8
+code_139:
+		not	
+		bnt	code_155
+		pushi	0x010a
+		push2	
+		pTos	0x1e
+		pTos	0x20
+		pToa	0x8
+		send	0x8
+code_155:
+		ldi	0x00
+		aTop	0xa
+code_159:
+		toss	
+		ret	
+
+		bnot	
+
+.CLASS CueObj of 0x6
+Function area offset: 0x46
+Selectors [17]:
+  [0x0] = 0x2b
+  [0x1] = 0x6
+  [0x2] = 0x8000
+  [0x17] = {'val': 'CueObj', 'id': 'string_0'}
+  [0x2d] = 0x0
+  [0x20] = 0xffff
+  [0x82] = 0x0
+  [0x83] = 0x0
+  [0x84] = 0x0
+  [0x85] = 0x0
+  [0x86] = 0x0
+  [0x87] = 0x0
+  [0x88] = 0x0
+  [0x89] = 0x0
+  [0x44] = 0x0
+  [0x107] = 0x0
+  [0x108] = 0x0
+Overriden functions: 1
+  [0x8a]  = CueObj::138   	 ; @0x4
+
+.CODE
+Feature::107:
+		lap	0x0
+		bnt	code_274
+		lap	0x1
+		bnt	code_274
+		pushi	0x63
+		push1	
+		lsp	0x1
+		self	0x6
+		jmp	code_285
+code_274:
+		lag	0x40
+		bnt	code_285
+		pushi	0x63
+		push1	
+		push	
+		self	0x6
+code_285:
+		pushi	0x71
+		push1	
+		pushi	0x08
+		self	0x6
+		bnt	code_306
+		pushi	0x73
+		push1	
+		pushSelf	
+		lag	0x5
+		send	0x6
+		jmp	code_314
+code_306:
+		pushi	0x73
+		push1	
+		pushSelf	
+		lag	0x20
+		send	0x6
+code_314:
+		ret	
+
+Feature::279:
+		link	0x01
+		ldi	0x00
+		aTop	0x28
+		sat	0x0
+code_323:
+		lst	0x0
+		lap	0x0
+		lt?	
+		bnt	code_365
+		lap	0x1
+		bnt	code_360
+		pushi	0x0112
+		push1	
+		pushi	0x0112
+		push0	
+		self	0x4
+		push	
+		push1	
+		lat	0x0
+		lspi	0x1
+		ldi	0x01
+		sub	
+		shl	
+		or	
+		push	
+		self	0x6
+code_360:
+		+at	0x0
+		jmp	code_323
+code_365:
+		ret	
+
+Feature::129:
+		link	0x01
+		pushi	0x4c
+		push0	
+		lap	0x1
+		send	0x4
+		bnt	code_384
+		ldi	0x01
+		ret	
+
+		jmp	code_603
+code_384:
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x4000
+		eq?	
+		bnt	code_603
+		pushi	0x00c2
+		push1	
+		lsp	0x1
+		self	0x6
+		bnt	code_603
+		pushi	0x0116
+		push0	
+		self	0x4
+		bnt	code_603
+		pushi	0x20
+		push1	
+		push0	
+		pushi	0x0084
+		push1	
+		push0	
+		pushi	0x2d
+		push1	
+		pushSelf	
+		pushi	0x0107
+		push1	
+		pushi	0x28
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		pushi	0x0108
+		push1	
+		lag	0x45
+		bnt	code_489
+		pushi	0x28
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x04
+		eq?	
+		bnt	code_489
+		lag	0x9
+		bnt	code_489
+		pushi	0x0080
+		push1	
+		pushi	0x00cf
+		push0	
+		lag	0x45
+		send	0x4
+		push	
+		lag	0x9
+		send	0x6
+code_489:
+		push	
+		class	0x2b
+		send	0x1e
+		pushi	0x4c
+		push1	
+		push1	
+		lap	0x1
+		send	0x6
+		pushi	0x0118
+		push0	
+		lag	0x50
+		send	0x4
+		bnt	code_573
+		pTos	0x28
+		ldi	0x6789
+		ne?	
+		bnt	code_573
+		pTos	0x28
+		push1	
+		pushi	0x28
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x01
+		sub	
+		shl	
+		and	
+		bnt	code_573
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pTos	0x22
+		pushi	0x55
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pToa	0x24
+		add	
+		push	
+		class	0x2b
+		push	
+		lag	0x0
+		send	0xc
+		jmp	code_603
+code_573:
+		pushi	0x0118
+		push0	
+		lag	0x50
+		send	0x4
+		bnt	code_593
+		pushi	0x0119
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+code_593:
+		pushi	0x008a
+		push1	
+		pushi	0x03
+		class	0x2b
+		send	0x6
+code_603:
+		pushi	0x4c
+		push0	
+		lap	0x1
+		send	0x4
+		ret	
+
+Feature::276:
+		link	0x01
+		pushi	0x0119
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		pushi	0x2d
+		push1	
+		pushSelf	
+		pushi	0x20
+		push1	
+		push0	
+		pushi	0x0084
+		push1	
+		push0	
+		pushi	0x008b
+		push0	
+		class	0x2b
+		send	0x16
+		ret	
+
+Feature::266:
+		pushi	0x3c
+		push2	
+		lsp	0x1
+		pushSelf	
+		rest	0x2
+		lag	0x41
+		bnt	code_660
+		jmp	code_663
+code_660:
+		lofsa	dftDoVerb
+code_663:
+		send	0x8
+		ret	
+
+Feature::277:
+		link	0x02
+		lap	0x0
+		bnt	code_678
+		lap	0x1
+		jmp	code_680
+code_678:
+		lag	0x0
+code_680:
+		sat	0x0
+		push1	
+		pushi	0x04
+		dup	
+		push0	
+		send	0x4
+		push	
+		pushi	0x03
+		push0	
+		lat	0x0
+		send	0x4
+		push	
+		pTos	0x8
+		pTos	0xa
+		callk	0x3f, 0x8
+		push	
+		pushi	0x3a
+		push0	
+		lat	0x0
+		send	0x4
+		sub	
+		push	
+		callk	0x3d, 0x2
+		sat	0x1
+		push	
+		ldi	0x00b4
+		gt?	
+		bnt	code_736
+		pushi	0x0168
+		lat	0x1
+		sub	
+		sat	0x1
+code_736:
+		lst	0x1
+		pToa	0x1c
+		le?	
+		bnt	code_750
+		ldi	0x01
+		ret	
+
+		jmp	code_759
+code_750:
+		pushi	0x0114
+		push0	
+		self	0x4
+		ldi	0x00
+		ret	
+
+code_759:
+		ret	
+
+Feature::278:
+		ldi	0x01
+		ret	
+
+Feature::194:
+		link	0x02
+		push1	
+		lsp	0x1
+		callk	0x6, 0x2
+		bnt	code_795
+		pushi	0x04
+		push0	
+		lap	0x1
+		send	0x4
+		sat	0x0
+		pushi	0x03
+		push0	
+		lap	0x1
+		send	0x4
+		sat	0x1
+		jmp	code_803
+code_795:
+		lap	0x1
+		sat	0x0
+		lap	0x2
+		sat	0x1
+code_803:
+		push1	
+		pTos	0x20
+		callk	0x6, 0x2
+		bnt	code_826
+		pushi	0x03
+		lst	0x0
+		lst	0x1
+		pTos	0x20
+		callk	0x77, 0x6
+		jmp	code_905
+code_826:
+		pToa	0x14
+		bt	code_843
+		pToa	0x18
+		bt	code_843
+		pToa	0x12
+		bt	code_843
+		pToa	0x16
+code_843:
+		not	
+		bt	code_874
+		pTos	0x14
+		lat	0x0
+		le?	
+		bnt	code_905
+		pprev	
+		pToa	0x18
+		le?	
+		bnt	code_905
+		pTos	0x12
+		lat	0x1
+		le?	
+		bnt	code_905
+		pprev	
+		pToa	0x16
+		le?	
+code_874:
+		bnt	code_905
+		pTos	0x20
+		ldi	0x6789
+		ne?	
+		bnt	code_903
+		pTos	0x20
+		pushi	0x03
+		pushi	0x04
+		lst	0x0
+		lst	0x1
+		callk	0x4e, 0x6
+		and	
+		jmp	code_905
+code_903:
+		ldi	0x01
+code_905:
+		ret	
+
+Feature::108:
+		pToa	0x1e
+		bnt	code_920
+		pushi	0x6c
+		push0	
+		send	0x4
+		ldi	0x00
+		aTop	0x1e
+code_920:
+		push1	
+		pTos	0x20
+		callk	0x6, 0x2
+		bnt	code_940
+		pushi	0x6c
+		push0	
+		pToa	0x20
+		send	0x4
+		ldi	0x00
+		aTop	0x20
+code_940:
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x20
+		send	0x6
+		pushi	0x6c
+		push0	
+		super	0x0, 0x4
+		ret	
+
+		bnot	
+
+.CLASS Feature of 0x0
+Function area offset: 0x5a
+Selectors [22]:
+  [0x0] = 0x2c
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = {'val': 'Feature', 'id': 'string_1'}
+  [0x4] = 0x0
+  [0x3] = 0x0
+  [0x55] = 0x0
+  [0x3a] = 0x0
+  [0x10b] = 0x0
+  [0x9] = 0x0
+  [0xa] = 0x0
+  [0xb] = 0x0
+  [0xc] = 0x0
+  [0x10c] = 0x0
+  [0x10d] = 0x6789
+  [0x109] = 0x0
+  [0x10e] = 0x6789
+  [0x10f] = 0x0
+  [0x110] = 0x0
+  [0x111] = 0x0
+  [0x112] = 0x6789
+  [0x113] = 0x0
+Overriden functions: 9
+  [0x6b]  = Feature::107   	 ; @0xfe
+  [0x6c]  = Feature::108   	 ; @0x38a
+  [0x81]  = Feature::129   	 ; @0x16e
+  [0x10a]  = Feature::266   	 ; @0x284
+  [0x114]  = Feature::276   	 ; @0x263
+  [0x115]  = Feature::277   	 ; @0x29a
+  [0x116]  = Feature::278   	 ; @0x2f8
+  [0xc2]  = Feature::194   	 ; @0x2fb
+  [0x117]  = Feature::279   	 ; @0x13b
+
+.CODE
+dftDoVerb::60:
+		link	0x02
+		pushi	0x010c
+		push0	
+		lap	0x2
+		send	0x4
+		sat	0x0
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1165
+		pushi	0x0113
+		push0	
+		lap	0x2
+		send	0x4
+		bnt	code_1149
+		push1	
+		pushi	0x0113
+		push0	
+		lap	0x2
+		send	0x4
+		push	
+		calle	0xff, 0x00, 0x02
+		jmp	code_1227
+code_1149:
+		pushi	0x04
+		pushi	0x03b6
+		push0	
+		lst	0x0
+		dup	
+		calle	0xff, 0x04, 0x08
+		jmp	code_1227
+code_1165:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1208
+		pushi	0x43
+		push1	
+		lsp	0x3
+		lag	0x9
+		send	0x6
+		sat	0x1
+		bnt	code_1227
+		pushi	0x04
+		pushi	0x03b6
+		push1	
+		pushi	0x010c
+		push0	
+		send	0x4
+		push	
+		lst	0x0
+		calle	0xff, 0x04, 0x08
+		jmp	code_1227
+code_1208:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1227
+		pushi	0x03
+		pushi	0x03b6
+		push2	
+		lst	0x0
+		calle	0xff, 0x04, 0x06
+code_1227:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT dftDoVerb of 0x1
+Function area offset: 0xa
+Selectors [4]:
+  [#0] = 0x1
+  [#1] = 0x1
+  [#2] = 0x0
+  [#3] = {'val': 'dftDoVerb', 'id': 'string_2'}
+Overriden functions: 1
+  [0x3c]  = dftDoVerb::60   	 ; @0x44c
+
+.STRINGS
+string_0: "CueObj"		 ; special
+string_1: "Feature"		 ; special
+string_2: "dftDoVerb"		 ; special
+string_unused_3: ""
+string_unused_4: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 4
+0xb4, 0x295, 0x3ce, 0x4e0

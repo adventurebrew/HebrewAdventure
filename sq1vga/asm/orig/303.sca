@@ -1,0 +1,599 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT prepareToDie of 0x6
+OBJECT slotGuy of 0x2f
+OBJECT slotGuyBody of 0x2f
+
+.CODE
+prepareToDie::107:
+		push2	
+		pushi	0x07
+		pushi	0x0e
+		callk	0x3c, 0x4
+		aTop	0x1a
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		ret	
+
+prepareToDie::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_66
+		push2	
+		pushi	0x1e
+		pushi	0x3c
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_446
+code_66:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_180
+		dpToa	0x1a
+		push	
+		ldi	0x00
+		le?	
+		bnt	code_153
+		pushi	0x05
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x1e
+		eq?	
+		bt	code_110
+		pushi	0x0131
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x4002
+		and	
+		not	
+code_110:
+		bnt	code_153
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x1e
+		eq?	
+		not	
+		bnt	code_142
+		push2	
+		lsg	0x0
+		lofsa	slotGuy
+		push	
+		callb	0xd, 0x4
+code_142:
+		pushi	0x008a
+		push1	
+		pushi	0x06
+		self	0x6
+		jmp	code_446
+code_153:
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	slotGuy
+		send	0x14
+		jmp	code_446
+code_180:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_216
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		push2	
+		pushi	0x2b
+		push2	
+		callk	0x2, 0x4
+		send	0x6
+		push2	
+		pushi	0x0f
+		pushi	0x3c
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_446
+code_216:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_267
+		pushi	0x0094
+		push1	
+		push0	
+		push2	
+		pushi	0x2b
+		push2	
+		callk	0x2, 0x4
+		send	0x6
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		push1	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	slotGuy
+		send	0x1a
+		jmp	code_446
+code_267:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_308
+		ldi	0x00
+		aTop	0xa
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push2	
+		pushi	0x00d9
+		push1	
+		push1	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	slotGuy
+		send	0x1a
+		jmp	code_446
+code_308:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_337
+		pTos	0x8
+		lag	0x0
+		eq?	
+		bnt	code_330
+		ldi	0x02
+		aTop	0x12
+		jmp	code_446
+code_330:
+		ldi	0x03
+		aTop	0x10
+		jmp	code_446
+code_337:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_372
+		pushi	0x008c
+		pushi	0x03
+		push2	
+		pushi	0x2b
+		push1	
+		callk	0x2, 0x4
+		push	
+		pushSelf	
+		push2	
+		pushi	0x012f
+		push1	
+		callk	0x2, 0x4
+		push	
+		self	0xa
+		jmp	code_446
+code_372:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_446
+		pTos	0x8
+		lag	0x0
+		eq?	
+		bnt	code_400
+		pushi	0x0177
+		push1	
+		pushi	0x2a
+		lag	0x2
+		send	0x6
+		jmp	code_433
+code_400:
+		lag	0xbc
+		not	
+		bnt	code_433
+		push0	
+		callb	0x3, 0x0
+		pushi	0x05
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x1e
+		eq?	
+		bnt	code_433
+		pushi	0x0118
+		push1	
+		push0	
+		class	0x31
+		send	0x6
+code_433:
+		pushi	0x009a
+		push0	
+		lag	0x9a
+		send	0x4
+		pushi	0x6c
+		push0	
+		self	0x4
+code_446:
+		toss	
+		ret	
+
+
+.OBJECT prepareToDie of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'prepareToDie', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x6b]  = prepareToDie::107   	 ; @0x16
+  [0x8a]  = prepareToDie::138   	 ; @0x29
+
+.CODE
+slotGuy::266:
+		lsp	0x1
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_531
+		push2	
+		pushi	0x012f
+		push0	
+		calle	0xff, 0x00, 0x04
+		jmp	code_786
+code_531:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_550
+		push2	
+		pushi	0x012f
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_786
+code_550:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_569
+		push2	
+		pushi	0x012f
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_786
+code_569:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_773
+		lsp	0x2
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_598
+		push2	
+		pushi	0x012f
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_598:
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_618
+		push2	
+		pushi	0x012f
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_618:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_638
+		push2	
+		pushi	0x012f
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_638:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_658
+		push2	
+		pushi	0x012f
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_658:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_678
+		push2	
+		pushi	0x012f
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_678:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_698
+		push2	
+		pushi	0x012f
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_698:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_718
+		push2	
+		pushi	0x012f
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_718:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_738
+		push2	
+		pushi	0x012f
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_738:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_758
+		push2	
+		pushi	0x012f
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		jmp	code_769
+code_758:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_769:
+		toss	
+		jmp	code_786
+code_773:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		rest	0x3
+		super	0x2f, 0x8
+code_786:
+		toss	
+		ret	
+
+slotGuy::108:
+		pushi	0x008c
+		push1	
+		push0	
+		pushi	0x0094
+		push1	
+		push0	
+		self	0xc
+		pushi	0x6c
+		push0	
+		lofsa	slotGuyBody
+		send	0x4
+		pushi	0x6c
+		push0	
+		super	0x2f, 0x4
+		pushi	0x54
+		push0	
+		self	0x4
+		push1	
+		pushi	0x01bb
+		callk	0x1, 0x2
+		push1	
+		pushi	0x012f
+		callk	0x3, 0x2
+		ret	
+
+
+.OBJECT slotGuy of 0x2f
+Exported
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'slotGuy', 'id': 'string_3'}
+  [#4] = 0x109
+  [#5] = 0x52
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'slot guy', 'id': 'string_1'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Some strange, blue dude currently monopolizes the Slots-O-Death machine.', 'id': 'string_2'}
+  [#22] = 0x2
+  [#23] = 0x1bb
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x7
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 2
+  [0x6c]  = slotGuy::108   	 ; @0x314
+  [0x10a]  = slotGuy::266   	 ; @0x1fe
+
+.CODE
+slotGuyBody::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	slotGuy
+		send	0x6
+		ret	
+
+slotGuyBody::108:
+		pushi	0x0094
+		push1	
+		push0	
+		self	0x6
+		pushi	0x6c
+		push0	
+		super	0x2f, 0x4
+		pushi	0x54
+		push0	
+		self	0x4
+		ret	
+
+		bnot	
+
+.OBJECT slotGuyBody of 0x2f
+Exported
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'slotGuyBody', 'id': 'string_4'}
+  [#4] = 0x107
+  [#5] = 0x68
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1bb
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 2
+  [0x6c]  = slotGuyBody::108   	 ; @0x3c2
+  [0x10a]  = slotGuyBody::266   	 ; @0x3b4
+
+.STRINGS
+string_0: "prepareToDie"		 ; special
+string_1: "slot guy"
+string_2: "Some strange, blue dude currently monopolizes the Slots-O-Death machine."
+string_3: "slotGuy"		 ; special
+string_4: "slotGuyBody"		 ; special
+string_unused_5: ""
+string_unused_6: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 11
+0x88, 0xad, 0x104, 0x12d, 0x1d2, 0x324, 0x354, 0x368, 0x378, 0x3bd, 0x3e8

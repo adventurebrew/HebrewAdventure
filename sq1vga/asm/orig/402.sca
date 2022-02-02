@@ -1,0 +1,212 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT romulanWarbird of 0x6
+
+.CODE
+romulanWarbird::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_45
+		pushi	0x008c
+		push2	
+		push2	
+		pushi	0x31
+		pushi	0x03
+		callk	0x2, 0x4
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_198
+code_45:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_80
+		push2	
+		pushi	0x0192
+		push0	
+		calle	0xff, 0x00, 0x04
+		pushi	0x008c
+		push2	
+		push2	
+		pushi	0x31
+		pushi	0x05
+		callk	0x2, 0x4
+		push	
+		pushSelf	
+		self	0x8
+		jmp	code_198
+code_80:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_106
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	warBird
+		send	0xc
+		jmp	code_198
+code_106:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_120
+		ldi	0x03
+		aTop	0x12
+		jmp	code_198
+code_120:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_155
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x1f
+		pushi	0x04
+		pushSelf	
+		lofsa	warBird
+		send	0x12
+		jmp	code_198
+code_155:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_177
+		pushi	0x6c
+		push0	
+		lofsa	warBird
+		send	0x4
+		ldi	0x03
+		aTop	0x12
+		jmp	code_198
+code_177:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_198
+		pushi	0x05
+		pushi	0x03b1
+		push0	
+		push0	
+		pushi	0x0192
+		push1	
+		callb	0xa, 0xa
+code_198:
+		toss	
+		ret	
+
+
+.OBJECT romulanWarbird of 0x6
+Exported
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'romulanWarbird', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = romulanWarbird::138   	 ; @0xe
+
+.OBJECT warBird of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'warBird', 'id': 'string_1'}
+  [#4] = 0x3c
+  [#5] = 0x45
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x77
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x2
+  [#27] = 0x0
+  [#28] = 0x5810
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x2
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "romulanWarbird"		 ; special
+string_1: "warBird"		 ; special
+string_unused_2: ""
+string_unused_3: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 5
+0x63, 0x94, 0xa6, 0xda, 0x110

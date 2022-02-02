@@ -1,0 +1,284 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm25 of 0x74
+
+.CODE
+rm25::107:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x0c
+		pushi	0x0114
+		push0	
+		pushi	0x010d
+		pushi	0x11
+		pushi	0x00e2
+		pushi	0x1d
+		pushi	0x00aa
+		pushi	0x1d
+		pushi	0x0092
+		pushi	0x0e
+		pushi	0x7f
+		push0	
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x26
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x22
+		pushi	0x00e8
+		pushi	0x0089
+		pushi	0x00b6
+		pushi	0x0086
+		pushi	0x7d
+		pushi	0x76
+		pushi	0x26
+		pushi	0x4c
+		pushi	0x33
+		pushi	0x41
+		pushi	0x1e
+		pushi	0x3f
+		pushi	0x33
+		pushi	0x34
+		pushi	0x0113
+		pushi	0x34
+		pushi	0x0135
+		pushi	0x5e
+		pushi	0x0115
+		pushi	0x6c
+		pushi	0x00e9
+		pushi	0x5d
+		pushi	0x00e7
+		pushi	0x57
+		pushi	0x00cd
+		pushi	0x54
+		pushi	0x00b3
+		pushi	0x60
+		pushi	0x00de
+		pushi	0x5d
+		pushi	0x00f7
+		pushi	0x67
+		pushi	0x00f9
+		pushi	0x7f
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x52
+		push	
+		self	0x8
+		lsg	0xc
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_191
+		ldi	0x0b
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_237
+code_191:
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_209
+		ldi	0x0d
+		aTop	0x16
+		push0	
+		callb	0x3, 0x0
+		jmp	code_237
+code_209:
+		dup	
+		pToa	0x20
+		eq?	
+		bnt	code_233
+		pushi	0x04
+		push1	
+		pushi	0x00a0
+		lag	0x0
+		send	0x6
+		ldi	0x0a
+		aTop	0x16
+		jmp	code_237
+code_233:
+		ldi	0x0a
+		aTop	0x16
+code_237:
+		toss	
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x04
+		push1	
+		pushi	0x2f
+		pushi	0x03
+		push1	
+		pushi	0x38
+		pushi	0x010f
+		push1	
+		pushi	0x2a
+		pushi	0x0110
+		push1	
+		pushi	0x38
+		push2	
+		pushi	0x02c0
+		push1	
+		callk	0x2, 0x4
+		send	0x18
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x48
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		gt?	
+		bnt	code_321
+		pprev	
+		ldi	0x31
+		gt?	
+		bnt	code_321
+		pushi	0x03
+		push1	
+		pushi	0x33
+		lag	0x0
+		send	0x6
+code_321:
+		pushi	0x6b
+		push0	
+		lofsa	claws
+		send	0x4
+		ret	
+
+
+.OBJECT rm25 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm25', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This looks like it might have been a minimally developed, manipulative appendage for the fallen and fossilized beast.', 'id': 'string_0'}
+  [#10] = 0x19
+  [#11] = 0xffff
+  [#12] = 0x14
+  [#13] = 0x0
+  [#14] = 0x16
+  [#15] = 0x1a
+  [#16] = 0x12
+  [#17] = 0x26
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x1
+Overriden functions: 1
+  [0x6b]  = rm25::107   	 ; @0xe
+
+.CODE
+claws::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_430
+		push2	
+		pushi	0x19
+		push0	
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x19
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_459
+code_430:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_448
+		push2	
+		pushi	0x19
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_459
+code_448:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_459:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT claws of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'claws', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'claws', 'id': 'string_2'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4000
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = claws::266   	 ; @0x192
+
+.STRINGS
+string_0: "This looks like it might have been a minimally developed, manipulative appendage for the fallen and fossilized beast."
+string_1: "rm25"		 ; special
+string_2: "claws"		 ; special
+string_unused_3: ""
+string_unused_4: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 5
+0x145, 0x15c, 0x168, 0x1e0, 0x1f4

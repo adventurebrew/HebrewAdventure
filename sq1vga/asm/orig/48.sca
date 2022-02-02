@@ -1,0 +1,2131 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm48 of 0x43
+
+.CODE
+code_14:
+		ldi	0x00
+		lspi	0x1
+		lal	0xf
+		sali	0x5
+		+al	0xf
+		ret	
+
+code_25:
+		pushi	0x0087
+		push0	
+		lofsa	sellRobots
+		send	0x4
+		not	
+		bnt	code_56
+		ldi	0x00
+		sal	0xf
+		pushi	0x20
+		push1	
+		push0	
+		pushi	0x0085
+		push1	
+		push0	
+		lofsa	bugTalker
+		send	0xc
+code_56:
+		ret	
+
+rm48::107:
+		pushi	0x7d
+		push1	
+		pushSelf	
+		lag	0x49
+		send	0x6
+		pushi	0x7d
+		push1	
+		pushSelf	
+		lag	0x48
+		send	0x6
+		pushi	0x6b
+		push0	
+		super	0x43, 0x4
+		pushi	0x6b
+		push0	
+		lofsa	bugMouth
+		send	0x4
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		pushi	0x008c
+		push1	
+		lofsa	wiggleAntenna
+		push	
+		lofsa	antenna
+		send	0xe
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5e
+		push	
+		pushi	0x008c
+		push1	
+		lofsa	bugTalker
+		push	
+		lofsa	rightarm
+		send	0x10
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	display
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	readout
+		send	0x8
+		pushi	0x6b
+		push0	
+		lofsa	bug
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	award
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	robotHead
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	robotArm
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	bugButt
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	DBUsign
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	screen
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	diaphram
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	tubes
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	table
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	parts
+		send	0x4
+		pushi	0x008c
+		push1	
+		lofsa	sellRobots
+		push	
+		self	0x6
+		pushi	0x2b
+		push1	
+		pushi	0x026f
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+		ret	
+
+rm48::129:
+		pushi	0x0081
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x43, 0x6
+		bnt	code_288
+		jmp	code_462
+code_288:
+		pushi	0x0087
+		push0	
+		lofsa	sellRobots
+		send	0x4
+		not	
+		bnt	code_326
+		pushi	0x0085
+		push1	
+		push0	
+		pushi	0x008b
+		push0	
+		lofsa	bugTalker
+		send	0xa
+		pushi	0x4c
+		push1	
+		push1	
+		lap	0x1
+		send	0x6
+		jmp	code_462
+code_326:
+		pushi	0x00cc
+		push0	
+		lag	0x45
+		send	0x4
+		push	
+		pushi	0x43
+		push1	
+		push0	
+		lag	0x45
+		send	0x6
+		eq?	
+		bnt	code_396
+		pushi	0x28
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x01
+		eq?	
+		bt	code_372
+		pushi	0x22
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x40
+		and	
+code_372:
+		bnt	code_396
+		pushi	0x0177
+		push1	
+		pushi	0x2f
+		lag	0x2
+		send	0x6
+		pushi	0x4c
+		push1	
+		push1	
+		lap	0x1
+		send	0x6
+		jmp	code_462
+code_396:
+		pushi	0x00cc
+		push0	
+		lag	0x45
+		send	0x4
+		push	
+		pushi	0x43
+		push1	
+		pushi	0x06
+		lag	0x45
+		send	0x6
+		eq?	
+		bnt	code_462
+		pushi	0x00cf
+		push0	
+		lag	0x45
+		send	0x4
+		push	
+		pushi	0x43
+		push1	
+		pushi	0x0a
+		class	0x40
+		send	0x6
+		eq?	
+		bnt	code_462
+		pushi	0x28
+		push0	
+		lap	0x1
+		send	0x4
+		push	
+		ldi	0x04
+		eq?	
+		bnt	code_462
+		push2	
+		pushi	0x30
+		push0	
+		calle	0xff, 0x00, 0x04
+code_462:
+		ret	
+
+rm48::60:
+		-al	0x10
+		bnt	code_596
+		lsl	0x11
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_503
+		pushi	0x04
+		pushi	0x06
+		pushi	0x40
+		pushi	0x49
+		push2	
+		push0	
+		pushi	0x1e
+		callk	0x3c, 0x4
+		push	
+		ldi	0x0f
+		sub	
+		push	
+		callk	0x6f, 0x8
+		jmp	code_592
+code_503:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_526
+		pushi	0x04
+		pushi	0x06
+		pushi	0x40
+		pushi	0x49
+		pushi	0x08
+		callk	0x6f, 0x8
+		jmp	code_592
+code_526:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_549
+		pushi	0x04
+		pushi	0x06
+		pushi	0x40
+		pushi	0x49
+		pushi	0x03
+		callk	0x6f, 0x8
+		jmp	code_592
+code_549:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_572
+		pushi	0x04
+		pushi	0x06
+		pushi	0x40
+		pushi	0x49
+		pushi	0xfd
+		callk	0x6f, 0x8
+		jmp	code_592
+code_572:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_592
+		pushi	0x04
+		pushi	0x06
+		pushi	0x40
+		pushi	0x49
+		pushi	0xf8
+		callk	0x6f, 0x8
+code_592:
+		toss	
+		jmp	code_615
+code_596:
+		push2	
+		pushi	0x14
+		pushi	0x32
+		callk	0x3c, 0x4
+		sal	0x10
+		push2	
+		push0	
+		pushi	0x04
+		callk	0x3c, 0x4
+		sal	0x11
+code_615:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x43, 0x4
+		ret	
+
+rm48::108:
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x49
+		send	0x6
+		pushi	0x54
+		push1	
+		pushSelf	
+		lag	0x48
+		send	0x6
+		pushi	0x6c
+		push0	
+		super	0x43, 0x4
+		ret	
+
+		bnot	
+
+.OBJECT rm48 of 0x43
+Exported
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x43
+  [#1] = 0x43
+  [#2] = 0x0
+  [#3] = {'val': 'rm48', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x30
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+Overriden functions: 4
+  [0x6b]  = rm48::107   	 ; @0x39
+  [0x3c]  = rm48::60   	 ; @0x1cf
+  [0x6c]  = rm48::108   	 ; @0x270
+  [0x81]  = rm48::129   	 ; @0x10f
+
+.CODE
+sellRobots::138:
+		link	0x01
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_824
+		push0	
+		callb	0x3, 0x0
+		pushi	0x00c7
+		push2	
+		pushi	0x04
+		pushi	0x05
+		lag	0x45
+		send	0x8
+		push1	
+		lofsa	string_1		; "Please observe our robot preview screen. If you have any questions, don't hesitate to ask."
+		push	
+		call	code_14, 2
+		push1	
+		pushi	0x2d
+		callb	0x6, 0x2
+		bnt	code_790
+		push1	
+		lofsa	string_2		; "Oh, we're back, are we? Well, perhaps we can manage to take home a droid this time, eh?"
+		push	
+		call	code_14, 2
+		jmp	code_817
+code_790:
+		push1	
+		lofsa	string_3		; "However, I can see that we would be more... ah... interested in our line of economy-priced, used robots, wouldn't we?"
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_4		; "We have a wide variety of work-saving, life- enhancing, shiny-new, factory-fresh, technological wonders of modern engineering wizardry!"
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_5		; "Greetings, sir! Allow me to show you our fine line of robots, otherwise known as \"droids\"."
+		push	
+		call	code_14, 2
+code_817:
+		ldi	0x02
+		aTop	0x10
+		jmp	code_927
+code_824:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_911
+		pToa	0x1a
+		bnt	code_904
+		pushi	0x07
+		push0	
+		lofsa	display
+		send	0x4
+		sat	0x0
+		pushi	0x04
+		+at	0x0
+		push	
+		pushi	0x0a
+		push1	
+		pushi	0x04
+		calle	0x03e7, 0x0005, 0x08
+		bnt	code_876
+		push1	
+		pushi	0x21
+		callb	0x6, 0x2
+		bnt	code_876
+		+at	0x0
+code_876:
+		pushi	0x07
+		push1	
+		lst	0x0
+		pushi	0x011c
+		push0	
+		lofsa	display
+		send	0xa
+		pushi	0x07
+		push1	
+		lst	0x0
+		pushi	0x011c
+		push0	
+		lofsa	readout
+		send	0xa
+code_904:
+		ldi	0x03
+		aTop	0x12
+		jmp	code_927
+code_911:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_927
+		ldi	0x01
+		aTop	0xc
+		pushi	0x6b
+		push0	
+		self	0x4
+code_927:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT sellRobots of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'sellRobots', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = sellRobots::138   	 ; @0x2da
+
+.CODE
+bugTalker::60:
+		lal	0xf
+		bnt	code_1021
+		pTos	0xa
+		ldi	0x00
+		eq?	
+		bnt	code_1021
+		pushi	0x0087
+		push1	
+		push0	
+		lofsa	sellRobots
+		send	0x6
+		ldi	0x00
+		aTop	0x12
+		pushi	0x008b
+		push0	
+		self	0x4
+code_1021:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		ret	
+
+bugTalker::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1074
+		lal	0xf
+		not	
+		bnt	code_1067
+		push0	
+		callb	0x3, 0x0
+		pushi	0x00c7
+		push2	
+		pushi	0x04
+		pushi	0x05
+		lag	0x45
+		send	0x8
+		jmp	code_1237
+code_1067:
+		push0	
+		callb	0x2, 0x0
+		jmp	code_1237
+code_1074:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1143
+		pushi	0x0a
+		-al	0xf
+		lsli	0x5
+		pushi	0x43
+		pushi	0x06
+		pushi	0x0086
+		pushi	0x46
+		pushi	0x00be
+		pushi	0x1c
+		lsg	0x88
+		pushi	0x21
+		pushi	0x3c
+		callb	0xc, 0x14
+		aTop	0x1a
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	bugMouth
+		send	0x6
+		push1	
+		push1	
+		lal	0xf
+		lsli	0x5
+		callk	0x46, 0x2
+		push	
+		ldi	0x0a
+		div	
+		add	
+		aTop	0x12
+		jmp	code_1237
+code_1143:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1237
+		pushi	0x0087
+		push0	
+		lofsa	noMoney
+		send	0x4
+		bnt	code_1175
+		pushi	0x0177
+		push1	
+		pushi	0x2f
+		lag	0x2
+		send	0x6
+		jmp	code_1237
+code_1175:
+		pushi	0x0087
+		push0	
+		lofsa	soldDroid
+		send	0x4
+		bnt	code_1200
+		pushi	0x0177
+		push1	
+		pushi	0x2e
+		lag	0x2
+		send	0x6
+		jmp	code_1237
+code_1200:
+		push1	
+		pTos	0x1a
+		callb	0xc, 0x2
+		pushi	0x0094
+		push1	
+		push0	
+		lofsa	bugMouth
+		send	0x6
+		lal	0xf
+		not	
+		bnt	code_1232
+		pushi	0x0087
+		push1	
+		push1	
+		lofsa	sellRobots
+		send	0x6
+code_1232:
+		pushi	0x6b
+		push0	
+		self	0x4
+code_1237:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT bugTalker of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'bugTalker', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = bugTalker::60   	 ; @0x3dc
+  [0x8a]  = bugTalker::138   	 ; @0x406
+
+.CODE
+soldDroid::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1344
+		push0	
+		call	code_25, 0
+		push1	
+		lofsa	string_8		; "Thank you, sir."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_9		; "You may pick up your purchase at our convenient Droids-B-Us pickup area, located just out the door and to your right."
+		push	
+		call	code_14, 2
+		ldi	0x04
+		aTop	0x10
+		jmp	code_1355
+code_1344:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1355
+		ldi	0x01
+		aTop	0x1a
+code_1355:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT soldDroid of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'soldDroid', 'id': 'string_10'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = soldDroid::138   	 ; @0x516
+
+.CODE
+noMoney::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1521
+		push0	
+		call	code_25, 0
+		+al	0x0
+		push	
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1455
+		push1	
+		lofsa	string_11		; "You could fill out one of our credit applications, although I seriously doubt that you would qualify."
+		push	
+		call	code_14, 2
+		jmp	code_1506
+code_1455:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1474
+		push1	
+		lofsa	string_12		; "I believe that the FloorMart store on Petulence is having a sale on pencil sharpeners that you might just be able to afford!"
+		push	
+		call	code_14, 2
+		jmp	code_1506
+code_1474:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1493
+		push1	
+		lofsa	string_13		; "Why can't I ever get a customer with more money than brains? Well... in your case, you might just qualify at that."
+		push	
+		call	code_14, 2
+		jmp	code_1506
+code_1493:
+		push1	
+		lofsa	string_14		; "Look, why don't you go break your piggy bank open and come back with a little more cash? Now, if you'll excuse me, you really must be going."
+		push	
+		call	code_14, 2
+		ldi	0x01
+		aTop	0x1a
+code_1506:
+		toss	
+		push1	
+		lofsa	string_15		; "Pardon me for saying so, sir, but we don't appear to have enough money for our purchase, now, do we?"
+		push	
+		call	code_14, 2
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1521:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT noMoney of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'noMoney', 'id': 'string_16'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = noMoney::138   	 ; @0x588
+
+.CODE
+bug::266:
+		lsp	0x1
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2049
+		push0	
+		call	code_25, 0
+		pushi	0x07
+		push0	
+		lofsa	display
+		send	0x4
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1642
+		push1	
+		lofsa	string_19		; "If you were to insist, I could let you have it for a mere 512 buckazoids (407 with a coupon)."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_20		; "However, I have only one left, and I put it to work in the warehouse."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_21		; "This is an all-purpose household model. It cooks, sews, does windows and brews a little moonshine on the side."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1642:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1688
+		push1	
+		lofsa	string_22		; "Don't bother haggling. This one's worth 55 buckazoids for the parts alone. That would be 46 buckazoids with a coupon."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_23		; "That race killed themselves off, however, and spare parts are nearly impossible to find."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_24		; "It was produced exclusively for Droids-B-Us by a small planet who used these mechanical warriors to fight their battles."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_25		; "Ah! This model is one of my personal favorites."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1688:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1743
+		push1	
+		lofsa	string_26		; "And, if you've got kids, you'll appreciate its low, low price of 698 buckazoids (559 with a coupon)."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_27		; "If you can live with the paranoia, though, it makes a great baby-sitter."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_28		; "Whenever it gets excited, it waves its arms around wildly and yells \"DANGER! DANGER!\""
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_29		; "However, the manufacturer had to discontinue it due to a psychological disorder."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_30		; "This model was originally designed as a family companion on those long space vacations."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1743:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1780
+		push1	
+		lofsa	string_31		; "I'd love to sell you one, but every last one I had was snapped up by a movie director from New Japan IV - sorry."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_32		; "Although a handsome machine, this robot has a habit of killing people without any real reason."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_33		; "Ah, yes, a truly beautiful piece of machinery. This design rates five stars."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1780:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1826
+		push1	
+		lofsa	string_34		; "Yes, this dandy, compact unit goes for a mere 29 buckazoids (23 with coupon). You can't go wrong when it's SUX!"
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_35		; "...but of course you wouldn't want to hear about that."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_36		; "I just happen to have one of these in stock. It's been completely re-conditioned since its regrettable accident that took the lives of..."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_37		; "The brand name says it all. SUX is a major manufacturer of refrigerators, dishwashers, and, some day, even time machines!"
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1826:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1863
+		push1	
+		lofsa	string_38		; "We've got a set of three, and you can have them all for just 999 buckazoids (799 with a coupon)."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_39		; "Yessir, they may look like kleenex boxes, but they're built to run a loooong time. And quiet? You bet!"
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_40		; "These little robots are perfect for gardening chores. And they don't mind at all if they're away on space missions for centuries."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1863:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1900
+		push1	
+		lofsa	string_41		; "However, we're fresh out of them right now. Nobody seems to survive long enough to trade them in."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_42		; "They're just a wee bit too ambitious is all. And who of us isn't? It's quite an endearing quality, actually."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_43		; "Um... This model has had a bad rep, unearned if you ask me."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1900:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1937
+		push1	
+		lofsa	string_44		; "I could let you have him for just 875 buckazoids (700 with a coupon)."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_45		; "Of course, they're all in hibernation this time of the century."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_46		; "These are really some of the most useful all-purpose robots around, and extremely good with children."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1937:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_1974
+		push1	
+		lofsa	string_47		; "His memory isn't the best, so I'll let you have him for just 512 buckazoids (410 with a coupon)."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_48		; "If it had one fault, it was probably a tendency to be over- zealous. It's no longer available except for demolition purposes."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_49		; "This was one of my better bodyguard models, and it also doubled as a radial-arm saw."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_1974:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_2002
+		push1	
+		lofsa	string_50		; "Uh, well, maybe you shouldn't consider buying this particular model."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_51		; "These robots have a bad attitude. You've got to keep them in line, or they'll walk all over you."
+		push	
+		call	code_14, 2
+		jmp	code_2045
+code_2002:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_2045
+		push1	
+		lofsa	string_52		; "I got it from some gambling type who was required to pay-up or perish."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_53		; "I ask only 45 buckazoids for it (36 with coupon)."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_54		; "It will pilot any modern fighter or cruiser. And, it is one of the most experienced droids we carry."
+		push	
+		call	code_14, 2
+		push1	
+		lofsa	string_55		; "That model is ideal for flight systems operations."
+		push	
+		call	code_14, 2
+code_2045:
+		toss	
+		jmp	code_2609
+code_2049:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2598
+		lsp	0x2
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2077
+		push1	
+		lofsa	string_56		; "I'm afraid I can't take data cartridges in lieu of currency. Is sir a bit short of cash, hmmmm?"
+		push	
+		call	code_14, 2
+		jmp	code_2594
+code_2077:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2096
+		push1	
+		lofsa	string_57		; "I'm afraid I can't accept your translator in exchange for a droid. Buckazoids work nicely to grease the wheels of commerce, however."
+		push	
+		call	code_14, 2
+		jmp	code_2594
+code_2096:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2115
+		push1	
+		lofsa	string_58		; "Please, sir! Violence is never the answer. Money, on the other hand, is almost always the answer."
+		push	
+		call	code_14, 2
+		jmp	code_2594
+code_2115:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2134
+		push1	
+		lofsa	string_59		; "If he drinks from this, you won't. You decide not to offer him any."
+		push	
+		calle	0xff, 0x00, 0x02
+		jmp	code_2594
+code_2134:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_2152
+		push2	
+		pushi	0x30
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_2594
+code_2152:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_2211
+		push0	
+		call	code_25, 0
+		ldi	0x01
+		sal	0x1
+		pushi	0x0146
+		push1	
+		pushi	0x12
+		lag	0x0
+		send	0x6
+		lsl	0x2
+		ldi	0x09
+		sub	
+		sal	0x2
+		lsl	0x3
+		ldi	0x09
+		sub	
+		sal	0x3
+		lsl	0x4
+		ldi	0x09
+		sub	
+		sal	0x4
+		push1	
+		lofsa	string_60		; "Very good, sir. This coupon entitles you to a reduction of twenty percent in the price of any of our fine, previously- owned droids."
+		push	
+		call	code_14, 2
+		jmp	code_2594
+code_2211:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_2585
+		push0	
+		call	code_25, 0
+		pushi	0x07
+		push0	
+		lofsa	display
+		send	0x4
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2255
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2255:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2315
+		lsg	0xa5
+		lal	0x2
+		ge?	
+		bnt	code_2299
+		lsg	0xa5
+		lal	0x2
+		sub	
+		sag	0xa5
+		push1	
+		pushi	0x20
+		callb	0x7, 0x2
+		pushi	0x008c
+		push1	
+		lofsa	soldDroid
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2299:
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2315:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2338
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2338:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2357
+		push1	
+		lofsa	string_61		; "Sorry, sir, but I've sold my last one of those."
+		push	
+		call	code_14, 2
+		jmp	code_2581
+code_2357:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2417
+		lsg	0xa5
+		lal	0x3
+		ge?	
+		bnt	code_2401
+		lsg	0xa5
+		lal	0x3
+		sub	
+		sag	0xa5
+		push1	
+		pushi	0x2c
+		callb	0x7, 0x2
+		pushi	0x008c
+		push1	
+		lofsa	soldDroid
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2401:
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2417:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2440
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2440:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_2459
+		push1	
+		lofsa	string_62		; "Sorry, sir, but we have none of those in stock."
+		push	
+		call	code_14, 2
+		jmp	code_2581
+code_2459:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_2482
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2482:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_2505
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2505:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_2524
+		push1	
+		lofsa	string_63		; "I'm sorry, sir, but my conscience just won't let me sell him to you. Besides, your next of kin might sue."
+		push	
+		call	code_14, 2
+		jmp	code_2581
+code_2524:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_2581
+		lsg	0xa5
+		lal	0x4
+		ge?	
+		bnt	code_2568
+		lsg	0xa5
+		lal	0x4
+		sub	
+		sag	0xa5
+		push1	
+		pushi	0x19
+		callb	0x7, 0x2
+		pushi	0x008c
+		push1	
+		lofsa	soldDroid
+		push	
+		lofsa	bugMouth
+		send	0x6
+		jmp	code_2581
+code_2568:
+		pushi	0x008c
+		push1	
+		lofsa	noMoney
+		push	
+		lofsa	bugMouth
+		send	0x6
+code_2581:
+		toss	
+		jmp	code_2594
+code_2585:
+		push1	
+		lofsa	string_64		; "I'm afraid that item can not be exchanged for enough money to purchase one of our quality products. Is sir financially embarassed, or might there be cash in one of those pockets?"
+		push	
+		call	code_14, 2
+code_2594:
+		toss	
+		jmp	code_2609
+code_2598:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2c, 0x8
+code_2609:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT bug of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bug', 'id': 'string_65'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'salesbug', 'id': 'string_17'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "The salesbug appears to be a Chdnarian, a race renowned for their predatory sales techniques. You decide to count your fingers once you've completed your transaction.", 'id': 'string_18'}
+Overriden functions: 1
+  [0x10a]  = bug::266   	 ; @0x62e
+
+.OBJECT antenna of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'antenna', 'id': 'string_66'}
+  [#4] = 0xc6
+  [#5] = 0x3c
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'antenna', 'id': 'string_66'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x94
+  [#24] = 0x0
+  [#25] = 0x2
+  [#26] = 0xc
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1e
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.CODE
+wiggleAntenna::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2818
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push2	
+		push1	
+		pushi	0x03
+		callk	0x3c, 0x4
+		push	
+		pushSelf	
+		pToa	0x8
+		send	0xa
+		jmp	code_2850
+code_2818:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2838
+		push2	
+		pushi	0x0a
+		pushi	0x18
+		callk	0x3c, 0x4
+		aTop	0x10
+		jmp	code_2850
+code_2838:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2850
+		pushi	0x6b
+		push0	
+		self	0x4
+code_2850:
+		toss	
+		ret	
+
+
+.OBJECT wiggleAntenna of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'wiggleAntenna', 'id': 'string_67'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = wiggleAntenna::138   	 ; @0xade
+
+.OBJECT bugMouth of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'bugMouth', 'id': 'string_68'}
+  [#4] = 0xc3
+  [#5] = 0x5b
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x94
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x8
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT rightarm of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'rightarm', 'id': 'string_69'}
+  [#4] = 0x108
+  [#5] = 0x61
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x94
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x18
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT display of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'display', 'id': 'string_70'}
+  [#4] = 0x57
+  [#5] = 0x5d
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xf8
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT readout of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'readout', 'id': 'string_71'}
+  [#4] = 0x53
+  [#5] = 0x70
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0xf8
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT award of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'award', 'id': 'string_74'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'plaque', 'id': 'string_72'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The plaque says: \\"Salesbug of the year\\"! You\'d better watch your money around this guy.', 'id': 'string_73'}
+Overriden functions: 0
+
+.CODE
+robotHead::266:
+		lsp	0x1
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_3378
+		push2	
+		pushi	0x30
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_3389
+code_3378:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3389:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT robotHead of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'robotHead', 'id': 'string_77'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'robot head', 'id': 'string_75'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "Yikes! It's an Ultron-17, the only robot bad enough to go head-to-head with an Arnoid-1000 Exterminator. You note with relief that he appears to be out of commission, at least temporarily.", 'id': 'string_76'}
+Overriden functions: 1
+  [0x10a]  = robotHead::266   	 ; @0xd1e
+
+.OBJECT robotArm of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'robotArm', 'id': 'string_80'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'robot apendage', 'id': 'string_78'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "That's an upgrade option for the Arnoid series. It's capable of crushing a person's skull. Very useful if you're in that line of work.", 'id': 'string_79'}
+Overriden functions: 0
+
+.CODE
+bugButt::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3542
+		pushi	0x0177
+		push1	
+		pushi	0x2f
+		lag	0x2
+		send	0x6
+		jmp	code_3553
+code_3542:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3553:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT bugButt of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bugButt', 'id': 'string_83'}
+  [#4] = 0x0
+  [#5] = 0xc8
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'exit button', 'id': 'string_81'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x20
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Click on this to leave Droids-B-Us.', 'id': 'string_82'}
+Overriden functions: 1
+  [0x10a]  = bugButt::266   	 ; @0xdc0
+
+.OBJECT DBUsign of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'DBUsign', 'id': 'string_86'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sign', 'id': 'string_84'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The plastoid letters on the wall spell out: \\"Droids-B-Us\\"', 'id': 'string_85'}
+Overriden functions: 0
+
+.OBJECT screen of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'screen', 'id': 'string_89'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'view screen', 'id': 'string_87'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x80
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The viewscreen shows pictures of droids currently available in your rather limited price range.', 'id': 'string_88'}
+Overriden functions: 0
+
+.OBJECT diaphram of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'diaphram', 'id': 'string_90'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'diaphram', 'id': 'string_90'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x100
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'It looks like some sort of gigantic... diaphragm?', 'id': 'string_91'}
+Overriden functions: 0
+
+.OBJECT tubes of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'tubes', 'id': 'string_94'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'power tubes', 'id': 'string_92'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x200
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'These tubes on the wall are power conduits.', 'id': 'string_93'}
+Overriden functions: 0
+
+.OBJECT table of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'table', 'id': 'string_97'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'work table', 'id': 'string_95'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'There are many robotic parts scattered about the work table.', 'id': 'string_96'}
+Overriden functions: 0
+
+.OBJECT parts of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'parts', 'id': 'string_100'}
+  [#4] = 0x0
+  [#5] = 0xbd
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'robot parts', 'id': 'string_98'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x800
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Many parts, bits, and pieces of robotic paraphanalia adorn the walls of this small store.', 'id': 'string_99'}
+Overriden functions: 0
+
+.STRINGS
+string_0: "rm48"		 ; special
+string_1: "Please observe our robot preview screen. If you have any questions, don't hesitate to ask."
+string_2: "Oh, we're back, are we? Well, perhaps we can manage to take home a droid this time, eh?"
+string_3: "However, I can see that we would be more... ah... interested in our line of economy-priced, used robots, wouldn't we?"
+string_4: "We have a wide variety of work-saving, life- enhancing, shiny-new, factory-fresh, technological wonders of modern engineering wizardry!"
+string_5: "Greetings, sir! Allow me to show you our fine line of robots, otherwise known as \"droids\"."
+string_6: "sellRobots"		 ; special
+string_7: "bugTalker"		 ; special
+string_8: "Thank you, sir."
+string_9: "You may pick up your purchase at our convenient Droids-B-Us pickup area, located just out the door and to your right."
+string_10: "soldDroid"		 ; special
+string_11: "You could fill out one of our credit applications, although I seriously doubt that you would qualify."
+string_12: "I believe that the FloorMart store on Petulence is having a sale on pencil sharpeners that you might just be able to afford!"
+string_13: "Why can't I ever get a customer with more money than brains? Well... in your case, you might just qualify at that."
+string_14: "Look, why don't you go break your piggy bank open and come back with a little more cash? Now, if you'll excuse me, you really must be going."
+string_15: "Pardon me for saying so, sir, but we don't appear to have enough money for our purchase, now, do we?"
+string_16: "noMoney"		 ; special
+string_17: "salesbug"
+string_18: "The salesbug appears to be a Chdnarian, a race renowned for their predatory sales techniques. You decide to count your fingers once you've completed your transaction."
+string_19: "If you were to insist, I could let you have it for a mere 512 buckazoids (407 with a coupon)."
+string_20: "However, I have only one left, and I put it to work in the warehouse."
+string_21: "This is an all-purpose household model. It cooks, sews, does windows and brews a little moonshine on the side."
+string_22: "Don't bother haggling. This one's worth 55 buckazoids for the parts alone. That would be 46 buckazoids with a coupon."
+string_23: "That race killed themselves off, however, and spare parts are nearly impossible to find."
+string_24: "It was produced exclusively for Droids-B-Us by a small planet who used these mechanical warriors to fight their battles."
+string_25: "Ah! This model is one of my personal favorites."
+string_26: "And, if you've got kids, you'll appreciate its low, low price of 698 buckazoids (559 with a coupon)."
+string_27: "If you can live with the paranoia, though, it makes a great baby-sitter."
+string_28: "Whenever it gets excited, it waves its arms around wildly and yells \"DANGER! DANGER!\""
+string_29: "However, the manufacturer had to discontinue it due to a psychological disorder."
+string_30: "This model was originally designed as a family companion on those long space vacations."
+string_31: "I'd love to sell you one, but every last one I had was snapped up by a movie director from New Japan IV - sorry."
+string_32: "Although a handsome machine, this robot has a habit of killing people without any real reason."
+string_33: "Ah, yes, a truly beautiful piece of machinery. This design rates five stars."
+string_34: "Yes, this dandy, compact unit goes for a mere 29 buckazoids (23 with coupon). You can't go wrong when it's SUX!"
+string_35: "...but of course you wouldn't want to hear about that."
+string_36: "I just happen to have one of these in stock. It's been completely re-conditioned since its regrettable accident that took the lives of..."
+string_37: "The brand name says it all. SUX is a major manufacturer of refrigerators, dishwashers, and, some day, even time machines!"
+string_38: "We've got a set of three, and you can have them all for just 999 buckazoids (799 with a coupon)."
+string_39: "Yessir, they may look like kleenex boxes, but they're built to run a loooong time. And quiet? You bet!"
+string_40: "These little robots are perfect for gardening chores. And they don't mind at all if they're away on space missions for centuries."
+string_41: "However, we're fresh out of them right now. Nobody seems to survive long enough to trade them in."
+string_42: "They're just a wee bit too ambitious is all. And who of us isn't? It's quite an endearing quality, actually."
+string_43: "Um... This model has had a bad rep, unearned if you ask me."
+string_44: "I could let you have him for just 875 buckazoids (700 with a coupon)."
+string_45: "Of course, they're all in hibernation this time of the century."
+string_46: "These are really some of the most useful all-purpose robots around, and extremely good with children."
+string_47: "His memory isn't the best, so I'll let you have him for just 512 buckazoids (410 with a coupon)."
+string_48: "If it had one fault, it was probably a tendency to be over- zealous. It's no longer available except for demolition purposes."
+string_49: "This was one of my better bodyguard models, and it also doubled as a radial-arm saw."
+string_50: "Uh, well, maybe you shouldn't consider buying this particular model."
+string_51: "These robots have a bad attitude. You've got to keep them in line, or they'll walk all over you."
+string_52: "I got it from some gambling type who was required to pay-up or perish."
+string_53: "I ask only 45 buckazoids for it (36 with coupon)."
+string_54: "It will pilot any modern fighter or cruiser. And, it is one of the most experienced droids we carry."
+string_55: "That model is ideal for flight systems operations."
+string_56: "I'm afraid I can't take data cartridges in lieu of currency. Is sir a bit short of cash, hmmmm?"
+string_57: "I'm afraid I can't accept your translator in exchange for a droid. Buckazoids work nicely to grease the wheels of commerce, however."
+string_58: "Please, sir! Violence is never the answer. Money, on the other hand, is almost always the answer."
+string_59: "If he drinks from this, you won't. You decide not to offer him any."
+string_60: "Very good, sir. This coupon entitles you to a reduction of twenty percent in the price of any of our fine, previously- owned droids."
+string_61: "Sorry, sir, but I've sold my last one of those."
+string_62: "Sorry, sir, but we have none of those in stock."
+string_63: "I'm sorry, sir, but my conscience just won't let me sell him to you. Besides, your next of kin might sue."
+string_64: "I'm afraid that item can not be exchanged for enough money to purchase one of our quality products. Is sir financially embarassed, or might there be cash in one of those pockets?"
+string_65: "bug"		 ; special
+string_66: "antenna"		 ; special
+string_67: "wiggleAntenna"		 ; special
+string_68: "bugMouth"		 ; special
+string_69: "rightarm"		 ; special
+string_70: "display"		 ; special
+string_71: "readout"		 ; special
+string_72: "plaque"
+string_73: "The plaque says: \"Salesbug of the year\"! You'd better watch your money around this guy."
+string_74: "award"		 ; special
+string_75: "robot head"
+string_76: "Yikes! It's an Ultron-17, the only robot bad enough to go head-to-head with an Arnoid-1000 Exterminator. You note with relief that he appears to be out of commission, at least temporarily."
+string_77: "robotHead"		 ; special
+string_78: "robot apendage"
+string_79: "That's an upgrade option for the Arnoid series. It's capable of crushing a person's skull. Very useful if you're in that line of work."
+string_80: "robotArm"		 ; special
+string_81: "exit button"
+string_82: "Click on this to leave Droids-B-Us."
+string_83: "bugButt"		 ; special
+string_84: "sign"
+string_85: "The plastoid letters on the wall spell out: \"Droids-B-Us\""
+string_86: "DBUsign"		 ; special
+string_87: "view screen"
+string_88: "The viewscreen shows pictures of droids currently available in your rather limited price range."
+string_89: "screen"		 ; special
+string_90: "diaphram"		 ; special
+string_91: "It looks like some sort of gigantic... diaphragm?"
+string_92: "power tubes"
+string_93: "These tubes on the wall are power conduits."
+string_94: "tubes"		 ; special
+string_95: "work table"
+string_96: "There are many robotic parts scattered about the work table."
+string_97: "table"		 ; special
+string_98: "robot parts"
+string_99: "Many parts, bits, and pieces of robotic paraphanalia adorn the walls of this small store."
+string_100: "parts"		 ; special
+string_unused_101: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0, 0x0, 0x37, 0x28, 0x2d, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0
+
+.RELOCATION
+num of pointers: 159
+0x1e, 0x34, 0x53, 0x63, 0x67, 0x7a, 0x7e, 0x8a, 0x96, 0x9e, 0xa6, 0xae, 0xb6, 0xbe, 0xc6, 0xce, 0xd6, 0xde, 0xe6, 0xee, 0xf7, 0x125, 0x137, 0x29a, 0x2fa, 0x30c, 0x318, 0x321, 0x32a, 0x348, 0x376, 0x384, 0x3b4, 0x3ef, 0x460, 0x483, 0x49c, 0x4bc, 0x4cc, 0x4ea, 0x529, 0x532, 0x560, 0x5a5, 0x5b8, 0x5cb, 0x5d7, 0x5e5, 0x606, 0x640, 0x64e, 0x657, 0x660, 0x673, 0x67c, 0x685, 0x68e, 0x6a1, 0x6aa, 0x6b3, 0x6bc, 0x6c5, 0x6d8, 0x6e1, 0x6ea, 0x6fd, 0x706, 0x70f, 0x718, 0x72b, 0x734, 0x73d, 0x750, 0x759, 0x762, 0x775, 0x77e, 0x787, 0x79a, 0x7a3, 0x7ac, 0x7bf, 0x7c8, 0x7db, 0x7e4, 0x7ed, 0x7f6, 0x813, 0x826, 0x839, 0x84c, 0x899, 0x8b3, 0x8c4, 0x8c8, 0x8f0, 0x8f4, 0x900, 0x904, 0x917, 0x91b, 0x92b, 0x956, 0x95a, 0x966, 0x96a, 0x97d, 0x981, 0x991, 0x9a7, 0x9ab, 0x9be, 0x9c2, 0x9d2, 0x9fd, 0xa01, 0xa0d, 0xa11, 0xa1b, 0xa46, 0xa5a, 0xa6a, 0xa86, 0xa9a, 0xb36, 0xb6c, 0xbd2, 0xc38, 0xc94, 0xcf0, 0xd04, 0xd14, 0xd52, 0xd66, 0xd76, 0xd92, 0xda6, 0xdb6, 0xdf6, 0xe0a, 0xe1a, 0xe36, 0xe4a, 0xe5a, 0xe72, 0xe86, 0xe96, 0xeae, 0xec2, 0xed2, 0xeea, 0xefe, 0xf0e, 0xf26, 0xf3a, 0xf4a, 0xf62, 0xf76, 0xf86

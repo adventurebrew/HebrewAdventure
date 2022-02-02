@@ -1,0 +1,481 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rmK2 of 0x74
+
+.CODE
+rmK2::107:
+		pushi	0x0144
+		push0	
+		pushi	0x0137
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		sal	0x0
+		push	
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_62
+		pushi	0x04
+		push1	
+		push2	
+		pushi	0x78
+		pushi	0x00c8
+		callk	0x3c, 0x4
+		push	
+		lag	0x0
+		send	0x6
+		lag	0xc
+		aTop	0x1c
+		jmp	code_138
+code_62:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_93
+		pushi	0x04
+		push1	
+		push2	
+		pushi	0x78
+		pushi	0x00c8
+		callk	0x3c, 0x4
+		push	
+		lag	0x0
+		send	0x6
+		lag	0xc
+		aTop	0x20
+		jmp	code_138
+code_93:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_117
+		pushi	0x03
+		push1	
+		pushi	0x00aa
+		lag	0x0
+		send	0x6
+		lag	0xc
+		aTop	0x22
+		jmp	code_138
+code_117:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_138
+		pushi	0x03
+		push1	
+		pushi	0x00aa
+		lag	0x0
+		send	0x6
+		lag	0xc
+		aTop	0x1e
+code_138:
+		toss	
+		pushi	0x03
+		pushi	0x0080
+		pushi	0x12
+		pushi	0x01a4
+		calle	0x03be, 0x0000, 0x06
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02c0
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rmK2::380:
+		pushi	0x008c
+		push1	
+		lofsa	egoDead
+		push	
+		lag	0x0
+		send	0x6
+		ret	
+
+		bnot	
+
+.OBJECT rmK2 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rmK2', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x26
+  [#11] = 0x8
+  [#12] = 0x7d
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 2
+  [0x6b]  = rmK2::107   	 ; @0xe
+  [0x17c]  = rmK2::380   	 ; @0xb2
+
+.CODE
+egoDead::60:
+		pushi	0x3c
+		push0	
+		rest	0x1
+		super	0x6, 0x4
+		pushi	0x0118
+		push0	
+		class	0x31
+		send	0x4
+		not	
+		bnt	code_293
+		ldi	0x00
+		jmp	code_634
+code_293:
+		pushi	0x0182
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_379
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0087
+		gt?	
+		bt	code_345
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x1e
+		lt?	
+		bt	code_345
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0122
+		gt?	
+code_345:
+		bnt	code_634
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x0096
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_634
+code_379:
+		pushi	0x0184
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_465
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00aa
+		lt?	
+		bt	code_431
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x1e
+		lt?	
+		bt	code_431
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0122
+		gt?	
+code_431:
+		bnt	code_634
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x00a0
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_634
+code_465:
+		pushi	0x0183
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_552
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x0122
+		lt?	
+		bt	code_518
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x008c
+		lt?	
+		bt	code_518
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		gt?	
+code_518:
+		bnt	code_634
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0118
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_634
+code_552:
+		pushi	0x0185
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_634
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x1e
+		gt?	
+		bt	code_604
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x008c
+		lt?	
+		bt	code_604
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		gt?	
+code_604:
+		bnt	code_634
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x1e
+		pushi	0x03
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xc
+code_634:
+		ret	
+
+egoDead::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_652
+		ldi	0x00
+		jmp	code_800
+code_652:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_757
+		pushi	0x0088
+		push0	
+		lag	0x2
+		send	0x4
+		bnt	code_678
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_800
+code_678:
+		push0	
+		callb	0x2, 0x0
+		pushi	0x2b
+		push1	
+		pushi	0x032a
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+		pushi	0x05
+		push1	
+		pushi	0x12
+		pushi	0x00a0
+		push1	
+		pushi	0x3a
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x00b4
+		lt?	
+		bnt	code_728
+		ldi	0x00
+		jmp	code_730
+code_728:
+		ldi	0x01
+code_730:
+		push	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0119
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		lag	0x0
+		send	0x1e
+		ldi	0x18
+		aTop	0x10
+		jmp	code_800
+code_757:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_779
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_800
+code_779:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_800
+		pushi	0x04
+		pushi	0x12
+		push0	
+		pushi	0x07
+		lofsa	string_1		; "Whoa! Those big guys pack a powerful appetite. Did you feel the way that thing just chomped right through your skeletal system? That had to hurt! The grell burps in solitary satisfaction. He doesn't often get nice, warm meals like you."
+		push	
+		callb	0xa, 0x8
+code_800:
+		toss	
+		ret	
+
+
+.OBJECT egoDead of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'egoDead', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 2
+  [0x3c]  = egoDead::60   	 ; @0x10c
+  [0x8a]  = egoDead::138   	 ; @0x27b
+
+.STRINGS
+string_0: "rmK2"		 ; special
+string_1: "Whoa! Those big guys pack a powerful appetite. Did you feel the way that thing just chomped right through your skeletal system? That had to hurt! The grell burps in solitary satisfaction. He doesn't often get nice, warm meals like you."
+string_2: "egoDead"		 ; special
+string_unused_3: ""
+string_unused_4: ""
+
+
+.LOCAL_VARS
+0x0
+
+.RELOCATION
+num of pointers: 4
+0xb7, 0xd2, 0x31a, 0x334

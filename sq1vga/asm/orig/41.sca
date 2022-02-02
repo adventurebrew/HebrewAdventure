@@ -1,0 +1,4380 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm41 of 0x74
+
+.CODE
+rm41::107:
+		pushi	0x0174
+		push2	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x2a
+		pushi	0x013f
+		pushi	0x00aa
+		pushi	0x0120
+		pushi	0x00a9
+		pushi	0x010f
+		pushi	0x00af
+		pushi	0x00cb
+		pushi	0x00ab
+		pushi	0x00d0
+		pushi	0x00a1
+		pushi	0x00bf
+		pushi	0x00a0
+		pushi	0x00b6
+		pushi	0x00a7
+		pushi	0x00a2
+		pushi	0x00a3
+		pushi	0x00a5
+		pushi	0x00a0
+		pushi	0x00d3
+		pushi	0x7a
+		pushi	0x0095
+		pushi	0x73
+		pushi	0x00a3
+		pushi	0x009b
+		pushi	0x0099
+		pushi	0x00a1
+		pushi	0x008a
+		pushi	0x009c
+		pushi	0x008a
+		pushi	0x009b
+		pushi	0x008d
+		pushi	0x0096
+		pushi	0x0083
+		pushi	0x0092
+		pushi	0x7b
+		pushi	0x008e
+		pushi	0x61
+		pushi	0x008c
+		pushi	0x7d
+		pushi	0x69
+		pushi	0x013f
+		pushi	0x5c
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x62
+		push	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x08
+		push0	
+		pushi	0x0092
+		pushi	0x41
+		pushi	0x0097
+		pushi	0x28
+		pushi	0x00ac
+		push0	
+		pushi	0x00ac
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x1e
+		push	
+		self	0x8
+		push1	
+		pushi	0x0e
+		callb	0x6, 0x2
+		bnt	code_231
+		push1	
+		pushi	0x0f
+		callb	0x6, 0x2
+		not	
+		bnt	code_231
+		push1	
+		pushi	0x0e
+		callb	0x8, 0x2
+		ldi	0x01
+		sal	0x10
+		jmp	code_254
+code_231:
+		push1	
+		pushi	0x0e
+		callb	0x6, 0x2
+		bnt	code_254
+		lsg	0xab
+		ldi	0x01
+		ge?	
+		bnt	code_254
+		+ag	0xab
+		ldi	0x64
+		sal	0x11
+code_254:
+		lsg	0xc
+		dup	
+		pToa	0x1c
+		eq?	
+		bnt	code_289
+		ldi	0x0a
+		aTop	0x16
+		pushi	0x6b
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x53
+		pTos	0x18
+		ldi	0x05
+		add	
+		push	
+		lag	0x0
+		send	0xc
+		jmp	code_537
+code_289:
+		dup	
+		pToa	0x1e
+		eq?	
+		bnt	code_324
+		ldi	0x0b
+		aTop	0x16
+		pushi	0x04
+		push1	
+		pushi	0x012c
+		lag	0x0
+		send	0x6
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		jmp	code_537
+code_324:
+		dup	
+		pToa	0x22
+		eq?	
+		bnt	code_358
+		ldi	0x0c
+		aTop	0x16
+		pushi	0x04
+		push1	
+		pushi	0x14
+		lag	0x0
+		send	0x6
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		jmp	code_537
+code_358:
+		dup	
+		ldi	0x2b
+		eq?	
+		bnt	code_462
+		pushi	0x6b
+		push0	
+		pushi	0x69
+		push0	
+		lag	0x0
+		send	0x8
+		pushi	0x05
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x20
+		eq?	
+		bnt	code_412
+		push2	
+		pushi	0x0084
+		pushi	0x0193
+		callk	0x0, 0x4
+		pushi	0x008c
+		push1	
+		lofsa	fallDown
+		push	
+		self	0x6
+		jmp	code_537
+code_412:
+		lsg	0xa5
+		ldi	0x0082
+		ge?	
+		bnt	code_449
+		push1	
+		pushi	0x3f
+		callb	0x6, 0x2
+		not	
+		bnt	code_449
+		push1	
+		pushi	0x43
+		callb	0x6, 0x2
+		not	
+		bnt	code_449
+		pushi	0x6b
+		push0	
+		lofsa	mugger
+		send	0x4
+code_449:
+		pushi	0x008c
+		push1	
+		lofsa	comeFromBar
+		push	
+		self	0x6
+		jmp	code_537
+code_462:
+		ldi	0x08
+		aTop	0x16
+		pushi	0x019a
+		push1	
+		push0	
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	guy
+		send	0x8
+		pushi	0x2b
+		push1	
+		pushi	0x0258
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x66
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x16
+		push1	
+		pushi	0x0e
+		callb	0x7, 0x2
+		push2	
+		pushi	0x19
+		pushi	0x0099
+		callb	0xb, 0x4
+		pushi	0x008c
+		push1	
+		lofsa	getOutaSkimmer
+		push	
+		self	0x6
+code_537:
+		toss	
+		push1	
+		pushi	0x0e
+		callb	0x6, 0x2
+		bnt	code_586
+		pushi	0x5a
+		push1	
+		lea	0x2, 0x0
+		push	
+		pushi	0x59
+		push1	
+		pushi	0x08
+		lofsa	skimmerPoly
+		send	0xc
+		pushi	0x0174
+		push1	
+		lofsa	skimmerPoly
+		push	
+		self	0x6
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	skimmer
+		send	0x8
+code_586:
+		pushi	0x0187
+		push1	
+		pushi	0x02be
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x5f
+		push	
+		lofsa	barSign
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	rocketSign
+		send	0xa
+		pushi	0x6b
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	radar
+		send	0xa
+		pushi	0x6b
+		push0	
+		lofsa	shuttle
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	pickleShip
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	tallRocket
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	barFront
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	barSigns
+		send	0x4
+		push1	
+		pushi	0x21
+		callb	0x6, 0x2
+		bnt	code_722
+		lsg	0xc
+		ldi	0x2b
+		eq?	
+		bnt	code_722
+		pushi	0x011a
+		push2	
+		pushi	0x78
+		pushi	0x00b8
+		push2	
+		pushi	0x02be
+		push1	
+		callk	0x2, 0x4
+		send	0x8
+code_722:
+		ret	
+
+rm41::60:
+		pToa	0x8
+		bnt	code_733
+		ldi	0x00
+		jmp	code_850
+code_733:
+		pushi	0x0131
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x02
+		and	
+		bnt	code_762
+		pushi	0x008c
+		push1	
+		lofsa	intoBar
+		push	
+		self	0x6
+		jmp	code_850
+code_762:
+		lal	0x10
+		bnt	code_782
+		push2	
+		pushi	0x29
+		push0	
+		calle	0xff, 0x00, 0x04
+		ldi	0x00
+		sal	0x10
+		jmp	code_850
+code_782:
+		lal	0x11
+		bnt	code_850
+		-al	0x11
+		not	
+		bnt	code_850
+		pushi	0x2b
+		push0	
+		lag	0x64
+		send	0x4
+		push	
+		ldi	0x0258
+		ne?	
+		bnt	code_840
+		pushi	0x2b
+		push1	
+		pushi	0x0258
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push1	
+		pushi	0x1e
+		pushi	0x009d
+		pushi	0x04
+		pushi	0x7f
+		pushi	0x0f
+		pushi	0x0a
+		push0	
+		lag	0x64
+		send	0x1e
+code_840:
+		pushi	0x008c
+		push1	
+		lofsa	sellSkimmerForJet
+		push	
+		self	0x6
+code_850:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rm41::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_877
+		push2	
+		pushi	0x29
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_944
+code_877:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_895
+		push2	
+		pushi	0x29
+		push2	
+		calle	0xff, 0x00, 0x04
+		jmp	code_944
+code_895:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_914
+		push2	
+		pushi	0x29
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_944
+code_914:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_933
+		push2	
+		pushi	0x29
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_944
+code_933:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x74, 0x6
+code_944:
+		toss	
+		ret	
+
+
+.OBJECT rm41 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm41', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'Ulence Flats is a typical example of some of the frontier settlements that sprang up in the early days of Outer Zone exploration. Unfortunately, this attracted many unsavory quick-buckazoid types. Caution is advised.', 'id': 'string_0'}
+  [#10] = 0x29
+  [#11] = 0xffff
+  [#12] = 0x8a
+  [#13] = 0x0
+  [#14] = 0x2e
+  [#15] = 0x2a
+  [#16] = 0x0
+  [#17] = 0x28
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 3
+  [0x6b]  = rm41::107   	 ; @0xe
+  [0x3c]  = rm41::60   	 ; @0x2d3
+  [0x10a]  = rm41::266   	 ; @0x359
+
+.CODE
+comeFromBar::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1074
+		pushi	0x00c0
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x00a0
+		pushi	0x009e
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x008e
+		pushi	0x00a6
+		pushSelf	
+		lag	0x0
+		send	0x18
+		jmp	code_1159
+code_1074:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1119
+		pushi	0x77
+		push1	
+		lofsa	mugger
+		push	
+		lag	0x5
+		send	0x6
+		bnt	code_1110
+		pushi	0x008c
+		push1	
+		lofsa	muggerPloy
+		push	
+		pToa	0x8
+		send	0x6
+		jmp	code_1159
+code_1110:
+		pushi	0x008b
+		push0	
+		self	0x4
+		jmp	code_1159
+code_1119:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1159
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		pushi	0x05
+		pushi	0x3a
+		push1	
+		pushi	0x00e1
+		lag	0x0
+		send	0xc
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1159:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT comeFromBar of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'comeFromBar', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = comeFromBar::138   	 ; @0x402
+
+.CODE
+intoBar::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1258
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x00a0
+		pushi	0x00a1
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1374
+code_1258:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1313
+		push1	
+		pushi	0x21
+		callb	0x6, 0x2
+		bnt	code_1299
+		push1	
+		pushi	0x42
+		callb	0x6, 0x2
+		not	
+		bnt	code_1299
+		push2	
+		pushi	0x29
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		push1	
+		pushi	0x42
+		callb	0x7, 0x2
+code_1299:
+		pushi	0x00e2
+		push2	
+		pushi	0x32
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1374
+code_1313:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1357
+		pushi	0x42
+		push1	
+		pushi	0x0b
+		pushi	0x36
+		push1	
+		push2	
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00b8
+		pushi	0x00ae
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_1374
+code_1357:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1374
+		pushi	0x0177
+		push1	
+		pushi	0x2b
+		lag	0x2
+		send	0x6
+code_1374:
+		toss	
+		ret	
+
+
+.OBJECT intoBar of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'intoBar', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = intoBar::138   	 ; @0x4c4
+
+.CODE
+fallDown::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1499
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	mugger
+		send	0x8
+		pushi	0x00c0
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x20
+		pushi	0x011a
+		push2	
+		pushi	0x00a0
+		pushi	0x009e
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x008e
+		pushi	0x00a6
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_1751
+code_1499:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1540
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x10
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1e
+		jmp	code_1751
+code_1540:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1579
+		pushi	0x2b
+		push1	
+		pushi	0x0193
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1751
+code_1579:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1593
+		ldi	0x03
+		aTop	0x12
+		jmp	code_1751
+code_1593:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1629
+		pushi	0x018a
+		push2	
+		pushi	0x63
+		pushi	0x8006
+		lag	0x2
+		send	0x8
+		pushi	0x74
+		push1	
+		pushi	0x69
+		lag	0x5
+		send	0x6
+		ldi	0x02
+		aTop	0x10
+		jmp	code_1751
+code_1629:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1704
+		push2	
+		pushi	0x29
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		ldi	0x00
+		sag	0xa5
+		pushi	0x0146
+		push1	
+		pushi	0x09
+		pushi	0x0146
+		push1	
+		push1	
+		pushi	0x0146
+		push1	
+		pushi	0x0a
+		pushi	0x0146
+		push1	
+		push2	
+		pushi	0x0146
+		push1	
+		pushi	0x0f
+		lag	0x0
+		send	0x1e
+		pushi	0x6c
+		push0	
+		lofsa	mugger
+		send	0x4
+		pushi	0x6c
+		push0	
+		lofsa	skimmer
+		send	0x4
+		ldi	0x06
+		aTop	0x12
+		jmp	code_1751
+code_1704:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1751
+		push1	
+		pushi	0x0e
+		callb	0x6, 0x2
+		bnt	code_1737
+		pushi	0x05
+		pushi	0x03b1
+		push0	
+		push0	
+		pushi	0x29
+		pushi	0x07
+		callb	0xa, 0xa
+		jmp	code_1751
+code_1737:
+		pushi	0x05
+		pushi	0x03b1
+		push0	
+		push0	
+		pushi	0x29
+		pushi	0x08
+		callb	0xa, 0xa
+code_1751:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT fallDown of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'fallDown', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = fallDown::138   	 ; @0x59a
+
+.CODE
+getOutaSkimmer::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1877
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x1c
+		pushi	0x011a
+		push2	
+		pushi	0x7a
+		pushi	0x00a2
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x2e
+		jmp	code_2638
+code_1877:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1934
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x011a
+		push2	
+		pushi	0x0088
+		pushi	0x00b9
+		pushi	0x3a
+		push1	
+		pushi	0x5a
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0092
+		pushi	0x00b5
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_2638
+code_1934:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1948
+		ldi	0x14
+		aTop	0x10
+		jmp	code_2638
+code_1948:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2002
+		lsg	0xab
+		ldi	0x00
+		eq?	
+		bnt	code_1990
+		+ag	0xab
+		push2	
+		pushi	0x29
+		pushi	0x09
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x29
+		pushi	0x0a
+		calle	0xff, 0x00, 0x04
+		ldi	0x14
+		aTop	0x10
+		jmp	code_2638
+code_1990:
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+		jmp	code_2638
+code_2002:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2059
+		push2	
+		pushi	0x29
+		pushi	0x0b
+		calle	0xff, 0x00, 0x04
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00e3
+		pushi	0x00d7
+		pushSelf	
+		lofsa	guy
+		send	0x1e
+		jmp	code_2638
+code_2059:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2099
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		pushi	0x03
+		lofsa	guy
+		send	0xc
+		pushi	0x00e2
+		push1	
+		pushi	0x0096
+		lag	0x0
+		send	0x6
+		ldi	0x28
+		aTop	0x10
+		jmp	code_2638
+code_2099:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_2128
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x7e
+		pushi	0x00bc
+		pushSelf	
+		lofsa	guy
+		send	0xc
+		jmp	code_2638
+code_2128:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_2168
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	guy
+		send	0xc
+		pushi	0x00e2
+		push1	
+		pushi	0x00f5
+		lag	0x0
+		send	0x6
+		ldi	0x1e
+		aTop	0x10
+		jmp	code_2638
+code_2168:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_2202
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x38
+		pushi	0x00c1
+		pushSelf	
+		lofsa	guy
+		send	0x12
+		jmp	code_2638
+code_2202:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_2231
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	guy
+		send	0xc
+		ldi	0x2d
+		aTop	0x10
+		jmp	code_2638
+code_2231:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_2260
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x44
+		pushi	0x00b9
+		pushSelf	
+		lofsa	guy
+		send	0xc
+		jmp	code_2638
+code_2260:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_2294
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x60
+		pushi	0x00bd
+		pushSelf	
+		lofsa	guy
+		send	0x12
+		jmp	code_2638
+code_2294:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_2329
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00b6
+		pushi	0x00b5
+		pushSelf	
+		lofsa	guy
+		send	0x12
+		jmp	code_2638
+code_2329:
+		dup	
+		ldi	0x0d
+		eq?	
+		bnt	code_2358
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		pushi	0x05
+		lofsa	guy
+		send	0xc
+		ldi	0x10
+		aTop	0x10
+		jmp	code_2638
+code_2358:
+		dup	
+		ldi	0x0e
+		eq?	
+		bnt	code_2402
+		pushi	0x011f
+		push1	
+		push0	
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	guy
+		send	0x12
+		pushi	0x00e2
+		push1	
+		pushi	0x5a
+		lag	0x0
+		send	0x6
+		ldi	0x16
+		aTop	0x10
+		jmp	code_2638
+code_2402:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_2440
+		pushi	0x6b
+		pushi	0x08
+		lofsa	guyBust
+		push	
+		lofsa	guyEye
+		push	
+		lofsa	guyMouth
+		push	
+		pushi	0x008d
+		push0	
+		push0	
+		push0	
+		pushSelf	
+		lofsa	guyTalker
+		send	0x14
+		jmp	code_2638
+code_2440:
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_2530
+		lag	0x19
+		bnt	code_2457
+		pushi	0x6c
+		push0	
+		send	0x4
+code_2457:
+		pushi	0x0b
+		pushi	0x29
+		pushi	0x0c
+		pushi	0x43
+		pushi	0x0c
+		pushi	0xff
+		pushi	0x51
+		lofsa	string_5		; "You've got a deal!"
+		push	
+		push1	
+		pushi	0x51
+		lofsa	string_6		; "No way!"
+		push	
+		push0	
+		calle	0xff, 0x00, 0x16
+		bnt	code_2505
+		pushi	0x008c
+		push1	
+		lofsa	sellSkimmerForMoney
+		push	
+		pToa	0x8
+		send	0x6
+		jmp	code_2638
+code_2505:
+		pushi	0x04
+		push1	
+		pushi	0x46
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		push1	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	guyTalker
+		send	0x14
+		jmp	code_2638
+code_2530:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_2565
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0154
+		pushi	0x00bc
+		pushSelf	
+		lofsa	guy
+		send	0x12
+		jmp	code_2638
+code_2565:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_2595
+		pushi	0x6c
+		push0	
+		lofsa	guy
+		send	0x4
+		pushi	0x2d
+		push1	
+		pushSelf	
+		pushi	0x009d
+		push0	
+		lag	0x64
+		send	0xa
+		jmp	code_2638
+code_2595:
+		dup	
+		ldi	0x13
+		eq?	
+		bnt	code_2638
+		pushi	0x2b
+		push1	
+		pushi	0x0259
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x66
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x16
+		ldi	0x0190
+		sal	0x11
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_2638:
+		toss	
+		ret	
+
+
+.OBJECT getOutaSkimmer of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'getOutaSkimmer', 'id': 'string_7'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = getOutaSkimmer::138   	 ; @0x714
+
+.CODE
+sellSkimmerForMoney::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_2736
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x14
+		jmp	code_3219
+code_2736:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_2782
+		pushi	0x05
+		push1	
+		pushi	0x1c
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0e
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push1	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x24
+		jmp	code_3219
+code_2782:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2843
+		pushi	0x00d3
+		push1	
+		pushi	0x09
+		lag	0x0
+		send	0x6
+		bnt	code_2822
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		push2	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	guyTalker
+		send	0xe
+		jmp	code_3219
+code_2822:
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		pushi	0x03
+		push0	
+		push1	
+		pushSelf	
+		lofsa	guyTalker
+		send	0xe
+		jmp	code_3219
+code_2843:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2894
+		lsg	0xa5
+		ldi	0x19
+		add	
+		sag	0xa5
+		pushi	0x0146
+		push1	
+		pushi	0x09
+		lag	0x0
+		send	0x6
+		push1	
+		pushi	0x0f
+		callb	0x7, 0x2
+		push1	
+		pushi	0x0e
+		callb	0x8, 0x2
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_3219
+code_2894:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2934
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x8
+		jmp	code_3219
+code_2934:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_2981
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0088
+		pushi	0x00b9
+		pushSelf	
+		lofsa	guy
+		send	0x1e
+		jmp	code_3219
+code_2981:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_3034
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x011a
+		push2	
+		pushi	0x7a
+		pushi	0x00a2
+		pushi	0x00a0
+		push1	
+		pushi	0x08
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x28
+		jmp	code_3219
+code_3034:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_3103
+		pushi	0x6c
+		push0	
+		lofsa	skimmer
+		send	0x4
+		pushi	0x54
+		push1	
+		lofsa	skimmerPoly
+		push	
+		pushi	0x00e8
+		push0	
+		lag	0x2
+		send	0x4
+		send	0x6
+		pushi	0x00a0
+		push1	
+		pushi	0x09
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0c
+		pushi	0x38
+		push1	
+		pushi	0x04
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x20
+		jmp	code_3219
+code_3103:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_3164
+		pushi	0x2b
+		push1	
+		pushi	0x01b7
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		pushi	0x009c
+		push1	
+		push1	
+		lag	0x9a
+		send	0x16
+		pushi	0x0132
+		push2	
+		pushi	0x0a
+		pushi	0x08
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00aa
+		pushi	0x00ca
+		pushSelf	
+		lofsa	guy
+		send	0x14
+		jmp	code_3219
+code_3164:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_3219
+		pushi	0x2b
+		push1	
+		pushi	0x0259
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+		pushi	0x009d
+		push0	
+		pushi	0x009c
+		push1	
+		push0	
+		lag	0x9a
+		send	0xa
+		pushi	0x6c
+		push0	
+		lofsa	guy
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_3219:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT sellSkimmerForMoney of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'sellSkimmerForMoney', 'id': 'string_8'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = sellSkimmerForMoney::138   	 ; @0xa8a
+
+.CODE
+sellSkimmerForJet::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_3360
+		push0	
+		callb	0x2, 0x0
+		pushi	0x6b
+		push0	
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x012a
+		push1	
+		push1	
+		pushi	0x011a
+		push2	
+		pushi	0x0090
+		pushi	0x0086
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0132
+		push2	
+		pushi	0x04
+		push2	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x68
+		pushi	0x0085
+		pushSelf	
+		lofsa	guy
+		send	0x38
+		jmp	code_4472
+code_3360:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_3388
+		pushi	0x00a0
+		push1	
+		pushi	0x07
+		dup	
+		push1	
+		push0	
+		lofsa	guy
+		send	0xc
+		ldi	0x02
+		aTop	0x12
+		jmp	code_4472
+code_3388:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_3489
+		pushi	0x06
+		push1	
+		pushi	0x05
+		pushi	0x0a
+		push1	
+		pushi	0x23
+		pushi	0x09
+		push1	
+		pushi	0x1d
+		lofsa	guyEye
+		send	0x12
+		pushi	0x06
+		push1	
+		pushi	0x03
+		pushi	0x0a
+		push1	
+		pushi	0x25
+		pushi	0x09
+		push1	
+		pushi	0x28
+		lofsa	guyMouth
+		send	0x12
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x011a
+		push2	
+		pushi	0x6c
+		pushi	0x19
+		pushi	0x0a
+		push1	
+		pushi	0x08
+		pushi	0x09
+		push1	
+		pushi	0x06
+		pushi	0x6b
+		pushi	0x08
+		lofsa	guyBust
+		push	
+		lofsa	guyEye
+		push	
+		lofsa	guyMouth
+		push	
+		pushi	0x008d
+		pushi	0x04
+		push0	
+		push0	
+		pushSelf	
+		lofsa	guyTalker
+		send	0x2e
+		jmp	code_4472
+code_3489:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3517
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		pushi	0x05
+		push0	
+		push0	
+		pushSelf	
+		lofsa	guyTalker
+		send	0xe
+		jmp	code_4472
+code_3517:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_3589
+		lag	0x19
+		bnt	code_3534
+		pushi	0x6c
+		push0	
+		send	0x4
+code_3534:
+		pushi	0x0b
+		pushi	0x29
+		pushi	0x0d
+		pushi	0x43
+		pushi	0x71
+		pushi	0x0e
+		pushi	0x51
+		lofsa	string_9		; "It's a deal!"
+		push	
+		push1	
+		pushi	0x51
+		lofsa	string_6		; "No way!"
+		push	
+		push0	
+		calle	0xff, 0x00, 0x16
+		bnt	code_3574
+		ldi	0x04
+		aTop	0x16
+		jmp	code_4472
+code_3574:
+		pushi	0x008c
+		push1	
+		lofsa	noTwice
+		push	
+		pToa	0x8
+		send	0x6
+		jmp	code_4472
+code_3589:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_3617
+		pushi	0x01fd
+		pushi	0x05
+		lofsa	string_10		; "\"Great!\""
+		push	
+		push0	
+		push0	
+		push1	
+		pushSelf	
+		lofsa	guyTalker
+		send	0xe
+		jmp	code_4472
+code_3617:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_3645
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x40
+		pushi	0x0085
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_4472
+code_3645:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_3666
+		pushi	0x00e2
+		push2	
+		pushi	0x5a
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_4472
+code_3666:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_3710
+		pushi	0x00d9
+		push1	
+		pushi	0x06
+		pushi	0x38
+		push1	
+		pushi	0x06
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x20
+		jmp	code_4472
+code_3710:
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_3753
+		pushi	0x05
+		push1	
+		pushi	0x1c
+		pushi	0x00a0
+		push1	
+		pushi	0x04
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_4472
+code_3753:
+		dup	
+		ldi	0x0a
+		eq?	
+		bnt	code_3776
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x8
+		jmp	code_4472
+code_3776:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_3907
+		pushi	0x0a
+		push1	
+		pushi	0x1a
+		pushi	0x09
+		push1	
+		pushi	0x28
+		pushi	0x06
+		push1	
+		push2	
+		lofsa	guyMouth
+		send	0x12
+		pushi	0x0a
+		push1	
+		pushi	0x27
+		pushi	0x09
+		push1	
+		pushi	0x1d
+		pushi	0x06
+		push1	
+		pushi	0x04
+		lofsa	guyEye
+		send	0x12
+		pushi	0x00d3
+		push1	
+		pushi	0x09
+		lag	0x0
+		send	0x6
+		bnt	code_3871
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x6b
+		pushi	0x08
+		lofsa	guyBust
+		push	
+		lofsa	guyEye
+		push	
+		lofsa	guyMouth
+		push	
+		pushi	0x008d
+		pushi	0x07
+		push0	
+		push0	
+		pushSelf	
+		lofsa	guyTalker
+		send	0x1a
+		jmp	code_4472
+code_3871:
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x6b
+		pushi	0x08
+		lofsa	guyBust
+		push	
+		lofsa	guyEye
+		push	
+		lofsa	guyMouth
+		push	
+		pushi	0x008d
+		pushi	0x08
+		push0	
+		push0	
+		pushSelf	
+		lofsa	guyTalker
+		send	0x1a
+		jmp	code_4472
+code_3907:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_3935
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		pushi	0x09
+		push0	
+		push1	
+		pushSelf	
+		lofsa	guyTalker
+		send	0xe
+		jmp	code_4472
+code_3935:
+		dup	
+		ldi	0x0d
+		eq?	
+		bnt	code_3979
+		pushi	0x00d9
+		push1	
+		pushi	0x06
+		pushi	0x38
+		push1	
+		pushi	0x06
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x20
+		jmp	code_4472
+code_3979:
+		dup	
+		ldi	0x0e
+		eq?	
+		bnt	code_4022
+		pushi	0x05
+		push1	
+		pushi	0x1c
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0f
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x20
+		jmp	code_4472
+code_4022:
+		dup	
+		ldi	0x0f
+		eq?	
+		bnt	code_4045
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x8
+		jmp	code_4472
+code_4045:
+		dup	
+		ldi	0x10
+		eq?	
+		bnt	code_4182
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x0145
+		push1	
+		pushi	0x0b
+		pushi	0x0145
+		push1	
+		pushi	0x12
+		pushi	0x0145
+		push1	
+		pushi	0x11
+		pushi	0x0146
+		push1	
+		pushi	0x09
+		lag	0x0
+		send	0x24
+		push2	
+		pushi	0x05
+		pushi	0x009a
+		callb	0xb, 0x4
+		lsg	0xa5
+		ldi	0x1e
+		add	
+		sag	0xa5
+		push1	
+		pushi	0x0f
+		callb	0x7, 0x2
+		push1	
+		pushi	0x0e
+		callb	0x8, 0x2
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x011f
+		push1	
+		push1	
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x011a
+		push2	
+		pushi	0x67
+		pushi	0x008b
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0093
+		pushi	0x00ae
+		pushSelf	
+		lofsa	guy
+		send	0x2c
+		jmp	code_4472
+code_4182:
+		dup	
+		ldi	0x11
+		eq?	
+		bnt	code_4235
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x44
+		pushi	0x008c
+		lag	0x0
+		send	0xa
+		pushi	0x00a0
+		push1	
+		pushi	0x03
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0089
+		pushi	0x00bb
+		pushSelf	
+		lofsa	guy
+		send	0x12
+		jmp	code_4472
+code_4235:
+		dup	
+		ldi	0x12
+		eq?	
+		bnt	code_4288
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x011a
+		push2	
+		pushi	0x7a
+		pushi	0x00a2
+		pushi	0x00a0
+		push1	
+		pushi	0x08
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x28
+		jmp	code_4472
+code_4288:
+		dup	
+		ldi	0x13
+		eq?	
+		bnt	code_4375
+		pushi	0x6c
+		push0	
+		lofsa	skimmer
+		send	0x4
+		pushi	0x54
+		push1	
+		lofsa	skimmerPoly
+		push	
+		pushi	0x00e8
+		push0	
+		lag	0x2
+		send	0x4
+		send	0x6
+		pushi	0x2b
+		push1	
+		pushi	0x01b7
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		pushi	0x009c
+		push1	
+		push1	
+		lag	0x9a
+		send	0x16
+		pushi	0x00a0
+		push1	
+		pushi	0x09
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0a
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	guy
+		send	0x1a
+		jmp	code_4472
+code_4375:
+		dup	
+		ldi	0x14
+		eq?	
+		bnt	code_4417
+		pushi	0x0132
+		push2	
+		pushi	0x0a
+		pushi	0x08
+		pushi	0x38
+		push1	
+		push2	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00aa
+		pushi	0x00ca
+		pushSelf	
+		lofsa	guy
+		send	0x1a
+		jmp	code_4472
+code_4417:
+		dup	
+		ldi	0x15
+		eq?	
+		bnt	code_4472
+		pushi	0x2b
+		push1	
+		pushi	0x0259
+		pushi	0x06
+		push1	
+		pushi	0xff
+		pushi	0x2a
+		push0	
+		lag	0x64
+		send	0x10
+		pushi	0x009d
+		push0	
+		pushi	0x009c
+		push1	
+		push0	
+		lag	0x9a
+		send	0xa
+		pushi	0x6c
+		push0	
+		lofsa	guy
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4472:
+		toss	
+		ret	
+
+
+.OBJECT sellSkimmerForJet of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'sellSkimmerForJet', 'id': 'string_11'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = sellSkimmerForJet::138   	 ; @0xcd0
+
+.CODE
+noTwice::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4565
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		pushi	0x06
+		push0	
+		push1	
+		pushSelf	
+		lofsa	guyTalker
+		send	0xe
+		jmp	code_4624
+code_4565:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4600
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00a4
+		pushi	0x0086
+		pushSelf	
+		lofsa	guy
+		send	0x12
+		jmp	code_4624
+code_4600:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4624
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		lofsa	guy
+		send	0x4
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4624:
+		toss	
+		ret	
+
+
+.OBJECT noTwice of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'noTwice', 'id': 'string_12'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = noTwice::138   	 ; @0x11b4
+
+.CODE
+getOnSkimmer::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4750
+		push0	
+		callb	0x2, 0x0
+		pushi	0x05
+		push1	
+		pushi	0x1c
+		pushi	0x011a
+		push2	
+		pushi	0x7a
+		pushi	0x00a2
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		pushi	0x05
+		pushi	0x42
+		push1	
+		pushi	0x0e
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x2e
+		jmp	code_4762
+code_4750:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4762
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4762:
+		toss	
+		ret	
+
+
+.OBJECT getOnSkimmer of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'getOnSkimmer', 'id': 'string_13'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = getOnSkimmer::138   	 ; @0x124c
+
+.CODE
+bendOverSkimmer::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_4874
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x24
+		push	
+		pushi	0x010f
+		push0	
+		lofsa	skimmer
+		send	0x4
+		push	
+		pushi	0x0110
+		push0	
+		lofsa	skimmer
+		send	0x4
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_4970
+code_4874:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_4911
+		pushi	0x05
+		push1	
+		pushi	0x1c
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1c
+		jmp	code_4970
+code_4911:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_4970
+		pToa	0x1a
+		bnt	code_4935
+		push2	
+		pushi	0x29
+		pushi	0x0e
+		calle	0xff, 0x00, 0x04
+		jmp	code_4944
+code_4935:
+		push2	
+		pushi	0x29
+		pushi	0x0f
+		calle	0xff, 0x00, 0x04
+code_4944:
+		pushi	0x03
+		push0	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x06
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_4970:
+		toss	
+		ret	
+
+
+.OBJECT bendOverSkimmer of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'bendOverSkimmer', 'id': 'string_14'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = bendOverSkimmer::138   	 ; @0x12d6
+
+.CODE
+muggerPloy::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_5101
+		push1	
+		pushi	0x28
+		callb	0x7, 0x2
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x008f
+		pushi	0x00b4
+		lag	0x0
+		send	0xa
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0100
+		pushi	0x00b8
+		pushSelf	
+		lofsa	mugger
+		send	0x18
+		jmp	code_5362
+code_5101:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_5136
+		pushi	0x00a0
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00cc
+		pushi	0x00b8
+		pushSelf	
+		lofsa	mugger
+		send	0x12
+		jmp	code_5362
+code_5136:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_5172
+		pushi	0x00a0
+		push1	
+		pushi	0x08
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	mugger
+		send	0xc
+		pushi	0x00e2
+		push2	
+		pushi	0x2d
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_5362
+code_5172:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5186
+		ldi	0x02
+		aTop	0x12
+		jmp	code_5362
+code_5186:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_5225
+		pushi	0x6b
+		pushi	0x08
+		lofsa	muggerBust
+		push	
+		lofsa	muggerEyes
+		push	
+		lofsa	muggerMouth
+		push	
+		pushi	0x008d
+		pushi	0x0a
+		push0	
+		push0	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0x14
+		jmp	code_5362
+code_5225:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5268
+		pushi	0x01fd
+		pushi	0x05
+		pushi	0x008d
+		pushi	0x0b
+		push0	
+		push1	
+		pushSelf	
+		lofsa	muggerTalker
+		send	0xe
+		pushi	0x0094
+		pushi	0x03
+		class	0x5f
+		push	
+		push2	
+		pushSelf	
+		lofsa	mugger
+		send	0xa
+		jmp	code_5362
+code_5268:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_5296
+		pushi	0x00a0
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	mugger
+		send	0xc
+		ldi	0x03
+		aTop	0x10
+		jmp	code_5362
+code_5296:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_5338
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x18
+		push	
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x0153
+		pushi	0x00b4
+		pushSelf	
+		lofsa	mugger
+		send	0x18
+		jmp	code_5362
+code_5338:
+		dup	
+		ldi	0x08
+		eq?	
+		bnt	code_5362
+		pushi	0x6c
+		push0	
+		lofsa	mugger
+		send	0x4
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_5362:
+		toss	
+		ret	
+
+
+.OBJECT muggerPloy of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'muggerPloy', 'id': 'string_15'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = muggerPloy::138   	 ; @0x13a6
+
+.OBJECT guy of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'guy', 'id': 'string_16'}
+  [#4] = 0x121
+  [#5] = 0xaa
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1af
+  [#24] = 0x3
+  [#25] = 0x3
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x4
+  [#47] = 0x6
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.CODE
+mugger::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_5569
+		push2	
+		pushi	0x29
+		pushi	0x10
+		calle	0xff, 0x00, 0x04
+		jmp	code_5637
+code_5569:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_5588
+		push2	
+		pushi	0x29
+		pushi	0x11
+		calle	0xff, 0x00, 0x04
+		jmp	code_5637
+code_5588:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_5607
+		push2	
+		pushi	0x29
+		pushi	0x12
+		calle	0xff, 0x00, 0x04
+		jmp	code_5637
+code_5607:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_5626
+		push2	
+		pushi	0x29
+		pushi	0x12
+		calle	0xff, 0x00, 0x04
+		jmp	code_5637
+code_5626:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x30, 0x6
+code_5637:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT mugger of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'mugger', 'id': 'string_19'}
+  [#4] = 0x11e
+  [#5] = 0xae
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'alien wolf-creature', 'id': 'string_17'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This being is about the size of a humanoid but has some odd features. He seems to have a friendly-looking mug.', 'id': 'string_18'}
+  [#22] = 0x2
+  [#23] = 0x1b0
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x4
+  [#47] = 0x6
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 1
+  [0x10a]  = mugger::266   	 ; @0x15ac
+
+.CODE
+rocketSign::266:
+		pushi	0x010a
+		push0	
+		rest	0x1
+		lofsa	barSigns
+		send	0x4
+		ret	
+
+
+.OBJECT rocketSign of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'rocketSign', 'id': 'string_21'}
+  [#4] = 0xb5
+  [#5] = 0x42
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'rocket sign', 'id': 'string_20'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x8d
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0xa
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x2
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x3
+Overriden functions: 1
+  [0x10a]  = rocketSign::266   	 ; @0x168e
+
+.CODE
+barSign::266:
+		pushi	0x010a
+		push0	
+		rest	0x1
+		lofsa	barSigns
+		send	0x4
+		ret	
+
+
+.OBJECT barSign of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'barSign', 'id': 'string_22'}
+  [#4] = 0xae
+  [#5] = 0x6e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'rocket sign', 'id': 'string_20'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x8d
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0xa
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 1
+  [0x10a]  = barSign::266   	 ; @0x1708
+
+.CODE
+skimmer::107:
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2e, 0x4
+		ret	
+
+skimmer::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6100
+		push1	
+		pushi	0x0f
+		callb	0x6, 0x2
+		bnt	code_6066
+		push2	
+		pushi	0x29
+		pushi	0x13
+		calle	0xff, 0x00, 0x04
+		jmp	code_6257
+code_6066:
+		pushi	0x0145
+		push1	
+		pushi	0x09
+		lag	0x0
+		send	0x6
+		push1	
+		pushi	0x0f
+		callb	0x7, 0x2
+		pushi	0x008c
+		pushi	0x03
+		lofsa	bendOverSkimmer
+		push	
+		push0	
+		push0	
+		lag	0x2
+		send	0xa
+		jmp	code_6257
+code_6100:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_6140
+		push1	
+		pushi	0x0f
+		callb	0x6, 0x2
+		bnt	code_6128
+		push2	
+		pushi	0x29
+		pushi	0x14
+		calle	0xff, 0x00, 0x04
+		jmp	code_6257
+code_6128:
+		push2	
+		pushi	0x29
+		pushi	0x15
+		calle	0xff, 0x00, 0x04
+		jmp	code_6257
+code_6140:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_6189
+		lsp	0x2
+		dup	
+		ldi	0x09
+		eq?	
+		bnt	code_6174
+		pushi	0x008c
+		pushi	0x03
+		lofsa	bendOverSkimmer
+		push	
+		push0	
+		push1	
+		lag	0x2
+		send	0xa
+		jmp	code_6185
+code_6174:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2e, 0x8
+code_6185:
+		toss	
+		jmp	code_6257
+code_6189:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_6208
+		push2	
+		pushi	0x29
+		pushi	0x16
+		calle	0xff, 0x00, 0x04
+		jmp	code_6257
+code_6208:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_6227
+		push2	
+		pushi	0x29
+		pushi	0x17
+		calle	0xff, 0x00, 0x04
+		jmp	code_6257
+code_6227:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_6246
+		push2	
+		pushi	0x29
+		pushi	0x18
+		calle	0xff, 0x00, 0x04
+		jmp	code_6257
+code_6246:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2e, 0x8
+code_6257:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT skimmer of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'skimmer', 'id': 'string_24'}
+  [#4] = 0x7a
+  [#5] = 0xa2
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'sand skimmer', 'id': 'string_23'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x84
+  [#18] = 0xb4
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x8d
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0xd
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 2
+  [0x6b]  = skimmer::107   	 ; @0x1782
+  [0x10a]  = skimmer::266   	 ; @0x1794
+
+.CODE
+radar::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6385
+		push2	
+		pushi	0x29
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_6453
+code_6385:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_6404
+		push2	
+		pushi	0x29
+		pushi	0x1a
+		calle	0xff, 0x00, 0x04
+		jmp	code_6453
+code_6404:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_6423
+		push2	
+		pushi	0x29
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_6453
+code_6423:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_6442
+		push2	
+		pushi	0x29
+		pushi	0x19
+		calle	0xff, 0x00, 0x04
+		jmp	code_6453
+code_6442:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_6453:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT radar of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'radar', 'id': 'string_27'}
+  [#4] = 0x53
+  [#5] = 0xa4
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'force field sensor', 'id': 'string_25'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The settlement of Ulence Flats is surrounded by these force field generators. They repel undesirables, such as the Grell, which thrive below the sands. It will allow only airborne vehicles in or out.', 'id': 'string_26'}
+  [#22] = 0x2
+  [#23] = 0x8d
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x4
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 1
+  [0x10a]  = radar::266   	 ; @0x18dc
+
+.CODE
+shuttle::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6617
+		push2	
+		pushi	0x29
+		pushi	0x1b
+		calle	0xff, 0x00, 0x04
+		jmp	code_6685
+code_6617:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_6636
+		push2	
+		pushi	0x29
+		pushi	0x1c
+		calle	0xff, 0x00, 0x04
+		jmp	code_6685
+code_6636:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_6655
+		push2	
+		pushi	0x29
+		pushi	0x1d
+		calle	0xff, 0x00, 0x04
+		jmp	code_6685
+code_6655:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_6674
+		push2	
+		pushi	0x29
+		pushi	0x1e
+		calle	0xff, 0x00, 0x04
+		jmp	code_6685
+code_6674:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_6685:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT shuttle of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'shuttle', 'id': 'string_30'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'shuttle craft', 'id': 'string_28'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This appears to be a long-range shuttle, perhaps from a large starship. It looks vaguely familiar somehow.', 'id': 'string_29'}
+Overriden functions: 1
+  [0x10a]  = shuttle::266   	 ; @0x19a6
+
+.CODE
+pickleShip::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6807
+		push2	
+		pushi	0x29
+		pushi	0x1f
+		calle	0xff, 0x00, 0x04
+		jmp	code_6875
+code_6807:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_6826
+		push2	
+		pushi	0x29
+		pushi	0x20
+		calle	0xff, 0x00, 0x04
+		jmp	code_6875
+code_6826:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_6845
+		push2	
+		pushi	0x29
+		pushi	0x21
+		calle	0xff, 0x00, 0x04
+		jmp	code_6875
+code_6845:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_6864
+		push2	
+		pushi	0x29
+		pushi	0x22
+		calle	0xff, 0x00, 0x04
+		jmp	code_6875
+code_6864:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_6875:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT pickleShip of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'pickleShip', 'id': 'string_33'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pickle ship', 'id': 'string_31'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This ship is a real classic - a WalWood WarpBlaster ZX with the original paint job. You've only seen these on old postcards.", 'id': 'string_32'}
+Overriden functions: 1
+  [0x10a]  = pickleShip::266   	 ; @0x1a64
+
+.CODE
+tallRocket::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_6997
+		push2	
+		pushi	0x29
+		pushi	0x23
+		calle	0xff, 0x00, 0x04
+		jmp	code_7065
+code_6997:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_7016
+		push2	
+		pushi	0x29
+		pushi	0x24
+		calle	0xff, 0x00, 0x04
+		jmp	code_7065
+code_7016:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_7035
+		push2	
+		pushi	0x29
+		pushi	0x25
+		calle	0xff, 0x00, 0x04
+		jmp	code_7065
+code_7035:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_7054
+		push2	
+		pushi	0x29
+		pushi	0x26
+		calle	0xff, 0x00, 0x04
+		jmp	code_7065
+code_7054:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_7065:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT tallRocket of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'tallRocket', 'id': 'string_36'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'tall rocket ship', 'id': 'string_34'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This one's a genuine antique from the twenty-fourth-and-a-half century.", 'id': 'string_35'}
+Overriden functions: 1
+  [0x10a]  = tallRocket::266   	 ; @0x1b22
+
+.CODE
+barFront::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		pushi	0x010a
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		ret	
+
+
+.OBJECT barFront of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'barFront', 'id': 'string_39'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'bar', 'id': 'string_37'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x20
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'There is a rounded structure here with a door on one side. It is typical of some of the prefab structures constructed in frontier areas years ago.', 'id': 'string_38'}
+Overriden functions: 1
+  [0x10a]  = barFront::266   	 ; @0x1be0
+
+.CODE
+barSigns::266:
+		pushi	0x04
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0x8
+		pushi	0x03
+		push0	
+		pushi	0x013f
+		push0	
+		class	0x31
+		send	0x4
+		send	0x4
+		aTop	0xa
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_7304
+		push2	
+		pushi	0x29
+		pushi	0x27
+		calle	0xff, 0x00, 0x04
+		push2	
+		pushi	0x29
+		pushi	0x28
+		calle	0xff, 0x00, 0x04
+		jmp	code_7390
+code_7304:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_7322
+		push2	
+		pushi	0x29
+		dup	
+		calle	0xff, 0x00, 0x04
+		jmp	code_7390
+code_7322:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_7341
+		push2	
+		pushi	0x29
+		pushi	0x2a
+		calle	0xff, 0x00, 0x04
+		jmp	code_7390
+code_7341:
+		dup	
+		ldi	0x0c
+		eq?	
+		bnt	code_7360
+		push2	
+		pushi	0x29
+		pushi	0x2b
+		calle	0xff, 0x00, 0x04
+		jmp	code_7390
+code_7360:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_7379
+		push2	
+		pushi	0x29
+		pushi	0x2c
+		calle	0xff, 0x00, 0x04
+		jmp	code_7390
+code_7379:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_7390:
+		toss	
+		ret	
+
+
+.OBJECT barSigns of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'barSigns', 'id': 'string_41'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': "Rocket Bar's sign", 'id': 'string_40'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 1
+  [0x10a]  = barSigns::266   	 ; @0x1c4c
+
+.OBJECT guyTalker of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'guyTalker', 'id': 'string_42'}
+  [#4] = 0xf
+  [#5] = 0x4b
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x3a
+  [#10] = 0xcd
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fa
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT guyBust of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'guyBust', 'id': 'string_43'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fa
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT guyMouth of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'guyMouth', 'id': 'string_44'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x28
+  [#10] = 0x1a
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fa
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT guyEye of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'guyEye', 'id': 'string_45'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x1d
+  [#10] = 0x27
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x1fa
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x1e
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerTalker of 0x6f
+Function area offset: 0x64
+Selectors [49]:
+  [#0] = 0x6f
+  [#1] = 0x6f
+  [#2] = 0x0
+  [#3] = {'val': 'muggerTalker', 'id': 'string_46'}
+  [#4] = 0x7
+  [#5] = 0x2e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x5
+  [#10] = 0xcf
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x1
+  [#48] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerBust of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'muggerBust', 'id': 'string_47'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerMouth of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'muggerMouth', 'id': 'string_48'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x2c
+  [#10] = 0x13
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x2
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT muggerEyes of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'muggerEyes', 'id': 'string_49'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x20
+  [#10] = 0xf
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x203
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x10
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 0
+
+.OBJECT skimmerPoly of 0x23
+Function area offset: 0x12
+Selectors [8]:
+  [#0] = 0x23
+  [#1] = 0x23
+  [#2] = 0x0
+  [#3] = {'val': 'skimmerPoly', 'id': 'string_50'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x2
+  [#7] = 0x0
+Overriden functions: 0
+
+.STRINGS
+string_0: "Ulence Flats is a typical example of some of the frontier settlements that sprang up in the early days of Outer Zone exploration. Unfortunately, this attracted many unsavory quick-buckazoid types. Caution is advised."
+string_1: "rm41"		 ; special
+string_2: "comeFromBar"		 ; special
+string_3: "intoBar"		 ; special
+string_4: "fallDown"		 ; special
+string_5: "You've got a deal!"
+string_6: "No way!"
+string_7: "getOutaSkimmer"		 ; special
+string_8: "sellSkimmerForMoney"		 ; special
+string_9: "It's a deal!"
+string_10: "\"Great!\""
+string_11: "sellSkimmerForJet"		 ; special
+string_12: "noTwice"		 ; special
+string_13: "getOnSkimmer"		 ; special
+string_14: "bendOverSkimmer"		 ; special
+string_15: "muggerPloy"		 ; special
+string_16: "guy"		 ; special
+string_17: "alien wolf-creature"
+string_18: "This being is about the size of a humanoid but has some odd features. He seems to have a friendly-looking mug."
+string_19: "mugger"		 ; special
+string_20: "rocket sign"
+string_21: "rocketSign"		 ; special
+string_22: "barSign"		 ; special
+string_23: "sand skimmer"
+string_24: "skimmer"		 ; special
+string_25: "force field sensor"
+string_26: "The settlement of Ulence Flats is surrounded by these force field generators. They repel undesirables, such as the Grell, which thrive below the sands. It will allow only airborne vehicles in or out."
+string_27: "radar"		 ; special
+string_28: "shuttle craft"
+string_29: "This appears to be a long-range shuttle, perhaps from a large starship. It looks vaguely familiar somehow."
+string_30: "shuttle"		 ; special
+string_31: "pickle ship"
+string_32: "This ship is a real classic - a WalWood WarpBlaster ZX with the original paint job. You've only seen these on old postcards."
+string_33: "pickleShip"		 ; special
+string_34: "tall rocket ship"
+string_35: "This one's a genuine antique from the twenty-fourth-and-a-half century."
+string_36: "tallRocket"		 ; special
+string_37: "bar"
+string_38: "There is a rounded structure here with a door on one side. It is typical of some of the prefab structures constructed in frontier areas years ago."
+string_39: "barFront"		 ; special
+string_40: "Rocket Bar's sign"
+string_41: "barSigns"		 ; special
+string_42: "guyTalker"		 ; special
+string_43: "guyBust"		 ; special
+string_44: "guyMouth"		 ; special
+string_45: "guyEye"		 ; special
+string_46: "muggerTalker"		 ; special
+string_47: "muggerBust"		 ; special
+string_48: "muggerMouth"		 ; special
+string_49: "muggerEyes"		 ; special
+string_50: "skimmerPoly"		 ; special
+string_unused_51: ""
+string_unused_52: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x5c, 0x9c, 0x85, 0x9b, 0x8d, 0xa2, 0x8b, 0xae, 0x77, 0xb8, 0x62, 0xbc, 0x43, 0xb3, 0x32, 0xa6, 0x0, 0x0
+
+.RELOCATION
+num of pointers: 161
+0x194, 0x1bd, 0x1c6, 0x1e6, 0x214, 0x230, 0x239, 0x246, 0x264, 0x273, 0x282, 0x28a, 0x292, 0x29a, 0x2a2, 0x2aa, 0x2f2, 0x34d, 0x3c4, 0x3d0, 0x43d, 0x44c, 0x49c, 0x572, 0x5ae, 0x695, 0x69d, 0x6ec, 0x804, 0x81d, 0x849, 0x862, 0x893, 0x8ac, 0x8cd, 0x8ef, 0x912, 0x92b, 0x94d, 0x96e, 0x972, 0x976, 0x981, 0x9a8, 0x9af, 0x9bf, 0x9db, 0x9fe, 0xa10, 0xa62, 0xaa9, 0xaff, 0xb14, 0xb6f, 0xb9e, 0xbd3, 0xbe5, 0xbed, 0xc18, 0xc55, 0xc86, 0xca8, 0xd19, 0xd31, 0xd53, 0xd67, 0xd86, 0xd8a, 0xd8e, 0xd9a, 0xdb6, 0xddd, 0xde4, 0xdfb, 0xe12, 0xe1a, 0xe77, 0xeb9, 0xed6, 0xeea, 0xf04, 0xf08, 0xf0c, 0xf18, 0xf28, 0xf2c, 0xf30, 0xf3c, 0xf58, 0xf84, 0xfc6, 0x104f, 0x1084, 0x10b9, 0x10cb, 0x10d3, 0x1110, 0x113a, 0x116b, 0x118c, 0x11ce, 0x11f1, 0x1207, 0x1224, 0x12ae, 0x12f3, 0x12fd, 0x137e, 0x13e6, 0x1409, 0x1422, 0x144e, 0x1452, 0x1456, 0x1462, 0x147e, 0x148d, 0x14a5, 0x14d3, 0x14e5, 0x1506, 0x153c, 0x161a, 0x162e, 0x163e, 0x1695, 0x16ac, 0x16c0, 0x170f, 0x1726, 0x173a, 0x17c8, 0x1812, 0x1886, 0x189a, 0x194a, 0x195e, 0x196e, 0x1a32, 0x1a46, 0x1a56, 0x1af0, 0x1b04, 0x1b14, 0x1bae, 0x1bc2, 0x1bd2, 0x1c1a, 0x1c2e, 0x1c3e, 0x1cf2, 0x1d06, 0x1d32, 0x1da4, 0x1e00, 0x1e66, 0x1ecc, 0x1f3e, 0x1f9a, 0x2000, 0x2066

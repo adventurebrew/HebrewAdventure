@@ -1,0 +1,1804 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm10 of 0x74
+
+.CODE
+rm10::107:
+		pushi	0x04
+		pushi	0x0080
+		pushi	0x08
+		pushi	0x3b
+		pushi	0x6e
+		calle	0x03be, 0x0000, 0x08
+		ldi	0x02
+		sag	0xa6
+		lsg	0xc
+		ldi	0x09
+		eq?	
+		bnt	code_48
+		ldi	0x0c
+		jmp	code_50
+code_48:
+		ldi	0x0a
+code_50:
+		aTop	0x16
+		pushi	0x0187
+		push1	
+		pushi	0x02bc
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push2	
+		pushi	0x6b
+		pushi	0x30
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		push0	
+		pushi	0x00ba
+		pushi	0x0111
+		pushi	0x00ba
+		pushi	0x0125
+		pushi	0x00a0
+		pushi	0x0111
+		pushi	0x0084
+		pushi	0x00f4
+		pushi	0x0092
+		pushi	0x00dd
+		pushi	0x0096
+		pushi	0x00c5
+		pushi	0x008e
+		pushi	0x00c9
+		pushi	0x7b
+		pushi	0x00be
+		pushi	0x77
+		pushi	0x00a7
+		pushi	0x77
+		pushi	0x00a6
+		pushi	0x65
+		pushi	0x0098
+		pushi	0x65
+		pushi	0x0096
+		pushi	0x76
+		pushi	0x0088
+		pushi	0x76
+		dup	
+		pushi	0x67
+		pushi	0x5e
+		pushi	0x67
+		pushi	0x36
+		pushi	0x79
+		pushi	0x1b
+		pushi	0x6f
+		pushi	0x33
+		pushi	0x60
+		push0	
+		pushi	0x50
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x6e
+		push	
+		self	0xc
+		pushi	0x6b
+		push0	
+		pushi	0x07
+		push1	
+		push1	
+		pushi	0x69
+		push0	
+		lofsa	buttonPushed
+		send	0xe
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x6b
+		push0	
+		lofsa	ctrlPanel
+		send	0x4
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x0211
+		push1	
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_254
+		lofsa	hearConverse
+		jmp	code_256
+code_254:
+		ldi	0x00
+code_256:
+		push	
+		pushi	0x020c
+		push1	
+		lsg	0xc
+		ldi	0x09
+		ne?	
+		bnt	code_274
+		ldi	0x01
+		jmp	code_276
+code_274:
+		ldi	0x00
+code_276:
+		push	
+		pushi	0x020a
+		push1	
+		lofsa	doorLight
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x0208
+		push1	
+		pushi	0x0b
+		pushi	0x020b
+		push1	
+		push1	
+		pushi	0x0210
+		push1	
+		lofsa	insertKeyCard
+		push	
+		pushi	0x011f
+		push1	
+		push0	
+		lofsa	door
+		send	0x2e
+		pushi	0x73
+		pushi	0x07
+		lofsa	controlPanel
+		push	
+		lofsa	correctButton
+		push	
+		lofsa	wrongButtons
+		push	
+		lofsa	vacHandle
+		push	
+		lofsa	globe
+		push	
+		lofsa	pipes
+		push	
+		lofsa	keyCardSlot
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		lag	0x20
+		send	0x18
+		pushi	0x6b
+		push0	
+		pushi	0x07
+		push1	
+		push1	
+		pushi	0x0a
+		callb	0x6, 0x2
+		bnt	code_378
+		ldi	0x00
+		jmp	code_380
+code_378:
+		ldi	0x05
+code_380:
+		push	
+		lofsa	bayDoor
+		send	0xa
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x1c
+		lofsa	tank
+		send	0x10
+		push0	
+		callb	0x3, 0x0
+		pushi	0x020c
+		push0	
+		lofsa	door
+		send	0x4
+		bnt	code_427
+		push0	
+		callb	0x2, 0x0
+code_427:
+		ret	
+
+rm10::60:
+		lal	0x1
+		bnt	code_455
+		pushi	0x3b
+		push0	
+		lag	0x0
+		send	0x4
+		bnt	code_455
+		ldi	0x00
+		sal	0x1
+		pushi	0x6c
+		push0	
+		lofsa	buttonPad
+		send	0x4
+code_455:
+		pToa	0x8
+		bnt	code_465
+		ldi	0x00
+		jmp	code_486
+code_465:
+		pushi	0x021a
+		push0	
+		lofsa	door
+		send	0x4
+		bnt	code_486
+		pushi	0x00b3
+		push0	
+		lofsa	door
+		send	0x4
+code_486:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+rm10::380:
+		lsg	0xc
+		ldi	0x0b
+		eq?	
+		bnt	code_505
+		push0	
+		callb	0x2, 0x0
+code_505:
+		ret	
+
+
+.OBJECT rm10 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm10', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': "You're at the east end of one of the development labs. Another elevator is available here.", 'id': 'string_0'}
+  [#10] = 0xa
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x9
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 3
+  [0x6b]  = rm10::107   	 ; @0xe
+  [0x3c]  = rm10::60   	 ; @0x1ac
+  [0x17c]  = rm10::380   	 ; @0x1ed
+
+.CODE
+insertKeyCard::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_623
+		push0	
+		callb	0x2, 0x0
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x009b
+		pushi	0x77
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_801
+code_623:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_643
+		pushi	0x00e2
+		push2	
+		push0	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_801
+code_643:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_693
+		pushi	0x05
+		push1	
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_667
+		ldi	0x3b
+		jmp	code_669
+code_667:
+		ldi	0x08
+code_669:
+		push	
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x1a
+		jmp	code_801
+code_693:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_721
+		pushi	0x2b
+		push1	
+		pushi	0x0130
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lag	0xb1
+		send	0x12
+		jmp	code_801
+code_721:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_759
+		push2	
+		pushi	0x0a
+		push0	
+		calle	0xff, 0x00, 0x04
+		push2	
+		push2	
+		pushi	0x0087
+		callb	0xb, 0x4
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_801
+code_759:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_801
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_787
+		pushi	0x03
+		dup	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		jmp	code_796
+code_787:
+		pushi	0x03
+		dup	
+		push0	
+		pushi	0x3c
+		callb	0x1, 0x6
+code_796:
+		pushi	0x6c
+		push0	
+		self	0x4
+code_801:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT insertKeyCard of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'insertKeyCard', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = insertKeyCard::138   	 ; @0x24a
+
+.CODE
+pressDownButton::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_946
+		push0	
+		callb	0x2, 0x0
+		pushi	0x2b
+		push1	
+		pushi	0x013e
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pToa	0x1a
+		bnt	code_921
+		pushi	0x00c0
+		push0	
+		pushi	0x07
+		push1	
+		push1	
+		pushi	0x04
+		push1	
+		pushi	0x21
+		lofsa	buttonPushed
+		send	0x10
+		jmp	code_939
+code_921:
+		pushi	0x00c0
+		push0	
+		pushi	0x07
+		push1	
+		push2	
+		pushi	0x04
+		push1	
+		pushi	0x45
+		lofsa	buttonPushed
+		send	0x10
+code_939:
+		ldi	0x02
+		aTop	0x12
+		jmp	code_1334
+code_946:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_976
+		pushi	0x69
+		push0	
+		lofsa	buttonPushed
+		send	0x4
+		pushi	0x6c
+		push0	
+		lofsa	buttonPad
+		send	0x4
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1334
+code_976:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_997
+		pushi	0x00e2
+		push2	
+		pushi	0x2d
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1334
+code_997:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1080
+		pushi	0x05
+		push1	
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_1021
+		ldi	0x3b
+		jmp	code_1023
+code_1021:
+		ldi	0x08
+code_1023:
+		push	
+		pushi	0x06
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x05
+		lag	0x0
+		send	0x18
+		pToa	0x1a
+		bnt	code_1065
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		push2	
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1334
+code_1065:
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1334
+code_1080:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1094
+		ldi	0x1e
+		aTop	0x10
+		jmp	code_1334
+code_1094:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1264
+		pToa	0x1a
+		bnt	code_1178
+		ldi	0x00
+		aTop	0x1a
+		pushi	0x07
+		push0	
+		lofsa	bayDoor
+		send	0x4
+		bnt	code_1167
+		pushi	0x2b
+		push1	
+		pushi	0x013c
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		push1	
+		pushi	0x0a
+		callb	0x7, 0x2
+		pushi	0x011d
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		lofsa	bayDoor
+		push	
+		lofsa	bayDoor
+		send	0xc
+		jmp	code_1257
+code_1167:
+		push2	
+		pushi	0x0a
+		push1	
+		calle	0xff, 0x00, 0x04
+		jmp	code_1257
+code_1178:
+		pushi	0x07
+		push0	
+		lofsa	bayDoor
+		send	0x4
+		not	
+		bnt	code_1249
+		pushi	0x2b
+		push1	
+		pushi	0x013c
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x016c
+		push1	
+		pushi	0xfe
+		lag	0x1
+		send	0x6
+		push1	
+		pushi	0x0086
+		callb	0x8, 0x2
+		push1	
+		pushi	0x0a
+		callb	0x8, 0x2
+		pushi	0x011d
+		push0	
+		pushi	0x0094
+		push1	
+		class	0x1a
+		push	
+		lofsa	bayDoor
+		send	0xa
+		jmp	code_1257
+code_1249:
+		push2	
+		pushi	0x0a
+		push2	
+		calle	0xff, 0x00, 0x04
+code_1257:
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1334
+code_1264:
+		dup	
+		ldi	0x06
+		eq?	
+		bnt	code_1286
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x8
+		jmp	code_1334
+code_1286:
+		dup	
+		ldi	0x07
+		eq?	
+		bnt	code_1334
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		bnt	code_1315
+		pushi	0x03
+		pushi	0x06
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		jmp	code_1325
+code_1315:
+		pushi	0x03
+		pushi	0x06
+		push0	
+		pushi	0x3c
+		callb	0x1, 0x6
+code_1325:
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1334:
+		toss	
+		ret	
+
+
+.OBJECT pressDownButton of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'pressDownButton', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = pressDownButton::138   	 ; @0x35e
+
+.CODE
+hearConverse::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1422
+		push2	
+		pushi	0x0a
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1438
+code_1422:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1438
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1438:
+		toss	
+		ret	
+
+
+.OBJECT hearConverse of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'hearConverse', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = hearConverse::138   	 ; @0x572
+
+.OBJECT door of 0x73
+Function area offset: 0x80
+Selectors [63]:
+  [#0] = 0x73
+  [#1] = 0x73
+  [#2] = 0x0
+  [#3] = {'val': 'door', 'id': 'string_7'}
+  [#4] = 0xa0
+  [#5] = 0x73
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'elevator', 'id': 'string_5'}
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is yet another in a long line of elevators in this game.. er.. ship.', 'id': 'string_6'}
+  [#22] = 0x2
+  [#23] = 0x6e
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x0
+  [#44] = 0x2
+  [#45] = 0x0
+  [#46] = 0x0
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x13b
+  [#50] = 0x137
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+  [#55] = 0x0
+  [#56] = 0x0
+  [#57] = 0x0
+  [#58] = 0x0
+  [#59] = 0x0
+  [#60] = 0x0
+  [#61] = 0x0
+  [#62] = 0x0
+Overriden functions: 0
+
+.OBJECT doorLight of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'doorLight', 'id': 'string_10'}
+  [#4] = 0x9c
+  [#5] = 0x3d
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'light', 'id': 'string_8'}
+  [#14] = 0x5a
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This light indicates that the elevator goes down and, when lit, its presence at this floor.', 'id': 'string_9'}
+  [#22] = 0x2
+  [#23] = 0x6e
+  [#24] = 0x1
+  [#25] = 0x0
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 0
+
+.CODE
+bayDoor::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1776
+		pushi	0x03
+		pushi	0x0a
+		pushi	0x04
+		pushi	0x07
+		push0	
+		lofsa	bayDoor
+		send	0x4
+		not	
+		bnt	code_1765
+		lofsa	string_12		; "open exposing the vast reaches of space"
+		jmp	code_1768
+code_1765:
+		lofsa	string_13		; "closed"
+code_1768:
+		push	
+		calle	0xff, 0x04, 0x06
+		jmp	code_1787
+code_1776:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2f, 0x8
+code_1787:
+		toss	
+		ret	
+
+bayDoor::139:
+		push2	
+		push2	
+		pushi	0x0086
+		callb	0xb, 0x4
+		pushi	0x011b
+		push0	
+		self	0x4
+		ret	
+
+
+.OBJECT bayDoor of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'bayDoor', 'id': 'string_14'}
+  [#4] = 0x4a
+  [#5] = 0x3a
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'bay door', 'id': 'string_11'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x6e
+  [#24] = 0x2
+  [#25] = 0x5
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x4001
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 2
+  [0x10a]  = bayDoor::266   	 ; @0x6c4
+  [0x8b]  = bayDoor::139   	 ; @0x6fd
+
+.CODE
+buttonPad::107:
+		pushi	0x73
+		push2	
+		lofsa	openButton
+		push	
+		lofsa	closeButton
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		pushi	0x3c
+		push0	
+		lag	0x20
+		send	0x12
+		ldi	0x01
+		sal	0x1
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2e, 0x4
+		ret	
+
+buttonPad::108:
+		pushi	0x54
+		push2	
+		lofsa	openButton
+		push	
+		lofsa	closeButton
+		push	
+		pushi	0x3c
+		push0	
+		lag	0x20
+		send	0xc
+		ldi	0x00
+		sal	0x1
+		pushi	0x6c
+		push0	
+		super	0x2e, 0x4
+		ret	
+
+		bnot	
+
+.OBJECT buttonPad of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'buttonPad', 'id': 'string_17'}
+  [#4] = 0x32
+  [#5] = 0x78
+  [#6] = 0xffe2
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'button pad', 'id': 'string_15'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This is the button pad for the bay doors below. The controls are located up here to minimize the chance of someone doing something stupid, such as pressing 'OPEN' while in the pod bay when wearing no pressure suit. YOU should be glad.", 'id': 'string_16'}
+  [#22] = 0x2
+  [#23] = 0x6e
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0xe
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 2
+  [0x6b]  = buttonPad::107   	 ; @0x77e
+  [0x6c]  = buttonPad::108   	 ; @0x7a2
+
+.OBJECT buttonPushed of 0x2e
+Function area offset: 0x50
+Selectors [39]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'buttonPushed', 'id': 'string_20'}
+  [#4] = 0x0
+  [#5] = 0x8b
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'button', 'id': 'string_18'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "The button is depressed. Aren't we all?", 'id': 'string_19'}
+  [#22] = 0x2
+  [#23] = 0x6e
+  [#24] = 0x3
+  [#25] = 0x0
+  [#26] = 0xf
+  [#27] = 0x0
+  [#28] = 0x4010
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+Overriden functions: 0
+
+.OBJECT tank of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'tank', 'id': 'string_21'}
+  [#4] = 0xd6
+  [#5] = 0x5e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'tank', 'id': 'string_21'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "You always meant to ask one of the technicians what this thing is. However, you procrastinated a bit too long in this case. It's either an ocean-in-a-bottle or a model of your stomach as the deadline draws near.", 'id': 'string_22'}
+  [#22] = 0x2
+  [#23] = 0x6e
+  [#24] = 0x4
+  [#25] = 0x2
+  [#26] = 0x1
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.CODE
+keyCardSlot::107:
+		pushi	0x6b
+		push0	
+		super	0x2c, 0x4
+		pushi	0x010f
+		push0	
+		lofsa	door
+		send	0x4
+		aTop	0x22
+		pushi	0x0110
+		push0	
+		lofsa	door
+		send	0x4
+		aTop	0x24
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		pushi	0x04
+		self	0x8
+		ret	
+
+keyCardSlot::266:
+		lsp	0x1
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_2370
+		lsp	0x2
+		ldi	0x01
+		eq?	
+		bnt	code_2356
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		lofsa	door
+		send	0x8
+		jmp	code_2381
+code_2356:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2c, 0x8
+		jmp	code_2381
+code_2370:
+		pushi	0x010a
+		push2	
+		lsp	0x1
+		lsp	0x2
+		super	0x2c, 0x8
+code_2381:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT keyCardSlot of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'keyCardSlot', 'id': 'string_23'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'keyCardSlot', 'id': 'string_23'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x800
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is a keycard slot. Your bottom-of-the-foodchain-type clearance has always prevented you from attaining a keycard for this area, thus precluding your access to it without an escort. Good luck finding one now!', 'id': 'string_24'}
+Overriden functions: 2
+  [0x6b]  = keyCardSlot::107   	 ; @0x8ec
+  [0x10a]  = keyCardSlot::266   	 ; @0x913
+
+.CODE
+openButton::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2483
+		pushi	0x008c
+		pushi	0x03
+		lofsa	pressDownButton
+		push	
+		push0	
+		push1	
+		lag	0x2
+		send	0xa
+		jmp	code_2494
+code_2483:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2494:
+		toss	
+		ret	
+
+
+.OBJECT openButton of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'openButton', 'id': 'string_25'}
+  [#4] = 0x2e
+  [#5] = 0x96
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x7d
+  [#10] = 0x10
+  [#11] = 0x8b
+  [#12] = 0x31
+  [#13] = {'val': 'openButton', 'id': 'string_25'}
+  [#14] = 0x168
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This button opens the bay doors below.', 'id': 'string_26'}
+Overriden functions: 1
+  [0x10a]  = openButton::266   	 ; @0x998
+
+.CODE
+closeButton::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2588
+		pushi	0x008c
+		push1	
+		lofsa	pressDownButton
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_2599
+code_2588:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2599:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT closeButton of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'closeButton', 'id': 'string_27'}
+  [#4] = 0x53
+  [#5] = 0x95
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x7d
+  [#10] = 0x34
+  [#11] = 0x8b
+  [#12] = 0x55
+  [#13] = {'val': 'closeButton', 'id': 'string_27'}
+  [#14] = 0x168
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This button closes the bay doors below.', 'id': 'string_28'}
+Overriden functions: 1
+  [0x10a]  = closeButton::266   	 ; @0xa04
+
+.CODE
+controlPanel::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		ret	
+
+controlPanel::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2727
+		lal	0x1
+		not	
+		bnt	code_2715
+		push2	
+		pushi	0x0a
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_2738
+code_2715:
+		push2	
+		pushi	0x0a
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_2738
+code_2727:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2738:
+		toss	
+		ret	
+
+
+.OBJECT controlPanel of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'controlPanel', 'id': 'string_29'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'controlPanel', 'id': 'string_29'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x4
+  [#17] = 0x18
+  [#18] = 0x5b
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This is a remote monitoring panel for some of the ship's systems. Attempts to understand their purpose always made your brain hurt, but you do know that glowing red isn't good. Especially since some of the stuff is connected to the reactor cooling system.", 'id': 'string_30'}
+Overriden functions: 2
+  [0x6b]  = controlPanel::107   	 ; @0xa6e
+  [0x10a]  = controlPanel::266   	 ; @0xa80
+
+.CODE
+correctButton::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		ret	
+
+correctButton::266:
+		lsp	0x1
+		ldi	0x02
+		eq?	
+		bt	code_2843
+		lsp	0x1
+		ldi	0x03
+		eq?	
+code_2843:
+		bnt	code_2875
+		lal	0x1
+		not	
+		bnt	code_2863
+		pushi	0x6b
+		push0	
+		lofsa	buttonPad
+		send	0x4
+		jmp	code_2886
+code_2863:
+		push2	
+		pushi	0x0a
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_2886
+code_2875:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2886:
+		ret	
+
+		bnot	
+
+.OBJECT correctButton of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'correctButton', 'id': 'string_31'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'controlPanel', 'id': 'string_29'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x2
+  [#17] = 0x18
+  [#18] = 0x5b
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+Overriden functions: 2
+  [0x6b]  = correctButton::107   	 ; @0xafc
+  [0x10a]  = correctButton::266   	 ; @0xb0e
+
+.CODE
+wrongButtons::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		ret	
+
+wrongButtons::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3017
+		lal	0x1
+		not	
+		bnt	code_3005
+		push2	
+		pushi	0x0a
+		pushi	0x07
+		calle	0xff, 0x00, 0x04
+		jmp	code_3028
+code_3005:
+		push2	
+		pushi	0x0a
+		pushi	0x06
+		calle	0xff, 0x00, 0x04
+		jmp	code_3028
+code_3017:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3028:
+		toss	
+		ret	
+
+
+.OBJECT wrongButtons of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'wrongButtons', 'id': 'string_33'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'controlPanel', 'id': 'string_29'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0x19
+  [#18] = 0x5c
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "These buttons are locked in position. It's probably just as well. You might live longer due to having no clue as to their purpose.", 'id': 'string_32'}
+Overriden functions: 2
+  [0x6b]  = wrongButtons::107   	 ; @0xb90
+  [0x10a]  = wrongButtons::266   	 ; @0xba2
+
+.OBJECT vacHandle of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'vacHandle', 'id': 'string_36'}
+  [#4] = 0x6a
+  [#5] = 0xbd
+  [#6] = 0x1a
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x89
+  [#10] = 0x1e
+  [#11] = 0xbd
+  [#12] = 0xb7
+  [#13] = {'val': 'handle', 'id': 'string_34'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This looks like something out of a Boris Karloid movie.', 'id': 'string_35'}
+Overriden functions: 0
+
+.OBJECT globe of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'globe', 'id': 'string_37'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'globe', 'id': 'string_37'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'This is the steel stand for the odd globe.', 'id': 'string_38'}
+Overriden functions: 0
+
+.OBJECT pipes of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'pipes', 'id': 'string_39'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pipes', 'id': 'string_39'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x80
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'More pipes run around the upper perimeter of this area.', 'id': 'string_40'}
+Overriden functions: 0
+
+.CODE
+ctrlPanel::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		ret	
+
+ctrlPanel::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_3321
+		push2	
+		pushi	0x0a
+		pushi	0x08
+		calle	0xff, 0x00, 0x04
+		jmp	code_3332
+code_3321:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_3332:
+		toss	
+		ret	
+
+
+.OBJECT ctrlPanel of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'ctrlPanel', 'id': 'string_41'}
+  [#4] = 0x130
+  [#5] = 0x88
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'controlPanel', 'id': 'string_29'}
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x400
+  [#17] = 0x10a
+  [#18] = 0x8a
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This is a remote monitoring panel for some of the ship's systems. Attempts to understand their purpose always made your brain hurt, but you do know that glowing red isn't good. Especially since some of the stuff is connected to the reactor cooling system.", 'id': 'string_30'}
+Overriden functions: 2
+  [0x6b]  = ctrlPanel::107   	 ; @0xcd2
+  [0x10a]  = ctrlPanel::266   	 ; @0xce4
+
+.STRINGS
+string_0: "You're at the east end of one of the development labs. Another elevator is available here."
+string_1: "rm10"		 ; special
+string_2: "insertKeyCard"		 ; special
+string_3: "pressDownButton"		 ; special
+string_4: "hearConverse"		 ; special
+string_5: "elevator"
+string_6: "This is yet another in a long line of elevators in this game.. er.. ship."
+string_7: "door"		 ; special
+string_8: "light"
+string_9: "This light indicates that the elevator goes down and, when lit, its presence at this floor."
+string_10: "doorLight"		 ; special
+string_11: "bay door"
+string_12: "open exposing the vast reaches of space"
+string_13: "closed"
+string_14: "bayDoor"		 ; special
+string_15: "button pad"
+string_16: "This is the button pad for the bay doors below. The controls are located up here to minimize the chance of someone doing something stupid, such as pressing 'OPEN' while in the pod bay when wearing no pressure suit. YOU should be glad."
+string_17: "buttonPad"		 ; special
+string_18: "button"
+string_19: "The button is depressed. Aren't we all?"
+string_20: "buttonPushed"		 ; special
+string_21: "tank"		 ; special
+string_22: "You always meant to ask one of the technicians what this thing is. However, you procrastinated a bit too long in this case. It's either an ocean-in-a-bottle or a model of your stomach as the deadline draws near."
+string_23: "keyCardSlot"		 ; special
+string_24: "This is a keycard slot. Your bottom-of-the-foodchain-type clearance has always prevented you from attaining a keycard for this area, thus precluding your access to it without an escort. Good luck finding one now!"
+string_25: "openButton"		 ; special
+string_26: "This button opens the bay doors below."
+string_27: "closeButton"		 ; special
+string_28: "This button closes the bay doors below."
+string_29: "controlPanel"		 ; special
+string_30: "This is a remote monitoring panel for some of the ship's systems. Attempts to understand their purpose always made your brain hurt, but you do know that glowing red isn't good. Especially since some of the stuff is connected to the reactor cooling system."
+string_31: "correctButton"		 ; special
+string_32: "These buttons are locked in position. It's probably just as well. You might live longer due to having no clue as to their purpose."
+string_33: "wrongButtons"		 ; special
+string_34: "handle"
+string_35: "This looks like something out of a Boris Karloid movie."
+string_36: "vacHandle"		 ; special
+string_37: "globe"		 ; special
+string_38: "This is the steel stand for the odd globe."
+string_39: "pipes"		 ; special
+string_40: "More pipes run around the upper perimeter of this area."
+string_41: "ctrlPanel"		 ; special
+string_unused_42: ""
+
+
+.PRELOAD_TEXT
+
+.LOCAL_VARS
+0x0, 0x0
+
+.RELOCATION
+num of pointers: 92
+0xd2, 0xe1, 0xf9, 0x11a, 0x130, 0x139, 0x142, 0x146, 0x14a, 0x14e, 0x152, 0x156, 0x15a, 0x17e, 0x193, 0x1a0, 0x1c3, 0x1d6, 0x1e2, 0x20c, 0x218, 0x336, 0x392, 0x3a7, 0x3bd, 0x3c5, 0x45a, 0x484, 0x488, 0x49e, 0x4da, 0x54a, 0x5b2, 0x5e8, 0x5fc, 0x60c, 0x676, 0x68a, 0x69a, 0x6d7, 0x6e0, 0x6e6, 0x71e, 0x732, 0x782, 0x786, 0x7a6, 0x7aa, 0x7d2, 0x7e6, 0x7f6, 0x836, 0x84a, 0x85a, 0x894, 0x8a8, 0x8b8, 0x8f7, 0x902, 0x92d, 0x962, 0x976, 0x986, 0x9a7, 0x9d2, 0x9e6, 0x9f6, 0xa12, 0xa3c, 0xa50, 0xa60, 0xac6, 0xada, 0xaea, 0xb28, 0xb5a, 0xb6e, 0xbe8, 0xbfc, 0xc0c, 0xc2c, 0xc40, 0xc50, 0xc68, 0xc7c, 0xc8c, 0xca4, 0xcb8, 0xcc8, 0xd18, 0xd2c, 0xd3c

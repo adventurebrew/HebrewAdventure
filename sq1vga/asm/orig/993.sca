@@ -1,0 +1,262 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.CODE
+class_0::179:
+		lsp	0x0
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_25
+		pushi	0x03
+		push0	
+		pTos	0x6
+		push0	
+		callk	0x74, 0x6
+		jmp	code_47
+code_25:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_45
+		pushi	0x03
+		push0	
+		pTos	0x6
+		lsp	0x1
+		callk	0x74, 0x6
+		jmp	code_47
+code_45:
+		ldi	0x00
+code_47:
+		toss	
+		aTop	0x8
+		pTos	0x8
+		ldi	0xff
+		eq?	
+		bnt	code_62
+		ldi	0x00
+		aTop	0x8
+code_62:
+		pToa	0x8
+		bnt	code_71
+		selfID	
+		jmp	code_73
+code_71:
+		ldi	0x00
+code_73:
+		ret	
+
+class_0::331:
+		link	0x01
+		pToa	0x8
+		not	
+		bnt	code_88
+		pushi	0x00b3
+		push0	
+		self	0x4
+code_88:
+		pToa	0x8
+		bnt	code_108
+		pushi	0x04
+		pushi	0x03
+		push	
+		lsp	0x1
+		lsp	0x2
+		callk	0x74, 0x8
+		jmp	code_110
+code_108:
+		ldi	0x00
+code_110:
+		ret	
+
+class_0::330:
+		link	0x01
+		pToa	0x8
+		not	
+		bnt	code_125
+		pushi	0x00b3
+		push0	
+		self	0x4
+code_125:
+		pToa	0x8
+		bnt	code_160
+		ldi	0x00
+		sat	0x0
+code_134:
+		lst	0x0
+		lap	0x0
+		lt?	
+		bnt	code_160
+		pushi	0x03
+		pushi	0x06
+		pTos	0x8
+		lat	0x0
+		lspi	0x1
+		callk	0x74, 0x6
+		+at	0x0
+		jmp	code_134
+code_160:
+		ret	
+
+class_0::332:
+		lsp	0x0
+		ldi	0x02
+		ne?	
+		bnt	code_172
+		ldi	0x00
+		ret	
+
+code_172:
+		pToa	0x8
+		not	
+		bnt	code_185
+		pushi	0x00b3
+		push1	
+		push1	
+		self	0x6
+code_185:
+		pToa	0x8
+		bnt	code_204
+		pushi	0x04
+		push2	
+		push	
+		lsp	0x1
+		lsp	0x2
+		callk	0x74, 0x8
+		jmp	code_206
+code_204:
+		ldi	0x00
+code_206:
+		ret	
+
+class_0::329:
+		lsp	0x0
+		ldi	0x02
+		ne?	
+		bnt	code_218
+		ldi	0x00
+		ret	
+
+code_218:
+		pToa	0x8
+		not	
+		bnt	code_231
+		pushi	0x00b3
+		push1	
+		push1	
+		self	0x6
+code_231:
+		pToa	0x8
+		bnt	code_251
+		pushi	0x04
+		pushi	0x05
+		lsp	0x1
+		lsp	0x2
+		push	
+		callk	0x74, 0x8
+		jmp	code_253
+code_251:
+		ldi	0x00
+code_253:
+		ret	
+
+class_0::333:
+		link	0x01
+		lsp	0x0
+		ldi	0x02
+		ge?	
+		bnt	code_269
+		lap	0x2
+		jmp	code_271
+code_269:
+		ldi	0x00
+code_271:
+		sat	0x0
+		pToa	0x8
+		not	
+		bnt	code_286
+		pushi	0x00b3
+		push1	
+		push1	
+		self	0x6
+code_286:
+		pToa	0x8
+		bnt	code_306
+		pushi	0x04
+		pushi	0x07
+		push	
+		lsp	0x1
+		lst	0x0
+		callk	0x74, 0x8
+		jmp	code_308
+code_306:
+		ldi	0x00
+code_308:
+		ret	
+
+class_0::334:
+		pToa	0x8
+		bnt	code_324
+		push2	
+		push1	
+		push	
+		callk	0x74, 0x4
+		ldi	0x00
+		aTop	0x8
+code_324:
+		ret	
+
+class_0::84:
+		pToa	0x8
+		bnt	code_336
+		pushi	0x014e
+		push0	
+		self	0x4
+code_336:
+		push2	
+		pushi	0x04
+		pTos	0x6
+		callk	0x74, 0x4
+		ret	
+
+class_0::108:
+		pushi	0x014e
+		push0	
+		self	0x4
+		pushi	0x6c
+		push0	
+		super	0x0, 0x4
+		ret	
+
+class_0::109:
+		pushi	0x04
+		lsp	0x1
+		pushi	0x03e1
+		push0	
+		pTos	0x6
+		callk	0x48, 0x8
+		ret	
+
+
+.CLASS class_0 of 0x0
+Function area offset: 0x16
+Selectors [5]:
+  [0x0] = 0x36
+  [0x1] = 0x0
+  [0x2] = 0x8000
+  [0x17] = 0x0
+  [0x5d] = 0x0
+Overriden functions: 10
+  [0x6c]  = class_0::108   	 ; @0x159
+  [0x6d]  = class_0::109   	 ; @0x166
+  [0xb3]  = class_0::179   	 ; @0x4
+  [0x149]  = class_0::329   	 ; @0xcf
+  [0x14a]  = class_0::330   	 ; @0x6f
+  [0x14b]  = class_0::331   	 ; @0x4a
+  [0x14c]  = class_0::332   	 ; @0xa1
+  [0x14d]  = class_0::333   	 ; @0xfe
+  [0x14e]  = class_0::334   	 ; @0x135
+  [0x54]  = class_0::84   	 ; @0x145
+
+.PRELOAD_TEXT

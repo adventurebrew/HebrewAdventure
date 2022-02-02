@@ -1,0 +1,357 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+code_14  ; link
+
+.CODE
+; exported
+code_14:
+		link	0x0f
+		ldi	0xff
+		sat	0xb
+		sat	0xa
+		ldi	0x00
+		sat	0x6
+		sat	0x5
+		sat	0x4
+		sat	0x3
+		ldi	0x00
+		sat	0xc
+		ldi	0x00
+		sat	0xe
+		pushi	0x23
+		push1	
+		lsg	0x26
+		pushi	0x6a
+		push0	
+		class	0x12
+		send	0x4
+		sat	0x1
+		send	0x6
+		ldi	0x00
+		sat	0x0
+code_60:
+		lst	0x0
+		lap	0x0
+		lt?	
+		bnt	code_435
+		lat	0x0
+		lapi	0x1
+		sat	0x8
+		push	
+		dup	
+		ldi	0x6a
+		eq?	
+		bnt	code_98
+		pushi	0x0b
+		push0	
+		lat	0x2
+		send	0x4
+		sat	0x5
+		ldi	0x00
+		sat	0x3
+		jmp	code_429
+code_98:
+		dup	
+		ldi	0x43
+		eq?	
+		bnt	code_120
+		+at	0x0
+		lapi	0x1
+		sat	0xa
+		+at	0x0
+		lapi	0x1
+		sat	0xb
+		jmp	code_429
+code_120:
+		dup	
+		ldi	0x50
+		eq?	
+		bnt	code_136
+		+at	0x0
+		lapi	0x1
+		sat	0xc
+		jmp	code_429
+code_136:
+		dup	
+		ldi	0x79
+		eq?	
+		bnt	code_152
+		+at	0x0
+		lapi	0x1
+		sat	0xe
+		jmp	code_429
+code_152:
+		+at	0x0
+		lst	0x8
+		dup	
+		ldi	0x1a
+		eq?	
+		bnt	code_184
+		pushi	0x1a
+		push1	
+		lat	0x0
+		lspi	0x1
+		pushi	0x6a
+		push0	
+		class	0xd
+		send	0x4
+		sat	0x2
+		send	0x6
+		jmp	code_314
+code_184:
+		dup	
+		ldi	0x51
+		eq?	
+		bnt	code_219
+		pushi	0x1a
+		push1	
+		lat	0x0
+		lspi	0x1
+		pushi	0x4d
+		push1	
+		+at	0x0
+		lspi	0x1
+		pushi	0x6a
+		push0	
+		class	0xf
+		send	0x4
+		sat	0x2
+		send	0xc
+		jmp	code_314
+code_219:
+		dup	
+		ldi	0x52
+		eq?	
+		bnt	code_261
+		pushi	0x05
+		push1	
+		lat	0x0
+		lspi	0x1
+		pushi	0x06
+		push1	
+		+at	0x0
+		lspi	0x1
+		pushi	0x07
+		push1	
+		+at	0x0
+		lspi	0x1
+		pushi	0x6a
+		push0	
+		class	0xe
+		send	0x4
+		sat	0x2
+		send	0x12
+		jmp	code_314
+code_261:
+		dup	
+		ldi	0x29
+		eq?	
+		bnt	code_296
+		pushi	0x1a
+		push1	
+		lat	0x0
+		lspi	0x1
+		pushi	0x25
+		push1	
+		+at	0x0
+		lspi	0x1
+		pushi	0x6a
+		push0	
+		class	0x10
+		send	0x4
+		sat	0x2
+		send	0xc
+		jmp	code_314
+code_296:
+		pushi	0x1a
+		push1	
+		-at	0x0
+		lspi	0x1
+		pushi	0x6a
+		push0	
+		class	0xd
+		send	0x4
+		sat	0x2
+		send	0x6
+code_314:
+		toss	
+		lst	0x0
+		ldi	0x01
+		add	
+		push	
+		lap	0x0
+		lt?	
+		bnt	code_351
+		lst	0x0
+		ldi	0x01
+		add	
+		lspi	0x1
+		ldi	0x04
+		eq?	
+		bnt	code_351
+		+at	0x0
+		lst	0x3
+		+at	0x0
+		lapi	0x1
+		add	
+		sat	0x3
+code_351:
+		lst	0x0
+		ldi	0x01
+		add	
+		push	
+		lap	0x0
+		lt?	
+		bnt	code_387
+		lst	0x0
+		ldi	0x01
+		add	
+		lspi	0x1
+		ldi	0x03
+		eq?	
+		bnt	code_387
+		+at	0x0
+		lst	0x5
+		+at	0x0
+		lapi	0x1
+		add	
+		sat	0x5
+code_387:
+		pushi	0x00a8
+		push0	
+		pushi	0x00aa
+		push2	
+		lst	0x3
+		ldi	0x04
+		add	
+		push	
+		lst	0x5
+		ldi	0x04
+		add	
+		push	
+		lat	0x2
+		send	0xc
+		pushi	0x73
+		push1	
+		lst	0x2
+		lat	0x1
+		send	0x6
+		pushi	0x0c
+		push0	
+		lat	0x2
+		send	0x4
+		sat	0x3
+code_429:
+		toss	
+		+at	0x0
+		jmp	code_60
+code_435:
+		pushi	0x00a8
+		push0	
+		pushi	0x00b4
+		push0	
+		lat	0x1
+		send	0x8
+		pushi	0x00aa
+		push2	
+		pushi	0xff
+		lat	0xa
+		eq?	
+		bnt	code_469
+		pushi	0x0a
+		push0	
+		lat	0x1
+		send	0x4
+		jmp	code_471
+code_469:
+		lat	0xa
+code_471:
+		push	
+		pushi	0xff
+		lat	0xb
+		eq?	
+		bnt	code_490
+		pushi	0x09
+		push0	
+		lat	0x1
+		send	0x4
+		jmp	code_492
+code_490:
+		lat	0xb
+code_492:
+		push	
+		lat	0x1
+		send	0x8
+		lat	0xc
+		bnt	code_510
+		pushi	0x1a
+		push1	
+		push	
+		lat	0x1
+		send	0x6
+code_510:
+		pushi	0x43
+		push1	
+		lst	0xe
+		lat	0x1
+		send	0x6
+		sat	0xd
+		push1	
+		pushi	0x20
+		push0	
+		send	0x4
+		and	
+		not	
+		bnt	code_536
+		ldi	0x00
+		sat	0xd
+code_536:
+		pushi	0x00b3
+		push2	
+		lat	0xc
+		bnt	code_550
+		ldi	0x04
+		jmp	code_552
+code_550:
+		ldi	0x00
+code_552:
+		push	
+		pushi	0xff
+		pushi	0x3c
+		push1	
+		lst	0xd
+		lat	0x1
+		send	0xe
+		sat	0x7
+		push1	
+		push	
+		callk	0x6, 0x2
+		bnt	code_603
+		pushi	0x6f
+		push1	
+		class	0xf
+		push	
+		lat	0x7
+		send	0x6
+		bnt	code_599
+		pushi	0x4d
+		push0	
+		lat	0x7
+		send	0x4
+		sat	0x7
+		jmp	code_603
+code_599:
+		ldi	0x01
+		sat	0x7
+code_603:
+		pushi	0x6c
+		push0	
+		lat	0x1
+		send	0x4
+		lat	0x7
+		ret	
+
+		bnot	

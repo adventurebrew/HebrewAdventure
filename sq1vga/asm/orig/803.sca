@@ -1,0 +1,354 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT speedTest of 0x43
+
+.OBJECT fred of 0x30
+Function area offset: 0x70
+Selectors [55]:
+  [#0] = 0x30
+  [#1] = 0x30
+  [#2] = 0x0
+  [#3] = {'val': 'fred', 'id': 'string_0'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x6789
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x0
+  [#24] = 0x0
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x0
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+  [#43] = 0x8000
+  [#44] = 0x0
+  [#45] = 0x0
+  [#46] = 0x3
+  [#47] = 0x0
+  [#48] = 0x0
+  [#49] = 0x0
+  [#50] = 0x0
+  [#51] = 0x0
+  [#52] = 0x0
+  [#53] = 0x0
+  [#54] = 0x0
+Overriden functions: 0
+
+.CODE
+speedTest::107:
+		pushi	0x03
+		push0	
+		lofsa	string_1		; "version"
+		push	
+		push1	
+		callk	0x74, 0x6
+		sal	0x2
+		pushi	0x04
+		pushi	0x05
+		lsg	0x1b
+		pushi	0x06
+		push	
+		callk	0x74, 0x8
+		push2	
+		push1	
+		lsl	0x2
+		callk	0x74, 0x4
+		pushi	0x6b
+		push0	
+		super	0x43, 0x4
+		pushi	0x74
+		push1	
+		pushi	0x009a
+		lag	0x8
+		send	0x6
+code_188:
+		push0	
+		callk	0x42, 0x0
+		push	
+		ldi	0xfc00
+		ugt?	
+		bnt	code_203
+		jmp	code_188
+code_203:
+		pushi	0x05
+		push1	
+		pushi	0x0386
+		pushi	0x00a0
+		push1	
+		push0	
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x14
+		pushi	0x63
+		pushi	0x0132
+		push2	
+		push1	
+		push1	
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x012c
+		pushi	0x64
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	fred
+		send	0x36
+		ldi	0x00
+		sag	0x3
+		ldi	0x00
+		sal	0x1
+		push2	
+		lag	0x69
+		le?	
+		bnt	code_279
+		pprev	
+		ldi	0x10
+		le?	
+code_279:
+		not	
+		bnt	code_288
+		ldi	0x6e
+		jmp	code_290
+code_288:
+		ldi	0x32
+code_290:
+		sal	0x4
+		push2	
+		lag	0x69
+		le?	
+		bnt	code_303
+		pprev	
+		ldi	0x10
+		le?	
+code_303:
+		not	
+		bnt	code_312
+		ldi	0x41
+		jmp	code_314
+code_312:
+		ldi	0x1e
+code_314:
+		sal	0x3
+		ret	
+
+speedTest::60:
+		pushi	0x3c
+		push0	
+		super	0x43, 0x4
+		+al	0x1
+		push	
+		ldi	0x01
+		eq?	
+		bnt	code_341
+		pushi	0x3c
+		push0	
+		callk	0x42, 0x0
+		add	
+		sal	0x0
+code_341:
+		lsl	0x0
+		push0	
+		callk	0x42, 0x0
+		ult?	
+		bnt	code_433
+		pushi	0x0088
+		push0	
+		self	0x4
+		not	
+		bnt	code_433
+		lsl	0x1
+		lal	0x3
+		lt?	
+		bnt	code_385
+		ldi	0x00
+		sag	0x57
+		pushi	0x0123
+		push1	
+		push1	
+		lag	0x1
+		send	0x6
+		jmp	code_423
+code_385:
+		lsl	0x1
+		lal	0x4
+		lt?	
+		bnt	code_409
+		ldi	0x01
+		sag	0x57
+		pushi	0x0123
+		push1	
+		push2	
+		lag	0x1
+		send	0x6
+		jmp	code_423
+code_409:
+		ldi	0x02
+		sag	0x57
+		pushi	0x0123
+		push1	
+		pushi	0x03
+		lag	0x1
+		send	0x6
+code_423:
+		pushi	0x008c
+		push1	
+		lofsa	speedScript
+		push	
+		self	0x6
+code_433:
+		ret	
+
+speedTest::108:
+		pushi	0x6c
+		push0	
+		super	0x43, 0x4
+		ret	
+
+		bnot	
+
+.OBJECT speedTest of 0x43
+Exported
+Function area offset: 0x30
+Selectors [23]:
+  [#0] = 0x43
+  [#1] = 0x43
+  [#2] = 0x0
+  [#3] = {'val': 'speedTest', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x63
+  [#11] = 0x64
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+Overriden functions: 3
+  [0x6b]  = speedTest::107   	 ; @0x8c
+  [0x3c]  = speedTest::60   	 ; @0x13d
+  [0x6c]  = speedTest::108   	 ; @0x1b2
+
+.CODE
+speedScript::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_539
+		ldi	0x01
+		aTop	0x10
+		jmp	code_574
+code_539:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_557
+		ldi	0x01
+		sag	0x3
+		ldi	0x01
+		aTop	0x10
+		jmp	code_574
+code_557:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_574
+		pushi	0x0177
+		push1	
+		lsg	0x6b
+		lag	0x2
+		send	0x6
+code_574:
+		toss	
+		ret	
+
+
+.OBJECT speedScript of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'speedScript', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = speedScript::138   	 ; @0x208
+
+.STRINGS
+string_0: "fred"		 ; special
+string_1: "version"
+string_2: "speedTest"		 ; special
+string_3: "speedScript"		 ; special
+string_unused_4: ""
+string_unused_5: ""
+
+
+.LOCAL_VARS
+0x0, 0x0, 0x0, 0x0, 0x0
+
+.RELOCATION
+num of pointers: 6
+0x1c, 0x90, 0x100, 0x1ac, 0x1cc, 0x252

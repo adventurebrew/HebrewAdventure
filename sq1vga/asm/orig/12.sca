@@ -1,0 +1,1605 @@
+.CONFIG
+WIDE_EXPORTS = True
+LOFSA_RELATIVE = False
+
+.EXPORTS
+OBJECT rm12 of 0x74
+
+.CODE
+rm12::107:
+		pushi	0x05
+		pushi	0x0080
+		pushi	0x0b
+		push1	
+		pushi	0x11
+		pushi	0x70
+		calle	0x03be, 0x0000, 0x0a
+		push2	
+		pushi	0x0084
+		pushi	0x016b
+		callk	0x0, 0x4
+		pushi	0x0187
+		push1	
+		pushi	0x02bc
+		self	0x6
+		pushi	0x6b
+		push0	
+		super	0x74, 0x4
+		pushi	0x6b
+		push0	
+		lag	0x0
+		send	0x4
+		push2	
+		pushi	0x0229
+		push1	
+		calle	0x02bc, 0x0001, 0x04
+		bnt	code_102
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	buttons
+		send	0x6
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	motors
+		send	0x6
+code_102:
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	buttons
+		send	0x8
+		pushi	0x6b
+		push0	
+		pushi	0x011b
+		push0	
+		lofsa	motors
+		send	0x8
+		push1	
+		pushi	0x0a
+		callb	0x6, 0x2
+		not	
+		bnt	code_147
+		pushi	0x6b
+		push0	
+		lofsa	bayDoors
+		send	0x4
+		jmp	code_162
+code_147:
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x6b
+		push0	
+		lofsa	stars
+		send	0xa
+code_162:
+		lsg	0xac
+		ldi	0x1e
+		gt?	
+		bnt	code_213
+		pushi	0x6b
+		push0	
+		lofsa	tv
+		send	0x4
+		pushi	0x0123
+		push0	
+		lag	0x1
+		send	0x4
+		push	
+		pushi	0x0123
+		push0	
+		lofsa	tv
+		send	0x4
+		ge?	
+		bnt	code_213
+		pushi	0x008c
+		push1	
+		lofsa	tvScript
+		push	
+		lofsa	tv
+		send	0x6
+code_213:
+		pushi	0x0174
+		push1	
+		pushi	0x22
+		push1	
+		push0	
+		pushi	0x6b
+		pushi	0x20
+		push0	
+		pushi	0x00b0
+		pushi	0x20
+		pushi	0x00b0
+		pushi	0x6f
+		pushi	0x00a2
+		pushi	0x00ba
+		pushi	0x77
+		pushi	0x00b4
+		pushi	0x75
+		pushi	0x00d6
+		pushi	0x5c
+		pushi	0x00d1
+		pushi	0x5a
+		pushi	0x00af
+		pushi	0x73
+		pushi	0x0097
+		pushi	0x68
+		pushi	0x59
+		pushi	0x0084
+		pushi	0x0c
+		pushi	0x008e
+		push0	
+		pushi	0x008e
+		push0	
+		push0	
+		pushi	0x013f
+		push0	
+		pushi	0x013f
+		pushi	0x00bd
+		push0	
+		pushi	0x00bd
+		pushi	0x72
+		push0	
+		pushi	0x6a
+		push0	
+		class	0x23
+		send	0x4
+		send	0x4e
+		push	
+		self	0x6
+		pushi	0x73
+		push2	
+		lofsa	monitorFeat
+		push	
+		lofsa	podFeat
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		lag	0x20
+		send	0xe
+		push1	
+		pushi	0x0a
+		callb	0x6, 0x2
+		bnt	code_363
+		pushi	0x73
+		push2	
+		lofsa	bayDoorFeat
+		push	
+		lofsa	spaceFeat
+		push	
+		pushi	0x74
+		push1	
+		pushi	0x6b
+		lag	0x20
+		send	0xe
+code_363:
+		pushi	0x6b
+		push0	
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		lofsa	podDoor
+		send	0xc
+		lsg	0xc
+		dup	
+		ldi	0x0d
+		eq?	
+		bnt	code_442
+		pushi	0x07
+		push1	
+		push0	
+		lofsa	podDoor
+		send	0x6
+		pushi	0x008c
+		push1	
+		lofsa	exitPod
+		push	
+		self	0x6
+		pushi	0x05
+		push1	
+		pushi	0x0b
+		pushi	0x011a
+		push2	
+		pushi	0x00b3
+		pushi	0x7b
+		pushi	0x42
+		push1	
+		push0	
+		pushi	0x06
+		push1	
+		push2	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x69
+		push0	
+		lag	0x0
+		send	0x24
+		jmp	code_542
+code_442:
+		dup	
+		ldi	0x0b
+		eq?	
+		bnt	code_525
+		push1	
+		pushi	0x10
+		callb	0x6, 0x2
+		not	
+		bnt	code_499
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x011a
+		push2	
+		pushi	0x12
+		pushi	0x00a9
+		pushi	0x05
+		push1	
+		pushi	0x0b
+		pushi	0x019a
+		push1	
+		push0	
+		lag	0x0
+		send	0x1a
+		pushi	0x008c
+		push1	
+		lofsa	explode
+		push	
+		self	0x6
+		jmp	code_542
+code_499:
+		pushi	0x12
+		push1	
+		pushi	0x8000
+		pushi	0x011a
+		push2	
+		pushi	0x10
+		pushi	0x009d
+		lag	0x0
+		send	0xe
+		push0	
+		callb	0x3, 0x0
+		jmp	code_542
+code_525:
+		pushi	0x05
+		push1	
+		push1	
+		pushi	0x011a
+		push2	
+		pushi	0x10
+		pushi	0x009d
+		lag	0x0
+		send	0xe
+code_542:
+		toss	
+		ret	
+
+rm12::60:
+		pToa	0x8
+		bnt	code_554
+		ldi	0x00
+		jmp	code_633
+code_554:
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x04
+		and	
+		bnt	code_583
+		pushi	0x008c
+		push1	
+		lofsa	fallingScript
+		push	
+		self	0x6
+		jmp	code_633
+code_583:
+		pushi	0x0131
+		push1	
+		push1	
+		lag	0x0
+		send	0x6
+		push	
+		ldi	0x02
+		and	
+		bnt	code_633
+		pushi	0x008c
+		pushi	0x03
+		lofsa	fallingScript
+		push	
+		push0	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x57
+		ge?	
+		bnt	code_628
+		ldi	0x07
+		jmp	code_630
+code_628:
+		ldi	0x06
+code_630:
+		push	
+		self	0xa
+code_633:
+		pushi	0x3c
+		push0	
+		super	0x74, 0x4
+		ret	
+
+
+.OBJECT rm12 of 0x74
+Exported
+Function area offset: 0x32
+Selectors [24]:
+  [#0] = 0x74
+  [#1] = 0x74
+  [#2] = 0x0
+  [#3] = {'val': 'rm12', 'id': 'string_1'}
+  [#4] = 0x0
+  [#5] = 0x0
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = {'val': 'This is the cavernous Vehicle Bay. An escape pod rests on launch rails at the end of the platform. Bay doors at the end of the rails allow access to the emptiness beyond.', 'id': 'string_0'}
+  [#10] = 0xc
+  [#11] = 0xffff
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+  [#17] = 0xb
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0xa0
+  [#21] = 0x8ad0
+  [#22] = 0x0
+  [#23] = 0x0
+Overriden functions: 2
+  [0x6b]  = rm12::107   	 ; @0xe
+  [0x3c]  = rm12::60   	 ; @0x220
+
+.CODE
+tvScript::138:
+		link	0x02
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_746
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	tv
+		send	0x8
+		jmp	code_810
+code_746:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_765
+		push2	
+		push2	
+		pushi	0x05
+		callk	0x3c, 0x4
+		aTop	0x12
+		jmp	code_810
+code_765:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_796
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		lofsa	tv
+		send	0x6
+		push2	
+		push1	
+		pushi	0x04
+		callk	0x3c, 0x4
+		aTop	0x12
+		jmp	code_810
+code_796:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_810
+		pushi	0x008a
+		push1	
+		push0	
+		self	0x6
+code_810:
+		toss	
+		ret	
+
+
+.OBJECT tvScript of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'tvScript', 'id': 'string_2'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = tvScript::138   	 ; @0x2cc
+
+.CODE
+fallingScript::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_923
+		push0	
+		callb	0x2, 0x0
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x11
+		pushi	0x06
+		push1	
+		pTos	0x1a
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x03
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x24
+		jmp	code_1072
+code_923:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_961
+		pushi	0x42
+		push1	
+		pToa	0x1a
+		bnt	code_943
+		ldi	0x03
+		jmp	code_945
+code_943:
+		ldi	0xff
+code_945:
+		push	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_1072
+code_961:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1043
+		pushi	0x2b
+		push1	
+		pushi	0x016b
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lag	0xb1
+		send	0x12
+		pushi	0x00a0
+		push1	
+		pushi	0x06
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		ldi	0x02
+		add	
+		push	
+		pushi	0x0094
+		push1	
+		class	0x17
+		push	
+		pushi	0x0132
+		push2	
+		pushi	0x03
+		pushi	0x0d
+		pushi	0x0119
+		pushi	0x03
+		class	0x1e
+		push	
+		pushi	0x04
+		push0	
+		lag	0x0
+		send	0x4
+		push	
+		pushi	0x00fa
+		lag	0x0
+		send	0x1e
+		jmp	code_1072
+code_1043:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1072
+		ldi	0x00
+		aTop	0x1a
+		pushi	0x05
+		pushi	0x03ab
+		push0	
+		push0	
+		pushi	0x0c
+		push0	
+		callb	0xa, 0xa
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1072:
+		toss	
+		ret	
+
+
+.OBJECT fallingScript of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'fallingScript', 'id': 'string_3'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = fallingScript::138   	 ; @0x366
+
+.CODE
+enterPod::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1194
+		push0	
+		callb	0x2, 0x0
+		pushi	0x42
+		push1	
+		pushi	0x07
+		lofsa	podDoor
+		send	0x6
+		pushi	0x12
+		push1	
+		push0	
+		pushi	0x05
+		push1	
+		pushi	0x0b
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x42
+		push1	
+		push0	
+		pushi	0x07
+		push1	
+		push0	
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0x26
+		jmp	code_1286
+code_1194:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1241
+		pushi	0x69
+		push0	
+		lag	0x0
+		send	0x4
+		pushi	0x2b
+		push1	
+		pushi	0x0144
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1b
+		push	
+		pushSelf	
+		lofsa	podDoor
+		send	0x8
+		jmp	code_1286
+code_1241:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1269
+		pushi	0x2b
+		push1	
+		pushi	0x0171
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push1	
+		pushSelf	
+		lag	0xb1
+		send	0x12
+		jmp	code_1286
+code_1269:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1286
+		pushi	0x0177
+		push1	
+		pushi	0x0d
+		lag	0x2
+		send	0x6
+code_1286:
+		toss	
+		ret	
+
+
+.OBJECT enterPod of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'enterPod', 'id': 'string_4'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = enterPod::138   	 ; @0x46c
+
+.CODE
+exitPod::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1377
+		push0	
+		callb	0x2, 0x0
+		pushi	0x12
+		push1	
+		push0	
+		lag	0x0
+		send	0x6
+		ldi	0x03
+		aTop	0x10
+		jmp	code_1555
+code_1377:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1417
+		pushi	0x2b
+		push1	
+		pushi	0x0144
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lofsa	podDoor
+		send	0x8
+		jmp	code_1555
+code_1417:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1465
+		pushi	0x009a
+		push0	
+		lag	0xb1
+		send	0x4
+		pushi	0x00c0
+		push0	
+		pushi	0x42
+		push1	
+		push0	
+		pushi	0x00d9
+		push1	
+		pushi	0x0c
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x06
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x1c
+		jmp	code_1555
+code_1465:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1492
+		pushi	0x42
+		push1	
+		pushi	0xff
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_1555
+code_1492:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1529
+		pushi	0x03
+		push1	
+		push1	
+		pushi	0x3d
+		callb	0x1, 0x6
+		pushi	0x0119
+		pushi	0x04
+		class	0x1e
+		push	
+		pushi	0x00a6
+		pushi	0x7c
+		pushSelf	
+		lag	0x0
+		send	0xc
+		jmp	code_1555
+code_1529:
+		dup	
+		ldi	0x05
+		eq?	
+		bnt	code_1555
+		pushi	0x12
+		push1	
+		pushi	0x8000
+		lag	0x0
+		send	0x6
+		push0	
+		callb	0x3, 0x0
+		pushi	0x6c
+		push0	
+		self	0x4
+code_1555:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT exitPod of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'exitPod', 'id': 'string_5'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = exitPod::138   	 ; @0x542
+
+.CODE
+explode::138:
+		lap	0x1
+		aTop	0xa
+		push	
+		dup	
+		ldi	0x00
+		eq?	
+		bnt	code_1635
+		ldi	0x02
+		aTop	0x12
+		jmp	code_1781
+code_1635:
+		dup	
+		ldi	0x01
+		eq?	
+		bnt	code_1667
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x04
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x12
+		jmp	code_1781
+code_1667:
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1716
+		pushi	0x2b
+		push1	
+		pushi	0x0140
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x00d9
+		push1	
+		pushi	0x19
+		pushi	0x0094
+		pushi	0x04
+		class	0x19
+		push	
+		pushi	0x07
+		push1	
+		pushSelf	
+		lag	0x0
+		send	0x12
+		jmp	code_1781
+code_1716:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1761
+		pushi	0x2b
+		push1	
+		pushi	0x0141
+		pushi	0x06
+		push1	
+		push1	
+		pushi	0x2a
+		push0	
+		lag	0xb1
+		send	0x10
+		pushi	0x00d9
+		push1	
+		pushi	0x08
+		pushi	0x0094
+		push2	
+		class	0x1a
+		push	
+		pushSelf	
+		lag	0x0
+		send	0xe
+		jmp	code_1781
+code_1761:
+		dup	
+		ldi	0x04
+		eq?	
+		bnt	code_1781
+		pushi	0x05
+		pushi	0x03ad
+		push0	
+		push0	
+		pushi	0x0c
+		push1	
+		callb	0xa, 0xa
+code_1781:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT explode of 0x6
+Function area offset: 0x24
+Selectors [17]:
+  [#0] = 0x6
+  [#1] = 0x6
+  [#2] = 0x0
+  [#3] = {'val': 'explode', 'id': 'string_6'}
+  [#4] = 0x0
+  [#5] = 0xffff
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = 0x0
+  [#14] = 0x0
+  [#15] = 0x0
+  [#16] = 0x0
+Overriden functions: 1
+  [0x8a]  = explode::138   	 ; @0x650
+
+.CODE
+bayDoors::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_1882
+		pushi	0x03
+		pushi	0x0c
+		push2	
+		push1	
+		pushi	0x0a
+		callb	0x6, 0x2
+		bnt	code_1871
+		lofsa	string_9		; "open wide leaving nothing but millions of kilometers of empty space between you and the very stars themselves"
+		jmp	code_1874
+code_1871:
+		lofsa	string_10		; "tightly sealed"
+code_1874:
+		push	
+		calle	0xff, 0x04, 0x06
+		jmp	code_1912
+code_1882:
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_1901
+		push2	
+		pushi	0x0c
+		pushi	0x03
+		calle	0xff, 0x00, 0x04
+		jmp	code_1912
+code_1901:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2e, 0x6
+code_1912:
+		toss	
+		ret	
+
+
+.OBJECT bayDoors of 0x2e
+Function area offset: 0x4e
+Selectors [38]:
+  [#0] = 0x2e
+  [#1] = 0x2e
+  [#2] = 0x0
+  [#3] = {'val': 'bayDoors', 'id': 'string_11'}
+  [#4] = 0x34
+  [#5] = 0x63
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'bay doors', 'id': 'string_7'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'The massive bay doors are tightly sealed.', 'id': 'string_8'}
+  [#22] = 0x2
+  [#23] = 0x70
+  [#24] = 0x4
+  [#25] = 0x0
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x101
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+Overriden functions: 1
+  [0x10a]  = bayDoors::266   	 ; @0x732
+
+.CODE
+podDoor::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2f, 0x4
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		ret	
+
+podDoor::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2056
+		pushi	0x008c
+		push1	
+		lofsa	enterPod
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_2067
+code_2056:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_2067:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT podDoor of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'podDoor', 'id': 'string_14'}
+  [#4] = 0xc1
+  [#5] = 0x4e
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pod door', 'id': 'string_12'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0xac
+  [#18] = 0x77
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "This is one of the Arcada's escape pods. You vaguely remember receiving some orientation on these when you joined the crew. Unfortunately, you were deep into research on sleeping with your eyes open and, hence, don't remember much.", 'id': 'string_13'}
+  [#22] = 0x2
+  [#23] = 0x70
+  [#24] = 0x1
+  [#25] = 0x5
+  [#26] = 0x2
+  [#27] = 0x0
+  [#28] = 0x10
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x5
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x0
+Overriden functions: 2
+  [0x6b]  = podDoor::107   	 ; @0x7de
+  [0x10a]  = podDoor::266   	 ; @0x7f0
+
+.CODE
+tv::266:
+		lsp	0x1
+		dup	
+		ldi	0x02
+		eq?	
+		bnt	code_2225
+		lsg	0xac
+		ldi	0x1e
+		gt?	
+		bnt	code_2213
+		push2	
+		pushi	0x0c
+		pushi	0x04
+		calle	0xff, 0x00, 0x04
+		jmp	code_2236
+code_2213:
+		push2	
+		pushi	0x0c
+		pushi	0x05
+		calle	0xff, 0x00, 0x04
+		jmp	code_2236
+code_2225:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2f, 0x6
+code_2236:
+		toss	
+		ret	
+
+
+.OBJECT tv of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'tv', 'id': 'string_15'}
+  [#4] = 0xb9
+  [#5] = 0x51
+  [#6] = 0x28
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'tv', 'id': 'string_15'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = 0x0
+  [#22] = 0x2
+  [#23] = 0x70
+  [#24] = 0x0
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x6
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 1
+  [0x10a]  = tv::266   	 ; @0x888
+
+.OBJECT motors of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'motors', 'id': 'string_16'}
+  [#4] = 0x12b
+  [#5] = 0x85
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'motors', 'id': 'string_16'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'These powerful Pyron Weezpump drives propel the pod.', 'id': 'string_17'}
+  [#22] = 0x2
+  [#23] = 0x70
+  [#24] = 0x2
+  [#25] = 0x3
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT stars of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'stars', 'id': 'string_20'}
+  [#4] = 0x24
+  [#5] = 0x2f
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'star', 'id': 'string_18'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Even though we all know that the empty atmosphere of space would not permit this twinkling effect, you have to admit it looks nice.', 'id': 'string_19'}
+  [#22] = 0x2
+  [#23] = 0x70
+  [#24] = 0x3
+  [#25] = 0x2
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0xc
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT buttons of 0x2f
+Function area offset: 0x58
+Selectors [43]:
+  [#0] = 0x2f
+  [#1] = 0x2f
+  [#2] = 0x0
+  [#3] = {'val': 'buttons', 'id': 'string_21'}
+  [#4] = 0x91
+  [#5] = 0x44
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'buttons', 'id': 'string_21'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x6789
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Through the cabin window you can see an array of displays and controls inside the pod.', 'id': 'string_22'}
+  [#22] = 0x2
+  [#23] = 0x70
+  [#24] = 0x5
+  [#25] = 0x1
+  [#26] = 0x0
+  [#27] = 0x0
+  [#28] = 0x0
+  [#29] = 0x0
+  [#30] = 0x0
+  [#31] = 0x0
+  [#32] = 0x0
+  [#33] = 0x0
+  [#34] = 0x0
+  [#35] = 0x0
+  [#36] = 0x0
+  [#37] = 0x0
+  [#38] = 0x8
+  [#39] = 0x0
+  [#40] = 0x0
+  [#41] = 0x0
+  [#42] = 0x2
+Overriden functions: 0
+
+.OBJECT bayDoorFeat of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'bayDoorFeat', 'id': 'string_25'}
+  [#4] = 0x35
+  [#5] = 0x32
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0xffff
+  [#10] = 0x0
+  [#11] = 0x66
+  [#12] = 0x6a
+  [#13] = {'val': 'bay door', 'id': 'string_23'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x10
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Beyond the yawning doors lies the serenity of deep space.', 'id': 'string_24'}
+Overriden functions: 0
+
+.OBJECT spaceFeat of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'spaceFeat', 'id': 'string_27'}
+  [#4] = 0x35
+  [#5] = 0x32
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0xffff
+  [#10] = 0x0
+  [#11] = 0x66
+  [#12] = 0x6a
+  [#13] = {'val': 'space', 'id': 'string_26'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x20
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'Beyond the yawning doors lies the serenity of deep space.', 'id': 'string_24'}
+Overriden functions: 0
+
+.CODE
+monitorFeat::266:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		lofsa	tv
+		send	0x6
+		ret	
+
+
+.OBJECT monitorFeat of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'monitorFeat', 'id': 'string_30'}
+  [#4] = 0xc2
+  [#5] = 0x6f
+  [#6] = 0x5a
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0xa4
+  [#11] = 0x2b
+  [#12] = 0xe1
+  [#13] = {'val': 'monitor', 'id': 'string_28'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x40
+  [#17] = 0x0
+  [#18] = 0x0
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': "There's that butt-ugly green guy again. Of all the systems destroyed thus far, you wish the teleview would have been one of them.", 'id': 'string_29'}
+Overriden functions: 1
+  [0x10a]  = monitorFeat::266   	 ; @0xad6
+
+.CODE
+podFeat::107:
+		pushi	0x6b
+		push0	
+		rest	0x1
+		super	0x2c, 0x4
+		pushi	0x0117
+		push2	
+		pushi	0x03
+		push2	
+		self	0x8
+		ret	
+
+podFeat::266:
+		lsp	0x1
+		dup	
+		ldi	0x03
+		eq?	
+		bnt	code_2898
+		pushi	0x008c
+		push1	
+		lofsa	enterPod
+		push	
+		lag	0x2
+		send	0x6
+		jmp	code_2909
+code_2898:
+		pushi	0x010a
+		push1	
+		lsp	0x1
+		rest	0x2
+		super	0x2c, 0x6
+code_2909:
+		toss	
+		ret	
+
+		bnot	
+
+.OBJECT podFeat of 0x2c
+Function area offset: 0x2e
+Selectors [22]:
+  [#0] = 0x2c
+  [#1] = 0x2c
+  [#2] = 0x0
+  [#3] = {'val': 'podFeat', 'id': 'string_33'}
+  [#4] = 0xe0
+  [#5] = 0x61
+  [#6] = 0x0
+  [#7] = 0x0
+  [#8] = 0x0
+  [#9] = 0x0
+  [#10] = 0x0
+  [#11] = 0x0
+  [#12] = 0x0
+  [#13] = {'val': 'pod', 'id': 'string_31'}
+  [#14] = 0x2d
+  [#15] = 0x0
+  [#16] = 0x8
+  [#17] = 0xac
+  [#18] = 0x77
+  [#19] = 0x0
+  [#20] = 0x6789
+  [#21] = {'val': 'A giant, silver, pill-shaped pod sits poised to fire, much like a bullet in the chamber of an ancient pistol.', 'id': 'string_32'}
+Overriden functions: 2
+  [0x6b]  = podFeat::107   	 ; @0xb28
+  [0x10a]  = podFeat::266   	 ; @0xb3a
+
+.STRINGS
+string_0: "This is the cavernous Vehicle Bay. An escape pod rests on launch rails at the end of the platform. Bay doors at the end of the rails allow access to the emptiness beyond."
+string_1: "rm12"		 ; special
+string_2: "tvScript"		 ; special
+string_3: "fallingScript"		 ; special
+string_4: "enterPod"		 ; special
+string_5: "exitPod"		 ; special
+string_6: "explode"		 ; special
+string_7: "bay doors"
+string_8: "The massive bay doors are tightly sealed."
+string_9: "open wide leaving nothing but millions of kilometers of empty space between you and the very stars themselves"
+string_10: "tightly sealed"
+string_11: "bayDoors"		 ; special
+string_12: "pod door"
+string_13: "This is one of the Arcada's escape pods. You vaguely remember receiving some orientation on these when you joined the crew. Unfortunately, you were deep into research on sleeping with your eyes open and, hence, don't remember much."
+string_14: "podDoor"		 ; special
+string_15: "tv"		 ; special
+string_16: "motors"		 ; special
+string_17: "These powerful Pyron Weezpump drives propel the pod."
+string_18: "star"
+string_19: "Even though we all know that the empty atmosphere of space would not permit this twinkling effect, you have to admit it looks nice."
+string_20: "stars"		 ; special
+string_21: "buttons"		 ; special
+string_22: "Through the cabin window you can see an array of displays and controls inside the pod."
+string_23: "bay door"
+string_24: "Beyond the yawning doors lies the serenity of deep space."
+string_25: "bayDoorFeat"		 ; special
+string_26: "space"
+string_27: "spaceFeat"		 ; special
+string_28: "monitor"
+string_29: "There's that butt-ugly green guy again. Of all the systems destroyed thus far, you wish the teleview would have been one of them."
+string_30: "monitorFeat"		 ; special
+string_31: "pod"
+string_32: "A giant, silver, pill-shaped pod sits poised to fire, much like a bullet in the chamber of an ancient pistol."
+string_33: "podFeat"		 ; special
+string_unused_34: ""
+string_unused_35: ""
+
+
+.PRELOAD_TEXT
+
+.RELOCATION
+num of pointers: 66
+0x56, 0x62, 0x6e, 0x7a, 0x8c, 0x9e, 0xae, 0xc0, 0xcd, 0xd1, 0x13e, 0x142, 0x15b, 0x15f, 0x176, 0x188, 0x191, 0x1eb, 0x23f, 0x25d, 0x292, 0x29e, 0x2e3, 0x30c, 0x33e, 0x444, 0x482, 0x4d2, 0x51a, 0x582, 0x628, 0x70a, 0x74a, 0x750, 0x78c, 0x7a0, 0x7b0, 0x7fe, 0x828, 0x83c, 0x84c, 0x8d0, 0x8e4, 0x93a, 0x94e, 0x95e, 0x9a0, 0x9b4, 0x9c4, 0xa06, 0xa1a, 0xa2a, 0xa6c, 0xa80, 0xa90, 0xaa8, 0xabc, 0xacc, 0xadf, 0xaf6, 0xb0a, 0xb1a, 0xb48, 0xb72, 0xb86, 0xb96
