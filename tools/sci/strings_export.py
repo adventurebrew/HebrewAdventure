@@ -1,12 +1,9 @@
-# TODO check spaces in 36.sca
-
 import argparse
 import re
 import os
 import csv
 from pathlib import Path
 
-from assembler.misc import de_escape_string
 from config import scripts_strings_csv_filename, scripts_strings_keys
 
 
@@ -15,7 +12,7 @@ def strings_export(asm_path, csvdir):
         print(f"ERROR: strings_export: {asm_path} doesn't exist")
 
     with open(os.path.join(csvdir, scripts_strings_csv_filename), 'w', newline='', encoding='UTF-8') as output_file:
-        dict_writer = csv.DictWriter(output_file, fieldnames=scripts_strings_keys.values())
+        dict_writer = csv.DictWriter(output_file, fieldnames=scripts_strings_keys.values(), quoting=csv.QUOTE_ALL)
         dict_writer.writeheader()
 
         for filename in asm_path.glob('*.sca'):
@@ -32,7 +29,7 @@ def strings_export(asm_path, csvdir):
                     dict_writer.writerow({
                         scripts_strings_keys['filename']: filename.stem,
                         scripts_strings_keys['idx']: s[1],
-                        scripts_strings_keys['original']: de_escape_string(s[2])
+                        scripts_strings_keys['original']: s[2].replace(r'\"', '"')
                     })
 
 

@@ -1,26 +1,29 @@
 # import scripts strings from csv
 
-# TODO clean warnings failed to replace
-
 import argparse
 import os
 import csv
-import re
 import shutil
 from pathlib import Path
 
 import config
-from assembler.misc import escape_string
 
 ENCODING = 'UTF-8'
 
 
-def check_replace(filename, s, index, s_from, s_to):
-    s_new = re.sub(rf'(^{index}:) "({escape_string(s_from)})"(.*)', fr'\1 "{escape_string(s_to)}"\3', s,
-                   flags=re.MULTILINE)
-    if s_new == s:
-        print(f"WARNING: failed to replace '{s_from}' to '{s_to}' ({index} of {filename})")
-    return s_new
+def escape_string(s):
+    return s.replace('"', '\\"')
+
+
+def check_replace(filename, lines, index, s_from, s_to):
+    matches = [(i, l) for i, l in enumerate(lines) if l.startswith(f'{index}: "{escape_string(s_from)}"')]
+    if len(matches) != 1:
+        print(f"WARNING: ({index} of {filename}) failed to replace '{s_from}' to '{s_to}' ")
+        return lines
+    else:
+        i, l = matches[0]
+        lines[i] = l.replace(escape_string(s_from), escape_string(s_to))
+        return lines
 
 
 def strings_import(csvdir):
@@ -41,7 +44,7 @@ def strings_import(csvdir):
             continue
 
         filename = f"{int(float(file_index))}.sca"
-        asm = (orig_asm_path / filename).read_text(encoding=ENCODING)
+        asm = (orig_asm_path / filename).read_text(encoding=ENCODING).splitlines()
 
         for entry in entries:
             if entry[config.scripts_strings_keys['translation']]:
@@ -50,7 +53,7 @@ def strings_import(csvdir):
                                     entry[config.scripts_strings_keys['original']],
                                     entry[config.scripts_strings_keys['translation']])
 
-        (modified_asm_path / filename).write_text(asm, encoding=ENCODING)
+        (modified_asm_path / filename).write_text('\n'.join(asm), encoding=ENCODING)
 
 
 if __name__ == "__main__":
