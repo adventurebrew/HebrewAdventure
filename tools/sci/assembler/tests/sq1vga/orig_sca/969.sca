@@ -7,22 +7,22 @@ Rev::60:
 		link	0x01
 		pushi	0x00d6
 		push0	
-		self	0x4
-		sat	0x0
+		self	0x04
+		sat	0x00
 		push	
 		ldi	0x00
 		lt?	
 		bnt	code_30
 		pushi	0x00d7
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_39
 code_30:
 		pushi	0x07
 		push1	
-		lst	0x0
-		pToa	0x8
-		send	0x6
+		lst	0x00
+		pToa	0x08
+		send	0x06
 code_39:
 		ret	
 
@@ -31,11 +31,11 @@ Rev::215:
 		push1	
 		pushi	0x00db
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		ret	
 
 		bnot	

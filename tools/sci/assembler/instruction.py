@@ -60,7 +60,6 @@ class Instruction:
                 # see comment at opcodes.py
                 self.operands = int.from_bytes(operands, byteorder='little', signed=self.opcode.is_signed())
             elif self.opcode in [SciOpcodes.op_callk, SciOpcodes.op_callb, SciOpcodes.op_super]:
-                # TODO is 'super' important now?
                 # TODO make prettier
                 self.operands = ', '.join([hex(o) for o in operands])
             elif self.opcode == SciOpcodes.op_calle:
@@ -73,17 +72,23 @@ class Instruction:
                                      int.from_bytes(operands[2:4], byteorder='little'),
                                      operands[4]]
                     self.operands_width = [2, 2, 1]
-            elif self.opcode in [SciOpcodes.op_lea, SciOpcodes.op_sat, SciOpcodes.op_lat, SciOpcodes.op_lst,
-                                 SciOpcodes.op_plusat, SciOpcodes.op_lsl, SciOpcodes.op_sal, SciOpcodes.op_lal,
-                                 SciOpcodes.op_lati, SciOpcodes.op_lsti]:
-                # TODO understand those
-                self.operands = ', '.join([hex(o) for o in operands])
+            elif self.opcode == SciOpcodes.op_lea:
+                if len(operands) == 2:
+                    self.operands = [o for o in operands]  # byte -> list of int
+                    self.operands_width = [1, 1]
+                else:
+                    assert len(operands) == 4
+                    self.operands = [int.from_bytes(operands[0:2], byteorder='little'),
+                                     int.from_bytes(operands[2:4], byteorder='little'),]
+                    self.operands_width = [2, 2]
+            elif self.opcode.num_of_operands() == 0:
+                self.operands = ""
+            elif self.opcode >= SciOpcodes.op_lag:
+                self.operands = int.from_bytes(operands[0:2], byteorder='little')
+            elif self.opcode.num_of_operands() == 1:
+                self.operands = operands[0]
             else:
-                self.operands = ', '.join([hex(o) for o in operands])
-                if len(operands) >= 2:
-                    self.operands = int.from_bytes(operands, byteorder='little', signed=self.opcode.is_signed())
-                    print(f"Warning: check support for {self.str_dump()}")  # TODO
-                    # raise NotImplementedError
+                raise NotImplementedError
         else:
             raise ValueError
 

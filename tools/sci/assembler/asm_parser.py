@@ -147,7 +147,13 @@ def p_code_entry_opcode(p):
                   | OPCODE HEX
                   | OPCODE
                   """
-    p[0] = [SciOpcodes(p[1])] + [e for e in p[2:] if e != ',']
+    opcode = SciOpcodes(p[1])
+    operands = [e for e in p[2:] if e != ',']
+    if len(operands) != opcode.num_of_operands():
+        print(
+            f"Error: line {p.lexer.lineno} {p[1]} expects {opcode.num_of_operands()} operands, but got {len(operands)}")
+        raise SyntaxError
+    p[0] = [opcode] + operands
 
 
 def p_code_entry_opcode_label(p):
@@ -157,6 +163,7 @@ def p_code_entry_opcode_label(p):
                   | OPCODE_LABEL HEX
                   | OPCODE_LABEL NUMBER
                   """
+    # TODO replace this with exact num of operands matching and error report (like p_code_entry_opcode)
     try:
         p[0] = (SciOpcodes(p[1]), p[2], p[4])
     except IndexError:
@@ -473,7 +480,7 @@ OBJECT SpiderList of 0x3
 ego::266:
 		lsp	0x1
 		dup	
-		ldi    
+		ldi    0x3
 		lofsa	Gadget
 		push	
 		lofsa	Survival_Kit

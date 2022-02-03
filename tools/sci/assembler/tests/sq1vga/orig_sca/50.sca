@@ -18,14 +18,14 @@ rm50::107:
 		push0	
 		pushi	0x69
 		push0	
-		lag	0x0
+		lag	0x00
 		send	0x16
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	hatch
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
@@ -44,16 +44,16 @@ rm50::107:
 		pushi	0x6b
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	flames
-		send	0x4
+		send	0x04
 		pushi	0x008c
 		push1	
 		lofsa	shipArrives
 		push	
-		self	0x6
+		self	0x06
 		ret	
 
 		bnot	
@@ -90,8 +90,8 @@ Overriden functions: 1
 
 .CODE
 floatAway::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -128,7 +128,7 @@ floatAway::138:
 		pushi	0xe7
 		pushi	0x1b
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x3a
 		jmp	code_351
 code_249:
@@ -140,16 +140,16 @@ code_249:
 		push2	
 		pushi	0x10
 		pushi	0x8009
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		pushi	0x6c
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	hatch
-		send	0x4
+		send	0x04
 		ldi	0x01
 		aTop	0x12
 		jmp	code_351
@@ -168,7 +168,7 @@ code_292:
 		push	
 		pushi	0xd8
 		pushi	0x32
-		lag	0x0
+		lag	0x00
 		send	0x12
 		ldi	0x05
 		aTop	0x12
@@ -216,8 +216,8 @@ Overriden functions: 1
 
 .CODE
 shipArrives::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -254,7 +254,7 @@ shipArrives::138:
 		class	0x5e
 		push	
 		lofsa	flames
-		send	0xc
+		send	0x0c
 		jmp	code_1225
 code_490:
 		dup	
@@ -266,7 +266,7 @@ code_490:
 		class	0x1b
 		push	
 		lofsa	flames
-		send	0x6
+		send	0x06
 		pushi	0x0132
 		push2	
 		pushi	0x04
@@ -289,11 +289,11 @@ code_539:
 		pushi	0x009b
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	flames
-		send	0x4
+		send	0x04
 		pushi	0x0132
 		push2	
 		push2	
@@ -317,7 +317,7 @@ code_589:
 		push1	
 		push1	
 		lofsa	ship
-		send	0x6
+		send	0x06
 		pushi	0x00c0
 		push0	
 		pushi	0x0094
@@ -326,7 +326,7 @@ code_589:
 		push	
 		pushSelf	
 		lofsa	hatch
-		send	0xc
+		send	0x0c
 		jmp	code_1225
 code_626:
 		dup	
@@ -336,8 +336,8 @@ code_626:
 		pushi	0x00d3
 		push1	
 		pushi	0x0b
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_657
 		push2	
 		pushi	0x32
@@ -368,8 +368,8 @@ code_672:
 		pushi	0x00d3
 		push1	
 		pushi	0x0b
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_710
 		ldi	0x00
 		jmp	code_712
@@ -390,7 +390,7 @@ code_712:
 		pushi	0x03
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x28
 		jmp	code_1225
 code_742:
@@ -401,8 +401,8 @@ code_742:
 		pushi	0x00d3
 		push1	
 		pushi	0x0b
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_769
 		ldi	0x1e
 		aTop	0x10
@@ -412,8 +412,8 @@ code_769:
 		push1	
 		lofsa	floatAway
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_1225
 code_784:
 		dup	
@@ -455,7 +455,7 @@ code_784:
 		push2	
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x26
 		jmp	code_1225
 code_857:
@@ -463,32 +463,32 @@ code_857:
 		ldi	0x08
 		eq?	
 		bnt	code_918
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		add	
-		sal	0x0
-		lsli	0x1
+		sal	0x00
+		lsli	0x01
 		ldi	0xff
 		ne?	
 		bnt	code_911
-		dpToa	0xa
+		dpToa	0x0a
 		pushi	0x07
 		push1	
-		lal	0x0
-		lsli	0x1
+		lal	0x00
+		lsli	0x01
 		pushi	0x04
 		push1	
 		push	
 		ldi	0x01
 		add	
-		lsli	0x1
+		lsli	0x01
 		pushi	0x03
 		push1	
-		lsl	0x0
+		lsl	0x00
 		ldi	0x02
 		add	
-		lsli	0x1
-		lag	0x0
+		lsli	0x01
+		lag	0x00
 		send	0x12
 code_911:
 		ldi	0x02
@@ -503,15 +503,15 @@ code_918:
 		push1	
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x011e
 		push1	
 		pushi	0x07
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x0119
 		pushi	0x04
@@ -520,7 +520,7 @@ code_918:
 		pushi	0x00cd
 		pushi	0x67
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		jmp	code_1225
 code_970:
@@ -530,19 +530,19 @@ code_970:
 		bnt	code_1008
 		pushi	0x69
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push2	
 		class	0x1b
 		push	
 		pushSelf	
 		lofsa	hatch
-		send	0x8
+		send	0x08
 		jmp	code_1225
 code_1008:
 		dup	
@@ -552,12 +552,12 @@ code_1008:
 		pushi	0x6c
 		push0	
 		lofsa	hatch
-		send	0x4
+		send	0x04
 		pushi	0x009b
 		push1	
 		push0	
 		lag	0x9a
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push0	
 		pushi	0x00d9
@@ -632,15 +632,15 @@ code_1154:
 		pushi	0x6c
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		pushi	0x009a
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	flames
-		send	0x4
+		send	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1225
@@ -655,13 +655,13 @@ code_1192:
 		pushi	0x011e
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		pushi	0x0177
 		push1	
 		pushi	0x33
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_1225:
 		toss	
 		ret	
@@ -888,16 +888,16 @@ flames::60:
 		pushi	0x04
 		push0	
 		lofsa	ship
-		send	0x4
-		aTop	0x8
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		lofsa	ship
-		send	0x4
-		aTop	0xa
+		send	0x04
+		aTop	0x0a
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		ret	
 

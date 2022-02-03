@@ -509,7 +509,7 @@ def disasm_all(srcdir, asmdir):
     asm_path = Path(asmdir)
     asm_path.mkdir(exist_ok=True, parents=True)
     for scr in scr_files:
-        if scr.name.lower() != 'install.scr':  # and scr.name == '45.scr':  # TODO
+        if scr.name.lower() != 'install.scr':
             print("--------")
             print(scr)
             result = disasm(scr)

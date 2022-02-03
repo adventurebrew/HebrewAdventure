@@ -31,14 +31,14 @@ code_69:
 		pushi	0x009d
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
 		pushi	0x6b
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x36
 		callb	0x6, 0x2
@@ -47,14 +47,14 @@ code_69:
 		push1	
 		lofsa	blowUp
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_123
 code_113:
 		pushi	0x008c
 		push1	
 		lofsa	flyOffDeltaur
 		push	
-		self	0x6
+		self	0x06
 code_123:
 		ret	
 
@@ -91,8 +91,8 @@ Overriden functions: 1
 
 .CODE
 flyOffDeltaur::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -139,16 +139,16 @@ code_255:
 		push1	
 		lofsa	blowUp
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_298
 code_286:
 		pushi	0x008c
 		push1	
 		lofsa	endGame
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_298:
 		toss	
 		ret	
@@ -179,8 +179,8 @@ Overriden functions: 1
 
 .CODE
 endGame::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -202,8 +202,8 @@ code_377:
 		push1	
 		lofsa	flyingPod
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_404:
 		toss	
 		ret	
@@ -236,9 +236,9 @@ Overriden functions: 1
 blowUp::60:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
-		lsl	0x0
+		lsl	0x00
 		ldi	0x01
 		eq?	
 		bnt	code_495
@@ -252,8 +252,8 @@ code_495:
 		ret	
 
 blowUp::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -264,25 +264,25 @@ blowUp::138:
 		pushi	0x69
 		push0	
 		lofsa	head
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	tail
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	side1
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	side2
-		send	0x8
+		send	0x08
 		ldi	0x04
 		aTop	0x10
 		jmp	code_984
@@ -314,7 +314,7 @@ code_559:
 		lofsa	explosion
 		send	0x10
 		ldi	0x01
-		sal	0x0
+		sal	0x00
 		ldi	0x04
 		aTop	0x10
 		jmp	code_984
@@ -326,8 +326,8 @@ code_615:
 		pushi	0x018b
 		push1	
 		pushi	0x0f
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x0325
@@ -354,7 +354,7 @@ code_656:
 		push1	
 		pushSelf	
 		lofsa	explosion
-		send	0xc
+		send	0x0c
 		jmp	code_984
 code_683:
 		dup	
@@ -364,14 +364,14 @@ code_683:
 		pushi	0x6c
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
 		lofsa	explosion
-		send	0x8
+		send	0x08
 		pushi	0x00c0
 		push0	
 		pushi	0x38
@@ -477,7 +477,7 @@ code_898:
 		pushi	0x69
 		push0	
 		lofsa	explosion
-		send	0x4
+		send	0x04
 		ldi	0x4b
 		aTop	0x10
 		jmp	code_984
@@ -487,7 +487,7 @@ code_920:
 		eq?	
 		bnt	code_984
 		ldi	0x00
-		sal	0x0
+		sal	0x00
 		push1	
 		pushi	0x33
 		callb	0x6, 0x2
@@ -514,7 +514,7 @@ code_974:
 		push1	
 		lofsa	flyingPod
 		push	
-		self	0x6
+		self	0x06
 code_984:
 		toss	
 		ret	
@@ -546,8 +546,8 @@ Overriden functions: 2
 
 .CODE
 flyingPod::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -556,8 +556,8 @@ flyingPod::138:
 		pushi	0x018a
 		push1	
 		pushi	0x11
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x02bd
@@ -574,7 +574,7 @@ flyingPod::138:
 		pushi	0x6c
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x35
 		callb	0x6, 0x2
@@ -582,23 +582,23 @@ flyingPod::138:
 		pushi	0x6c
 		push0	
 		lofsa	explosion
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	head
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	tail
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	side1
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	side2
-		send	0x4
+		send	0x04
 code_1149:
 		push2	
 		pushi	0x0080
@@ -707,7 +707,7 @@ code_1202:
 		class	0x17
 		push	
 		lofsa	exhaust
-		send	0xa
+		send	0x0a
 		jmp	code_1587
 code_1350:
 		dup	
@@ -717,18 +717,18 @@ code_1350:
 		pushi	0x04
 		push0	
 		lofsa	planet
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x00fd
 		gt?	
 		bnt	code_1439
-		dpToa	0xa
+		dpToa	0x0a
 		pushi	0x04
 		push1	
 		pushi	0x04
 		push0	
 		lofsa	planet
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
@@ -740,25 +740,25 @@ code_1350:
 		push0	
 		lofsa	planet
 		send	0x10
-		-al	0x1
+		-al	0x01
 		push	
 		ldi	0x00
 		eq?	
 		bnt	code_1439
 		ldi	0x03
-		sal	0x1
+		sal	0x01
 		pushi	0x04
 		push1	
 		pushi	0x04
 		push0	
 		lofsa	escapePod
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		add	
 		push	
 		lofsa	escapePod
-		send	0x6
+		send	0x06
 code_1439:
 		ldi	0x01
 		aTop	0x10
@@ -777,8 +777,8 @@ code_1446:
 		push1	
 		lofsa	destroyXenon
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_1587
 code_1478:
 		pushi	0x0119
@@ -789,7 +789,7 @@ code_1478:
 		pushi	0x4e
 		pushSelf	
 		lofsa	escapePod
-		send	0xc
+		send	0x0c
 		jmp	code_1587
 code_1500:
 		dup	
@@ -799,7 +799,7 @@ code_1500:
 		pushi	0x6c
 		push0	
 		lofsa	exhaust
-		send	0x4
+		send	0x04
 		ldi	0x3c
 		aTop	0x16
 		jmp	code_1587
@@ -836,8 +836,8 @@ code_1570:
 		pushi	0x0177
 		push1	
 		pushi	0x44
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_1587:
 		toss	
 		ret	
@@ -869,8 +869,8 @@ Overriden functions: 1
 
 .CODE
 destroyXenon::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -879,16 +879,16 @@ destroyXenon::138:
 		pushi	0x6c
 		push0	
 		lofsa	exhaust
-		send	0x4
+		send	0x04
 		pushi	0x0119
 		push1	
 		push0	
 		lofsa	escapePod
-		send	0x6
+		send	0x06
 		pushi	0x011b
 		push0	
 		lofsa	planet
-		send	0x4
+		send	0x04
 		ldi	0x01
 		aTop	0x10
 		jmp	code_1966
@@ -925,7 +925,7 @@ code_1730:
 		pushi	0x00f5
 		push1	
 		callk	0x6c, 0xc
-		sal	0x2
+		sal	0x02
 		pushi	0x09
 		pushi	0x04
 		pushi	0x4c
@@ -987,7 +987,7 @@ code_1853:
 		bnt	code_1923
 		push2	
 		pushi	0x08
-		lsl	0x2
+		lsl	0x02
 		callk	0x6c, 0x4
 		pushi	0x06
 		pushi	0x0c
@@ -1016,7 +1016,7 @@ code_1853:
 		push	
 		pushSelf	
 		lofsa	planet
-		send	0xe
+		send	0x0e
 		jmp	code_1966
 code_1923:
 		dup	
@@ -1026,7 +1026,7 @@ code_1923:
 		pushi	0x6c
 		push0	
 		lofsa	planet
-		send	0x4
+		send	0x04
 		ldi	0x04
 		aTop	0x12
 		jmp	code_1966
@@ -1666,7 +1666,7 @@ exhaust::60:
 		pushi	0x04
 		push0	
 		lofsa	escapePod
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x4f
 		sub	
@@ -1676,15 +1676,15 @@ exhaust::60:
 		pushi	0x03
 		push0	
 		lofsa	escapePod
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x1b
 		add	
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 

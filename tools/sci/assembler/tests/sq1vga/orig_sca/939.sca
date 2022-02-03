@@ -4,22 +4,22 @@ LOFSA_RELATIVE = False
 
 .CODE
 Osc::107:
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_28
-		lap	0x2
+		lap	0x02
 		aTop	0x12
-		lsp	0x0
+		lsp	0x00
 		ldi	0x03
 		ge?	
 		bnt	code_28
-		lap	0x3
-		aTop	0xa
+		lap	0x03
+		aTop	0x0a
 code_28:
 		pushi	0x6b
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x16, 0x6
 		ret	
 
@@ -27,33 +27,33 @@ Osc::60:
 		link	0x01
 		pushi	0x00d6
 		push0	
-		self	0x4
-		sat	0x0
+		self	0x04
+		sat	0x00
 		push	
 		pushi	0x00db
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		gt?	
 		bt	code_65
-		lst	0x0
+		lst	0x00
 		ldi	0x00
 		lt?	
 code_65:
 		bnt	code_82
-		pToa	0xc
+		pToa	0x0c
 		neg	
-		aTop	0xc
+		aTop	0x0c
 		pushi	0x00d7
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_91
 code_82:
 		pushi	0x07
 		push1	
-		lst	0x0
-		pToa	0x8
-		send	0x6
+		lst	0x00
+		pToa	0x08
+		send	0x06
 code_91:
 		ret	
 
@@ -64,10 +64,10 @@ Osc::215:
 		push1	
 		pushi	0x00d6
 		push0	
-		self	0x4
+		self	0x04
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		pTos	0x12
 		ldi	0x00
 		gt?	
@@ -79,7 +79,7 @@ code_124:
 		aTop	0x10
 		pushi	0x00d8
 		push0	
-		self	0x4
+		self	0x04
 code_134:
 		ret	
 

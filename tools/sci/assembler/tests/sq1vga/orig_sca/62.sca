@@ -10,7 +10,7 @@ rm62::107:
 		pushi	0x0187
 		push1	
 		pushi	0x02bf
-		self	0x6
+		self	0x06
 		pushi	0x03
 		pushi	0x0080
 		pushi	0x3e
@@ -29,7 +29,7 @@ rm62::107:
 		push0	
 		lag	0x20
 		send	0x12
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x22
 		eq?	
@@ -41,8 +41,8 @@ rm62::107:
 		push2	
 		pushi	0x0a
 		pushi	0x4b
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		ldi	0x01
 		sag	0xa6
 		ldi	0x03
@@ -60,8 +60,8 @@ code_99:
 		push2	
 		pushi	0x14
 		pushi	0x00f3
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		ldi	0x04
 		aTop	0x16
 		ldi	0x02
@@ -75,8 +75,8 @@ code_135:
 		push2	
 		pushi	0x62
 		pushi	0x7a
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		ldi	0x07
 		aTop	0x16
 		ldi	0x01
@@ -85,22 +85,22 @@ code_160:
 		toss	
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		pushi	0x59
 		push1	
 		pushi	0x28
 		lofsa	upperPoly1
-		send	0xc
+		send	0x0c
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x50
+		lea	0x02, 0x50
 		push	
 		pushi	0x59
 		push1	
 		pushi	0x17
 		lofsa	lowerPoly1
-		send	0xc
+		send	0x0c
 		lsg	0xa6
 		ldi	0x01
 		eq?	
@@ -109,14 +109,14 @@ code_160:
 		push1	
 		lofsa	upperPoly1
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_226
 code_216:
 		pushi	0x0174
 		push1	
 		lofsa	lowerPoly1
 		push	
-		self	0x6
+		self	0x06
 code_226:
 		pushi	0x0094
 		push1	
@@ -125,7 +125,7 @@ code_226:
 		pushi	0x6b
 		push0	
 		lofsa	powerUnit
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -134,13 +134,13 @@ code_226:
 		lofsa	e1Door
 		push	
 		class	0x7c
-		send	0x6
+		send	0x06
 		pushi	0x0244
 		push1	
 		lofsa	e2Door
 		push	
 		class	0x7c
-		send	0x6
+		send	0x06
 		pushi	0x05
 		push1	
 		pushi	0x00a2
@@ -217,7 +217,7 @@ code_226:
 		push0	
 		lofsa	e2Door
 		send	0x42
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		ldi	0x3f
 		eq?	
@@ -226,7 +226,7 @@ code_226:
 		push1	
 		lofsa	fromHallwayE
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_468
 code_436:
 		dup	
@@ -237,26 +237,26 @@ code_436:
 		push1	
 		lofsa	fromHallwayC
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_468
 code_456:
 		push0	
 		callb	0x3, 0x0
 		pushi	0x00c0
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 code_468:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		ret	
 
 rm62::60:
 		link	0x01
-		pToa	0x8
+		pToa	0x08
 		bnt	code_489
 		ldi	0x00
 		jmp	code_594
@@ -264,31 +264,31 @@ code_489:
 		pushi	0x021a
 		push0	
 		lofsa	e1Door
-		send	0x4
+		send	0x04
 		bnt	code_513
 		pushi	0x00b3
 		push0	
 		lofsa	e1Door
-		send	0x4
+		send	0x04
 		jmp	code_594
 code_513:
 		pushi	0x021a
 		push0	
 		lofsa	e2Door
-		send	0x4
+		send	0x04
 		bnt	code_537
 		pushi	0x00b3
 		push0	
 		lofsa	e2Door
-		send	0x4
+		send	0x04
 		jmp	code_594
 code_537:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
-		sat	0x0
+		lag	0x00
+		send	0x06
+		sat	0x00
 		push	
 		ldi	0x04
 		and	
@@ -297,10 +297,10 @@ code_537:
 		push1	
 		lofsa	toHallwayC
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_594
 code_568:
-		lst	0x0
+		lst	0x00
 		ldi	0x02
 		and	
 		bnt	code_594
@@ -312,7 +312,7 @@ code_568:
 		push1	
 		lofsa	toHallwayE
 		push	
-		self	0x6
+		self	0x06
 code_594:
 		pushi	0x3c
 		push0	
@@ -355,8 +355,8 @@ Overriden functions: 2
 
 .CODE
 fromHallwayE::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -374,7 +374,7 @@ fromHallwayE::138:
 		pushi	0x0082
 		pushi	0x67
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_745
 code_720:
@@ -385,13 +385,13 @@ code_720:
 		pushi	0x011f
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_745:
 		toss	
 		ret	
@@ -423,8 +423,8 @@ Overriden functions: 1
 
 .CODE
 fromHallwayC::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -445,7 +445,7 @@ fromHallwayC::138:
 		pushi	0x4e
 		pushi	0x00b3
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		jmp	code_878
 code_853:
@@ -456,13 +456,13 @@ code_853:
 		pushi	0x011f
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_878:
 		toss	
 		ret	
@@ -493,8 +493,8 @@ Overriden functions: 1
 
 .CODE
 toHallwayC::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -512,7 +512,7 @@ toHallwayC::138:
 		pushi	0xfa
 		pushi	0x00ed
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_997
 code_980:
@@ -523,8 +523,8 @@ code_980:
 		pushi	0x0177
 		push1	
 		pushi	0x3d
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_997:
 		toss	
 		ret	
@@ -556,8 +556,8 @@ Overriden functions: 1
 
 .CODE
 toHallwayE::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -568,13 +568,13 @@ toHallwayE::138:
 		pushi	0x011f
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x0177
 		push1	
 		pushi	0x3f
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_1093:
 		toss	
 		ret	
@@ -612,18 +612,18 @@ goDown::60:
 		push	
 		pushi	0x00e8
 		push0	
-		lag	0x2
-		send	0x4
-		send	0x6
+		lag	0x02
+		send	0x04
+		send	0x06
 		pushi	0x73
 		push1	
 		lofsa	lowerPoly1
 		push	
 		pushi	0x00e8
 		push0	
-		lag	0x2
-		send	0x4
-		send	0x6
+		lag	0x02
+		send	0x04
+		send	0x06
 		ldi	0x02
 		sag	0xa6
 		ret	
@@ -648,18 +648,18 @@ goUp::60:
 		push	
 		pushi	0x00e8
 		push0	
-		lag	0x2
-		send	0x4
-		send	0x6
+		lag	0x02
+		send	0x04
+		send	0x06
 		pushi	0x73
 		push1	
 		lofsa	upperPoly1
 		push	
 		pushi	0x00e8
 		push0	
-		lag	0x2
-		send	0x4
-		send	0x6
+		lag	0x02
+		send	0x04
+		send	0x06
 		ldi	0x01
 		sag	0xa6
 		ret	
@@ -690,8 +690,8 @@ e1Door::266:
 code_1317:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x73, 0x6
 code_1328:
 		ret	
@@ -782,8 +782,8 @@ e2Door::266:
 code_1501:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x73, 0x6
 code_1512:
 		ret	
@@ -868,8 +868,8 @@ powerUnit::266:
 		bnt	code_1688
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 		jmp	code_1695
 code_1688:
@@ -983,7 +983,7 @@ Overriden functions: 0
 
 .CODE
 portWindow::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x0c
 		eq?	
@@ -1043,8 +1043,8 @@ code_2021:
 code_2040:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x7b, 0x6
 code_2051:
 		toss	
@@ -1083,7 +1083,7 @@ Overriden functions: 1
 
 .CODE
 lights::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x0c
 		eq?	
@@ -1126,8 +1126,8 @@ code_2183:
 code_2202:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x7b, 0x6
 code_2213:
 		toss	

@@ -73,7 +73,7 @@ speedTest::107:
 		push	
 		push1	
 		callk	0x74, 0x6
-		sal	0x2
+		sal	0x02
 		pushi	0x04
 		pushi	0x05
 		lsg	0x1b
@@ -82,7 +82,7 @@ speedTest::107:
 		callk	0x74, 0x8
 		push2	
 		push1	
-		lsl	0x2
+		lsl	0x02
 		callk	0x74, 0x4
 		pushi	0x6b
 		push0	
@@ -90,8 +90,8 @@ speedTest::107:
 		pushi	0x74
 		push1	
 		pushi	0x009a
-		lag	0x8
-		send	0x6
+		lag	0x08
+		send	0x06
 code_188:
 		push0	
 		callk	0x42, 0x0
@@ -133,9 +133,9 @@ code_203:
 		lofsa	fred
 		send	0x36
 		ldi	0x00
-		sag	0x3
+		sag	0x03
 		ldi	0x00
-		sal	0x1
+		sal	0x01
 		push2	
 		lag	0x69
 		le?	
@@ -151,7 +151,7 @@ code_279:
 code_288:
 		ldi	0x32
 code_290:
-		sal	0x4
+		sal	0x04
 		push2	
 		lag	0x69
 		le?	
@@ -167,14 +167,14 @@ code_303:
 code_312:
 		ldi	0x1e
 code_314:
-		sal	0x3
+		sal	0x03
 		ret	
 
 speedTest::60:
 		pushi	0x3c
 		push0	
 		super	0x43, 0x4
-		+al	0x1
+		+al	0x01
 		push	
 		ldi	0x01
 		eq?	
@@ -183,20 +183,20 @@ speedTest::60:
 		push0	
 		callk	0x42, 0x0
 		add	
-		sal	0x0
+		sal	0x00
 code_341:
-		lsl	0x0
+		lsl	0x00
 		push0	
 		callk	0x42, 0x0
 		ult?	
 		bnt	code_433
 		pushi	0x0088
 		push0	
-		self	0x4
+		self	0x04
 		not	
 		bnt	code_433
-		lsl	0x1
-		lal	0x3
+		lsl	0x01
+		lal	0x03
 		lt?	
 		bnt	code_385
 		ldi	0x00
@@ -204,12 +204,12 @@ code_341:
 		pushi	0x0123
 		push1	
 		push1	
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 		jmp	code_423
 code_385:
-		lsl	0x1
-		lal	0x4
+		lsl	0x01
+		lal	0x04
 		lt?	
 		bnt	code_409
 		ldi	0x01
@@ -217,8 +217,8 @@ code_385:
 		pushi	0x0123
 		push1	
 		push2	
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 		jmp	code_423
 code_409:
 		ldi	0x02
@@ -226,14 +226,14 @@ code_409:
 		pushi	0x0123
 		push1	
 		pushi	0x03
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 code_423:
 		pushi	0x008c
 		push1	
 		lofsa	speedScript
 		push	
-		self	0x6
+		self	0x06
 code_433:
 		ret	
 
@@ -279,8 +279,8 @@ Overriden functions: 3
 
 .CODE
 speedScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -295,7 +295,7 @@ code_539:
 		eq?	
 		bnt	code_557
 		ldi	0x01
-		sag	0x3
+		sag	0x03
 		ldi	0x01
 		aTop	0x10
 		jmp	code_574
@@ -307,8 +307,8 @@ code_557:
 		pushi	0x0177
 		push1	
 		lsg	0x6b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_574:
 		toss	
 		ret	

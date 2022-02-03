@@ -137,6 +137,7 @@ if __name__ == '__main__':
     
     .CODE
 code_6420:
+		sat	0x5, 0x4
 		pushi	0x6b
 		push1	
 		lea	0x2

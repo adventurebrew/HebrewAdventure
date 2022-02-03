@@ -16,7 +16,7 @@ rm9::107:
 		callk	0x0, 0xa
 		ldi	0x02
 		sag	0xa6
-		lsg	0xc
+		lsg	0x0c
 		pToa	0x22
 		eq?	
 		bnt	code_49
@@ -33,7 +33,7 @@ code_51:
 		pushi	0x6b
 		push0	
 		lofsa	star
-		send	0xa
+		send	0x0a
 		lsg	0xac
 		ldi	0x1e
 		gt?	
@@ -41,21 +41,21 @@ code_51:
 		pushi	0x6b
 		push0	
 		lofsa	tv1
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	tv2
-		send	0x4
+		send	0x04
 code_92:
 		pushi	0x0123
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		push	
 		pushi	0x0123
 		push0	
 		lofsa	tv1
-		send	0x4
+		send	0x04
 		ge?	
 		bnt	code_127
 		pushi	0x008c
@@ -63,7 +63,7 @@ code_92:
 		lofsa	tv1Script
 		push	
 		lofsa	tv1
-		send	0x6
+		send	0x06
 code_127:
 		pushi	0x0174
 		pushi	0x03
@@ -109,7 +109,7 @@ code_127:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x4e
 		push	
 		pushi	0x22
@@ -130,7 +130,7 @@ code_127:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x1e
 		push	
 		pushi	0x22
@@ -151,10 +151,10 @@ code_127:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x1e
 		push	
-		self	0xa
+		self	0x0a
 		pushi	0x0230
 		push1	
 		push1	
@@ -196,11 +196,11 @@ code_127:
 		pushi	0x0187
 		push1	
 		pushi	0x02bc
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -223,7 +223,7 @@ code_127:
 		pushi	0x6b
 		lag	0x20
 		send	0x16
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x0a
 		eq?	
 		bnt	code_536
@@ -238,15 +238,15 @@ code_127:
 		lofsa	fireUponEgo
 		push	
 		lofsa	sarien1
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		lofsa	sarien2
-		send	0x4
+		send	0x04
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x008c
 		ge?	
@@ -256,13 +256,13 @@ code_127:
 		pushi	0x008e
 		pushi	0x00a6
 		lofsa	sarien2
-		send	0x8
+		send	0x08
 		pushi	0x011a
 		push2	
 		pushi	0x67
 		pushi	0x00b5
 		lofsa	sarien1
-		send	0x8
+		send	0x08
 		jmp	code_540
 code_536:
 		push0	
@@ -311,7 +311,7 @@ fireUponEgo::60:
 		pushi	0x05
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x019b
 		eq?	
@@ -319,7 +319,7 @@ fireUponEgo::60:
 		pushi	0x06
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x03
 		le?	
@@ -327,7 +327,7 @@ fireUponEgo::60:
 		pushi	0x07
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x05
 		eq?	
@@ -336,7 +336,7 @@ code_663:
 		pushi	0x06
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x03
 		gt?	
@@ -344,7 +344,7 @@ code_663:
 		pushi	0x07
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x06
 		eq?	
@@ -353,7 +353,7 @@ code_693:
 		pushi	0x05
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x019c
 		eq?	
@@ -361,7 +361,7 @@ code_693:
 		pushi	0x06
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		le?	
@@ -369,7 +369,7 @@ code_693:
 		pushi	0x07
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		eq?	
@@ -378,7 +378,7 @@ code_739:
 		pushi	0x06
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		gt?	
@@ -386,7 +386,7 @@ code_739:
 		pushi	0x07
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x05
 		eq?	
@@ -395,7 +395,7 @@ code_769:
 		pushi	0x05
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x019d
 		eq?	
@@ -403,7 +403,7 @@ code_769:
 		pushi	0x07
 		push0	
 		lofsa	sarien1
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x05
 		eq?	
@@ -423,8 +423,8 @@ code_820:
 		ret	
 
 fireUponEgo::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -439,12 +439,12 @@ fireUponEgo::138:
 		pushi	0x0120
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1036
 code_864:
 		dup	
@@ -457,7 +457,7 @@ code_864:
 		push	
 		pushSelf	
 		lofsa	sarien1
-		send	0x8
+		send	0x08
 		jmp	code_1036
 code_887:
 		dup	
@@ -469,7 +469,7 @@ code_887:
 		class	0x1b
 		push	
 		lofsa	sarien1
-		send	0x6
+		send	0x06
 		push1	
 		pushi	0x10
 		callb	0x6, 0x2
@@ -488,7 +488,7 @@ code_887:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_1036
 code_944:
@@ -499,8 +499,8 @@ code_944:
 		push1	
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x008c
 		ge?	
@@ -519,7 +519,7 @@ code_975:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_1036
 code_995:
@@ -545,7 +545,7 @@ code_1023:
 		callb	0xa, 0xa
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1036:
 		toss	
 		ret	
@@ -578,8 +578,8 @@ Overriden functions: 2
 .CODE
 tv1Script::138:
 		link	0x02
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -591,7 +591,7 @@ tv1Script::138:
 		push	
 		pushSelf	
 		lofsa	tv1
-		send	0x8
+		send	0x08
 		jmp	code_1194
 code_1130:
 		dup	
@@ -614,7 +614,7 @@ code_1149:
 		class	0x17
 		push	
 		lofsa	tv1
-		send	0x6
+		send	0x06
 		push2	
 		push1	
 		pushi	0x04
@@ -629,7 +629,7 @@ code_1180:
 		pushi	0x008a
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 code_1194:
 		toss	
 		ret	
@@ -662,28 +662,28 @@ Overriden functions: 1
 egoSafe::60:
 		link	0x01
 		ldi	0x00
-		sat	0x0
+		sat	0x00
 		pushi	0x0131
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x04
 		and	
 		bt	code_1287
 		pushi	0x0131
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		and	
 code_1287:
 		bnt	code_1294
 		ldi	0x01
-		sat	0x0
+		sat	0x00
 code_1294:
-		lat	0x0
+		lat	0x00
 		ret	
 
 		bnot	
@@ -702,23 +702,23 @@ Overriden functions: 1
 timeToHearGuards::60:
 		link	0x01
 		ldi	0x00
-		sat	0x0
-		lsg	0xc
+		sat	0x00
+		lsg	0x0c
 		ldi	0x0a
 		ne?	
 		bnt	code_1362
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x50
 		gt?	
 		bnt	code_1362
 		ldi	0x01
-		sat	0x0
+		sat	0x00
 code_1362:
-		lat	0x0
+		lat	0x00
 		ret	
 
 		bnot	
@@ -737,23 +737,23 @@ Overriden functions: 1
 callTheGuards::60:
 		link	0x01
 		ldi	0x00
-		sat	0x0
-		lsg	0xc
+		sat	0x00
+		lsg	0x0c
 		ldi	0x0a
 		ne?	
 		bnt	code_1431
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x00a0
 		gt?	
 		bnt	code_1431
 		ldi	0x01
-		sat	0x0
+		sat	0x00
 code_1431:
-		lat	0x0
+		lat	0x00
 		ret	
 
 
@@ -774,11 +774,11 @@ tv2::60:
 		pushi	0x07
 		push0	
 		lofsa	tv1
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x011c
 		push0	
-		self	0xa
+		self	0x0a
 		pushi	0x3c
 		push0	
 		super	0x2e, 0x4
@@ -787,10 +787,10 @@ tv2::60:
 tv2::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	tv1
-		send	0x6
+		send	0x06
 		ret	
 
 		bnot	
@@ -843,7 +843,7 @@ Overriden functions: 2
 
 .CODE
 star::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -886,8 +886,8 @@ code_1669:
 code_1688:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_1699:
 		toss	
@@ -946,7 +946,7 @@ Overriden functions: 1
 
 .CODE
 tv1::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -989,8 +989,8 @@ code_1871:
 code_1890:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_1901:
 		toss	
@@ -1049,7 +1049,7 @@ Overriden functions: 1
 
 .CODE
 sarien1::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1092,8 +1092,8 @@ code_2073:
 code_2092:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_2103:
 		toss	
@@ -1154,10 +1154,10 @@ Overriden functions: 1
 sarien2::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	sarien1
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -1212,7 +1212,7 @@ Overriden functions: 1
 
 .CODE
 joystick::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1255,8 +1255,8 @@ code_2398:
 code_2417:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2428:
 		toss	
@@ -1293,7 +1293,7 @@ Overriden functions: 1
 
 .CODE
 mouse::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1336,8 +1336,8 @@ code_2557:
 code_2576:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2587:
 		toss	
@@ -1375,7 +1375,7 @@ Overriden functions: 1
 
 .CODE
 screen::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1418,8 +1418,8 @@ code_2717:
 code_2736:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2747:
 		toss	
@@ -1457,7 +1457,7 @@ Overriden functions: 1
 
 .CODE
 wires::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1500,8 +1500,8 @@ code_2877:
 code_2896:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2907:
 		toss	
@@ -1539,7 +1539,7 @@ Overriden functions: 1
 
 .CODE
 keyboard::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1582,8 +1582,8 @@ code_3037:
 code_3056:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3067:
 		toss	
@@ -1621,7 +1621,7 @@ Overriden functions: 1
 
 .CODE
 cords::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1664,8 +1664,8 @@ code_3197:
 code_3216:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3227:
 		toss	

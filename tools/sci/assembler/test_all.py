@@ -1,3 +1,5 @@
+# TODO test errors
+
 from script_disasm import disasm_all
 from script_asm import asm_all
 
@@ -19,6 +21,7 @@ for game in games:
     asm_all(game / 'orig_sca', game / 'bin')
     disasm_all(game / 'bin', game / 'disasm')
 
+    ok = True
     for orig in (game / 'orig_sca').iterdir():
         other = game / 'disasm' / orig.name
         orig_set = set(ignores(orig.read_text().splitlines()))
@@ -27,10 +30,19 @@ for game in games:
 
         diff.discard('\n')
         if diff:
+            ok = False
             print("\n========================")
             print("Differences:")
             print("========================")
             print(f'Orig: {orig}\t\tDisassembly of assembly of orig: {other}')
             print('\n'.join(diff))
             print()
-            sys.exit(1)
+    if ok:
+        print("\n========================")
+        print("Tests passed")
+        print("========================")
+    else:
+        print("\n========================")
+        print("Tests Failed")
+        print("========================")
+        sys.exit(1)

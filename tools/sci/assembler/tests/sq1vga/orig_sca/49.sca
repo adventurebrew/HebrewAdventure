@@ -26,13 +26,13 @@ rm49::107:
 		pushi	0x6b
 		pushi	0x3c
 		push0	
-		lag	0xa
+		lag	0x0a
 		send	0x10
 		pushi	0x008c
 		push1	
 		lofsa	openingScript
 		push	
-		self	0x6
+		self	0x06
 		ret	
 
 
@@ -68,8 +68,8 @@ Overriden functions: 1
 
 .CODE
 openingScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -110,8 +110,8 @@ code_210:
 		push2	
 		pushi	0x11
 		pushi	0x8009
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		ldi	0x02
 		aTop	0x10
 		jmp	code_699
@@ -181,15 +181,15 @@ code_345:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	ship1
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	satelite
-		send	0x4
+		send	0x04
 		ldi	0x01
 		aTop	0x16
 		jmp	code_699
@@ -201,17 +201,17 @@ code_383:
 		pushi	0x009d
 		push0	
 		lofsa	jetSound
-		send	0x4
+		send	0x04
 		pushi	0x018a
 		push2	
 		pushi	0x31
 		pushi	0x8008
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		pushi	0x6b
 		push0	
 		lofsa	arm
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -219,7 +219,7 @@ code_383:
 		class	0x5f
 		push	
 		lofsa	dial0
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -227,7 +227,7 @@ code_383:
 		class	0x5f
 		push	
 		lofsa	dial1
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -235,7 +235,7 @@ code_383:
 		class	0x5f
 		push	
 		lofsa	dial2
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -243,13 +243,13 @@ code_383:
 		class	0x5f
 		push	
 		lofsa	screen
-		send	0xa
+		send	0x0a
 		pushi	0x008c
 		push2	
 		lofsa	robotAsksScript
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_699
 code_494:
 		dup	
@@ -266,7 +266,7 @@ code_494:
 		push	
 		pushSelf	
 		pushi	0x0a
-		self	0xa
+		self	0x0a
 		jmp	code_699
 code_526:
 		dup	
@@ -285,7 +285,7 @@ code_526:
 		push0	
 		callk	0x2, 0x4
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_650
 code_560:
 		dup	
@@ -308,7 +308,7 @@ code_560:
 		push0	
 		callk	0x2, 0x4
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_621
 code_599:
 		dup	
@@ -322,7 +322,7 @@ code_599:
 		push0	
 		callk	0x2, 0x4
 		push	
-		self	0x6
+		self	0x06
 code_621:
 		toss	
 		jmp	code_650
@@ -340,7 +340,7 @@ code_625:
 		push	
 		pushSelf	
 		push1	
-		self	0xa
+		self	0x0a
 code_650:
 		toss	
 		jmp	code_699
@@ -354,7 +354,7 @@ code_654:
 		lofsa	approachDeltaur
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_699
 code_675:
 		dup	
@@ -370,7 +370,7 @@ code_675:
 		callb	0xa, 0xa
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_699:
 		toss	
 		ret	
@@ -405,18 +405,18 @@ Overriden functions: 1
 robotAsksScript::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		ret	
 
 robotAsksScript::108:
@@ -424,12 +424,12 @@ robotAsksScript::108:
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x54
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
 		super	0x6, 0x4
@@ -440,8 +440,8 @@ robotAsksScript::129:
 		bnt	code_862
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		bnt	code_862
 		lag	0x19
 		bnt	code_843
@@ -462,20 +462,20 @@ code_843:
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		jmp	code_871
 code_862:
 		pushi	0x0081
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x6, 0x6
 code_871:
 		ret	
 
 robotAsksScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -486,7 +486,7 @@ robotAsksScript::138:
 		pushi	0x011b
 		push0	
 		lofsa	arm
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -494,7 +494,7 @@ robotAsksScript::138:
 		class	0x5f
 		push	
 		lofsa	dial0
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -502,7 +502,7 @@ robotAsksScript::138:
 		class	0x5f
 		push	
 		lofsa	dial1
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -510,7 +510,7 @@ robotAsksScript::138:
 		class	0x5f
 		push	
 		lofsa	dial2
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -518,13 +518,13 @@ robotAsksScript::138:
 		class	0x5f
 		push	
 		lofsa	screen
-		send	0xa
+		send	0x0a
 		pushi	0x008c
 		push2	
 		lofsa	pushButtons
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1083
 code_970:
 		dup	
@@ -540,7 +540,7 @@ code_970:
 		lofsa	holdLever
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1083
 code_999:
 		dup	
@@ -562,7 +562,7 @@ code_999:
 		push0	
 		callk	0x2, 0x4
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_1083
 code_1042:
 		dup	
@@ -587,7 +587,7 @@ code_1054:
 code_1078:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1083:
 		toss	
 		ret	
@@ -623,8 +623,8 @@ Overriden functions: 4
 
 .CODE
 pushButtons::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -655,7 +655,7 @@ code_1195:
 		push1	
 		push1	
 		lofsa	arm
-		send	0x6
+		send	0x06
 		ldi	0x0c
 		aTop	0x10
 		jmp	code_1285
@@ -668,7 +668,7 @@ code_1218:
 		push1	
 		push2	
 		lofsa	arm
-		send	0x6
+		send	0x06
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1285
@@ -683,7 +683,7 @@ code_1241:
 		push	
 		pushSelf	
 		lofsa	arm
-		send	0x8
+		send	0x08
 		jmp	code_1285
 code_1264:
 		dup	
@@ -693,10 +693,10 @@ code_1264:
 		pushi	0x011b
 		push0	
 		lofsa	arm
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1285:
 		toss	
 		ret	
@@ -729,8 +729,8 @@ Overriden functions: 1
 
 .CODE
 holdLever::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -763,7 +763,7 @@ code_1382:
 		push	
 		pushSelf	
 		pTos	0x1a
-		self	0xa
+		self	0x0a
 		jmp	code_1466
 code_1411:
 		ldi	0x04
@@ -780,7 +780,7 @@ code_1418:
 		push	
 		pushSelf	
 		lofsa	arm
-		send	0x8
+		send	0x08
 		jmp	code_1466
 code_1441:
 		dup	
@@ -792,10 +792,10 @@ code_1441:
 		pushi	0x011b
 		push0	
 		lofsa	arm
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1466:
 		toss	
 		ret	
@@ -827,8 +827,8 @@ Overriden functions: 1
 
 .CODE
 scratchHead::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -873,7 +873,7 @@ code_1566:
 		push1	
 		pushi	0x03
 		lofsa	arm
-		send	0x6
+		send	0x06
 		ldi	0x03
 		aTop	0x12
 		jmp	code_1674
@@ -885,7 +885,7 @@ code_1614:
 		pushi	0x6c
 		push0	
 		lofsa	droidHand
-		send	0x4
+		send	0x04
 		pushi	0x06
 		push1	
 		push2	
@@ -908,10 +908,10 @@ code_1653:
 		pushi	0x011b
 		push0	
 		lofsa	arm
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1674:
 		toss	
 		ret	
@@ -946,14 +946,14 @@ doHyperSpace::60:
 		pushi	0x3c
 		push0	
 		super	0x6, 0x4
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x00
 		eq?	
 		bnt	code_1778
 		pushi	0x0098
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0a
 		eq?	
@@ -962,10 +962,10 @@ doHyperSpace::60:
 		push1	
 		push0	
 		lag	0x64
-		send	0x6
+		send	0x06
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 code_1778:
 		pushi	0x04
 		pushi	0x06
@@ -984,8 +984,8 @@ doHyperSpace::108:
 		ret	
 
 doHyperSpace::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -996,7 +996,7 @@ doHyperSpace::138:
 		pushi	0x009b
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x014c
@@ -1020,8 +1020,8 @@ code_1853:
 		push2	
 		pushi	0x0095
 		pushi	0x07
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		ldi	0x01
 		aTop	0x10
 		jmp	code_2014
@@ -1051,7 +1051,7 @@ code_1897:
 		pushi	0x0089
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 		pushi	0x008c
 		push1	
 		push2	
@@ -1059,8 +1059,8 @@ code_1897:
 		push0	
 		callk	0x2, 0x4
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_2014
 code_1948:
 		ldi	0x02
@@ -1074,7 +1074,7 @@ code_1955:
 		pushi	0x009d
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x009f
 		push1	
 		pushi	0x28
@@ -1093,11 +1093,11 @@ code_1955:
 		push2	
 		pushi	0x31
 		pushi	0x07
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2014:
 		toss	
 		ret	
@@ -1131,8 +1131,8 @@ Overriden functions: 3
 
 .CODE
 approachDeltaur::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1142,8 +1142,8 @@ approachDeltaur::138:
 		push2	
 		pushi	0x31
 		pushi	0x07
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x00c0
@@ -1170,7 +1170,7 @@ approachDeltaur::138:
 		pushi	0x00c0
 		push0	
 		lofsa	dial0
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -1180,7 +1180,7 @@ approachDeltaur::138:
 		pushi	0x00c0
 		push0	
 		lofsa	dial1
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -1190,7 +1190,7 @@ approachDeltaur::138:
 		pushi	0x00c0
 		push0	
 		lofsa	dial2
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -1200,13 +1200,13 @@ approachDeltaur::138:
 		pushi	0x00c0
 		push0	
 		lofsa	screen
-		send	0xe
+		send	0x0e
 		pushi	0x008c
 		push2	
 		lofsa	pushButtons
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_2495
 code_2225:
 		dup	
@@ -1220,7 +1220,7 @@ code_2225:
 		pushi	0x009a
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x01f4
@@ -1239,7 +1239,7 @@ code_2225:
 		lofsa	scratchHead
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_2495
 code_2284:
 		dup	
@@ -1266,7 +1266,7 @@ code_2284:
 		lofsa	holdLever
 		push	
 		lofsa	arm
-		send	0x6
+		send	0x06
 		jmp	code_2495
 code_2337:
 		dup	
@@ -1291,7 +1291,7 @@ code_2337:
 		lofsa	pushButtons
 		push	
 		lofsa	arm
-		send	0x6
+		send	0x06
 		jmp	code_2495
 code_2387:
 		dup	
@@ -1336,20 +1336,20 @@ code_2422:
 		bnt	code_2473
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_2495
 code_2473:
 		pushi	0x009d
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		pushi	0x0177
 		push1	
 		pushi	0x32
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_2495:
 		toss	
 		ret	

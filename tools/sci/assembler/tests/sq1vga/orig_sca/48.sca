@@ -8,21 +8,21 @@ OBJECT rm48 of 0x43
 .CODE
 code_14:
 		ldi	0x00
-		lspi	0x1
-		lal	0xf
-		sali	0x5
-		+al	0xf
+		lspi	0x01
+		lal	0x0f
+		sali	0x05
+		+al	0x0f
 		ret	
 
 code_25:
 		pushi	0x0087
 		push0	
 		lofsa	sellRobots
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_56
 		ldi	0x00
-		sal	0xf
+		sal	0x0f
 		pushi	0x20
 		push1	
 		push0	
@@ -30,7 +30,7 @@ code_25:
 		push1	
 		push0	
 		lofsa	bugTalker
-		send	0xc
+		send	0x0c
 code_56:
 		ret	
 
@@ -39,19 +39,19 @@ rm48::107:
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
 		pushi	0x6b
 		push0	
 		lofsa	bugMouth
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x011b
@@ -61,7 +61,7 @@ rm48::107:
 		lofsa	wiggleAntenna
 		push	
 		lofsa	antenna
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -79,62 +79,62 @@ rm48::107:
 		pushi	0x011b
 		push0	
 		lofsa	display
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	readout
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		lofsa	bug
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	award
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	robotHead
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	robotArm
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	bugButt
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	DBUsign
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	screen
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	diaphram
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	tubes
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	table
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	parts
-		send	0x4
+		send	0x04
 		pushi	0x008c
 		push1	
 		lofsa	sellRobots
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x026f
@@ -150,8 +150,8 @@ rm48::107:
 rm48::129:
 		pushi	0x0081
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x43, 0x6
 		bnt	code_288
 		jmp	code_462
@@ -159,7 +159,7 @@ code_288:
 		pushi	0x0087
 		push0	
 		lofsa	sellRobots
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_326
 		pushi	0x0085
@@ -168,38 +168,38 @@ code_288:
 		pushi	0x008b
 		push0	
 		lofsa	bugTalker
-		send	0xa
+		send	0x0a
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		jmp	code_462
 code_326:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		push0	
 		lag	0x45
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_396
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x01
 		eq?	
 		bt	code_372
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x40
 		and	
@@ -208,43 +208,43 @@ code_372:
 		pushi	0x0177
 		push1	
 		pushi	0x2f
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		jmp	code_462
 code_396:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		pushi	0x06
 		lag	0x45
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_462
 		pushi	0x00cf
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		pushi	0x0a
 		class	0x40
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_462
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x04
 		eq?	
@@ -342,7 +342,7 @@ code_596:
 code_615:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x43, 0x4
 		ret	
 
@@ -351,12 +351,12 @@ rm48::108:
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x54
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
 		super	0x43, 0x4
@@ -400,8 +400,8 @@ Overriden functions: 4
 .CODE
 sellRobots::138:
 		link	0x01
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -414,7 +414,7 @@ sellRobots::138:
 		pushi	0x04
 		pushi	0x05
 		lag	0x45
-		send	0x8
+		send	0x08
 		push1	
 		lofsa	string_1		; "Please observe our robot preview screen. If you have any questions, don't hesitate to ask."
 		push	
@@ -455,10 +455,10 @@ code_824:
 		pushi	0x07
 		push0	
 		lofsa	display
-		send	0x4
-		sat	0x0
+		send	0x04
+		sat	0x00
 		pushi	0x04
-		+at	0x0
+		+at	0x00
 		push	
 		pushi	0x0a
 		push1	
@@ -469,22 +469,22 @@ code_824:
 		pushi	0x21
 		callb	0x6, 0x2
 		bnt	code_876
-		+at	0x0
+		+at	0x00
 code_876:
 		pushi	0x07
 		push1	
-		lst	0x0
+		lst	0x00
 		pushi	0x011c
 		push0	
 		lofsa	display
-		send	0xa
+		send	0x0a
 		pushi	0x07
 		push1	
-		lst	0x0
+		lst	0x00
 		pushi	0x011c
 		push0	
 		lofsa	readout
-		send	0xa
+		send	0x0a
 code_904:
 		ldi	0x03
 		aTop	0x12
@@ -495,10 +495,10 @@ code_911:
 		eq?	
 		bnt	code_927
 		ldi	0x01
-		aTop	0xc
+		aTop	0x0c
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_927:
 		toss	
 		ret	
@@ -530,9 +530,9 @@ Overriden functions: 1
 
 .CODE
 bugTalker::60:
-		lal	0xf
+		lal	0x0f
 		bnt	code_1021
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x00
 		eq?	
 		bnt	code_1021
@@ -540,28 +540,28 @@ bugTalker::60:
 		push1	
 		push0	
 		lofsa	sellRobots
-		send	0x6
+		send	0x06
 		ldi	0x00
 		aTop	0x12
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 code_1021:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		ret	
 
 bugTalker::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
 		eq?	
 		bnt	code_1074
-		lal	0xf
+		lal	0x0f
 		not	
 		bnt	code_1067
 		push0	
@@ -571,7 +571,7 @@ bugTalker::138:
 		pushi	0x04
 		pushi	0x05
 		lag	0x45
-		send	0x8
+		send	0x08
 		jmp	code_1237
 code_1067:
 		push0	
@@ -583,8 +583,8 @@ code_1074:
 		eq?	
 		bnt	code_1143
 		pushi	0x0a
-		-al	0xf
-		lsli	0x5
+		-al	0x0f
+		lsli	0x05
 		pushi	0x43
 		pushi	0x06
 		pushi	0x0086
@@ -601,11 +601,11 @@ code_1074:
 		class	0x17
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		push1	
 		push1	
-		lal	0xf
-		lsli	0x5
+		lal	0x0f
+		lsli	0x05
 		callk	0x46, 0x2
 		push	
 		ldi	0x0a
@@ -621,25 +621,25 @@ code_1143:
 		pushi	0x0087
 		push0	
 		lofsa	noMoney
-		send	0x4
+		send	0x04
 		bnt	code_1175
 		pushi	0x0177
 		push1	
 		pushi	0x2f
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_1237
 code_1175:
 		pushi	0x0087
 		push0	
 		lofsa	soldDroid
-		send	0x4
+		send	0x04
 		bnt	code_1200
 		pushi	0x0177
 		push1	
 		pushi	0x2e
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_1237
 code_1200:
 		push1	
@@ -649,19 +649,19 @@ code_1200:
 		push1	
 		push0	
 		lofsa	bugMouth
-		send	0x6
-		lal	0xf
+		send	0x06
+		lal	0x0f
 		not	
 		bnt	code_1232
 		pushi	0x0087
 		push1	
 		push1	
 		lofsa	sellRobots
-		send	0x6
+		send	0x06
 code_1232:
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1237:
 		toss	
 		ret	
@@ -694,8 +694,8 @@ Overriden functions: 2
 
 .CODE
 soldDroid::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -752,8 +752,8 @@ Overriden functions: 1
 
 .CODE
 noMoney::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -761,7 +761,7 @@ noMoney::138:
 		bnt	code_1521
 		push0	
 		call	code_25, 0
-		+al	0x0
+		+al	0x00
 		push	
 		dup	
 		ldi	0x01
@@ -807,7 +807,7 @@ code_1506:
 		call	code_14, 2
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1521:
 		toss	
 		ret	
@@ -839,7 +839,7 @@ Overriden functions: 1
 
 .CODE
 bug::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x05
 		eq?	
@@ -849,7 +849,7 @@ bug::266:
 		pushi	0x07
 		push0	
 		lofsa	display
-		send	0x4
+		send	0x04
 		push	
 		dup	
 		ldi	0x00
@@ -1071,7 +1071,7 @@ code_2049:
 		ldi	0x04
 		eq?	
 		bnt	code_2598
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x00
 		eq?	
@@ -1129,24 +1129,24 @@ code_2152:
 		push0	
 		call	code_25, 0
 		ldi	0x01
-		sal	0x1
+		sal	0x01
 		pushi	0x0146
 		push1	
 		pushi	0x12
-		lag	0x0
-		send	0x6
-		lsl	0x2
+		lag	0x00
+		send	0x06
+		lsl	0x02
 		ldi	0x09
 		sub	
-		sal	0x2
-		lsl	0x3
+		sal	0x02
+		lsl	0x03
 		ldi	0x09
 		sub	
-		sal	0x3
-		lsl	0x4
+		sal	0x03
+		lsl	0x04
 		ldi	0x09
 		sub	
-		sal	0x4
+		sal	0x04
 		push1	
 		lofsa	string_60		; "Very good, sir. This coupon entitles you to a reduction of twenty percent in the price of any of our fine, previously- owned droids."
 		push	
@@ -1162,7 +1162,7 @@ code_2211:
 		pushi	0x07
 		push0	
 		lofsa	display
-		send	0x4
+		send	0x04
 		push	
 		dup	
 		ldi	0x00
@@ -1173,7 +1173,7 @@ code_2211:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2255:
 		dup	
@@ -1181,11 +1181,11 @@ code_2255:
 		eq?	
 		bnt	code_2315
 		lsg	0xa5
-		lal	0x2
+		lal	0x02
 		ge?	
 		bnt	code_2299
 		lsg	0xa5
-		lal	0x2
+		lal	0x02
 		sub	
 		sag	0xa5
 		push1	
@@ -1196,7 +1196,7 @@ code_2255:
 		lofsa	soldDroid
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2299:
 		pushi	0x008c
@@ -1204,7 +1204,7 @@ code_2299:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2315:
 		dup	
@@ -1216,7 +1216,7 @@ code_2315:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2338:
 		dup	
@@ -1234,11 +1234,11 @@ code_2357:
 		eq?	
 		bnt	code_2417
 		lsg	0xa5
-		lal	0x3
+		lal	0x03
 		ge?	
 		bnt	code_2401
 		lsg	0xa5
-		lal	0x3
+		lal	0x03
 		sub	
 		sag	0xa5
 		push1	
@@ -1249,7 +1249,7 @@ code_2357:
 		lofsa	soldDroid
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2401:
 		pushi	0x008c
@@ -1257,7 +1257,7 @@ code_2401:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2417:
 		dup	
@@ -1269,7 +1269,7 @@ code_2417:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2440:
 		dup	
@@ -1291,7 +1291,7 @@ code_2459:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2482:
 		dup	
@@ -1303,7 +1303,7 @@ code_2482:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2505:
 		dup	
@@ -1321,11 +1321,11 @@ code_2524:
 		eq?	
 		bnt	code_2581
 		lsg	0xa5
-		lal	0x4
+		lal	0x04
 		ge?	
 		bnt	code_2568
 		lsg	0xa5
-		lal	0x4
+		lal	0x04
 		sub	
 		sag	0xa5
 		push1	
@@ -1336,7 +1336,7 @@ code_2524:
 		lofsa	soldDroid
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 		jmp	code_2581
 code_2568:
 		pushi	0x008c
@@ -1344,7 +1344,7 @@ code_2568:
 		lofsa	noMoney
 		push	
 		lofsa	bugMouth
-		send	0x6
+		send	0x06
 code_2581:
 		toss	
 		jmp	code_2594
@@ -1359,8 +1359,8 @@ code_2594:
 code_2598:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 code_2609:
 		toss	
@@ -1446,8 +1446,8 @@ Overriden functions: 0
 
 .CODE
 wiggleAntenna::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1463,8 +1463,8 @@ wiggleAntenna::138:
 		callk	0x3c, 0x4
 		push	
 		pushSelf	
-		pToa	0x8
-		send	0xa
+		pToa	0x08
+		send	0x0a
 		jmp	code_2850
 code_2818:
 		dup	
@@ -1484,7 +1484,7 @@ code_2838:
 		bnt	code_2850
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_2850:
 		toss	
 		ret	
@@ -1724,7 +1724,7 @@ Overriden functions: 0
 
 .CODE
 robotHead::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x05
 		eq?	
@@ -1737,8 +1737,8 @@ robotHead::266:
 code_3378:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3389:
 		toss	
@@ -1803,7 +1803,7 @@ Overriden functions: 0
 
 .CODE
 bugButt::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1811,14 +1811,14 @@ bugButt::266:
 		pushi	0x0177
 		push1	
 		pushi	0x2f
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3553
 code_3542:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3553:
 		toss	

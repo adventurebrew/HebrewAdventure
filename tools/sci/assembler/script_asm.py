@@ -1,5 +1,3 @@
-# TODO 45.sca: 'bnt -4096' isn't preserved in asm+disasm
-
 import argparse
 from pathlib import Path
 
@@ -384,7 +382,6 @@ def asm(p):
     tree = asm_parser.parser.parse(text)
     sections = first_pass(tree)
     result = second_pass(sections)
-    print(sections)
     return result
 
 
@@ -393,7 +390,7 @@ def asm_all(asmdir, compiledir):
     compile_path = Path(compiledir)
     compile_path.mkdir(exist_ok=True)
     for p in asm_files:
-        # if p.stem == '45':  # '29':  # TODO
+        # if p.stem == '990':  # '29':  # TODO
             print("--------")
             print(p)
             result = asm(p)

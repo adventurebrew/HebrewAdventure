@@ -10,8 +10,8 @@ SmoothLooper::60:
 		link	0x02
 		pushi	0x11
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x0800
 		and	
@@ -20,25 +20,25 @@ SmoothLooper::60:
 
 code_32:
 		ldi	0x00
-		sat	0x1
+		sat	0x01
 		pToa	0x14
 		bnt	code_72
 		pToa	0x10
 		bnt	code_51
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_51:
 		pushi	0x3b
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		aTop	0x10
 		pushi	0x3b
 		push1	
 		push0	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		ret	
 
 		jmp	code_95
@@ -48,27 +48,27 @@ code_72:
 		bnt	code_87
 		pushi	0x05
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		aTop	0x16
 code_87:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		ldi	0x01
 		aTop	0x14
 code_95:
 		pushi	0x06
 		push0	
-		pToa	0xa
-		send	0x4
+		pToa	0x0a
+		send	0x04
 		push	
 		ldi	0x03
 		gt?	
 		bnt	code_164
 		pushi	0x05
 		push0	
-		pToa	0xa
-		send	0x4
+		pToa	0x0a
+		send	0x04
 		push	
 		pToa	0x16
 		eq?	
@@ -76,37 +76,37 @@ code_95:
 		pToa	0x14
 		bnt	code_147
 		push1	
-		pTos	0xe
+		pTos	0x0e
 		callk	0x6, 0x2
 		bnt	code_164
 		pushi	0x6c
 		push0	
-		pToa	0xe
-		send	0x4
+		pToa	0x0e
+		send	0x04
 		jmp	code_164
 code_147:
 		pushi	0x05
 		push1	
 		pTos	0x16
-		pToa	0xa
-		send	0x6
+		pToa	0x0a
+		send	0x06
 		push2	
-		pTos	0xa
-		lsp	0x2
+		pTos	0x0a
+		lsp	0x02
 		callk	0x4c, 0x4
 code_164:
 		pushi	0x06
 		push0	
-		pToa	0xa
-		send	0x4
-		sat	0x0
+		pToa	0x0a
+		send	0x04
+		sat	0x00
 		push	
 		dup	
 		ldi	0x03
 		eq?	
 		bnt	code_291
 		pushi	0x010f
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_201
 		pprev	
@@ -116,7 +116,7 @@ code_164:
 		jmp	code_643
 code_201:
 		push0	
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_230
 		pprev	
@@ -124,15 +124,15 @@ code_201:
 		le?	
 		bnt	code_230
 		ldi	0x04
-		sat	0x0
+		sat	0x00
 		ldi	0x00
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_230:
 		pushi	0x5b
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_261
 		pprev	
@@ -140,15 +140,15 @@ code_230:
 		le?	
 		bnt	code_261
 		ldi	0x04
-		sat	0x0
+		sat	0x00
 		ldi	0x10
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_261:
 		pushi	0x00b5
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_643
 		pprev	
@@ -156,10 +156,10 @@ code_261:
 		le?	
 		bnt	code_643
 		ldi	0x05
-		sat	0x0
+		sat	0x00
 		ldi	0x01
-		aTop	0x8
-		sat	0x1
+		aTop	0x08
+		sat	0x01
 		jmp	code_643
 code_291:
 		dup	
@@ -167,7 +167,7 @@ code_291:
 		eq?	
 		bnt	code_410
 		pushi	0x010f
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_330
 		pprev	
@@ -175,15 +175,15 @@ code_291:
 		le?	
 		bnt	code_330
 		ldi	0x06
-		sat	0x0
+		sat	0x00
 		ldi	0x03
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_330:
 		push0	
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_347
 		pprev	
@@ -193,7 +193,7 @@ code_330:
 		jmp	code_643
 code_347:
 		pushi	0x5b
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_378
 		pprev	
@@ -201,15 +201,15 @@ code_347:
 		le?	
 		bnt	code_378
 		ldi	0x00
-		sat	0x0
+		sat	0x00
 		ldi	0x02
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_378:
 		pushi	0x00b5
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_643
 		pprev	
@@ -217,11 +217,11 @@ code_378:
 		le?	
 		bnt	code_643
 		ldi	0x06
-		sat	0x0
+		sat	0x00
 		ldi	0x15
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_410:
 		dup	
@@ -229,7 +229,7 @@ code_410:
 		eq?	
 		bnt	code_529
 		pushi	0x010f
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_449
 		pprev	
@@ -237,15 +237,15 @@ code_410:
 		le?	
 		bnt	code_449
 		ldi	0x07
-		sat	0x0
+		sat	0x00
 		ldi	0x03
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_449:
 		push0	
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_478
 		pprev	
@@ -253,15 +253,15 @@ code_449:
 		le?	
 		bnt	code_478
 		ldi	0x01
-		sat	0x0
+		sat	0x00
 		ldi	0x12
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_478:
 		pushi	0x5b
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_509
 		pprev	
@@ -269,15 +269,15 @@ code_478:
 		le?	
 		bnt	code_509
 		ldi	0x01
-		sat	0x0
+		sat	0x00
 		ldi	0x02
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_509:
 		pushi	0x00b5
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_643
 		pprev	
@@ -291,7 +291,7 @@ code_529:
 		eq?	
 		bnt	code_643
 		pushi	0x010f
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_568
 		pprev	
@@ -299,15 +299,15 @@ code_529:
 		le?	
 		bnt	code_568
 		ldi	0x03
-		sat	0x0
+		sat	0x00
 		ldi	0x17
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_568:
 		push0	
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_597
 		pprev	
@@ -315,15 +315,15 @@ code_568:
 		le?	
 		bnt	code_597
 		ldi	0x02
-		sat	0x0
+		sat	0x00
 		ldi	0x00
-		aTop	0x8
+		aTop	0x08
 		ldi	0x01
-		sat	0x1
+		sat	0x01
 		jmp	code_643
 code_597:
 		pushi	0x5b
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_616
 		pprev	
@@ -333,7 +333,7 @@ code_597:
 		jmp	code_643
 code_616:
 		pushi	0x00b5
-		lap	0x2
+		lap	0x02
 		le?	
 		bnt	code_643
 		pprev	
@@ -341,28 +341,28 @@ code_616:
 		le?	
 		bnt	code_643
 		ldi	0x03
-		sat	0x0
+		sat	0x00
 		ldi	0x01
-		aTop	0x8
-		sat	0x1
+		aTop	0x08
+		sat	0x01
 code_643:
 		toss	
-		lat	0x1
+		lat	0x01
 		bnt	code_721
 		pushi	0x00da
 		push0	
-		pToa	0xa
-		send	0x4
-		aTop	0xc
+		pToa	0x0a
+		send	0x04
+		aTop	0x0c
 		pushi	0x3b
 		push0	
-		pToa	0xa
-		send	0x4
-		aTop	0xe
+		pToa	0x0a
+		send	0x04
+		aTop	0x0e
 		pushi	0x00d9
 		push0	
-		pToa	0xa
-		send	0x4
+		pToa	0x0a
+		send	0x04
 		aTop	0x12
 		pushi	0x05
 		push1	
@@ -378,7 +378,7 @@ code_643:
 		push0	
 		pushi	0x06
 		push1	
-		lst	0x0
+		lst	0x00
 		pushi	0x07
 		push1	
 		push0	
@@ -387,7 +387,7 @@ code_643:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0xa
+		pToa	0x0a
 		send	0x2c
 		jmp	code_725
 code_721:
@@ -398,7 +398,7 @@ code_725:
 
 SmoothLooper::139:
 		link	0x02
-		pTos	0x8
+		pTos	0x08
 		ldi	0x0f
 		lt?	
 		bnt	code_796
@@ -407,40 +407,40 @@ SmoothLooper::139:
 		pTos	0x16
 		pushi	0x06
 		push1	
-		pTos	0x8
+		pTos	0x08
 		pushi	0x3b
 		push1	
-		pTos	0xe
+		pTos	0x0e
 		pushi	0x00da
 		push1	
-		pTos	0xc
+		pTos	0x0c
 		pushi	0x00d9
 		push1	
 		pTos	0x12
-		pToa	0xa
+		pToa	0x0a
 		send	0x1e
 		ldi	0x00
-		aTop	0xe
-		aTop	0xc
+		aTop	0x0e
+		aTop	0x0c
 		aTop	0x14
 		pToa	0x10
 		bnt	code_874
 		pushi	0x0119
 		push1	
 		push	
-		pToa	0xa
-		send	0x6
+		pToa	0x0a
+		send	0x06
 		ldi	0x00
 		aTop	0x10
 		jmp	code_874
 code_796:
-		pTos	0x8
+		pTos	0x08
 		ldi	0x10
 		sub	
-		aTop	0x8
+		aTop	0x08
 		pushi	0x06
 		push1	
-		pTos	0x8
+		pTos	0x08
 		pushi	0x07
 		push1	
 		push0	
@@ -449,9 +449,9 @@ code_796:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0xa
+		pToa	0x0a
 		send	0x14
-		pTos	0x8
+		pTos	0x08
 		dup	
 		ldi	0x00
 		eq?	
@@ -480,28 +480,28 @@ code_862:
 		ldi	0x03
 code_871:
 		toss	
-		aTop	0x8
+		aTop	0x08
 code_874:
 		ret	
 
 SmoothLooper::108:
-		pToa	0xe
+		pToa	0x0e
 		bnt	code_885
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_885:
 		pToa	0x10
 		bnt	code_895
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_895:
-		pToa	0xc
+		pToa	0x0c
 		bnt	code_905
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_905:
 		pushi	0x05
 		push1	
@@ -509,14 +509,14 @@ code_905:
 		pushi	0x3e
 		push1	
 		push0	
-		pToa	0xa
-		send	0xc
+		pToa	0x0a
+		send	0x0c
 		push2	
-		pTos	0xa
+		pTos	0x0a
 		pushi	0x3a
 		push0	
-		pToa	0xa
-		send	0x4
+		pToa	0x0a
+		send	0x04
 		push	
 		callk	0x4c, 0x4
 		pushi	0x6c

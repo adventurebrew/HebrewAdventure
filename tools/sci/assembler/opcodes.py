@@ -1,10 +1,10 @@
-from enum import Enum, unique
+from enum import IntEnum, unique
 
 from misc import CONFIG_LOFSA_RELATIVE
 
 
 @unique
-class SciOpcodes(Enum):
+class SciOpcodes(IntEnum):
     op_bnot = 0x00  # 000
     op_add = 0x01  # 001
     op_sub = 0x02  # 002
@@ -159,6 +159,154 @@ class SciOpcodes(Enum):
         return {'min': instruction_length((self.value << 1) + 1),
                 'max': instruction_length(self.value << 1)}
 
+    def num_of_operands(self):
+        if self in [SciOpcodes.op_bnot,
+                    SciOpcodes.op_add,
+                    SciOpcodes.op_sub,
+                    SciOpcodes.op_mul,
+                    SciOpcodes.op_div,
+                    SciOpcodes.op_mod,
+                    SciOpcodes.op_shr,
+                    SciOpcodes.op_shl,
+                    SciOpcodes.op_xor,
+                    SciOpcodes.op_and,
+                    SciOpcodes.op_or,
+                    SciOpcodes.op_neg,
+                    SciOpcodes.op_not,
+                    SciOpcodes.op_eq_,
+                    SciOpcodes.op_ne_,
+                    SciOpcodes.op_gt_,
+                    SciOpcodes.op_ge_,
+                    SciOpcodes.op_lt_,
+                    SciOpcodes.op_le_,
+                    SciOpcodes.op_ugt_,
+                    SciOpcodes.op_uge_,
+                    SciOpcodes.op_ult_,
+                    SciOpcodes.op_ule_,
+                    SciOpcodes.op_push,
+                    SciOpcodes.op_toss,
+                    SciOpcodes.op_dup,
+                    SciOpcodes.op_ret,
+                    SciOpcodes.op_selfID,
+                    SciOpcodes.op_pprev,
+                    SciOpcodes.op_push0,
+                    SciOpcodes.op_push1,
+                    SciOpcodes.op_push2,
+                    SciOpcodes.op_pushSelf,
+
+                    ]:
+            return 0
+        elif self in [
+            SciOpcodes.op_bt,
+            SciOpcodes.op_bnt,
+            SciOpcodes.op_jmp,
+            SciOpcodes.op_ldi,
+            SciOpcodes.op_pushi,
+            SciOpcodes.op_link,
+            SciOpcodes.op_send,
+            SciOpcodes.op_class,
+            SciOpcodes.op_self,
+            SciOpcodes.op_rest,
+            SciOpcodes.op_pToa,
+            SciOpcodes.op_aTop,
+            SciOpcodes.op_pTos,
+            SciOpcodes.op_sTop,
+            SciOpcodes.op_ipToa,
+            SciOpcodes.op_dpToa,
+            SciOpcodes.op_ipTos,
+            SciOpcodes.op_dpTos,
+            SciOpcodes.op_lofsa,
+            SciOpcodes.op_lofss,
+
+            SciOpcodes.op_lag,
+            SciOpcodes.op_lal,
+            SciOpcodes.op_lat,
+            SciOpcodes.op_lap,
+            SciOpcodes.op_lsg,
+            SciOpcodes.op_lsl,
+            SciOpcodes.op_lst,
+            SciOpcodes.op_lsp,
+            SciOpcodes.op_lagi,
+            SciOpcodes.op_lali,
+            SciOpcodes.op_lati,
+            SciOpcodes.op_lapi,
+            SciOpcodes.op_lsgi,
+            SciOpcodes.op_lsli,
+            SciOpcodes.op_lsti,
+            SciOpcodes.op_lspi,
+            SciOpcodes.op_sag,
+            SciOpcodes.op_sal,
+            SciOpcodes.op_sat,
+            SciOpcodes.op_sap,
+            SciOpcodes.op_ssg,
+            SciOpcodes.op_ssl,
+            SciOpcodes.op_sst,
+            SciOpcodes.op_ssp,
+            SciOpcodes.op_sagi,
+            SciOpcodes.op_sali,
+            SciOpcodes.op_sati,
+            SciOpcodes.op_sapi,
+            SciOpcodes.op_ssgi,
+            SciOpcodes.op_ssli,
+            SciOpcodes.op_ssti,
+            SciOpcodes.op_sspi,
+            SciOpcodes.op_plusag,
+            SciOpcodes.op_plusal,
+            SciOpcodes.op_plusat,
+            SciOpcodes.op_plusap,
+            SciOpcodes.op_plussg,
+            SciOpcodes.op_plussl,
+            SciOpcodes.op_plusst,
+            SciOpcodes.op_plussp,
+            SciOpcodes.op_plusagi,
+            SciOpcodes.op_plusali,
+            SciOpcodes.op_plusati,
+            SciOpcodes.op_plusapi,
+            SciOpcodes.op_plussgi,
+            SciOpcodes.op_plussli,
+            SciOpcodes.op_plussti,
+            SciOpcodes.op_plusspi,
+            SciOpcodes.op_minusag,
+            SciOpcodes.op_minusal,
+            SciOpcodes.op_minusat,
+            SciOpcodes.op_minusap,
+            SciOpcodes.op_minussg,
+            SciOpcodes.op_minussl,
+            SciOpcodes.op_minusst,
+            SciOpcodes.op_minussp,
+            SciOpcodes.op_minusagi,
+            SciOpcodes.op_minusali,
+            SciOpcodes.op_minusati,
+            SciOpcodes.op_minusapi,
+            SciOpcodes.op_minussgi,
+            SciOpcodes.op_minussli,
+            SciOpcodes.op_minussti,
+            SciOpcodes.op_minusspi,
+
+        ]:
+            return 1
+        elif self in [
+            SciOpcodes.op_call,
+            SciOpcodes.op_callk,
+            SciOpcodes.op_callb,
+            SciOpcodes.op_super,
+            SciOpcodes.op_lea,
+
+        ]:
+            return 2
+        if self in [
+            SciOpcodes.op_calle,
+
+        ]:
+            return 3
+        if self in [
+            SciOpcodes.op_info,
+            SciOpcodes.op_superP,
+            SciOpcodes.op_line,
+
+        ]:
+            return NotImplementedError
+
     def __repr__(self):
         result = self.name.replace('op_', '')
         if result.endswith('_'):
@@ -171,6 +319,7 @@ class SciOpcodes(Enum):
         return SciOpcodes["op_" + value.replace("?", "_").replace("-", "minus").replace("+", "plus")]
 
 
+# TODO move this into the enum
 def instruction_length(opcode):
     extra = 1 - opcode % 2
     if opcode <= 0x2d:
@@ -205,10 +354,12 @@ def instruction_length(opcode):
     elif opcode <= 0x59:
         result = 2 + extra
     elif opcode <= 0x5b:
-        # 'lea' is weird. it's documentation isn't clear regarding the param number
-        # TODO it's sort of a guess, it's used in SQ1VGA 704.scr and 57.scr
-        # with this, it sort of matches - only there is one instruction following 'lea' here, that doesn't appear in SCI Viewer
-        result = 3 + extra
+        # 'lea' is weird. its documentation isn't clear regarding the param number
+        # see http://sciprogramming.com/community/index.php?topic=1402.0
+        if extra == 0:
+            result = 3
+        else:
+            result = 5
     elif opcode <= 0x61:
         result = 1
     elif opcode <= 0x75:

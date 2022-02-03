@@ -7,7 +7,7 @@ OBJECT rm22 of 0x74
 
 .CODE
 rm22::107:
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x1c
 		eq?	
@@ -16,8 +16,8 @@ rm22::107:
 		aTop	0x16
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		jmp	code_151
@@ -30,8 +30,8 @@ code_41:
 		aTop	0x16
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		jmp	code_151
@@ -44,8 +44,8 @@ code_66:
 		aTop	0x16
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		jmp	code_151
@@ -68,13 +68,13 @@ code_91:
 		push1	
 		lofsa	outOfHole
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_151
 code_136:
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		ldi	0x0a
 		aTop	0x16
 		push0	
@@ -84,7 +84,7 @@ code_151:
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -125,7 +125,7 @@ code_151:
 		pushi	0x6b
 		push0	
 		lofsa	exitHole
-		send	0x4
+		send	0x04
 		lsg	0xa6
 		ldi	0x02
 		eq?	
@@ -150,7 +150,7 @@ code_151:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x1e
 		push	
 		pushi	0x22
@@ -219,13 +219,13 @@ code_151:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x7e
 		push	
-		self	0x8
+		self	0x08
 		jmp	code_607
 code_459:
-		lsg	0xc
+		lsg	0x0c
 		pToa	0x1c
 		eq?	
 		bnt	code_480
@@ -233,8 +233,8 @@ code_459:
 		push2	
 		pushi	0x0103
 		pushi	0x33
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 code_480:
 		pushi	0x0174
 		push2	
@@ -268,7 +268,7 @@ code_480:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x36
 		push	
 		pushi	0x22
@@ -295,10 +295,10 @@ code_480:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x2a
 		push	
-		self	0x8
+		self	0x08
 code_607:
 		ret	
 
@@ -336,8 +336,8 @@ Overriden functions: 1
 
 .CODE
 outOfHole::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -386,7 +386,7 @@ code_699:
 		push2	
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x30
 		jmp	code_918
 code_773:
@@ -407,8 +407,8 @@ code_773:
 		pushi	0x07
 		push1	
 		pushi	0x03
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x12
 		aTop	0x10
 		jmp	code_918
@@ -425,8 +425,8 @@ code_813:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		jmp	code_918
 code_841:
 		dup	
@@ -451,13 +451,13 @@ code_841:
 		pushi	0x0134
 		pushi	0x00a0
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		push1	
 		pushi	0x05
 		push0	
 		lag	0x74
-		send	0x4
+		send	0x04
 		push	
 		callb	0x9, 0x2
 		jmp	code_918
@@ -470,7 +470,7 @@ code_902:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_918:
 		toss	
 		ret	
@@ -501,7 +501,7 @@ Overriden functions: 1
 
 .CODE
 exitHole::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -564,8 +564,8 @@ code_1075:
 code_1094:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_1105:
 		toss	

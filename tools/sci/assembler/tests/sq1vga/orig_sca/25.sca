@@ -31,7 +31,7 @@ rm25::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x26
 		push	
 		pushi	0x22
@@ -78,11 +78,11 @@ rm25::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x52
 		push	
-		self	0x8
-		lsg	0xc
+		self	0x08
+		lsg	0x0c
 		dup	
 		pToa	0x1e
 		eq?	
@@ -110,8 +110,8 @@ code_209:
 		pushi	0x04
 		push1	
 		pushi	0x00a0
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x0a
 		aTop	0x16
 		jmp	code_237
@@ -122,12 +122,12 @@ code_237:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x04
 		push1	
 		pushi	0x2f
@@ -151,8 +151,8 @@ code_237:
 		pushi	0x48
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		gt?	
 		bnt	code_321
 		pprev	
@@ -162,13 +162,13 @@ code_237:
 		pushi	0x03
 		push1	
 		pushi	0x33
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_321:
 		pushi	0x6b
 		push0	
 		lofsa	claws
-		send	0x4
+		send	0x04
 		ret	
 
 
@@ -205,7 +205,7 @@ Overriden functions: 1
 
 .CODE
 claws::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -232,8 +232,8 @@ code_430:
 code_448:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_459:
 		toss	

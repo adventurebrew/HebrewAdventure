@@ -12,27 +12,27 @@ rm30::107:
 		pushi	0x6b
 		push0	
 		lofsa	elevdoor
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	shaftDoor
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	blueRocks
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	greenRocks
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	gravel
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	brokenRock
-		send	0x4
+		send	0x04
 		pushi	0x06
 		pushi	0x0080
 		pushi	0x0082
@@ -46,19 +46,19 @@ rm30::107:
 		pushi	0x01b6
 		pushi	0x01a5
 		calle	0x03be, 0x0000, 0x06
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x1f
 		eq?	
 		bnt	code_138
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x008c
 		push1	
 		lofsa	fromGrateRoom
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0c
 		aTop	0x16
 		jmp	code_160
@@ -68,13 +68,13 @@ code_138:
 		pushi	0x019a
 		push1	
 		push0	
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		pushi	0x008c
 		push1	
 		lofsa	fromElevator
 		push	
-		self	0x6
+		self	0x06
 code_160:
 		pushi	0x0174
 		push2	
@@ -134,7 +134,7 @@ code_160:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x6a
 		push	
 		pushi	0x22
@@ -159,13 +159,13 @@ code_160:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x26
 		push	
-		self	0x8
+		self	0x08
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x74, 0x4
 		push1	
 		pushi	0x16
@@ -179,7 +179,7 @@ code_160:
 		pushi	0x6b
 		push0	
 		lofsa	stalagmite
-		send	0x4
+		send	0x04
 code_382:
 		push1	
 		pushi	0x47
@@ -188,12 +188,12 @@ code_382:
 		pushi	0x6b
 		push0	
 		lofsa	stickyPlant
-		send	0x4
+		send	0x04
 code_399:
 		ret	
 
 rm30::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -236,8 +236,8 @@ code_456:
 code_475:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x74, 0x6
 code_486:
 		toss	
@@ -278,7 +278,7 @@ Overriden functions: 2
 
 .CODE
 stickyPlant::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -286,8 +286,8 @@ stickyPlant::266:
 		pushi	0x00d3
 		push1	
 		pushi	0x10
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_598
 		push2	
 		pushi	0x1e
@@ -299,15 +299,15 @@ code_598:
 		push1	
 		lofsa	takeThePlant
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_626
 code_613:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 code_626:
 		toss	
@@ -365,8 +365,8 @@ Overriden functions: 1
 
 .CODE
 takeThePlant::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -381,8 +381,8 @@ takeThePlant::138:
 		pushi	0x0085
 		pushi	0x0083
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_887
 code_776:
 		dup	
@@ -405,7 +405,7 @@ code_776:
 		pushi	0x04
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_887
 code_816:
@@ -416,14 +416,14 @@ code_816:
 		pushi	0x6c
 		push0	
 		lofsa	stickyPlant
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_887
 code_846:
 		dup	
@@ -433,8 +433,8 @@ code_846:
 		pushi	0x0145
 		push1	
 		pushi	0x10
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push1	
 		pushi	0x47
 		callb	0x8, 0x2
@@ -447,7 +447,7 @@ code_846:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_887:
 		toss	
 		ret	
@@ -479,7 +479,7 @@ Overriden functions: 1
 
 .CODE
 stalagmite::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -487,8 +487,8 @@ stalagmite::266:
 		pushi	0x77
 		push1	
 		pushSelf	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_989
 		push2	
 		pushi	0x1e
@@ -513,15 +513,15 @@ code_1001:
 		pushi	0x77
 		push1	
 		pushSelf	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_1034
 		pushi	0x008c
 		push1	
 		lofsa	takeTheRock
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_1125
 code_1034:
 		push2	
@@ -566,8 +566,8 @@ code_1093:
 code_1114:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_1125:
 		toss	
@@ -626,8 +626,8 @@ Overriden functions: 1
 
 .CODE
 takeTheRock::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -642,8 +642,8 @@ takeTheRock::138:
 		pushi	0x0086
 		pushi	0x0081
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1491
 code_1276:
 		dup	
@@ -651,7 +651,7 @@ code_1276:
 		eq?	
 		bnt	code_1300
 		push2	
-		lsg	0x0
+		lsg	0x00
 		lofsa	stalagmite
 		push	
 		callb	0xd, 0x4
@@ -679,7 +679,7 @@ code_1300:
 		push2	
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_1491
 code_1339:
@@ -696,7 +696,7 @@ code_1339:
 		pushi	0x07
 		push1	
 		pushi	0x03
-		lag	0x0
+		lag	0x00
 		send	0x12
 		ldi	0x02
 		aTop	0x10
@@ -719,19 +719,19 @@ code_1373:
 		pushi	0x6c
 		push0	
 		lofsa	stalagmite
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		pushi	0x0145
 		push1	
 		pushi	0x07
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push1	
 		pushi	0x16
 		callb	0x7, 0x2
@@ -753,7 +753,7 @@ code_1436:
 		pushi	0x6b
 		push0	
 		lofsa	stickyPlant
-		send	0x4
+		send	0x04
 		pushi	0x03
 		push1	
 		push1	
@@ -761,7 +761,7 @@ code_1436:
 		callb	0x1, 0x6
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		push1	
 		pushi	0x47
 		callb	0x7, 0x2
@@ -796,8 +796,8 @@ Overriden functions: 1
 
 .CODE
 fromGrateRoom::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -814,7 +814,7 @@ fromGrateRoom::138:
 		pushi	0x2d
 		pushi	0x0085
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x14
 		jmp	code_1619
 code_1594:
@@ -831,7 +831,7 @@ code_1594:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1619:
 		toss	
 		ret	
@@ -863,8 +863,8 @@ Overriden functions: 1
 
 .CODE
 fromElevator::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -908,7 +908,7 @@ fromElevator::138:
 		pushi	0x00e7
 		pushi	0x1e
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x46
 		jmp	code_2169
 code_1768:
@@ -926,7 +926,7 @@ code_1768:
 		pushi	0x00e7
 		pushi	0x28
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_2169
 code_1801:
@@ -944,7 +944,7 @@ code_1801:
 		pushi	0x00e7
 		pushi	0x34
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		pushi	0x2b
 		push1	
@@ -963,7 +963,7 @@ code_1801:
 		lofsa	elevdoor
 		push	
 		lofsa	elevdoor
-		send	0x8
+		send	0x08
 		jmp	code_2169
 code_1867:
 		dup	
@@ -972,8 +972,8 @@ code_1867:
 		bnt	code_1888
 		pushi	0x69
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		ldi	0x06
 		aTop	0x10
 		jmp	code_2169
@@ -1018,7 +1018,7 @@ code_1888:
 		pushi	0x03
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x46
 		jmp	code_2169
 code_1964:
@@ -1049,8 +1049,8 @@ code_1995:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		pushi	0x2b
 		push1	
 		pushi	0x01b1
@@ -1068,7 +1068,7 @@ code_1995:
 		lofsa	elevdoor
 		push	
 		lofsa	elevdoor
-		send	0x8
+		send	0x08
 		jmp	code_2169
 code_2050:
 		dup	
@@ -1116,8 +1116,8 @@ code_2119:
 		pushi	0x42
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x0f
 		aTop	0x10
 		jmp	code_2169
@@ -1129,10 +1129,10 @@ code_2148:
 		pushi	0x011b
 		push0	
 		lofsa	elevdoor
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2169:
 		toss	
 		ret	
@@ -1166,10 +1166,10 @@ Overriden functions: 1
 brokenRock::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	stalagmite
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -1206,16 +1206,16 @@ elevdoor::139:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		ret	
 
 elevdoor::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	shaftDoor
-		send	0x6
+		send	0x06
 		ret	
 
 		bnot	
@@ -1272,7 +1272,7 @@ Overriden functions: 2
 
 .CODE
 shaftDoor::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1305,8 +1305,8 @@ code_2490:
 code_2509:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2520:
 		toss	
@@ -1343,7 +1343,7 @@ Overriden functions: 1
 
 .CODE
 blueRocks::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1396,8 +1396,8 @@ code_2668:
 code_2687:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2698:
 		toss	
@@ -1434,7 +1434,7 @@ Overriden functions: 1
 
 .CODE
 greenRocks::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1493,8 +1493,8 @@ code_2827:
 code_2882:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2893:
 		toss	
@@ -1532,7 +1532,7 @@ Overriden functions: 1
 
 .CODE
 gravel::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1575,8 +1575,8 @@ code_3022:
 code_3041:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3052:
 		toss	
