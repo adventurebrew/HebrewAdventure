@@ -57,7 +57,7 @@ rm24::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x52
 		push	
 		pushi	0x22
@@ -80,10 +80,10 @@ rm24::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x22
 		push	
-		self	0x8
+		self	0x08
 		jmp	code_306
 code_180:
 		pushi	0x0174
@@ -124,7 +124,7 @@ code_180:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x42
 		push	
 		pushi	0x22
@@ -147,12 +147,12 @@ code_180:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x22
 		push	
-		self	0x8
+		self	0x08
 code_306:
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x22
 		eq?	
@@ -163,8 +163,8 @@ code_306:
 		callb	0x3, 0x0
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		jmp	code_501
 code_333:
 		dup	
@@ -178,8 +178,8 @@ code_333:
 		pushi	0x71
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		lt?	
 		bnt	code_385
 		pprev	
@@ -191,15 +191,15 @@ code_333:
 		pushi	0x04
 		push1	
 		pushi	0x0083
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		jmp	code_501
 code_385:
 		pushi	0x5a
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		lt?	
 		bnt	code_420
 		pprev	
@@ -211,14 +211,14 @@ code_385:
 		pushi	0x04
 		push1	
 		pushi	0x59
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		jmp	code_501
 code_420:
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		jmp	code_501
 code_430:
 		dup	
@@ -231,8 +231,8 @@ code_430:
 		callb	0x3, 0x0
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		jmp	code_501
 code_455:
 		dup	
@@ -245,42 +245,42 @@ code_455:
 		callb	0x3, 0x0
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		jmp	code_501
 code_480:
 		ldi	0x0a
 		aTop	0x16
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x008c
 		push1	
 		lofsa	outOfCave
 		push	
-		self	0x6
+		self	0x06
 code_501:
 		toss	
 		pushi	0x6b
 		push0	
 		lofsa	teeth
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	skull
-		send	0x4
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
 		ret	
 
 rm24::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_544
 		ldi	0x00
 		jmp	code_569
@@ -288,8 +288,8 @@ code_544:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x4000
 		and	
@@ -297,7 +297,7 @@ code_544:
 		pushi	0x0177
 		push1	
 		pushi	0x1c
-		self	0x6
+		self	0x06
 code_569:
 		pushi	0x3c
 		push0	
@@ -339,8 +339,8 @@ Overriden functions: 2
 
 .CODE
 outOfCave::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -357,7 +357,7 @@ outOfCave::138:
 		pushi	0x0099
 		pushi	0x6c
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x14
 		jmp	code_710
 code_694:
@@ -369,7 +369,7 @@ code_694:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_710:
 		toss	
 		ret	
@@ -405,18 +405,18 @@ teeth::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
-		lsp	0x1
+		send	0x04
+		send	0x04
+		aTop	0x0a
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -429,8 +429,8 @@ teeth::266:
 code_820:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_831:
 		toss	
@@ -473,18 +473,18 @@ skull::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
-		lsp	0x1
+		send	0x04
+		send	0x04
+		aTop	0x0a
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -497,8 +497,8 @@ skull::266:
 code_952:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_963:
 		toss	

@@ -9,8 +9,8 @@ OBJECT elwoodBlue of 0x2f
 
 .CODE
 bluesBrothers::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -26,7 +26,7 @@ bluesBrothers::138:
 		push1	
 		class	0x17
 		push	
-		pToa	0x8
+		pToa	0x08
 		send	0x12
 		push2	
 		pushi	0x2d
@@ -44,8 +44,8 @@ code_69:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
-		send	0x8
+		pToa	0x08
+		send	0x08
 		jmp	code_296
 code_91:
 		dup	
@@ -66,7 +66,7 @@ code_91:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
+		pToa	0x08
 		send	0x14
 		jmp	code_296
 code_127:
@@ -83,7 +83,7 @@ code_127:
 		pushi	0x4e
 		push0	
 		lag	0x64
-		send	0xa
+		send	0x0a
 		jmp	code_171
 code_157:
 		pushi	0x00a1
@@ -92,7 +92,7 @@ code_157:
 		pushi	0x4e
 		push0	
 		lag	0x64
-		send	0xa
+		send	0x0a
 code_171:
 		pushi	0x00a0
 		push1	
@@ -113,7 +113,7 @@ code_171:
 		callk	0x3c, 0x4
 		push	
 		pushSelf	
-		pToa	0x8
+		pToa	0x08
 		send	0x16
 		jmp	code_296
 code_209:
@@ -130,7 +130,7 @@ code_209:
 		pushi	0x4e
 		push1	
 		lag	0x64
-		send	0xa
+		send	0x0a
 		jmp	code_253
 code_239:
 		pushi	0x00a1
@@ -139,10 +139,10 @@ code_239:
 		pushi	0x4e
 		push1	
 		lag	0x64
-		send	0xa
+		send	0x0a
 code_253:
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		pTos	0x1a
@@ -165,7 +165,7 @@ code_283:
 		class	0x1b
 		push	
 		pushSelf	
-		pToa	0x8
+		pToa	0x08
 		send	0x14
 code_296:
 		toss	
@@ -198,7 +198,7 @@ Overriden functions: 1
 
 .CODE
 jakeBlue::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -243,7 +243,7 @@ code_435:
 		ldi	0x04
 		eq?	
 		bnt	code_639
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -336,8 +336,8 @@ code_604:
 code_624:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_635:
 		toss	
@@ -345,8 +345,8 @@ code_635:
 code_639:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_650:
 		toss	
@@ -406,7 +406,7 @@ Overriden functions: 1
 
 .CODE
 elwoodBlue::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -451,7 +451,7 @@ code_844:
 		ldi	0x04
 		eq?	
 		bnt	code_1048
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -544,8 +544,8 @@ code_1013:
 code_1033:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_1044:
 		toss	
@@ -553,8 +553,8 @@ code_1044:
 code_1048:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_1059:
 		toss	

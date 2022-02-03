@@ -21,14 +21,14 @@ rm12::107:
 		pushi	0x0187
 		push1	
 		pushi	0x02bc
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push2	
 		pushi	0x0229
 		push1	
@@ -39,26 +39,26 @@ rm12::107:
 		class	0x17
 		push	
 		lofsa	buttons
-		send	0x6
+		send	0x06
 		pushi	0x0094
 		push1	
 		class	0x17
 		push	
 		lofsa	motors
-		send	0x6
+		send	0x06
 code_102:
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	buttons
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	motors
-		send	0x8
+		send	0x08
 		push1	
 		pushi	0x0a
 		callb	0x6, 0x2
@@ -67,7 +67,7 @@ code_102:
 		pushi	0x6b
 		push0	
 		lofsa	bayDoors
-		send	0x4
+		send	0x04
 		jmp	code_162
 code_147:
 		pushi	0x0094
@@ -77,7 +77,7 @@ code_147:
 		pushi	0x6b
 		push0	
 		lofsa	stars
-		send	0xa
+		send	0x0a
 code_162:
 		lsg	0xac
 		ldi	0x1e
@@ -86,16 +86,16 @@ code_162:
 		pushi	0x6b
 		push0	
 		lofsa	tv
-		send	0x4
+		send	0x04
 		pushi	0x0123
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		push	
 		pushi	0x0123
 		push0	
 		lofsa	tv
-		send	0x4
+		send	0x04
 		ge?	
 		bnt	code_213
 		pushi	0x008c
@@ -103,7 +103,7 @@ code_162:
 		lofsa	tvScript
 		push	
 		lofsa	tv
-		send	0x6
+		send	0x06
 code_213:
 		pushi	0x0174
 		push1	
@@ -149,10 +149,10 @@ code_213:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x4e
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x73
 		push2	
 		lofsa	monitorFeat
@@ -163,7 +163,7 @@ code_213:
 		push1	
 		pushi	0x6b
 		lag	0x20
-		send	0xe
+		send	0x0e
 		push1	
 		pushi	0x0a
 		callb	0x6, 0x2
@@ -178,7 +178,7 @@ code_213:
 		push1	
 		pushi	0x6b
 		lag	0x20
-		send	0xe
+		send	0x0e
 code_363:
 		pushi	0x6b
 		push0	
@@ -187,8 +187,8 @@ code_363:
 		pushi	0x03
 		push2	
 		lofsa	podDoor
-		send	0xc
-		lsg	0xc
+		send	0x0c
+		lsg	0x0c
 		dup	
 		ldi	0x0d
 		eq?	
@@ -197,12 +197,12 @@ code_363:
 		push1	
 		push0	
 		lofsa	podDoor
-		send	0x6
+		send	0x06
 		pushi	0x008c
 		push1	
 		lofsa	exitPod
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x05
 		push1	
 		pushi	0x0b
@@ -221,7 +221,7 @@ code_363:
 		push0	
 		pushi	0x69
 		push0	
-		lag	0x0
+		lag	0x00
 		send	0x24
 		jmp	code_542
 code_442:
@@ -247,13 +247,13 @@ code_442:
 		pushi	0x019a
 		push1	
 		push0	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		pushi	0x008c
 		push1	
 		lofsa	explode
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_542
 code_499:
 		pushi	0x12
@@ -263,8 +263,8 @@ code_499:
 		push2	
 		pushi	0x10
 		pushi	0x009d
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		push0	
 		callb	0x3, 0x0
 		jmp	code_542
@@ -276,14 +276,14 @@ code_525:
 		push2	
 		pushi	0x10
 		pushi	0x009d
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 code_542:
 		toss	
 		ret	
 
 rm12::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_554
 		ldi	0x00
 		jmp	code_633
@@ -291,8 +291,8 @@ code_554:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x04
 		and	
@@ -301,14 +301,14 @@ code_554:
 		push1	
 		lofsa	fallingScript
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_633
 code_583:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x02
 		and	
@@ -320,8 +320,8 @@ code_583:
 		push0	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x57
 		ge?	
@@ -332,7 +332,7 @@ code_628:
 		ldi	0x06
 code_630:
 		push	
-		self	0xa
+		self	0x0a
 code_633:
 		pushi	0x3c
 		push0	
@@ -375,8 +375,8 @@ Overriden functions: 2
 .CODE
 tvScript::138:
 		link	0x02
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -388,7 +388,7 @@ tvScript::138:
 		push	
 		pushSelf	
 		lofsa	tv
-		send	0x8
+		send	0x08
 		jmp	code_810
 code_746:
 		dup	
@@ -411,7 +411,7 @@ code_765:
 		class	0x17
 		push	
 		lofsa	tv
-		send	0x6
+		send	0x06
 		push2	
 		push1	
 		pushi	0x04
@@ -426,7 +426,7 @@ code_796:
 		pushi	0x008a
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 code_810:
 		toss	
 		ret	
@@ -457,8 +457,8 @@ Overriden functions: 1
 
 .CODE
 fallingScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -485,7 +485,7 @@ fallingScript::138:
 		pushi	0x03
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x24
 		jmp	code_1072
 code_923:
@@ -508,8 +508,8 @@ code_945:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		jmp	code_1072
 code_961:
 		dup	
@@ -531,8 +531,8 @@ code_961:
 		push1	
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		add	
@@ -551,11 +551,11 @@ code_961:
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x00fa
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_1072
 code_1043:
@@ -574,7 +574,7 @@ code_1043:
 		callb	0xa, 0xa
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1072:
 		toss	
 		ret	
@@ -605,8 +605,8 @@ Overriden functions: 1
 
 .CODE
 enterPod::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -618,7 +618,7 @@ enterPod::138:
 		push1	
 		pushi	0x07
 		lofsa	podDoor
-		send	0x6
+		send	0x06
 		pushi	0x12
 		push1	
 		push0	
@@ -639,7 +639,7 @@ enterPod::138:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x26
 		jmp	code_1286
 code_1194:
@@ -649,8 +649,8 @@ code_1194:
 		bnt	code_1241
 		pushi	0x69
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x0144
@@ -667,7 +667,7 @@ code_1194:
 		push	
 		pushSelf	
 		lofsa	podDoor
-		send	0x8
+		send	0x08
 		jmp	code_1286
 code_1241:
 		dup	
@@ -694,8 +694,8 @@ code_1269:
 		pushi	0x0177
 		push1	
 		pushi	0x0d
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_1286:
 		toss	
 		ret	
@@ -726,8 +726,8 @@ Overriden functions: 1
 
 .CODE
 exitPod::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -738,8 +738,8 @@ exitPod::138:
 		pushi	0x12
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1555
@@ -764,7 +764,7 @@ code_1377:
 		push	
 		pushSelf	
 		lofsa	podDoor
-		send	0x8
+		send	0x08
 		jmp	code_1555
 code_1417:
 		dup	
@@ -774,7 +774,7 @@ code_1417:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x00c0
 		push0	
 		pushi	0x42
@@ -790,7 +790,7 @@ code_1417:
 		pushi	0x06
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1c
 		jmp	code_1555
 code_1465:
@@ -806,8 +806,8 @@ code_1465:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		jmp	code_1555
 code_1492:
 		dup	
@@ -826,8 +826,8 @@ code_1492:
 		pushi	0x00a6
 		pushi	0x7c
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1555
 code_1529:
 		dup	
@@ -837,13 +837,13 @@ code_1529:
 		pushi	0x12
 		push1	
 		pushi	0x8000
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1555:
 		toss	
 		ret	
@@ -875,8 +875,8 @@ Overriden functions: 1
 
 .CODE
 explode::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -900,7 +900,7 @@ code_1635:
 		pushi	0x04
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_1781
 code_1667:
@@ -928,7 +928,7 @@ code_1667:
 		pushi	0x07
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_1781
 code_1716:
@@ -954,8 +954,8 @@ code_1716:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		jmp	code_1781
 code_1761:
 		dup	
@@ -1000,7 +1000,7 @@ Overriden functions: 1
 
 .CODE
 bayDoors::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1033,8 +1033,8 @@ code_1882:
 code_1901:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2e, 0x6
 code_1912:
 		toss	
@@ -1089,17 +1089,17 @@ Overriden functions: 1
 podDoor::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		ret	
 
 podDoor::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1108,14 +1108,14 @@ podDoor::266:
 		push1	
 		lofsa	enterPod
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2067
 code_2056:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_2067:
 		toss	
@@ -1175,7 +1175,7 @@ Overriden functions: 2
 
 .CODE
 tv::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1198,8 +1198,8 @@ code_2213:
 code_2225:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_2236:
 		toss	
@@ -1457,10 +1457,10 @@ Overriden functions: 0
 monitorFeat::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	tv
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -1496,17 +1496,17 @@ Overriden functions: 1
 podFeat::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		ret	
 
 podFeat::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1515,14 +1515,14 @@ podFeat::266:
 		push1	
 		lofsa	enterPod
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2909
 code_2898:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2909:
 		toss	

@@ -4,19 +4,19 @@ LOFSA_RELATIVE = False
 
 .CODE
 PolyPath::107:
-		lap	0x0
+		lap	0x00
 		bnt	code_151
-		lap	0x1
-		aTop	0x8
-		lsp	0x0
+		lap	0x01
+		aTop	0x08
+		lsp	0x00
 		ldi	0x01
 		gt?	
 		bnt	code_151
-		lsp	0x0
+		lsp	0x00
 		ldi	0x06
 		ge?	
 		bnt	code_36
-		lap	0x6
+		lap	0x06
 		aTop	0x2e
 		jmp	code_56
 code_36:
@@ -27,8 +27,8 @@ code_36:
 		bnt	code_56
 		pushi	0x00e8
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		aTop	0x2e
 code_56:
 		pToa	0x28
@@ -41,39 +41,39 @@ code_68:
 		pushi	0x07
 		pushi	0x04
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		pushi	0x03
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
-		lap	0x2
+		lap	0x02
 		aTop	0x2a
 		push	
-		lap	0x3
+		lap	0x03
 		aTop	0x2c
 		push	
 		pToa	0x2e
 		bnt	code_106
 		pushi	0x1b
 		push0	
-		send	0x4
+		send	0x04
 code_106:
 		push	
 		pToa	0x2e
 		bnt	code_117
 		pushi	0x59
 		push0	
-		send	0x4
+		send	0x04
 code_117:
 		push	
-		lsp	0x0
+		lsp	0x00
 		ldi	0x05
 		ge?	
 		bnt	code_131
-		lap	0x5
+		lap	0x05
 		jmp	code_133
 code_131:
 		ldi	0x01
@@ -81,16 +81,16 @@ code_133:
 		push	
 		callk	0x77, 0xe
 		aTop	0x28
-		lsp	0x0
+		lsp	0x00
 		ldi	0x03
 		gt?	
 		bnt	code_151
-		lap	0x4
-		aTop	0xa
+		lap	0x04
+		aTop	0x0a
 code_151:
 		pushi	0x00e0
 		push0	
-		self	0x4
+		self	0x04
 		pushi	0x6b
 		push0	
 		super	0x1d, 0x4
@@ -124,13 +124,13 @@ PolyPath::224:
 		pTos	0x28
 		pTos	0x26
 		calle	0x03e7, 0x0006, 0x04
-		aTop	0xc
+		aTop	0x0c
 		push2	
 		pTos	0x28
 		ipToa	0x26
 		push	
 		calle	0x03e7, 0x0006, 0x04
-		aTop	0xe
+		aTop	0x0e
 		ipToa	0x26
 code_235:
 		ret	
@@ -151,7 +151,7 @@ PolyPath::100:
 code_264:
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_269:
 		ret	
 

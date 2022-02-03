@@ -24,30 +24,30 @@ rm11::107:
 		pushi	0x011b
 		push0	
 		lofsa	helmet
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	spaceSuit
-		send	0x8
+		send	0x08
 code_67:
 		pushi	0x6b
 		push0	
 		lofsa	drawerFeature
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	drawerButton
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	BayButton
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	controlPanel
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -55,7 +55,7 @@ code_67:
 		pushi	0x6b
 		push0	
 		lofsa	control
-		send	0xa
+		send	0x0a
 		push1	
 		pushi	0x0a
 		callb	0x6, 0x2
@@ -65,12 +65,12 @@ code_67:
 		class	0x17
 		push	
 		lofsa	lights
-		send	0x6
+		send	0x06
 code_135:
 		pushi	0x6b
 		push0	
 		lofsa	lights
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x0229
 		pushi	0x0080
@@ -93,13 +93,13 @@ code_135:
 		pushi	0x03
 		push2	
 		lofsa	helmet
-		send	0x8
+		send	0x08
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
 		lofsa	spaceSuit
-		send	0x8
+		send	0x08
 		jmp	code_220
 code_208:
 		pushi	0x6b
@@ -107,14 +107,14 @@ code_208:
 		pushi	0x011b
 		push0	
 		lofsa	closetDoor
-		send	0x8
+		send	0x08
 code_220:
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	drawer
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011e
@@ -122,7 +122,7 @@ code_220:
 		pushi	0x00db
 		push0	
 		lofsa	bigRedDoor
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x0117
 		push1	
@@ -210,7 +210,7 @@ code_220:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x92
 		push	
 		pushi	0x22
@@ -237,21 +237,21 @@ code_220:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x2a
 		push	
-		self	0xe
+		self	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x12
 		push1	
 		push0	
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x0c
 		eq?	
 		bnt	code_538
@@ -261,11 +261,11 @@ code_220:
 		push1	
 		lofsa	enterFromHanger
 		push	
-		self	0x6
+		self	0x06
 code_538:
 		pushi	0x020c
 		push1	
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x0c
 		ne?	
 		bnt	code_555
@@ -292,7 +292,7 @@ code_557:
 		pushi	0x2b
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0163
 		ne?	
@@ -314,7 +314,7 @@ rm11::108:
 		pushi	0x2b
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0163
 		ne?	
@@ -325,7 +325,7 @@ rm11::108:
 		pushi	0x009d
 		push0	
 		lag	0x64
-		send	0xa
+		send	0x0a
 code_646:
 		pushi	0x6c
 		push0	
@@ -333,7 +333,7 @@ code_646:
 		ret	
 
 rm11::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_663
 		ldi	0x00
 		jmp	code_684
@@ -341,12 +341,12 @@ code_663:
 		pushi	0x021a
 		push0	
 		lofsa	elevatorDoor
-		send	0x4
+		send	0x04
 		bnt	code_684
 		pushi	0x00b3
 		push0	
 		lofsa	elevatorDoor
-		send	0x4
+		send	0x04
 code_684:
 		pushi	0x3c
 		push0	
@@ -354,7 +354,7 @@ code_684:
 		ret	
 
 rm11::380:
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x0a
 		eq?	
 		bnt	code_703
@@ -404,16 +404,16 @@ putOnSpacesuit::60:
 		super	0x6, 0x4
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x01
 		eq?	
 		bnt	code_849
 		pushi	0x07
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		eq?	
@@ -422,8 +422,8 @@ putOnSpacesuit::60:
 		push1	
 		lofsa	spaceSuit
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_849
 		pushi	0x0112
 		push1	
@@ -431,20 +431,20 @@ putOnSpacesuit::60:
 		pushi	0x6c
 		push0	
 		lofsa	spaceSuit
-		send	0xa
+		send	0x0a
 code_849:
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		eq?	
 		bnt	code_906
 		pushi	0x07
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x03
 		eq?	
@@ -453,8 +453,8 @@ code_849:
 		push1	
 		lofsa	helmet
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_906
 		pushi	0x0112
 		push1	
@@ -462,13 +462,13 @@ code_849:
 		pushi	0x6c
 		push0	
 		lofsa	helmet
-		send	0xa
+		send	0x0a
 code_906:
 		ret	
 
 putOnSpacesuit::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -497,7 +497,7 @@ putOnSpacesuit::138:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_1102
 code_966:
@@ -516,7 +516,7 @@ code_966:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x14
 		jmp	code_1102
 code_997:
@@ -530,7 +530,7 @@ code_997:
 		push	
 		pushSelf	
 		lofsa	closetDoor
-		send	0x8
+		send	0x08
 		pushi	0x0229
 		push1	
 		pushi	0x0229
@@ -539,7 +539,7 @@ code_997:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0xff7f
 		and	
@@ -548,7 +548,7 @@ code_997:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		jmp	code_1102
 code_1054:
 		dup	
@@ -558,11 +558,11 @@ code_1054:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x011b
 		push0	
 		lofsa	closetDoor
-		send	0x4
+		send	0x04
 		pushi	0x03
 		dup	
 		push1	
@@ -575,7 +575,7 @@ code_1054:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1102:
 		toss	
 		ret	
@@ -607,8 +607,8 @@ Overriden functions: 2
 
 .CODE
 leaveToHanger::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -620,24 +620,24 @@ leaveToHanger::138:
 		push0	
 		pushi	0x00da
 		push0	
-		lag	0x0
-		send	0x4
-		send	0x4
-		sal	0x0
+		lag	0x00
+		send	0x04
+		send	0x04
+		sal	0x00
 		pushi	0x01b9
 		push0	
 		pushi	0x00da
 		push0	
-		lag	0x0
-		send	0x4
-		send	0x4
-		sal	0x1
+		lag	0x00
+		send	0x04
+		send	0x04
+		sal	0x01
 		pushi	0x05
 		push1	
 		pushi	0x09
 		pushi	0x00a0
 		push1	
-		lsl	0x0
+		lsl	0x00
 		ldi	0x00
 		eq?	
 		bnt	code_1236
@@ -655,7 +655,7 @@ code_1238:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_1577
 code_1258:
@@ -689,7 +689,7 @@ code_1258:
 		push	
 		pushSelf	
 		lofsa	bigRedDoor
-		send	0x8
+		send	0x08
 		jmp	code_1577
 code_1315:
 		dup	
@@ -701,15 +701,15 @@ code_1315:
 		pushi	0x3f
 		push0	
 		lofsa	bigRedDoor
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x0094
 		push2	
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		jmp	code_1577
 code_1349:
 		dup	
@@ -722,25 +722,25 @@ code_1349:
 		push1	
 		pushi	0x3f
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
 		push	
 		lofsa	bigRedDoor
-		send	0x6
+		send	0x06
 		pushi	0x011f
 		push1	
 		push1	
 		pushi	0x05
 		push1	
-		lsl	0x0
+		lsl	0x00
 		pushi	0x0094
 		push2	
 		class	0x56
 		push	
-		lsl	0x1
+		lsl	0x01
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -748,7 +748,7 @@ code_1349:
 		pushi	0x00dc
 		pushi	0x72
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_1577
 code_1420:
@@ -763,8 +763,8 @@ code_1420:
 		pushi	0x0110
 		pushi	0x72
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1577
 code_1448:
 		dup	
@@ -790,7 +790,7 @@ code_1448:
 		push	
 		pushSelf	
 		lofsa	bigRedDoor
-		send	0xe
+		send	0x0e
 		push1	
 		pushi	0x0a
 		callb	0x6, 0x2
@@ -798,7 +798,7 @@ code_1448:
 		pushi	0x009d
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 code_1507:
 		pushi	0x42
 		push1	
@@ -810,7 +810,7 @@ code_1507:
 		pushi	0x0132
 		pushi	0x72
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_1577
 code_1533:
@@ -831,13 +831,13 @@ code_1545:
 		pushi	0x011f
 		push1	
 		push0	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		pushi	0x0177
 		push1	
 		pushi	0x0c
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_1577:
 		toss	
 		ret	
@@ -869,8 +869,8 @@ Overriden functions: 1
 
 .CODE
 enterFromHanger::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -885,7 +885,7 @@ enterFromHanger::138:
 		pushi	0x3f
 		push0	
 		lofsa	bigRedDoor
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
@@ -897,7 +897,7 @@ enterFromHanger::138:
 		pushi	0x0104
 		pushi	0x72
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_1825
 code_1696:
@@ -921,7 +921,7 @@ code_1696:
 		push	
 		pushSelf	
 		lofsa	bigRedDoor
-		send	0x8
+		send	0x08
 		jmp	code_1825
 code_1736:
 		dup	
@@ -938,7 +938,7 @@ code_1736:
 		pushi	0x00d5
 		pushi	0x72
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_1825
 code_1769:
@@ -962,7 +962,7 @@ code_1769:
 		push	
 		pushSelf	
 		lofsa	bigRedDoor
-		send	0x8
+		send	0x08
 		jmp	code_1825
 code_1809:
 		dup	
@@ -973,7 +973,7 @@ code_1809:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1825:
 		toss	
 		ret	
@@ -1010,16 +1010,16 @@ openClosetDoor::60:
 		super	0x6, 0x4
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x01
 		eq?	
 		bnt	code_1947
 		pushi	0x07
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x01
 		eq?	
@@ -1028,8 +1028,8 @@ openClosetDoor::60:
 		push1	
 		lofsa	spaceSuit
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		not	
 		bnt	code_1947
 		pushi	0x6b
@@ -1037,20 +1037,20 @@ openClosetDoor::60:
 		pushi	0x011b
 		push0	
 		lofsa	spaceSuit
-		send	0x8
+		send	0x08
 code_1947:
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		eq?	
 		bnt	code_2002
 		pushi	0x07
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x03
 		eq?	
@@ -1059,8 +1059,8 @@ code_1947:
 		push1	
 		lofsa	helmet
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		not	
 		bnt	code_2002
 		pushi	0x6b
@@ -1068,13 +1068,13 @@ code_1947:
 		pushi	0x011b
 		push0	
 		lofsa	helmet
-		send	0x8
+		send	0x08
 code_2002:
 		ret	
 
 openClosetDoor::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1084,8 +1084,8 @@ openClosetDoor::138:
 		push2	
 		push0	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_2530
 code_2028:
 		dup	
@@ -1117,7 +1117,7 @@ code_2060:
 		push2	
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_2530
 code_2083:
@@ -1139,15 +1139,15 @@ code_2083:
 		push1	
 		class	0x1b
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
 		lofsa	closetDoor
-		send	0x8
+		send	0x08
 		jmp	code_2530
 code_2134:
 		dup	
@@ -1157,7 +1157,7 @@ code_2134:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x0229
 		push1	
 		pushi	0x0229
@@ -1166,7 +1166,7 @@ code_2134:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0080
 		or	
@@ -1175,12 +1175,12 @@ code_2134:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		pushi	0x011f
 		push1	
 		push1	
 		lofsa	closetDoor
-		send	0x6
+		send	0x06
 		push1	
 		pushi	0x10
 		callb	0x6, 0x2
@@ -1197,8 +1197,8 @@ code_2134:
 		pushi	0x009f
 		pushi	0x50
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_2530
 code_2232:
 		push2	
@@ -1219,7 +1219,7 @@ code_2232:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x40
 		or	
@@ -1228,20 +1228,20 @@ code_2232:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 code_2289:
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
 		lofsa	helmet
-		send	0x8
+		send	0x08
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
 		lofsa	spaceSuit
-		send	0x8
+		send	0x08
 		pushi	0x03
 		dup	
 		push0	
@@ -1276,7 +1276,7 @@ code_2329:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_2530
 code_2381:
@@ -1284,7 +1284,7 @@ code_2381:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_2530
 code_2393:
 		dup	
@@ -1302,7 +1302,7 @@ code_2393:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x14
 		jmp	code_2530
 code_2425:
@@ -1316,7 +1316,7 @@ code_2425:
 		push	
 		pushSelf	
 		lofsa	closetDoor
-		send	0x8
+		send	0x08
 		pushi	0x0229
 		push1	
 		pushi	0x0229
@@ -1325,7 +1325,7 @@ code_2425:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0xff7f
 		and	
@@ -1334,7 +1334,7 @@ code_2425:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		push1	
 		pushi	0x10
 		callb	0x8, 0x2
@@ -1352,16 +1352,16 @@ code_2497:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x011b
 		push0	
 		lofsa	closetDoor
-		send	0x4
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2530:
 		toss	
 		ret	
@@ -1393,8 +1393,8 @@ Overriden functions: 2
 
 .CODE
 openDrawer::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1427,7 +1427,7 @@ code_2634:
 		pushi	0x05
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_2866
 code_2658:
@@ -1450,7 +1450,7 @@ code_2658:
 		pushi	0x07
 		push0	
 		lofsa	drawer
-		send	0x4
+		send	0x04
 		bnt	code_2702
 		class	0x1b
 		jmp	code_2704
@@ -1460,7 +1460,7 @@ code_2704:
 		push	
 		pushSelf	
 		lofsa	drawer
-		send	0x8
+		send	0x08
 		jmp	code_2866
 code_2714:
 		dup	
@@ -1470,7 +1470,7 @@ code_2714:
 		pushi	0x07
 		push0	
 		lofsa	drawer
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_2748
 		pushi	0x0094
@@ -1478,15 +1478,15 @@ code_2714:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_2866
 code_2748:
 		pushi	0x00d3
 		push1	
 		push2	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		not	
 		bnt	code_2801
 		push2	
@@ -1501,14 +1501,14 @@ code_2748:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		push2	
 		push2	
 		pushi	0x0089
 		callb	0xb, 0x4
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_2866
 code_2801:
 		push2	
@@ -1518,7 +1518,7 @@ code_2801:
 		ldi	0x03
 		aTop	0x10
 		ldi	0x00
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_2866
 code_2820:
 		dup	
@@ -1546,7 +1546,7 @@ code_2852:
 code_2861:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2866:
 		toss	
 		ret	
@@ -1577,7 +1577,7 @@ Overriden functions: 1
 
 .CODE
 spaceSuit::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1585,27 +1585,27 @@ spaceSuit::266:
 		pushi	0x07
 		push0	
 		lofsa	closetDoor
-		send	0x4
+		send	0x04
 		bnt	code_2961
 		pushi	0x008c
 		push1	
 		lofsa	putOnSpacesuit
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2986
 code_2961:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2e, 0x6
 		jmp	code_2986
 code_2975:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2e, 0x6
 code_2986:
 		toss	
@@ -1658,23 +1658,23 @@ Overriden functions: 1
 
 .CODE
 helmet::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
 		bnt	code_3113
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	spaceSuit
-		send	0x6
+		send	0x06
 		jmp	code_3124
 code_3113:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2e, 0x6
 code_3124:
 		toss	
@@ -1770,7 +1770,7 @@ Overriden functions: 0
 
 .CODE
 bigRedDoor::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1781,14 +1781,14 @@ bigRedDoor::266:
 		push1	
 		lofsa	leaveToHanger
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3357
 code_3346:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_3357:
 		toss	
@@ -1851,15 +1851,15 @@ drawer::107:
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		ret	
 
 drawer::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1868,14 +1868,14 @@ drawer::266:
 		push1	
 		lofsa	openDrawer
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3523
 code_3512:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_3523:
 		toss	
@@ -1939,15 +1939,15 @@ closetDoor::107:
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		ret	
 
 closetDoor::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1961,21 +1961,21 @@ closetDoor::266:
 		push1	
 		lofsa	openClosetDoor
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3717
 code_3692:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 		jmp	code_3717
 code_3706:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_3717:
 		toss	
@@ -1984,7 +1984,7 @@ code_3717:
 closetDoor::148:
 		pushi	0x0094
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x2b
 		push1	
@@ -2002,7 +2002,7 @@ closetDoor::139:
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		ret	
 
 		bnot	
@@ -2063,12 +2063,12 @@ Overriden functions: 4
 lights::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		push1	
 		push2	
-		self	0x6
+		self	0x06
 		ret	
 
 
@@ -2125,27 +2125,27 @@ Overriden functions: 1
 control::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		push2	
 		push2	
 		pushi	0x03
-		self	0x8
+		self	0x08
 		ret	
 
 control::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
 		bnt	code_4047
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	controlPanel
-		send	0x6
+		send	0x06
 		jmp	code_4081
 code_4047:
 		dup	
@@ -2154,16 +2154,16 @@ code_4047:
 		bnt	code_4070
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	controlPanel
-		send	0x6
+		send	0x06
 		jmp	code_4081
 code_4070:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_4081:
 		toss	
@@ -2293,17 +2293,17 @@ Overriden functions: 0
 controlPanel::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		push2	
 		pushi	0x03
-		self	0x8
+		self	0x08
 		ret	
 
 controlPanel::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -2316,8 +2316,8 @@ controlPanel::266:
 code_4379:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_4390:
 		toss	
@@ -2359,30 +2359,30 @@ drawerButton::107:
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 
 drawerButton::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x02
 		ne?	
 		bnt	code_4506
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	drawer
-		send	0x6
+		send	0x06
 		jmp	code_4517
 code_4506:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_4517:
 		ret	
@@ -2421,17 +2421,17 @@ Overriden functions: 2
 BayButton::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		push2	
 		pushi	0x03
-		self	0x8
+		self	0x08
 		ret	
 
 BayButton::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -2442,14 +2442,14 @@ BayButton::266:
 		push1	
 		lofsa	leaveToHanger
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4647
 code_4636:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_4647:
 		toss	
@@ -2488,7 +2488,7 @@ Overriden functions: 2
 
 .CODE
 drawerFeature::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x02
 		eq?	
 		bnt	code_4766
@@ -2499,8 +2499,8 @@ drawerFeature::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
@@ -2509,15 +2509,15 @@ drawerFeature::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		self	0xc
+		self	0x0c
 code_4766:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 		ret	
 

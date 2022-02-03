@@ -10,13 +10,13 @@ Elevator::107:
 		link	0x01
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pTos	0x58
 		lag	0xa6
 		eq?	
 		bnt	code_64
-		lsg	0xb
+		lsg	0x0b
 		ldi	0x0a
 		eq?	
 		bnt	code_53
@@ -24,19 +24,19 @@ Elevator::107:
 		push2	
 		pushi	0x03
 		pushi	0x04
-		self	0x8
+		self	0x08
 		jmp	code_73
 code_53:
 		pushi	0x0117
 		push1	
 		pushi	0x03
-		self	0x6
+		self	0x06
 		jmp	code_73
 code_64:
 		pushi	0x0112
 		push1	
 		pushi	0x6789
-		self	0x6
+		self	0x06
 code_73:
 		pToa	0x5c
 		bnt	code_119
@@ -49,8 +49,8 @@ code_73:
 		pushi	0x0e
 		pushi	0x011a
 		push2	
-		pTos	0x8
-		pTos	0xa
+		pTos	0x08
+		pTos	0x0a
 		pushi	0x03
 		pTos	0x2e
 		pTos	0x30
@@ -69,11 +69,11 @@ code_119:
 		pTos	0x30
 		pTos	0x32
 		callk	0xf, 0x6
-		sat	0x0
-		pToa	0xa
+		sat	0x00
+		pToa	0x0a
 		aTop	0x76
-		pTos	0x8
-		lst	0x0
+		pTos	0x08
+		lst	0x00
 		ldi	0x02
 		div	
 		push	
@@ -81,8 +81,8 @@ code_119:
 		sub	
 		sub	
 		aTop	0x78
-		pTos	0x8
-		lst	0x0
+		pTos	0x08
+		lst	0x00
 		ldi	0x02
 		div	
 		push	
@@ -90,15 +90,15 @@ code_119:
 		sub	
 		add	
 		aTop	0x7c
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x0a
 		add	
 		aTop	0x7a
-		pToa	0x8
+		pToa	0x08
 		aTop	0x22
-		pTos	0xa
+		pTos	0x0a
 		pTos	0x7a
-		pToa	0xa
+		pToa	0x0a
 		sub	
 		push	
 		ldi	0x02
@@ -109,10 +109,10 @@ code_119:
 		push0	
 		pushi	0x0214
 		push1	
-		pTos	0x8
+		pTos	0x08
 		pushi	0x0215
 		push1	
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x07
 		sub	
 		push	
@@ -128,17 +128,17 @@ code_119:
 		pushi	0x00e2
 		push1	
 		pushi	0x00b4
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		pushi	0x00b3
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_255
 code_248:
 		pushi	0x011f
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 code_255:
 		ret	
 
@@ -169,14 +169,14 @@ code_293:
 		aTop	0x70
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 code_307:
 		pToa	0x60
 		not	
 		bnt	code_319
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 code_319:
 		ret	
 
@@ -185,7 +185,7 @@ Elevator::108:
 		bnt	code_330
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_330:
 		pushi	0x6c
 		push0	
@@ -193,7 +193,7 @@ code_330:
 		ret	
 
 Elevator::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -204,21 +204,21 @@ Elevator::266:
 		pTos	0x76
 		pTos	0x7c
 		pTos	0x7a
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		bnt	code_379
 		push0	
 		callb	0x2, 0x0
 		pushi	0x00b3
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_509
 code_379:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 		jmp	code_509
 code_395:
@@ -228,7 +228,7 @@ code_395:
 		bnt	code_496
 		pToa	0x5e
 		bnt	code_480
-		lsp	0x2
+		lsp	0x02
 		ldi	0x01
 		eq?	
 		bnt	code_464
@@ -242,11 +242,11 @@ code_395:
 		push2	
 		pTos	0x68
 		pushSelf	
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		jmp	code_509
 code_442:
-		pToa	0x0
+		pToa	0x00
 		bnt	code_509
 		ldi	0x00
 		aTop	0x5e
@@ -254,30 +254,30 @@ code_442:
 		callb	0x2, 0x0
 		pushi	0x00b3
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_509
 code_464:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 		jmp	code_509
 code_480:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 		jmp	code_509
 code_496:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 code_509:
 		toss	
@@ -303,7 +303,7 @@ code_509:
 Elevator::538:
 		link	0x01
 		ldi	0x00
-		sat	0x0
+		sat	0x00
 		pToa	0x5a
 		not	
 		bnt	code_672
@@ -317,14 +317,14 @@ Elevator::538:
 		pTos	0x76
 		pTos	0x7c
 		pTos	0x7a
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		bnt	code_672
 		pushi	0x04
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x07
 		pushi	0x03
@@ -337,22 +337,22 @@ Elevator::538:
 		push	
 		pushi	0x00da
 		push0	
-		lag	0x0
-		send	0x4
-		send	0x6
+		lag	0x00
+		send	0x04
+		send	0x06
 		bnt	code_672
 		pushi	0x3b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		bnt	code_672
 		pushi	0x2d
 		push0	
 		pushi	0x3b
 		push0	
-		lag	0x0
-		send	0x4
-		send	0x4
+		lag	0x00
+		send	0x04
+		send	0x04
 		push	
 		class	0x2b
 		ne?	
@@ -360,16 +360,16 @@ Elevator::538:
 		pushi	0x0108
 		push0	
 		class	0x2b
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		ne?	
 		bnt	code_672
 		ldi	0x01
 		aTop	0x5a
-		sat	0x0
+		sat	0x00
 code_672:
-		lat	0x0
+		lat	0x00
 		ret	
 
 Elevator::179:
@@ -400,7 +400,7 @@ code_717:
 code_726:
 		pushi	0x011d
 		push0	
-		self	0x4
+		self	0x04
 		push0	
 		callb	0x3, 0x0
 		jmp	code_772
@@ -420,8 +420,8 @@ code_739:
 		pushi	0x42
 		push1	
 		push0	
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 code_772:
 		ret	
 
@@ -433,7 +433,7 @@ Elevator::139:
 		bnt	code_791
 		pushi	0x00b3
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_1219
 code_791:
 		dup	
@@ -445,8 +445,8 @@ code_791:
 		pushi	0x0119
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pToa	0x5c
 		bnt	code_846
 		pToa	0x60
@@ -457,7 +457,7 @@ code_791:
 		pushi	0x07
 		push0	
 		pToa	0x5c
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		add	
@@ -465,7 +465,7 @@ code_791:
 		pushi	0x011c
 		push0	
 		pToa	0x5c
-		send	0xa
+		send	0x0a
 code_846:
 		pushi	0x011f
 		push1	
@@ -475,7 +475,7 @@ code_846:
 		class	0x1a
 		push	
 		pushSelf	
-		self	0xe
+		self	0x0e
 		pToa	0x62
 		bnt	code_1219
 		pushi	0x2b
@@ -484,7 +484,7 @@ code_846:
 		pushi	0x2a
 		push0	
 		lofsa	elevatorSound
-		send	0xa
+		send	0x0a
 		jmp	code_1219
 code_881:
 		dup	
@@ -493,7 +493,7 @@ code_881:
 		bnt	code_973
 		pushi	0x011b
 		push0	
-		self	0x4
+		self	0x04
 		pToa	0x60
 		bnt	code_949
 		pToa	0x66
@@ -501,7 +501,7 @@ code_881:
 		pushi	0x63
 		push1	
 		push	
-		self	0x6
+		self	0x06
 code_910:
 		ldi	0x02
 		aTop	0x6e
@@ -514,14 +514,14 @@ code_910:
 		push	
 		pushi	0x010f
 		push0	
-		self	0x4
+		self	0x04
 		push	
 		pushi	0x0110
 		push0	
-		self	0x4
+		self	0x04
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_1219
 code_949:
@@ -534,8 +534,8 @@ code_949:
 		pTos	0x72
 		pTos	0x74
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1219
 code_973:
 		dup	
@@ -548,8 +548,8 @@ code_973:
 		push2	
 		pushi	0x00b4
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_1219
 code_999:
 		dup	
@@ -563,7 +563,7 @@ code_999:
 		class	0x1b
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		pToa	0x64
 		bnt	code_1219
 		pushi	0x2b
@@ -572,7 +572,7 @@ code_999:
 		pushi	0x2a
 		push0	
 		lofsa	elevatorSound
-		send	0xa
+		send	0x0a
 		jmp	code_1219
 code_1040:
 		dup	
@@ -586,7 +586,7 @@ code_1040:
 		pushi	0x011f
 		push1	
 		push0	
-		self	0xa
+		self	0x0a
 		pToa	0x5c
 		bnt	code_1097
 		pToa	0x60
@@ -597,7 +597,7 @@ code_1040:
 		pushi	0x07
 		push0	
 		pToa	0x5c
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
@@ -605,19 +605,19 @@ code_1040:
 		pushi	0x011c
 		push0	
 		pToa	0x5c
-		send	0xa
+		send	0x0a
 code_1097:
 		pushi	0x0112
 		push1	
 		pushi	0x6789
-		self	0x6
+		self	0x06
 		ldi	0x00
 		aTop	0x5a
 		pToa	0x60
 		bnt	code_1172
 		ldi	0x00
 		aTop	0x60
-		lsg	0xb
+		lsg	0x0b
 		ldi	0x0a
 		eq?	
 		bnt	code_1140
@@ -625,21 +625,21 @@ code_1097:
 		push2	
 		pushi	0x03
 		pushi	0x04
-		self	0x8
+		self	0x08
 		jmp	code_1148
 code_1140:
 		pushi	0x0117
 		push1	
 		pushi	0x03
-		self	0x6
+		self	0x06
 code_1148:
 		pToa	0x6a
 		bnt	code_1165
 		pushi	0x008c
 		push1	
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_1219
 code_1165:
 		push0	
@@ -656,14 +656,14 @@ code_1172:
 		pushi	0x00b3
 		push0	
 		pToa	0x56
-		send	0xa
+		send	0x0a
 		jmp	code_1219
 code_1197:
 		pushi	0x0177
 		push1	
 		pTos	0x56
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_1219
 code_1210:
 		dup	

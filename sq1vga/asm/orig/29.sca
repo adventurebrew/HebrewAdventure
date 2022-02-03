@@ -9,13 +9,13 @@ OBJECT rm29 of 0x43
 rm29::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x43, 0x4
 		pushi	0x008c
 		push1	
 		lofsa	falling
 		push	
-		self	0x6
+		self	0x06
 		ret	
 
 		bnot	
@@ -52,8 +52,8 @@ Overriden functions: 1
 
 .CODE
 falling::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -66,27 +66,27 @@ falling::138:
 		pushi	0x69
 		push0	
 		lag	0x45
-		send	0x8
+		send	0x08
 		pushi	0x00b9
 		push2	
 		lsg	0x15
 		push0	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		ldi	0x00
 		aTop	0x1a
 		pushi	0x011a
 		push2	
 		pToa	0x1a
-		lsli	0x0
+		lsli	0x00
 		push	
 		ldi	0x01
 		add	
-		lsli	0x0
+		lsli	0x00
 		pushi	0x6b
 		push0	
 		lofsa	ego2
-		send	0xc
+		send	0x0c
 		ldi	0x12
 		aTop	0x16
 		jmp	code_300
@@ -106,11 +106,11 @@ code_175:
 		pushi	0x011a
 		push2	
 		pToa	0x1a
-		lsli	0x0
+		lsli	0x00
 		push	
 		ldi	0x01
 		add	
-		lsli	0x0
+		lsli	0x00
 		pushi	0x011e
 		push1	
 		pTos	0x1a
@@ -118,8 +118,8 @@ code_175:
 		div	
 		push	
 		lofsa	ego2
-		send	0xe
-		dpToa	0xa
+		send	0x0e
+		dpToa	0x0a
 		ldi	0x12
 		aTop	0x16
 		jmp	code_300
@@ -127,7 +127,7 @@ code_234:
 		pushi	0x6c
 		push0	
 		lofsa	ego2
-		send	0x4
+		send	0x04
 		ldi	0x12
 		aTop	0x16
 		jmp	code_300
@@ -141,23 +141,23 @@ code_249:
 		pushi	0x00a5
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		pushi	0x00b9
 		pushi	0x04
 		lsg	0x14
 		push1	
 		pushi	0x00a0
 		pushi	0x64
-		lag	0x1
-		send	0xc
+		lag	0x01
+		send	0x0c
 		pushi	0x0177
 		push1	
 		pushi	0x1e
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_300:
 		toss	
 		ret	

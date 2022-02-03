@@ -33,7 +33,7 @@ rm23::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x22
 		push	
 		pushi	0x22
@@ -70,10 +70,10 @@ rm23::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x3e
 		push	
-		self	0x8
+		self	0x08
 		jmp	code_375
 code_163:
 		pushi	0x0174
@@ -126,7 +126,7 @@ code_163:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x5a
 		push	
 		pushi	0x22
@@ -157,10 +157,10 @@ code_163:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x32
 		push	
-		self	0x8
+		self	0x08
 		pushi	0x05
 		pushi	0x0080
 		pushi	0x0e
@@ -174,7 +174,7 @@ code_163:
 		pushi	0x0197
 		calle	0x03be, 0x0000, 0x06
 code_375:
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x1e
 		eq?	
@@ -221,12 +221,12 @@ code_453:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -235,7 +235,7 @@ code_453:
 		pushi	0x011b
 		push0	
 		lofsa	bridge
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x07
@@ -244,7 +244,7 @@ code_453:
 		pushi	0x011b
 		push0	
 		lofsa	breaks
-		send	0xe
+		send	0x0e
 		push1	
 		pushi	0x38
 		callb	0x6, 0x2
@@ -275,12 +275,12 @@ code_540:
 		pushi	0x011b
 		push0	
 		lofsa	pod
-		send	0x8
+		send	0x08
 code_562:
 		ret	
 
 rm23::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_573
 		ldi	0x00
 		jmp	code_611
@@ -295,14 +295,14 @@ code_573:
 		pushi	0x34
 		pushi	0x44
 		pushi	0x48
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		bnt	code_611
 		pushi	0x008c
 		push1	
 		lofsa	bridgeBreaks
 		push	
-		self	0x6
+		self	0x06
 code_611:
 		pushi	0x3c
 		push0	
@@ -344,8 +344,8 @@ Overriden functions: 2
 
 .CODE
 bridgeBreaks::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -356,7 +356,7 @@ bridgeBreaks::138:
 		pushi	0x011d
 		push0	
 		lofsa	bridge
-		send	0x4
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x0198
@@ -374,7 +374,7 @@ bridgeBreaks::138:
 		+ag	0xb6
 		push	
 		lofsa	breaks
-		send	0xa
+		send	0x0a
 		ldi	0x06
 		aTop	0x10
 		jmp	code_1144
@@ -385,8 +385,8 @@ code_758:
 		bnt	code_876
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		aTop	0x1a
 		pushi	0x05
 		push1	
@@ -396,8 +396,8 @@ code_758:
 		pushi	0x00b4
 		pushi	0x3a
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		lt?	
 		bnt	code_810
 		pprev	
@@ -424,23 +424,23 @@ code_812:
 		class	0x5c
 		push	
 		pushi	0x0e
-		lag	0x0
+		lag	0x00
 		send	0x24
 		pushi	0x03
 		push1	
 		pushi	0x3b
 		lofsa	bridge
-		send	0x6
+		send	0x06
 		pushi	0x03
 		push1	
 		pushi	0x3b
 		lofsa	breaks
-		send	0x6
+		send	0x06
 		pushi	0x07
 		push1	
 		push2	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1144
@@ -453,17 +453,17 @@ code_876:
 		push1	
 		pushi	0x39
 		lofsa	bridge
-		send	0x6
+		send	0x06
 		pushi	0x03
 		push1	
 		pushi	0x39
 		lofsa	breaks
-		send	0x6
+		send	0x06
 		pushi	0x07
 		push1	
 		pushi	0x03
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1144
@@ -476,17 +476,17 @@ code_919:
 		push1	
 		pushi	0x3a
 		lofsa	bridge
-		send	0x6
+		send	0x06
 		pushi	0x03
 		push1	
 		pushi	0x3a
 		lofsa	breaks
-		send	0x6
+		send	0x06
 		pushi	0x07
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1144
@@ -499,17 +499,17 @@ code_961:
 		push1	
 		pushi	0x39
 		lofsa	bridge
-		send	0x6
+		send	0x06
 		pushi	0x03
 		push1	
 		pushi	0x39
 		lofsa	breaks
-		send	0x6
+		send	0x06
 		pushi	0x07
 		push1	
 		push2	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x06
 		aTop	0x10
 		jmp	code_1144
@@ -526,18 +526,18 @@ code_1003:
 		push1	
 		lofsa	bridgeFalls
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_1144
 code_1033:
 		pushi	0x011b
 		push0	
 		lofsa	bridge
-		send	0x4
+		send	0x04
 		pushi	0x011b
 		push0	
 		lofsa	breaks
-		send	0x4
+		send	0x04
 		pushi	0x03
 		push0	
 		push1	
@@ -549,16 +549,16 @@ code_1033:
 		pushi	0x06
 		push1	
 		pTos	0x1a
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		pushi	0x0119
 		pushi	0x03
 		class	0x5c
 		push	
 		pushi	0x20
 		pushSelf	
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		jmp	code_1144
 code_1092:
 		dup	
@@ -590,7 +590,7 @@ code_1134:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1144:
 		toss	
 		ret	
@@ -621,8 +621,8 @@ Overriden functions: 1
 
 .CODE
 bridgeFalls::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -633,7 +633,7 @@ bridgeFalls::138:
 		pushi	0x6c
 		push0	
 		lofsa	breaks
-		send	0x4
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x016b
@@ -679,7 +679,7 @@ bridgeFalls::138:
 		pushi	0x44
 		pushi	0x00bd
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_1388
 code_1319:
@@ -708,7 +708,7 @@ code_1319:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x14
 		jmp	code_1388
 code_1368:
@@ -753,8 +753,8 @@ Overriden functions: 1
 
 .CODE
 egoPushesPod::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -782,7 +782,7 @@ egoPushesPod::138:
 		pushi	0x03
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x26
 		jmp	code_1799
 code_1505:
@@ -793,7 +793,7 @@ code_1505:
 		pushi	0x69
 		push0	
 		lofsa	pod
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		pushi	0x04
 		class	0x19
@@ -801,8 +801,8 @@ code_1505:
 		pushi	0x06
 		push1	
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1799
 code_1539:
 		dup	
@@ -831,15 +831,15 @@ code_1539:
 		push1	
 		class	0x1a
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x0223
 		push0	
 		push2	
 		pushi	0x02c0
 		pushi	0x03
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		bnt	code_1652
 		pushi	0x0130
 		pushi	0x04
@@ -851,14 +851,14 @@ code_1539:
 		pushi	0x02c0
 		pushi	0x03
 		callk	0x2, 0x4
-		send	0xc
+		send	0x0c
 		bnt	code_1652
 		pushi	0x008c
 		push1	
 		lofsa	splatSpider
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_1799
 code_1652:
 		pushi	0x0119
@@ -869,7 +869,7 @@ code_1652:
 		pushi	0x00aa
 		pushSelf	
 		lofsa	pod
-		send	0xc
+		send	0x0c
 		jmp	code_1799
 code_1674:
 		dup	
@@ -900,7 +900,7 @@ code_1674:
 		pushi	0x3a
 		push1	
 		pushi	0x00b4
-		lag	0x0
+		lag	0x00
 		send	0x12
 		pushi	0x011f
 		push0	
@@ -929,7 +929,7 @@ code_1759:
 		pushi	0x011b
 		push0	
 		lofsa	pod
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x38
 		callb	0x7, 0x2
@@ -941,7 +941,7 @@ code_1759:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1799:
 		toss	
 		ret	
@@ -973,8 +973,8 @@ Overriden functions: 1
 
 .CODE
 splatSpider::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -990,7 +990,7 @@ splatSpider::138:
 		pushi	0x02c0
 		pushi	0x03
 		callk	0x2, 0x4
-		send	0xa
+		send	0x0a
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -999,7 +999,7 @@ splatSpider::138:
 		pushi	0x7d
 		pushSelf	
 		lofsa	pod
-		send	0xc
+		send	0x0c
 		jmp	code_2159
 code_1917:
 		dup	
@@ -1030,25 +1030,25 @@ code_1917:
 		pushi	0x3a
 		push1	
 		pushi	0x00b4
-		lag	0x0
+		lag	0x00
 		send	0x12
 		pushi	0x69
 		push0	
 		lofsa	pod
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		push2	
 		pushi	0x02c0
 		pushi	0x03
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	spiderBody
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -1056,7 +1056,7 @@ code_1917:
 		class	0x17
 		push	
 		lofsa	spiderLegs
-		send	0xa
+		send	0x0a
 		ldi	0x04
 		aTop	0x12
 		jmp	code_2159
@@ -1097,7 +1097,7 @@ code_2025:
 		pushi	0x6c
 		push0	
 		lofsa	spiderBody
-		send	0x4
+		send	0x04
 		jmp	code_2159
 code_2093:
 		dup	
@@ -1107,7 +1107,7 @@ code_2093:
 		pushi	0x009d
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x39
 		callb	0x7, 0x2
@@ -1123,7 +1123,7 @@ code_2093:
 		pushi	0x6c
 		push0	
 		lofsa	spiderLegs
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x17
 		pushi	0x04
@@ -1132,7 +1132,7 @@ code_2093:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2159:
 		toss	
 		ret	
@@ -1290,7 +1290,7 @@ Overriden functions: 0
 pod::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		lsg	0xa6
 		ldi	0x01
@@ -1305,7 +1305,7 @@ pod::107:
 		push2	
 		pushi	0x03
 		pushi	0x0c
-		self	0x8
+		self	0x08
 		ldi	0x61
 		aTop	0x22
 		ldi	0x3f
@@ -1323,7 +1323,7 @@ code_2521:
 		pushi	0x0117
 		push1	
 		pushi	0x0c
-		self	0x6
+		self	0x06
 		ldi	0x65
 		aTop	0x22
 		ldi	0x0099
@@ -1332,7 +1332,7 @@ code_2555:
 		ret	
 
 pod::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1379,13 +1379,13 @@ code_2626:
 code_2646:
 		pushi	0x0117
 		push0	
-		self	0x4
+		self	0x04
 		pushi	0x008c
 		push1	
 		lofsa	egoPushesPod
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2796
 code_2667:
 		dup	
@@ -1450,8 +1450,8 @@ code_2766:
 code_2785:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x30, 0x6
 code_2796:
 		toss	

@@ -51,15 +51,15 @@ rm47::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x4e
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
-		lsg	0xc
+		lag	0x00
+		send	0x04
+		lsg	0x0c
 		dup	
 		pToa	0x20
 		eq?	
@@ -77,8 +77,8 @@ code_150:
 		pushi	0x04
 		push1	
 		pushi	0x14
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		jmp	code_191
@@ -89,13 +89,13 @@ code_177:
 		push1	
 		lofsa	outaDBU
 		push	
-		self	0x6
+		self	0x06
 code_191:
 		toss	
 		pushi	0x0187
 		push1	
 		pushi	0x02be
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -106,7 +106,7 @@ code_191:
 		class	0x17
 		push	
 		lofsa	radar
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -114,7 +114,7 @@ code_191:
 		class	0x17
 		push	
 		lofsa	robot1
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -122,7 +122,7 @@ code_191:
 		class	0x5f
 		push	
 		lofsa	robot2
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -130,7 +130,7 @@ code_191:
 		class	0x5f
 		push	
 		lofsa	neonhand
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -138,7 +138,7 @@ code_191:
 		class	0x5f
 		push	
 		lofsa	lefteye
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -146,32 +146,32 @@ code_191:
 		class	0x5f
 		push	
 		lofsa	righteye
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		lofsa	pickupArea
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	store
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	bigSign
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	smallSign
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	storeWindow
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x21
 		callb	0x6, 0x2
 		bnt	code_373
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x30
 		eq?	
 		bnt	code_373
@@ -183,20 +183,20 @@ code_191:
 		pushi	0x02be
 		push1	
 		callk	0x2, 0x4
-		send	0x8
+		send	0x08
 code_373:
 		ret	
 
 rm47::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_384
 		ldi	0x00
 		jmp	code_411
 code_384:
 		pushi	0x0131
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		and	
@@ -205,8 +205,8 @@ code_384:
 		push1	
 		lofsa	intoDBU
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_411:
 		pushi	0x3c
 		push0	
@@ -248,8 +248,8 @@ Overriden functions: 2
 
 .CODE
 outaDBU::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -268,7 +268,7 @@ outaDBU::138:
 		pushi	0x00c6
 		pushi	0x00ae
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x14
 		push1	
 		pushi	0x21
@@ -282,7 +282,7 @@ outaDBU::138:
 		pushi	0x02be
 		push1	
 		callk	0x2, 0x4
-		send	0x8
+		send	0x08
 		jmp	code_586
 code_570:
 		dup	
@@ -293,7 +293,7 @@ code_570:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_586:
 		toss	
 		ret	
@@ -324,8 +324,8 @@ Overriden functions: 1
 
 .CODE
 intoDBU::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -340,8 +340,8 @@ intoDBU::138:
 		pushi	0x00a3
 		pushi	0x00a8
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_758
 code_684:
 		dup	
@@ -355,8 +355,8 @@ code_684:
 		pushi	0x0098
 		pushi	0x00a4
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_758
 code_713:
 		dup	
@@ -370,8 +370,8 @@ code_713:
 		pushi	0x7b
 		pushi	0x00a6
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_758
 code_741:
 		dup	
@@ -381,8 +381,8 @@ code_741:
 		pushi	0x0177
 		push1	
 		pushi	0x30
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_758:
 		toss	
 		ret	
@@ -413,7 +413,7 @@ Overriden functions: 1
 
 .CODE
 radar::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -456,8 +456,8 @@ code_874:
 code_892:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_903:
 		toss	
@@ -612,7 +612,7 @@ Overriden functions: 0
 
 .CODE
 neonhand::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -625,8 +625,8 @@ neonhand::266:
 code_1240:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_1251:
 		toss	
@@ -786,20 +786,20 @@ pickupArea::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
+		send	0x04
+		send	0x04
+		aTop	0x0a
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 
@@ -839,20 +839,20 @@ store::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
+		send	0x04
+		send	0x04
+		aTop	0x0a
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 
@@ -892,20 +892,20 @@ bigSign::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
+		send	0x04
+		send	0x04
+		aTop	0x0a
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 
@@ -945,20 +945,20 @@ smallSign::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
+		send	0x04
+		send	0x04
+		aTop	0x0a
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 
@@ -998,20 +998,20 @@ storeWindow::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
+		send	0x04
+		send	0x04
+		aTop	0x0a
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 

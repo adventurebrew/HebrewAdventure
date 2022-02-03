@@ -6,9 +6,9 @@ LOFSA_RELATIVE = False
 Sound::106:
 		pushi	0x0099
 		push1	
-		lap	0x0
+		lap	0x00
 		bnt	code_18
-		lap	0x1
+		lap	0x01
 		jmp	code_20
 code_18:
 		ldi	0x00
@@ -19,7 +19,7 @@ code_20:
 		pushi	0x6a
 		push0	
 		super	0x0, 0x4
-		send	0xa
+		send	0x0a
 		ret	
 
 Sound::107:
@@ -29,8 +29,8 @@ Sound::107:
 		pushi	0x73
 		push1	
 		pushSelf	
-		lag	0x8
-		send	0x6
+		lag	0x08
+		send	0x06
 		push2	
 		pushi	0x06
 		pushSelf	
@@ -39,22 +39,22 @@ Sound::107:
 
 Sound::42:
 		link	0x01
-		lap	0x0
-		sat	0x0
-		lap	0x0
+		lap	0x00
+		sat	0x00
+		lap	0x00
 		bnt	code_93
 		push1	
 		push	
 		ldi	0x01
 		sub	
-		lspi	0x1
+		lspi	0x01
 		callk	0x6, 0x2
 		bnt	code_93
-		lsp	0x0
+		lsp	0x00
 		ldi	0x01
 		sub	
-		sat	0x0
-		lapi	0x1
+		sat	0x00
+		lapi	0x01
 		aTop	0x22
 		jmp	code_97
 code_93:
@@ -63,16 +63,16 @@ code_93:
 code_97:
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 		pToa	0x14
 		not	
 		bnt	code_112
 		ldi	0x01
 		aTop	0x14
 code_112:
-		lat	0x0
+		lat	0x00
 		bnt	code_124
-		lap	0x1
+		lap	0x01
 		aTop	0x10
 		jmp	code_128
 code_124:
@@ -87,7 +87,7 @@ code_128:
 		ret	
 
 Sound::154:
-		pToa	0xa
+		pToa	0x0a
 		bnt	code_157
 		push2	
 		pushi	0x11
@@ -101,19 +101,19 @@ code_157:
 		ret	
 
 Sound::155:
-		lap	0x0
+		lap	0x00
 		not	
 		bnt	code_168
 		ldi	0x01
-		sap	0x1
+		sap	0x01
 code_168:
 		pushi	0x03
 		pushi	0x0a
 		pushi	0x70
 		push1	
-		class	0xa
+		class	0x0a
 		push	
-		self	0x6
+		self	0x06
 		bnt	code_187
 		selfID	
 		jmp	code_189
@@ -121,21 +121,21 @@ code_187:
 		ldi	0x00
 code_189:
 		push	
-		lsp	0x1
+		lsp	0x01
 		callk	0x2d, 0x6
 		ret	
 
 Sound::156:
-		lap	0x0
+		lap	0x00
 		not	
 		bnt	code_206
 		ldi	0x01
-		sap	0x1
+		sap	0x01
 code_206:
 		pushi	0x03
 		pushi	0x0c
 		pushSelf	
-		lsp	0x1
+		lsp	0x01
 		callk	0x2d, 0x6
 		ret	
 
@@ -149,33 +149,33 @@ Sound::122:
 
 Sound::157:
 		link	0x01
-		lap	0x0
-		sat	0x0
-		lap	0x0
+		lap	0x00
+		sat	0x00
+		lap	0x00
 		bnt	code_262
 		push1	
 		push	
 		ldi	0x01
 		sub	
-		lspi	0x1
+		lspi	0x01
 		callk	0x6, 0x2
 		bnt	code_262
-		lsp	0x0
+		lsp	0x00
 		ldi	0x01
 		sub	
-		sat	0x0
-		lapi	0x1
+		sat	0x00
+		lapi	0x01
 		aTop	0x22
 code_262:
-		lat	0x0
+		lat	0x00
 		bnt	code_286
 		pushi	0x06
 		pushi	0x0b
 		pushSelf	
-		lsp	0x1
-		lsp	0x2
-		lsp	0x3
-		lsp	0x4
+		lsp	0x01
+		lsp	0x02
+		lsp	0x03
+		lsp	0x04
 		callk	0x2d, 0xc
 		jmp	code_300
 code_286:
@@ -191,16 +191,16 @@ code_300:
 		ret	
 
 Sound::158:
-		lap	0x0
+		lap	0x00
 		not	
 		bnt	code_311
 		ldi	0x01
-		sap	0x1
+		sap	0x01
 code_311:
 		pushi	0x03
 		pushi	0x0d
 		pushSelf	
-		lsp	0x1
+		lsp	0x01
 		callk	0x2d, 0x6
 		ret	
 
@@ -208,7 +208,7 @@ Sound::159:
 		pushi	0x03
 		pushi	0x0e
 		pushSelf	
-		lsp	0x1
+		lsp	0x01
 		callk	0x2d, 0x6
 		ret	
 
@@ -216,7 +216,7 @@ Sound::66:
 		pushi	0x03
 		pushi	0x0f
 		pushSelf	
-		lsp	0x1
+		lsp	0x01
 		callk	0x2d, 0x6
 		ret	
 
@@ -224,46 +224,46 @@ Sound::160:
 		pushi	0x03
 		pushi	0x10
 		pushSelf	
-		lsp	0x1
+		lsp	0x01
 		callk	0x2d, 0x6
 		ret	
 
 Sound::161:
 		push1	
-		lap	0x1
+		lap	0x01
 		le?	
 		bnt	code_414
 		pprev	
 		ldi	0x0f
 		le?	
 		bnt	code_414
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0080
 		lt?	
 		bnt	code_398
 		pushi	0x06
 		pushi	0x12
 		pushSelf	
-		lsp	0x1
+		lsp	0x01
 		pushi	0x00b0
-		lsp	0x2
-		lsp	0x3
+		lsp	0x02
+		lsp	0x03
 		callk	0x2d, 0xc
 		jmp	code_414
 code_398:
 		pushi	0x06
 		pushi	0x12
 		pushSelf	
-		lsp	0x1
-		lsp	0x2
-		lsp	0x3
-		lsp	0x4
+		lsp	0x01
+		lsp	0x02
+		lsp	0x03
+		lsp	0x04
 		callk	0x2d, 0xc
 code_414:
 		ret	
 
 Sound::162:
-		pToa	0xa
+		pToa	0x0a
 		bnt	code_427
 		push2	
 		pushi	0x11
@@ -283,7 +283,7 @@ code_427:
 		push1	
 		pushSelf	
 		pToa	0x22
-		send	0x6
+		send	0x06
 code_456:
 		ret	
 
@@ -292,13 +292,13 @@ Sound::163:
 		not	
 		bt	code_468
 		pTos	0x24
-		lap	0x1
+		lap	0x01
 		eq?	
 code_468:
 		bnt	code_476
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_476:
 		ret	
 
@@ -306,16 +306,16 @@ Sound::108:
 		pushi	0x54
 		push1	
 		pushSelf	
-		lag	0x8
-		send	0x6
-		pToa	0x8
+		lag	0x08
+		send	0x06
+		pToa	0x08
 		bnt	code_501
 		push2	
 		pushi	0x07
 		pushSelf	
 		callk	0x2d, 0x4
 		ldi	0x00
-		aTop	0x8
+		aTop	0x08
 code_501:
 		pushi	0x6c
 		push0	
@@ -324,22 +324,22 @@ code_501:
 
 Sound::164:
 		link	0x01
-		lap	0x0
-		sat	0x0
-		lap	0x0
+		lap	0x00
+		sat	0x00
+		lap	0x00
 		bnt	code_546
 		push1	
 		push	
 		ldi	0x01
 		sub	
-		lspi	0x1
+		lspi	0x01
 		callk	0x6, 0x2
 		bnt	code_546
-		lsp	0x0
+		lsp	0x00
 		ldi	0x01
 		sub	
-		sat	0x0
-		lapi	0x1
+		sat	0x00
+		lapi	0x01
 		aTop	0x22
 		jmp	code_550
 code_546:
@@ -348,16 +348,16 @@ code_546:
 code_550:
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 		pToa	0x14
 		not	
 		bnt	code_565
 		ldi	0x01
 		aTop	0x14
 code_565:
-		lat	0x0
+		lat	0x00
 		bnt	code_577
-		lap	0x1
+		lap	0x01
 		aTop	0x10
 		jmp	code_581
 code_577:

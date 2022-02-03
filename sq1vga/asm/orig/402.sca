@@ -7,8 +7,8 @@ OBJECT romulanWarbird of 0x6
 
 .CODE
 romulanWarbird::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -22,7 +22,7 @@ romulanWarbird::138:
 		callk	0x2, 0x4
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_198
 code_45:
 		dup	
@@ -41,7 +41,7 @@ code_45:
 		callk	0x2, 0x4
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_198
 code_80:
 		dup	
@@ -56,7 +56,7 @@ code_80:
 		push	
 		pushSelf	
 		lofsa	warBird
-		send	0xc
+		send	0x0c
 		jmp	code_198
 code_106:
 		dup	
@@ -93,7 +93,7 @@ code_155:
 		pushi	0x6c
 		push0	
 		lofsa	warBird
-		send	0x4
+		send	0x04
 		ldi	0x03
 		aTop	0x12
 		jmp	code_198

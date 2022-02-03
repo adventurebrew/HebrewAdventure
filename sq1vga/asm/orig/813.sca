@@ -6,13 +6,13 @@ LOFSA_RELATIVE = False
 SQEgo::542:
 		pushi	0x05
 		push1	
-		lsp	0x1
+		lsp	0x01
 		pToa	0x70
-		send	0x6
+		send	0x06
 		pushi	0x11
 		push0	
 		pToa	0x70
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		and	
@@ -21,7 +21,7 @@ SQEgo::542:
 		pushi	0x6e
 		push0	
 		pToa	0x70
-		send	0x4
+		send	0x04
 code_35:
 		ret	
 
@@ -30,7 +30,7 @@ SQEgo::105:
 		bnt	code_46
 		pushi	0x69
 		push0	
-		send	0x4
+		send	0x04
 code_46:
 		pushi	0x69
 		push0	
@@ -42,7 +42,7 @@ SQEgo::108:
 		bnt	code_63
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_63:
 		pushi	0x6c
 		push0	
@@ -54,7 +54,7 @@ SQEgo::283:
 		bnt	code_81
 		pushi	0x011b
 		push0	
-		send	0x4
+		send	0x04
 code_81:
 		pushi	0x011b
 		push0	
@@ -135,11 +135,11 @@ Overriden functions: 4
 Head::107:
 		pushi	0x2d
 		push1	
-		lsp	0x1
+		lsp	0x01
 		pushi	0x011f
 		push1	
 		push1	
-		self	0xc
+		self	0x0c
 		push1	
 		pushSelf	
 		callk	0xd, 0x2
@@ -150,26 +150,26 @@ Head::107:
 		pushi	0x021c
 		push1	
 		pushSelf	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		pushi	0x6b
 		push0	
 		super	0x2f, 0x4
 		pushi	0x69
 		push0	
-		self	0x4
+		self	0x04
 		ret	
 
 Head::60:
 		pushi	0x019a
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		bnt	code_559
 		pushi	0x11
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		and	
@@ -178,13 +178,13 @@ Head::60:
 		pushi	0x00dc
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		bnt	code_559
 		push1	
 		pushi	0x00da
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		callk	0x6, 0x2
 		bnt	code_559
@@ -195,21 +195,21 @@ Head::60:
 		pushi	0x00da
 		push0	
 		pToa	0x56
-		send	0x4
-		send	0x6
+		send	0x04
+		send	0x06
 		bnt	code_559
 		pushi	0x05
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x01b9
 		push0	
 		pushi	0x00da
 		push0	
 		pToa	0x56
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		eq?	
 		bnt	code_559
 		pTos	0x38
@@ -224,7 +224,7 @@ Head::60:
 		pushi	0x11
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		and	
@@ -235,14 +235,14 @@ Head::60:
 code_539:
 		pushi	0x011d
 		push0	
-		self	0x4
+		self	0x04
 code_545:
 		pushi	0x6e
 		push0	
-		self	0x4
+		self	0x04
 		pushi	0x0221
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_573
 code_559:
 		pTos	0x38
@@ -252,7 +252,7 @@ code_559:
 		bnt	code_573
 		pushi	0x69
 		push0	
-		self	0x4
+		self	0x04
 code_573:
 		pushi	0x3c
 		push0	
@@ -270,27 +270,27 @@ Head::110:
 		pushi	0x06
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
-		self	0x6
+		self	0x06
 		pToa	0x4c
 		aTop	0x58
 		ldi	0x00
-		sat	0x0
+		sat	0x00
 code_611:
-		lst	0x0
+		lst	0x00
 		ldi	0x07
 		le?	
 		bnt	code_638
 		pTos	0x32
-		lat	0x0
-		lali	0x0
+		lat	0x00
+		lali	0x00
 		eq?	
 		bnt	code_633
-		lat	0x0
+		lat	0x00
 		aTop	0x5a
 code_633:
-		+at	0x0
+		+at	0x00
 		jmp	code_611
 code_638:
 		pushi	0x42
@@ -298,14 +298,14 @@ code_638:
 		pushi	0x3f
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x05
 		push1	
 		pushi	0x05
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x06
 		push1	
@@ -321,14 +321,14 @@ code_638:
 		pushi	0x04
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
 		pushi	0x03
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x55
 		push1	
@@ -337,12 +337,12 @@ code_638:
 		pushi	0x06
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x07
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		push	
 		callk	0x10, 0x6
 		push	
@@ -356,7 +356,7 @@ Head::545:
 		pushi	0x021d
 		push0	
 		pToa	0x56
-		send	0x4
+		send	0x04
 		bnt	code_799
 		dpToa	0x58
 		push	
@@ -374,23 +374,23 @@ Head::545:
 		ldi	0x01
 		sub	
 		add	
-		sat	0x0
+		sat	0x00
 		push	
 		ldi	0x07
 		gt?	
 		bnt	code_781
 		ldi	0x00
-		sat	0x0
+		sat	0x00
 code_781:
-		lst	0x0
+		lst	0x00
 		ldi	0x00
 		lt?	
 		bnt	code_793
 		ldi	0x07
-		sat	0x0
+		sat	0x00
 code_793:
-		lat	0x0
-		lali	0x0
+		lat	0x00
+		lali	0x00
 		aTop	0x32
 code_799:
 		ret	

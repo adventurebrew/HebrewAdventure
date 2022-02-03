@@ -16,13 +16,13 @@ prepareToDie::107:
 		aTop	0x1a
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		ret	
 
 prepareToDie::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -46,16 +46,16 @@ code_66:
 		bnt	code_153
 		pushi	0x05
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x1e
 		eq?	
 		bt	code_110
 		pushi	0x0131
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x4002
 		and	
@@ -66,15 +66,15 @@ code_110:
 		callb	0x2, 0x0
 		pushi	0x05
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x1e
 		eq?	
 		not	
 		bnt	code_142
 		push2	
-		lsg	0x0
+		lsg	0x00
 		lofsa	slotGuy
 		push	
 		callb	0xd, 0x4
@@ -82,7 +82,7 @@ code_142:
 		pushi	0x008a
 		push1	
 		pushi	0x06
-		self	0x6
+		self	0x06
 		jmp	code_446
 code_153:
 		pushi	0x00a0
@@ -112,7 +112,7 @@ code_180:
 		pushi	0x2b
 		push2	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		push2	
 		pushi	0x0f
 		pushi	0x3c
@@ -131,7 +131,7 @@ code_216:
 		pushi	0x2b
 		push2	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		pushi	0x00a0
 		push1	
 		push2	
@@ -155,7 +155,7 @@ code_267:
 		eq?	
 		bnt	code_308
 		ldi	0x00
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push2	
@@ -178,8 +178,8 @@ code_308:
 		ldi	0x05
 		eq?	
 		bnt	code_337
-		pTos	0x8
-		lag	0x0
+		pTos	0x08
+		lag	0x00
 		eq?	
 		bnt	code_330
 		ldi	0x02
@@ -207,22 +207,22 @@ code_337:
 		push1	
 		callk	0x2, 0x4
 		push	
-		self	0xa
+		self	0x0a
 		jmp	code_446
 code_372:
 		dup	
 		ldi	0x07
 		eq?	
 		bnt	code_446
-		pTos	0x8
-		lag	0x0
+		pTos	0x08
+		lag	0x00
 		eq?	
 		bnt	code_400
 		pushi	0x0177
 		push1	
 		pushi	0x2a
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_433
 code_400:
 		lag	0xbc
@@ -232,8 +232,8 @@ code_400:
 		callb	0x3, 0x0
 		pushi	0x05
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x1e
 		eq?	
@@ -242,15 +242,15 @@ code_400:
 		push1	
 		push0	
 		class	0x31
-		send	0x6
+		send	0x06
 code_433:
 		pushi	0x009a
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_446:
 		toss	
 		ret	
@@ -283,7 +283,7 @@ Overriden functions: 2
 
 .CODE
 slotGuy::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x0b
 		eq?	
@@ -318,7 +318,7 @@ code_569:
 		ldi	0x04
 		eq?	
 		bnt	code_773
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -411,8 +411,8 @@ code_738:
 code_758:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_769:
 		toss	
@@ -420,9 +420,9 @@ code_769:
 code_773:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 code_786:
 		toss	
@@ -435,17 +435,17 @@ slotGuy::108:
 		pushi	0x0094
 		push1	
 		push0	
-		self	0xc
+		self	0x0c
 		pushi	0x6c
 		push0	
 		lofsa	slotGuyBody
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		super	0x2f, 0x4
 		pushi	0x54
 		push0	
-		self	0x4
+		self	0x04
 		push1	
 		pushi	0x01bb
 		callk	0x1, 0x2
@@ -510,23 +510,23 @@ Overriden functions: 2
 slotGuyBody::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	slotGuy
-		send	0x6
+		send	0x06
 		ret	
 
 slotGuyBody::108:
 		pushi	0x0094
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 		pushi	0x6c
 		push0	
 		super	0x2f, 0x4
 		pushi	0x54
 		push0	
-		self	0x4
+		self	0x04
 		ret	
 
 		bnot	

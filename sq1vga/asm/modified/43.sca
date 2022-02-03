@@ -22,7 +22,7 @@ rm43::107:
 		pushi	0x3f
 		callb	0x6, 0x2
 		bnt	code_75
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x2c
 		eq?	
 		bnt	code_75
@@ -34,7 +34,7 @@ code_75:
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x2c
 		ne?	
 		bnt	code_96
@@ -51,7 +51,7 @@ code_102:
 		push2	
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x4
+		lea	0x02, 0x04
 		push	
 		pushi	0x59
 		push1	
@@ -63,7 +63,7 @@ code_102:
 		push2	
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x32
+		lea	0x02, 0x32
 		push	
 		pushi	0x59
 		push1	
@@ -79,7 +79,7 @@ code_102:
 		push1	
 		lofsa	slotPoly
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -93,7 +93,7 @@ code_102:
 		pushi	0x012f
 		push1	
 		callk	0x2, 0x4
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x011b
@@ -102,14 +102,14 @@ code_102:
 		pushi	0x012f
 		push2	
 		callk	0x2, 0x4
-		send	0x8
+		send	0x08
 		jmp	code_220
 code_210:
 		pushi	0x0174
 		push1	
 		lofsa	stagePoly
 		push	
-		self	0x6
+		self	0x06
 code_220:
 		pushi	0x0174
 		push2	
@@ -137,7 +137,7 @@ code_220:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x2a
 		push	
 		pushi	0x22
@@ -158,10 +158,10 @@ code_220:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x1e
 		push	
-		self	0x8
+		self	0x08
 		pushi	0x73
 		pushi	0x04
 		lofsa	slotMachine
@@ -227,7 +227,7 @@ code_394:
 		pushi	0x012e
 		pushi	0x03
 		callk	0x2, 0x4
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -238,7 +238,7 @@ code_394:
 		pushi	0x012e
 		pushi	0x04
 		callk	0x2, 0x4
-		send	0xa
+		send	0x0a
 		pushi	0x73
 		push1	
 		push2	
@@ -246,13 +246,13 @@ code_394:
 		push1	
 		callk	0x2, 0x4
 		push	
-		lag	0xa
-		send	0x6
+		lag	0x0a
+		send	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x0263
 		lag	0x64
-		send	0x6
+		send	0x06
 		jmp	code_682
 code_500:
 		dup	
@@ -275,7 +275,7 @@ code_500:
 		pushi	0x012c
 		push1	
 		callk	0x2, 0x4
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -294,7 +294,7 @@ code_500:
 		pushi	0x012c
 		push2	
 		callk	0x2, 0x4
-		send	0xe
+		send	0x0e
 		pushi	0x2b
 		push1	
 		pushi	0x0264
@@ -329,7 +329,7 @@ code_606:
 		pushi	0x012d
 		push1	
 		callk	0x2, 0x4
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -342,7 +342,7 @@ code_606:
 		pushi	0x012d
 		push2	
 		callk	0x2, 0x4
-		send	0xe
+		send	0x0e
 		pushi	0x2b
 		push1	
 		pushi	0x0265
@@ -360,13 +360,13 @@ code_682:
 		pushi	0x011b
 		push0	
 		lofsa	slugGuy
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	triGirl
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -374,7 +374,7 @@ code_682:
 		lofsa	fenrisScript
 		push	
 		lofsa	fenris
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -382,7 +382,7 @@ code_682:
 		lofsa	bartendScript
 		push	
 		lofsa	bartender
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -390,11 +390,11 @@ code_682:
 		lofsa	beerJumping
 		push	
 		lofsa	chp_dail
-		send	0xa
+		send	0x0a
 		pushi	0x0123
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		push	
 		ldi	0x02
 		le?	
@@ -404,13 +404,13 @@ code_682:
 		lofsa	slugScript
 		push	
 		lofsa	slugGuy
-		send	0x6
+		send	0x06
 		pushi	0x008c
 		push1	
 		lofsa	triScript
 		push	
 		lofsa	triGirl
-		send	0x6
+		send	0x06
 code_796:
 		pushi	0x6b
 		push0	
@@ -420,7 +420,7 @@ code_796:
 		pushi	0x011b
 		push0	
 		lofsa	kzittenArm
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x42
@@ -429,17 +429,17 @@ code_796:
 		pushi	0x011b
 		push0	
 		lofsa	kzittenHead
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	slugEyes
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		lofsa	bartenderHead
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -449,7 +449,7 @@ code_796:
 		pushi	0x69
 		push0	
 		lofsa	beerMug
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -457,18 +457,18 @@ code_796:
 		class	0x18
 		push	
 		lofsa	C_DbeerMug
-		send	0xa
+		send	0x0a
 		pushi	0x74
 		push1	
 		pushi	0x6b
 		pushi	0x3c
 		push0	
-		lag	0xa
-		send	0xa
+		lag	0x0a
+		send	0x0a
 		pushi	0x6b
 		push0	
 		lofsa	slot
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x0b
 		callb	0x6, 0x2
@@ -488,9 +488,9 @@ code_918:
 		pushi	0x011b
 		push0	
 		lofsa	sweeper
-		send	0x8
+		send	0x08
 code_943:
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x2c
 		eq?	
 		bnt	code_1134
@@ -520,7 +520,7 @@ code_943:
 		pushi	0x12
 		push1	
 		pushi	0x8000
-		lag	0x0
+		lag	0x00
 		send	0x2a
 		push1	
 		pushi	0x3f
@@ -532,8 +532,8 @@ code_943:
 		push	
 		push0	
 		push2	
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_1107
 code_1029:
 		push1	
@@ -546,8 +546,8 @@ code_1029:
 		push	
 		push0	
 		pushi	0x03
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_1107
 code_1057:
 		push1	
@@ -557,15 +557,15 @@ code_1057:
 		pushi	0x69
 		push0	
 		lag	0x74
-		send	0x4
+		send	0x04
 		pushi	0x008c
 		pushi	0x03
 		lofsa	someoneDied
 		push	
 		push0	
-		lsg	0x0
-		lag	0x2
-		send	0xa
+		lsg	0x00
+		lag	0x02
+		send	0x0a
 		jmp	code_1107
 code_1092:
 		pushi	0x008c
@@ -574,8 +574,8 @@ code_1092:
 		push	
 		push0	
 		push1	
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 code_1107:
 		pushi	0x03
 		ldi	0x04
@@ -629,12 +629,12 @@ code_1175:
 		push1	
 		lofsa	walkIn
 		push	
-		self	0x6
+		self	0x06
 code_1201:
 		pushi	0x2b
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0264
 		eq?	
@@ -655,7 +655,7 @@ code_1240:
 		pushi	0x2b
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0265
 		eq?	
@@ -666,7 +666,7 @@ code_1240:
 		pushi	0x4e
 		push1	
 		lag	0x64
-		send	0xa
+		send	0x0a
 code_1269:
 		push1	
 		pushi	0x0d
@@ -679,7 +679,7 @@ code_1269:
 		class	0x17
 		push	
 		lofsa	widget
-		send	0xa
+		send	0x0a
 		jmp	code_1307
 code_1296:
 		pushi	0x6b
@@ -687,13 +687,13 @@ code_1296:
 		pushi	0x69
 		push0	
 		lofsa	widget
-		send	0x8
+		send	0x08
 code_1307:
 		ret	
 
 rm43::60:
 		link	0x01
-		pToa	0x8
+		pToa	0x08
 		bnt	code_1320
 		ldi	0x00
 		jmp	code_1358
@@ -701,15 +701,15 @@ code_1320:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
-		sat	0x0
+		lag	0x00
+		send	0x06
+		sat	0x00
 		not	
 		bnt	code_1340
 		ldi	0x00
 		jmp	code_1358
 code_1340:
-		lst	0x0
+		lst	0x00
 		ldi	0x20
 		and	
 		bnt	code_1358
@@ -717,7 +717,7 @@ code_1340:
 		push1	
 		lofsa	walkOut
 		push	
-		self	0x6
+		self	0x06
 code_1358:
 		pushi	0x3c
 		push0	
@@ -725,7 +725,7 @@ code_1358:
 		ret	
 
 rm43::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -791,8 +791,8 @@ code_1470:
 code_1482:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x43, 0x6
 code_1493:
 		toss	
@@ -805,7 +805,7 @@ rm43::108:
 		ret	
 
 rm43::375:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x2c
 		ne?	
 		bnt	code_1514
@@ -823,11 +823,11 @@ code_1514:
 		pushi	0x012f
 		push1	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 code_1537:
 		pushi	0x0177
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x43, 0x6
 		ret	
 
@@ -869,8 +869,8 @@ Overriden functions: 5
 
 .CODE
 walkIn::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -897,7 +897,7 @@ walkIn::138:
 		pushi	0x18
 		pushi	0x00c1
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x24
 		jmp	code_1766
 code_1694:
@@ -922,7 +922,7 @@ code_1694:
 		pushi	0x47
 		pushi	0x00a6
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_1766
 code_1740:
@@ -933,13 +933,13 @@ code_1740:
 		pushi	0x12
 		push1	
 		pushi	0x8000
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1766:
 		toss	
 		ret	
@@ -970,8 +970,8 @@ Overriden functions: 1
 
 .CODE
 walkOut::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -989,7 +989,7 @@ walkOut::138:
 		pushi	0x18
 		pushi	0x00c1
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_1938
 code_1867:
@@ -1010,7 +1010,7 @@ code_1867:
 		pushi	0xf6
 		pushi	0x00aa
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		jmp	code_1938
 code_1906:
@@ -1024,13 +1024,13 @@ code_1906:
 		pushi	0x00a0
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		pushi	0x0177
 		push1	
 		pushi	0x29
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_1938:
 		toss	
 		ret	
@@ -1061,8 +1061,8 @@ Overriden functions: 1
 
 .CODE
 egoStaggersOut::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1087,8 +1087,8 @@ code_2030:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_2441
 code_2052:
 		dup	
@@ -1102,7 +1102,7 @@ code_2052:
 		pushi	0x00c0
 		push0	
 		lofsa	beerMug
-		send	0x4
+		send	0x04
 		pushi	0x011a
 		push2	
 		pushi	0x00ee
@@ -1124,7 +1124,7 @@ code_2052:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x28
 		jmp	code_2441
 code_2121:
@@ -1148,7 +1148,7 @@ code_2121:
 		pushi	0x42
 		push1	
 		pushi	0x0a
-		lag	0x0
+		lag	0x00
 		send	0x20
 		ldi	0x0c
 		aTop	0x10
@@ -1164,8 +1164,8 @@ code_2168:
 		pushi	0x07
 		push1	
 		push2	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		ldi	0x06
 		aTop	0x10
 		jmp	code_2441
@@ -1177,8 +1177,8 @@ code_2195:
 		pushi	0x07
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x06
 		aTop	0x10
 		jmp	code_2441
@@ -1190,8 +1190,8 @@ code_2217:
 		pushi	0x07
 		push1	
 		pushi	0x05
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x06
 		aTop	0x10
 		jmp	code_2441
@@ -1206,8 +1206,8 @@ code_2240:
 		pushi	0x07
 		push1	
 		pushi	0x04
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		ldi	0x06
 		aTop	0x10
 		jmp	code_2441
@@ -1233,7 +1233,7 @@ code_2268:
 		pushi	0x0084
 		pushi	0x00a4
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_2441
 code_2315:
@@ -1246,7 +1246,7 @@ code_2315:
 		lofsa	scareEgo
 		push	
 		lofsa	kzittenHead
-		send	0x6
+		send	0x06
 		ldi	0x1e
 		aTop	0x10
 		jmp	code_2441
@@ -1262,8 +1262,8 @@ code_2342:
 		pushi	0x29
 		pushi	0x00bb
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_2441
 code_2370:
 		dup	
@@ -1283,7 +1283,7 @@ code_2370:
 		pushi	0x04
 		pushi	0x00b4
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		jmp	code_2441
 code_2409:
@@ -1297,13 +1297,13 @@ code_2409:
 		pushi	0x00a0
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		pushi	0x0177
 		push1	
 		pushi	0x29
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_2441:
 		toss	
 		ret	
@@ -1335,8 +1335,8 @@ Overriden functions: 1
 
 .CODE
 scareEgo::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1345,7 +1345,7 @@ scareEgo::138:
 		pushi	0x0118
 		push0	
 		class	0x31
-		send	0x4
+		send	0x04
 		aTop	0x1a
 		bnt	code_2531
 		push0	
@@ -1357,7 +1357,7 @@ code_2531:
 		push	
 		pushSelf	
 		lofsa	kzittenHead
-		send	0x8
+		send	0x08
 		jmp	code_2676
 code_2547:
 		dup	
@@ -1367,14 +1367,14 @@ code_2547:
 		pushi	0x011b
 		push0	
 		lofsa	kzittenHead
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
 		lofsa	kzittenArm
-		send	0x8
+		send	0x08
 		jmp	code_2676
 code_2579:
 		dup	
@@ -1384,7 +1384,7 @@ code_2579:
 		pushi	0x011b
 		push0	
 		lofsa	kzittenArm
-		send	0x4
+		send	0x04
 		ldi	0x0a
 		aTop	0x10
 		jmp	code_2676
@@ -1398,14 +1398,14 @@ code_2602:
 		class	0x1b
 		push	
 		lofsa	kzittenHead
-		send	0x6
+		send	0x06
 		pushi	0x0094
 		push2	
 		class	0x1b
 		push	
 		pushSelf	
 		lofsa	kzittenArm
-		send	0x8
+		send	0x08
 		jmp	code_2676
 code_2637:
 		dup	
@@ -1415,11 +1415,11 @@ code_2637:
 		pushi	0x011b
 		push0	
 		lofsa	kzittenHead
-		send	0x4
+		send	0x04
 		pushi	0x011b
 		push0	
 		lofsa	kzittenArm
-		send	0x4
+		send	0x04
 		pToa	0x1a
 		bnt	code_2671
 		push0	
@@ -1427,7 +1427,7 @@ code_2637:
 code_2671:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2676:
 		toss	
 		ret	
@@ -1458,8 +1458,8 @@ Overriden functions: 1
 
 .CODE
 slugScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1468,7 +1468,7 @@ slugScript::138:
 		pushi	0x011b
 		push0	
 		lofsa	slugGuy
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x0c
 		pushi	0x3c
@@ -1486,14 +1486,14 @@ code_2770:
 		callk	0x3c, 0x4
 		bnt	code_2843
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push2	
 		pushi	0x011c
 		push0	
 		lofsa	slugGuy
-		send	0xa
+		send	0x0a
 		pushi	0x00c0
 		push0	
 		pushi	0x00a0
@@ -1526,7 +1526,7 @@ code_2850:
 		pushi	0x69
 		push0	
 		lofsa	slugEyes
-		send	0x4
+		send	0x04
 		pushi	0x00a0
 		push1	
 		push0	
@@ -1566,7 +1566,7 @@ code_2922:
 		eq?	
 		bnt	code_2956
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push0	
@@ -1610,8 +1610,8 @@ Overriden functions: 1
 
 .CODE
 triScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1620,7 +1620,7 @@ triScript::138:
 		pushi	0x011b
 		push0	
 		lofsa	triGirl
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x1e
 		pushi	0x00b4
@@ -1638,7 +1638,7 @@ code_3051:
 		callk	0x3c, 0x4
 		bnt	code_3108
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		pushi	0x03
@@ -1701,14 +1701,14 @@ code_3173:
 		eq?	
 		bnt	code_3197
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x0094
 		push2	
 		class	0x1b
 		push	
 		pushSelf	
 		lofsa	triGirl
-		send	0x8
+		send	0x08
 code_3197:
 		toss	
 		ret	
@@ -1740,8 +1740,8 @@ Overriden functions: 1
 
 .CODE
 fenrisScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1750,7 +1750,7 @@ fenrisScript::138:
 		pushi	0x011b
 		push0	
 		lofsa	fenris
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x09
 		pushi	0x5a
@@ -1768,7 +1768,7 @@ code_3292:
 		callk	0x3c, 0x4
 		bnt	code_3346
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push1	
@@ -1840,7 +1840,7 @@ code_3426:
 		eq?	
 		bnt	code_3459
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push0	
@@ -1894,7 +1894,7 @@ bartendScript::60:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		ge?	
@@ -1902,14 +1902,14 @@ bartendScript::60:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		ge?	
 code_3561:
 		bnt	code_3631
 		pushi	0x04
-		pTos	0xa
+		pTos	0x0a
 		pushi	0x03
 		push2	
 		pushi	0x08
@@ -1927,7 +1927,7 @@ code_3561:
 		lofsa	bartenderMouth
 		push	
 		lofsa	bartenderT
-		send	0xa
+		send	0x0a
 		pushi	0x01fd
 		pushi	0x05
 		pushi	0x008f
@@ -1940,13 +1940,13 @@ code_3561:
 		push1	
 		push0	
 		lofsa	bartenderT
-		send	0xe
+		send	0x0e
 code_3631:
 		ret	
 
 bartendScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1957,7 +1957,7 @@ bartendScript::138:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		ge?	
@@ -1966,16 +1966,16 @@ bartendScript::138:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		ge?	
 		not	
 		bnt	code_3698
 		ldi	0x04
-		aTop	0xa
+		aTop	0x0a
 		pToa	0x1a
-		sal	0x3
+		sal	0x03
 		ldi	0x09
 		aTop	0x10
 		jmp	code_4769
@@ -1994,19 +1994,19 @@ code_3711:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		ge?	
 		not	
 		bnt	code_3739
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 code_3739:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		ge?	
@@ -2015,19 +2015,19 @@ code_3739:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		ge?	
 		bnt	code_3776
 		ldi	0x02
-		aTop	0xa
+		aTop	0x0a
 code_3776:
 		pushi	0x00a0
 		push1	
 		push1	
 		lofsa	bartender
-		send	0x6
+		send	0x06
 		pushi	0x00c0
 		push0	
 		pushi	0x011a
@@ -2042,7 +2042,7 @@ code_3776:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		ge?	
@@ -2056,7 +2056,7 @@ code_3776:
 		push	
 		pushSelf	
 		lofsa	bartenderHead
-		send	0xe
+		send	0x0e
 		jmp	code_4769
 code_3847:
 		pushi	0x00a0
@@ -2068,7 +2068,7 @@ code_3847:
 		push	
 		pushSelf	
 		lofsa	bartenderHead
-		send	0xe
+		send	0x0e
 		jmp	code_4769
 code_3868:
 		dup	
@@ -2095,8 +2095,8 @@ code_3868:
 		push2	
 		pushi	0x11
 		pushi	0x2b
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		lsg	0xa5
 		ldi	0x05
 		add	
@@ -2106,25 +2106,25 @@ code_3868:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		sub	
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x0087
 		push1	
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x02
 		add	
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x04
-		aTop	0xa
+		aTop	0x0a
 		ldi	0x05
 		aTop	0x10
 		jmp	code_4769
@@ -2164,7 +2164,7 @@ code_4016:
 		bnt	code_4043
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_4043:
 		bt	code_4048
 		ldi	0x01
@@ -2199,7 +2199,7 @@ code_4080:
 		bnt	code_4107
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_4107:
 		bt	code_4112
 		ldi	0x01
@@ -2230,7 +2230,7 @@ code_4144:
 		bnt	code_4165
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_4165:
 		bt	code_4170
 		ldi	0x01
@@ -2264,13 +2264,13 @@ code_4202:
 		push0	
 		push1	
 		lofsa	bartenderT
-		send	0xc
+		send	0x0c
 		ldi	0x00
 		sag	0xbc
 		pushi	0x2d
 		push0	
 		lofsa	someoneDied
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_4259
 		push0	
@@ -2279,10 +2279,10 @@ code_4202:
 		push1	
 		push0	
 		class	0x31
-		send	0x6
+		send	0x06
 code_4259:
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_4372
 code_4266:
 		lsg	0xa5
@@ -2294,19 +2294,19 @@ code_4266:
 		pushi	0x0146
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x0087
 		push1	
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x02
 		add	
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x01fd
 		pushi	0x04
 		lofsa	string_16		; "\"Here ya go.\""
@@ -2315,7 +2315,7 @@ code_4266:
 		push0	
 		push1	
 		lofsa	bartenderT
-		send	0xc
+		send	0x0c
 		jmp	code_4372
 code_4328:
 		lsg	0xa5
@@ -2327,12 +2327,12 @@ code_4328:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x02
 		add	
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x01fd
 		pushi	0x04
 		lofsa	string_16		; "\"Here ya go.\""
@@ -2341,7 +2341,7 @@ code_4328:
 		push0	
 		push1	
 		lofsa	bartenderT
-		send	0xc
+		send	0x0c
 code_4372:
 		ldi	0x05
 		aTop	0x10
@@ -2352,7 +2352,7 @@ code_4379:
 		pushi	0x2d
 		push0	
 		lofsa	someoneDied
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_4408
 		push0	
@@ -2361,7 +2361,7 @@ code_4379:
 		push1	
 		push0	
 		class	0x31
-		send	0x6
+		send	0x06
 code_4408:
 		pushi	0x6b
 		pushi	0x08
@@ -2380,19 +2380,19 @@ code_4408:
 		lofsa	bartenderT
 		send	0x14
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 code_4441:
 		pushi	0x0087
 		push1	
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		sub	
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_4769
 code_4464:
 		dup	
@@ -2400,11 +2400,11 @@ code_4464:
 		eq?	
 		bnt	code_4508
 		pToa	0x1a
-		sal	0x3
+		sal	0x03
 		pushi	0x69
 		push0	
 		lofsa	bartenderHead
-		send	0x4
+		send	0x04
 		pushi	0x00a0
 		push1	
 		push0	
@@ -2431,7 +2431,7 @@ code_4508:
 		push1	
 		push0	
 		lofsa	bartender
-		send	0xc
+		send	0x0c
 		pushi	0x00c0
 		push0	
 		pushi	0x011a
@@ -2456,7 +2456,7 @@ code_4570:
 		ldi	0x07
 		eq?	
 		bnt	code_4718
-		lsl	0x3
+		lsl	0x03
 		ldi	0x04
 		ge?	
 		bnt	code_4619
@@ -2465,7 +2465,7 @@ code_4570:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
@@ -2479,7 +2479,7 @@ code_4570:
 		self	0x10
 		jmp	code_4698
 code_4619:
-		lsl	0x3
+		lsl	0x03
 		ldi	0x02
 		ge?	
 		bnt	code_4659
@@ -2488,7 +2488,7 @@ code_4619:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x02
 		sub	
@@ -2498,10 +2498,10 @@ code_4619:
 		lofsa	drinkDownBar
 		push	
 		pushSelf	
-		self	0xe
+		self	0x0e
 		jmp	code_4698
 code_4659:
-		lsl	0x3
+		lsl	0x03
 		ldi	0x01
 		ge?	
 		bnt	code_4698
@@ -2510,7 +2510,7 @@ code_4659:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
@@ -2524,14 +2524,14 @@ code_4659:
 		self	0x10
 code_4698:
 		ldi	0x00
-		sal	0x3
+		sal	0x03
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
 		lofsa	bartenderHead
-		send	0x8
+		send	0x08
 		jmp	code_4769
 code_4718:
 		dup	
@@ -2539,7 +2539,7 @@ code_4718:
 		eq?	
 		bnt	code_4769
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x011a
 		push2	
 		pushi	0x00f8
@@ -2547,7 +2547,7 @@ code_4718:
 		pushi	0x69
 		push0	
 		lofsa	bartenderHead
-		send	0xc
+		send	0x0c
 		pushi	0x00a0
 		push1	
 		push0	
@@ -2592,8 +2592,8 @@ Overriden functions: 2
 
 .CODE
 drinkDownBar::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2657,28 +2657,28 @@ code_4955:
 		push1	
 		push0	
 		lofsa	C_DbeerMug
-		send	0x6
+		send	0x06
 		ldi	0x01
-		sal	0x2
+		sal	0x02
 		pushi	0x008b
 		push0	
 		lofsa	beerJumping
-		send	0x4
+		send	0x04
 		jmp	code_5014
 code_4996:
 		pushi	0x07
 		push1	
 		push0	
 		lofsa	beerMug
-		send	0x6
+		send	0x06
 		pushi	0x008b
 		push0	
 		lofsa	moveEgoToBar
-		send	0x4
+		send	0x04
 code_5014:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_5019:
 		toss	
 		ret	
@@ -2710,8 +2710,8 @@ Overriden functions: 1
 
 .CODE
 beerJumping::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2721,7 +2721,7 @@ beerJumping::138:
 		push1	
 		pushi	0x08
 		lofsa	chp_dail
-		send	0x6
+		send	0x06
 		push2	
 		push1	
 		pushi	0x03
@@ -2729,7 +2729,7 @@ beerJumping::138:
 		push	
 		ldi	0x01
 		sub	
-		aTop	0xa
+		aTop	0x0a
 		push2	
 		pushi	0x0c
 		pushi	0x5a
@@ -2742,13 +2742,13 @@ code_5129:
 		eq?	
 		bnt	code_5187
 		ldi	0xff
-		aTop	0xa
-		lal	0x2
+		aTop	0x0a
+		lal	0x02
 		bnt	code_5154
 		pushi	0x00c0
 		push0	
 		lofsa	C_DbeerMug
-		send	0x4
+		send	0x04
 code_5154:
 		pushi	0x00a0
 		push1	
@@ -2774,13 +2774,13 @@ code_5187:
 		eq?	
 		bnt	code_5236
 		ldi	0xff
-		aTop	0xa
-		lal	0x2
+		aTop	0x0a
+		lal	0x02
 		bnt	code_5211
 		pushi	0x69
 		push0	
 		lofsa	C_DbeerMug
-		send	0x4
+		send	0x04
 code_5211:
 		pushi	0x00a0
 		push1	
@@ -2801,12 +2801,12 @@ code_5236:
 		ldi	0x03
 		eq?	
 		bnt	code_5281
-		lal	0x2
+		lal	0x02
 		bnt	code_5256
 		pushi	0x69
 		push0	
 		lofsa	C_DbeerMug
-		send	0x4
+		send	0x04
 code_5256:
 		pushi	0x00a0
 		push1	
@@ -2866,13 +2866,13 @@ code_5322:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		add	
 		push	
 		lofsa	bartendScript
-		send	0x6
+		send	0x06
 		jmp	code_5403
 code_5374:
 		dup	
@@ -2880,7 +2880,7 @@ code_5374:
 		eq?	
 		bnt	code_5403
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push2	
@@ -2888,7 +2888,7 @@ code_5374:
 		push1	
 		push0	
 		lofsa	chp_dail
-		send	0xc
+		send	0x0c
 		ldi	0x03
 		aTop	0x10
 code_5403:
@@ -2924,13 +2924,13 @@ Overriden functions: 1
 moveEgoToBar::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x4a
-		send	0x6
+		send	0x06
 		ret	
 
 moveEgoToBar::108:
@@ -2938,18 +2938,18 @@ moveEgoToBar::108:
 		push1	
 		pushSelf	
 		lag	0x4a
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
 		super	0x6, 0x4
 		ret	
 
 moveEgoToBar::129:
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x04
 		eq?	
 		bt	code_5509
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x09
 		eq?	
 code_5509:
@@ -2957,27 +2957,27 @@ code_5509:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		push0	
 		lag	0x45
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_5614
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x40
 		and	
 		bt	code_5558
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x01
 		eq?	
@@ -2991,37 +2991,37 @@ code_5558:
 		calle	0xff, 0x00, 0x04
 		jmp	code_5603
 code_5578:
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x04
 		eq?	
 		bnt	code_5597
 		pushi	0x008a
 		push1	
 		pushi	0x0a
-		self	0x6
+		self	0x06
 		jmp	code_5603
 code_5597:
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 code_5603:
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		jmp	code_5623
 code_5614:
 		pushi	0x0081
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x6, 0x6
 code_5623:
 		ret	
 
 moveEgoToBar::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -3039,7 +3039,7 @@ moveEgoToBar::138:
 		pushi	0x008a
 		push1	
 		pushi	0x04
-		self	0x6
+		self	0x06
 		jmp	code_6869
 code_5668:
 		ldi	0x03
@@ -3057,8 +3057,8 @@ code_5675:
 		pushi	0x00f0
 		pushi	0x009e
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_6869
 code_5704:
 		dup	
@@ -3086,7 +3086,7 @@ code_5704:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x28
 		jmp	code_6869
 code_5755:
@@ -3103,31 +3103,31 @@ code_5769:
 		eq?	
 		bnt	code_5974
 		ldi	0x01
-		sal	0x0
+		sal	0x00
 		pushi	0x0117
 		push0	
 		lofsa	kzittenHead
-		send	0x4
+		send	0x04
 		pushi	0x0117
 		push0	
 		lofsa	kzittenArm
-		send	0x4
+		send	0x04
 		pushi	0x0117
 		push0	
 		lofsa	kzitten
-		send	0x4
+		send	0x04
 		pushi	0x0117
 		push0	
 		lofsa	triGirl
-		send	0x4
+		send	0x04
 		pushi	0x0117
 		push0	
 		lofsa	fenris
-		send	0x4
+		send	0x04
 		pushi	0x0117
 		push0	
 		lofsa	fenrisBody
-		send	0x4
+		send	0x04
 		lal	0x5d
 		not	
 		bnt	code_5950
@@ -3149,13 +3149,13 @@ code_5769:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		add	
 		push	
 		lofsa	bartendScript
-		send	0x6
+		send	0x06
 		jmp	code_5943
 code_5893:
 		lag	0xa9
@@ -3177,13 +3177,13 @@ code_5920:
 		pushi	0x0087
 		push0	
 		lofsa	bartendScript
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		add	
 		push	
 		lofsa	bartendScript
-		send	0x6
+		send	0x06
 code_5943:
 		ldi	0x01
 		sag	0xbc
@@ -3200,7 +3200,7 @@ code_5954:
 		push1	
 		push0	
 		class	0x31
-		send	0x6
+		send	0x06
 		jmp	code_6869
 code_5974:
 		dup	
@@ -3231,14 +3231,14 @@ code_5974:
 		push1	
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x24
 		jmp	code_6869
 code_6028:
 		pushi	0x69
 		push0	
 		lofsa	beerMug
-		send	0x4
+		send	0x04
 		pushi	0x05
 		push1	
 		pushi	0x49
@@ -3256,7 +3256,7 @@ code_6028:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_6869
 code_6071:
@@ -3267,7 +3267,7 @@ code_6071:
 		pushi	0x69
 		push0	
 		lofsa	beerMug
-		send	0x4
+		send	0x04
 		lsg	0xa9
 		ldi	0x06
 		ge?	
@@ -3276,11 +3276,11 @@ code_6071:
 		push1	
 		lofsa	egoStaggersOut
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_6869
 code_6114:
 		pushi	0x0094
@@ -3290,8 +3290,8 @@ code_6114:
 		pushi	0x08
 		push1	
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_6869
 code_6133:
 		dup	
@@ -3319,8 +3319,8 @@ code_6133:
 		push1	
 		class	0x1a
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_6869
 code_6192:
 		dup	
@@ -3547,14 +3547,14 @@ code_6599:
 		pushi	0x69
 		push0	
 		lofsa	beerMug
-		send	0x4
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		pushi	0x0118
 		push1	
 		push0	
 		class	0x31
-		send	0x6
+		send	0x06
 		ldi	0x00
 		jmp	code_6869
 code_6632:
@@ -3578,7 +3578,7 @@ code_6632:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_6869
 code_6672:
@@ -3593,49 +3593,49 @@ code_6672:
 		pushi	0x42
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		ldi	0x00
-		sal	0x0
+		sal	0x00
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x05
 		lofsa	kzittenHead
-		send	0x8
+		send	0x08
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x05
 		lofsa	kzittenArm
-		send	0x8
+		send	0x08
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x05
 		lofsa	kzitten
-		send	0x8
+		send	0x08
 		pushi	0x0117
 		pushi	0x03
 		pushi	0x05
 		pushi	0x03
 		pushi	0x0c
 		lofsa	triGirl
-		send	0xa
+		send	0x0a
 		pushi	0x0117
 		pushi	0x03
 		pushi	0x05
 		pushi	0x03
 		pushi	0x0c
 		lofsa	fenris
-		send	0xa
+		send	0x0a
 		pushi	0x0117
 		pushi	0x03
 		pushi	0x05
 		pushi	0x03
 		pushi	0x0c
 		lofsa	fenrisBody
-		send	0xa
+		send	0x0a
 		pushi	0x06
 		lag	0xa9
 		gt?	
@@ -3657,8 +3657,8 @@ code_6801:
 		pushi	0x06
 		push1	
 		pushi	0x04
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_6860
 code_6832:
 		push2	
@@ -3673,14 +3673,14 @@ code_6832:
 		pushi	0x12
 		push1	
 		pushi	0x8000
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_6860:
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_6869:
 		toss	
 		ret	
@@ -3715,15 +3715,15 @@ Overriden functions: 4
 
 .CODE
 someoneDied::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
 		eq?	
 		bnt	code_6982
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_6973
 		push0	
@@ -3734,7 +3734,7 @@ someoneDied::138:
 code_6973:
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_8005
 code_6982:
 		dup	
@@ -3742,7 +3742,7 @@ code_6982:
 		eq?	
 		bnt	code_7071
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_7004
 		ldi	0x02
@@ -3757,7 +3757,7 @@ code_7004:
 		pushi	0x012f
 		push2	
 		callk	0x2, 0x4
-		send	0x8
+		send	0x08
 		pushi	0x05
 		push1	
 		pushi	0x021f
@@ -3791,7 +3791,7 @@ code_7071:
 		eq?	
 		bnt	code_7301
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_7145
 		pushi	0x06
@@ -3802,7 +3802,7 @@ code_7071:
 		pushi	0x00ff
 		push1	
 		callk	0x6c, 0xc
-		sal	0x1
+		sal	0x01
 		pushi	0x09
 		pushi	0x04
 		pushi	0x15
@@ -3831,7 +3831,7 @@ code_7145:
 		pushi	0x00fa
 		push1	
 		callk	0x6c, 0xc
-		sal	0x1
+		sal	0x01
 		pushi	0x09
 		pushi	0x04
 		pushi	0x15
@@ -3862,7 +3862,7 @@ code_7201:
 		lag	0xb1
 		send	0x10
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_7247
 		pushi	0x05
@@ -3874,7 +3874,7 @@ code_7201:
 		pushi	0x07
 		push1	
 		push2	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_7282
 code_7247:
@@ -3904,7 +3904,7 @@ code_7282:
 		push	
 		pushSelf	
 		pToa	0x1a
-		send	0x8
+		send	0x08
 		ldi	0x0a
 		aTop	0x10
 		jmp	code_8005
@@ -3915,10 +3915,10 @@ code_7301:
 		bnt	code_7366
 		push2	
 		pushi	0x08
-		lsl	0x1
+		lsl	0x01
 		callk	0x6c, 0x4
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_7343
 		pushi	0x05
@@ -3939,7 +3939,7 @@ code_7343:
 		callk	0x6c, 0xa
 code_7359:
 		ldi	0x00
-		sal	0x1
+		sal	0x01
 		jmp	code_8005
 code_7366:
 		dup	
@@ -3947,7 +3947,7 @@ code_7366:
 		eq?	
 		bnt	code_7475
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_7415
 		pushi	0x05
@@ -3967,7 +3967,7 @@ code_7366:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_8005
 code_7415:
@@ -3981,9 +3981,9 @@ code_7415:
 		push	
 		pushi	0x00e8
 		push0	
-		lag	0x2
-		send	0x4
-		send	0xc
+		lag	0x02
+		send	0x04
+		send	0x0c
 		push1	
 		pushi	0x0b
 		callb	0x7, 0x2
@@ -4026,7 +4026,7 @@ code_7475:
 		pushi	0x04
 		push0	
 		pToa	0x1a
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0a
 		sub	
@@ -4034,14 +4034,14 @@ code_7475:
 		pushi	0x03
 		push0	
 		pToa	0x1a
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
 		push	
 		pushSelf	
 		lofsa	sweeper
-		send	0xc
+		send	0x0c
 		jmp	code_8005
 code_7541:
 		dup	
@@ -4073,7 +4073,7 @@ code_7579:
 		pushi	0x69
 		push0	
 		pToa	0x1a
-		send	0x4
+		send	0x04
 		pushi	0x00a0
 		push1	
 		pushi	0x03
@@ -4129,7 +4129,7 @@ code_7677:
 		pushi	0x009a
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x00a0
 		push1	
 		pushi	0x03
@@ -4183,7 +4183,7 @@ code_7775:
 		pushi	0x009a
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_8005
@@ -4247,39 +4247,39 @@ code_7895:
 		eq?	
 		bnt	code_8005
 		pTos	0x1a
-		lag	0x0
+		lag	0x00
 		eq?	
 		bnt	code_7923
 		pushi	0x0177
 		push1	
 		pushi	0x2a
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_7968
 code_7923:
 		pushi	0x6c
 		push0	
 		lofsa	sweeper
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		push2	
 		pushi	0x012f
 		push1	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		lag	0xbc
 		not	
 		bnt	code_7968
 		push0	
 		callb	0x3, 0x0
-		lal	0x0
+		lal	0x00
 		bnt	code_7968
 		pushi	0x0118
 		push1	
 		push0	
 		class	0x31
-		send	0x6
+		send	0x06
 code_7968:
 		push2	
 		pushi	0x0080
@@ -4292,12 +4292,12 @@ code_7968:
 		pushi	0x009a
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		ldi	0x00
 		aTop	0x1a
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_8005:
 		toss	
 		ret	
@@ -4330,8 +4330,8 @@ Overriden functions: 1
 
 .CODE
 playSlots::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -4350,7 +4350,7 @@ playSlots::138:
 		pushi	0x008a
 		push1	
 		pushi	0x03
-		self	0x6
+		self	0x06
 		jmp	code_8557
 code_8108:
 		pTos	0x1a
@@ -4358,7 +4358,7 @@ code_8108:
 		eq?	
 		bnt	code_8120
 		ldi	0x03
-		aTop	0xa
+		aTop	0x0a
 code_8120:
 		push1	
 		pushi	0x0b
@@ -4371,8 +4371,8 @@ code_8120:
 		pushi	0x0100
 		pushi	0x69
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_8557
 code_8150:
 		push2	
@@ -4383,7 +4383,7 @@ code_8150:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_8557
 code_8171:
 		dup	
@@ -4401,7 +4401,7 @@ code_8171:
 		class	0x17
 		push	
 		lofsa	widget
-		send	0xa
+		send	0x0a
 code_8202:
 		pushi	0x05
 		push1	
@@ -4417,7 +4417,7 @@ code_8202:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_8557
 code_8231:
@@ -4431,8 +4431,8 @@ code_8231:
 		push2	
 		pushi	0x2c
 		pushi	0x07
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		jmp	code_8557
 code_8257:
 		dup	
@@ -4457,7 +4457,7 @@ code_8257:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 code_8299:
 		pTos	0x1a
@@ -4468,7 +4468,7 @@ code_8299:
 		pushi	0x008a
 		push1	
 		pushi	0x04
-		self	0x6
+		self	0x06
 		jmp	code_8351
 code_8319:
 		dup	
@@ -4476,7 +4476,7 @@ code_8319:
 		eq?	
 		bnt	code_8333
 		ldi	0x03
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_8351
 code_8333:
 		dup	
@@ -4484,11 +4484,11 @@ code_8333:
 		eq?	
 		bnt	code_8347
 		ldi	0x04
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_8351
 code_8347:
 		ldi	0x04
-		aTop	0xa
+		aTop	0x0a
 code_8351:
 		toss	
 		jmp	code_8557
@@ -4498,7 +4498,7 @@ code_8355:
 		eq?	
 		bnt	code_8422
 		ldi	0x00
-		aTop	0xa
+		aTop	0x0a
 		push1	
 		pushi	0x0c
 		callb	0x7, 0x2
@@ -4526,7 +4526,7 @@ code_8355:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_8557
 code_8422:
@@ -4544,7 +4544,7 @@ code_8422:
 		pushi	0x69
 		push0	
 		lofsa	widget
-		send	0x4
+		send	0x04
 		pushi	0x05
 		push1	
 		pushi	0x4f
@@ -4562,7 +4562,7 @@ code_8422:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_8557
 code_8488:
@@ -4582,8 +4582,8 @@ code_8495:
 		push1	
 		lofsa	breakSlots
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_8557
 code_8525:
 		pushi	0x03
@@ -4596,13 +4596,13 @@ code_8525:
 		pushi	0x12
 		push1	
 		pushi	0x8000
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_8557:
 		toss	
 		ret	
@@ -4634,8 +4634,8 @@ Overriden functions: 1
 
 .CODE
 breakSlots::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -4658,7 +4658,7 @@ breakSlots::138:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		pushi	0x2b
 		push1	
@@ -4714,7 +4714,7 @@ code_8746:
 		pushi	0x011b
 		push0	
 		lofsa	slot
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x2b
 		pushi	0x17
@@ -4723,7 +4723,7 @@ code_8746:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_8780:
 		toss	
 		ret	
@@ -4754,7 +4754,7 @@ Overriden functions: 1
 
 .CODE
 widget::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x05
 		eq?	
@@ -4787,8 +4787,8 @@ code_8880:
 code_8899:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_8910:
 		toss	
@@ -4848,10 +4848,10 @@ Overriden functions: 1
 slugEyes::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	slugGuy
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -4903,10 +4903,10 @@ Overriden functions: 1
 kzittenArm::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	kzittenHead
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -4963,29 +4963,29 @@ Overriden functions: 1
 kzittenHead::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x05
-		self	0x8
+		self	0x08
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x05
 		lofsa	kzittenArm
-		send	0x8
+		send	0x08
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x05
 		lofsa	kzitten
-		send	0x8
+		send	0x08
 		ret	
 
 kzittenHead::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -4995,14 +4995,14 @@ kzittenHead::266:
 		lofsa	scareEgo
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_9666
 code_9328:
 		dup	
 		ldi	0x05
 		eq?	
 		bnt	code_9422
-		lal	0x0
+		lal	0x00
 		bnt	code_9352
 		push2	
 		pushi	0x2b
@@ -5064,7 +5064,7 @@ code_9460:
 		ldi	0x04
 		eq?	
 		bnt	code_9655
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -5157,8 +5157,8 @@ code_9621:
 code_9640:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_9651:
 		toss	
@@ -5166,8 +5166,8 @@ code_9651:
 code_9655:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_9666:
 		toss	
@@ -5259,7 +5259,7 @@ Overriden functions: 3
 
 .CODE
 slugGuy::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -5304,7 +5304,7 @@ code_9916:
 		ldi	0x04
 		eq?	
 		bnt	code_10111
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -5397,8 +5397,8 @@ code_10077:
 code_10096:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_10107:
 		toss	
@@ -5406,8 +5406,8 @@ code_10107:
 code_10111:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_10122:
 		toss	
@@ -5467,18 +5467,18 @@ Overriden functions: 1
 triGirl::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		pushi	0x03
 		pushi	0x05
 		pushi	0x03
 		pushi	0x0c
-		self	0xa
+		self	0x0a
 		ret	
 
 triGirl::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -5537,7 +5537,7 @@ code_10369:
 		ldi	0x04
 		eq?	
 		bnt	code_10564
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -5630,8 +5630,8 @@ code_10530:
 code_10549:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_10560:
 		toss	
@@ -5639,8 +5639,8 @@ code_10560:
 code_10564:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_10575:
 		toss	
@@ -5702,25 +5702,25 @@ Overriden functions: 2
 fenris::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		pushi	0x03
 		pushi	0x05
 		pushi	0x03
 		pushi	0x0c
-		self	0xa
+		self	0x0a
 		pushi	0x0117
 		pushi	0x03
 		pushi	0x05
 		pushi	0x03
 		pushi	0x0c
 		lofsa	fenrisBody
-		send	0xa
+		send	0x0a
 		ret	
 
 fenris::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -5779,7 +5779,7 @@ code_10843:
 		ldi	0x04
 		eq?	
 		bnt	code_11038
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -5872,8 +5872,8 @@ code_11004:
 code_11023:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_11034:
 		toss	
@@ -5881,8 +5881,8 @@ code_11034:
 code_11038:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_11049:
 		toss	
@@ -5944,17 +5944,17 @@ Overriden functions: 2
 bartender::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x04
 		pushi	0x05
-		self	0x8
+		self	0x08
 		ret	
 
 bartender::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -5969,21 +5969,21 @@ code_11206:
 		ldi	0x05
 		eq?	
 		bnt	code_11263
-		lal	0x0
+		lal	0x00
 		not	
 		bnt	code_11234
 		pushi	0x008c
 		push1	
 		lofsa	moveEgoToBar
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_11505
 code_11234:
 		pushi	0x0138
 		push0	
 		class	0x31
-		send	0x4
+		send	0x04
 		bnt	code_11505
 		pushi	0x008c
 		pushi	0x03
@@ -5991,20 +5991,20 @@ code_11234:
 		push	
 		push0	
 		push1	
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_11505
 code_11263:
 		dup	
 		ldi	0x04
 		eq?	
 		bnt	code_11454
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x11
 		eq?	
 		bnt	code_11323
-		lal	0x0
+		lal	0x00
 		not	
 		bnt	code_11304
 		pushi	0x008c
@@ -6013,8 +6013,8 @@ code_11263:
 		push	
 		push0	
 		pushi	0x06
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_11450
 code_11304:
 		pushi	0x008c
@@ -6023,8 +6023,8 @@ code_11304:
 		push	
 		push0	
 		pushi	0x05
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_11450
 code_11323:
 		dup	
@@ -6089,9 +6089,9 @@ code_11418:
 code_11437:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 code_11450:
 		toss	
@@ -6119,9 +6119,9 @@ code_11473:
 code_11492:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 code_11505:
 		toss	
@@ -6184,22 +6184,22 @@ Overriden functions: 2
 bartenderHead::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x04
 		pushi	0x05
-		self	0x8
+		self	0x08
 		ret	
 
 bartenderHead::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	bartender
-		send	0x6
+		send	0x06
 		ret	
 
 		bnot	
@@ -6256,7 +6256,7 @@ Overriden functions: 2
 
 .CODE
 chp_dail::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -6301,7 +6301,7 @@ code_11850:
 		ldi	0x04
 		eq?	
 		bnt	code_12045
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -6394,8 +6394,8 @@ code_12011:
 code_12030:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_12041:
 		toss	
@@ -6403,8 +6403,8 @@ code_12041:
 code_12045:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_12056:
 		toss	
@@ -6465,10 +6465,10 @@ Overriden functions: 1
 slot::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	slotMachine
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -6524,7 +6524,7 @@ Overriden functions: 1
 
 .CODE
 sweeper::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x0b
 		eq?	
@@ -6734,10 +6734,10 @@ Overriden functions: 0
 fenrisBody::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	fenris
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -6773,10 +6773,10 @@ Overriden functions: 1
 kzitten::266:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		lofsa	kzittenHead
-		send	0x6
+		send	0x06
 		ret	
 
 
@@ -6810,7 +6810,7 @@ Overriden functions: 1
 
 .CODE
 lightCannon::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -6843,8 +6843,8 @@ code_12924:
 code_12943:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_12954:
 		toss	
@@ -6883,16 +6883,16 @@ Overriden functions: 1
 barTop::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push1	
 		pushi	0x03
-		self	0x6
+		self	0x06
 		ret	
 
 barTop::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -6902,22 +6902,22 @@ barTop::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
+		send	0x04
+		send	0x04
+		aTop	0x0a
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		jmp	code_13161
 code_13096:
@@ -6925,7 +6925,7 @@ code_13096:
 		ldi	0x03
 		eq?	
 		bnt	code_13150
-		lal	0x0
+		lal	0x00
 		not	
 		bnt	code_13128
 		ldi	0x01
@@ -6934,8 +6934,8 @@ code_13096:
 		push1	
 		lofsa	moveEgoToBar
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_13161
 code_13128:
 		ldi	0x01
@@ -6946,14 +6946,14 @@ code_13128:
 		push	
 		push0	
 		push1	
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_13161
 code_13150:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2c, 0x6
 code_13161:
 		toss	
@@ -6997,18 +6997,18 @@ slotMachine::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0x8
+		send	0x04
+		send	0x04
+		aTop	0x08
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		aTop	0xa
-		lsp	0x1
+		send	0x04
+		send	0x04
+		aTop	0x0a
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -7025,22 +7025,22 @@ slotMachine::266:
 code_13296:
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_13323
 		pushi	0x008c
 		push1	
 		lofsa	playSlots
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_13575
 code_13323:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 		jmp	code_13575
 code_13337:
@@ -7058,15 +7058,15 @@ code_13337:
 		calle	0xff, 0x00, 0x04
 		jmp	code_13575
 code_13365:
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0f
 		eq?	
 		bnt	code_13419
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_13405
 		pushi	0x008c
@@ -7075,14 +7075,14 @@ code_13365:
 		push	
 		push0	
 		pushi	0x04
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_13478
 code_13405:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 		jmp	code_13478
 code_13419:
@@ -7092,29 +7092,29 @@ code_13419:
 		bnt	code_13467
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_13453
 		pushi	0x008c
 		push1	
 		lofsa	playSlots
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_13478
 code_13453:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 		jmp	code_13478
 code_13467:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 code_13478:
 		toss	
@@ -7156,16 +7156,16 @@ code_13520:
 code_13548:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		jmp	code_13575
 code_13564:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2c, 0x6
 code_13575:
 		toss	

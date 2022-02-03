@@ -12,9 +12,9 @@ rmK2::107:
 		pushi	0x0137
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		sal	0x0
+		send	0x04
+		send	0x04
+		sal	0x00
 		push	
 		dup	
 		ldi	0x03
@@ -27,9 +27,9 @@ rmK2::107:
 		pushi	0x00c8
 		callk	0x3c, 0x4
 		push	
-		lag	0x0
-		send	0x6
-		lag	0xc
+		lag	0x00
+		send	0x06
+		lag	0x0c
 		aTop	0x1c
 		jmp	code_138
 code_62:
@@ -44,9 +44,9 @@ code_62:
 		pushi	0x00c8
 		callk	0x3c, 0x4
 		push	
-		lag	0x0
-		send	0x6
-		lag	0xc
+		lag	0x00
+		send	0x06
+		lag	0x0c
 		aTop	0x20
 		jmp	code_138
 code_93:
@@ -57,9 +57,9 @@ code_93:
 		pushi	0x03
 		push1	
 		pushi	0x00aa
-		lag	0x0
-		send	0x6
-		lag	0xc
+		lag	0x00
+		send	0x06
+		lag	0x0c
 		aTop	0x22
 		jmp	code_138
 code_117:
@@ -70,9 +70,9 @@ code_117:
 		pushi	0x03
 		push1	
 		pushi	0x00aa
-		lag	0x0
-		send	0x6
-		lag	0xc
+		lag	0x00
+		send	0x06
+		lag	0x0c
 		aTop	0x1e
 code_138:
 		toss	
@@ -83,12 +83,12 @@ code_138:
 		calle	0x03be, 0x0000, 0x06
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -99,8 +99,8 @@ rmK2::380:
 		push1	
 		lofsa	egoDead
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ret	
 
 		bnot	
@@ -141,12 +141,12 @@ Overriden functions: 2
 egoDead::60:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		pushi	0x0118
 		push0	
 		class	0x31
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_293
 		ldi	0x00
@@ -154,29 +154,29 @@ egoDead::60:
 code_293:
 		pushi	0x0182
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		bnt	code_379
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x0087
 		gt?	
 		bt	code_345
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x1e
 		lt?	
 		bt	code_345
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x0122
 		gt?	
@@ -190,40 +190,40 @@ code_345:
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x0096
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_634
 code_379:
 		pushi	0x0184
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		bnt	code_465
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x00aa
 		lt?	
 		bt	code_431
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x1e
 		lt?	
 		bt	code_431
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x0122
 		gt?	
@@ -237,40 +237,40 @@ code_431:
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x00a0
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_634
 code_465:
 		pushi	0x0183
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		bnt	code_552
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x0122
 		lt?	
 		bt	code_518
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x008c
 		lt?	
 		bt	code_518
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x00b4
 		gt?	
@@ -285,39 +285,39 @@ code_518:
 		pushi	0x0118
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_634
 code_552:
 		pushi	0x0185
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		bnt	code_634
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x1e
 		gt?	
 		bt	code_604
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x008c
 		lt?	
 		bt	code_604
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x00b4
 		gt?	
@@ -332,18 +332,18 @@ code_604:
 		pushi	0x1e
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 code_634:
 		ret	
 
 egoDead::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -358,12 +358,12 @@ code_652:
 		bnt	code_757
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		bnt	code_678
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_800
 code_678:
 		push0	
@@ -385,8 +385,8 @@ code_678:
 		push1	
 		pushi	0x3a
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x00b4
 		lt?	
@@ -406,7 +406,7 @@ code_730:
 		pushi	0x00d9
 		push1	
 		pushi	0x05
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		ldi	0x18
 		aTop	0x10
@@ -421,8 +421,8 @@ code_757:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_800
 code_779:
 		dup	

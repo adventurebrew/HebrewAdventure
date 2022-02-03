@@ -6,20 +6,20 @@ LOFSA_RELATIVE = False
 RandCycle::107:
 		pushi	0x6b
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x16, 0x6
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_39
-		lap	0x2
+		lap	0x02
 		aTop	0x12
-		lsp	0x0
+		lsp	0x00
 		ldi	0x03
 		ge?	
 		bnt	code_43
-		lap	0x3
-		aTop	0xa
+		lap	0x03
+		aTop	0x0a
 		jmp	code_43
 code_39:
 		ldi	0xff
@@ -28,12 +28,12 @@ code_43:
 		ret	
 
 RandCycle::60:
-		ipToa	0xe
-		pTos	0xe
+		ipToa	0x0e
+		pTos	0x0e
 		pushi	0x00d9
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		gt?	
 		bnt	code_101
 		pToa	0x12
@@ -48,24 +48,24 @@ code_74:
 		push1	
 		pushi	0x00d6
 		push0	
-		self	0x4
+		self	0x04
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		ldi	0x00
-		aTop	0xe
+		aTop	0x0e
 		jmp	code_101
 code_95:
 		pushi	0x00d7
 		push0	
-		self	0x4
+		self	0x04
 code_101:
 		ret	
 
 RandCycle::214:
 		link	0x01
 		push1	
-		pTos	0x8
+		pTos	0x08
 		callk	0xe, 0x2
 		push	
 		ldi	0x01
@@ -76,28 +76,28 @@ code_117:
 		push0	
 		pushi	0x00db
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		callk	0x3c, 0x4
-		sat	0x0
+		sat	0x00
 		push	
 		pushi	0x07
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		eq?	
 		bnt	code_148
 		jmp	code_117
 code_148:
-		lat	0x0
+		lat	0x00
 code_150:
 		ret	
 
 RandCycle::215:
 		ldi	0x01
 		aTop	0x10
-		pToa	0xa
+		pToa	0x0a
 		bnt	code_167
 		ldi	0x01
 		sag	0x25
@@ -105,7 +105,7 @@ RandCycle::215:
 code_167:
 		pushi	0x00d8
 		push0	
-		self	0x4
+		self	0x04
 code_173:
 		ret	
 

@@ -22,12 +22,12 @@ rm44::107:
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		lsg	0x6a
 		ldi	0x04
 		lt?	
@@ -35,7 +35,7 @@ rm44::107:
 		pushi	0x009a
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 code_80:
 		pushi	0x6b
 		push0	
@@ -50,33 +50,33 @@ code_80:
 		pushi	0x011b
 		push0	
 		lofsa	tmp1
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	tmp2
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	tmp3
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		lofsa	butn
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	exitBtn
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		lofsa	coinSlot
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x07
@@ -85,7 +85,7 @@ code_80:
 		pushi	0x011b
 		push0	
 		lofsa	info
-		send	0xe
+		send	0x0e
 		pushi	0x07
 		push1	
 		lsg	0xae
@@ -95,7 +95,7 @@ code_80:
 		pushi	0x6b
 		push0	
 		lofsa	pic1
-		send	0xa
+		send	0x0a
 		pushi	0x07
 		push1	
 		lsg	0xae
@@ -108,7 +108,7 @@ code_80:
 		pushi	0x6b
 		push0	
 		lofsa	pic2
-		send	0xa
+		send	0x0a
 		pushi	0x07
 		push1	
 		lsg	0xae
@@ -121,12 +121,12 @@ code_80:
 		pushi	0x6b
 		push0	
 		lofsa	pic3
-		send	0xa
+		send	0x0a
 		pushi	0x009f
 		push1	
 		pushi	0x46
 		lag	0x64
-		send	0x6
+		send	0x06
 		lag	0xaf
 		bnt	code_288
 		pushi	0x07
@@ -135,10 +135,10 @@ code_80:
 		pushi	0x011b
 		push0	
 		lofsa	info
-		send	0xa
+		send	0x0a
 		push1	
 		pushi	0x05
-		lea	0x4, 0x0
+		lea	0x04, 0x00
 		push	
 		pushi	0x2c
 		push0	
@@ -154,7 +154,7 @@ code_288:
 		class	0x17
 		push	
 		lofsa	info
-		send	0x6
+		send	0x06
 code_300:
 		ret	
 
@@ -162,74 +162,74 @@ rm44::60:
 		link	0x03
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x43, 0x4
 		pushi	0x00c2
 		push0	
 		lofsa	coinSlot
-		send	0x4
+		send	0x04
 		bnt	code_334
 		pushi	0x00b9
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		jmp	code_350
 code_334:
 		lofsa	butn
-		send	0x0
+		send	0x00
 		bnt	code_350
 		pushi	0x00b9
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 code_350:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		sat	0x2
+		send	0x04
+		sat	0x02
 		pushi	0x04
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		sat	0x0
+		send	0x04
+		send	0x04
+		sat	0x00
 		pushi	0x03
 		push0	
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
-		sat	0x1
+		send	0x04
+		send	0x04
+		sat	0x01
 		pushi	0x00d3
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_505
 		pushi	0x03
 		lofsa	coinSlot
 		push	
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		call	code_5058, 6
 		bnt	code_505
-		lal	0x3
+		lal	0x03
 		not	
 		bnt	code_505
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		sal	0x3
+		send	0x04
+		sal	0x03
 		pushi	0x00cf
 		push0	
 		lag	0x45
-		send	0x4
-		sal	0x4
+		send	0x04
+		sal	0x04
 		pushi	0x43
 		push1	
 		pushi	0x06
@@ -239,7 +239,7 @@ code_350:
 		push1	
 		pushi	0x06
 		lag	0x45
-		send	0x6
+		send	0x06
 		push	
 		pushi	0x00cf
 		push1	
@@ -247,7 +247,7 @@ code_350:
 		push1	
 		pushi	0x0a
 		class	0x40
-		send	0x6
+		send	0x06
 		push	
 		lag	0x45
 		send	0x12
@@ -258,46 +258,46 @@ code_350:
 		pushi	0x00cf
 		push0	
 		lag	0x45
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 code_505:
 		lag	0xaf
 		bnt	code_617
 		pushi	0x03
 		lofsa	butn
 		push	
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		call	code_5058, 6
 		bnt	code_617
-		lal	0x3
+		lal	0x03
 		not	
 		bnt	code_617
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		push2	
 		lag	0x45
-		send	0x6
+		send	0x06
 		ne?	
 		bnt	code_617
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		sal	0x3
+		send	0x04
+		sal	0x03
 		pushi	0x00cf
 		push0	
 		lag	0x45
-		send	0x4
-		sal	0x4
+		send	0x04
+		sal	0x04
 		pushi	0x43
 		push1	
 		push2	
@@ -307,10 +307,10 @@ code_505:
 		push1	
 		push2	
 		lag	0x45
-		send	0x6
+		send	0x06
 		push	
 		lag	0x45
-		send	0xc
+		send	0x0c
 		pushi	0x00b9
 		push1	
 		pushi	0x24
@@ -318,54 +318,54 @@ code_505:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 code_617:
-		lal	0x3
+		lal	0x03
 		bnt	code_735
 		pushi	0x00d3
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		not	
 		bnt	code_650
 		pushi	0x03
 		lofsa	coinSlot
 		push	
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		call	code_5058, 6
 code_650:
 		bt	code_686
 		pushi	0x03
 		lofsa	coinSlot
 		push	
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		call	code_5058, 6
 		not	
 		bnt	code_735
 		pushi	0x03
 		lofsa	butn
 		push	
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		call	code_5058, 6
 		not	
 code_686:
 		bnt	code_735
 		pushi	0x00cc
 		push1	
-		lsl	0x3
+		lsl	0x03
 		pushi	0x00cf
 		push1	
-		lsl	0x4
+		lsl	0x04
 		lag	0x45
-		send	0xc
+		send	0x0c
 		pushi	0x00b9
 		push1	
 		pushi	0x24
@@ -373,32 +373,32 @@ code_686:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 		ldi	0x00
-		sal	0x4
+		sal	0x04
 		ldi	0x00
-		sal	0x3
+		sal	0x03
 code_735:
 		pushi	0x6c
 		push0	
-		lat	0x2
-		send	0x4
+		lat	0x02
+		send	0x04
 		ret	
 
 rm44::108:
 		pushi	0x07
 		push0	
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x07
 		push0	
 		lofsa	pic2
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		shl	
@@ -407,7 +407,7 @@ rm44::108:
 		pushi	0x07
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x08
 		shl	
@@ -417,33 +417,33 @@ rm44::108:
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x54
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x009f
 		push1	
 		pushi	0x7f
 		lag	0x64
-		send	0x6
+		send	0x06
 		pushi	0x66
 		push1	
 		push0	
 		lag	0x9a
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x43, 0x4
 		ret	
 
 rm44::129:
 		pushi	0x0081
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x43, 0x6
 		bnt	code_841
 		jmp	code_1051
@@ -451,39 +451,39 @@ code_841:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		push0	
 		lag	0x45
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_936
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_936
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_936
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x01
 		eq?	
 		bt	code_912
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x40
 		and	
@@ -492,43 +492,43 @@ code_912:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		jmp	code_1051
 code_936:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		pushi	0x06
 		lag	0x45
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_1051
 		pushi	0x00cf
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		pushi	0x0f
 		class	0x40
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_1051
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x04
 		eq?	
@@ -536,13 +536,13 @@ code_936:
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_1051
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_1051
 		push2	
@@ -555,13 +555,13 @@ code_936:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 code_1051:
 		ret	
 
@@ -602,8 +602,8 @@ Overriden functions: 4
 .CODE
 initScript::138:
 		link	0x1e
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -627,10 +627,10 @@ code_1159:
 		pushi	0x011b
 		push0	
 		lofsa	info
-		send	0xa
+		send	0x0a
 		push1	
 		pushi	0x05
-		lea	0x4, 0x0
+		lea	0x04, 0x00
 		push	
 		pushi	0x2c
 		push0	
@@ -646,13 +646,13 @@ code_1209:
 		class	0x17
 		push	
 		lofsa	info
-		send	0x6
+		send	0x06
 code_1221:
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1230:
 		toss	
 		ret	
@@ -683,8 +683,8 @@ Overriden functions: 1
 
 .CODE
 spinPic::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -698,13 +698,13 @@ spinPic::138:
 		push	
 		pushi	0x04
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		pushi	0x08
 		pushSelf	
-		pToa	0x8
-		send	0xc
+		pToa	0x08
+		send	0x0c
 		pushi	0x06
 		push1	
 		push1	
@@ -712,8 +712,8 @@ spinPic::138:
 		push1	
 		pushi	0x07
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		ldi	0x01
 		add	
@@ -722,8 +722,8 @@ spinPic::138:
 		push2	
 		pushi	0x04
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		pushi	0x60
 		pushi	0x0119
@@ -732,8 +732,8 @@ spinPic::138:
 		push	
 		pushi	0x04
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		pushi	0x34
 		pToa	0x1a
@@ -742,11 +742,11 @@ spinPic::138:
 code_1388:
 		pushi	0x011b
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_1636
 code_1404:
 		dup	
@@ -758,48 +758,48 @@ code_1404:
 		pushi	0x07
 		push0	
 		pToa	0x1a
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
 		pushi	0x34
-		pToa	0x8
-		send	0xc
+		pToa	0x08
+		send	0x0c
 		pushi	0x3f
 		push0	
 		pToa	0x1a
-		send	0x4
+		send	0x04
 		bnt	code_1446
 		ldi	0x00
 		jmp	code_1631
 code_1446:
 		pushi	0x3f
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		bnt	code_1478
 		pushi	0x42
 		push1	
 		pushi	0x3f
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_1631
 code_1478:
-		lsl	0x2
+		lsl	0x02
 		ldi	0x01
 		eq?	
 		bnt	code_1534
 		pushi	0x07
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		ldi	0x00
 		eq?	
@@ -808,7 +808,7 @@ code_1478:
 		push1	
 		pushi	0x03
 		pToa	0x1a
-		send	0x6
+		send	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x026d
@@ -823,14 +823,14 @@ code_1478:
 		aTop	0x1a
 		jmp	code_1631
 code_1534:
-		lal	0x2
+		lal	0x02
 		bnt	code_1590
 		pushi	0x07
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
-		lsl	0x2
+		lsl	0x02
 		ldi	0x01
 		sub	
 		eq?	
@@ -849,7 +849,7 @@ code_1534:
 		push1	
 		pushi	0x03
 		pToa	0x1a
-		send	0x6
+		send	0x06
 		ldi	0x00
 		aTop	0x1a
 		jmp	code_1631
@@ -873,13 +873,13 @@ code_1590:
 		push1	
 		pushi	0x03
 		pToa	0x1a
-		send	0x6
+		send	0x06
 		ldi	0x00
 		aTop	0x1a
 code_1631:
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1636:
 		toss	
 		ret	
@@ -911,8 +911,8 @@ Overriden functions: 1
 .CODE
 spinDone::138:
 		link	0x1e
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -929,25 +929,25 @@ code_1717:
 		pushi	0x07
 		push0	
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x07
 		push0	
 		lofsa	pic2
-		send	0x4
+		send	0x04
 		eq?	
 		bnt	code_1817
 		pprev	
 		pushi	0x07
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		eq?	
 		bnt	code_1817
 		pushi	0x07
 		push0	
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		push	
 		dup	
 		ldi	0x00
@@ -983,14 +983,14 @@ code_1817:
 		pushi	0x07
 		push0	
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		eq?	
 		bnt	code_1848
 		pprev	
 		pushi	0x07
 		push0	
 		lofsa	pic2
-		send	0x4
+		send	0x04
 		eq?	
 		bnt	code_1848
 		ldi	0x03
@@ -1000,7 +1000,7 @@ code_1848:
 		pushi	0x07
 		push0	
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		eq?	
 		bnt	code_1866
 		ldi	0x01
@@ -1083,7 +1083,7 @@ code_2003:
 		toss	
 		ldi	0x00
 code_2006:
-		sal	0x0
+		sal	0x00
 		ldi	0x03
 		aTop	0x10
 		jmp	code_2281
@@ -1094,14 +1094,14 @@ code_2015:
 		bnt	code_2093
 		pushi	0x2b
 		push1	
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03e8
 		eq?	
 		bnt	code_2040
 		ldi	0x0272
 		jmp	code_2077
 code_2040:
-		lsl	0x0
+		lsl	0x00
 		ldi	0x05
 		ge?	
 		bnt	code_2054
@@ -1109,7 +1109,7 @@ code_2040:
 		jmp	code_2077
 code_2054:
 		push0	
-		lal	0x0
+		lal	0x00
 		lt?	
 		bnt	code_2074
 		pprev	
@@ -1136,38 +1136,38 @@ code_2093:
 		ldi	0x03
 		eq?	
 		bnt	code_2248
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03e8
 		ne?	
 		bnt	code_2220
 		lsg	0xa5
-		lsl	0x0
+		lsl	0x00
 		lag	0xaf
 		mul	
 		add	
 		sag	0xa5
-		lal	0x0
+		lal	0x00
 		bnt	code_2209
 		pushi	0x00d3
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		not	
 		bnt	code_2148
 		pushi	0x0145
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_2148:
 		push1	
 		pushi	0x05
-		lea	0x4, 0x0
+		lea	0x04, 0x00
 		push	
 		pushi	0x2c
 		pushi	0x09
-		lsl	0x0
+		lsl	0x00
 		lag	0xaf
 		mul	
 		push	
@@ -1189,8 +1189,8 @@ code_2148:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_2209:
 		ldi	0x00
 		sag	0xaf
@@ -1208,8 +1208,8 @@ code_2220:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2281
 code_2248:
 		dup	
@@ -1226,10 +1226,10 @@ code_2248:
 		class	0x17
 		push	
 		lofsa	info
-		send	0xc
+		send	0x0c
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2281:
 		toss	
 		ret	
@@ -1265,20 +1265,20 @@ pic1::139:
 		push1	
 		push0	
 		lofsa	tmp2
-		send	0x6
+		send	0x06
 		pushi	0x06
 		push1	
 		pushi	0x03
 		lofsa	tmp1
-		send	0x6
+		send	0x06
 		pushi	0x008b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 pic1::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1313,7 +1313,7 @@ code_2430:
 		ldi	0x04
 		eq?	
 		bnt	code_2537
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0f
 		eq?	
@@ -1321,12 +1321,12 @@ code_2430:
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_2466
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_2466:
 		bnt	code_2474
 		ldi	0x00
@@ -1342,8 +1342,8 @@ code_2474:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2533
 code_2501:
 		dup	
@@ -1358,9 +1358,9 @@ code_2501:
 code_2520:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x30, 0x8
 code_2533:
 		toss	
@@ -1368,9 +1368,9 @@ code_2533:
 code_2537:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x30, 0x8
 code_2550:
 		toss	
@@ -1445,24 +1445,24 @@ pic2::139:
 		push1	
 		push0	
 		lofsa	tmp3
-		send	0x6
+		send	0x06
 		pushi	0x06
 		push1	
 		pushi	0x03
 		lofsa	tmp2
-		send	0x6
+		send	0x06
 		pushi	0x008b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 pic2::266:
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		ret	
 
 		bnot	
@@ -1535,30 +1535,30 @@ pic3::139:
 		push1	
 		lofsa	spinDone
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x06
 		push1	
 		pushi	0x03
 		lofsa	tmp3
-		send	0x6
+		send	0x06
 		pushi	0x009c
 		push1	
 		push0	
 		lag	0x9a
-		send	0x6
+		send	0x06
 		pushi	0x008b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 pic3::266:
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		ret	
 
 		bnot	
@@ -1629,9 +1629,9 @@ Overriden functions: 2
 tmp1::266:
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		ret	
 
 
@@ -1700,9 +1700,9 @@ Overriden functions: 1
 tmp2::266:
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		ret	
 
 
@@ -1771,9 +1771,9 @@ Overriden functions: 1
 tmp3::266:
 		pushi	0x010a
 		push0	
-		rest	0x1
+		rest	0x01
 		lofsa	pic1
-		send	0x4
+		send	0x04
 		ret	
 
 
@@ -1841,12 +1841,12 @@ Overriden functions: 1
 .CODE
 coinSlot::266:
 		link	0x1e
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x04
 		eq?	
 		bnt	code_3756
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -1854,12 +1854,12 @@ coinSlot::266:
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_3540
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_3540:
 		bnt	code_3548
 		ldi	0x00
@@ -1913,12 +1913,12 @@ code_3615:
 		pushi	0x0146
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_3642:
 		push1	
 		pushi	0x05
-		lea	0x4, 0x0
+		lea	0x04, 0x00
 		push	
 		pushi	0x2c
 		push0	
@@ -1942,12 +1942,12 @@ code_3679:
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_3706
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_3706:
 		bnt	code_3714
 		ldi	0x00
@@ -1963,14 +1963,14 @@ code_3714:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3752
 code_3741:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 code_3752:
 		toss	
@@ -1978,8 +1978,8 @@ code_3752:
 code_3756:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 code_3767:
 		toss	
@@ -2017,7 +2017,7 @@ Overriden functions: 1
 
 .CODE
 butn::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -2025,12 +2025,12 @@ butn::266:
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_3867
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_3867:
 		bnt	code_3875
 		ldi	0x00
@@ -2043,8 +2043,8 @@ code_3875:
 		push1	
 		lofsa	pleaseInsert
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3989
 code_3896:
 		push1	
@@ -2055,7 +2055,7 @@ code_3896:
 		push2	
 		pushi	0x04
 		callk	0x3c, 0x4
-		sal	0x2
+		sal	0x02
 		push	
 		dup	
 		ldi	0x02
@@ -2078,14 +2078,14 @@ code_3939:
 		ldi	0x0a
 code_3948:
 		toss	
-		sal	0x0
+		sal	0x00
 		jmp	code_3989
 code_3954:
 		lag	0xa5
 		not	
 		bnt	code_3967
 		ldi	0x01
-		sal	0x2
+		sal	0x02
 		jmp	code_3989
 code_3967:
 		push2	
@@ -2095,24 +2095,24 @@ code_3967:
 		not	
 		bnt	code_3985
 		ldi	0x01
-		sal	0x2
+		sal	0x02
 		jmp	code_3989
 code_3985:
 		ldi	0x00
-		sal	0x2
+		sal	0x02
 code_3989:
 		lag	0xaf
 		bnt	code_4278
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_4278
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_4278
 		pushi	0x2b
@@ -2193,31 +2193,31 @@ code_3989:
 		push1	
 		push1	
 		lofsa	tmp2
-		send	0x6
+		send	0x06
 		pushi	0x42
 		push1	
 		push1	
 		lofsa	tmp3
-		send	0x6
+		send	0x06
 		jmp	code_4278
 code_4179:
 		dup	
 		ldi	0x04
 		eq?	
 		bnt	code_4265
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0f
 		eq?	
 		bnt	code_4249
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_4214
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_4214:
 		bnt	code_4222
 		ldi	0x00
@@ -2233,23 +2233,23 @@ code_4222:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4278
 code_4249:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		jmp	code_4278
 code_4265:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 code_4278:
 		toss	
@@ -2286,8 +2286,8 @@ Overriden functions: 1
 
 .CODE
 pleaseInsert::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2302,7 +2302,7 @@ pleaseInsert::138:
 		push1	
 		push1	
 		lofsa	info
-		send	0xc
+		send	0x0c
 		push2	
 		pushi	0x2c
 		pushi	0x13
@@ -2322,12 +2322,12 @@ code_4394:
 		class	0x17
 		push	
 		lofsa	info
-		send	0x6
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_4427:
 		toss	
 		ret	
@@ -2359,24 +2359,24 @@ Overriden functions: 1
 
 .CODE
 info::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x04
 		eq?	
 		bnt	code_4576
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0f
 		eq?	
 		bnt	code_4560
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_4525
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_4525:
 		bnt	code_4533
 		ldi	0x00
@@ -2392,23 +2392,23 @@ code_4533:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4589
 code_4560:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 		jmp	code_4589
 code_4576:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2f, 0x8
 code_4589:
 		toss	
@@ -2467,23 +2467,23 @@ Overriden functions: 1
 
 .CODE
 exitBtn::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_4773
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0f
 		eq?	
 		bnt	code_4773
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_4738
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_4738:
 		bnt	code_4746
 		ldi	0x00
@@ -2499,12 +2499,12 @@ code_4746:
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4888
 code_4773:
 		pushi	0x04
-		lsp	0x1
+		lsp	0x01
 		pushi	0x03
 		pushi	0x0b
 		push1	
@@ -2513,12 +2513,12 @@ code_4773:
 		pushi	0x0088
 		push0	
 		lofsa	pic3
-		send	0x4
+		send	0x04
 		bt	code_4811
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 code_4811:
 		bnt	code_4819
 		ldi	0x00
@@ -2527,42 +2527,42 @@ code_4819:
 		pushi	0x07
 		push1	
 		push1	
-		self	0x6
+		self	0x06
 		push2	
 		pushi	0x1b
 		push0	
-		lag	0x5
-		send	0x4
+		lag	0x05
+		send	0x04
 		push	
 		push0	
 		callk	0xb, 0x4
 		push2	
 		pushi	0x1b
 		push0	
-		lag	0x5
-		send	0x4
+		lag	0x05
+		send	0x04
 		push	
 		push0	
 		callk	0xb, 0x4
 		push2	
 		pushi	0x1b
 		push0	
-		lag	0x5
-		send	0x4
+		lag	0x05
+		send	0x04
 		push	
 		push0	
 		callk	0xb, 0x4
 		pushi	0x0177
 		push1	
 		pushi	0x2b
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4888
 code_4877:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_4888:
 		ret	
@@ -2620,13 +2620,13 @@ Overriden functions: 1
 
 .CODE
 code_5000:
-		lal	0x1
+		lal	0x01
 		bnt	code_5010
 		push0	
 		call	code_5040, 0
 code_5010:
 		pushi	0x0a
-		rest	0x1
+		rest	0x01
 		pushi	0x65
 		push1	
 		pushi	0x6a
@@ -2638,7 +2638,7 @@ code_5010:
 		lsg	0x81
 		pushi	0x6b
 		callk	0x1b, 0x14
-		sal	0x1
+		sal	0x01
 		ret	
 
 code_5040:
@@ -2646,36 +2646,36 @@ code_5040:
 		pushi	0x2c
 		pushi	0x14
 		pushi	0x6c
-		lsl	0x1
+		lsl	0x01
 		callk	0x1b, 0x8
 		ldi	0x00
-		sal	0x1
+		sal	0x01
 		ret	
 
 code_5058:
 		pushi	0x06
 		pushi	0x0a
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		pushi	0x09
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		pushi	0x0c
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		pushi	0x0b
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
-		lsp	0x2
-		lsp	0x3
+		lsp	0x02
+		lsp	0x03
 		calle	0x03e7, 0x0004, 0x0c
 		ret	
 

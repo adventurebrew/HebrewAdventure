@@ -4,14 +4,14 @@ LOFSA_RELATIVE = False
 
 .CODE
 class_0::179:
-		lsp	0x0
+		lsp	0x00
 		dup	
 		ldi	0x00
 		eq?	
 		bnt	code_25
 		pushi	0x03
 		push0	
-		pTos	0x6
+		pTos	0x06
 		push0	
 		callk	0x74, 0x6
 		jmp	code_47
@@ -22,23 +22,23 @@ code_25:
 		bnt	code_45
 		pushi	0x03
 		push0	
-		pTos	0x6
-		lsp	0x1
+		pTos	0x06
+		lsp	0x01
 		callk	0x74, 0x6
 		jmp	code_47
 code_45:
 		ldi	0x00
 code_47:
 		toss	
-		aTop	0x8
-		pTos	0x8
+		aTop	0x08
+		pTos	0x08
 		ldi	0xff
 		eq?	
 		bnt	code_62
 		ldi	0x00
-		aTop	0x8
+		aTop	0x08
 code_62:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_71
 		selfID	
 		jmp	code_73
@@ -49,20 +49,20 @@ code_73:
 
 class_0::331:
 		link	0x01
-		pToa	0x8
+		pToa	0x08
 		not	
 		bnt	code_88
 		pushi	0x00b3
 		push0	
-		self	0x4
+		self	0x04
 code_88:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_108
 		pushi	0x04
 		pushi	0x03
 		push	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		callk	0x74, 0x8
 		jmp	code_110
 code_108:
@@ -72,35 +72,35 @@ code_110:
 
 class_0::330:
 		link	0x01
-		pToa	0x8
+		pToa	0x08
 		not	
 		bnt	code_125
 		pushi	0x00b3
 		push0	
-		self	0x4
+		self	0x04
 code_125:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_160
 		ldi	0x00
-		sat	0x0
+		sat	0x00
 code_134:
-		lst	0x0
-		lap	0x0
+		lst	0x00
+		lap	0x00
 		lt?	
 		bnt	code_160
 		pushi	0x03
 		pushi	0x06
-		pTos	0x8
-		lat	0x0
-		lspi	0x1
+		pTos	0x08
+		lat	0x00
+		lspi	0x01
 		callk	0x74, 0x6
-		+at	0x0
+		+at	0x00
 		jmp	code_134
 code_160:
 		ret	
 
 class_0::332:
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ne?	
 		bnt	code_172
@@ -108,21 +108,21 @@ class_0::332:
 		ret	
 
 code_172:
-		pToa	0x8
+		pToa	0x08
 		not	
 		bnt	code_185
 		pushi	0x00b3
 		push1	
 		push1	
-		self	0x6
+		self	0x06
 code_185:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_204
 		pushi	0x04
 		push2	
 		push	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		callk	0x74, 0x8
 		jmp	code_206
 code_204:
@@ -131,7 +131,7 @@ code_206:
 		ret	
 
 class_0::329:
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ne?	
 		bnt	code_218
@@ -139,20 +139,20 @@ class_0::329:
 		ret	
 
 code_218:
-		pToa	0x8
+		pToa	0x08
 		not	
 		bnt	code_231
 		pushi	0x00b3
 		push1	
 		push1	
-		self	0x6
+		self	0x06
 code_231:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_251
 		pushi	0x04
 		pushi	0x05
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		push	
 		callk	0x74, 0x8
 		jmp	code_253
@@ -163,31 +163,31 @@ code_253:
 
 class_0::333:
 		link	0x01
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_269
-		lap	0x2
+		lap	0x02
 		jmp	code_271
 code_269:
 		ldi	0x00
 code_271:
-		sat	0x0
-		pToa	0x8
+		sat	0x00
+		pToa	0x08
 		not	
 		bnt	code_286
 		pushi	0x00b3
 		push1	
 		push1	
-		self	0x6
+		self	0x06
 code_286:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_306
 		pushi	0x04
 		pushi	0x07
 		push	
-		lsp	0x1
-		lst	0x0
+		lsp	0x01
+		lst	0x00
 		callk	0x74, 0x8
 		jmp	code_308
 code_306:
@@ -196,34 +196,34 @@ code_308:
 		ret	
 
 class_0::334:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_324
 		push2	
 		push1	
 		push	
 		callk	0x74, 0x4
 		ldi	0x00
-		aTop	0x8
+		aTop	0x08
 code_324:
 		ret	
 
 class_0::84:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_336
 		pushi	0x014e
 		push0	
-		self	0x4
+		self	0x04
 code_336:
 		push2	
 		pushi	0x04
-		pTos	0x6
+		pTos	0x06
 		callk	0x74, 0x4
 		ret	
 
 class_0::108:
 		pushi	0x014e
 		push0	
-		self	0x4
+		self	0x04
 		pushi	0x6c
 		push0	
 		super	0x0, 0x4
@@ -231,10 +231,10 @@ class_0::108:
 
 class_0::109:
 		pushi	0x04
-		lsp	0x1
+		lsp	0x01
 		pushi	0x03e1
 		push0	
-		pTos	0x6
+		pTos	0x06
 		callk	0x48, 0x8
 		ret	
 

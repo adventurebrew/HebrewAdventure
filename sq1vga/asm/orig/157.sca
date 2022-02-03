@@ -10,7 +10,7 @@ OBJECT guard of 0x30
 guard::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		pushi	0x69
 		push0	
@@ -21,15 +21,15 @@ guard::107:
 		pTos	0x5e
 		pushi	0x0176
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		push	
 		pushi	0x00d9
 		push1	
 		pushi	0x0176
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		push	
 		pushi	0x0094
 		push1	
@@ -43,7 +43,7 @@ guard::107:
 		ret	
 
 guard::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -96,8 +96,8 @@ code_159:
 code_179:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x30, 0x6
 code_190:
 		toss	
@@ -169,8 +169,8 @@ Overriden functions: 2
 
 .CODE
 killEgo::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -198,7 +198,7 @@ code_376:
 		eq?	
 		bnt	code_398
 		pushi	0x03
-		lsg	0x0
+		lsg	0x00
 		lofsa	guard
 		push	
 		pushSelf	
@@ -212,8 +212,8 @@ code_398:
 		pushi	0x0131
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x10
 		and	
@@ -222,14 +222,14 @@ code_398:
 		push1	
 		push1	
 		lofsa	guard
-		send	0x6
+		send	0x06
 		jmp	code_475
 code_434:
 		pushi	0x0131
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x40
 		and	
@@ -238,14 +238,14 @@ code_434:
 		push1	
 		pushi	0x04
 		lofsa	guard
-		send	0x6
+		send	0x06
 		jmp	code_475
 code_464:
 		pushi	0x00a0
 		push1	
 		pushi	0x05
 		lofsa	guard
-		send	0x6
+		send	0x06
 code_475:
 		pushi	0x05
 		push1	
@@ -283,7 +283,7 @@ code_501:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_559
 code_543:
@@ -295,7 +295,7 @@ code_543:
 		callb	0xa, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_559:
 		toss	
 		ret	

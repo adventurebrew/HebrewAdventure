@@ -31,12 +31,12 @@ dodgeAsteroids::108:
 		lofsa	ship
 		send	0x14
 		ldi	0x00
-		sal	0x0
+		sal	0x00
 		ldi	0x00
 		aTop	0x1a
 		pushi	0x6c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		push1	
 		pushi	0x0191
@@ -47,23 +47,23 @@ dodgeAsteroids::60:
 		pToa	0x1c
 		not	
 		bnt	code_159
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		ne?	
 		bnt	code_123
 		pushi	0x03
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x17
 		lt?	
 		bnt	code_123
 		ldi	0x03
-		sal	0x0
+		sal	0x00
 		pushi	0x008b
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_159
 code_123:
 		pToa	0x1a
@@ -72,28 +72,28 @@ code_123:
 		pushi	0x04
 		push0	
 		lofsa	ast4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x00d2
 		ge?	
 		bnt	code_159
 		ldi	0x01
-		sal	0x1
+		sal	0x01
 		pushi	0x008c
 		push1	
 		lofsa	blowUpShip
 		push	
-		self	0x6
+		self	0x06
 code_159:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		ret	
 
 dodgeAsteroids::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -103,7 +103,7 @@ dodgeAsteroids::138:
 		push1	
 		push1	
 		lag	0x64
-		send	0x6
+		send	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x01d9
@@ -131,18 +131,18 @@ dodgeAsteroids::138:
 		push2	
 		pushi	0x11
 		pushi	0x8008
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		pushi	0x74
 		push1	
 		pushi	0x69
 		pushi	0x74
 		push1	
 		pushi	0x011b
-		lag	0x5
-		send	0xc
+		lag	0x05
+		send	0x0c
 		ldi	0x02
-		sal	0x0
+		sal	0x00
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -150,7 +150,7 @@ dodgeAsteroids::138:
 		class	0x17
 		push	
 		lofsa	ast1
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -158,7 +158,7 @@ dodgeAsteroids::138:
 		class	0x1f
 		push	
 		lofsa	ast2
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -166,7 +166,7 @@ dodgeAsteroids::138:
 		class	0x1f
 		push	
 		lofsa	ast3
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -174,7 +174,7 @@ dodgeAsteroids::138:
 		class	0x17
 		push	
 		lofsa	ast4
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0094
@@ -182,7 +182,7 @@ dodgeAsteroids::138:
 		class	0x17
 		push	
 		lofsa	ast5
-		send	0xa
+		send	0x0a
 		pushi	0x73
 		pushi	0x05
 		lofsa	ast1
@@ -196,7 +196,7 @@ dodgeAsteroids::138:
 		lofsa	ast5
 		push	
 		lofsa	asts
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x011a
@@ -230,7 +230,7 @@ code_404:
 		pushi	0xd3
 		pushSelf	
 		lofsa	ship
-		send	0xc
+		send	0x0c
 		jmp	code_475
 code_432:
 		dup	
@@ -243,19 +243,19 @@ code_432:
 		pushi	0x31
 		pushi	0x07
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		pushi	0x009a
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x009b
 		push1	
 		push0	
 		lag	0x64
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_475:
 		toss	
 		ret	
@@ -290,8 +290,8 @@ Overriden functions: 3
 
 .CODE
 blowUpShip::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -303,7 +303,7 @@ blowUpShip::138:
 		pushi	0x31
 		pushi	0x07
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x019b
@@ -401,7 +401,7 @@ closeCode::60:
 		pushi	0x04
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x64
 		sub	
@@ -409,7 +409,7 @@ closeCode::60:
 		pushi	0x03
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x32
 		sub	
@@ -417,14 +417,14 @@ closeCode::60:
 		pushi	0x04
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x03
 		push0	
 		lofsa	ship
-		send	0x4
+		send	0x04
 		push	
-		lsp	0x1
+		lsp	0x01
 		calle	0x03e7, 0x0004, 0x0a
 		ret	
 
@@ -443,12 +443,12 @@ Overriden functions: 1
 .CODE
 ship::60:
 		link	0x01
-		lal	0x1
+		lal	0x01
 		bt	code_859
-		lal	0x0
+		lal	0x00
 		not	
 		bt	code_859
-		lsl	0x0
+		lsl	0x00
 		ldi	0x01
 		eq?	
 		bt	code_859
@@ -464,30 +464,30 @@ code_867:
 		lofsa	closeCode
 		push	
 		lofsa	asts
-		send	0x8
-		sat	0x0
+		send	0x08
+		sat	0x00
 		bnt	code_992
-		pTos	0x8
+		pTos	0x08
 		pushi	0x04
 		push0	
-		send	0x4
+		send	0x04
 		sub	
 		bnt	code_961
 		pushi	0x0096
 		pushi	0x00c8
-		pTos	0xa
+		pTos	0x0a
 		pushi	0x03
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		sub	
 		mul	
 		push	
-		pTos	0x8
+		pTos	0x08
 		pushi	0x04
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		sub	
 		div	
 		lt?	
@@ -496,70 +496,70 @@ code_867:
 		pushi	0x03
 		class	0x1e
 		push	
-		pTos	0x8
+		pTos	0x08
 		ldi	0x0a
 		sub	
 		push	
-		pTos	0xa
+		pTos	0x0a
 		push2	
 		pushi	0x03
 		pushi	0x07
 		callk	0x3c, 0x4
 		sub	
 		push	
-		self	0xa
+		self	0x0a
 		jmp	code_1046
 code_961:
 		pushi	0x0119
 		pushi	0x03
 		class	0x1e
 		push	
-		pTos	0x8
+		pTos	0x08
 		ldi	0x05
 		add	
 		push	
-		pTos	0xa
+		pTos	0x0a
 		push2	
 		pushi	0x06
 		pushi	0x0a
 		callk	0x3c, 0x4
 		sub	
 		push	
-		self	0xa
+		self	0x0a
 		jmp	code_1046
 code_992:
 		pushi	0x3f
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x64
 		mul	
 		push	
-		pToa	0x8
+		pToa	0x08
 		div	
 		lt?	
 		bnt	code_1017
-		pTos	0x8
+		pTos	0x08
 		ldi	0x02
 		add	
-		aTop	0x8
+		aTop	0x08
 		jmp	code_1046
 code_1017:
 		pushi	0x39
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x64
 		mul	
 		push	
-		pToa	0x8
+		pToa	0x08
 		div	
 		gt?	
 		bnt	code_1042
-		pTos	0x8
+		pTos	0x08
 		ldi	0x02
 		sub	
-		aTop	0x8
+		aTop	0x08
 		jmp	code_1046
 code_1042:
-		dpToa	0xa
-		dpToa	0x8
+		dpToa	0x0a
+		dpToa	0x08
 code_1046:
 		pushi	0x3c
 		push0	
@@ -632,9 +632,9 @@ Overriden functions: 1
 .CODE
 ast1::107:
 		ldi	0xfeac
-		aTop	0x8
+		aTop	0x08
 		ldi	0xff5e
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -642,21 +642,21 @@ ast1::107:
 		pushi	0x0126
 		pushi	0x00da
 		pushSelf	
-		self	0xc
+		self	0x0c
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 ast1::139:
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		ne?	
 		bnt	code_1237
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1237:
 		ret	
 
@@ -726,9 +726,9 @@ Overriden functions: 2
 .CODE
 ast2::107:
 		ldi	0xff3e
-		aTop	0x8
+		aTop	0x08
 		ldi	0xff7a
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -736,21 +736,21 @@ ast2::107:
 		pushi	0x015a
 		pushi	0x00bb
 		pushSelf	
-		self	0xc
+		self	0x0c
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 ast2::139:
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		ne?	
 		bnt	code_1425
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1425:
 		ret	
 
@@ -820,9 +820,9 @@ Overriden functions: 2
 .CODE
 ast3::107:
 		ldi	0x8b
-		aTop	0x8
+		aTop	0x08
 		ldi	0xff72
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -830,21 +830,21 @@ ast3::107:
 		pushi	0x0156
 		pushi	0x0089
 		pushSelf	
-		self	0xc
+		self	0x0c
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 ast3::139:
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		ne?	
 		bnt	code_1612
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1612:
 		ret	
 
@@ -915,9 +915,9 @@ Overriden functions: 2
 .CODE
 ast4::107:
 		ldi	0xe0
-		aTop	0x8
+		aTop	0x08
 		ldi	0xa8
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -925,21 +925,21 @@ ast4::107:
 		pushi	0x0192
 		pushi	0x0124
 		pushSelf	
-		self	0xc
+		self	0x0c
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 ast4::139:
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		ne?	
 		bnt	code_1799
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1799:
 		ret	
 
@@ -1009,9 +1009,9 @@ Overriden functions: 2
 .CODE
 ast5::107:
 		ldi	0xfec0
-		aTop	0x8
+		aTop	0x08
 		ldi	0x92
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push2	
@@ -1029,18 +1029,18 @@ ast5::107:
 		self	0x12
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 ast5::139:
-		lsl	0x0
+		lsl	0x00
 		ldi	0x03
 		ne?	
 		bnt	code_1997
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1997:
 		ret	
 

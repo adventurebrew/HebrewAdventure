@@ -21,7 +21,7 @@ rm31::107:
 		pushi	0x01aa
 		pushi	0x01c3
 		calle	0x03be, 0x0000, 0x0c
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x20
 		eq?	
 		bnt	code_73
@@ -29,7 +29,7 @@ rm31::107:
 		aTop	0x16
 		jmp	code_105
 code_73:
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x1e
 		eq?	
 		bnt	code_101
@@ -37,8 +37,8 @@ code_73:
 		push2	
 		pushi	0x0134
 		pushi	0x7b
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		ldi	0x0b
 		aTop	0x16
 		jmp	code_105
@@ -80,7 +80,7 @@ code_105:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x32
 		push	
 		pushi	0x22
@@ -105,10 +105,10 @@ code_105:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x26
 		push	
-		self	0x8
+		self	0x08
 		jmp	code_380
 code_230:
 		pushi	0x0174
@@ -143,7 +143,7 @@ code_230:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x36
 		push	
 		pushi	0x22
@@ -176,31 +176,31 @@ code_230:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x36
 		push	
-		self	0x8
+		self	0x08
 code_380:
 		pushi	0x6b
 		push0	
 		lofsa	grate
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	frontOfGrate
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	upperledge
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	lowerLedge
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push1	
 		pushi	0x48
 		callb	0x6, 0x2
@@ -208,7 +208,7 @@ code_380:
 		pushi	0x6b
 		push0	
 		lofsa	stickyPlant
-		send	0x4
+		send	0x04
 code_436:
 		push1	
 		pushi	0x1f
@@ -217,11 +217,11 @@ code_436:
 		pushi	0x6b
 		push0	
 		lofsa	grateMonster1
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	grateMonster2
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -229,7 +229,7 @@ code_436:
 		lofsa	waveYourEyeStalk
 		push	
 		lofsa	eyeStalk
-		send	0xa
+		send	0x0a
 		push1	
 		pushi	0x15
 		callb	0x6, 0x2
@@ -249,7 +249,7 @@ code_436:
 		lofsa	tentacleStuck
 		push	
 		lofsa	grateMonster1
-		send	0x6
+		send	0x06
 		jmp	code_565
 code_520:
 		pushi	0x2b
@@ -267,7 +267,7 @@ code_520:
 		pushi	0x69
 		push0	
 		lofsa	tentacle1
-		send	0x8
+		send	0x08
 		pushi	0x008c
 		pushi	0x03
 		lofsa	tentacleWave
@@ -275,7 +275,7 @@ code_520:
 		push0	
 		push0	
 		lofsa	tentacle1
-		send	0xa
+		send	0x0a
 code_565:
 		pushi	0x6b
 		push0	
@@ -285,18 +285,18 @@ code_565:
 		ret	
 
 rm31::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_589
 		pushi	0x3c
 		push0	
-		send	0x4
+		send	0x04
 		jmp	code_819
 code_589:
 		pushi	0x0131
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x08
 		and	
@@ -304,8 +304,8 @@ code_589:
 		pushi	0x0177
 		push1	
 		pushi	0x22
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_819
 code_618:
 		push1	
@@ -316,8 +316,8 @@ code_618:
 		pushi	0x0131
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x2000
 		and	
@@ -338,11 +338,11 @@ code_618:
 		pushi	0x6b
 		push0	
 		lofsa	grateMonster1
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	grateMonster2
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x69
@@ -352,13 +352,13 @@ code_618:
 		lofsa	waveYourEyeStalk
 		push	
 		lofsa	eyeStalk
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	tentacle1
-		send	0x8
+		send	0x08
 		pushi	0x008c
 		pushi	0x03
 		lofsa	tentacleWave
@@ -366,7 +366,7 @@ code_618:
 		push0	
 		push0	
 		lofsa	tentacle1
-		send	0xa
+		send	0x0a
 		jmp	code_819
 code_734:
 		push1	
@@ -377,8 +377,8 @@ code_734:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x4000
 		and	
@@ -389,7 +389,7 @@ code_734:
 		push1	
 		lofsa	monsterGrabsEgo
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_819
 code_778:
 		push1	
@@ -400,8 +400,8 @@ code_778:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x0200
 		and	
@@ -412,7 +412,7 @@ code_778:
 		push1	
 		lofsa	monsterGrabsEgoSide
 		push	
-		self	0x6
+		self	0x06
 code_819:
 		pushi	0x3c
 		push0	
@@ -423,15 +423,15 @@ rm31::375:
 		pushi	0x009d
 		push0	
 		lag	0x9a
-		send	0x4
+		send	0x04
 		pushi	0x0177
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x74, 0x6
 		ret	
 
 rm31::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -474,8 +474,8 @@ code_900:
 code_919:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x74, 0x6
 code_930:
 		toss	
@@ -519,8 +519,8 @@ Overriden functions: 4
 .CODE
 tentacleWave::138:
 		link	0x01
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -531,11 +531,11 @@ tentacleWave::138:
 		callb	0x6, 0x2
 		bnt	code_1046
 		ldi	0x04
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_1050
 code_1046:
 		pToa	0x1a
-		aTop	0xa
+		aTop	0x0a
 code_1050:
 		ldi	0x03
 		aTop	0x10
@@ -551,7 +551,7 @@ code_1057:
 		pushi	0x03
 		callk	0x3c, 0x4
 		mul	
-		sat	0x0
+		sat	0x00
 		pushi	0x00a0
 		push1	
 		pushi	0x07
@@ -559,13 +559,13 @@ code_1057:
 		push0	
 		pushi	0x04
 		push1	
-		lsli	0x0
+		lsli	0x00
 		pushi	0x03
 		push1	
 		push	
 		ldi	0x01
 		add	
-		lsli	0x0
+		lsli	0x00
 		pushi	0x07
 		push1	
 		push0	
@@ -581,7 +581,7 @@ code_1057:
 		ldi	0x01
 		aTop	0x1a
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_1366
 code_1131:
 		dup	
@@ -608,7 +608,7 @@ code_1131:
 		ldi	0x02
 		aTop	0x1a
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_1366
 code_1179:
 		dup	
@@ -621,11 +621,11 @@ code_1179:
 		push	
 		pushSelf	
 		lofsa	tentacle1
-		send	0x8
+		send	0x08
 		ldi	0x03
 		aTop	0x1a
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 		jmp	code_1366
 code_1210:
 		dup	
@@ -639,7 +639,7 @@ code_1210:
 		push1	
 		push1	
 		lofsa	tentacle1
-		send	0xc
+		send	0x0c
 		ldi	0x00
 		aTop	0x1a
 		ldi	0x03
@@ -656,7 +656,7 @@ code_1242:
 		push	
 		pushSelf	
 		lofsa	tentacle1
-		send	0x8
+		send	0x08
 		jmp	code_1366
 code_1265:
 		dup	
@@ -685,14 +685,14 @@ code_1297:
 		pushi	0x69
 		push0	
 		lofsa	tentacle1
-		send	0x4
+		send	0x04
 		push1	
 		pushi	0x15
 		callb	0x6, 0x2
 		not	
 		bnt	code_1326
 		ldi	0xff
-		aTop	0xa
+		aTop	0x0a
 code_1326:
 		ldi	0x03
 		aTop	0x10
@@ -707,7 +707,7 @@ code_1333:
 		lofsa	tentacleGetsStuck
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1366
 code_1354:
 		dup	
@@ -716,7 +716,7 @@ code_1354:
 		bnt	code_1366
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1366:
 		toss	
 		ret	
@@ -747,8 +747,8 @@ Overriden functions: 1
 
 .CODE
 tentacleGetsStuck::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -808,7 +808,7 @@ code_1517:
 		lofsa	tentacleStuck
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1550
 code_1538:
 		dup	
@@ -817,7 +817,7 @@ code_1538:
 		bnt	code_1550
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1550:
 		toss	
 		ret	
@@ -848,8 +848,8 @@ Overriden functions: 1
 
 .CODE
 tentacleStuck::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -896,7 +896,7 @@ code_1686:
 		bnt	code_1698
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1698:
 		toss	
 		ret	
@@ -927,8 +927,8 @@ Overriden functions: 1
 
 .CODE
 waveYourEyeStalk::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1044,7 +1044,7 @@ code_1955:
 		bnt	code_1967
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_1967:
 		toss	
 		ret	
@@ -1089,7 +1089,7 @@ stickyPlant::107:
 		self	0x10
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
@@ -1173,12 +1173,12 @@ grateMonster1::107:
 		self	0x16
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 grateMonster1::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1205,11 +1205,11 @@ code_2272:
 		bnt	code_2297
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		lofsa	grate
-		send	0x8
+		send	0x08
 		jmp	code_2388
 code_2297:
 		dup	
@@ -1254,9 +1254,9 @@ code_2363:
 code_2375:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x30, 0x8
 code_2388:
 		toss	
@@ -1343,17 +1343,17 @@ grateMonster2::107:
 		self	0x16
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		ret	
 
 grateMonster2::266:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		lofsa	grateMonster1
-		send	0x8
+		send	0x08
 		ret	
 
 
@@ -1423,10 +1423,10 @@ Overriden functions: 2
 tentacle1::266:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		lofsa	grateMonster1
-		send	0x8
+		send	0x08
 		ret	
 
 
@@ -1495,10 +1495,10 @@ Overriden functions: 1
 tentacle2::266:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		lofsa	grateMonster1
-		send	0x8
+		send	0x08
 		ret	
 
 
@@ -1567,10 +1567,10 @@ Overriden functions: 1
 eyeStalk::266:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		lofsa	grateMonster1
-		send	0x8
+		send	0x08
 		ret	
 
 
@@ -1625,7 +1625,7 @@ Overriden functions: 1
 
 .CODE
 upperledge::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1633,8 +1633,8 @@ upperledge::266:
 		pushi	0x0131
 		push1	
 		push2	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_3169
 		push2	
 		pushi	0x1f
@@ -1650,8 +1650,8 @@ code_3169:
 code_3181:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3192:
 		toss	
@@ -1688,7 +1688,7 @@ Overriden functions: 1
 
 .CODE
 lowerLedge::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1696,8 +1696,8 @@ lowerLedge::266:
 		pushi	0x0131
 		push1	
 		pushi	0x2010
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		bnt	code_3297
 		push2	
 		pushi	0x1f
@@ -1713,8 +1713,8 @@ code_3297:
 code_3309:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3320:
 		toss	
@@ -1811,7 +1811,7 @@ Overriden functions: 0
 
 .CODE
 frontOfGrate::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1826,7 +1826,7 @@ code_3537:
 		ldi	0x04
 		eq?	
 		bnt	code_3566
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x10
 		eq?	
@@ -1835,8 +1835,8 @@ code_3537:
 		push1	
 		lofsa	egoThrowsPlant
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_3565:
 		toss	
 code_3566:
@@ -1874,7 +1874,7 @@ Overriden functions: 1
 
 .CODE
 grate::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1909,7 +1909,7 @@ code_3697:
 		ldi	0x04
 		eq?	
 		bnt	code_3951
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x10
 		eq?	
@@ -1918,8 +1918,8 @@ code_3697:
 		push1	
 		lofsa	egoThrowsPlant
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_3947
 code_3728:
 		dup	
@@ -2021,13 +2021,13 @@ code_3911:
 		pushi	0x69
 		push0	
 		lofsa	tentacle2
-		send	0x8
+		send	0x08
 		pushi	0x008c
 		push1	
 		lofsa	egoThrowsWrongItem
 		push	
 		lofsa	tentacle2
-		send	0x6
+		send	0x06
 		jmp	code_3947
 code_3938:
 		push2	
@@ -2040,9 +2040,9 @@ code_3947:
 code_3951:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 code_3964:
 		toss	
@@ -2079,8 +2079,8 @@ Overriden functions: 1
 
 .CODE
 monsterGrabsEgoSide::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2090,8 +2090,8 @@ monsterGrabsEgoSide::138:
 		push1	
 		pushi	0x06
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x0119
 		pushi	0x04
@@ -2100,7 +2100,7 @@ monsterGrabsEgoSide::138:
 		pushi	0x19
 		pushi	0x00b7
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		pushi	0x6b
 		push0	
@@ -2144,7 +2144,7 @@ code_4128:
 		push1	
 		pushSelf	
 		lofsa	tentacle2
-		send	0xc
+		send	0x0c
 		jmp	code_4333
 code_4155:
 		dup	
@@ -2155,11 +2155,11 @@ code_4155:
 		push1	
 		pushi	0x04
 		lofsa	tentacle2
-		send	0x6
+		send	0x06
 		pushi	0x69
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		ldi	0x01
 		aTop	0x10
 		jmp	code_4333
@@ -2176,7 +2176,7 @@ code_4186:
 		push1	
 		pushSelf	
 		lofsa	tentacle2
-		send	0xc
+		send	0x0c
 		jmp	code_4333
 code_4213:
 		dup	
@@ -2202,7 +2202,7 @@ code_4213:
 		push	
 		pushSelf	
 		lofsa	tentacle2
-		send	0xe
+		send	0x0e
 		jmp	code_4333
 code_4258:
 		dup	
@@ -2244,7 +2244,7 @@ code_4298:
 		callb	0xa, 0xa
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_4333:
 		toss	
 		ret	
@@ -2276,8 +2276,8 @@ Overriden functions: 1
 
 .CODE
 monsterGrabsEgo::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2289,8 +2289,8 @@ monsterGrabsEgo::138:
 		pushi	0x00a0
 		push1	
 		pushi	0x05
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		ldi	0x03
 		aTop	0x10
 		jmp	code_4699
@@ -2316,8 +2316,8 @@ code_4428:
 		push1	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x23
 		sub	
@@ -2326,8 +2326,8 @@ code_4428:
 		push1	
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x07
 		add	
@@ -2371,8 +2371,8 @@ code_4545:
 		bnt	code_4584
 		pushi	0x69
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x07
 		push1	
 		pushi	0x04
@@ -2410,7 +2410,7 @@ code_4584:
 		push	
 		pushSelf	
 		lofsa	tentacle2
-		send	0xe
+		send	0x0e
 		jmp	code_4699
 code_4629:
 		dup	
@@ -2481,8 +2481,8 @@ Overriden functions: 1
 
 .CODE
 egoThrowsWrongItem::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2495,8 +2495,8 @@ egoThrowsWrongItem::138:
 		pushi	0x00fa
 		pushi	0x008a
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_5145
 code_4794:
 		dup	
@@ -2504,7 +2504,7 @@ code_4794:
 		eq?	
 		bnt	code_4818
 		push2	
-		lsg	0x0
+		lsg	0x00
 		lofsa	grateMonster1
 		push	
 		callb	0xd, 0x4
@@ -2532,13 +2532,13 @@ code_4818:
 		pushi	0x05
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		pushi	0x008c
 		push1	
 		lofsa	tentacleKnocksItBack
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_5145
 code_4868:
 		dup	
@@ -2584,8 +2584,8 @@ code_4882:
 		push1	
 		class	0x1a
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_5145
 code_4954:
 		dup	
@@ -2600,7 +2600,7 @@ code_4954:
 		pushi	0x0094
 		pushSelf	
 		lofsa	genericItem
-		send	0xc
+		send	0x0c
 		jmp	code_5145
 code_4984:
 		dup	
@@ -2615,7 +2615,7 @@ code_4984:
 		pushi	0x008c
 		pushSelf	
 		lofsa	genericItem
-		send	0xc
+		send	0x0c
 		jmp	code_5145
 code_5014:
 		dup	
@@ -2630,7 +2630,7 @@ code_5014:
 		pushi	0x008f
 		pushSelf	
 		lofsa	genericItem
-		send	0xc
+		send	0x0c
 		jmp	code_5145
 code_5044:
 		dup	
@@ -2653,7 +2653,7 @@ code_5044:
 		push2	
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_5145
 code_5084:
@@ -2664,14 +2664,14 @@ code_5084:
 		pushi	0x6c
 		push0	
 		lofsa	genericItem
-		send	0x4
+		send	0x04
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_5145
 code_5114:
 		dup	
@@ -2721,8 +2721,8 @@ Overriden functions: 1
 
 .CODE
 tentacleKnocksItBack::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2764,7 +2764,7 @@ code_5267:
 		push	
 		pushSelf	
 		lofsa	tentacle2
-		send	0x8
+		send	0x08
 		jmp	code_5345
 code_5290:
 		dup	
@@ -2787,7 +2787,7 @@ code_5290:
 		push	
 		pushSelf	
 		lofsa	tentacle2
-		send	0x8
+		send	0x08
 		jmp	code_5345
 code_5330:
 		dup	
@@ -2797,7 +2797,7 @@ code_5330:
 		pushi	0x69
 		push0	
 		lofsa	tentacle2
-		send	0x4
+		send	0x04
 code_5345:
 		toss	
 		ret	
@@ -2829,8 +2829,8 @@ Overriden functions: 1
 
 .CODE
 egoThrowsPlant::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -2846,7 +2846,7 @@ egoThrowsPlant::138:
 		calle	0xff, 0x00, 0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_5665
 code_5443:
 		push1	
@@ -2860,7 +2860,7 @@ code_5443:
 		calle	0xff, 0x00, 0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_5665
 code_5470:
 		push0	
@@ -2872,8 +2872,8 @@ code_5470:
 		pushi	0x00f9
 		pushi	0x0084
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_5665
 code_5496:
 		dup	
@@ -2881,7 +2881,7 @@ code_5496:
 		eq?	
 		bnt	code_5520
 		push2	
-		lsg	0x0
+		lsg	0x00
 		lofsa	grateMonster1
 		push	
 		callb	0xd, 0x4
@@ -2909,7 +2909,7 @@ code_5520:
 		pushi	0x05
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1e
 		jmp	code_5665
 code_5560:
@@ -2920,13 +2920,13 @@ code_5560:
 		pushi	0x6b
 		push0	
 		lofsa	stickyPlant
-		send	0x4
+		send	0x04
 		pushi	0x0146
 		push2	
 		pushi	0x10
 		pushi	0x1f
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		push1	
 		pushi	0x1f
 		callb	0x6, 0x2
@@ -2944,8 +2944,8 @@ code_5611:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_5665
 code_5626:
 		dup	
@@ -2969,7 +2969,7 @@ code_5649:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_5665:
 		toss	
 		ret	

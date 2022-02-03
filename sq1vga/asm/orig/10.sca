@@ -15,7 +15,7 @@ rm10::107:
 		calle	0x03be, 0x0000, 0x08
 		ldi	0x02
 		sag	0xa6
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x09
 		eq?	
 		bnt	code_48
@@ -88,10 +88,10 @@ code_50:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x6e
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x6b
 		push0	
 		pushi	0x07
@@ -100,15 +100,15 @@ code_50:
 		pushi	0x69
 		push0	
 		lofsa	buttonPushed
-		send	0xe
+		send	0x0e
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	ctrlPanel
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -126,7 +126,7 @@ code_256:
 		push	
 		pushi	0x020c
 		push1	
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x09
 		ne?	
 		bnt	code_274
@@ -193,7 +193,7 @@ code_378:
 code_380:
 		push	
 		lofsa	bayDoor
-		send	0xa
+		send	0x0a
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -210,7 +210,7 @@ code_380:
 		pushi	0x020c
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 		bnt	code_427
 		push0	
 		callb	0x2, 0x0
@@ -218,21 +218,21 @@ code_427:
 		ret	
 
 rm10::60:
-		lal	0x1
+		lal	0x01
 		bnt	code_455
 		pushi	0x3b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		bnt	code_455
 		ldi	0x00
-		sal	0x1
+		sal	0x01
 		pushi	0x6c
 		push0	
 		lofsa	buttonPad
-		send	0x4
+		send	0x04
 code_455:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_465
 		ldi	0x00
 		jmp	code_486
@@ -240,12 +240,12 @@ code_465:
 		pushi	0x021a
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 		bnt	code_486
 		pushi	0x00b3
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 code_486:
 		pushi	0x3c
 		push0	
@@ -253,7 +253,7 @@ code_486:
 		ret	
 
 rm10::380:
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x0b
 		eq?	
 		bnt	code_505
@@ -298,8 +298,8 @@ Overriden functions: 3
 
 .CODE
 insertKeyCard::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -314,8 +314,8 @@ insertKeyCard::138:
 		pushi	0x009b
 		pushi	0x77
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_801
 code_623:
 		dup	
@@ -326,8 +326,8 @@ code_623:
 		push2	
 		push0	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_801
 code_643:
 		dup	
@@ -357,7 +357,7 @@ code_669:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_801
 code_693:
@@ -395,8 +395,8 @@ code_721:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_801
 code_759:
 		dup	
@@ -422,7 +422,7 @@ code_787:
 code_796:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_801:
 		toss	
 		ret	
@@ -454,8 +454,8 @@ Overriden functions: 1
 
 .CODE
 pressDownButton::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -509,11 +509,11 @@ code_946:
 		pushi	0x69
 		push0	
 		lofsa	buttonPushed
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	buttonPad
-		send	0x4
+		send	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1334
@@ -526,8 +526,8 @@ code_976:
 		push2	
 		pushi	0x2d
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_1334
 code_997:
 		dup	
@@ -555,7 +555,7 @@ code_1023:
 		pushi	0x00d9
 		push1	
 		pushi	0x05
-		lag	0x0
+		lag	0x00
 		send	0x18
 		pToa	0x1a
 		bnt	code_1065
@@ -566,8 +566,8 @@ code_1023:
 		push2	
 		push1	
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_1334
 code_1065:
 		pushi	0x0094
@@ -575,8 +575,8 @@ code_1065:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_1334
 code_1080:
 		dup	
@@ -598,7 +598,7 @@ code_1094:
 		pushi	0x07
 		push0	
 		lofsa	bayDoor
-		send	0x4
+		send	0x04
 		bnt	code_1167
 		pushi	0x2b
 		push1	
@@ -622,7 +622,7 @@ code_1094:
 		lofsa	bayDoor
 		push	
 		lofsa	bayDoor
-		send	0xc
+		send	0x0c
 		jmp	code_1257
 code_1167:
 		push2	
@@ -634,7 +634,7 @@ code_1178:
 		pushi	0x07
 		push0	
 		lofsa	bayDoor
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_1249
 		pushi	0x2b
@@ -650,8 +650,8 @@ code_1178:
 		pushi	0x016c
 		push1	
 		pushi	0xfe
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 		push1	
 		pushi	0x0086
 		callb	0x8, 0x2
@@ -665,7 +665,7 @@ code_1178:
 		class	0x1a
 		push	
 		lofsa	bayDoor
-		send	0xa
+		send	0x0a
 		jmp	code_1257
 code_1249:
 		push2	
@@ -686,8 +686,8 @@ code_1264:
 		class	0x1b
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_1334
 code_1286:
 		dup	
@@ -715,7 +715,7 @@ code_1325:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1334:
 		toss	
 		ret	
@@ -746,8 +746,8 @@ Overriden functions: 1
 
 .CODE
 hearConverse::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -769,7 +769,7 @@ code_1422:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1438:
 		toss	
 		ret	
@@ -911,7 +911,7 @@ Overriden functions: 0
 
 .CODE
 bayDoor::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -922,7 +922,7 @@ bayDoor::266:
 		pushi	0x07
 		push0	
 		lofsa	bayDoor
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_1765
 		lofsa	string_12		; "open exposing the vast reaches of space"
@@ -936,8 +936,8 @@ code_1768:
 code_1776:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_1787:
 		toss	
@@ -950,7 +950,7 @@ bayDoor::139:
 		callb	0xb, 0x4
 		pushi	0x011b
 		push0	
-		self	0x4
+		self	0x04
 		ret	
 
 
@@ -1020,10 +1020,10 @@ buttonPad::107:
 		lag	0x20
 		send	0x12
 		ldi	0x01
-		sal	0x1
+		sal	0x01
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2e, 0x4
 		ret	
 
@@ -1037,9 +1037,9 @@ buttonPad::108:
 		pushi	0x3c
 		push0	
 		lag	0x20
-		send	0xc
+		send	0x0c
 		ldi	0x00
-		sal	0x1
+		sal	0x01
 		pushi	0x6c
 		push0	
 		super	0x2e, 0x4
@@ -1192,49 +1192,49 @@ keyCardSlot::107:
 		pushi	0x010f
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 		aTop	0x22
 		pushi	0x0110
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 		aTop	0x24
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		pushi	0x04
-		self	0x8
+		self	0x08
 		ret	
 
 keyCardSlot::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x04
 		eq?	
 		bnt	code_2370
-		lsp	0x2
+		lsp	0x02
 		ldi	0x01
 		eq?	
 		bnt	code_2356
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		lofsa	door
-		send	0x8
+		send	0x08
 		jmp	code_2381
 code_2356:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 		jmp	code_2381
 code_2370:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2c, 0x8
 code_2381:
 		toss	
@@ -1273,7 +1273,7 @@ Overriden functions: 2
 
 .CODE
 openButton::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1284,14 +1284,14 @@ openButton::266:
 		push	
 		push0	
 		push1	
-		lag	0x2
-		send	0xa
+		lag	0x02
+		send	0x0a
 		jmp	code_2494
 code_2483:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2494:
 		toss	
@@ -1328,7 +1328,7 @@ Overriden functions: 1
 
 .CODE
 closeButton::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1337,14 +1337,14 @@ closeButton::266:
 		push1	
 		lofsa	pressDownButton
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2599
 code_2588:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2599:
 		toss	
@@ -1384,22 +1384,22 @@ Overriden functions: 1
 controlPanel::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		ret	
 
 controlPanel::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
 		bnt	code_2727
-		lal	0x1
+		lal	0x01
 		not	
 		bnt	code_2715
 		push2	
@@ -1416,8 +1416,8 @@ code_2715:
 code_2727:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2738:
 		toss	
@@ -1457,32 +1457,32 @@ Overriden functions: 2
 correctButton::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		ret	
 
 correctButton::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x02
 		eq?	
 		bt	code_2843
-		lsp	0x1
+		lsp	0x01
 		ldi	0x03
 		eq?	
 code_2843:
 		bnt	code_2875
-		lal	0x1
+		lal	0x01
 		not	
 		bnt	code_2863
 		pushi	0x6b
 		push0	
 		lofsa	buttonPad
-		send	0x4
+		send	0x04
 		jmp	code_2886
 code_2863:
 		push2	
@@ -1493,8 +1493,8 @@ code_2863:
 code_2875:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_2886:
 		ret	
@@ -1534,22 +1534,22 @@ Overriden functions: 2
 wrongButtons::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		ret	
 
 wrongButtons::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
 		bnt	code_3017
-		lal	0x1
+		lal	0x01
 		not	
 		bnt	code_3005
 		push2	
@@ -1566,8 +1566,8 @@ code_3005:
 code_3017:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3028:
 		toss	
@@ -1688,17 +1688,17 @@ Overriden functions: 0
 ctrlPanel::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		pushi	0x0117
 		push2	
 		pushi	0x03
 		push2	
-		self	0x8
+		self	0x08
 		ret	
 
 ctrlPanel::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1711,8 +1711,8 @@ ctrlPanel::266:
 code_3321:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_3332:
 		toss	

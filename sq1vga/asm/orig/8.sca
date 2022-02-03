@@ -14,7 +14,7 @@ rm8::107:
 		pushi	0x0187
 		push1	
 		pushi	0x02bc
-		self	0x6
+		self	0x06
 		ldi	0x02
 		sag	0xa6
 		pushi	0x0094
@@ -24,7 +24,7 @@ rm8::107:
 		pushi	0x6b
 		push0	
 		lofsa	monitor
-		send	0xa
+		send	0x0a
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -32,8 +32,8 @@ rm8::107:
 		pushi	0x6b
 		push0	
 		lofsa	dials
-		send	0xa
-		lsg	0xc
+		send	0x0a
+		lsg	0x0c
 		ldi	0x09
 		eq?	
 		bnt	code_79
@@ -107,14 +107,14 @@ code_81:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x76
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -137,7 +137,7 @@ code_81:
 		send	0x14
 		pushi	0x020c
 		push1	
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x09
 		ne?	
 		push	
@@ -152,7 +152,7 @@ code_81:
 		pushi	0x04
 		lofsa	door
 		send	0x16
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x04
 		ne?	
 		bnt	code_324
@@ -162,7 +162,7 @@ code_324:
 		ret	
 
 rm8::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_335
 		ldi	0x00
 		jmp	code_356
@@ -170,12 +170,12 @@ code_335:
 		pushi	0x021a
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 		bnt	code_356
 		pushi	0x00b3
 		push0	
 		lofsa	door
-		send	0x4
+		send	0x04
 code_356:
 		pushi	0x3c
 		push0	
@@ -183,7 +183,7 @@ code_356:
 		ret	
 
 rm8::380:
-		lsg	0xc
+		lsg	0x0c
 		ldi	0x04
 		eq?	
 		bnt	code_375
@@ -444,8 +444,8 @@ pipes::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
@@ -454,15 +454,15 @@ pipes::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		ret	
 
@@ -504,8 +504,8 @@ conduit::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
@@ -514,15 +514,15 @@ conduit::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		ret	
 
@@ -564,8 +564,8 @@ thing1::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
@@ -574,15 +574,15 @@ thing1::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		ret	
 
@@ -624,8 +624,8 @@ thing2::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		pushi	0x03
 		push1	
@@ -634,15 +634,15 @@ thing2::266:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		ret	
 

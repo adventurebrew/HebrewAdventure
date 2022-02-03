@@ -36,31 +36,31 @@ Overriden functions: 0
 FROR::107:
 		pushi	0x6b
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x16, 0x6
-		lsp	0x0
+		lsp	0x00
 		ldi	0x01
 		gt?	
 		bnt	code_136
-		lap	0x2
+		lap	0x02
 		aTop	0x16
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		gt?	
 		bnt	code_136
-		lap	0x3
+		lap	0x03
 		aTop	0x18
-		lsp	0x0
+		lsp	0x00
 		ldi	0x03
 		gt?	
 		bnt	code_136
-		lap	0x4
+		lap	0x04
 		aTop	0x12
-		lsp	0x0
+		lsp	0x00
 		ldi	0x04
 		gt?	
 		bnt	code_136
-		lap	0x5
+		lap	0x05
 		aTop	0x14
 code_136:
 		ret	
@@ -81,8 +81,8 @@ FROR::60:
 		push2	
 		callk	0x3c, 0x4
 		sub	
-		aTop	0xc
-		pToa	0xc
+		aTop	0x0c
+		pToa	0x0c
 		not	
 		bnt	code_187
 		pushi	0x07
@@ -92,14 +92,14 @@ FROR::60:
 		pTos	0x14
 		callk	0x3c, 0x4
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 code_187:
 		pushi	0x00d6
 		push0	
-		self	0x4
-		sat	0x0
-		pToa	0xc
+		self	0x04
+		sat	0x00
+		pToa	0x0c
 		bnt	code_255
 		push	
 		ldi	0x01
@@ -107,12 +107,12 @@ code_187:
 		bnt	code_219
 		pushi	0x07
 		push1	
-		lst	0x0
-		pToa	0x8
-		send	0x6
+		lst	0x00
+		pToa	0x08
+		send	0x06
 		jmp	code_255
 code_219:
-		lst	0x0
+		lst	0x00
 		ldi	0x00
 		lt?	
 		bnt	code_246
@@ -120,18 +120,18 @@ code_219:
 		push1	
 		pushi	0x00db
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		jmp	code_255
 code_246:
 		pushi	0x07
 		push1	
-		lst	0x0
-		pToa	0x8
-		send	0x6
+		lst	0x00
+		pToa	0x08
+		send	0x06
 code_255:
 		ret	
 
@@ -204,7 +204,7 @@ Overriden functions: 0
 
 .CODE
 ZZTop::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -249,7 +249,7 @@ code_513:
 		ldi	0x04
 		eq?	
 		bnt	code_717
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -342,8 +342,8 @@ code_682:
 code_702:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_713:
 		toss	
@@ -351,8 +351,8 @@ code_713:
 code_717:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_728:
 		toss	
@@ -412,7 +412,7 @@ Overriden functions: 1
 
 .CODE
 ZZTop2::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -457,7 +457,7 @@ code_921:
 		ldi	0x04
 		eq?	
 		bnt	code_1125
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -550,8 +550,8 @@ code_1090:
 code_1110:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_1121:
 		toss	
@@ -559,8 +559,8 @@ code_1121:
 code_1125:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_1136:
 		toss	
@@ -620,7 +620,7 @@ Overriden functions: 1
 
 .CODE
 ZZTop3::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -665,7 +665,7 @@ code_1329:
 		ldi	0x04
 		eq?	
 		bnt	code_1533
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -758,8 +758,8 @@ code_1498:
 code_1518:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x2f, 0x8
 code_1529:
 		toss	
@@ -767,8 +767,8 @@ code_1529:
 code_1533:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x2f, 0x6
 code_1544:
 		toss	

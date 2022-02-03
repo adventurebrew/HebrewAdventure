@@ -18,43 +18,43 @@ rm68::107:
 		pushi	0x6b
 		push0	
 		lofsa	greenBldg
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	twoGuys
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	stadium
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	blueBldg
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	apartments
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	guy1
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	cheerers
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	bubbleGum
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	guy2
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	clarkKent
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x0084
 		pushi	0x0217
@@ -83,16 +83,16 @@ rm68::107:
 		pushi	0x42
 		push1	
 		pushi	0x08
-		lag	0x0
+		lag	0x00
 		send	0x30
 		pushi	0x6b
 		push0	
 		lofsa	xenonLeader
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	greenGirl
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		pushi	0x011a
@@ -115,23 +115,23 @@ rm68::107:
 		push1	
 		lofsa	roomControl
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		lofsa	xen6
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	xen9
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	xen8
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	xen3
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
@@ -172,8 +172,8 @@ Overriden functions: 1
 
 .CODE
 crowdGoesWild::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -185,7 +185,7 @@ crowdGoesWild::138:
 		push	
 		pushSelf	
 		lofsa	xen6
-		send	0x8
+		send	0x08
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -194,20 +194,20 @@ crowdGoesWild::138:
 		push1	
 		pushi	0x08
 		lofsa	xen8
-		send	0xc
+		send	0x0c
 		pushi	0x0094
 		push1	
 		class	0x1a
 		push	
 		lofsa	xen9
-		send	0x6
+		send	0x06
 		pushi	0x0094
 		push2	
 		class	0x5f
 		push	
 		push2	
 		lofsa	xen3
-		send	0x8
+		send	0x08
 		jmp	code_591
 code_419:
 		dup	
@@ -228,7 +228,7 @@ code_433:
 		push	
 		pushSelf	
 		lofsa	xen6
-		send	0x8
+		send	0x08
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -237,20 +237,20 @@ code_433:
 		push1	
 		pushi	0x08
 		lofsa	xen8
-		send	0xc
+		send	0x0c
 		pushi	0x0094
 		push1	
 		class	0x1a
 		push	
 		lofsa	xen9
-		send	0x6
+		send	0x06
 		pushi	0x0094
 		push2	
 		class	0x5f
 		push	
 		push2	
 		lofsa	xen3
-		send	0x8
+		send	0x08
 		jmp	code_591
 code_499:
 		dup	
@@ -271,7 +271,7 @@ code_513:
 		push	
 		pushSelf	
 		lofsa	xen6
-		send	0x8
+		send	0x08
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -280,20 +280,20 @@ code_513:
 		push1	
 		pushi	0x08
 		lofsa	xen8
-		send	0xc
+		send	0x0c
 		pushi	0x0094
 		push1	
 		class	0x1a
 		push	
 		lofsa	xen9
-		send	0x6
+		send	0x06
 		pushi	0x0094
 		push2	
 		class	0x5f
 		push	
 		push2	
 		lofsa	xen3
-		send	0x8
+		send	0x08
 		jmp	code_591
 code_579:
 		dup	
@@ -302,7 +302,7 @@ code_579:
 		bnt	code_591
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_591:
 		toss	
 		ret	
@@ -334,8 +334,8 @@ Overriden functions: 1
 
 .CODE
 roomControl::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -354,7 +354,7 @@ code_671:
 		lofsa	lottaPraise
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_846
 code_692:
 		dup	
@@ -366,14 +366,14 @@ code_692:
 		lofsa	greenGirlGives
 		push	
 		lofsa	greenGirl
-		send	0x6
+		send	0x06
 		pushi	0x008c
 		push2	
 		lofsa	xenonLeaderReceives
 		push	
 		pushSelf	
 		lofsa	xenonLeader
-		send	0x8
+		send	0x08
 		jmp	code_846
 code_729:
 		dup	
@@ -397,7 +397,7 @@ code_754:
 		bnt	code_771
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_771:
 		pushi	0x03
 		pushi	0x44
@@ -416,7 +416,7 @@ code_789:
 		bnt	code_806
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_806:
 		pushi	0x03
 		pushi	0x44
@@ -435,11 +435,11 @@ code_824:
 		bnt	code_841
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_841:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_846:
 		toss	
 		ret	
@@ -470,8 +470,8 @@ Overriden functions: 1
 
 .CODE
 lottaPraise::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -512,12 +512,12 @@ code_957:
 		push0	
 		pushSelf	
 		lofsa	leaderTalker
-		send	0xe
+		send	0x0e
 		pushi	0x00d3
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		not	
 		bnt	code_1092
 		pushi	0x01fd
@@ -525,7 +525,7 @@ code_957:
 		lofsa	string_5		; "\"Now, if you'd only been smart enough to bring along the data cartridge containing the construction specifications, we'd be able build a new Star Generator, thereby saving Xenon from the horrors of a rapidly cooling planet. Oh, well. You are just a janitor.\""
 		push	
 		lofsa	leaderTalker
-		send	0x6
+		send	0x06
 		jmp	code_1092
 code_1011:
 		dup	
@@ -541,7 +541,7 @@ code_1011:
 		push0	
 		pushSelf	
 		lofsa	leaderTalker
-		send	0xe
+		send	0x0e
 		jmp	code_1092
 code_1039:
 		dup	
@@ -557,7 +557,7 @@ code_1039:
 		push1	
 		pushSelf	
 		lofsa	leaderTalker
-		send	0xe
+		send	0x0e
 		jmp	code_1092
 code_1067:
 		dup	
@@ -569,10 +569,10 @@ code_1067:
 		lofsa	zoomingRockets
 		push	
 		lofsa	ship
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1092:
 		toss	
 		ret	
@@ -603,8 +603,8 @@ Overriden functions: 1
 
 .CODE
 greenGirlGives::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -618,8 +618,8 @@ greenGirlGives::138:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
-		send	0xe
+		pToa	0x08
+		send	0x0e
 		jmp	code_1271
 code_1185:
 		dup	
@@ -632,12 +632,12 @@ code_1185:
 		pushi	0x07
 		push1	
 		push0	
-		pToa	0x8
-		send	0xc
+		pToa	0x08
+		send	0x0c
 		pushi	0x6b
 		push0	
 		lofsa	greenGirlBodyPart
-		send	0x4
+		send	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1271
@@ -658,7 +658,7 @@ code_1241:
 		eq?	
 		bnt	code_1271
 		ldi	0x01
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00d9
 		push1	
 		pushi	0x05
@@ -668,7 +668,7 @@ code_1241:
 		push	
 		pushSelf	
 		lofsa	greenGirlBodyPart
-		send	0xe
+		send	0x0e
 code_1271:
 		toss	
 		ret	
@@ -700,8 +700,8 @@ Overriden functions: 1
 
 .CODE
 xenonLeaderReceives::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -716,7 +716,7 @@ xenonLeaderReceives::138:
 		push	
 		pushSelf	
 		lofsa	xenonLeader
-		send	0xe
+		send	0x0e
 		jmp	code_1576
 code_1366:
 		dup	
@@ -751,8 +751,8 @@ code_1403:
 		push1	
 		class	0x1a
 		push	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		pushi	0x0094
 		pushi	0x04
 		class	0x19
@@ -761,7 +761,7 @@ code_1403:
 		push1	
 		pushSelf	
 		lofsa	xenonLeader
-		send	0xc
+		send	0x0c
 		jmp	code_1576
 code_1447:
 		dup	
@@ -774,8 +774,8 @@ code_1447:
 		pushi	0x07
 		push1	
 		push0	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		ldi	0x03
 		aTop	0x12
 		jmp	code_1576
@@ -788,8 +788,8 @@ code_1474:
 		push1	
 		class	0x1a
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x00d9
 		push1	
 		pushi	0x08
@@ -797,7 +797,7 @@ code_1474:
 		push1	
 		pushi	0x0a
 		lofsa	xenonLeader
-		send	0xc
+		send	0x0c
 		ldi	0x02
 		aTop	0x10
 		jmp	code_1576
@@ -811,15 +811,15 @@ code_1515:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
-		send	0x8
+		pToa	0x08
+		send	0x08
 		pushi	0x008c
 		push2	
 		lofsa	egoReceivesAward
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_1576
 code_1550:
 		dup	
@@ -836,7 +836,7 @@ code_1564:
 		bnt	code_1576
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1576:
 		toss	
 		ret	
@@ -867,8 +867,8 @@ Overriden functions: 1
 
 .CODE
 egoReceivesAward::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -881,7 +881,7 @@ egoReceivesAward::138:
 		lofsa	rocketsRedGlare1
 		push	
 		lofsa	fireworks1
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -889,7 +889,7 @@ egoReceivesAward::138:
 		lofsa	rocketsRedGlare2
 		push	
 		lofsa	fireworks2
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x008c
@@ -897,7 +897,7 @@ egoReceivesAward::138:
 		lofsa	rocketsRedGlare3
 		push	
 		lofsa	fireworks3
-		send	0xa
+		send	0x0a
 		ldi	0x0a
 		aTop	0x10
 		jmp	code_1736
@@ -911,7 +911,7 @@ code_1703:
 		lofsa	crowdGoesWild
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1736
 code_1724:
 		dup	
@@ -920,7 +920,7 @@ code_1724:
 		bnt	code_1736
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1736:
 		toss	
 		ret	
@@ -951,8 +951,8 @@ Overriden functions: 1
 
 .CODE
 rocketsRedGlare1::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1013,7 +1013,7 @@ code_1839:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
+		pToa	0x08
 		send	0x1e
 		jmp	code_1953
 code_1912:
@@ -1023,8 +1023,8 @@ code_1912:
 		bnt	code_1939
 		pushi	0x69
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push2	
 		pushi	0x05
 		pushi	0x0f
@@ -1039,7 +1039,7 @@ code_1939:
 		pushi	0x008a
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 code_1953:
 		toss	
 		ret	
@@ -1071,8 +1071,8 @@ Overriden functions: 1
 
 .CODE
 rocketsRedGlare2::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1133,7 +1133,7 @@ code_2057:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
+		pToa	0x08
 		send	0x1e
 		jmp	code_2171
 code_2130:
@@ -1143,8 +1143,8 @@ code_2130:
 		bnt	code_2157
 		pushi	0x69
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push2	
 		pushi	0x05
 		pushi	0x0f
@@ -1159,7 +1159,7 @@ code_2157:
 		pushi	0x008a
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 code_2171:
 		toss	
 		ret	
@@ -1191,8 +1191,8 @@ Overriden functions: 1
 
 .CODE
 rocketsRedGlare3::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1253,7 +1253,7 @@ code_2275:
 		class	0x1a
 		push	
 		pushSelf	
-		pToa	0x8
+		pToa	0x08
 		send	0x1e
 		jmp	code_2389
 code_2348:
@@ -1263,8 +1263,8 @@ code_2348:
 		bnt	code_2375
 		pushi	0x69
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push2	
 		pushi	0x05
 		pushi	0x0f
@@ -1279,7 +1279,7 @@ code_2375:
 		pushi	0x008a
 		push1	
 		push0	
-		self	0x6
+		self	0x06
 code_2389:
 		toss	
 		ret	
@@ -1311,8 +1311,8 @@ Overriden functions: 1
 
 .CODE
 zoomingRockets::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1343,7 +1343,7 @@ code_2493:
 		pushi	0x9c
 		pushi	0x28
 		lofsa	ship
-		send	0x8
+		send	0x08
 		ldi	0x0c
 		aTop	0x10
 		jmp	code_2816
@@ -1429,7 +1429,7 @@ code_2560:
 		pushi	0x28
 		pushSelf	
 		lofsa	ship
-		send	0xc
+		send	0x0c
 		jmp	code_2816
 code_2682:
 		dup	
@@ -1455,21 +1455,21 @@ code_2682:
 		pushi	0x69
 		push0	
 		lofsa	fireworks1
-		send	0xa
+		send	0x0a
 		pushi	0x42
 		push1	
 		push1	
 		pushi	0x69
 		push0	
 		lofsa	fireworks2
-		send	0xa
+		send	0x0a
 		pushi	0x42
 		push1	
 		push1	
 		pushi	0x69
 		push0	
 		lofsa	fireworks3
-		send	0xa
+		send	0x0a
 		pushi	0x0119
 		pushi	0x04
 		class	0x1e
@@ -1479,7 +1479,7 @@ code_2682:
 		lofsa	ship
 		push	
 		lofsa	ship
-		send	0xc
+		send	0x0c
 		jmp	code_2816
 code_2775:
 		dup	
@@ -1489,13 +1489,13 @@ code_2775:
 		pushi	0x6c
 		push0	
 		lofsa	explosion
-		send	0x4
+		send	0x04
 		pushi	0x008c
 		push2	
 		lofsa	closingCredits
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_2816
 code_2804:
 		dup	
@@ -1504,7 +1504,7 @@ code_2804:
 		bnt	code_2816
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2816:
 		toss	
 		ret	
@@ -1535,8 +1535,8 @@ Overriden functions: 1
 
 .CODE
 closingCredits::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1553,11 +1553,11 @@ code_2895:
 		pushi	0x0177
 		push1	
 		push2	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2916:
 		toss	
 		ret	
@@ -2119,7 +2119,7 @@ Overriden functions: 0
 ship::139:
 		pushi	0x69
 		push0	
-		self	0x4
+		self	0x04
 		ret	
 
 

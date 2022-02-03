@@ -14,9 +14,9 @@ babbleIcon::107:
 		pushi	0x6a
 		push0	
 		class	0x5e
-		send	0x4
+		send	0x04
 		aTop	0x20
-		send	0x8
+		send	0x08
 		ret	
 
 
@@ -52,8 +52,8 @@ code_94:
 		push2	
 		lsg	0x14
 		push1	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		pushi	0x14
 		lofsa	string_1		; "Thank you for playing Space Quest I. As usual, you've been most entertaining."
 		push	
@@ -76,9 +76,9 @@ code_94:
 		push	
 		pushi	0x03
 		pushi	0x52
-		lsp	0x1
-		lsp	0x2
-		lsp	0x3
+		lsp	0x01
+		lsp	0x02
+		lsp	0x03
 		calle	0xff, 0x00, 0x28
 		push	
 		dup	
@@ -87,13 +87,13 @@ code_94:
 		bnt	code_187
 		pushi	0x4f
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		pushi	0x009b
 		push1	
 		push0	
-		class	0xa
-		send	0x6
+		class	0x0a
+		send	0x06
 		jmp	code_236
 code_187:
 		dup	
@@ -102,13 +102,13 @@ code_187:
 		bnt	code_213
 		pushi	0x68
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		pushi	0x009b
 		push1	
 		push0	
-		class	0xa
-		send	0x6
+		class	0x0a
+		send	0x06
 		jmp	code_236
 code_213:
 		dup	
@@ -116,14 +116,14 @@ code_213:
 		eq?	
 		bnt	code_227
 		ldi	0x01
-		sag	0x4
+		sag	0x04
 		jmp	code_236
 code_227:
 		pushi	0x009b
 		push1	
 		push0	
-		class	0xa
-		send	0x6
+		class	0x0a
+		send	0x06
 code_236:
 		toss	
 		pushi	0x00c7
@@ -131,13 +131,13 @@ code_236:
 		pushi	0x69
 		push0	
 		lag	0x45
-		send	0x8
+		send	0x08
 		pushi	0x00b9
 		push2	
 		lsg	0x15
 		push0	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		ret	
 
 rm2::107:
@@ -154,7 +154,7 @@ rm2::107:
 		mul	
 		push	
 		lofsa	babbleIcon
-		send	0xc
+		send	0x0c
 		push2	
 		push1	
 		pushi	0x03e7
@@ -162,12 +162,12 @@ rm2::107:
 		pushi	0x00c7
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		pushi	0x66
 		push1	
 		push0	
 		lag	0x64
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
@@ -175,57 +175,57 @@ rm2::107:
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x00b9
 		push2	
 		lsg	0x15
 		push0	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		pushi	0x008c
 		push1	
 		lofsa	finalCredits
 		push	
-		self	0x6
+		self	0x06
 		ret	
 
 rm2::129:
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		bnt	code_422
-		lsg	0xb
-		lag	0xd
+		lsg	0x0b
+		lag	0x0d
 		eq?	
 		bnt	code_422
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		pushi	0x009b
 		push1	
 		push1	
-		class	0xa
-		send	0x6
+		class	0x0a
+		send	0x06
 		pushi	0x00c7
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		pushi	0x00b9
 		pushi	0x04
 		lsg	0x14
 		push1	
 		pushi	0x00a0
 		pushi	0x64
-		lag	0x1
-		send	0xc
+		lag	0x01
+		send	0x0c
 		pushi	0x03
 		push0	
 		push2	
@@ -241,10 +241,10 @@ rm2::375:
 		pushi	0x009d
 		push0	
 		lag	0x64
-		send	0xa
+		send	0x0a
 		pushi	0x0177
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x43, 0x6
 		ret	
 
@@ -286,15 +286,15 @@ Overriden functions: 3
 finalCredits::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x80, 0x4
 		ldi	0x00
 		aTop	0x28
 		ret	
 
 finalCredits::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -319,7 +319,7 @@ finalCredits::138:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0f
 		aTop	0x12
 		jmp	code_1230
@@ -330,7 +330,7 @@ code_596:
 		bnt	code_615
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -358,7 +358,7 @@ code_615:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0f
 		aTop	0x12
 		jmp	code_1230
@@ -369,7 +369,7 @@ code_669:
 		bnt	code_688
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -397,7 +397,7 @@ code_688:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0c
 		aTop	0x12
 		jmp	code_1230
@@ -408,7 +408,7 @@ code_742:
 		bnt	code_761
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -436,7 +436,7 @@ code_761:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x08
 		aTop	0x12
 		jmp	code_1230
@@ -447,7 +447,7 @@ code_815:
 		bnt	code_834
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -475,7 +475,7 @@ code_834:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0f
 		aTop	0x12
 		jmp	code_1230
@@ -486,7 +486,7 @@ code_888:
 		bnt	code_907
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -514,7 +514,7 @@ code_907:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0a
 		aTop	0x12
 		jmp	code_1230
@@ -525,7 +525,7 @@ code_961:
 		bnt	code_980
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -553,7 +553,7 @@ code_980:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0a
 		aTop	0x12
 		jmp	code_1230
@@ -564,7 +564,7 @@ code_1034:
 		bnt	code_1053
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -592,7 +592,7 @@ code_1053:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0a
 		aTop	0x12
 		jmp	code_1230
@@ -603,7 +603,7 @@ code_1107:
 		bnt	code_1126
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -631,7 +631,7 @@ code_1126:
 		pushi	0x6b
 		callk	0x1b, 0x1a
 		push	
-		self	0x6
+		self	0x06
 		ldi	0x0a
 		aTop	0x12
 		jmp	code_1230
@@ -642,7 +642,7 @@ code_1180:
 		bnt	code_1199
 		pushi	0x4f
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1230
@@ -657,8 +657,8 @@ code_1199:
 		push0	
 		callk	0x27, 0x0
 		push	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		pushi	0x03
 		push0	
 		push2	

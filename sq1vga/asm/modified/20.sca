@@ -75,10 +75,10 @@ rm20::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x76
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x03
 		pushi	0x0080
 		pushi	0x48
@@ -137,7 +137,7 @@ code_223:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x52
 		push	
 		pushi	0x22
@@ -174,12 +174,12 @@ code_223:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x3e
 		push	
-		self	0x8
+		self	0x08
 code_399:
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x1e
 		eq?	
@@ -216,12 +216,12 @@ code_459:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -231,8 +231,8 @@ code_459:
 		bnt	code_512
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x64
 		gt?	
@@ -240,7 +240,7 @@ code_459:
 		pushi	0x6b
 		push0	
 		lofsa	hole
-		send	0x4
+		send	0x04
 code_512:
 		ret	
 
@@ -281,7 +281,7 @@ Overriden functions: 1
 hole::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		lsg	0xa6
 		ldi	0x01
@@ -289,8 +289,8 @@ hole::107:
 		bnt	code_625
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x64
 		gt?	
@@ -299,7 +299,7 @@ hole::107:
 		push2	
 		pushi	0x03
 		push1	
-		self	0x8
+		self	0x08
 code_625:
 		ret	
 
@@ -310,13 +310,13 @@ hole::266:
 		bnt	code_777
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x64
 		gt?	
 		bnt	code_777
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -343,8 +343,8 @@ code_691:
 		push1	
 		lofsa	enterHole
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_773
 code_706:
 		dup	
@@ -379,8 +379,8 @@ code_743:
 code_762:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_773:
 		toss	
@@ -426,8 +426,8 @@ Overriden functions: 2
 
 .CODE
 enterHole::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -440,8 +440,8 @@ enterHole::138:
 		pushi	0x74
 		push1	
 		pushi	0x009d
-		lag	0x8
-		send	0x6
+		lag	0x08
+		send	0x06
 		push0	
 		callb	0x2, 0x0
 		pushi	0x05
@@ -477,7 +477,7 @@ enterHole::138:
 		pushi	0x1e
 		pushi	0x78
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x3e
 		jmp	code_1136
 code_958:
@@ -487,8 +487,8 @@ code_958:
 		bnt	code_993
 		pushi	0x69
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x019a
@@ -539,7 +539,7 @@ code_1007:
 		pushi	0x04
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x30
 		jmp	code_1136
 code_1066:
@@ -564,8 +564,8 @@ code_1066:
 		push2	
 		pushi	0x55
 		pushi	0x00af
-		lag	0x0
-		send	0xe
+		lag	0x00
+		send	0x0e
 		ldi	0x02
 		aTop	0x12
 		jmp	code_1136

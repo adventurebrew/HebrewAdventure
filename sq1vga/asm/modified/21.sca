@@ -65,10 +65,10 @@ rm21::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x62
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_270
 code_163:
 		pushi	0x0174
@@ -117,16 +117,16 @@ code_163:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x52
 		push	
-		self	0x6
+		self	0x06
 		push2	
 		pushi	0x0080
 		pushi	0x2d
 		calle	0x03be, 0x0000, 0x04
 code_270:
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x22
 		eq?	
@@ -153,23 +153,23 @@ code_312:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		lofsa	thingy
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
 		ret	
 
 rm21::60:
-		pToa	0x8
+		pToa	0x08
 		bnt	code_354
 		ldi	0x00
 		jmp	code_400
@@ -184,8 +184,8 @@ code_354:
 		pushi	0x4b
 		pushi	0x74
 		pushi	0x59
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		bnt	code_400
 		push2	
 		push2	
@@ -195,7 +195,7 @@ code_354:
 		push1	
 		lofsa	enterCaves
 		push	
-		self	0x6
+		self	0x06
 code_400:
 		pushi	0x3c
 		push0	
@@ -238,8 +238,8 @@ Overriden functions: 2
 
 .CODE
 enterCaves::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -254,8 +254,8 @@ enterCaves::138:
 		pushi	0x67
 		pushi	0x53
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_596
 code_520:
 		dup	
@@ -289,7 +289,7 @@ code_520:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_596
 code_579:
@@ -300,8 +300,8 @@ code_579:
 		pushi	0x0177
 		push1	
 		pushi	0x1d
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_596:
 		toss	
 		ret	
@@ -342,15 +342,15 @@ thingy::107:
 		pushi	0x05
 		pushi	0x0c
 		pushi	0x0b
-		self	0xc
+		self	0x0c
 		jmp	code_687
 code_682:
 		ldi	0x0096
-		aTop	0xa
+		aTop	0x0a
 code_687:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2c, 0x4
 		ret	
 

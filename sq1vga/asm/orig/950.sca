@@ -4,8 +4,8 @@ LOFSA_RELATIVE = False
 
 .CODE
 CueObj::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x01
@@ -16,34 +16,34 @@ CueObj::138:
 		pushi	0x04
 		dup	
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x04
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		pushi	0x03
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		callk	0x3f, 0x8
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		pushi	0x73
 		push1	
 		pushSelf	
 		lag	0x4e
-		send	0x6
+		send	0x06
 		jmp	code_159
 code_73:
 		dup	
@@ -62,13 +62,13 @@ code_87:
 		push1	
 		pushSelf	
 		lag	0x4e
-		send	0x6
-		pToa	0x8
+		send	0x06
+		pToa	0x08
 		bnt	code_139
 		push1	
 		pushi	0x0109
 		push0	
-		send	0x4
+		send	0x04
 		push	
 		callk	0x6, 0x2
 		bnt	code_139
@@ -78,9 +78,9 @@ code_87:
 		pTos	0x20
 		pushi	0x0109
 		push0	
-		pToa	0x8
-		send	0x4
-		send	0x8
+		pToa	0x08
+		send	0x04
+		send	0x08
 code_139:
 		not	
 		bnt	code_155
@@ -88,11 +88,11 @@ code_139:
 		push2	
 		pTos	0x1e
 		pTos	0x20
-		pToa	0x8
-		send	0x8
+		pToa	0x08
+		send	0x08
 code_155:
 		ldi	0x00
-		aTop	0xa
+		aTop	0x0a
 code_159:
 		toss	
 		ret	
@@ -124,14 +124,14 @@ Overriden functions: 1
 
 .CODE
 Feature::107:
-		lap	0x0
+		lap	0x00
 		bnt	code_274
-		lap	0x1
+		lap	0x01
 		bnt	code_274
 		pushi	0x63
 		push1	
-		lsp	0x1
-		self	0x6
+		lsp	0x01
+		self	0x06
 		jmp	code_285
 code_274:
 		lag	0x40
@@ -139,25 +139,25 @@ code_274:
 		pushi	0x63
 		push1	
 		push	
-		self	0x6
+		self	0x06
 code_285:
 		pushi	0x71
 		push1	
 		pushi	0x08
-		self	0x6
+		self	0x06
 		bnt	code_306
 		pushi	0x73
 		push1	
 		pushSelf	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		jmp	code_314
 code_306:
 		pushi	0x73
 		push1	
 		pushSelf	
 		lag	0x20
-		send	0x6
+		send	0x06
 code_314:
 		ret	
 
@@ -165,31 +165,31 @@ Feature::279:
 		link	0x01
 		ldi	0x00
 		aTop	0x28
-		sat	0x0
+		sat	0x00
 code_323:
-		lst	0x0
-		lap	0x0
+		lst	0x00
+		lap	0x00
 		lt?	
 		bnt	code_365
-		lap	0x1
+		lap	0x01
 		bnt	code_360
 		pushi	0x0112
 		push1	
 		pushi	0x0112
 		push0	
-		self	0x4
+		self	0x04
 		push	
 		push1	
-		lat	0x0
-		lspi	0x1
+		lat	0x00
+		lspi	0x01
 		ldi	0x01
 		sub	
 		shl	
 		or	
 		push	
-		self	0x6
+		self	0x06
 code_360:
-		+at	0x0
+		+at	0x00
 		jmp	code_323
 code_365:
 		ret	
@@ -198,8 +198,8 @@ Feature::129:
 		link	0x01
 		pushi	0x4c
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		bnt	code_384
 		ldi	0x01
 		ret	
@@ -208,20 +208,20 @@ Feature::129:
 code_384:
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x4000
 		eq?	
 		bnt	code_603
 		pushi	0x00c2
 		push1	
-		lsp	0x1
-		self	0x6
+		lsp	0x01
+		self	0x06
 		bnt	code_603
 		pushi	0x0116
 		push0	
-		self	0x4
+		self	0x04
 		bnt	code_603
 		pushi	0x20
 		push1	
@@ -236,8 +236,8 @@ code_384:
 		push1	
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		pushi	0x0108
 		push1	
@@ -245,23 +245,23 @@ code_384:
 		bnt	code_489
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x04
 		eq?	
 		bnt	code_489
-		lag	0x9
+		lag	0x09
 		bnt	code_489
 		pushi	0x0080
 		push1	
 		pushi	0x00cf
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
-		lag	0x9
-		send	0x6
+		lag	0x09
+		send	0x06
 code_489:
 		push	
 		class	0x2b
@@ -269,12 +269,12 @@ code_489:
 		pushi	0x4c
 		push1	
 		push1	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		pushi	0x0118
 		push0	
 		lag	0x50
-		send	0x4
+		send	0x04
 		bnt	code_573
 		pTos	0x28
 		ldi	0x6789
@@ -284,8 +284,8 @@ code_489:
 		push1	
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x01
 		sub	
@@ -299,39 +299,39 @@ code_489:
 		pTos	0x22
 		pushi	0x55
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pToa	0x24
 		add	
 		push	
 		class	0x2b
 		push	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_603
 code_573:
 		pushi	0x0118
 		push0	
 		lag	0x50
-		send	0x4
+		send	0x04
 		bnt	code_593
 		pushi	0x0119
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_593:
 		pushi	0x008a
 		push1	
 		pushi	0x03
 		class	0x2b
-		send	0x6
+		send	0x06
 code_603:
 		pushi	0x4c
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		ret	
 
 Feature::276:
@@ -339,8 +339,8 @@ Feature::276:
 		pushi	0x0119
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x2d
 		push1	
 		pushSelf	
@@ -359,61 +359,61 @@ Feature::276:
 Feature::266:
 		pushi	0x3c
 		push2	
-		lsp	0x1
+		lsp	0x01
 		pushSelf	
-		rest	0x2
+		rest	0x02
 		lag	0x41
 		bnt	code_660
 		jmp	code_663
 code_660:
 		lofsa	dftDoVerb
 code_663:
-		send	0x8
+		send	0x08
 		ret	
 
 Feature::277:
 		link	0x02
-		lap	0x0
+		lap	0x00
 		bnt	code_678
-		lap	0x1
+		lap	0x01
 		jmp	code_680
 code_678:
-		lag	0x0
+		lag	0x00
 code_680:
-		sat	0x0
+		sat	0x00
 		push1	
 		pushi	0x04
 		dup	
 		push0	
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x03
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		push	
-		pTos	0x8
-		pTos	0xa
+		pTos	0x08
+		pTos	0x0a
 		callk	0x3f, 0x8
 		push	
 		pushi	0x3a
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		sub	
 		push	
 		callk	0x3d, 0x2
-		sat	0x1
+		sat	0x01
 		push	
 		ldi	0x00b4
 		gt?	
 		bnt	code_736
 		pushi	0x0168
-		lat	0x1
+		lat	0x01
 		sub	
-		sat	0x1
+		sat	0x01
 code_736:
-		lst	0x1
+		lst	0x01
 		pToa	0x1c
 		le?	
 		bnt	code_750
@@ -424,7 +424,7 @@ code_736:
 code_750:
 		pushi	0x0114
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x00
 		ret	
 
@@ -438,33 +438,33 @@ Feature::278:
 Feature::194:
 		link	0x02
 		push1	
-		lsp	0x1
+		lsp	0x01
 		callk	0x6, 0x2
 		bnt	code_795
 		pushi	0x04
 		push0	
-		lap	0x1
-		send	0x4
-		sat	0x0
+		lap	0x01
+		send	0x04
+		sat	0x00
 		pushi	0x03
 		push0	
-		lap	0x1
-		send	0x4
-		sat	0x1
+		lap	0x01
+		send	0x04
+		sat	0x01
 		jmp	code_803
 code_795:
-		lap	0x1
-		sat	0x0
-		lap	0x2
-		sat	0x1
+		lap	0x01
+		sat	0x00
+		lap	0x02
+		sat	0x01
 code_803:
 		push1	
 		pTos	0x20
 		callk	0x6, 0x2
 		bnt	code_826
 		pushi	0x03
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		pTos	0x20
 		callk	0x77, 0x6
 		jmp	code_905
@@ -480,7 +480,7 @@ code_843:
 		not	
 		bt	code_874
 		pTos	0x14
-		lat	0x0
+		lat	0x00
 		le?	
 		bnt	code_905
 		pprev	
@@ -488,7 +488,7 @@ code_843:
 		le?	
 		bnt	code_905
 		pTos	0x12
-		lat	0x1
+		lat	0x01
 		le?	
 		bnt	code_905
 		pprev	
@@ -503,8 +503,8 @@ code_874:
 		pTos	0x20
 		pushi	0x03
 		pushi	0x04
-		lst	0x0
-		lst	0x1
+		lst	0x00
+		lst	0x01
 		callk	0x4e, 0x6
 		and	
 		jmp	code_905
@@ -518,7 +518,7 @@ Feature::108:
 		bnt	code_920
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 		ldi	0x00
 		aTop	0x1e
 code_920:
@@ -529,7 +529,7 @@ code_920:
 		pushi	0x6c
 		push0	
 		pToa	0x20
-		send	0x4
+		send	0x04
 		ldi	0x00
 		aTop	0x20
 code_940:
@@ -537,7 +537,7 @@ code_940:
 		push1	
 		pushSelf	
 		lag	0x20
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
 		super	0x0, 0x4
@@ -586,24 +586,24 @@ dftDoVerb::60:
 		link	0x02
 		pushi	0x010c
 		push0	
-		lap	0x2
-		send	0x4
-		sat	0x0
-		lsp	0x1
+		lap	0x02
+		send	0x04
+		sat	0x00
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
 		bnt	code_1165
 		pushi	0x0113
 		push0	
-		lap	0x2
-		send	0x4
+		lap	0x02
+		send	0x04
 		bnt	code_1149
 		push1	
 		pushi	0x0113
 		push0	
-		lap	0x2
-		send	0x4
+		lap	0x02
+		send	0x04
 		push	
 		calle	0xff, 0x00, 0x02
 		jmp	code_1227
@@ -611,7 +611,7 @@ code_1149:
 		pushi	0x04
 		pushi	0x03b6
 		push0	
-		lst	0x0
+		lst	0x00
 		dup	
 		calle	0xff, 0x04, 0x08
 		jmp	code_1227
@@ -622,19 +622,19 @@ code_1165:
 		bnt	code_1208
 		pushi	0x43
 		push1	
-		lsp	0x3
-		lag	0x9
-		send	0x6
-		sat	0x1
+		lsp	0x03
+		lag	0x09
+		send	0x06
+		sat	0x01
 		bnt	code_1227
 		pushi	0x04
 		pushi	0x03b6
 		push1	
 		pushi	0x010c
 		push0	
-		send	0x4
+		send	0x04
 		push	
-		lst	0x0
+		lst	0x00
 		calle	0xff, 0x04, 0x08
 		jmp	code_1227
 code_1208:
@@ -645,7 +645,7 @@ code_1208:
 		pushi	0x03
 		pushi	0x03b6
 		push2	
-		lst	0x0
+		lst	0x00
 		calle	0xff, 0x04, 0x06
 code_1227:
 		toss	

@@ -89,27 +89,27 @@ rm53::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x66
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		pushi	0x69
 		push0	
 		lofsa	jetPack
-		send	0x8
+		send	0x08
 		pushi	0x0094
 		push1	
 		class	0x17
 		push	
 		lofsa	machine
-		send	0x6
+		send	0x06
 		pushi	0x008c
 		push1	
 		lofsa	roomControl
 		push	
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -118,8 +118,8 @@ rm53::107:
 rm53::60:
 		pushi	0x0088
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		bnt	code_281
 		ldi	0x00
 		jmp	code_346
@@ -127,8 +127,8 @@ code_281:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x0200
 		and	
@@ -136,7 +136,7 @@ code_281:
 		pushi	0x20
 		push0	
 		lofsa	droidEnter
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x04
 		gt?	
@@ -145,13 +145,13 @@ code_281:
 		push1	
 		lofsa	walkOut
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_325:
 		pushi	0x20
 		push0	
 		lofsa	droidEnter
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0b
 		gt?	
@@ -162,7 +162,7 @@ code_325:
 code_346:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x74, 0x4
 		ret	
 
@@ -202,8 +202,8 @@ Overriden functions: 2
 
 .CODE
 pushEgo::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -230,7 +230,7 @@ code_455:
 		push1	
 		push1	
 		lofsa	fireDroid
-		send	0xc
+		send	0x0c
 		pushi	0x2b
 		push1	
 		pushi	0x020f
@@ -245,25 +245,25 @@ code_455:
 		push1	
 		push0	
 		lofsa	fireDroid
-		send	0x6
+		send	0x06
 		pushi	0x42
 		push1	
 		pushi	0x3f
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x011a
 		push2	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x18
 		sub	
@@ -291,7 +291,7 @@ code_455:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x3a
 		jmp	code_729
 code_592:
@@ -306,8 +306,8 @@ code_592:
 		pushi	0x0b
 		pushi	0xff
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_729
 code_619:
 		dup	
@@ -319,8 +319,8 @@ code_619:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_729
 code_641:
 		dup	
@@ -334,8 +334,8 @@ code_641:
 		pushi	0x0b
 		pushi	0xff
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_729
 code_668:
 		dup	
@@ -347,8 +347,8 @@ code_668:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_729
 code_690:
 		dup	
@@ -372,7 +372,7 @@ code_704:
 		callb	0xa, 0xa
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_729:
 		toss	
 		ret	
@@ -406,20 +406,20 @@ Overriden functions: 1
 droidEnter::60:
 		pushi	0x0088
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		bnt	code_806
 		ldi	0x00
 		jmp	code_863
 code_806:
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x03
 		lt?	
 		bnt	code_819
 		ldi	0x00
 		jmp	code_863
 code_819:
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x0c
 		gt?	
 		bnt	code_832
@@ -429,7 +429,7 @@ code_832:
 		pushi	0x11
 		push0	
 		lofsa	fireDroid
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0400
 		and	
@@ -439,19 +439,19 @@ code_832:
 		lofsa	pushEgo
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
-		dpToa	0xa
+		lag	0x00
+		send	0x08
+		dpToa	0x0a
 code_863:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x6, 0x4
 		ret	
 
 droidEnter::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -492,7 +492,7 @@ code_891:
 		class	0x17
 		push	
 		lofsa	fireDroid
-		send	0xa
+		send	0x0a
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1479
@@ -504,8 +504,8 @@ code_957:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x22
 		and	
@@ -519,12 +519,12 @@ code_984:
 		push	
 		pushSelf	
 		lofsa	door
-		send	0x8
+		send	0x08
 		pushi	0x011f
 		push1	
 		push1	
 		lofsa	door
-		send	0x6
+		send	0x06
 		jmp	code_1479
 code_1010:
 		dup	
@@ -539,7 +539,7 @@ code_1010:
 		pushi	0x5a
 		pushSelf	
 		lofsa	fireDroid
-		send	0xc
+		send	0x0c
 		jmp	code_1479
 code_1039:
 		dup	
@@ -549,8 +549,8 @@ code_1039:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x0da2
 		and	
@@ -560,7 +560,7 @@ code_1039:
 		lofsa	blastEgo
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1479
 code_1077:
 		push0	
@@ -581,7 +581,7 @@ code_1088:
 		pushi	0x75
 		pushSelf	
 		lofsa	fireDroid
-		send	0xc
+		send	0x0c
 		jmp	code_1479
 code_1117:
 		dup	
@@ -596,7 +596,7 @@ code_1117:
 		pushi	0x008a
 		pushSelf	
 		lofsa	fireDroid
-		send	0xc
+		send	0x0c
 		jmp	code_1479
 code_1147:
 		dup	
@@ -628,7 +628,7 @@ code_1188:
 		eq?	
 		bnt	code_1242
 		ldi	0x01
-		sal	0x0
+		sal	0x00
 		pushi	0x2b
 		push1	
 		pushi	0x01a1
@@ -736,7 +736,7 @@ code_1371:
 		pushi	0x5f
 		pushSelf	
 		lofsa	fireDroid
-		send	0xc
+		send	0x0c
 		jmp	code_1479
 code_1400:
 		dup	
@@ -746,12 +746,12 @@ code_1400:
 		pushi	0x009d
 		push0	
 		lofsa	droidSound
-		send	0x4
+		send	0x04
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x22
 		and	
@@ -766,7 +766,7 @@ code_1400:
 		push	
 		pushSelf	
 		lofsa	door
-		send	0xe
+		send	0x0e
 		jmp	code_1479
 code_1454:
 		dup	
@@ -775,7 +775,7 @@ code_1454:
 		bnt	code_1479
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		pushi	0x05
 		pushi	0x03b1
 		push0	
@@ -817,8 +817,8 @@ Overriden functions: 2
 fireDroidBrRect::60:
 		pushi	0x06
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x02
 		le?	
@@ -827,8 +827,8 @@ fireDroidBrRect::60:
 		push1	
 		pushi	0x04
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x16
 		sub	
@@ -837,8 +837,8 @@ fireDroidBrRect::60:
 		push1	
 		pushi	0x03
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x0c
 		sub	
@@ -847,8 +847,8 @@ fireDroidBrRect::60:
 		push1	
 		pushi	0x04
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x11
 		add	
@@ -857,13 +857,13 @@ fireDroidBrRect::60:
 		push1	
 		pushi	0x03
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x07
 		add	
 		push	
-		lap	0x1
+		lap	0x01
 		send	0x18
 		jmp	code_1689
 code_1625:
@@ -871,8 +871,8 @@ code_1625:
 		push1	
 		pushi	0x04
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x11
 		sub	
@@ -881,8 +881,8 @@ code_1625:
 		push1	
 		pushi	0x03
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x0c
 		sub	
@@ -891,8 +891,8 @@ code_1625:
 		push1	
 		pushi	0x04
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x16
 		add	
@@ -901,13 +901,13 @@ code_1625:
 		push1	
 		pushi	0x03
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x07
 		add	
 		push	
-		lap	0x1
+		lap	0x01
 		send	0x18
 code_1689:
 		ret	
@@ -925,8 +925,8 @@ Overriden functions: 1
 
 .CODE
 blastEgo::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -944,16 +944,16 @@ blastEgo::138:
 		pushi	0x0119
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x0094
 		push1	
 		class	0x17
 		push	
 		lofsa	machine
-		send	0x6
+		send	0x06
 		pushi	0x03
-		lsg	0x0
+		lsg	0x00
 		lofsa	fireDroid
 		push	
 		pushSelf	
@@ -982,23 +982,23 @@ code_1790:
 		pushi	0x0109
 		push1	
 		callk	0x6c, 0xc
-		sal	0x1
+		sal	0x01
 		pushi	0x09
 		pushi	0x04
 		pushi	0x3d
 		pushi	0x0095
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x10
 		sub	
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		lsg	0x98
 		push1	
@@ -1011,16 +1011,16 @@ code_1790:
 		pushi	0x0095
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x13
 		sub	
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		lsg	0x84
 		push1	
@@ -1033,16 +1033,16 @@ code_1790:
 		pushi	0x0095
 		pushi	0x03
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x16
 		sub	
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		lsg	0x89
 		push1	
@@ -1066,7 +1066,7 @@ code_1969:
 		bnt	code_2012
 		push2	
 		pushi	0x08
-		lsl	0x1
+		lsl	0x01
 		callk	0x6c, 0x4
 		pushi	0x05
 		pushi	0x0d
@@ -1076,7 +1076,7 @@ code_1969:
 		pushi	0x0109
 		callk	0x6c, 0xa
 		ldi	0x00
-		sal	0x1
+		sal	0x01
 		ldi	0x01
 		aTop	0x12
 		jmp	code_2141
@@ -1088,8 +1088,8 @@ code_2012:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x0520
 		and	
@@ -1097,14 +1097,14 @@ code_2012:
 		pushi	0x00a0
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_2045:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x0880
 		and	
@@ -1112,8 +1112,8 @@ code_2045:
 		pushi	0x00a0
 		push1	
 		push2	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_2071:
 		pushi	0x05
 		push1	
@@ -1129,7 +1129,7 @@ code_2071:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x1a
 		jmp	code_2141
 code_2101:
@@ -1154,7 +1154,7 @@ code_2115:
 		callb	0xa, 0xa
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2141:
 		toss	
 		ret	
@@ -1186,8 +1186,8 @@ Overriden functions: 1
 
 .CODE
 roomControl::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1217,7 +1217,7 @@ roomControl::138:
 		pushi	0x019a
 		push1	
 		push0	
-		lag	0x0
+		lag	0x00
 		send	0x30
 		push0	
 		callb	0x2, 0x0
@@ -1227,22 +1227,22 @@ roomControl::138:
 		push1	
 		push0	
 		lofsa	door
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		lofsa	doorPanel_u
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	machine
-		send	0x4
+		send	0x04
 		pushi	0x008c
 		push2	
 		lofsa	zoomIn
 		push	
 		pushSelf	
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		jmp	code_2390
 code_2308:
 		dup	
@@ -1262,7 +1262,7 @@ code_2322:
 		lofsa	CloseDoors
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_2390
 code_2343:
 		dup	
@@ -1282,7 +1282,7 @@ code_2357:
 		lofsa	droidEnter
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_2390
 code_2378:
 		dup	
@@ -1291,7 +1291,7 @@ code_2378:
 		bnt	code_2390
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2390:
 		toss	
 		ret	
@@ -1322,8 +1322,8 @@ Overriden functions: 1
 
 .CODE
 CloseDoors::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1333,8 +1333,8 @@ CloseDoors::138:
 		push2	
 		pushi	0x0099
 		pushi	0x64
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		pushi	0x2b
 		push1	
 		pushi	0x01f8
@@ -1376,11 +1376,11 @@ code_2530:
 		push1	
 		push0	
 		lag	0x9a
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
 		lofsa	bayDoor
-		send	0x4
+		send	0x04
 		jmp	code_2615
 code_2557:
 		dup	
@@ -1416,7 +1416,7 @@ code_2585:
 		send	0x10
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2615:
 		toss	
 		ret	
@@ -1448,8 +1448,8 @@ Overriden functions: 1
 
 .CODE
 walkOut::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1462,7 +1462,7 @@ walkOut::138:
 		push1	
 		push0	
 		lofsa	fireDroid
-		send	0xc
+		send	0x0c
 		pushi	0x012c
 		push1	
 		push2	
@@ -1476,7 +1476,7 @@ walkOut::138:
 		pushi	0x00d0
 		pushi	0x4d
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		push0	
 		callb	0x2, 0x0
@@ -1495,15 +1495,15 @@ code_2738:
 		push	
 		pushSelf	
 		lofsa	door
-		send	0xe
+		send	0x0e
 		pushi	0x0119
 		pushi	0x03
 		class	0x24
 		push	
 		pushi	0x00dc
 		pushi	0x4d
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		jmp	code_2800
 code_2783:
 		dup	
@@ -1513,8 +1513,8 @@ code_2783:
 		pushi	0x0177
 		push1	
 		pushi	0x36
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_2800:
 		toss	
 		ret	
@@ -1545,8 +1545,8 @@ Overriden functions: 1
 
 .CODE
 zoomIn::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1585,7 +1585,7 @@ code_2883:
 		pushi	0x66
 		pushi	0x60
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x16
 		jmp	code_3311
 code_2938:
@@ -1610,7 +1610,7 @@ code_2938:
 		class	0x1a
 		push	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_3311
 code_2980:
@@ -1635,7 +1635,7 @@ code_2980:
 		pushi	0x03
 		push1	
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x20
 		jmp	code_3311
 code_3024:
@@ -1647,8 +1647,8 @@ code_3024:
 		push1	
 		class	0x1a
 		push	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x00c0
 		push0	
 		pushi	0x38
@@ -1729,11 +1729,11 @@ code_3141:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x26
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x2b
 		push1	
 		pushi	0x020e
@@ -1777,8 +1777,8 @@ code_3274:
 		push2	
 		pushi	0x0b
 		pushi	0x35
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 		pushi	0x03
 		push0	
 		push1	
@@ -1786,7 +1786,7 @@ code_3274:
 		callb	0x1, 0x6
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_3311:
 		toss	
 		ret	
@@ -1822,8 +1822,8 @@ PackJump::60:
 		push	
 		pushi	0x38
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		ge?	
 		bnt	code_3396
 		ldi	0x00
@@ -1871,7 +1871,7 @@ Overriden functions: 1
 
 .CODE
 doorPanel_u::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -1952,9 +1952,9 @@ code_3608:
 code_3634:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 code_3647:
 		toss	
@@ -1994,17 +1994,17 @@ Overriden functions: 1
 fireDroid::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x30, 0x4
 		pushi	0x0125
 		push1	
 		lofsa	fireDroidBrRect
 		push	
-		self	0x6
+		self	0x06
 		ret	
 
 fireDroid::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -2061,7 +2061,7 @@ code_3843:
 		ldi	0x04
 		eq?	
 		bnt	code_3988
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x0a
 		eq?	
@@ -2127,8 +2127,8 @@ code_3954:
 code_3973:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
+		lsp	0x01
+		lsp	0x02
 		super	0x30, 0x8
 code_3984:
 		toss	
@@ -2149,8 +2149,8 @@ code_3988:
 code_4014:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x3
+		lsp	0x01
+		rest	0x03
 		super	0x30, 0x6
 code_4025:
 		toss	
@@ -2222,7 +2222,7 @@ Overriden functions: 2
 
 .CODE
 door::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -2284,8 +2284,8 @@ code_4258:
 code_4284:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_4295:
 		toss	
@@ -2294,7 +2294,7 @@ code_4295:
 door::148:
 		pushi	0x0094
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x2b
 		push1	
@@ -2362,7 +2362,7 @@ Overriden functions: 2
 
 .CODE
 machine::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -2443,8 +2443,8 @@ code_4572:
 code_4598:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_4609:
 		toss	
@@ -2503,12 +2503,12 @@ Overriden functions: 1
 
 .CODE
 jetPack::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
 		bnt	code_4777
-		lsl	0x0
+		lsl	0x00
 		ldi	0x01
 		eq?	
 		bnt	code_4758
@@ -2534,7 +2534,7 @@ code_4777:
 		ldi	0x03
 		eq?	
 		bnt	code_4830
-		lsl	0x0
+		lsl	0x00
 		ldi	0x01
 		eq?	
 		bnt	code_4811
@@ -2560,7 +2560,7 @@ code_4830:
 		ldi	0x0c
 		eq?	
 		bnt	code_4883
-		lsl	0x0
+		lsl	0x00
 		ldi	0x01
 		eq?	
 		bnt	code_4864
@@ -2612,7 +2612,7 @@ code_4935:
 		ldi	0x04
 		eq?	
 		bnt	code_4988
-		lsl	0x0
+		lsl	0x00
 		ldi	0x01
 		eq?	
 		bnt	code_4969
@@ -2636,8 +2636,8 @@ code_4969:
 code_4988:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x30, 0x6
 code_4999:
 		toss	
@@ -2708,7 +2708,7 @@ Overriden functions: 1
 
 .CODE
 doorPanel::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -2789,9 +2789,9 @@ code_5268:
 code_5294:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 code_5307:
 		toss	

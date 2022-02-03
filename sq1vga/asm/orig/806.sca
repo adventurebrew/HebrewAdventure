@@ -7,27 +7,27 @@ RegionPath::107:
 		link	0x01
 		pToa	0x20
 		bnt	code_122
-		lap	0x0
+		lap	0x00
 		bnt	code_56
-		lap	0x1
-		aTop	0x8
-		lsp	0x0
+		lap	0x01
+		aTop	0x08
+		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_56
-		lap	0x2
-		aTop	0xa
-		lsp	0x0
+		lap	0x02
+		aTop	0x0a
+		lsp	0x00
 		ldi	0x03
 		ge?	
 		bnt	code_56
-		lap	0x3
+		lap	0x03
 		aTop	0x2c
-		lsp	0x0
+		lsp	0x00
 		ldi	0x04
 		ge?	
 		bnt	code_56
-		lap	0x4
+		lap	0x04
 		aTop	0x2a
 code_56:
 		pToa	0x2e
@@ -38,19 +38,19 @@ code_56:
 		pushi	0x0180
 		push1	
 		push1	
-		self	0xa
+		self	0x0a
 		pToa	0x30
 		not	
 		bnt	code_101
 		pushi	0x12
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		aTop	0x34
 		pushi	0x11
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		aTop	0x36
 		ldi	0x01
 		aTop	0x30
@@ -60,34 +60,34 @@ code_101:
 		push0	
 		pushi	0x011f
 		push0	
-		pToa	0x8
-		send	0xa
+		pToa	0x08
+		send	0x0a
 code_113:
 		ldi	0x00
 		aTop	0x20
 		pushi	0x44
 		push0	
-		self	0x4
+		self	0x04
 code_122:
 		pushi	0x6b
 		push0	
 		super	0x1e, 0x4
 		pushi	0x55
 		push0	
-		pToa	0x8
-		send	0x4
-		sat	0x0
+		pToa	0x08
+		send	0x04
+		sat	0x00
 		pTos	0x26
-		lag	0xb
+		lag	0x0b
 		eq?	
 		bnt	code_181
-		lst	0x0
+		lst	0x00
 		ldi	0x03e8
 		ge?	
 		bnt	code_213
 		pushi	0x55
 		push1	
-		lst	0x0
+		lst	0x00
 		ldi	0x03e8
 		sub	
 		push	
@@ -97,17 +97,17 @@ code_122:
 		pushi	0x11
 		push1	
 		pTos	0x36
-		pToa	0x8
+		pToa	0x08
 		send	0x12
 		jmp	code_213
 code_181:
-		lst	0x0
+		lst	0x00
 		ldi	0x03e8
 		lt?	
 		bnt	code_213
 		pushi	0x55
 		push1	
-		lst	0x0
+		lst	0x00
 		ldi	0x03e8
 		add	
 		push	
@@ -117,7 +117,7 @@ code_181:
 		pushi	0x011f
 		push1	
 		push1	
-		pToa	0x8
+		pToa	0x08
 		send	0x12
 code_213:
 		ret	
@@ -127,14 +127,14 @@ RegionPath::68:
 		push1	
 		ipToa	0x28
 		push	
-		self	0x6
-		aTop	0xc
+		self	0x06
+		aTop	0x0c
 		pushi	0x43
 		push1	
 		ipToa	0x28
 		push	
-		self	0x6
-		aTop	0xe
+		self	0x06
+		aTop	0x0e
 		ret	
 
 RegionPath::519:
@@ -147,19 +147,19 @@ RegionPath::519:
 		add	
 		aTop	0x28
 		push	
-		self	0x6
+		self	0x06
 		push	
 		pushi	0x44
 		push0	
-		self	0xa
+		self	0x0a
 		pTos	0x26
-		lag	0xb
+		lag	0x0b
 		ne?	
 		bnt	code_310
 		pushi	0x55
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		ldi	0x03e8
 		lt?	
@@ -168,8 +168,8 @@ RegionPath::519:
 		push1	
 		pushi	0x55
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
 		ldi	0x03e8
 		add	
@@ -180,15 +180,15 @@ RegionPath::519:
 		pushi	0x011f
 		push1	
 		push1	
-		pToa	0x8
+		pToa	0x08
 		send	0x12
 code_310:
 		pushi	0x011a
 		push2	
-		pTos	0xc
-		pTos	0xe
-		pToa	0x8
-		send	0x8
+		pTos	0x0c
+		pTos	0x0e
+		pToa	0x08
+		send	0x08
 		ret	
 
 RegionPath::100:
@@ -196,7 +196,7 @@ RegionPath::100:
 		aTop	0x20
 		pushi	0x01a6
 		push0	
-		self	0x4
+		self	0x04
 		bnt	code_370
 		pushi	0x4d
 		push1	
@@ -204,12 +204,12 @@ RegionPath::100:
 		pushi	0x0180
 		push1	
 		push0	
-		self	0xc
+		self	0x0c
 		pToa	0x2a
 		bnt	code_361
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_419
 code_361:
 		pushi	0x64
@@ -226,7 +226,7 @@ code_370:
 		div	
 		push	
 		pToa	0x2c
-		send	0x6
+		send	0x06
 code_389:
 		pushi	0x43
 		push1	
@@ -234,18 +234,18 @@ code_389:
 		ldi	0x01
 		add	
 		push	
-		self	0x6
+		self	0x06
 		push	
 		ldi	0x7fff
 		eq?	
 		bnt	code_414
 		pushi	0x0207
 		push0	
-		self	0x4
+		self	0x04
 code_414:
 		pushi	0x6b
 		push0	
-		self	0x4
+		self	0x04
 code_419:
 		ret	
 
@@ -256,7 +256,7 @@ RegionPath::422:
 		ldi	0x01
 		add	
 		push	
-		self	0x6
+		self	0x06
 		push	
 		ldi	0x8000
 		eq?	
@@ -267,7 +267,7 @@ RegionPath::422:
 		ldi	0x02
 		add	
 		push	
-		self	0x6
+		self	0x06
 		push	
 		ldi	0x8000
 		eq?	
@@ -278,7 +278,7 @@ RegionPath::67:
 		pushi	0x03
 		pushi	0x0326
 		push0	
-		pTos	0x6
+		pTos	0x06
 		calle	0xff, 0x04, 0x06
 		ldi	0x00
 		ret	
@@ -291,7 +291,7 @@ RegionPath::108:
 		push1	
 		push	
 		callk	0x2, 0x2
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_512
 		pushi	0x6c
@@ -302,7 +302,7 @@ code_500:
 		pushi	0x03
 		pushi	0x0326
 		push1	
-		pTos	0x6
+		pTos	0x06
 		calle	0xff, 0x00, 0x06
 code_512:
 		ret	

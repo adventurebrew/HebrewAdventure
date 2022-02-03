@@ -6,20 +6,20 @@ LOFSA_RELATIVE = False
 ForwardCounter::107:
 		pushi	0x6b
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x17, 0x6
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_36
-		lap	0x2
+		lap	0x02
 		aTop	0x12
-		lsp	0x0
+		lsp	0x00
 		ldi	0x03
 		ge?	
 		bnt	code_36
-		lap	0x3
-		aTop	0xa
+		lap	0x03
+		aTop	0x0a
 code_36:
 		ret	
 
@@ -35,7 +35,7 @@ code_52:
 		aTop	0x10
 		pushi	0x00d8
 		push0	
-		self	0x4
+		self	0x04
 code_62:
 		ret	
 

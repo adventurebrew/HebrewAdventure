@@ -9,12 +9,12 @@ CLASS GameControls of 0x15
 Slider::192:
 		pushi	0x00c0
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x14, 0x4
 		pToa	0x38
 		not	
 		bnt	code_57
-		pToa	0xe
+		pToa	0x0e
 		aTop	0x36
 		pToa	0x12
 		aTop	0x38
@@ -31,7 +31,7 @@ Slider::192:
 code_57:
 		pushi	0x01f1
 		push0	
-		self	0x4
+		self	0x04
 		aTop	0x34
 		pushi	0x06
 		pTos	0x2e
@@ -47,7 +47,7 @@ code_57:
 		ldi	0x01
 		sub	
 		push	
-		pTos	0xe
+		pTos	0x0e
 		ldi	0x01
 		sub	
 		push	
@@ -65,31 +65,31 @@ code_57:
 
 Slider::166:
 		link	0x01
-		lap	0x0
+		lap	0x00
 		bnt	code_268
-		lap	0x1
+		lap	0x01
 		bnt	code_268
 code_125:
 		pushi	0x22
 		push0	
 		pushi	0x6a
 		push0	
-		class	0x7
-		send	0x4
-		sat	0x0
-		send	0x4
+		class	0x07
+		send	0x04
+		sat	0x00
+		send	0x04
 		push	
 		ldi	0x02
 		ne?	
 		bnt	code_235
 		pushi	0x008e
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		pushi	0x03
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		push	
 		pTos	0x34
 		pToa	0x40
@@ -104,13 +104,13 @@ code_125:
 		and	
 		not	
 		push	
-		self	0x8
+		self	0x08
 		jmp	code_225
 code_190:
 		pushi	0x03
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		push	
 		pTos	0x34
 		pToa	0x40
@@ -127,12 +127,12 @@ code_190:
 		and	
 		not	
 		push	
-		self	0x8
+		self	0x08
 code_225:
 		pushi	0x6c
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		jmp	code_125
 code_235:
 		pTos	0x20
@@ -144,14 +144,14 @@ code_235:
 		pushi	0x01f2
 		push1	
 		pTos	0x34
-		self	0x6
+		self	0x06
 		push	
-		self	0x6
+		self	0x06
 code_258:
 		pushi	0x6c
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		jmp	code_271
 code_268:
 		ldi	0x01
@@ -165,65 +165,65 @@ Slider::193:
 
 Slider::169:
 		link	0x08
-		lap	0x0
+		lap	0x00
 		not	
 		bt	code_283
-		lap	0x2
+		lap	0x02
 code_283:
-		sat	0x7
+		sat	0x07
 		push1	
-		lsp	0x1
+		lsp	0x01
 		calle	0x03e7, 0x0000, 0x02
-		sat	0x5
-		lap	0x1
-		sat	0x4
+		sat	0x05
+		lap	0x01
+		sat	0x04
 code_300:
 		pTos	0x40
 		push1	
-		lst	0x4
+		lst	0x04
 		callk	0x3d, 0x2
 		le?	
 		bnt	code_491
 		pTos	0x34
-		lst	0x5
+		lst	0x05
 		pToa	0x40
 		mul	
 		sub	
-		sat	0x0
+		sat	0x00
 		pushi	0x03
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
 		callk	0x10, 0x6
-		sat	0x1
-		lst	0x0
+		sat	0x01
+		lst	0x00
 		pToa	0x3c
 		lt?	
 		bnt	code_348
 		pToa	0x3c
 		jmp	code_363
 code_348:
-		lst	0x0
+		lst	0x00
 		pToa	0x3a
 		gt?	
 		bnt	code_361
 		pToa	0x3a
 		jmp	code_363
 code_361:
-		lat	0x0
+		lat	0x00
 code_363:
 		aTop	0x34
 		push0	
 		callk	0xa, 0x0
-		sat	0x2
+		sat	0x02
 		push1	
 		push1	
 		callk	0xa, 0x2
 		pushi	0x06
-		pTos	0x8
-		pTos	0xa
-		pTos	0xc
-		pTos	0xe
+		pTos	0x08
+		pTos	0x0a
+		pTos	0x0c
+		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
 		callk	0x11, 0xc
@@ -241,7 +241,7 @@ code_363:
 		ldi	0x01
 		sub	
 		push	
-		pTos	0xe
+		pTos	0x0e
 		ldi	0x01
 		sub	
 		push	
@@ -256,35 +256,35 @@ code_363:
 		push1	
 		callk	0x6c, 0xc
 		push1	
-		lst	0x2
+		lst	0x02
 		callk	0xa, 0x2
 		pushi	0x01f2
 		push1	
 		pTos	0x34
-		self	0x6
-		sat	0x3
-		lat	0x7
+		self	0x06
+		sat	0x03
+		lat	0x07
 		bnt	code_471
 		pushi	0x3c
 		push1	
-		lst	0x3
-		self	0x6
+		lst	0x03
+		self	0x06
 		jmp	code_476
 code_471:
 		pushi	0x3c
 		push0	
-		self	0x4
+		self	0x04
 code_476:
-		sat	0x6
-		lst	0x4
+		sat	0x06
+		lst	0x04
 		pTos	0x40
-		lat	0x5
+		lat	0x05
 		mul	
 		sub	
-		sat	0x4
+		sat	0x04
 		jmp	code_300
 code_491:
-		lat	0x6
+		lat	0x06
 		ret	
 
 Slider::60:
@@ -293,7 +293,7 @@ Slider::60:
 		push2	
 		push	
 		pTos	0x44
-		rest	0x1
+		rest	0x01
 		calle	0x03e7, 0x0007, 0x04
 code_511:
 		ret	
@@ -301,7 +301,7 @@ code_511:
 Slider::498:
 		pTos	0x46
 		pTos	0x3a
-		lap	0x1
+		lap	0x01
 		sub	
 		push	
 		pTos	0x48
@@ -318,21 +318,21 @@ Slider::498:
 
 Slider::497:
 		link	0x01
-		lap	0x0
+		lap	0x00
 		bnt	code_547
-		lap	0x1
+		lap	0x01
 		jmp	code_552
 code_547:
 		pushi	0x3c
 		push0	
-		self	0x4
+		self	0x04
 code_552:
-		sat	0x0
+		sat	0x00
 		push	
 		pToa	0x48
 		lt?	
 		bnt	code_587
-		lst	0x0
+		lst	0x00
 		pToa	0x46
 		lt?	
 		bnt	code_587
@@ -346,11 +346,11 @@ code_582:
 		pToa	0x3c
 		jmp	code_653
 code_587:
-		lst	0x0
+		lst	0x00
 		pToa	0x48
 		gt?	
 		bnt	code_621
-		lst	0x0
+		lst	0x00
 		pToa	0x46
 		gt?	
 		bnt	code_621
@@ -367,7 +367,7 @@ code_621:
 		pTos	0x3c
 		push1	
 		pTos	0x48
-		lat	0x0
+		lat	0x00
 		sub	
 		push	
 		callk	0x3d, 0x2
@@ -398,7 +398,7 @@ Slider::175:
 		push1	
 		pushi	0x3c
 		push0	
-		self	0x4
+		self	0x04
 		push	
 		push1	
 		pTos	0x48
@@ -408,7 +408,7 @@ Slider::175:
 		calle	0x03e7, 0x0000, 0x02
 		add	
 		push	
-		self	0x6
+		self	0x06
 		sub	
 		push	
 		calle	0x03e7, 0x0003, 0x04
@@ -418,7 +418,7 @@ Slider::175:
 		and	
 		not	
 		push	
-		self	0x8
+		self	0x08
 		pTos	0x20
 		ldi	0x0200
 		and	
@@ -428,9 +428,9 @@ Slider::175:
 		pushi	0x01f2
 		push1	
 		pTos	0x34
-		self	0x6
+		self	0x06
 		push	
-		self	0x6
+		self	0x06
 code_732:
 		ret	
 
@@ -446,7 +446,7 @@ Slider::176:
 		push1	
 		pushi	0x3c
 		push0	
-		self	0x4
+		self	0x04
 		push	
 		push1	
 		pTos	0x48
@@ -456,7 +456,7 @@ Slider::176:
 		calle	0x03e7, 0x0000, 0x02
 		sub	
 		push	
-		self	0x6
+		self	0x06
 		sub	
 		push	
 		calle	0x03e7, 0x0002, 0x04
@@ -466,7 +466,7 @@ Slider::176:
 		and	
 		not	
 		push	
-		self	0x8
+		self	0x08
 		pTos	0x20
 		ldi	0x0200
 		and	
@@ -476,9 +476,9 @@ Slider::176:
 		pushi	0x01f2
 		push1	
 		pTos	0x34
-		self	0x6
+		self	0x06
 		push	
-		self	0x6
+		self	0x06
 code_813:
 		ret	
 
@@ -539,19 +539,19 @@ GameControls::192:
 		link	0x05
 		pushi	0x009b
 		push0	
-		lag	0x8
-		send	0x4
+		lag	0x08
+		send	0x04
 		lag	0x4d
 		bnt	code_1052
 		pushi	0x71
 		push1	
 		pushi	0x009a
-		send	0x6
+		send	0x06
 		bnt	code_1052
 		pushi	0x009a
 		push0	
 		lag	0x4d
-		send	0x4
+		send	0x04
 code_1052:
 		pTos	0x24
 		ldi	0x20
@@ -564,7 +564,7 @@ code_1052:
 		pushi	0x00b3
 		push0	
 		pToa	0x22
-		send	0x4
+		send	0x04
 		jmp	code_1128
 code_1079:
 		pushi	0x00b5
@@ -589,30 +589,30 @@ code_1079:
 		pushi	0x6a
 		push0	
 		lag	0x26
-		send	0x4
+		send	0x04
 		send	0x26
 		aTop	0x22
 code_1128:
 		ldi	0x1e
-		sat	0x0
+		sat	0x00
 		ldi	0x1e
-		sat	0x1
+		sat	0x01
 		push1	
-		pTos	0x8
+		pTos	0x08
 		callk	0x31, 0x2
-		sat	0x2
+		sat	0x02
 code_1144:
-		lat	0x2
+		lat	0x02
 		bnt	code_1246
 		push1	
 		push	
 		callk	0x34, 0x2
-		sat	0x3
+		sat	0x03
 		push1	
 		push1	
-		lst	0x2
+		lst	0x02
 		callk	0x36, 0x2
-		sat	0x4
+		sat	0x04
 		push	
 		callk	0x6, 0x2
 		not	
@@ -622,8 +622,8 @@ code_1144:
 code_1174:
 		pushi	0x11
 		push0	
-		lat	0x4
-		send	0x4
+		lat	0x04
+		send	0x04
 		push	
 		ldi	0x0080
 		and	
@@ -631,34 +631,34 @@ code_1174:
 		bnt	code_1231
 		pushi	0x0c
 		push0	
-		lat	0x4
-		send	0x4
+		lat	0x04
+		send	0x04
 		push	
 		ldi	0x00
 		le?	
 		bnt	code_1231
 		pushi	0x00c0
 		push2	
-		lst	0x0
-		lst	0x1
-		lat	0x4
-		send	0x8
+		lst	0x00
+		lst	0x01
+		lat	0x04
+		send	0x08
 		pushi	0x14
 		pushi	0x0c
 		push0	
-		lat	0x4
-		send	0x4
+		lat	0x04
+		send	0x04
 		add	
-		sat	0x0
+		sat	0x00
 		jmp	code_1239
 code_1231:
 		pushi	0x00c0
 		push0	
-		lat	0x4
-		send	0x4
+		lat	0x04
+		send	0x04
 code_1239:
-		lat	0x3
-		sat	0x2
+		lat	0x03
+		sat	0x02
 		jmp	code_1144
 code_1246:
 		pToa	0x2a
@@ -667,7 +667,7 @@ code_1246:
 		push1	
 		pushi	0x79
 		push0	
-		self	0x4
+		self	0x04
 		push	
 		callk	0x36, 0x2
 		aTop	0x2a
@@ -680,17 +680,17 @@ code_1264:
 		push1	
 		pushi	0x0a
 		push0	
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x0c
 		push0	
 		pToa	0x14
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x0a
 		push0	
 		pToa	0x14
-		send	0x4
+		send	0x04
 		sub	
 		push	
 		ldi	0x02
@@ -700,35 +700,35 @@ code_1264:
 		pushi	0x0b
 		push0	
 		pToa	0x14
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x03
 		sub	
 		push	
-		lag	0x1
-		send	0xc
+		lag	0x01
+		send	0x0c
 code_1321:
 		pushi	0x3c
 		push0	
 		pushi	0x69
 		push0	
-		self	0x8
+		self	0x08
 		ret	
 
 GameControls::198:
 		link	0x03
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x4000
 		and	
 		bnt	code_1528
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x06
 		eq?	
@@ -736,52 +736,52 @@ GameControls::198:
 		pushi	0x75
 		push2	
 		pushi	0x00c2
-		lsp	0x1
-		self	0x8
-		sat	0x1
+		lsp	0x01
+		self	0x08
+		sat	0x01
 		pushi	0x6c
 		push0	
-		lap	0x1
-		send	0x4
-		lat	0x1
+		lap	0x01
+		send	0x04
+		lat	0x01
 		bnt	code_1489
 		pushi	0x00ba
 		push0	
-		send	0x4
+		send	0x04
 		bnt	code_1489
 		push0	
 		callk	0x14, 0x0
-		sat	0x2
+		sat	0x02
 		pushi	0x71
 		push1	
 		pushi	0x015c
 		lag	0x26
-		send	0x6
+		send	0x06
 		bnt	code_1464
 		pushi	0x015c
 		push0	
 		lag	0x26
-		send	0x4
-		sat	0x0
+		send	0x04
+		sat	0x00
 		pushi	0x015c
 		push1	
 		push1	
 		lag	0x26
-		send	0x6
+		send	0x06
 		pushi	0x03
 		pushi	0x03a6
 		push0	
 		pushi	0x00ba
 		push0	
-		lat	0x1
-		send	0x4
+		lat	0x01
+		send	0x04
 		push	
 		calle	0xff, 0x04, 0x06
 		pushi	0x015c
 		push1	
-		lst	0x0
+		lst	0x00
 		lag	0x26
-		send	0x6
+		send	0x06
 		jmp	code_1483
 code_1464:
 		pushi	0x03
@@ -789,13 +789,13 @@ code_1464:
 		push0	
 		pushi	0x00ba
 		push0	
-		lat	0x1
-		send	0x4
+		lat	0x01
+		send	0x04
 		push	
 		calle	0xff, 0x04, 0x06
 code_1483:
 		push1	
-		lst	0x2
+		lst	0x02
 		callk	0x15, 0x2
 code_1489:
 		pToa	0x1e
@@ -804,19 +804,19 @@ code_1489:
 		push1	
 		pushi	0x11
 		push0	
-		send	0x4
+		send	0x04
 		push	
 		ldi	0xef
 		and	
 		push	
 		pToa	0x1e
-		send	0x6
+		send	0x06
 code_1511:
 		pushi	0x00b9
 		push1	
 		pushi	0x03e7
-		lag	0x1
-		send	0x6
+		lag	0x01
+		send	0x06
 		ldi	0x00
 		ret	
 
@@ -824,16 +824,16 @@ code_1511:
 code_1528:
 		pushi	0x22
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		ldi	0x40
 		and	
 		bnt	code_1737
 		pushi	0x28
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push	
 		dup	
 		ldi	0x05
@@ -841,8 +841,8 @@ code_1528:
 		bnt	code_1637
 		pushi	0x6c
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push1	
 		pTos	0x16
 		callk	0x6, 0x2
@@ -851,12 +851,12 @@ code_1528:
 		push1	
 		pushi	0x00b0
 		pToa	0x16
-		send	0x6
+		send	0x06
 		bnt	code_1600
 		pushi	0x00b0
 		push0	
 		pToa	0x16
-		send	0x4
+		send	0x04
 		ldi	0x00
 		ret	
 
@@ -870,7 +870,7 @@ code_1600:
 		pushi	0x11
 		push0	
 		pToa	0x16
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0100
 		and	
@@ -878,7 +878,7 @@ code_1622:
 		bnt	code_1733
 		pushi	0x00af
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x00
 		ret	
 
@@ -890,8 +890,8 @@ code_1637:
 		bnt	code_1724
 		pushi	0x6c
 		push0	
-		lap	0x1
-		send	0x4
+		lap	0x01
+		send	0x04
 		push1	
 		pTos	0x16
 		callk	0x6, 0x2
@@ -900,12 +900,12 @@ code_1637:
 		push1	
 		pushi	0x00af
 		pToa	0x16
-		send	0x6
+		send	0x06
 		bnt	code_1687
 		pushi	0x00af
 		push0	
 		pToa	0x16
-		send	0x4
+		send	0x04
 		ldi	0x00
 		ret	
 
@@ -919,7 +919,7 @@ code_1687:
 		pushi	0x11
 		push0	
 		pToa	0x16
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0100
 		and	
@@ -927,7 +927,7 @@ code_1709:
 		bnt	code_1733
 		pushi	0x00b0
 		push0	
-		self	0x4
+		self	0x04
 		ldi	0x00
 		ret	
 
@@ -935,7 +935,7 @@ code_1709:
 code_1724:
 		pushi	0x00c6
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x15, 0x6
 code_1733:
 		toss	
@@ -943,7 +943,7 @@ code_1733:
 code_1737:
 		pushi	0x00c6
 		push1	
-		lsp	0x1
+		lsp	0x01
 		super	0x15, 0x6
 code_1746:
 		ret	
@@ -951,15 +951,15 @@ code_1746:
 GameControls::166:
 		pushi	0x00a6
 		push1	
-		lsp	0x0
+		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_1761
-		lap	0x2
+		lap	0x02
 code_1761:
 		push	
-		lap	0x1
-		send	0x6
+		lap	0x01
+		send	0x06
 		ret	
 
 GameControls::197:
@@ -974,7 +974,7 @@ GameControls::105:
 		bnt	code_1781
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_1781:
 		pTos	0x24
 		ldi	0x20
@@ -983,8 +983,8 @@ code_1781:
 		pushi	0x009b
 		push1	
 		push0	
-		lag	0x8
-		send	0x6
+		lag	0x08
+		send	0x06
 		pTos	0x24
 		ldi	0xdf
 		and	
@@ -1033,7 +1033,7 @@ ControlIcon::166:
 		bnt	code_1992
 		pushi	0x00a6
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x14, 0x4
 		bnt	code_2001
 		pTos	0x20
@@ -1048,7 +1048,7 @@ ControlIcon::166:
 code_1974:
 		class	0x68
 code_1976:
-		send	0x4
+		send	0x04
 code_1978:
 		push2	
 		pTos	0x2e
@@ -1058,7 +1058,7 @@ code_1978:
 code_1992:
 		pushi	0x00a6
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x14, 0x4
 code_2001:
 		ret	

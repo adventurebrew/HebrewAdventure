@@ -10,9 +10,9 @@ DCIcon::107:
 		pushi	0x6a
 		push0	
 		class	0x17
-		send	0x4
+		send	0x04
 		aTop	0x20
-		send	0x6
+		send	0x06
 		ret	
 
 DCIcon::174:
@@ -20,18 +20,18 @@ DCIcon::174:
 		pToa	0x20
 		bnt	code_51
 		pToa	0x1e
-		sat	0x0
+		sat	0x00
 		pushi	0x3c
 		push0	
 		pToa	0x20
-		send	0x4
+		send	0x04
 		pTos	0x1e
-		lat	0x0
+		lat	0x00
 		ne?	
 		bnt	code_51
 		pushi	0x53
 		push0	
-		self	0x4
+		self	0x04
 code_51:
 		ret	
 
@@ -40,7 +40,7 @@ DCIcon::108:
 		bnt	code_62
 		pushi	0x6c
 		push0	
-		send	0x4
+		send	0x04
 code_62:
 		pushi	0x6c
 		push0	

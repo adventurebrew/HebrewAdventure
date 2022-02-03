@@ -10,7 +10,7 @@ rm63::107:
 		pushi	0x0187
 		push1	
 		pushi	0x02bf
-		self	0x6
+		self	0x06
 		push0	
 		callb	0x2, 0x0
 		push2	
@@ -79,19 +79,19 @@ rm63::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x46
 		push	
-		self	0x6
-		lsg	0xc
+		self	0x06
+		lsg	0x0c
 		pToa	0x22
 		eq?	
 		bnt	code_194
 		pushi	0x04
 		push1	
 		pushi	0x0a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x03
 		aTop	0x16
 code_194:
@@ -102,7 +102,7 @@ code_194:
 		pushi	0x6b
 		push0	
 		lofsa	panel
-		send	0xa
+		send	0x0a
 		pushi	0x0094
 		push1	
 		class	0x17
@@ -122,8 +122,8 @@ code_194:
 		pushi	0x6b
 		push0	
 		lofsa	walkingGuard
-		send	0xa
-		lsg	0xc
+		send	0x0a
+		lsg	0x0c
 		pToa	0x22
 		ne?	
 		bnt	code_269
@@ -131,13 +131,13 @@ code_194:
 		push2	
 		pushi	0x00c3
 		pushi	0x37
-		lag	0x0
-		send	0x8
+		lag	0x00
+		send	0x08
 code_269:
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -150,9 +150,9 @@ code_269:
 		pushi	0x6b
 		pushi	0x3c
 		push0	
-		lag	0xa
+		lag	0x0a
 		send	0x10
-		lsg	0xc
+		lsg	0x0c
 		pToa	0x22
 		ne?	
 		bnt	code_322
@@ -160,26 +160,26 @@ code_269:
 		push1	
 		lofsa	fromDoor
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_331
 code_322:
 		pushi	0x011f
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_331:
 		ret	
 
 rm63::60:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x74, 0x4
 		pushi	0x0123
 		push0	
-		lag	0x1
-		send	0x4
+		lag	0x01
+		send	0x04
 		push	
 		ldi	0x01
 		gt?	
@@ -187,7 +187,7 @@ rm63::60:
 		pushi	0x0088
 		push0	
 		lofsa	walkingGuard
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_381
 		pushi	0x008c
@@ -195,12 +195,12 @@ rm63::60:
 		lofsa	walkGuard
 		push	
 		lofsa	walkingGuard
-		send	0x6
+		send	0x06
 code_381:
 		pushi	0x0088
 		push0	
 		lofsa	orbs
-		send	0x4
+		send	0x04
 		not	
 		bnt	code_481
 		pushi	0x008c
@@ -208,13 +208,13 @@ code_381:
 		lofsa	switchit
 		push	
 		lofsa	orbs
-		send	0x6
+		send	0x06
 		jmp	code_481
 code_410:
 		pushi	0x0088
 		push0	
 		lofsa	walkingGuard
-		send	0x4
+		send	0x04
 		bnt	code_441
 		pushi	0x06
 		push1	
@@ -231,30 +231,30 @@ code_441:
 		pushi	0x0088
 		push0	
 		lofsa	orbs
-		send	0x4
+		send	0x04
 		bnt	code_481
 		pushi	0x00c0
 		push0	
 		lofsa	orbs
-		send	0x4
+		send	0x04
 		pushi	0x00c0
 		push0	
 		lofsa	panel
-		send	0x4
+		send	0x04
 		pushi	0x008c
 		push1	
 		push0	
 		lofsa	orbs
-		send	0x6
+		send	0x06
 code_481:
 		pushi	0x0088
 		push0	
-		self	0x4
+		self	0x04
 		bt	code_498
 		pushi	0x0088
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 code_498:
 		bnt	code_506
 		ldi	0x00
@@ -263,8 +263,8 @@ code_506:
 		pushi	0x0131
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x02
 		and	
@@ -273,7 +273,7 @@ code_506:
 		push1	
 		lofsa	intoDoor
 		push	
-		self	0x6
+		self	0x06
 code_532:
 		ret	
 
@@ -313,8 +313,8 @@ Overriden functions: 2
 
 .CODE
 fromDoor::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -335,7 +335,7 @@ fromDoor::138:
 		pushi	0x00a0
 		pushi	0x4d
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x18
 		jmp	code_686
 code_656:
@@ -349,13 +349,13 @@ code_656:
 		pushi	0x42
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_686:
 		toss	
 		ret	
@@ -386,8 +386,8 @@ Overriden functions: 1
 
 .CODE
 intoDoor::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -405,7 +405,7 @@ intoDoor::138:
 		pushi	0x00c3
 		pushi	0x37
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_805
 code_788:
@@ -416,8 +416,8 @@ code_788:
 		pushi	0x0177
 		push1	
 		pushi	0x3e
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_805:
 		toss	
 		ret	
@@ -449,8 +449,8 @@ Overriden functions: 1
 
 .CODE
 switchit::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -464,7 +464,7 @@ switchit::138:
 		pushi	0x00c0
 		push0	
 		lofsa	orbs
-		send	0x4
+		send	0x04
 		pushi	0x2b
 		push1	
 		pushi	0x06
@@ -481,18 +481,18 @@ code_916:
 		ldi	0x01
 		eq?	
 		bnt	code_956
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x02
 		sub	
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x009a
 		push0	
 		lofsa	beamSound
-		send	0x4
+		send	0x04
 		pushi	0x69
 		push0	
 		lofsa	orbs
-		send	0x4
+		send	0x04
 		push2	
 		push1	
 		pushi	0x04
@@ -528,8 +528,8 @@ Overriden functions: 1
 
 .CODE
 walkGuard::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -576,10 +576,10 @@ code_1096:
 		ldi	0x03
 		eq?	
 		bnt	code_1135
-		pTos	0xa
+		pTos	0x0a
 		ldi	0x04
 		sub	
-		aTop	0xa
+		aTop	0x0a
 		pushi	0x00a0
 		push1	
 		push0	
@@ -623,14 +623,14 @@ Overriden functions: 1
 
 .CODE
 panel::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x02
 		eq?	
 		bnt	code_1218
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 		jmp	code_1226
 code_1218:
@@ -694,14 +694,14 @@ Overriden functions: 1
 
 .CODE
 orbs::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x02
 		eq?	
 		bnt	code_1360
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 		jmp	code_1368
 code_1360:
@@ -765,11 +765,11 @@ Overriden functions: 1
 
 .CODE
 panelOfLights::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_1507
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_1507
@@ -781,9 +781,9 @@ panelOfLights::266:
 code_1507:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x7b, 0x8
 code_1520:
 		ret	
@@ -821,11 +821,11 @@ Overriden functions: 1
 
 .CODE
 variousMachines::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_1619
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_1619
@@ -837,9 +837,9 @@ variousMachines::266:
 code_1619:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x7b, 0x8
 code_1632:
 		ret	
@@ -877,11 +877,11 @@ Overriden functions: 1
 
 .CODE
 transmission::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_1731
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_1731
@@ -893,9 +893,9 @@ transmission::266:
 code_1731:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x7b, 0x8
 code_1744:
 		ret	
@@ -933,11 +933,11 @@ Overriden functions: 1
 
 .CODE
 rearViewMirror::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_1843
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_1843
@@ -949,9 +949,9 @@ rearViewMirror::266:
 code_1843:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x7b, 0x8
 code_1856:
 		ret	
@@ -989,11 +989,11 @@ Overriden functions: 1
 
 .CODE
 globes::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_1955
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_1955
@@ -1005,9 +1005,9 @@ globes::266:
 code_1955:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x7b, 0x8
 code_1968:
 		ret	
@@ -1045,11 +1045,11 @@ Overriden functions: 1
 
 .CODE
 walkingGuard::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_2067
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_2067
@@ -1061,9 +1061,9 @@ walkingGuard::266:
 code_2067:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x30, 0x8
 code_2080:
 		ret	
@@ -1133,11 +1133,11 @@ Overriden functions: 1
 
 .CODE
 standingGuard::266:
-		lsp	0x1
+		lsp	0x01
 		ldi	0x04
 		eq?	
 		bnt	code_2243
-		lsp	0x2
+		lsp	0x02
 		ldi	0x0c
 		eq?	
 		bnt	code_2243
@@ -1149,9 +1149,9 @@ standingGuard::266:
 code_2243:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2d, 0x8
 code_2256:
 		ret	

@@ -41,10 +41,10 @@ rm19::107:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x32
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_288
 code_100:
 		pushi	0x0174
@@ -97,7 +97,7 @@ code_100:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x5a
 		push	
 		pushi	0x22
@@ -128,12 +128,12 @@ code_100:
 		pushi	0x6a
 		push0	
 		class	0x23
-		send	0x4
+		send	0x04
 		send	0x32
 		push	
-		self	0x8
+		self	0x08
 code_288:
-		lsg	0xc
+		lsg	0x0c
 		dup	
 		pToa	0x1e
 		eq?	
@@ -156,8 +156,8 @@ code_308:
 		pushi	0x06
 		push1	
 		pushi	0x03
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		push0	
 		callb	0x3, 0x0
 		jmp	code_343
@@ -168,12 +168,12 @@ code_343:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -181,25 +181,25 @@ code_343:
 		ldi	0x01
 		eq?	
 		bnt	code_402
-		lsg	0xc
+		lsg	0x0c
 		pToa	0x20
 		eq?	
 		bnt	code_402
 		pushi	0x04
 		push1	
 		pushi	0x009c
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		pushi	0x03
 		push1	
 		pushi	0x00ba
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_402:
 		ret	
 
 rm19::60:
-		lal	0x0
+		lal	0x00
 		bnt	code_413
 		ldi	0x00
 		jmp	code_471
@@ -207,8 +207,8 @@ code_413:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		push	
 		ldi	0x4000
 		and	
@@ -220,25 +220,25 @@ code_413:
 		push1	
 		push0	
 		class	0x31
-		send	0xc
+		send	0x0c
 		pushi	0x0119
 		pushi	0x03
 		class	0x1e
 		push	
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		pushi	0x00c8
-		lag	0x0
-		send	0xa
+		lag	0x00
+		send	0x0a
 		ldi	0x01
-		sal	0x0
+		sal	0x00
 code_471:
 		pushi	0x3c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x74, 0x4
 		ret	
 

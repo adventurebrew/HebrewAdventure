@@ -9,31 +9,31 @@ OBJECT rm27 of 0x74
 rm27::107:
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		pushi	0x59
 		push1	
 		pushi	0x15
 		lofsa	polyBottom1
-		send	0xc
+		send	0x0c
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x2a
+		lea	0x02, 0x2a
 		push	
 		pushi	0x59
 		push1	
 		pushi	0x0e
 		lofsa	polyBottom2
-		send	0xc
+		send	0x0c
 		pushi	0x5a
 		push1	
-		lea	0x2, 0x46
+		lea	0x02, 0x46
 		push	
 		pushi	0x59
 		push1	
 		pushi	0x1f
 		lofsa	polyTop
-		send	0xc
+		send	0x0c
 		lsg	0xa6
 		ldi	0x02
 		eq?	
@@ -44,24 +44,24 @@ rm27::107:
 		push	
 		lofsa	polyBottom2
 		push	
-		self	0x8
+		self	0x08
 		jmp	code_100
 code_90:
 		pushi	0x0174
 		push1	
 		lofsa	polyTop
 		push	
-		self	0x6
+		self	0x06
 code_100:
 		pushi	0x6b
 		push0	
 		lofsa	ramp
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	claw
-		send	0x4
-		lsg	0xc
+		send	0x04
+		lsg	0x0c
 		dup	
 		pToa	0x22
 		eq?	
@@ -81,8 +81,8 @@ code_136:
 		pushi	0x00d1
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		le?	
 		bnt	code_207
 		pprev	
@@ -91,8 +91,8 @@ code_136:
 		bnt	code_207
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		push	
 		ldi	0x00f6
 		lt?	
@@ -100,21 +100,21 @@ code_136:
 		pushi	0x04
 		push1	
 		pushi	0x00d1
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_207
 code_197:
 		pushi	0x04
 		push1	
 		pushi	0x0115
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_207:
 		pushi	0x6c
 		pushi	0x04
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		lt?	
 		bnt	code_238
 		pprev	
@@ -124,8 +124,8 @@ code_207:
 		pushi	0x04
 		push1	
 		pushi	0x0082
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_238:
 		push0	
 		callb	0x3, 0x0
@@ -138,8 +138,8 @@ code_245:
 		pushi	0x04
 		push1	
 		pushi	0x00a0
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x0a
 		aTop	0x16
 		jmp	code_273
@@ -150,12 +150,12 @@ code_273:
 		toss	
 		pushi	0x6b
 		push0	
-		lag	0x0
-		send	0x4
+		lag	0x00
+		send	0x04
 		pushi	0x0187
 		push1	
 		pushi	0x02c0
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x74, 0x4
@@ -163,15 +163,15 @@ code_273:
 		ldi	0x01
 		eq?	
 		bnt	code_321
-		lsg	0xc
+		lsg	0x0c
 		pToa	0x1c
 		eq?	
 		bnt	code_321
 		pushi	0x04
 		push1	
 		pushi	0x6a
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_321:
 		ret	
 
@@ -180,15 +180,15 @@ rm27::60:
 		pushi	0x0131
 		push1	
 		push1	
-		lag	0x0
-		send	0x6
-		sat	0x0
-		pToa	0x8
+		lag	0x00
+		send	0x06
+		sat	0x00
+		pToa	0x08
 		bnt	code_345
 		ldi	0x00
 		jmp	code_385
 code_345:
-		lst	0x0
+		lst	0x00
 		ldi	0x4000
 		and	
 		bnt	code_385
@@ -200,24 +200,24 @@ code_345:
 		push1	
 		lofsa	goUp
 		push	
-		self	0x6
+		self	0x06
 		jmp	code_385
 code_375:
 		pushi	0x008c
 		push1	
 		lofsa	goDown
 		push	
-		self	0x6
+		self	0x06
 code_385:
-		lst	0x0
+		lst	0x00
 		ldi	0x4002
 		and	
 		bnt	code_403
 		pushi	0x42
 		push1	
 		pushi	0x0e
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 code_403:
 		pushi	0x3c
 		push0	
@@ -259,8 +259,8 @@ Overriden functions: 2
 
 .CODE
 goUp::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -278,7 +278,7 @@ goUp::138:
 		pushi	0x7d
 		pushi	0x62
 		pushSelf	
-		lag	0x0
+		lag	0x00
 		send	0x12
 		jmp	code_599
 code_527:
@@ -296,18 +296,18 @@ code_527:
 		push	
 		pushi	0x00e8
 		push0	
-		pToa	0x8
-		send	0x4
-		send	0x8
+		pToa	0x08
+		send	0x04
+		send	0x08
 		pushi	0x73
 		push1	
 		lofsa	polyTop
 		push	
 		pushi	0x00e8
 		push0	
-		pToa	0x8
-		send	0x4
-		send	0x6
+		pToa	0x08
+		send	0x04
+		send	0x06
 		ldi	0x06
 		aTop	0x10
 		jmp	code_599
@@ -320,7 +320,7 @@ code_583:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_599:
 		toss	
 		ret	
@@ -352,8 +352,8 @@ Overriden functions: 1
 
 .CODE
 goDown::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -368,8 +368,8 @@ goDown::138:
 		pushi	0x00af
 		pushi	0x0096
 		pushSelf	
-		lag	0x0
-		send	0xc
+		lag	0x00
+		send	0x0c
 		jmp	code_779
 code_698:
 		dup	
@@ -379,8 +379,8 @@ code_698:
 		pushi	0x42
 		push1	
 		pushi	0xff
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		ldi	0x02
 		sag	0xa6
 		pushi	0x54
@@ -389,9 +389,9 @@ code_698:
 		push	
 		pushi	0x00e8
 		push0	
-		pToa	0x8
-		send	0x4
-		send	0x6
+		pToa	0x08
+		send	0x04
+		send	0x06
 		pushi	0x73
 		push2	
 		lofsa	polyBottom1
@@ -400,9 +400,9 @@ code_698:
 		push	
 		pushi	0x00e8
 		push0	
-		pToa	0x8
-		send	0x4
-		send	0x8
+		pToa	0x08
+		send	0x04
+		send	0x08
 		ldi	0x06
 		aTop	0x10
 		jmp	code_779
@@ -415,7 +415,7 @@ code_763:
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_779:
 		toss	
 		ret	
@@ -474,7 +474,7 @@ Overriden functions: 0
 
 .CODE
 claw::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -487,8 +487,8 @@ claw::266:
 code_920:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_931:
 		toss	

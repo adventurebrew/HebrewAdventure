@@ -13,7 +13,7 @@ code_14:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		bnt	code_71
 		pushi	0x04
 		pushi	0x67
@@ -25,7 +25,7 @@ code_14:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		callk	0x1b, 0x8
 		pushi	0x023e
@@ -35,71 +35,71 @@ code_14:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 code_71:
 		ret	
 
 code_72:
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	oneBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	twoBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	threeBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	fourBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	fiveBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	sixBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	sevenBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	eightBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	nineBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	zeroBut
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push0	
 		pushi	0x0278
@@ -107,7 +107,7 @@ code_72:
 		lofsa	EnterScript
 		push	
 		lofsa	enterBut
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x0278
@@ -115,7 +115,7 @@ code_72:
 		lofsa	lowerPad
 		push	
 		lofsa	quitBut
-		send	0xa
+		send	0x0a
 		pushi	0x6b
 		push0	
 		pushi	0x69
@@ -125,7 +125,7 @@ code_72:
 		pushi	0x04
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x32
 		add	
@@ -135,7 +135,7 @@ code_72:
 		pushi	0x03
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x14
 		add	
@@ -148,55 +148,55 @@ code_268:
 		pushi	0x6c
 		push0	
 		lofsa	oneBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	twoBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	threeBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	fourBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	fiveBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	sixBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	sevenBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	eightBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	nineBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	zeroBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	enterBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	quitBut
-		send	0x4
+		send	0x04
 		pushi	0x6c
 		push0	
 		lofsa	hand
-		send	0x4
+		send	0x04
 		ret	
 
 rm103::107:
@@ -224,14 +224,14 @@ rm103::107:
 		pushi	0x0187
 		push1	
 		pushi	0x02bc
-		self	0x6
+		self	0x06
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
 		pushi	0x2b
 		push0	
 		lag	0x64
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0163
 		ne?	
@@ -250,15 +250,15 @@ code_483:
 		pushi	0x6b
 		push0	
 		lofsa	egoHead
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	egoArm
-		send	0x4
+		send	0x04
 		pushi	0x6b
 		push0	
 		lofsa	exitRoom
-		send	0x4
+		send	0x04
 		push2	
 		pushi	0x0229
 		pushi	0x10
@@ -272,7 +272,7 @@ code_483:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0xef
 		and	
@@ -281,7 +281,7 @@ code_483:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		pushi	0x0229
 		push1	
 		pushi	0x0229
@@ -290,7 +290,7 @@ code_483:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x20
 		or	
@@ -299,19 +299,19 @@ code_483:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	droid
-		send	0x8
+		send	0x08
 		pushi	0x6b
 		push0	
 		pushi	0x011b
 		push0	
 		lofsa	droidArm
-		send	0x8
+		send	0x08
 code_612:
 		pushi	0x73
 		pushi	0x06
@@ -337,7 +337,7 @@ code_612:
 		ret	
 
 rm103::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -346,8 +346,8 @@ rm103::266:
 		push1	
 		lofsa	keyPad
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_688
 		push2	
 		pushi	0x67
@@ -365,7 +365,7 @@ code_699:
 		ldi	0x04
 		eq?	
 		bnt	code_774
-		lsp	0x2
+		lsp	0x02
 		dup	
 		ldi	0x00
 		eq?	
@@ -374,8 +374,8 @@ code_699:
 		push1	
 		lofsa	keyPad
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_741
 		push2	
 		pushi	0x67
@@ -385,17 +385,17 @@ code_699:
 code_741:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x43, 0x8
 		jmp	code_770
 code_757:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x43, 0x8
 code_770:
 		toss	
@@ -403,9 +403,9 @@ code_770:
 code_774:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x43, 0x8
 code_787:
 		toss	
@@ -446,8 +446,8 @@ Overriden functions: 2
 
 .CODE
 getTheCart::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -464,8 +464,8 @@ code_883:
 		pushi	0x0177
 		push1	
 		pushi	0x03
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_900:
 		toss	
 		ret	
@@ -496,8 +496,8 @@ Overriden functions: 1
 
 .CODE
 returnToComputer::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -506,14 +506,14 @@ returnToComputer::138:
 		pushi	0x74
 		push1	
 		pushi	0x00c0
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		pushi	0x77
 		push1	
 		lofsa	droidArm
 		push	
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		bnt	code_1014
 		pushi	0x2b
 		push1	
@@ -530,8 +530,8 @@ code_1014:
 		push2	
 		pushi	0x67
 		pushi	0x0a
-		lag	0x2
-		send	0x8
+		lag	0x02
+		send	0x08
 		ldi	0x02
 		aTop	0x10
 		jmp	code_1045
@@ -542,7 +542,7 @@ code_1033:
 		bnt	code_1045
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1045:
 		toss	
 		ret	
@@ -574,8 +574,8 @@ Overriden functions: 1
 
 .CODE
 lookAtMonitor::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -587,22 +587,22 @@ lookAtMonitor::138:
 		push1	
 		push0	
 		lag	0x9a
-		send	0xa
+		send	0x0a
 		pushi	0x74
 		push1	
 		pushi	0x69
-		lag	0x5
-		send	0x6
+		lag	0x05
+		send	0x06
 		pushi	0x018a
 		push1	
 		push2	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		pushi	0x018b
 		push1	
 		pushi	0x66
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		ldi	0x03
 		aTop	0x10
 		jmp	code_1198
@@ -616,7 +616,7 @@ code_1165:
 		lofsa	raisePad
 		push	
 		pushSelf	
-		self	0x8
+		self	0x08
 		jmp	code_1198
 code_1186:
 		dup	
@@ -625,7 +625,7 @@ code_1186:
 		bnt	code_1198
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_1198:
 		toss	
 		ret	
@@ -656,8 +656,8 @@ Overriden functions: 1
 
 .CODE
 egoGrabCart::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -673,7 +673,7 @@ egoGrabCart::138:
 		push1	
 		pushSelf	
 		lofsa	droidArm
-		send	0xc
+		send	0x0c
 		jmp	code_1458
 code_1293:
 		dup	
@@ -691,7 +691,7 @@ code_1293:
 		pushi	0x3f
 		push0	
 		lofsa	droidArm
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x01
 		add	
@@ -729,7 +729,7 @@ code_1345:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0xdf
 		and	
@@ -738,25 +738,25 @@ code_1345:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		pushi	0x0094
 		push2	
 		class	0x1a
 		push	
 		pushSelf	
 		lofsa	droidArm
-		send	0x8
+		send	0x08
 		pushi	0x0094
 		push1	
 		class	0x1a
 		push	
 		lofsa	egoArm
-		send	0x6
+		send	0x06
 		pushi	0x0145
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		jmp	code_1458
 code_1439:
 		dup	
@@ -767,8 +767,8 @@ code_1439:
 		push1	
 		lofsa	getTheCart
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 code_1458:
 		toss	
 		ret	
@@ -800,7 +800,7 @@ Overriden functions: 1
 .CODE
 EnterScript::108:
 		push2	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		lofsa	string_5		; ""
 		push	
@@ -812,8 +812,8 @@ EnterScript::108:
 
 EnterScript::138:
 		link	0x01
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -822,7 +822,7 @@ EnterScript::138:
 		push0	
 		call	code_14, 0
 		push1	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
 		callk	0x46, 0x2
 		not	
@@ -833,7 +833,7 @@ EnterScript::138:
 		calle	0xff, 0x00, 0x04
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_2421
 code_1585:
 		ldi	0x01
@@ -850,14 +850,14 @@ code_1592:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		dup	
 		ldi	0x01
 		eq?	
 		bnt	code_1636
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_6_offset_1		; "BHCA"
 		push	
@@ -869,7 +869,7 @@ code_1636:
 		eq?	
 		bnt	code_1658
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_7		; "BCHE"
 		push	
@@ -881,7 +881,7 @@ code_1658:
 		eq?	
 		bnt	code_1680
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_8		; "BHBH"
 		push	
@@ -893,7 +893,7 @@ code_1680:
 		eq?	
 		bnt	code_1702
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_9		; "FCFD"
 		push	
@@ -905,7 +905,7 @@ code_1702:
 		eq?	
 		bnt	code_1724
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_10		; "HDCH"
 		push	
@@ -917,7 +917,7 @@ code_1724:
 		eq?	
 		bnt	code_1746
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_11		; "GECB"
 		push	
@@ -929,7 +929,7 @@ code_1746:
 		eq?	
 		bnt	code_1768
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_12		; "EEJF"
 		push	
@@ -941,7 +941,7 @@ code_1768:
 		eq?	
 		bnt	code_1790
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_13		; "CAED"
 		push	
@@ -953,7 +953,7 @@ code_1790:
 		eq?	
 		bnt	code_1812
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_14		; "BACI"
 		push	
@@ -965,7 +965,7 @@ code_1812:
 		eq?	
 		bnt	code_1834
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_15		; "EFGI"
 		push	
@@ -977,7 +977,7 @@ code_1834:
 		eq?	
 		bnt	code_1856
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_16		; "IBED"
 		push	
@@ -989,7 +989,7 @@ code_1856:
 		eq?	
 		bnt	code_1878
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_17		; "GFDJ"
 		push	
@@ -1001,7 +1001,7 @@ code_1878:
 		eq?	
 		bnt	code_1900
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_18		; "JAAI"
 		push	
@@ -1013,7 +1013,7 @@ code_1900:
 		eq?	
 		bnt	code_1922
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_19		; "DDHF"
 		push	
@@ -1025,7 +1025,7 @@ code_1922:
 		eq?	
 		bnt	code_1944
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_20		; "IJBD"
 		push	
@@ -1037,7 +1037,7 @@ code_1944:
 		eq?	
 		bnt	code_1966
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_21		; "ICCH"
 		push	
@@ -1049,7 +1049,7 @@ code_1966:
 		eq?	
 		bnt	code_1988
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_22		; "DGFJ"
 		push	
@@ -1061,7 +1061,7 @@ code_1988:
 		eq?	
 		bnt	code_2010
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_23		; "FCJG"
 		push	
@@ -1073,7 +1073,7 @@ code_2010:
 		eq?	
 		bnt	code_2032
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_24		; "FIFI"
 		push	
@@ -1085,7 +1085,7 @@ code_2032:
 		eq?	
 		bnt	code_2051
 		push2	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		lofsa	string_25		; "AJJG"
 		push	
@@ -1101,14 +1101,14 @@ code_2051:
 		pushi	0x00d3
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		not	
 		bnt	code_2109
 		push2	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		callk	0x45, 0x4
 		push	
@@ -1123,7 +1123,7 @@ code_2109:
 		pushi	0x008a
 		push1	
 		pushi	0x04
-		self	0x6
+		self	0x06
 		jmp	code_2421
 code_2120:
 		dup	
@@ -1159,7 +1159,7 @@ code_2148:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x10
 		or	
@@ -1168,12 +1168,12 @@ code_2148:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 		pushi	0x0177
 		push1	
 		pushi	0x03
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_2421
 code_2210:
 		dup	
@@ -1198,9 +1198,9 @@ code_2238:
 		eq?	
 		bnt	code_2421
 		push2	
-		lea	0x2, 0x0
+		lea	0x02, 0x00
 		push	
-		lea	0x2, 0xa
+		lea	0x02, 0x0a
 		push	
 		callk	0x45, 0x4
 		push	
@@ -1272,8 +1272,8 @@ code_2377:
 		pushi	0x00d3
 		push1	
 		push0	
-		lag	0x0
-		send	0x6
+		lag	0x00
+		send	0x06
 		not	
 		bnt	code_2416
 		lsg	0xac
@@ -1293,7 +1293,7 @@ code_2377:
 code_2416:
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2421:
 		toss	
 		ret	
@@ -1326,8 +1326,8 @@ Overriden functions: 2
 
 .CODE
 raisePad::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1343,7 +1343,7 @@ raisePad::138:
 		pushi	0x6b
 		push0	
 		lofsa	keyPad
-		send	0xe
+		send	0x0e
 		pushi	0x2b
 		push1	
 		pushi	0x0166
@@ -1367,7 +1367,7 @@ code_2544:
 		ldi	0xff
 		ne?	
 		bnt	code_2579
-		dpToa	0xa
+		dpToa	0x0a
 		pushi	0x03
 		push1	
 		lal	0x15
@@ -1375,7 +1375,7 @@ code_2544:
 		pushi	0x011c
 		push0	
 		lofsa	keyPad
-		send	0xa
+		send	0x0a
 code_2579:
 		ldi	0x01
 		aTop	0x10
@@ -1390,7 +1390,7 @@ code_2586:
 		pushi	0x11
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0100
 		or	
@@ -1398,11 +1398,11 @@ code_2586:
 		pushi	0x011b
 		push0	
 		lofsa	keyPad
-		send	0xa
+		send	0x0a
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		push0	
 		call	code_72, 0
 		push0	
@@ -1414,10 +1414,10 @@ code_2586:
 		pushi	0x04
 		pushi	0x05
 		lag	0x45
-		send	0xc
+		send	0x0c
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_2657:
 		toss	
 		ret	
@@ -1449,8 +1449,8 @@ Overriden functions: 1
 
 .CODE
 lowerPad::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1465,13 +1465,13 @@ lowerPad::138:
 		pushi	0x11
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		push	
 		ldi	0xfeff
 		and	
 		push	
 		lofsa	keyPad
-		send	0x6
+		send	0x06
 		ldi	0x0f
 		sal	0x15
 		pushi	0x2b
@@ -1497,7 +1497,7 @@ code_2789:
 		ldi	0x00
 		ge?	
 		bnt	code_2826
-		dpToa	0xa
+		dpToa	0x0a
 		pushi	0x03
 		push1	
 		lal	0x15
@@ -1505,13 +1505,13 @@ code_2789:
 		pushi	0x011c
 		push0	
 		lofsa	keyPad
-		send	0xa
+		send	0x0a
 		jmp	code_2834
 code_2826:
 		pushi	0x6c
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 code_2834:
 		ldi	0x01
 		aTop	0x10
@@ -1522,27 +1522,27 @@ code_2841:
 		eq?	
 		bnt	code_2892
 		ldi	0x00
-		sal	0x0
+		sal	0x00
 		pushi	0x6c
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		pushi	0x009a
 		push0	
 		lag	0xb1
-		send	0x4
+		send	0x04
 		pushi	0x00a5
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push0	
 		callb	0x3, 0x0
 		pushi	0x008c
 		push1	
 		lofsa	returnToComputer
 		push	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 code_2892:
 		toss	
 		ret	
@@ -1573,8 +1573,8 @@ Overriden functions: 1
 
 .CODE
 keyFlashScript::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1583,8 +1583,8 @@ keyFlashScript::138:
 		pushi	0x42
 		push1	
 		pushi	0x0b
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		pToa	0x1a
 		bnt	code_2994
 		pushi	0x2b
@@ -1593,7 +1593,7 @@ keyFlashScript::138:
 		pushi	0x2a
 		push0	
 		lofsa	beep
-		send	0xa
+		send	0x0a
 		ldi	0x00
 		aTop	0x1a
 code_2994:
@@ -1608,8 +1608,8 @@ code_3001:
 		pushi	0x42
 		push1	
 		push0	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 		ldi	0x01
 		aTop	0x10
 		jmp	code_3079
@@ -1620,30 +1620,30 @@ code_3023:
 		bnt	code_3079
 		pushi	0x0278
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		bnt	code_3070
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_3070
 		pushi	0x008c
 		push1	
 		pushi	0x0278
 		push0	
-		pToa	0x8
-		send	0x4
+		pToa	0x08
+		send	0x04
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 code_3070:
 		pushi	0x008c
 		push1	
 		push0	
-		pToa	0x8
-		send	0x6
+		pToa	0x08
+		send	0x06
 code_3079:
 		toss	
 		ret	
@@ -1675,8 +1675,8 @@ Overriden functions: 1
 
 .CODE
 pushButtons::138:
-		lap	0x1
-		aTop	0xa
+		lap	0x01
+		aTop	0x0a
 		push	
 		dup	
 		ldi	0x00
@@ -1716,12 +1716,12 @@ code_3191:
 		class	0x1b
 		push	
 		lofsa	egoArm
-		send	0x6
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		pushi	0x6c
 		push0	
-		self	0x4
+		self	0x04
 code_3228:
 		toss	
 		ret	
@@ -1802,11 +1802,11 @@ Overriden functions: 0
 egoArm::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		pushi	0x011b
 		push0	
-		self	0x4
+		self	0x04
 		ret	
 
 		bnot	
@@ -1862,7 +1862,7 @@ Overriden functions: 1
 
 .CODE
 exitRoom::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -1870,42 +1870,42 @@ exitRoom::266:
 		pushi	0x07
 		push1	
 		push1	
-		self	0x6
+		self	0x06
 		push2	
 		pushi	0x1b
 		push0	
-		lag	0x5
-		send	0x4
+		lag	0x05
+		send	0x04
 		push	
 		push0	
 		callk	0xb, 0x4
 		push2	
 		pushi	0x1b
 		push0	
-		lag	0x5
-		send	0x4
+		lag	0x05
+		send	0x04
 		push	
 		push0	
 		callk	0xb, 0x4
 		push2	
 		pushi	0x1b
 		push0	
-		lag	0x5
-		send	0x4
+		lag	0x05
+		send	0x04
 		push	
 		push0	
 		callk	0xb, 0x4
 		pushi	0x0177
 		push1	
 		pushi	0x03
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3594
 code_3583:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_3594:
 		toss	
@@ -1968,7 +1968,7 @@ droidArm::107:
 		pushi	0x04
 		push0	
 		lofsa	droid
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x15
 		sub	
@@ -1978,20 +1978,20 @@ droidArm::107:
 		pushi	0x03
 		push0	
 		lofsa	droid
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x25
 		sub	
 		push	
-		self	0xc
+		self	0x0c
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2f, 0x4
 		ret	
 
 droidArm::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -2004,14 +2004,14 @@ droidArm::266:
 		push1	
 		lofsa	egoGrabCart
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_3793
 code_3782:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_3793:
 		toss	
@@ -2114,7 +2114,7 @@ Overriden functions: 0
 
 .CODE
 monitor::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x02
 		eq?	
@@ -2123,8 +2123,8 @@ monitor::266:
 		push1	
 		lofsa	lookAtMonitor
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4104
 code_4026:
 		dup	
@@ -2135,15 +2135,15 @@ code_4026:
 		push1	
 		lofsa	lookAtMonitor
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4104
 code_4048:
 		dup	
 		ldi	0x04
 		eq?	
 		bnt	code_4091
-		lsp	0x2
+		lsp	0x02
 		ldi	0x00
 		eq?	
 		bnt	code_4075
@@ -2155,17 +2155,17 @@ code_4048:
 code_4075:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 		jmp	code_4104
 code_4091:
 		pushi	0x010a
 		push2	
-		lsp	0x1
-		lsp	0x2
-		rest	0x3
+		lsp	0x01
+		lsp	0x02
+		rest	0x03
 		super	0x2c, 0x8
 code_4104:
 		toss	
@@ -2229,7 +2229,7 @@ Overriden functions: 0
 
 .CODE
 controlPanel::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -2238,14 +2238,14 @@ controlPanel::266:
 		push1	
 		lofsa	lookAtMonitor
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4269
 code_4258:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_4269:
 		toss	
@@ -2337,7 +2337,7 @@ Overriden functions: 0
 
 .CODE
 buttons::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
@@ -2346,14 +2346,14 @@ buttons::266:
 		push1	
 		lofsa	pushButtons
 		push	
-		lag	0x2
-		send	0x6
+		lag	0x02
+		send	0x06
 		jmp	code_4495
 code_4484:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2c, 0x6
 code_4495:
 		toss	
@@ -2419,11 +2419,11 @@ hand::60:
 		pushi	0x013f
 		push0	
 		class	0x31
-		send	0x4
-		sat	0x0
+		send	0x04
+		sat	0x00
 		pushi	0x22
 		push0	
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x07
 		and	
@@ -2431,59 +2431,59 @@ hand::60:
 		bnt	code_4797
 		pushi	0x008e
 		push0	
-		lat	0x0
-		send	0x4
+		lat	0x00
+		send	0x04
 		pushi	0x04
 		push0	
-		lat	0x0
-		send	0x4
-		sat	0x1
+		lat	0x00
+		send	0x04
+		sat	0x01
 		pushi	0x03
 		push0	
-		lat	0x0
-		send	0x4
-		sat	0x2
+		lat	0x00
+		send	0x04
+		sat	0x02
 		pushi	0x06
 		pushi	0x00e0
 		pushi	0x73
 		pushi	0x0127
 		pushi	0x00bb
-		lst	0x1
+		lst	0x01
 		push	
 		calle	0x03e7, 0x0004, 0x0c
 		bnt	code_4759
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_4759
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
+		send	0x04
 		push	
 		pushi	0x43
 		push1	
 		push2	
 		lag	0x45
-		send	0x6
+		send	0x06
 		eq?	
 		bnt	code_4759
 		pushi	0x00b9
 		push2	
 		pushi	0x45
 		push1	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		pushi	0x00c0
 		push0	
 		pushi	0x04
 		push1	
-		lst	0x1
+		lst	0x01
 		pushi	0x03
 		push1	
-		lst	0x2
+		lst	0x02
 		self	0x10
 		jmp	code_4797
 code_4759:
@@ -2499,15 +2499,15 @@ code_4759:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		push1	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		pushi	0x69
 		push0	
-		self	0x4
+		self	0x04
 code_4797:
 		pushi	0x3c
 		push0	
@@ -2526,12 +2526,12 @@ hand::108:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		push1	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 code_4835:
 		pushi	0x6c
 		push0	
@@ -2588,33 +2588,33 @@ Overriden functions: 2
 keyPad::107:
 		pushi	0x6b
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2e, 0x4
 		pushi	0x42
 		push1	
 		push2	
-		self	0x6
+		self	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x00c7
 		push1	
 		push0	
 		lag	0x45
-		send	0x6
+		send	0x06
 		ret	
 
 keyPad::108:
 		pushi	0x6c
 		push0	
-		rest	0x1
+		rest	0x01
 		super	0x2e, 0x4
 		pushi	0x00b9
 		push2	
@@ -2623,22 +2623,22 @@ keyPad::108:
 		pushi	0x00cc
 		push0	
 		lag	0x45
-		send	0x4
-		send	0x4
+		send	0x04
+		send	0x04
 		push	
 		push1	
-		lag	0x1
-		send	0x8
+		lag	0x01
+		send	0x08
 		pushi	0x54
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x54
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		push0	
 		callb	0x3, 0x0
 		ret	
@@ -2697,19 +2697,19 @@ KeyPadButton::107:
 		pushi	0x42
 		push1	
 		push0	
-		self	0x6
-		lap	0x1
+		self	0x06
+		lap	0x01
 		aTop	0x56
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x7d
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		ret	
 
 KeyPadButton::108:
@@ -2717,32 +2717,32 @@ KeyPadButton::108:
 		push1	
 		pushSelf	
 		lag	0x48
-		send	0x6
+		send	0x06
 		pushi	0x54
 		push1	
 		pushSelf	
 		lag	0x49
-		send	0x6
+		send	0x06
 		pushi	0x6c
 		push0	
 		super	0x2f, 0x4
 		ret	
 
 KeyPadButton::266:
-		lsp	0x1
+		lsp	0x01
 		dup	
 		ldi	0x03
 		eq?	
 		bnt	code_5216
 		pushi	0x027d
 		push0	
-		self	0x4
+		self	0x04
 		jmp	code_5227
 code_5216:
 		pushi	0x010a
 		push1	
-		lsp	0x1
-		rest	0x2
+		lsp	0x01
+		rest	0x02
 		super	0x2f, 0x6
 code_5227:
 		toss	
@@ -2751,8 +2751,8 @@ code_5227:
 KeyPadButton::637:
 		pushi	0x0088
 		push0	
-		lag	0x2
-		send	0x4
+		lag	0x02
+		send	0x04
 		not	
 		bnt	code_5358
 		pushi	0x008c
@@ -2764,7 +2764,7 @@ KeyPadButton::637:
 		push	
 		push0	
 		pTos	0x5c
-		self	0xa
+		self	0x0a
 		pToa	0x58
 		bnt	code_5358
 		push1	
@@ -2788,7 +2788,7 @@ KeyPadButton::637:
 		pushi	0x04
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x05
 		add	
@@ -2796,7 +2796,7 @@ KeyPadButton::637:
 		pushi	0x03
 		push0	
 		lofsa	keyPad
-		send	0x4
+		send	0x04
 		push	
 		ldi	0x0a
 		sub	
@@ -2817,7 +2817,7 @@ KeyPadButton::637:
 		pushi	0x02bc
 		push0	
 		callk	0x2, 0x4
-		send	0x6
+		send	0x06
 code_5358:
 		ret	
 
