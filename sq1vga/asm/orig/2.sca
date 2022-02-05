@@ -722,5 +722,24 @@ string_unused_17: ""
 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 18
-0x32, 0x6f, 0x7d, 0x86, 0x8f, 0x119, 0x15b, 0x1d0, 0x22c, 0x275, 0x2be, 0x307, 0x350, 0x399, 0x3e2, 0x42b, 0x474, 0x4e2
+; OBJECT babbleIcon of 0x53 selector #3
+; code_110  ; lofsa
+; code_124  ; lofsa
+; code_133  ; lofsa
+; code_142  ; lofsa
+; code_280  ; lofsa
+; code_346  ; lofsa
+; OBJECT rm2 of 0x43 selector #3
+; code_555  ; lofsa
+; code_628  ; lofsa
+; code_701  ; lofsa
+; code_774  ; lofsa
+; code_847  ; lofsa
+; code_920  ; lofsa
+; code_993  ; lofsa
+; code_1066  ; lofsa
+; code_1139  ; lofsa
+; OBJECT finalCredits of 0x80 selector #3

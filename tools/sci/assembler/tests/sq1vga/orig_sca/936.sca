@@ -633,5 +633,8 @@ string_unused_3: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0x116, 0x262
+; CLASS BorderWindow of 0x38 selector #3
+; CLASS InsetWindow of 0x3d selector #3

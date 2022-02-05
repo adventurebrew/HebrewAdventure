@@ -1348,5 +1348,14 @@ string_unused_8: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 8
-0x1bc, 0x20e, 0x3d4, 0x55e, 0x5fa, 0x67a, 0x83a, 0x94c
+; CLASS Obj of 0xffff selector #3
+; CLASS Code of 0x0 selector #3
+; CLASS Collect of 0x0 selector #3
+; CLASS List of 0x2 selector #3
+; CLASS Set of 0x3 selector #3
+; CLASS EventHandler of 0x4 selector #3
+; CLASS Script of 0x0 selector #3
+; CLASS Event of 0x0 selector #3

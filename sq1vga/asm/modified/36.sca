@@ -2895,5 +2895,94 @@ string_unused_30: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 88
-0x18, 0x1e, 0x3f, 0x46, 0x62, 0x68, 0x75, 0x7b, 0x97, 0xaa, 0xec, 0x1ef, 0x1fb, 0x22a, 0x23b, 0x245, 0x2af, 0x2b8, 0x2dc, 0x408, 0x4b6, 0x566, 0x56a, 0x56e, 0x5c5, 0x5cd, 0x5dc, 0x5eb, 0x5f4, 0x621, 0x63e, 0x64c, 0x65a, 0x667, 0x720, 0x72c, 0x766, 0x7dc, 0x87a, 0x8c1, 0x934, 0x972, 0x9b7, 0x9e4, 0x9ed, 0x9f5, 0xa05, 0xa0e, 0xa16, 0xa22, 0xa6c, 0xac2, 0xbf2, 0xc56, 0xc63, 0xc9f, 0xcb9, 0xcc6, 0xced, 0xd4e, 0xde8, 0xdf9, 0xe8d, 0xe95, 0xea3, 0xec5, 0xf10, 0xf1f, 0xf9c, 0xfb0, 0xfc8, 0x1002, 0x103c, 0x1084, 0x10cc, 0x1114, 0x1172, 0x1186, 0x1196, 0x1220, 0x128e, 0x130c, 0x1394, 0x145e, 0x152a, 0x1546, 0x157c, 0x15b2
+; code_23  ; lofsa
+; code_29  ; lofsa
+; code_62  ; lofsa
+; code_69  ; lofsa
+; code_97  ; lofsa
+; code_103  ; lofsa
+; code_116  ; lofsa
+; code_122  ; lofsa
+; code_150  ; lofsa
+; code_169  ; lofsa
+; CLASS Rock of 0x30 selector #3
+; code_494  ; lofsa
+; code_506  ; lofsa
+; code_553  ; lofsa
+; code_570  ; lofsa
+; code_580  ; lofsa
+; code_686  ; lofsa
+; code_695  ; lofsa
+; CLASS SMover of 0x1d selector #3
+; CLASS SCycler of 0x17 selector #3
+; CLASS RockCycler of 0x16 selector #3
+; code_1381  ; lofsa
+; code_1385  ; lofsa
+; code_1389  ; lofsa
+; code_1476  ; lofsa
+; code_1484  ; lofsa
+; code_1499  ; lofsa
+; code_1514  ; lofsa
+; code_1523  ; lofsa
+; code_1568  ; lofsa
+; code_1597  ; lofsa
+; code_1611  ; lofsa
+; code_1625  ; lofsa
+; code_1638  ; lofsa
+; code_1823  ; lofsa
+; code_1835  ; lofsa
+; code_1893  ; lofsa
+; OBJECT rm36 of 0x74 selector #3
+; code_2169  ; lofsa
+; code_2240  ; lofsa
+; code_2355  ; lofsa
+; OBJECT egoHandleEvent of 0x6 selector #3
+; code_2486  ; lofsa
+; code_2531  ; lofsa
+; code_2540  ; lofsa
+; code_2548  ; lofsa
+; code_2564  ; lofsa
+; code_2573  ; lofsa
+; code_2581  ; lofsa
+; code_2593  ; lofsa
+; OBJECT comeOnScreen of 0x6 selector #3
+; code_2753  ; lofsa
+; OBJECT rockAttack of 0x6 selector #3
+; code_3157  ; lofsa
+; code_3170  ; lofsa
+; code_3230  ; lofsa
+; code_3256  ; lofsa
+; code_3269  ; lofsa
+; code_3308  ; lofsa
+; OBJECT tossEgo of 0x6 selector #3
+; code_3559  ; lofsa
+; code_3576  ; lofsa
+; code_3724  ; lofsa
+; code_3732  ; lofsa
+; code_3746  ; lofsa
+; code_3780  ; lofsa
+; code_3855  ; lofsa
+; code_3870  ; lofsa
+; code_3995  ; lofsa
+; code_4015  ; lofsa
+; OBJECT hitRock of 0x6 selector #3
+; OBJECT theSMover of 0x84 selector #3
+; OBJECT mtn1 of 0x2d selector #3
+; OBJECT mtn2 of 0x2d selector #3
+; OBJECT mtn3 of 0x2d selector #3
+; OBJECT city of 0x2e selector #3
+; OBJECT damageGauge of 0x2e selector #3
+; OBJECT damageGauge of 0x2e selector #13
+; OBJECT damageGauge of 0x2e selector #21
+; OBJECT shadow of 0x2f selector #3
+; OBJECT flyingEgo of 0x30 selector #3
+; OBJECT rock1 of 0x83 selector #3
+; OBJECT rock2 of 0x83 selector #3
+; OBJECT skimmerBase of 0x1 selector #3
+; OBJECT RockBase of 0x1 selector #3
+; OBJECT motorSound of 0xa selector #3
+; OBJECT skimmerCrash of 0xa selector #3
+; OBJECT skimmerBanks of 0xa selector #3

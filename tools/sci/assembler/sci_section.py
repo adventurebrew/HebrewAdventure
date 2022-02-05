@@ -87,8 +87,18 @@ class SciSection:
             result += '\n' + '\n'.join([repr(i) for i in self.exports])
         elif self.kind == SectionKind.RELOCATION:
             # TODO print pointers as (smart) labels
-            result += '\n' + f'num of pointers: {len(self.pointers)}'
-            result += '\n' + ', '.join([hex(i) for i in self.pointers.keys()])
+            result += '''\n ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes'''
+            result += f'\nnum of pointers: {len(self.pointers)}'
+            for pointer in self.pointers.values():
+                if pointer['obj'].kind in [SectionKind.OBJECT, SectionKind.CLASS]:
+                    result += f"\n; {repr(pointer['obj'])} selector #{pointer['selector_i']}"
+                elif pointer['obj'].kind == SectionKind.CODE:
+                    result += f"\n; {repr(pointer['instr'])}"
+                elif pointer['obj'].kind == SectionKind.LOCAL_VARS:
+                    result += f"\n; {repr(pointer['obj'])} var #{pointer['index']} val: {pointer['var']['val']}, id: {pointer['var']['id']}"
+                else:
+                    raise NotImplementedError
         elif self.kind == SectionKind.PRELOAD_TEXT:
             pass
         elif self.kind == SectionKind.LOCAL_VARS:

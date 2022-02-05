@@ -2954,5 +2954,73 @@ string_unused_21: ""
 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 67
-0xe8, 0xf4, 0xfd, 0x12e, 0x13e, 0x149, 0x176, 0x182, 0x1e1, 0x1fc, 0x2ee, 0x344, 0x355, 0x3a3, 0x3b2, 0x3e1, 0x3eb, 0x408, 0x42c, 0x456, 0x474, 0x49d, 0x4d3, 0x4fb, 0x520, 0x554, 0x571, 0x584, 0x5a7, 0x5dc, 0x6ac, 0x6eb, 0x6f4, 0x872, 0x8e0, 0x8e8, 0x8f0, 0x8f9, 0x91e, 0x941, 0x96a, 0x9db, 0x9f6, 0xa4c, 0xa8b, 0xac7, 0xb04, 0xbf8, 0xc03, 0xc33, 0xc3e, 0xcbf, 0xd04, 0xd58, 0xe54, 0xe68, 0xe93, 0xfce, 0x10e0, 0x10f8, 0x1216, 0x139c, 0x14d0, 0x14e4, 0x1510, 0x1546, 0x15ac
+; code_231  ; lofsa
+; code_243  ; lofsa
+; code_252  ; lofsa
+; code_301  ; lofsa
+; code_317  ; lofsa
+; code_328  ; lofsa
+; OBJECT rm53 of 0x74 selector #3
+; OBJECT rm53 of 0x74 selector #9
+; code_480  ; lofsa
+; code_507  ; lofsa
+; OBJECT pushEgo of 0x6 selector #3
+; code_835  ; lofsa
+; code_852  ; lofsa
+; code_930  ; lofsa
+; code_945  ; lofsa
+; code_992  ; lofsa
+; code_1002  ; lofsa
+; code_1031  ; lofsa
+; code_1067  ; lofsa
+; code_1109  ; lofsa
+; code_1139  ; lofsa
+; code_1180  ; lofsa
+; code_1234  ; lofsa
+; code_1274  ; lofsa
+; code_1311  ; lofsa
+; code_1363  ; lofsa
+; code_1392  ; lofsa
+; code_1411  ; lofsa
+; code_1446  ; lofsa
+; OBJECT droidEnter of 0x6 selector #3
+; OBJECT fireDroidBrRect of 0x1 selector #3
+; code_1770  ; lofsa
+; code_1779  ; lofsa
+; OBJECT blastEgo of 0x6 selector #3
+; code_2271  ; lofsa
+; code_2279  ; lofsa
+; code_2287  ; lofsa
+; code_2296  ; lofsa
+; code_2333  ; lofsa
+; code_2368  ; lofsa
+; OBJECT roomControl of 0x6 selector #3
+; code_2522  ; lofsa
+; code_2549  ; lofsa
+; OBJECT CloseDoors of 0x6 selector #3
+; code_2698  ; lofsa
+; code_2758  ; lofsa
+; OBJECT walkOut of 0x6 selector #3
+; code_3063  ; lofsa
+; code_3074  ; lofsa
+; code_3122  ; lofsa
+; code_3133  ; lofsa
+; code_3262  ; lofsa
+; OBJECT zoomIn of 0x6 selector #3
+; OBJECT PackJump of 0x2a selector #3
+; OBJECT doorPanel_u of 0x2c selector #3
+; OBJECT doorPanel_u of 0x2c selector #13
+; code_3730  ; lofsa
+; OBJECT fireDroid of 0x30 selector #3
+; code_4319  ; lofsa
+; OBJECT door of 0x2f selector #3
+; OBJECT machine of 0x2f selector #3
+; OBJECT jetPack of 0x30 selector #3
+; OBJECT doorPanel of 0x2c selector #3
+; OBJECT doorPanel of 0x2c selector #13
+; OBJECT doorSound of 0xa selector #3
+; OBJECT bayDoor of 0x2f selector #3
+; OBJECT droidSound of 0xa selector #3

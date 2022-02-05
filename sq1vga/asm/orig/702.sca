@@ -1462,5 +1462,46 @@ string_unused_24: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 40
-0x102, 0x119, 0x12c, 0x134, 0x13c, 0x144, 0x14c, 0x154, 0x17f, 0x1c5, 0x1cf, 0x20a, 0x2bc, 0x2d0, 0x2e0, 0x37e, 0x392, 0x3a2, 0x3ea, 0x3fe, 0x40e, 0x456, 0x46a, 0x47a, 0x4e6, 0x4fa, 0x50a, 0x556, 0x56a, 0x57a, 0x62c, 0x640, 0x650, 0x6ae, 0x7b2, 0x80a, 0x97e, 0x9de, 0xa18, 0xa7e
+; code_257  ; lofsa
+; code_280  ; lofsa
+; code_299  ; lofsa
+; code_307  ; lofsa
+; code_315  ; lofsa
+; code_323  ; lofsa
+; code_331  ; lofsa
+; code_339  ; lofsa
+; code_382  ; lofsa
+; code_452  ; lofsa
+; code_462  ; lofsa
+; OBJECT ulenceRegion of 0x42 selector #3
+; OBJECT mountains of 0x2c selector #3
+; OBJECT mountains of 0x2c selector #13
+; OBJECT mountains of 0x2c selector #21
+; OBJECT keronaSky of 0x2c selector #3
+; OBJECT keronaSky of 0x2c selector #13
+; OBJECT keronaSky of 0x2c selector #21
+; OBJECT bigMoon of 0x2c selector #3
+; OBJECT bigMoon of 0x2c selector #13
+; OBJECT bigMoon of 0x2c selector #21
+; OBJECT smallMoon of 0x2c selector #3
+; OBJECT smallMoon of 0x2c selector #13
+; OBJECT smallMoon of 0x2c selector #21
+; OBJECT radarPost of 0x2c selector #3
+; OBJECT radarPost of 0x2c selector #13
+; OBJECT radarPost of 0x2c selector #21
+; OBJECT desert of 0x2c selector #3
+; OBJECT desert of 0x2c selector #13
+; OBJECT desert of 0x2c selector #21
+; OBJECT robot of 0x30 selector #3
+; OBJECT robot of 0x30 selector #13
+; OBJECT robot of 0x30 selector #21
+; OBJECT roboGroop of 0x4f selector #3
+; code_1969  ; lofsa
+; code_2057  ; lofsa
+; code_2429  ; lofsa
+; OBJECT zapEgo of 0x6 selector #3
+; OBJECT zap of 0x2f selector #3
+; OBJECT zapSound of 0xa selector #3

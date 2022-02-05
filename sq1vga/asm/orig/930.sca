@@ -421,5 +421,8 @@ string_unused_3: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0x154, 0x2ea
+; CLASS PChase of 0x24 selector #3
+; CLASS PFollow of 0x24 selector #3

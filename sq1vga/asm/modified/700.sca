@@ -4049,5 +4049,144 @@ string_unused_27: ""
 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 138
-0x1e0, 0x24a, 0x2da, 0x2ee, 0x2fe, 0x4e2, 0x674, 0x67c, 0x710, 0x72b, 0x78e, 0x7cd, 0x7d6, 0x7df, 0x82a, 0x84e, 0x86b, 0x87a, 0x885, 0x893, 0x8bc, 0x8d1, 0x8e6, 0x8f3, 0x95a, 0x996, 0xa0a, 0xa22, 0xa50, 0xb40, 0xb61, 0xb80, 0xb90, 0xb9a, 0xba5, 0xbb5, 0xbbf, 0xc64, 0xc8e, 0xc9e, 0xca8, 0xcdd, 0xced, 0xcfd, 0xd07, 0xd4d, 0xd68, 0xd83, 0xd99, 0xdc5, 0xdfc, 0xe3e, 0xe80, 0xe90, 0xea1, 0xead, 0xeb8, 0xeca, 0xed7, 0xee9, 0xf0e, 0xf33, 0xf66, 0xf78, 0xf86, 0xf98, 0xfae, 0xfcc, 0x106d, 0x1076, 0x1083, 0x1092, 0x109b, 0x10d5, 0x10e8, 0x10fe, 0x111b, 0x113d, 0x1146, 0x115e, 0x116b, 0x1181, 0x119e, 0x11c0, 0x11c9, 0x11e1, 0x11f3, 0x120c, 0x1220, 0x12d5, 0x12ff, 0x134c, 0x13a1, 0x13f4, 0x1402, 0x140b, 0x1428, 0x1430, 0x1438, 0x1447, 0x1456, 0x1465, 0x1498, 0x14a5, 0x14af, 0x14bf, 0x14cc, 0x14dd, 0x151b, 0x152d, 0x1580, 0x17c6, 0x17eb, 0x1849, 0x186a, 0x18c0, 0x1926, 0x198c, 0x19f2, 0x1b14, 0x1b28, 0x1b80, 0x1b94, 0x1ba4, 0x1c06, 0x1c1a, 0x1c2a, 0x1c8c, 0x1d0a, 0x1dae, 0x1dc2, 0x1dd2, 0x1e14, 0x1e28, 0x1e38, 0x1e54, 0x1e8a, 0x1ec0
+; code_479  ; lofsa
+; code_585  ; lofsa
+; CLASS Sarien of 0x30 selector #3
+; CLASS Sarien of 0x30 selector #13
+; CLASS Sarien of 0x30 selector #21
+; code_1249  ; lofsa
+; code_1651  ; lofsa
+; code_1659  ; lofsa
+; code_1807  ; lofsa
+; code_1834  ; lofsa
+; code_1933  ; lofsa
+; code_1996  ; lofsa
+; code_2005  ; lofsa
+; code_2014  ; lofsa
+; code_2089  ; lofsa
+; code_2125  ; lofsa
+; code_2154  ; lofsa
+; code_2169  ; lofsa
+; code_2180  ; lofsa
+; code_2194  ; lofsa
+; code_2235  ; lofsa
+; code_2256  ; lofsa
+; code_2277  ; lofsa
+; code_2290  ; lofsa
+; code_2393  ; lofsa
+; code_2453  ; lofsa
+; code_2569  ; lofsa
+; code_2593  ; lofsa
+; CLASS arcadaRegion of 0x42 selector #3
+; code_2879  ; lofsa
+; code_2912  ; lofsa
+; code_2943  ; lofsa
+; code_2959  ; lofsa
+; code_2969  ; lofsa
+; code_2980  ; lofsa
+; code_2996  ; lofsa
+; code_3006  ; lofsa
+; code_3171  ; lofsa
+; code_3213  ; lofsa
+; code_3229  ; lofsa
+; code_3239  ; lofsa
+; code_3292  ; lofsa
+; code_3308  ; lofsa
+; code_3324  ; lofsa
+; code_3334  ; lofsa
+; code_3404  ; lofsa
+; code_3431  ; lofsa
+; code_3458  ; lofsa
+; code_3480  ; lofsa
+; code_3524  ; lofsa
+; code_3579  ; lofsa
+; OBJECT callGuards of 0x6 selector #3
+; code_3711  ; lofsa
+; code_3727  ; lofsa
+; code_3744  ; lofsa
+; code_3756  ; lofsa
+; code_3767  ; lofsa
+; code_3785  ; lofsa
+; code_3798  ; lofsa
+; code_3816  ; lofsa
+; code_3853  ; lofsa
+; code_3890  ; lofsa
+; code_3941  ; lofsa
+; code_3959  ; lofsa
+; code_3973  ; lofsa
+; code_3991  ; lofsa
+; code_4013  ; lofsa
+; OBJECT removeGuards of 0x6 selector #3
+; code_4204  ; lofsa
+; code_4213  ; lofsa
+; code_4226  ; lofsa
+; code_4241  ; lofsa
+; code_4250  ; lofsa
+; code_4308  ; lofsa
+; code_4327  ; lofsa
+; code_4349  ; lofsa
+; code_4378  ; lofsa
+; code_4412  ; lofsa
+; code_4421  ; lofsa
+; code_4445  ; lofsa
+; code_4458  ; lofsa
+; code_4480  ; lofsa
+; code_4509  ; lofsa
+; code_4543  ; lofsa
+; code_4552  ; lofsa
+; code_4576  ; lofsa
+; code_4594  ; lofsa
+; code_4619  ; lofsa
+; code_4639  ; lofsa
+; code_4820  ; lofsa
+; code_4862  ; lofsa
+; OBJECT shootEgoDead of 0x6 selector #3
+; code_5024  ; lofsa
+; code_5107  ; lofsa
+; code_5121  ; lofsa
+; code_5130  ; lofsa
+; code_5159  ; lofsa
+; code_5167  ; lofsa
+; code_5175  ; lofsa
+; code_5190  ; lofsa
+; code_5205  ; lofsa
+; code_5220  ; lofsa
+; code_5271  ; lofsa
+; code_5284  ; lofsa
+; code_5294  ; lofsa
+; code_5310  ; lofsa
+; code_5323  ; lofsa
+; code_5340  ; lofsa
+; code_5402  ; lofsa
+; code_5420  ; lofsa
+; OBJECT timesUp of 0x6 selector #3
+; code_6085  ; lofsa
+; code_6122  ; lofsa
+; code_6216  ; lofsa
+; OBJECT DoCountDown of 0x6 selector #3
+; OBJECT star1 of 0x2f selector #3
+; OBJECT star2 of 0x2f selector #3
+; OBJECT star3 of 0x2f selector #3
+; OBJECT arcada of 0x2f selector #3
+; OBJECT detonationBox of 0x2e selector #3
+; OBJECT detonationBox of 0x2e selector #13
+; OBJECT sarien1 of 0x78 selector #3
+; OBJECT sarien1 of 0x78 selector #13
+; OBJECT sarien1 of 0x78 selector #21
+; OBJECT sarien2 of 0x78 selector #3
+; OBJECT sarien2 of 0x78 selector #13
+; OBJECT sarien2 of 0x78 selector #21
+; OBJECT deltaur of 0x30 selector #3
+; OBJECT deltaurArm of 0x30 selector #3
+; OBJECT UpperElevFeat of 0x2c selector #3
+; OBJECT UpperElevFeat of 0x2c selector #13
+; OBJECT UpperElevFeat of 0x2c selector #21
+; OBJECT LowElevFeat of 0x2c selector #3
+; OBJECT LowElevFeat of 0x2c selector #13
+; OBJECT LowElevFeat of 0x2c selector #21
+; OBJECT sarienSteps of 0xa selector #3
+; OBJECT explosionSound of 0xa selector #3
+; OBJECT sampledVoice of 0xa selector #3

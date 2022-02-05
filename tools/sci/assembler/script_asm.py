@@ -1,3 +1,5 @@
+# TODO adding string to script at 990 causes failure at game
+
 import argparse
 from pathlib import Path
 
@@ -385,23 +387,26 @@ def asm(p):
     return result
 
 
-def asm_all(asmdir, compiledir):
-    asm_files = Path(asmdir).glob('*.sca')
+def asm_all(src, compiledir):
     compile_path = Path(compiledir)
     compile_path.mkdir(exist_ok=True)
+    if Path(src).is_dir():
+        asm_files = Path(src).glob('*.sca')
+    else:
+        asm_files = [Path(src)]
     for p in asm_files:
-        # if p.stem == '990':  # '29':  # TODO
-            print("--------")
-            print(p)
-            result = asm(p)
-            (compile_path / f'{p.stem}.scr').write_bytes(result)
+        out = compile_path / f'{p.stem}.scr'
+        print("--------")
+        print(f'Assembling {p} to {out}')
+        result = asm(p)
+        out.write_bytes(result)
 
 
 if __name__ == "__main__":
     arg_parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                          description=f"Sierra 'SCRIPT' assembler - WIP", )
-    arg_parser.add_argument("asmdir", help="directory to read the assembly (.sca) files")
+    arg_parser.add_argument("src", help="assmebly (.sca) file or directory to read the assembly (.sca) files")
     arg_parser.add_argument("compiledir", help="directory to write the compiled scripts (.scr, maybe also .hep) files")
     args = arg_parser.parse_args()
 
-    asm_all(args.asmdir, args.compiledir)
+    asm_all(args.src, args.compiledir)

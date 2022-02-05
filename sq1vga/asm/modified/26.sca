@@ -236,5 +236,12 @@ string_unused_5: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 6
-0xdd, 0x154, 0x160, 0x19c, 0x1b0, 0x1c0
+; code_220  ; lofsa
+; OBJECT rm26 of 0x74 selector #3
+; OBJECT rm26 of 0x74 selector #9
+; OBJECT sand of 0x2c selector #3
+; OBJECT sand of 0x2c selector #13
+; OBJECT sand of 0x2c selector #21

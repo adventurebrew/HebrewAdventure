@@ -1040,5 +1040,17 @@ string_unused_6: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 11
-0x1c, 0x3f, 0x1e1, 0x250, 0x26c, 0x478, 0x5ed, 0x635, 0x67b, 0x6da, 0x72e
+; OBJECT controls of 0x13 selector #3
+; code_62  ; lofsa
+; code_480  ; lofsa
+; code_591  ; lofsa
+; CLASS SQRoom of 0x43 selector #3
+; OBJECT lRS of 0x6 selector #3
+; code_1516  ; lofsa
+; code_1588  ; lofsa
+; code_1658  ; lofsa
+; OBJECT eRS of 0x6 selector #3
+; OBJECT nBMT of 0x1e selector #3

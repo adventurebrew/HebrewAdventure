@@ -280,5 +280,11 @@ string_unused_4: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 5
-0x145, 0x15c, 0x168, 0x1e0, 0x1f4
+; code_324  ; lofsa
+; OBJECT rm25 of 0x74 selector #3
+; OBJECT rm25 of 0x74 selector #9
+; OBJECT claws of 0x2c selector #3
+; OBJECT claws of 0x2c selector #13

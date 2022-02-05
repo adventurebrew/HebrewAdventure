@@ -1927,5 +1927,11 @@ string_unused_6: ""
 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 5
-0x124, 0xcf2, 0xd16, 0xd1a, 0xd1c
+; CLASS InvI of 0x14 selector #3
+; CLASS Inv of 0x15 selector #3
+; CLASS Inv of 0x15 selector #21
+; CLASS Inv of 0x15 selector #23
+; CLASS Inv of 0x15 selector #24

@@ -350,5 +350,12 @@ string_unused_5: ""
 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 6
-0x1c, 0x90, 0x100, 0x1ac, 0x1cc, 0x252
+; OBJECT fred of 0x30 selector #3
+; code_143  ; lofsa
+; code_255  ; lofsa
+; code_427  ; lofsa
+; OBJECT speedTest of 0x43 selector #3
+; OBJECT speedScript of 0x6 selector #3

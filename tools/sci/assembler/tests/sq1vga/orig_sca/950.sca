@@ -674,5 +674,10 @@ string_unused_4: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 4
-0xb4, 0x295, 0x3ce, 0x4e0
+; CLASS CueObj of 0x6 selector #3
+; code_660  ; lofsa
+; CLASS Feature of 0x0 selector #3
+; OBJECT dftDoVerb of 0x1 selector #3

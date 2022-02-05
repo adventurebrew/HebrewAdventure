@@ -1086,5 +1086,56 @@ string_unused_35: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 50
-0xba, 0xda, 0xe9, 0xf8, 0x107, 0x116, 0x125, 0x12d, 0x135, 0x13d, 0x145, 0x14d, 0x194, 0x1b4, 0x1c0, 0x25e, 0x30a, 0x39c, 0x3b0, 0x3c0, 0x406, 0x41a, 0x42a, 0x46c, 0x480, 0x490, 0x4f8, 0x50c, 0x51c, 0x562, 0x576, 0x586, 0x5c8, 0x5dc, 0x5ec, 0x65a, 0x66e, 0x67e, 0x6c6, 0x6da, 0x6ea, 0x732, 0x746, 0x756, 0x79e, 0x7b2, 0x7c2, 0x80a, 0x81e, 0x82e
+; code_185  ; lofsa
+; code_217  ; lofsa
+; code_232  ; lofsa
+; code_247  ; lofsa
+; code_262  ; lofsa
+; code_277  ; lofsa
+; code_292  ; lofsa
+; code_300  ; lofsa
+; code_308  ; lofsa
+; code_316  ; lofsa
+; code_324  ; lofsa
+; code_332  ; lofsa
+; code_403  ; lofsa
+; OBJECT rm47 of 0x74 selector #3
+; OBJECT rm47 of 0x74 selector #9
+; OBJECT outaDBU of 0x6 selector #3
+; OBJECT intoDBU of 0x6 selector #3
+; OBJECT radar of 0x2f selector #3
+; OBJECT radar of 0x2f selector #13
+; OBJECT radar of 0x2f selector #21
+; OBJECT robot1 of 0x2f selector #3
+; OBJECT robot1 of 0x2f selector #13
+; OBJECT robot1 of 0x2f selector #21
+; OBJECT robot2 of 0x2f selector #3
+; OBJECT robot2 of 0x2f selector #13
+; OBJECT robot2 of 0x2f selector #21
+; OBJECT neonhand of 0x2f selector #3
+; OBJECT neonhand of 0x2f selector #13
+; OBJECT neonhand of 0x2f selector #21
+; OBJECT lefteye of 0x2f selector #3
+; OBJECT lefteye of 0x2f selector #13
+; OBJECT lefteye of 0x2f selector #21
+; OBJECT righteye of 0x2f selector #3
+; OBJECT righteye of 0x2f selector #13
+; OBJECT righteye of 0x2f selector #21
+; OBJECT pickupArea of 0x2c selector #3
+; OBJECT pickupArea of 0x2c selector #13
+; OBJECT pickupArea of 0x2c selector #21
+; OBJECT store of 0x2c selector #3
+; OBJECT store of 0x2c selector #13
+; OBJECT store of 0x2c selector #21
+; OBJECT bigSign of 0x2c selector #3
+; OBJECT bigSign of 0x2c selector #13
+; OBJECT bigSign of 0x2c selector #21
+; OBJECT smallSign of 0x2c selector #3
+; OBJECT smallSign of 0x2c selector #13
+; OBJECT smallSign of 0x2c selector #21
+; OBJECT storeWindow of 0x2c selector #3
+; OBJECT storeWindow of 0x2c selector #13
+; OBJECT storeWindow of 0x2c selector #21

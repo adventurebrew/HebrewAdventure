@@ -1645,5 +1645,55 @@ string_unused_27: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 49
-0x16, 0x1e, 0x26, 0x2e, 0x36, 0x3e, 0x7e, 0x9b, 0x17a, 0x18b, 0x1fa, 0x206, 0x25b, 0x286, 0x29a, 0x33b, 0x38c, 0x400, 0x41f, 0x43b, 0x447, 0x47a, 0x48e, 0x507, 0x579, 0x5bb, 0x5e8, 0x668, 0x740, 0x744, 0x7f7, 0x7fb, 0x870, 0x88e, 0x8bf, 0x8d6, 0x8ea, 0x91a, 0x932, 0x956, 0x9ec, 0xa00, 0xa10, 0xa9e, 0xab2, 0xb62, 0xb76, 0xc00, 0xc14
+; code_21  ; lofsa
+; code_29  ; lofsa
+; code_37  ; lofsa
+; code_45  ; lofsa
+; code_53  ; lofsa
+; code_61  ; lofsa
+; code_125  ; lofsa
+; code_154  ; lofsa
+; code_377  ; lofsa
+; code_394  ; lofsa
+; OBJECT rm30 of 0x74 selector #3
+; OBJECT rm30 of 0x74 selector #9
+; code_602  ; lofsa
+; OBJECT stickyPlant of 0x2f selector #3
+; OBJECT stickyPlant of 0x2f selector #13
+; code_826  ; lofsa
+; OBJECT takeThePlant of 0x6 selector #3
+; code_1023  ; lofsa
+; code_1054  ; lofsa
+; code_1082  ; lofsa
+; code_1094  ; lofsa
+; OBJECT stalagmite of 0x2f selector #3
+; OBJECT stalagmite of 0x2f selector #13
+; code_1286  ; lofsa
+; code_1400  ; lofsa
+; code_1466  ; lofsa
+; OBJECT takeTheRock of 0x6 selector #3
+; OBJECT fromGrateRoom of 0x6 selector #3
+; code_1855  ; lofsa
+; code_1859  ; lofsa
+; code_2038  ; lofsa
+; code_2042  ; lofsa
+; code_2159  ; lofsa
+; OBJECT fromElevator of 0x6 selector #3
+; code_2238  ; lofsa
+; OBJECT brokenRock of 0x2c selector #3
+; OBJECT brokenRock of 0x2c selector #13
+; code_2329  ; lofsa
+; OBJECT elevdoor of 0x2f selector #3
+; OBJECT elevdoor of 0x2f selector #21
+; OBJECT shaftDoor of 0x2c selector #3
+; OBJECT shaftDoor of 0x2c selector #13
+; OBJECT shaftDoor of 0x2c selector #21
+; OBJECT blueRocks of 0x2c selector #3
+; OBJECT blueRocks of 0x2c selector #13
+; OBJECT greenRocks of 0x2c selector #3
+; OBJECT greenRocks of 0x2c selector #13
+; OBJECT gravel of 0x2c selector #3
+; OBJECT gravel of 0x2c selector #13

@@ -1735,5 +1735,83 @@ string_unused_27: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 77
-0x40, 0x50, 0x58, 0x6a, 0x77, 0x7b, 0x168, 0x170, 0x178, 0x1a0, 0x1a4, 0x1a8, 0x1ac, 0x1b0, 0x1b4, 0x1d9, 0x1dd, 0x1e5, 0x203, 0x211, 0x230, 0x23c, 0x270, 0x280, 0x28f, 0x29e, 0x2ad, 0x2bc, 0x2cc, 0x2db, 0x2ea, 0x2f9, 0x308, 0x318, 0x370, 0x386, 0x420, 0x463, 0x48c, 0x4be, 0x524, 0x568, 0x5ac, 0x5c1, 0x5dc, 0x5f4, 0x6b8, 0x6cc, 0x6dc, 0x782, 0x796, 0x7a6, 0x84c, 0x860, 0x870, 0x8b1, 0x8c8, 0x8dc, 0x8ec, 0x990, 0x9a4, 0x9b4, 0xa30, 0xa44, 0xa54, 0xad0, 0xae4, 0xaf4, 0xb70, 0xb84, 0xb94, 0xc10, 0xc24, 0xc34, 0xcb0, 0xcc4, 0xcd4
+; code_63  ; lofsa
+; code_79  ; lofsa
+; code_87  ; lofsa
+; code_105  ; lofsa
+; code_118  ; lofsa
+; code_122  ; lofsa
+; code_359  ; lofsa
+; code_367  ; lofsa
+; code_375  ; lofsa
+; code_415  ; lofsa
+; code_419  ; lofsa
+; code_423  ; lofsa
+; code_427  ; lofsa
+; code_431  ; lofsa
+; code_435  ; lofsa
+; code_472  ; lofsa
+; code_476  ; lofsa
+; code_484  ; lofsa
+; code_514  ; lofsa
+; code_528  ; lofsa
+; OBJECT rm9 of 0x74 selector #3
+; OBJECT rm9 of 0x74 selector #9
+; code_623  ; lofsa
+; code_639  ; lofsa
+; code_654  ; lofsa
+; code_669  ; lofsa
+; code_684  ; lofsa
+; code_699  ; lofsa
+; code_715  ; lofsa
+; code_730  ; lofsa
+; code_745  ; lofsa
+; code_760  ; lofsa
+; code_775  ; lofsa
+; code_791  ; lofsa
+; code_879  ; lofsa
+; code_901  ; lofsa
+; OBJECT fireUponEgo of 0x6 selector #3
+; code_1122  ; lofsa
+; code_1163  ; lofsa
+; OBJECT tv1Script of 0x6 selector #3
+; OBJECT egoSafe of 0x1 selector #3
+; OBJECT timeToHearGuards of 0x1 selector #3
+; OBJECT callTheGuards of 0x1 selector #3
+; code_1472  ; lofsa
+; code_1499  ; lofsa
+; OBJECT tv2 of 0x2e selector #3
+; OBJECT star of 0x2f selector #3
+; OBJECT star of 0x2f selector #13
+; OBJECT star of 0x2f selector #21
+; OBJECT tv1 of 0x2f selector #3
+; OBJECT tv1 of 0x2f selector #13
+; OBJECT tv1 of 0x2f selector #21
+; OBJECT sarien1 of 0x2f selector #3
+; OBJECT sarien1 of 0x2f selector #13
+; OBJECT sarien1 of 0x2f selector #21
+; code_2224  ; lofsa
+; OBJECT sarien2 of 0x2f selector #3
+; OBJECT sarien2 of 0x2f selector #13
+; OBJECT sarien2 of 0x2f selector #21
+; OBJECT joystick of 0x2c selector #3
+; OBJECT joystick of 0x2c selector #13
+; OBJECT joystick of 0x2c selector #21
+; OBJECT mouse of 0x2c selector #3
+; OBJECT mouse of 0x2c selector #13
+; OBJECT mouse of 0x2c selector #21
+; OBJECT screen of 0x2c selector #3
+; OBJECT screen of 0x2c selector #13
+; OBJECT screen of 0x2c selector #21
+; OBJECT wires of 0x2c selector #3
+; OBJECT wires of 0x2c selector #13
+; OBJECT wires of 0x2c selector #21
+; OBJECT keyboard of 0x2c selector #3
+; OBJECT keyboard of 0x2c selector #13
+; OBJECT keyboard of 0x2c selector #21
+; OBJECT cords of 0x2c selector #3
+; OBJECT cords of 0x2c selector #13
+; OBJECT cords of 0x2c selector #21

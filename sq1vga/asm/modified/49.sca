@@ -1967,5 +1967,81 @@ string_unused_22: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 75
-0x34, 0x48, 0x60, 0xaf, 0xcb, 0x117, 0x146, 0x16c, 0x174, 0x18b, 0x1a0, 0x1af, 0x1be, 0x1cd, 0x1dc, 0x1e5, 0x203, 0x29a, 0x2d0, 0x37c, 0x38b, 0x39a, 0x3a9, 0x3b8, 0x3c1, 0x3de, 0x450, 0x4a4, 0x4b7, 0x4ce, 0x4e9, 0x4fc, 0x51a, 0x55f, 0x578, 0x59a, 0x5b1, 0x5ce, 0x617, 0x639, 0x643, 0x659, 0x66e, 0x681, 0x69e, 0x7f2, 0x853, 0x866, 0x879, 0x88c, 0x89f, 0x8a8, 0x8e3, 0x90d, 0x916, 0x91a, 0x93f, 0x948, 0x94c, 0x96f, 0x98f, 0x996, 0x9d4, 0xa0a, 0xa52, 0xa9a, 0xb18, 0xb96, 0xbfc, 0xc62, 0xcc8, 0xd2e, 0xd94, 0xdfa, 0xe78
+; code_51  ; lofsa
+; code_71  ; lofsa
+; OBJECT rm49 of 0x43 selector #3
+; code_174  ; lofsa
+; code_202  ; lofsa
+; code_278  ; lofsa
+; code_325  ; lofsa
+; code_363  ; lofsa
+; code_371  ; lofsa
+; code_394  ; lofsa
+; code_415  ; lofsa
+; code_430  ; lofsa
+; code_445  ; lofsa
+; code_460  ; lofsa
+; code_475  ; lofsa
+; code_484  ; lofsa
+; code_514  ; lofsa
+; code_665  ; lofsa
+; OBJECT openingScript of 0x6 selector #3
+; code_891  ; lofsa
+; code_906  ; lofsa
+; code_921  ; lofsa
+; code_936  ; lofsa
+; code_951  ; lofsa
+; code_960  ; lofsa
+; code_989  ; lofsa
+; OBJECT robotAsksScript of 0x6 selector #3
+; code_1187  ; lofsa
+; code_1206  ; lofsa
+; code_1229  ; lofsa
+; code_1256  ; lofsa
+; code_1275  ; lofsa
+; OBJECT pushButtons of 0x6 selector #3
+; code_1374  ; lofsa
+; code_1399  ; lofsa
+; code_1433  ; lofsa
+; code_1456  ; lofsa
+; OBJECT holdLever of 0x6 selector #3
+; code_1558  ; lofsa
+; code_1592  ; lofsa
+; code_1602  ; lofsa
+; code_1624  ; lofsa
+; code_1645  ; lofsa
+; code_1664  ; lofsa
+; OBJECT scratchHead of 0x6 selector #3
+; OBJECT doHyperSpace of 0x6 selector #3
+; code_2130  ; lofsa
+; code_2149  ; lofsa
+; code_2168  ; lofsa
+; code_2187  ; lofsa
+; code_2206  ; lofsa
+; code_2215  ; lofsa
+; code_2274  ; lofsa
+; code_2316  ; lofsa
+; code_2325  ; lofsa
+; code_2329  ; lofsa
+; code_2366  ; lofsa
+; code_2375  ; lofsa
+; code_2379  ; lofsa
+; code_2414  ; lofsa
+; code_2446  ; lofsa
+; code_2453  ; lofsa
+; OBJECT approachDeltaur of 0x6 selector #3
+; OBJECT keronaATP_u of 0x2d selector #3
+; OBJECT keronaATP of 0x2d selector #3
+; OBJECT satelite of 0x30 selector #3
+; OBJECT deltaur of 0x30 selector #3
+; OBJECT arm of 0x2f selector #3
+; OBJECT droidHand of 0x2f selector #3
+; OBJECT dial0 of 0x2f selector #3
+; OBJECT dial1 of 0x2f selector #3
+; OBJECT dial2 of 0x2f selector #3
+; OBJECT screen of 0x2f selector #3
+; OBJECT ship1 of 0x30 selector #3
+; OBJECT jetSound of 0xa selector #3

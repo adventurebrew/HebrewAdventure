@@ -756,5 +756,15 @@ string_unused_10: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 9
-0x98, 0x114, 0x16a, 0x24e, 0x2ba, 0x318, 0x3b6, 0x512, 0x5ca
+; CLASS Cycle of 0x0 selector #3
+; CLASS Fwd of 0x16 selector #3
+; CLASS Walk of 0x17 selector #3
+; CLASS CT of 0x16 selector #3
+; CLASS End of 0x19 selector #3
+; CLASS Beg of 0x19 selector #3
+; CLASS SyncWalk of 0x17 selector #3
+; CLASS Motion of 0x0 selector #3
+; CLASS MoveTo of 0x1d selector #3

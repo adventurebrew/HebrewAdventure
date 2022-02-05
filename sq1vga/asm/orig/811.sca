@@ -43,5 +43,7 @@ string_unused_1: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 1
-0x40
+; OBJECT aboutCode of 0x1 selector #3

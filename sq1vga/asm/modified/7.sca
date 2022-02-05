@@ -1722,5 +1722,58 @@ string_unused_30: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 52
-0x2d, 0x35, 0x58, 0x9a, 0x9e, 0xa2, 0xa6, 0xaa, 0xae, 0xb2, 0x1e6, 0x22a, 0x268, 0x274, 0x328, 0x43a, 0x550, 0x5b2, 0x606, 0x651, 0x728, 0x73c, 0x74c, 0x7a1, 0x87a, 0x88e, 0x89e, 0x8f7, 0x95a, 0x96e, 0x97e, 0x9fe, 0xa12, 0xa22, 0xa74, 0xa88, 0xa98, 0xaea, 0xafe, 0xb0e, 0xb60, 0xb74, 0xb84, 0xbd6, 0xbea, 0xbfa, 0xc16, 0xc2a, 0xc3a, 0xc88, 0xc9c, 0xcac
+; code_44  ; lofsa
+; code_52  ; lofsa
+; code_87  ; lofsa
+; code_153  ; lofsa
+; code_157  ; lofsa
+; code_161  ; lofsa
+; code_165  ; lofsa
+; code_169  ; lofsa
+; code_173  ; lofsa
+; code_177  ; lofsa
+; code_485  ; lofsa
+; code_553  ; lofsa
+; OBJECT rm7 of 0x43 selector #3
+; OBJECT rm7 of 0x43 selector #9
+; OBJECT ExitRoom of 0x6 selector #3
+; OBJECT enterScript of 0x6 selector #3
+; OBJECT searchBody of 0x6 selector #3
+; code_1457  ; lofsa
+; OBJECT getWidget of 0x6 selector #3
+; code_1616  ; lofsa
+; OBJECT deadMan1 of 0x2e selector #3
+; OBJECT deadMan1 of 0x2e selector #13
+; OBJECT deadMan1 of 0x2e selector #21
+; code_1952  ; lofsa
+; OBJECT deadMan2 of 0x2e selector #3
+; OBJECT deadMan2 of 0x2e selector #13
+; OBJECT deadMan2 of 0x2e selector #21
+; code_2294  ; lofsa
+; OBJECT widget of 0x2f selector #3
+; OBJECT widget of 0x2f selector #13
+; OBJECT widget of 0x2f selector #21
+; OBJECT upperSupport of 0x2c selector #3
+; OBJECT upperSupport of 0x2c selector #13
+; OBJECT upperSupport of 0x2c selector #21
+; OBJECT baseSupport of 0x2c selector #3
+; OBJECT baseSupport of 0x2c selector #13
+; OBJECT baseSupport of 0x2c selector #21
+; OBJECT miscEquip of 0x2c selector #3
+; OBJECT miscEquip of 0x2c selector #13
+; OBJECT miscEquip of 0x2c selector #21
+; OBJECT rightConsole of 0x2c selector #3
+; OBJECT rightConsole of 0x2c selector #13
+; OBJECT rightConsole of 0x2c selector #21
+; OBJECT glassGlobe of 0x2c selector #3
+; OBJECT glassGlobe of 0x2c selector #13
+; OBJECT glassGlobe of 0x2c selector #21
+; OBJECT floor of 0x2c selector #3
+; OBJECT floor of 0x2c selector #13
+; OBJECT floor of 0x2c selector #21
+; OBJECT starChart of 0x2c selector #3
+; OBJECT starChart of 0x2c selector #13
+; OBJECT starChart of 0x2c selector #21

@@ -1057,5 +1057,9 @@ string_unused_3: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 3
-0x98, 0x3c7, 0x6ba
+; CLASS RTRandCycle of 0x5e selector #3
+; code_966  ; lofsa
+; CLASS Talker of 0x2f selector #3

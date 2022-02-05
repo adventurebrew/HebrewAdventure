@@ -2731,5 +2731,91 @@ string_unused_20: ""
 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 85
-0x103, 0x113, 0x11e, 0x126, 0x12e, 0x13a, 0x142, 0x15c, 0x1bc, 0x210, 0x23c, 0x25e, 0x2ce, 0x2e4, 0x2f1, 0x30a, 0x366, 0x388, 0x3a9, 0x3cb, 0x418, 0x43c, 0x4f0, 0x577, 0x58a, 0x5c2, 0x5e4, 0x606, 0x628, 0x64a, 0x667, 0x6a2, 0x6da, 0x6e2, 0x6eb, 0x716, 0x74f, 0x75b, 0x79c, 0x7d5, 0x7e0, 0x7f0, 0x81a, 0x829, 0x851, 0x863, 0x897, 0x8c0, 0x9a5, 0xa0f, 0xa2a, 0xa4d, 0xaa3, 0xac8, 0xaee, 0xb14, 0xb3a, 0xb60, 0xb85, 0xbb6, 0xbdb, 0xc08, 0xcaa, 0xd52, 0xd66, 0xe04, 0xe18, 0xea8, 0xf25, 0xfa0, 0x104c, 0x1090, 0x10f2, 0x116d, 0x117b, 0x119e, 0x1219, 0x122b, 0x1252, 0x12cd, 0x12df, 0x1306, 0x1381, 0x1393, 0x13ba
+; code_258  ; lofsa
+; code_274  ; lofsa
+; code_285  ; lofsa
+; code_293  ; lofsa
+; code_301  ; lofsa
+; code_313  ; lofsa
+; code_321  ; lofsa
+; code_347  ; lofsa
+; code_443  ; lofsa
+; code_527  ; lofsa
+; code_571  ; lofsa
+; OBJECT rm67 of 0x74 selector #3
+; code_717  ; lofsa
+; code_739  ; lofsa
+; code_752  ; lofsa
+; OBJECT roomControl of 0x6 selector #3
+; code_869  ; lofsa
+; code_903  ; lofsa
+; code_936  ; lofsa
+; code_970  ; lofsa
+; code_1047  ; lofsa
+; code_1083  ; lofsa
+; OBJECT egoDropsIn of 0x6 selector #3
+; code_1398  ; lofsa
+; code_1417  ; lofsa
+; code_1473  ; lofsa
+; code_1507  ; lofsa
+; code_1541  ; lofsa
+; code_1575  ; lofsa
+; code_1609  ; lofsa
+; code_1638  ; lofsa
+; OBJECT goingUp of 0x6 selector #3
+; code_1753  ; lofsa
+; code_1761  ; lofsa
+; code_1770  ; lofsa
+; OBJECT madeItInTime of 0x6 selector #3
+; code_1870  ; lofsa
+; code_1882  ; lofsa
+; OBJECT noEscapeForEgo of 0x6 selector #3
+; code_2004  ; lofsa
+; code_2015  ; lofsa
+; code_2031  ; lofsa
+; code_2073  ; lofsa
+; code_2088  ; lofsa
+; code_2128  ; lofsa
+; code_2146  ; lofsa
+; code_2198  ; lofsa
+; OBJECT waveGoodBye of 0x6 selector #3
+; code_2468  ; lofsa
+; code_2574  ; lofsa
+; code_2601  ; lofsa
+; code_2636  ; lofsa
+; code_2722  ; lofsa
+; code_2759  ; lofsa
+; code_2797  ; lofsa
+; code_2835  ; lofsa
+; code_2873  ; lofsa
+; code_2911  ; lofsa
+; code_2948  ; lofsa
+; code_2997  ; lofsa
+; code_3034  ; lofsa
+; OBJECT getInEscapePod of 0x6 selector #3
+; OBJECT getInLaunchTube of 0x6 selector #3
+; OBJECT launchTube of 0x2c selector #3
+; OBJECT launchTube of 0x2c selector #13
+; OBJECT doDadOnWall of 0x2c selector #3
+; OBJECT doDadOnWall of 0x2c selector #13
+; OBJECT elevatorDoor of 0x2f selector #3
+; code_3876  ; lofsa
+; OBJECT elevator of 0x30 selector #3
+; OBJECT accelCode of 0x1 selector #3
+; code_4239  ; lofsa
+; OBJECT escapePod of 0x30 selector #3
+; code_4460  ; lofsa
+; code_4474  ; lofsa
+; OBJECT hood of 0x30 selector #3
+; code_4632  ; lofsa
+; code_4650  ; lofsa
+; OBJECT flame1 of 0x30 selector #3
+; code_4812  ; lofsa
+; code_4830  ; lofsa
+; OBJECT flame2 of 0x30 selector #3
+; code_4992  ; lofsa
+; code_5010  ; lofsa
+; OBJECT flyingEgo of 0x30 selector #3

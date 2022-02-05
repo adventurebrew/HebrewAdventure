@@ -3044,5 +3044,113 @@ string_unused_35: ""
 0x72, 0xa0, 0x85, 0xa9, 0x9d, 0xb1, 0xab, 0xb7
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 107
-0x180, 0x188, 0x190, 0x198, 0x1b0, 0x1c1, 0x1c9, 0x1d5, 0x1d9, 0x1fd, 0x201, 0x221, 0x22b, 0x231, 0x2a1, 0x2a9, 0x2b8, 0x2bc, 0x2c7, 0x2d1, 0x2d7, 0x302, 0x32e, 0x3b6, 0x3c2, 0x45c, 0x48c, 0x4ab, 0x4cb, 0x4ea, 0x50a, 0x51c, 0x541, 0x56a, 0x5ca, 0x5f9, 0x622, 0x68f, 0x6b6, 0x709, 0x738, 0x758, 0x77b, 0x79c, 0x7c4, 0x81e, 0x832, 0x842, 0x8f2, 0x968, 0x97c, 0xa0d, 0xa24, 0xa38, 0xaa5, 0xabc, 0xad0, 0xae0, 0xb39, 0xb50, 0xb64, 0xb74, 0xbcd, 0xbe4, 0xbf8, 0xc08, 0xc8c, 0xca0, 0xd0c, 0xd20, 0xd4c, 0xde6, 0xe02, 0xe16, 0xe86, 0xf4e, 0xf57, 0xf5b, 0xf90, 0xfa4, 0x1019, 0x1034, 0x1048, 0x106e, 0x109b, 0x1102, 0x1190, 0x11ba, 0x11e1, 0x120e, 0x1270, 0x12c5, 0x12fc, 0x1348, 0x1371, 0x138f, 0x13ad, 0x13e7, 0x142e, 0x1488, 0x14a3, 0x14cb, 0x14dd, 0x14f6, 0x1583, 0x15c3, 0x1636
+; code_383  ; lofsa
+; code_391  ; lofsa
+; code_399  ; lofsa
+; code_407  ; lofsa
+; code_431  ; lofsa
+; code_448  ; lofsa
+; code_456  ; lofsa
+; code_468  ; lofsa
+; code_472  ; lofsa
+; code_508  ; lofsa
+; code_512  ; lofsa
+; code_544  ; lofsa
+; code_554  ; lofsa
+; code_560  ; lofsa
+; code_672  ; lofsa
+; code_680  ; lofsa
+; code_695  ; lofsa
+; code_699  ; lofsa
+; code_710  ; lofsa
+; code_720  ; lofsa
+; code_726  ; lofsa
+; code_769  ; lofsa
+; code_813  ; lofsa
+; OBJECT rm31 of 0x74 selector #3
+; OBJECT rm31 of 0x74 selector #9
+; code_1115  ; lofsa
+; code_1163  ; lofsa
+; code_1194  ; lofsa
+; code_1226  ; lofsa
+; code_1257  ; lofsa
+; code_1289  ; lofsa
+; code_1307  ; lofsa
+; code_1344  ; lofsa
+; OBJECT tentacleWave of 0x6 selector #3
+; code_1481  ; lofsa
+; code_1528  ; lofsa
+; OBJECT tentacleGetsStuck of 0x6 selector #3
+; code_1678  ; lofsa
+; OBJECT tentacleStuck of 0x6 selector #3
+; code_1800  ; lofsa
+; code_1847  ; lofsa
+; code_1879  ; lofsa
+; code_1914  ; lofsa
+; code_1947  ; lofsa
+; OBJECT waveYourEyeStalk of 0x6 selector #3
+; OBJECT stickyPlant of 0x30 selector #3
+; OBJECT stickyPlant of 0x30 selector #13
+; OBJECT stickyPlant of 0x30 selector #21
+; code_2289  ; lofsa
+; OBJECT grateMonster1 of 0x30 selector #3
+; OBJECT grateMonster1 of 0x30 selector #13
+; code_2572  ; lofsa
+; OBJECT grateMonster2 of 0x30 selector #3
+; OBJECT grateMonster2 of 0x30 selector #13
+; code_2724  ; lofsa
+; OBJECT tentacle1 of 0x30 selector #3
+; OBJECT tentacle1 of 0x30 selector #13
+; OBJECT tentacle1 of 0x30 selector #21
+; code_2872  ; lofsa
+; OBJECT tentacle2 of 0x30 selector #3
+; OBJECT tentacle2 of 0x30 selector #13
+; OBJECT tentacle2 of 0x30 selector #21
+; code_3020  ; lofsa
+; OBJECT eyeStalk of 0x2f selector #3
+; OBJECT eyeStalk of 0x2f selector #13
+; OBJECT eyeStalk of 0x2f selector #21
+; OBJECT upperledge of 0x2c selector #3
+; OBJECT upperledge of 0x2c selector #13
+; OBJECT lowerLedge of 0x2c selector #3
+; OBJECT lowerLedge of 0x2c selector #13
+; OBJECT genericItem of 0x30 selector #3
+; code_3557  ; lofsa
+; OBJECT frontOfGrate of 0x2c selector #3
+; OBJECT frontOfGrate of 0x2c selector #13
+; code_3717  ; lofsa
+; code_3917  ; lofsa
+; code_3926  ; lofsa
+; code_3930  ; lofsa
+; OBJECT grate of 0x2c selector #3
+; OBJECT grate of 0x2c selector #13
+; code_4120  ; lofsa
+; code_4147  ; lofsa
+; code_4167  ; lofsa
+; code_4205  ; lofsa
+; code_4250  ; lofsa
+; OBJECT monsterGrabsEgoSide of 0x6 selector #3
+; code_4495  ; lofsa
+; code_4537  ; lofsa
+; code_4576  ; lofsa
+; code_4621  ; lofsa
+; OBJECT monsterGrabsEgo of 0x6 selector #3
+; code_4804  ; lofsa
+; code_4859  ; lofsa
+; code_4935  ; lofsa
+; code_4976  ; lofsa
+; code_5006  ; lofsa
+; code_5036  ; lofsa
+; code_5094  ; lofsa
+; OBJECT egoThrowsWrongItem of 0x6 selector #3
+; code_5255  ; lofsa
+; code_5282  ; lofsa
+; code_5322  ; lofsa
+; code_5340  ; lofsa
+; OBJECT tentacleKnocksItBack of 0x6 selector #3
+; code_5506  ; lofsa
+; code_5570  ; lofsa
+; OBJECT egoThrowsPlant of 0x6 selector #3

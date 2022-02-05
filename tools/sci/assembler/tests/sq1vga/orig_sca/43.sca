@@ -7521,5 +7521,300 @@ string_unused_91: ""
 0x0, 0x0, 0x1, 0x0, 0x0, 0x0, 0x13f, 0x0, 0x13f, 0x6f, 0x12a, 0x68, 0x11d, 0x6b, 0x111, 0x6f, 0xfa, 0x6a, 0xe9, 0x63, 0xf3, 0x5b, 0xe8, 0x58, 0xc3, 0x53, 0xaf, 0x53, 0xc2, 0x5f, 0xc0, 0x67, 0xb2, 0x6b, 0x8c, 0x72, 0x79, 0x73, 0x6a, 0x72, 0x55, 0x6a, 0x43, 0x61, 0x32, 0x5e, 0x2b, 0x5a, 0x0, 0x65, 0x0, 0x0, 0x13f, 0x0, 0x13f, 0x6f, 0x12a, 0x68, 0x117, 0x6b, 0xff, 0x62, 0xfb, 0x59, 0xe8, 0x58, 0xc3, 0x53, 0xaf, 0x53, 0xc2, 0x5f, 0xc0, 0x67, 0xb2, 0x6b, 0x8c, 0x72, 0x79, 0x73, 0x6a, 0x72, 0x55, 0x6a, 0x43, 0x61, 0x32, 0x5e, 0x2b, 0x5a, 0x0, 0x63, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 294
-0x77, 0x8c, 0x9f, 0xd7, 0x151, 0x155, 0x159, 0x15d, 0x2b3, 0x2bf, 0x2cb, 0x2cf, 0x2db, 0x2df, 0x2eb, 0x2ef, 0x307, 0x30b, 0x314, 0x318, 0x329, 0x33a, 0x345, 0x34d, 0x35f, 0x36e, 0x382, 0x3ab, 0x3f9, 0x414, 0x437, 0x44a, 0x493, 0x4ac, 0x509, 0x517, 0x549, 0x56d, 0x57a, 0x587, 0x61e, 0x6fa, 0x7a6, 0x819, 0x917, 0x91b, 0x99e, 0x9ec, 0x9ff, 0xa0c, 0xa1f, 0xa39, 0xa46, 0xa59, 0xa62, 0xa88, 0xac1, 0xaf0, 0xb0a, 0xb2d, 0xb43, 0xb63, 0xb88, 0xba0, 0xbd9, 0xc1d, 0xc4a, 0xc79, 0xc92, 0xccb, 0xd01, 0xd32, 0xd5b, 0xd7f, 0xd98, 0xdd1, 0xde1, 0xe08, 0xe0c, 0xe10, 0xe14, 0xe2b, 0xe46, 0xe57, 0xe8b, 0xea0, 0xeb1, 0xec6, 0xedd, 0xee6, 0xf00, 0xf15, 0xf2c, 0xf30, 0xf34, 0xf3f, 0xf5f, 0xf73, 0xf95, 0xf99, 0xf9d, 0xfa1, 0xfa9, 0xfe1, 0xfe8, 0x1021, 0x1028, 0x105b, 0x1062, 0x1082, 0x108e, 0x10c9, 0x10da, 0x10e1, 0x10f8, 0x1109, 0x1110, 0x1123, 0x113d, 0x1141, 0x1145, 0x1149, 0x1151, 0x1162, 0x117f, 0x1195, 0x11ae, 0x11d3, 0x11f2, 0x1201, 0x121c, 0x122a, 0x1244, 0x1253, 0x1267, 0x1287, 0x129d, 0x12b6, 0x132f, 0x1354, 0x1370, 0x137d, 0x1389, 0x1392, 0x13b0, 0x13eb, 0x141e, 0x143c, 0x1457, 0x146d, 0x1484, 0x149a, 0x14ba, 0x14e0, 0x14ed, 0x14f7, 0x1513, 0x1530, 0x1699, 0x16a2, 0x16ab, 0x16b4, 0x16bd, 0x16c6, 0x16f4, 0x16fe, 0x1729, 0x1733, 0x1790, 0x17c2, 0x17d3, 0x181a, 0x1876, 0x1883, 0x1890, 0x189d, 0x18aa, 0x18b7, 0x18c4, 0x18d1, 0x18de, 0x18eb, 0x18f8, 0x1905, 0x1912, 0x191f, 0x192c, 0x1939, 0x1946, 0x1953, 0x1960, 0x196d, 0x19d2, 0x1a37, 0x1a44, 0x1a51, 0x1a61, 0x1a71, 0x1a81, 0x1aea, 0x1cfb, 0x1d02, 0x1d6e, 0x1d94, 0x1dbf, 0x1df6, 0x1e24, 0x1e58, 0x1e8f, 0x1ed0, 0x1ef7, 0x1f5a, 0x2006, 0x2100, 0x2143, 0x2182, 0x220c, 0x2236, 0x2260, 0x22e2, 0x22f6, 0x2306, 0x2347, 0x235e, 0x23b9, 0x23d0, 0x23e4, 0x2447, 0x2454, 0x2467, 0x260a, 0x261e, 0x262e, 0x279e, 0x27b2, 0x27c2, 0x2964, 0x2978, 0x2988, 0x29e5, 0x2b3e, 0x2b52, 0x2b62, 0x2bd8, 0x2bf3, 0x2c1b, 0x2c2e, 0x2d06, 0x2d1a, 0x2d2a, 0x2d84, 0x2d9c, 0x2f2c, 0x2f40, 0x2f50, 0x2f93, 0x2faa, 0x3040, 0x3054, 0x3064, 0x30c2, 0x30d6, 0x30e6, 0x3140, 0x3154, 0x3164, 0x31b9, 0x31d0, 0x31e4, 0x31f4, 0x320b, 0x3222, 0x3236, 0x3246, 0x32ae, 0x32c2, 0x32d2, 0x333e, 0x3352, 0x337e, 0x3392, 0x33a2, 0x3401, 0x3450, 0x3483, 0x351c, 0x3530, 0x3540, 0x355c, 0x357c, 0x359c, 0x360e, 0x366a, 0x36d0
+; code_118  ; lofsa
+; code_139  ; lofsa
+; code_158  ; lofsa
+; code_214  ; lofsa
+; code_336  ; lofsa
+; code_340  ; lofsa
+; code_344  ; lofsa
+; code_348  ; lofsa
+; code_690  ; lofsa
+; code_702  ; lofsa
+; code_714  ; lofsa
+; code_718  ; lofsa
+; code_730  ; lofsa
+; code_734  ; lofsa
+; code_746  ; lofsa
+; code_750  ; lofsa
+; code_774  ; lofsa
+; code_778  ; lofsa
+; code_787  ; lofsa
+; code_791  ; lofsa
+; code_808  ; lofsa
+; code_825  ; lofsa
+; code_836  ; lofsa
+; code_844  ; lofsa
+; code_862  ; lofsa
+; code_877  ; lofsa
+; code_897  ; lofsa
+; code_938  ; lofsa
+; code_1016  ; lofsa
+; code_1043  ; lofsa
+; code_1078  ; lofsa
+; code_1097  ; lofsa
+; code_1170  ; lofsa
+; code_1195  ; lofsa
+; code_1288  ; lofsa
+; code_1302  ; lofsa
+; code_1352  ; lofsa
+; code_1388  ; lofsa
+; code_1401  ; lofsa
+; code_1414  ; lofsa
+; OBJECT rm43 of 0x43 selector #3
+; OBJECT walkIn of 0x6 selector #3
+; OBJECT walkOut of 0x6 selector #3
+; code_2072  ; lofsa
+; code_2326  ; lofsa
+; code_2330  ; lofsa
+; OBJECT egoStaggersOut of 0x6 selector #3
+; code_2539  ; lofsa
+; code_2558  ; lofsa
+; code_2571  ; lofsa
+; code_2590  ; lofsa
+; code_2616  ; lofsa
+; code_2629  ; lofsa
+; code_2648  ; lofsa
+; code_2657  ; lofsa
+; OBJECT scareEgo of 0x6 selector #3
+; code_2752  ; lofsa
+; code_2799  ; lofsa
+; code_2825  ; lofsa
+; code_2860  ; lofsa
+; code_2882  ; lofsa
+; code_2914  ; lofsa
+; code_2951  ; lofsa
+; OBJECT slugScript of 0x6 selector #3
+; code_3032  ; lofsa
+; code_3100  ; lofsa
+; code_3145  ; lofsa
+; code_3192  ; lofsa
+; OBJECT triScript of 0x6 selector #3
+; code_3274  ; lofsa
+; code_3328  ; lofsa
+; code_3377  ; lofsa
+; code_3418  ; lofsa
+; code_3454  ; lofsa
+; OBJECT fenrisScript of 0x6 selector #3
+; code_3536  ; lofsa
+; code_3552  ; lofsa
+; code_3591  ; lofsa
+; code_3595  ; lofsa
+; code_3599  ; lofsa
+; code_3603  ; lofsa
+; code_3626  ; lofsa
+; code_3653  ; lofsa
+; code_3670  ; lofsa
+; code_3722  ; lofsa
+; code_3743  ; lofsa
+; code_3760  ; lofsa
+; code_3781  ; lofsa
+; code_3804  ; lofsa
+; code_3813  ; lofsa
+; code_3839  ; lofsa
+; code_3860  ; lofsa
+; code_3883  ; lofsa
+; code_3887  ; lofsa
+; code_3891  ; lofsa
+; code_3902  ; lofsa
+; code_3934  ; lofsa
+; code_3954  ; lofsa
+; code_3988  ; lofsa
+; code_3992  ; lofsa
+; code_3996  ; lofsa
+; code_4000  ; lofsa
+; code_4008  ; lofsa
+; code_4064  ; lofsa
+; code_4071  ; lofsa
+; code_4128  ; lofsa
+; code_4135  ; lofsa
+; code_4186  ; lofsa
+; code_4193  ; lofsa
+; code_4225  ; lofsa
+; code_4237  ; lofsa
+; code_4296  ; lofsa
+; code_4313  ; lofsa
+; code_4320  ; lofsa
+; code_4343  ; lofsa
+; code_4360  ; lofsa
+; code_4367  ; lofsa
+; code_4386  ; lofsa
+; code_4412  ; lofsa
+; code_4416  ; lofsa
+; code_4420  ; lofsa
+; code_4424  ; lofsa
+; code_4432  ; lofsa
+; code_4449  ; lofsa
+; code_4478  ; lofsa
+; code_4500  ; lofsa
+; code_4525  ; lofsa
+; code_4562  ; lofsa
+; code_4593  ; lofsa
+; code_4608  ; lofsa
+; code_4635  ; lofsa
+; code_4649  ; lofsa
+; code_4675  ; lofsa
+; code_4690  ; lofsa
+; code_4710  ; lofsa
+; code_4742  ; lofsa
+; code_4764  ; lofsa
+; OBJECT bartendScript of 0x6 selector #3
+; code_4910  ; lofsa
+; code_4947  ; lofsa
+; code_4975  ; lofsa
+; code_4988  ; lofsa
+; code_5000  ; lofsa
+; code_5009  ; lofsa
+; OBJECT drinkDownBar of 0x6 selector #3
+; code_5098  ; lofsa
+; code_5149  ; lofsa
+; code_5179  ; lofsa
+; code_5206  ; lofsa
+; code_5228  ; lofsa
+; code_5251  ; lofsa
+; code_5273  ; lofsa
+; code_5305  ; lofsa
+; code_5343  ; lofsa
+; code_5356  ; lofsa
+; code_5366  ; lofsa
+; code_5394  ; lofsa
+; OBJECT beerJumping of 0x6 selector #3
+; code_5784  ; lofsa
+; code_5793  ; lofsa
+; code_5802  ; lofsa
+; code_5811  ; lofsa
+; code_5820  ; lofsa
+; code_5829  ; lofsa
+; code_5875  ; lofsa
+; code_5885  ; lofsa
+; code_5928  ; lofsa
+; code_5938  ; lofsa
+; code_6031  ; lofsa
+; code_6081  ; lofsa
+; code_6098  ; lofsa
+; code_6169  ; lofsa
+; code_6261  ; lofsa
+; code_6274  ; lofsa
+; code_6287  ; lofsa
+; code_6300  ; lofsa
+; code_6313  ; lofsa
+; code_6326  ; lofsa
+; code_6339  ; lofsa
+; code_6352  ; lofsa
+; code_6365  ; lofsa
+; code_6378  ; lofsa
+; code_6391  ; lofsa
+; code_6404  ; lofsa
+; code_6417  ; lofsa
+; code_6430  ; lofsa
+; code_6443  ; lofsa
+; code_6456  ; lofsa
+; code_6469  ; lofsa
+; code_6482  ; lofsa
+; code_6495  ; lofsa
+; code_6508  ; lofsa
+; code_6609  ; lofsa
+; code_6710  ; lofsa
+; code_6723  ; lofsa
+; code_6736  ; lofsa
+; code_6752  ; lofsa
+; code_6768  ; lofsa
+; code_6784  ; lofsa
+; OBJECT moveEgoToBar of 0x6 selector #3
+; code_7418  ; lofsa
+; code_7425  ; lofsa
+; code_7533  ; lofsa
+; code_7571  ; lofsa
+; code_7614  ; lofsa
+; code_7669  ; lofsa
+; code_7715  ; lofsa
+; code_7767  ; lofsa
+; code_7822  ; lofsa
+; code_7887  ; lofsa
+; code_7926  ; lofsa
+; OBJECT someoneDied of 0x6 selector #3
+; code_8197  ; lofsa
+; code_8447  ; lofsa
+; code_8514  ; lofsa
+; OBJECT playSlots of 0x6 selector #3
+; code_8715  ; lofsa
+; code_8757  ; lofsa
+; OBJECT breakSlots of 0x6 selector #3
+; OBJECT widget of 0x2f selector #3
+; OBJECT widget of 0x2f selector #13
+; OBJECT widget of 0x2f selector #21
+; code_9030  ; lofsa
+; OBJECT slugEyes of 0x2e selector #3
+; code_9144  ; lofsa
+; OBJECT kzittenArm of 0x2f selector #3
+; OBJECT kzittenArm of 0x2f selector #13
+; code_9286  ; lofsa
+; code_9299  ; lofsa
+; code_9318  ; lofsa
+; OBJECT kzittenHead of 0x2f selector #3
+; OBJECT kzittenHead of 0x2f selector #13
+; OBJECT kzittenHead of 0x2f selector #21
+; OBJECT slugGuy of 0x2f selector #3
+; OBJECT slugGuy of 0x2f selector #13
+; OBJECT slugGuy of 0x2f selector #21
+; OBJECT triGirl of 0x2f selector #3
+; OBJECT triGirl of 0x2f selector #13
+; OBJECT triGirl of 0x2f selector #21
+; code_10724  ; lofsa
+; OBJECT fenris of 0x2f selector #3
+; OBJECT fenris of 0x2f selector #13
+; OBJECT fenris of 0x2f selector #21
+; code_11223  ; lofsa
+; code_11250  ; lofsa
+; code_11290  ; lofsa
+; code_11309  ; lofsa
+; OBJECT bartender of 0x2f selector #3
+; OBJECT bartender of 0x2f selector #13
+; OBJECT bartender of 0x2f selector #21
+; code_11651  ; lofsa
+; OBJECT bartenderHead of 0x2f selector #3
+; OBJECT chp_dail of 0x2f selector #3
+; OBJECT chp_dail of 0x2f selector #13
+; OBJECT chp_dail of 0x2f selector #21
+; code_12178  ; lofsa
+; OBJECT slot of 0x2f selector #3
+; OBJECT sweeper of 0x30 selector #3
+; OBJECT sweeper of 0x30 selector #13
+; OBJECT sweeper of 0x30 selector #21
+; OBJECT beerMug of 0x30 selector #3
+; OBJECT beerMug of 0x30 selector #13
+; OBJECT beerMug of 0x30 selector #21
+; OBJECT C_DbeerMug of 0x30 selector #3
+; OBJECT C_DbeerMug of 0x30 selector #13
+; OBJECT C_DbeerMug of 0x30 selector #21
+; code_12728  ; lofsa
+; OBJECT fenrisBody of 0x2c selector #3
+; OBJECT fenrisBody of 0x2c selector #13
+; OBJECT fenrisBody of 0x2c selector #21
+; code_12810  ; lofsa
+; OBJECT kzitten of 0x2c selector #3
+; OBJECT kzitten of 0x2c selector #13
+; OBJECT kzitten of 0x2c selector #21
+; OBJECT lightCannon of 0x2c selector #3
+; OBJECT lightCannon of 0x2c selector #13
+; OBJECT lightCannon of 0x2c selector #21
+; code_13117  ; lofsa
+; code_13137  ; lofsa
+; OBJECT barTop of 0x2c selector #3
+; OBJECT barTop of 0x2c selector #13
+; OBJECT barTop of 0x2c selector #21
+; code_13312  ; lofsa
+; code_13391  ; lofsa
+; code_13442  ; lofsa
+; OBJECT slotMachine of 0x2c selector #3
+; OBJECT slotMachine of 0x2c selector #13
+; OBJECT slotMachine of 0x2c selector #21
+; OBJECT slotPoly of 0x23 selector #3
+; OBJECT stagePoly of 0x23 selector #3
+; OBJECT bartenderT of 0x6f selector #3
+; OBJECT bartenderBust of 0x2e selector #3
+; OBJECT bartenderEyes of 0x2f selector #3
+; OBJECT bartenderMouth of 0x2f selector #3

@@ -1534,5 +1534,56 @@ string_unused_19: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 50
-0x34, 0x39, 0x3e, 0x43, 0x48, 0x4d, 0x52, 0x57, 0x5f, 0x64, 0x69, 0x6e, 0x73, 0x78, 0x7d, 0x82, 0x168, 0x1b6, 0x1bb, 0x1c0, 0x1c5, 0x1ca, 0x1cf, 0x1d4, 0x1d9, 0x1e1, 0x1e6, 0x1eb, 0x1f0, 0x1f5, 0x1fa, 0x1ff, 0x204, 0x518, 0x552, 0x5c4, 0x620, 0x686, 0x6ec, 0x75e, 0x7ba, 0x820, 0x886, 0x8f8, 0x954, 0x9ba, 0xa20, 0xa92, 0xaee, 0xb54
+; code_51  ; lofsa
+; code_56  ; lofsa
+; code_61  ; lofsa
+; code_66  ; lofsa
+; code_71  ; lofsa
+; code_76  ; lofsa
+; code_81  ; lofsa
+; code_86  ; lofsa
+; code_94  ; lofsa
+; code_99  ; lofsa
+; code_104  ; lofsa
+; code_109  ; lofsa
+; code_114  ; lofsa
+; code_119  ; lofsa
+; code_124  ; lofsa
+; code_129  ; lofsa
+; OBJECT launchBayScript of 0x6 selector #3
+; code_437  ; lofsa
+; code_442  ; lofsa
+; code_447  ; lofsa
+; code_452  ; lofsa
+; code_457  ; lofsa
+; code_462  ; lofsa
+; code_467  ; lofsa
+; code_472  ; lofsa
+; code_480  ; lofsa
+; code_485  ; lofsa
+; code_490  ; lofsa
+; code_495  ; lofsa
+; code_500  ; lofsa
+; code_505  ; lofsa
+; code_510  ; lofsa
+; code_515  ; lofsa
+; OBJECT printGuard of 0x6 selector #3
+; OBJECT guardTr of 0x6f selector #3
+; OBJECT guardBustr of 0x2e selector #3
+; OBJECT guardMouthr of 0x2f selector #3
+; OBJECT guardEyesr of 0x2f selector #3
+; OBJECT guardTl of 0x6f selector #3
+; OBJECT guardBustl of 0x2e selector #3
+; OBJECT guardMouthl of 0x2f selector #3
+; OBJECT guardEyesl of 0x2f selector #3
+; OBJECT egoTl of 0x6f selector #3
+; OBJECT egoBustl of 0x2e selector #3
+; OBJECT egoMouthl of 0x2f selector #3
+; OBJECT egoEyesl of 0x2f selector #3
+; OBJECT egoTr of 0x6f selector #3
+; OBJECT egoBustr of 0x2e selector #3
+; OBJECT egoMouthr of 0x2f selector #3
+; OBJECT egoEyesr of 0x2f selector #3

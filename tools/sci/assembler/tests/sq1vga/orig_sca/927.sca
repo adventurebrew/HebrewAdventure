@@ -353,5 +353,8 @@ string_unused_2: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0x1dd, 0x244
+; code_476  ; lofsa
+; CLASS PAvoider of 0x1 selector #3

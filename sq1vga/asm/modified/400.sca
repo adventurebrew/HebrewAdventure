@@ -2193,5 +2193,131 @@ string_unused_62: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0xb9, 0xb4, 0xaf, 0xaa, 0xa5, 0xa0, 0x9b, 0x96, 0x91, 0x8c, 0x87, 0x82, 0x7d, 0x78, 0x73, 0xffff, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 125
-0x3c, 0x48, 0x54, 0x60, 0x6c, 0x78, 0x84, 0x90, 0x9c, 0xa8, 0xbd, 0xc9, 0xcd, 0xde, 0xee, 0xf8, 0x101, 0x109, 0x111, 0x119, 0x121, 0x129, 0x131, 0x139, 0x141, 0x149, 0x151, 0x159, 0x161, 0x184, 0x1bf, 0x1d8, 0x1e3, 0x22a, 0x264, 0x28d, 0x298, 0x2db, 0x2e6, 0x31e, 0x350, 0x3ca, 0x3e0, 0x3f6, 0x40c, 0x422, 0x438, 0x44e, 0x464, 0x47a, 0x490, 0x4a6, 0x4bc, 0x4d2, 0x4e8, 0x4fe, 0x514, 0x52a, 0x540, 0x556, 0x56c, 0x599, 0x5c8, 0x60c, 0x65c, 0x6c0, 0x6f9, 0x71e, 0x7a4, 0x7d9, 0x7e6, 0x818, 0x82c, 0x83c, 0x8f8, 0xa10, 0xad6, 0xaea, 0xafa, 0xb3a, 0xb4e, 0xb5e, 0xbac, 0xbc0, 0xbd0, 0xc1e, 0xc32, 0xc42, 0xc70, 0xc90, 0xca4, 0xcb4, 0xce2, 0xd02, 0xd16, 0xd26, 0xd54, 0xd74, 0xd88, 0xd98, 0xdc6, 0xde6, 0xdfa, 0xe0a, 0xe38, 0xe58, 0xe6c, 0xe7c, 0xeaa, 0xeca, 0xede, 0xeee, 0xf1c, 0xf3c, 0xf50, 0xf60, 0xf8e, 0xfae, 0xfc2, 0xfd2, 0x1000, 0x1020, 0x1034, 0x1044, 0x1072
+; code_59  ; lofsa
+; code_71  ; lofsa
+; code_83  ; lofsa
+; code_95  ; lofsa
+; code_107  ; lofsa
+; code_119  ; lofsa
+; code_131  ; lofsa
+; code_143  ; lofsa
+; code_155  ; lofsa
+; code_167  ; lofsa
+; code_188  ; lofsa
+; code_200  ; lofsa
+; code_204  ; lofsa
+; code_221  ; lofsa
+; code_237  ; lofsa
+; code_247  ; lofsa
+; code_256  ; lofsa
+; code_264  ; lofsa
+; code_272  ; lofsa
+; code_280  ; lofsa
+; code_288  ; lofsa
+; code_296  ; lofsa
+; code_304  ; lofsa
+; code_312  ; lofsa
+; code_320  ; lofsa
+; code_328  ; lofsa
+; code_336  ; lofsa
+; code_344  ; lofsa
+; code_352  ; lofsa
+; code_387  ; lofsa
+; code_446  ; lofsa
+; code_471  ; lofsa
+; code_482  ; lofsa
+; OBJECT raisePad of 0x6 selector #3
+; code_611  ; lofsa
+; code_652  ; lofsa
+; code_663  ; lofsa
+; code_730  ; lofsa
+; code_741  ; lofsa
+; OBJECT lowerPad of 0x6 selector #3
+; code_847  ; lofsa
+; code_969  ; lofsa
+; code_991  ; lofsa
+; code_1013  ; lofsa
+; code_1035  ; lofsa
+; code_1057  ; lofsa
+; code_1079  ; lofsa
+; code_1101  ; lofsa
+; code_1123  ; lofsa
+; code_1145  ; lofsa
+; code_1167  ; lofsa
+; code_1189  ; lofsa
+; code_1211  ; lofsa
+; code_1233  ; lofsa
+; code_1255  ; lofsa
+; code_1277  ; lofsa
+; code_1299  ; lofsa
+; code_1321  ; lofsa
+; code_1343  ; lofsa
+; code_1365  ; lofsa
+; code_1387  ; lofsa
+; code_1432  ; lofsa
+; code_1479  ; lofsa
+; OBJECT enterScript of 0x6 selector #3
+; code_1627  ; lofsa
+; OBJECT keyFlashScript of 0x6 selector #3
+; code_1784  ; lofsa
+; OBJECT quitScript of 0x6 selector #3
+; code_1955  ; lofsa
+; code_2008  ; lofsa
+; code_2021  ; lofsa
+; CLASS KeyPadButton of 0x2f selector #3
+; CLASS KeyPadButton of 0x2f selector #13
+; CLASS KeyPadButton of 0x2f selector #21
+; OBJECT beep of 0xa selector #3
+; OBJECT hand of 0x2e selector #3
+; OBJECT keyPad of 0x2e selector #3
+; OBJECT keyPad of 0x2e selector #13
+; OBJECT keyPad of 0x2e selector #21
+; OBJECT enterBut of 0x88 selector #3
+; OBJECT enterBut of 0x88 selector #13
+; OBJECT enterBut of 0x88 selector #21
+; OBJECT quitBut of 0x88 selector #3
+; OBJECT quitBut of 0x88 selector #13
+; OBJECT quitBut of 0x88 selector #21
+; OBJECT oneBut of 0x88 selector #3
+; OBJECT oneBut of 0x88 selector #13
+; OBJECT oneBut of 0x88 selector #21
+; OBJECT oneBut of 0x88 selector #44
+; OBJECT twoBut of 0x88 selector #3
+; OBJECT twoBut of 0x88 selector #13
+; OBJECT twoBut of 0x88 selector #21
+; OBJECT twoBut of 0x88 selector #44
+; OBJECT threeBut of 0x88 selector #3
+; OBJECT threeBut of 0x88 selector #13
+; OBJECT threeBut of 0x88 selector #21
+; OBJECT threeBut of 0x88 selector #44
+; OBJECT fourBut of 0x88 selector #3
+; OBJECT fourBut of 0x88 selector #13
+; OBJECT fourBut of 0x88 selector #21
+; OBJECT fourBut of 0x88 selector #44
+; OBJECT fiveBut of 0x88 selector #3
+; OBJECT fiveBut of 0x88 selector #13
+; OBJECT fiveBut of 0x88 selector #21
+; OBJECT fiveBut of 0x88 selector #44
+; OBJECT sixBut of 0x88 selector #3
+; OBJECT sixBut of 0x88 selector #13
+; OBJECT sixBut of 0x88 selector #21
+; OBJECT sixBut of 0x88 selector #44
+; OBJECT sevenBut of 0x88 selector #3
+; OBJECT sevenBut of 0x88 selector #13
+; OBJECT sevenBut of 0x88 selector #21
+; OBJECT sevenBut of 0x88 selector #44
+; OBJECT eightBut of 0x88 selector #3
+; OBJECT eightBut of 0x88 selector #13
+; OBJECT eightBut of 0x88 selector #21
+; OBJECT eightBut of 0x88 selector #44
+; OBJECT nineBut of 0x88 selector #3
+; OBJECT nineBut of 0x88 selector #13
+; OBJECT nineBut of 0x88 selector #21
+; OBJECT nineBut of 0x88 selector #44
+; OBJECT zeroBut of 0x88 selector #3
+; OBJECT zeroBut of 0x88 selector #13
+; OBJECT zeroBut of 0x88 selector #21
+; OBJECT zeroBut of 0x88 selector #44

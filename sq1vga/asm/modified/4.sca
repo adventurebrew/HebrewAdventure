@@ -2579,5 +2579,61 @@ string_unused_21: ""
 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 55
-0x42, 0x103, 0x204, 0x21c, 0x2b6, 0x2bf, 0x2cd, 0x2ea, 0x2f7, 0x32e, 0x396, 0x400, 0x40d, 0x419, 0x468, 0x480, 0x5b8, 0x60e, 0x661, 0x704, 0x75a, 0x7b3, 0x7f4, 0x8b6, 0x8bf, 0x9c0, 0x9df, 0xa0b, 0xa19, 0xa6f, 0xb88, 0xbc5, 0xbf4, 0xc56, 0xc70, 0xc84, 0xd10, 0xddb, 0xdf6, 0xe0a, 0xe9c, 0xeb6, 0xeca, 0xf7b, 0xf96, 0xfaa, 0x106a, 0x1084, 0x1098, 0x10ed, 0x1124, 0x1234, 0x1250, 0x1264, 0x1274
+; code_65  ; lofsa
+; code_258  ; lofsa
+; code_515  ; lofsa
+; code_539  ; lofsa
+; code_693  ; lofsa
+; code_702  ; lofsa
+; code_716  ; lofsa
+; code_745  ; lofsa
+; code_758  ; lofsa
+; code_813  ; lofsa
+; code_917  ; lofsa
+; code_1023  ; lofsa
+; code_1036  ; lofsa
+; code_1048  ; lofsa
+; code_1127  ; lofsa
+; OBJECT rm4 of 0x74 selector #3
+; OBJECT searchBody of 0x6 selector #3
+; code_1549  ; lofsa
+; code_1632  ; lofsa
+; OBJECT walkInCloset of 0x6 selector #3
+; code_1881  ; lofsa
+; code_1970  ; lofsa
+; OBJECT walkOutCloset of 0x6 selector #3
+; code_2229  ; lofsa
+; code_2238  ; lofsa
+; code_2495  ; lofsa
+; code_2526  ; lofsa
+; code_2570  ; lofsa
+; code_2584  ; lofsa
+; code_2670  ; lofsa
+; OBJECT beginGame of 0x6 selector #3
+; code_3012  ; lofsa
+; OBJECT egoSafe of 0x1 selector #3
+; code_3157  ; lofsa
+; OBJECT elevatorLight of 0x2e selector #3
+; OBJECT elevatorLight of 0x2e selector #13
+; code_3343  ; lofsa
+; code_3546  ; lofsa
+; OBJECT body of 0x2e selector #3
+; OBJECT body of 0x2e selector #13
+; code_3739  ; lofsa
+; OBJECT lowerDoor of 0x73 selector #3
+; OBJECT lowerDoor of 0x73 selector #13
+; code_3962  ; lofsa
+; OBJECT closetDoor of 0x2f selector #3
+; OBJECT closetDoor of 0x2f selector #13
+; code_4201  ; lofsa
+; OBJECT alertSign of 0x2f selector #3
+; OBJECT alertSign of 0x2f selector #13
+; code_4332  ; lofsa
+; code_4387  ; lofsa
+; code_4659  ; lofsa
+; OBJECT panicDroid of 0x30 selector #3
+; OBJECT panicDroid of 0x30 selector #13
+; OBJECT panicDroid of 0x30 selector #21

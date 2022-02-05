@@ -5211,5 +5211,244 @@ string_unused_90: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x122, 0x4f, 0x2, 0x118, 0x54, 0x3, 0x10e, 0x57, 0x4, 0x106, 0x5d, 0x5, 0xfe, 0x62, 0x6, 0xf6, 0x63, 0x7, 0xec, 0x68, 0x8, 0xe0, 0x70, 0x9, 0xd7, 0x74, 0xa, 0xce, 0x7a, 0xb, 0xc5, 0x80, 0xc, 0xbc, 0x86, 0xe, 0xb5, 0x8a, 0xffff, 0xffff, 0xffff, 0x0, 0x0, 0x0, 0x3, 0xda, 0x6a, 0x1, 0xd3, 0x70, 0x5, 0xc7, 0x73, 0x6, 0xba, 0x73, 0x2, 0xaf, 0x78, 0x1, 0xa5, 0x7f, 0xffff, 0xffff, 0xffff, 0xb4, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 238
-0x24, 0x32, 0x3a, 0x42, 0x4a, 0xd0, 0xd4, 0xd8, 0xdc, 0xe0, 0xe4, 0xe8, 0xec, 0x100, 0x11e, 0x13f, 0x14e, 0x163, 0x16f, 0x17b, 0x187, 0x1fb, 0x266, 0x2a3, 0x316, 0x3c2, 0x3fa, 0x409, 0x414, 0x41f, 0x42a, 0x462, 0x4b7, 0x4e9, 0x4ff, 0x503, 0x519, 0x562, 0x590, 0x5c8, 0x600, 0x608, 0x634, 0x6ba, 0x730, 0x74f, 0x774, 0x7d2, 0x7da, 0x7ed, 0x808, 0x8a1, 0x8c9, 0x8f8, 0x927, 0x939, 0x963, 0x96b, 0x974, 0x978, 0x97c, 0x980, 0x984, 0xa11, 0xa93, 0xaaa, 0xac6, 0xb40, 0xb48, 0xb50, 0xb58, 0xb60, 0xb68, 0xb70, 0xb7f, 0xb87, 0xbb5, 0xc00, 0xc08, 0xc10, 0xc23, 0xc2d, 0xc52, 0xc8e, 0xca4, 0xcac, 0xcb4, 0xcbc, 0xcc4, 0xcd1, 0xcf3, 0xd0b, 0xd75, 0xd93, 0xd9c, 0xdb8, 0xdce, 0xde2, 0xdea, 0xe2b, 0xe5f, 0xe76, 0xe87, 0xeb6, 0x10fb, 0x1126, 0x1185, 0x11b6, 0x11ff, 0x121d, 0x1289, 0x12af, 0x134d, 0x13aa, 0x1411, 0x1474, 0x14a0, 0x14e7, 0x1521, 0x152e, 0x153f, 0x1547, 0x156a, 0x1577, 0x1584, 0x15c8, 0x1603, 0x162c, 0x1640, 0x1650, 0x1682, 0x1696, 0x16a6, 0x16cd, 0x172a, 0x173e, 0x174e, 0x1776, 0x177c, 0x17a6, 0x17ba, 0x17ca, 0x17f2, 0x17f8, 0x1822, 0x1836, 0x186e, 0x1874, 0x189e, 0x18b2, 0x191a, 0x192e, 0x1961, 0x198a, 0x199e, 0x19ae, 0x19ca, 0x19de, 0x19ee, 0x1a76, 0x1a8a, 0x1a9a, 0x1ad6, 0x1aea, 0x1afa, 0x1b32, 0x1b46, 0x1b56, 0x1b8e, 0x1ba2, 0x1bb2, 0x1bea, 0x1bfe, 0x1c0e, 0x1c46, 0x1c5a, 0x1c6a, 0x1ce8, 0x1cfc, 0x1da4, 0x1db8, 0x1dc8, 0x1e28, 0x1e3c, 0x1e4c, 0x1ea8, 0x1ebc, 0x1ecc, 0x1f12, 0x1f2a, 0x1f94, 0x1fac, 0x2016, 0x202a, 0x203a, 0x207c, 0x2090, 0x20a0, 0x20e2, 0x20f6, 0x2106, 0x2148, 0x215c, 0x216c, 0x21ae, 0x21c2, 0x21d2, 0x2214, 0x2228, 0x2238, 0x227a, 0x228e, 0x229e, 0x22e9, 0x22f9, 0x2314, 0x2324, 0x2356, 0x23c8, 0x23dc, 0x23ec, 0x2446, 0x247d, 0x24a8, 0x24bc, 0x24cc, 0x250d, 0x2538, 0x254c, 0x257f, 0x2585, 0x259c, 0x25c8, 0x25dc, 0x2608, 0x261c, 0x262c, 0x2698
+; code_35  ; lofsa
+; code_49  ; lofsa
+; code_57  ; lofsa
+; code_65  ; lofsa
+; code_73  ; lofsa
+; code_207  ; lofsa
+; code_211  ; lofsa
+; code_215  ; lofsa
+; code_219  ; lofsa
+; code_223  ; lofsa
+; code_227  ; lofsa
+; code_231  ; lofsa
+; code_235  ; lofsa
+; code_255  ; lofsa
+; code_285  ; lofsa
+; code_318  ; lofsa
+; code_333  ; lofsa
+; code_354  ; lofsa
+; code_366  ; lofsa
+; code_378  ; lofsa
+; code_390  ; lofsa
+; code_506  ; lofsa
+; code_613  ; lofsa
+; code_674  ; lofsa
+; OBJECT rm14 of 0x43 selector #3
+; OBJECT outOfGas of 0x6 selector #3
+; code_1017  ; lofsa
+; code_1032  ; lofsa
+; code_1043  ; lofsa
+; code_1054  ; lofsa
+; code_1065  ; lofsa
+; OBJECT buttonInset of 0x6 selector #3
+; code_1206  ; lofsa
+; code_1256  ; lofsa
+; code_1278  ; lofsa
+; code_1282  ; lofsa
+; code_1304  ; lofsa
+; code_1377  ; lofsa
+; code_1423  ; lofsa
+; code_1479  ; lofsa
+; code_1535  ; lofsa
+; code_1543  ; lofsa
+; OBJECT showKerona of 0x6 selector #3
+; OBJECT doHyperspace of 0x6 selector #3
+; code_1839  ; lofsa
+; code_1870  ; lofsa
+; code_1907  ; lofsa
+; code_2001  ; lofsa
+; code_2009  ; lofsa
+; code_2028  ; lofsa
+; OBJECT autoNavScript of 0x6 selector #3
+; code_2208  ; lofsa
+; code_2248  ; lofsa
+; code_2295  ; lofsa
+; code_2342  ; lofsa
+; code_2360  ; lofsa
+; code_2402  ; lofsa
+; code_2410  ; lofsa
+; code_2419  ; lofsa
+; code_2423  ; lofsa
+; code_2427  ; lofsa
+; code_2431  ; lofsa
+; code_2435  ; lofsa
+; code_2576  ; lofsa
+; code_2706  ; lofsa
+; code_2729  ; lofsa
+; OBJECT watchPodLand of 0x6 selector #3
+; code_2879  ; lofsa
+; code_2887  ; lofsa
+; code_2895  ; lofsa
+; code_2903  ; lofsa
+; code_2911  ; lofsa
+; code_2919  ; lofsa
+; code_2927  ; lofsa
+; code_2942  ; lofsa
+; code_2950  ; lofsa
+; code_2996  ; lofsa
+; code_3071  ; lofsa
+; code_3079  ; lofsa
+; code_3087  ; lofsa
+; code_3106  ; lofsa
+; code_3116  ; lofsa
+; OBJECT crashedPod of 0x6 selector #3
+; code_3213  ; lofsa
+; code_3235  ; lofsa
+; code_3243  ; lofsa
+; code_3251  ; lofsa
+; code_3259  ; lofsa
+; code_3267  ; lofsa
+; code_3280  ; lofsa
+; code_3314  ; lofsa
+; code_3338  ; lofsa
+; code_3444  ; lofsa
+; code_3474  ; lofsa
+; code_3483  ; lofsa
+; code_3511  ; lofsa
+; code_3533  ; lofsa
+; code_3553  ; lofsa
+; code_3561  ; lofsa
+; code_3626  ; lofsa
+; code_3678  ; lofsa
+; code_3701  ; lofsa
+; code_3718  ; lofsa
+; OBJECT pushButton of 0x6 selector #3
+; code_4346  ; lofsa
+; code_4389  ; lofsa
+; code_4484  ; lofsa
+; code_4533  ; lofsa
+; code_4606  ; lofsa
+; code_4636  ; lofsa
+; code_4744  ; lofsa
+; code_4782  ; lofsa
+; code_4940  ; lofsa
+; OBJECT pressedWrongButton of 0x6 selector #3
+; code_5136  ; lofsa
+; code_5235  ; lofsa
+; OBJECT throttleUp of 0x6 selector #3
+; code_5350  ; lofsa
+; code_5408  ; lofsa
+; code_5421  ; lofsa
+; code_5438  ; lofsa
+; code_5446  ; lofsa
+; code_5481  ; lofsa
+; code_5494  ; lofsa
+; code_5507  ; lofsa
+; OBJECT unBuckle of 0x6 selector #3
+; code_5634  ; lofsa
+; OBJECT joystick of 0x2c selector #3
+; OBJECT joystick of 0x2c selector #13
+; OBJECT joystick of 0x2c selector #21
+; OBJECT egoSuit of 0x2c selector #3
+; OBJECT egoSuit of 0x2c selector #13
+; OBJECT egoSuit of 0x2c selector #21
+; code_5836  ; lofsa
+; OBJECT seatBeltFeat of 0x2c selector #3
+; OBJECT seatBeltFeat of 0x2c selector #13
+; OBJECT seatBeltFeat of 0x2c selector #21
+; code_6005  ; lofsa
+; code_6011  ; lofsa
+; OBJECT Dials of 0x2c selector #3
+; OBJECT Dials of 0x2c selector #13
+; OBJECT Dials of 0x2c selector #21
+; code_6129  ; lofsa
+; code_6135  ; lofsa
+; OBJECT ControlPanel of 0x2c selector #3
+; OBJECT ControlPanel of 0x2c selector #13
+; code_6253  ; lofsa
+; code_6259  ; lofsa
+; OBJECT Chair of 0x2c selector #3
+; OBJECT Chair of 0x2c selector #13
+; OBJECT PodWindow of 0x2c selector #3
+; OBJECT PodWindow of 0x2c selector #13
+; code_6496  ; lofsa
+; OBJECT ButtonPad of 0x2c selector #3
+; OBJECT ButtonPad of 0x2c selector #13
+; OBJECT ButtonPad of 0x2c selector #21
+; OBJECT kerona of 0x2e selector #3
+; OBJECT kerona of 0x2e selector #13
+; OBJECT kerona of 0x2e selector #21
+; OBJECT survivalKit of 0x2e selector #3
+; OBJECT survivalKit of 0x2e selector #13
+; OBJECT survivalKit of 0x2e selector #21
+; OBJECT back1 of 0x2e selector #3
+; OBJECT back1 of 0x2e selector #13
+; OBJECT back1 of 0x2e selector #21
+; OBJECT back2 of 0x2e selector #3
+; OBJECT back2 of 0x2e selector #13
+; OBJECT back2 of 0x2e selector #21
+; OBJECT back3 of 0x2e selector #3
+; OBJECT back3 of 0x2e selector #13
+; OBJECT back3 of 0x2e selector #21
+; OBJECT back4 of 0x2e selector #3
+; OBJECT back4 of 0x2e selector #13
+; OBJECT back4 of 0x2e selector #21
+; OBJECT back5 of 0x2e selector #3
+; OBJECT back5 of 0x2e selector #13
+; OBJECT back5 of 0x2e selector #21
+; OBJECT ledLights of 0x2f selector #3
+; OBJECT ledLights of 0x2f selector #13
+; OBJECT screen of 0x2f selector #3
+; OBJECT screen of 0x2f selector #13
+; OBJECT screen of 0x2f selector #21
+; OBJECT arm of 0x2f selector #3
+; OBJECT arm of 0x2f selector #13
+; OBJECT arm of 0x2f selector #21
+; OBJECT head of 0x2f selector #3
+; OBJECT head of 0x2f selector #13
+; OBJECT head of 0x2f selector #21
+; code_7953  ; lofsa
+; OBJECT seatbelt1 of 0x2f selector #3
+; code_8083  ; lofsa
+; OBJECT seatbelt2 of 0x2f selector #3
+; OBJECT star1 of 0x2f selector #3
+; OBJECT star1 of 0x2f selector #13
+; OBJECT star1 of 0x2f selector #21
+; OBJECT star2 of 0x2f selector #3
+; OBJECT star2 of 0x2f selector #13
+; OBJECT star2 of 0x2f selector #21
+; OBJECT star3 of 0x2f selector #3
+; OBJECT star3 of 0x2f selector #13
+; OBJECT star3 of 0x2f selector #21
+; OBJECT smoke of 0x2f selector #3
+; OBJECT smoke of 0x2f selector #13
+; OBJECT smoke of 0x2f selector #21
+; OBJECT door of 0x2f selector #3
+; OBJECT door of 0x2f selector #13
+; OBJECT door of 0x2f selector #21
+; OBJECT glass of 0x2f selector #3
+; OBJECT glass of 0x2f selector #13
+; OBJECT glass of 0x2f selector #21
+; OBJECT hologram of 0x2f selector #3
+; OBJECT hologram of 0x2f selector #13
+; OBJECT hologram of 0x2f selector #21
+; code_8936  ; lofsa
+; code_8952  ; lofsa
+; code_8979  ; lofsa
+; code_8995  ; lofsa
+; OBJECT tempProp of 0x2f selector #3
+; OBJECT escapePod of 0x30 selector #3
+; OBJECT escapePod of 0x30 selector #13
+; OBJECT escapePod of 0x30 selector #21
+; OBJECT cockpitSound of 0xa selector #3
+; code_9340  ; lofsa
+; OBJECT AutoNavButton of 0x2c selector #3
+; OBJECT AutoNavButton of 0x2c selector #13
+; OBJECT AutoNavButton of 0x2c selector #21
+; code_9484  ; lofsa
+; OBJECT DontPressButton of 0x2c selector #3
+; OBJECT DontPressButton of 0x2c selector #13
+; code_9598  ; lofsa
+; code_9604  ; lofsa
+; code_9627  ; lofsa
+; OBJECT PowerButton of 0x2c selector #3
+; OBJECT PowerButton of 0x2c selector #13
+; OBJECT padInset of 0x2e selector #3
+; OBJECT padInset of 0x2e selector #13
+; OBJECT padInset of 0x2e selector #21
+; OBJECT BUTTON of 0x2e selector #3

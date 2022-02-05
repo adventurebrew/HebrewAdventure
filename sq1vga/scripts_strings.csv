@@ -1140,6 +1140,7 @@
 "927.0","string_0","isBlockedPoly?","",""
 "928.0","string_1","fastCast","",""
 "932.0","string_0","","",""
+"990.0","string_0","Restore","שחזר",""
 "990.0","string_1","  Save  ","__שמירה__",""
 "990.0","string_2","Replace","החלפה",""
 "990.0","string_3","Select the game that you would like to restore.","בחר את השמירה שברצונך לטעון.",""

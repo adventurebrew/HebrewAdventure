@@ -4137,5 +4137,161 @@ string_unused_39: ""
 0x0, 0x79, 0x84, 0xa1, 0x78, 0xbd, 0x85, 0x96, 0x92, 0x109, 0xbd, 0x0, 0xbd, 0x0, 0x0, 0x13f, 0x0, 0x13f, 0xbd, 0x81, 0x60, 0x7e, 0x5f, 0x74, 0x5d, 0x69, 0x60, 0x73, 0x65, 0x68, 0x69, 0x5a, 0x65, 0x4f, 0x68, 0x5b, 0x6e, 0x4d, 0x73, 0x3c, 0x6d, 0x34, 0x70, 0x3f, 0x77, 0x24, 0x7d, 0x4e, 0x95, 0x32, 0x9f, 0x4c, 0xae, 0x6c, 0xa1, 0x89, 0xb1, 0xaf, 0xb3, 0xde, 0xa5, 0x104, 0xbc, 0x54, 0x93, 0x32, 0x9f, 0x49, 0xaf, 0x6c, 0xa0, 0x83, 0xb0, 0xae, 0xb2, 0xdd, 0xa2, 0x10c, 0xbd, 0x0, 0xbd, 0x0, 0x1, 0x13f, 0x1, 0x13f, 0xbd, 0x81, 0x5f, 0x6e, 0x64, 0x84, 0x6e, 0x5b, 0x79, 0x4a, 0x71, 0x26, 0x79
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 155
-0x61, 0x72, 0x83, 0x94, 0xaf, 0xc0, 0xd3, 0xd7, 0xe4, 0x100, 0x104, 0x190, 0x194, 0x198, 0x19c, 0x1a0, 0x1a4, 0x1a8, 0x1d0, 0x1e4, 0x1fe, 0x272, 0x28f, 0x2c2, 0x312, 0x332, 0x352, 0x3e3, 0x40f, 0x448, 0x457, 0x49c, 0x4e8, 0x4f6, 0x503, 0x512, 0x53e, 0x612, 0x621, 0x650, 0x669, 0x6de, 0x76c, 0x846, 0x8e8, 0x926, 0x96e, 0x9b8, 0x9cc, 0x9e0, 0x9fe, 0xa0b, 0xa2f, 0xa38, 0xa70, 0xa8e, 0xabe, 0xafc, 0xdcc, 0xe0c, 0xe24, 0xe38, 0xe56, 0xe63, 0xe87, 0xe90, 0xeaf, 0xec4, 0xef2, 0xeff, 0xf1f, 0xf8e, 0x100b, 0x1038, 0x1061, 0x108a, 0x10bc, 0x1100, 0x1114, 0x1163, 0x1182, 0x11ab, 0x1207, 0x1210, 0x1264, 0x1286, 0x12cd, 0x1300, 0x1341, 0x136c, 0x13b6, 0x13ca, 0x13e8, 0x13f5, 0x1419, 0x1422, 0x1442, 0x146e, 0x1494, 0x14c8, 0x14da, 0x1504, 0x154e, 0x1562, 0x1580, 0x158d, 0x15b1, 0x15ba, 0x15eb, 0x1600, 0x1610, 0x1643, 0x166f, 0x16a0, 0x16ea, 0x16fe, 0x171c, 0x1729, 0x1745, 0x1749, 0x175e, 0x1789, 0x1799, 0x17d5, 0x17f5, 0x1834, 0x1920, 0x198a, 0x19ec, 0x1a7a, 0x1ac6, 0x1ad9, 0x1b00, 0x1b1e, 0x1b2c, 0x1b43, 0x1ba2, 0x1bd8, 0x1bec, 0x1bfc, 0x1c16, 0x1c2a, 0x1c3a, 0x1c54, 0x1c68, 0x1c78, 0x1c92, 0x1ca6, 0x1cb6, 0x1cf8, 0x1d0c, 0x1d62, 0x1d76, 0x1dcc, 0x1de0
+; code_96  ; lofsa
+; code_113  ; lofsa
+; code_130  ; lofsa
+; code_147  ; lofsa
+; code_174  ; lofsa
+; code_191  ; lofsa
+; code_210  ; lofsa
+; code_214  ; lofsa
+; code_227  ; lofsa
+; code_255  ; lofsa
+; code_259  ; lofsa
+; code_399  ; lofsa
+; code_403  ; lofsa
+; code_407  ; lofsa
+; code_411  ; lofsa
+; code_415  ; lofsa
+; code_419  ; lofsa
+; code_423  ; lofsa
+; code_463  ; lofsa
+; code_483  ; lofsa
+; code_509  ; lofsa
+; code_625  ; lofsa
+; code_654  ; lofsa
+; OBJECT rm54 of 0x74 selector #3
+; OBJECT trunkPoly of 0x23 selector #3
+; OBJECT roomWithTrunkForwardPoly of 0x23 selector #3
+; OBJECT roomWithTrunkBackPoly of 0x23 selector #3
+; code_994  ; lofsa
+; code_1038  ; lofsa
+; code_1095  ; lofsa
+; code_1110  ; lofsa
+; code_1179  ; lofsa
+; code_1255  ; lofsa
+; code_1269  ; lofsa
+; code_1282  ; lofsa
+; code_1297  ; lofsa
+; OBJECT vent of 0x2f selector #3
+; code_1553  ; lofsa
+; code_1568  ; lofsa
+; code_1615  ; lofsa
+; code_1640  ; lofsa
+; OBJECT trunk of 0x2f selector #3
+; OBJECT guard of 0x30 selector #3
+; OBJECT fromAirlock of 0x6 selector #3
+; OBJECT fromHall of 0x6 selector #3
+; code_2341  ; lofsa
+; OBJECT toHall of 0x6 selector #3
+; code_2487  ; lofsa
+; code_2507  ; lofsa
+; code_2527  ; lofsa
+; code_2557  ; lofsa
+; code_2570  ; lofsa
+; code_2606  ; lofsa
+; code_2615  ; lofsa
+; code_2671  ; lofsa
+; code_2701  ; lofsa
+; code_2749  ; lofsa
+; code_2811  ; lofsa
+; OBJECT egoClimbInTrunk of 0x6 selector #3
+; code_3595  ; lofsa
+; code_3619  ; lofsa
+; code_3639  ; lofsa
+; code_3669  ; lofsa
+; code_3682  ; lofsa
+; code_3718  ; lofsa
+; code_3727  ; lofsa
+; code_3758  ; lofsa
+; code_3779  ; lofsa
+; code_3825  ; lofsa
+; code_3838  ; lofsa
+; code_3870  ; lofsa
+; OBJECT climbInVent of 0x6 selector #3
+; code_4106  ; lofsa
+; code_4151  ; lofsa
+; code_4192  ; lofsa
+; code_4233  ; lofsa
+; OBJECT fiddleWithVent of 0x6 selector #3
+; code_4351  ; lofsa
+; code_4371  ; lofsa
+; code_4450  ; lofsa
+; code_4481  ; lofsa
+; code_4522  ; lofsa
+; code_4614  ; lofsa
+; code_4623  ; lofsa
+; code_4707  ; lofsa
+; OBJECT egoTestVent of 0x6 selector #3
+; code_4812  ; lofsa
+; OBJECT openVentScript of 0x6 selector #3
+; code_4928  ; lofsa
+; OBJECT closeVentScript of 0x6 selector #3
+; code_5045  ; lofsa
+; code_5065  ; lofsa
+; code_5095  ; lofsa
+; code_5108  ; lofsa
+; code_5144  ; lofsa
+; code_5153  ; lofsa
+; code_5185  ; lofsa
+; code_5229  ; lofsa
+; code_5267  ; lofsa
+; code_5319  ; lofsa
+; code_5337  ; lofsa
+; OBJECT openTrunkScript of 0x6 selector #3
+; code_5453  ; lofsa
+; code_5473  ; lofsa
+; code_5503  ; lofsa
+; code_5516  ; lofsa
+; code_5552  ; lofsa
+; code_5561  ; lofsa
+; code_5610  ; lofsa
+; code_5631  ; lofsa
+; code_5647  ; lofsa
+; code_5698  ; lofsa
+; code_5742  ; lofsa
+; OBJECT closeTrunkScript of 0x6 selector #3
+; code_5865  ; lofsa
+; code_5885  ; lofsa
+; code_5915  ; lofsa
+; code_5928  ; lofsa
+; code_5956  ; lofsa
+; code_5960  ; lofsa
+; code_5981  ; lofsa
+; code_6024  ; lofsa
+; code_6040  ; lofsa
+; code_6100  ; lofsa
+; code_6132  ; lofsa
+; OBJECT pushTheTrunkScript of 0x6 selector #3
+; OBJECT cantReachIt of 0x6 selector #3
+; code_6537  ; lofsa
+; OBJECT climbOutOfVent of 0x6 selector #3
+; OBJECT killEgoTimeOut of 0x6 selector #3
+; code_6853  ; lofsa
+; code_6872  ; lofsa
+; code_6911  ; lofsa
+; code_6941  ; lofsa
+; code_6955  ; lofsa
+; code_6978  ; lofsa
+; OBJECT killEgo of 0x6 selector #3
+; OBJECT ventShaft of 0x7b selector #3
+; OBJECT ventShaft of 0x7b selector #13
+; OBJECT ventShaft of 0x7b selector #21
+; OBJECT shadows of 0x7b selector #3
+; OBJECT shadows of 0x7b selector #13
+; OBJECT shadows of 0x7b selector #21
+; OBJECT airLock of 0x7b selector #3
+; OBJECT airLock of 0x7b selector #13
+; OBJECT airLock of 0x7b selector #21
+; OBJECT vaults of 0x7b selector #3
+; OBJECT vaults of 0x7b selector #13
+; OBJECT vaults of 0x7b selector #21
+; OBJECT floor1 of 0x7b selector #3
+; OBJECT floor1 of 0x7b selector #13
+; OBJECT floor2 of 0x7b selector #3
+; OBJECT floor2 of 0x7b selector #13
+; OBJECT floor3 of 0x7b selector #3
+; OBJECT floor3 of 0x7b selector #13

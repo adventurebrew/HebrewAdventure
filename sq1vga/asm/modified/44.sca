@@ -2742,5 +2742,118 @@ string_unused_27: ""
 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 112
-0x68, 0x74, 0x80, 0x88, 0x94, 0x9c, 0xac, 0xbd, 0xd2, 0xe7, 0x103, 0x128, 0x13c, 0x14f, 0x196, 0x201, 0x27f, 0x290, 0x2a2, 0x2eb, 0x2f4, 0x302, 0x363, 0x3e7, 0x42e, 0x43a, 0x49c, 0x4c1, 0x4e2, 0x5f3, 0x622, 0x64e, 0x678, 0x6c0, 0x6c9, 0x6d6, 0x6e2, 0x71e, 0x72b, 0x73d, 0x8e0, 0x8fe, 0x92b, 0x935, 0x993, 0xa0a, 0xa1e, 0xa2e, 0xa87, 0xa91, 0xaa6, 0xabe, 0xad2, 0xae2, 0xb3b, 0xb48, 0xb66, 0xb7e, 0xb92, 0xba2, 0xbfd, 0xc14, 0xc28, 0xc38, 0xc8f, 0xca6, 0xcba, 0xcca, 0xd21, 0xd38, 0xd4c, 0xd5c, 0xdc5, 0xe1b, 0xe6b, 0xecc, 0xee0, 0xef0, 0xf0c, 0xf2e, 0xf9f, 0xfea, 0xff2, 0xff6, 0xffa, 0x100a, 0x1012, 0x1016, 0x101a, 0x102a, 0x1032, 0x1036, 0x103a, 0x1043, 0x104c, 0x1067, 0x10ca, 0x10de, 0x10ee, 0x1116, 0x113e, 0x1160, 0x119e, 0x1202, 0x1216, 0x1226, 0x1273, 0x12bc, 0x132c, 0x1340, 0x1350, 0x1402
+; code_103  ; lofsa
+; code_115  ; lofsa
+; code_127  ; lofsa
+; code_135  ; lofsa
+; code_147  ; lofsa
+; code_155  ; lofsa
+; code_171  ; lofsa
+; code_188  ; lofsa
+; code_209  ; lofsa
+; code_230  ; lofsa
+; code_258  ; lofsa
+; code_295  ; lofsa
+; code_315  ; lofsa
+; code_334  ; lofsa
+; code_405  ; lofsa
+; code_512  ; lofsa
+; code_638  ; lofsa
+; code_655  ; lofsa
+; code_673  ; lofsa
+; code_746  ; lofsa
+; code_755  ; lofsa
+; code_769  ; lofsa
+; code_866  ; lofsa
+; code_998  ; lofsa
+; OBJECT rm44 of 0x43 selector #3
+; OBJECT rm44 of 0x43 selector #9
+; code_1179  ; lofsa
+; code_1216  ; lofsa
+; OBJECT initScript of 0x6 selector #3
+; code_1522  ; lofsa
+; code_1569  ; lofsa
+; code_1613  ; lofsa
+; OBJECT spinPic of 0x6 selector #3
+; code_1727  ; lofsa
+; code_1736  ; lofsa
+; code_1749  ; lofsa
+; code_1761  ; lofsa
+; code_1821  ; lofsa
+; code_1834  ; lofsa
+; code_1852  ; lofsa
+; code_2271  ; lofsa
+; OBJECT spinDone of 0x6 selector #3
+; code_2346  ; lofsa
+; code_2356  ; lofsa
+; code_2450  ; lofsa
+; OBJECT pic1 of 0x30 selector #3
+; OBJECT pic1 of 0x30 selector #13
+; OBJECT pic1 of 0x30 selector #21
+; code_2694  ; lofsa
+; code_2704  ; lofsa
+; code_2725  ; lofsa
+; OBJECT pic2 of 0x30 selector #3
+; OBJECT pic2 of 0x30 selector #13
+; OBJECT pic2 of 0x30 selector #21
+; code_2874  ; lofsa
+; code_2887  ; lofsa
+; code_2917  ; lofsa
+; OBJECT pic3 of 0x30 selector #3
+; OBJECT pic3 of 0x30 selector #13
+; OBJECT pic3 of 0x30 selector #21
+; code_3068  ; lofsa
+; OBJECT tmp1 of 0x30 selector #3
+; OBJECT tmp1 of 0x30 selector #13
+; OBJECT tmp1 of 0x30 selector #21
+; code_3214  ; lofsa
+; OBJECT tmp2 of 0x30 selector #3
+; OBJECT tmp2 of 0x30 selector #13
+; OBJECT tmp2 of 0x30 selector #21
+; code_3360  ; lofsa
+; OBJECT tmp3 of 0x30 selector #3
+; OBJECT tmp3 of 0x30 selector #13
+; OBJECT tmp3 of 0x30 selector #21
+; code_3524  ; lofsa
+; code_3610  ; lofsa
+; code_3690  ; lofsa
+; OBJECT coinSlot of 0x2c selector #3
+; OBJECT coinSlot of 0x2c selector #13
+; OBJECT coinSlot of 0x2c selector #21
+; code_3851  ; lofsa
+; code_3885  ; lofsa
+; code_3998  ; lofsa
+; code_4073  ; lofsa
+; code_4081  ; lofsa
+; code_4085  ; lofsa
+; code_4089  ; lofsa
+; code_4105  ; lofsa
+; code_4113  ; lofsa
+; code_4117  ; lofsa
+; code_4121  ; lofsa
+; code_4137  ; lofsa
+; code_4145  ; lofsa
+; code_4149  ; lofsa
+; code_4153  ; lofsa
+; code_4162  ; lofsa
+; code_4171  ; lofsa
+; code_4198  ; lofsa
+; OBJECT butn of 0x2c selector #3
+; OBJECT butn of 0x2c selector #13
+; OBJECT butn of 0x2c selector #21
+; code_4373  ; lofsa
+; code_4413  ; lofsa
+; OBJECT pleaseInsert of 0x6 selector #3
+; code_4509  ; lofsa
+; OBJECT info of 0x2f selector #3
+; OBJECT info of 0x2f selector #13
+; OBJECT info of 0x2f selector #21
+; code_4722  ; lofsa
+; code_4795  ; lofsa
+; OBJECT exitBtn of 0x2f selector #3
+; OBJECT exitBtn of 0x2f selector #13
+; OBJECT exitBtn of 0x2f selector #21
+; OBJECT slotSound of 0xa selector #3

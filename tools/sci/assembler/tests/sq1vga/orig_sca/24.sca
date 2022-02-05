@@ -548,5 +548,18 @@ string_unused_7: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 12
-0x1f0, 0x1fa, 0x202, 0x252, 0x25e, 0x2da, 0x354, 0x368, 0x378, 0x3d8, 0x3ec, 0x3fc
+; code_495  ; lofsa
+; code_505  ; lofsa
+; code_513  ; lofsa
+; OBJECT rm24 of 0x74 selector #3
+; OBJECT rm24 of 0x74 selector #9
+; OBJECT outOfCave of 0x6 selector #3
+; OBJECT teeth of 0x2c selector #3
+; OBJECT teeth of 0x2c selector #13
+; OBJECT teeth of 0x2c selector #21
+; OBJECT skull of 0x2c selector #3
+; OBJECT skull of 0x2c selector #13
+; OBJECT skull of 0x2c selector #21

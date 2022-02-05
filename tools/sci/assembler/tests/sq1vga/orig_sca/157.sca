@@ -335,5 +335,14 @@ string_unused_2: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 8
-0xd2, 0x171, 0x184, 0x1ab, 0x1c9, 0x1d7, 0x1ee, 0x244
+; OBJECT guard of 0x30 selector #3
+; code_368  ; lofsa
+; code_387  ; lofsa
+; code_426  ; lofsa
+; code_456  ; lofsa
+; code_470  ; lofsa
+; code_493  ; lofsa
+; OBJECT killEgo of 0x6 selector #3

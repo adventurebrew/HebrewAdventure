@@ -787,5 +787,10 @@ string_unused_3: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 4
-0x36a, 0x409, 0x4d8, 0x600
+; code_873  ; lofsa
+; code_1032  ; lofsa
+; CLASS Elevator of 0x2f selector #3
+; OBJECT elevatorSound of 0xa selector #3

@@ -843,5 +843,20 @@ string_unused_10: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 14
-0x2c, 0x112, 0x162, 0x176, 0x186, 0x2ec, 0x300, 0x310, 0x484, 0x498, 0x4a8, 0x61c, 0x630, 0x640
+; OBJECT forwardScript of 0x6 selector #3
+; CLASS FROR of 0x16 selector #3
+; OBJECT drum of 0x2e selector #3
+; OBJECT drum of 0x2e selector #13
+; OBJECT drum of 0x2e selector #21
+; OBJECT ZZTop of 0x2f selector #3
+; OBJECT ZZTop of 0x2f selector #13
+; OBJECT ZZTop of 0x2f selector #21
+; OBJECT ZZTop2 of 0x2f selector #3
+; OBJECT ZZTop2 of 0x2f selector #13
+; OBJECT ZZTop2 of 0x2f selector #21
+; OBJECT ZZTop3 of 0x2f selector #3
+; OBJECT ZZTop3 of 0x2f selector #13
+; OBJECT ZZTop3 of 0x2f selector #21

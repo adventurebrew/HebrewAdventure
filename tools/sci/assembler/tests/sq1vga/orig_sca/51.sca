@@ -3386,5 +3386,77 @@ string_unused_24: ""
 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 71
-0x79, 0x89, 0x91, 0x9a, 0xf3, 0x126, 0x132, 0x2ec, 0x35d, 0x385, 0x3d2, 0x498, 0x527, 0x54e, 0x5be, 0x5e9, 0x63a, 0x702, 0x791, 0x7b8, 0x829, 0x854, 0x8a8, 0x973, 0xa02, 0xa2a, 0xa9b, 0xac3, 0xb19, 0xbe2, 0xc72, 0xc9a, 0xcd2, 0xd19, 0xd21, 0xd29, 0xd31, 0xd48, 0xd61, 0xd73, 0xd80, 0xd8d, 0xd93, 0xdd8, 0xe0e, 0xe74, 0xf5e, 0xfe0, 0x103c, 0x1098, 0x10f4, 0x1191, 0x12d2, 0x12f1, 0x1312, 0x13a6, 0x13ca, 0x1410, 0x143a, 0x1479, 0x14c8, 0x14dc, 0x14ec, 0x150e, 0x166d, 0x1698, 0x16c4, 0x16ea, 0x1713, 0x17ba, 0x17ee
+; code_120  ; lofsa
+; code_136  ; lofsa
+; code_144  ; lofsa
+; code_153  ; lofsa
+; code_242  ; lofsa
+; OBJECT rm51 of 0x74 selector #3
+; OBJECT rm51 of 0x74 selector #9
+; OBJECT changeMyDirection of 0x6 selector #3
+; code_860  ; lofsa
+; code_900  ; lofsa
+; code_977  ; lofsa
+; code_1175  ; lofsa
+; code_1318  ; lofsa
+; OBJECT southExit of 0x6 selector #3
+; code_1469  ; lofsa
+; code_1512  ; lofsa
+; code_1593  ; lofsa
+; code_1793  ; lofsa
+; code_1936  ; lofsa
+; OBJECT eastExit of 0x6 selector #3
+; code_2088  ; lofsa
+; code_2131  ; lofsa
+; code_2215  ; lofsa
+; code_2418  ; lofsa
+; code_2561  ; lofsa
+; OBJECT westExit of 0x6 selector #3
+; code_2714  ; lofsa
+; code_2754  ; lofsa
+; code_2840  ; lofsa
+; code_3041  ; lofsa
+; code_3185  ; lofsa
+; OBJECT northExit of 0x6 selector #3
+; code_3281  ; lofsa
+; code_3352  ; lofsa
+; code_3360  ; lofsa
+; code_3368  ; lofsa
+; code_3376  ; lofsa
+; code_3399  ; lofsa
+; code_3424  ; lofsa
+; code_3442  ; lofsa
+; code_3455  ; lofsa
+; code_3468  ; lofsa
+; code_3474  ; lofsa
+; OBJECT whatGun of 0x6 selector #3
+; OBJECT officer of 0x2f selector #3
+; OBJECT trooper of 0x2f selector #3
+; OBJECT shadow of 0x30 selector #3
+; OBJECT gun1 of 0x2e selector #3
+; OBJECT gun2 of 0x2e selector #3
+; OBJECT gun3 of 0x2e selector #3
+; OBJECT gun4 of 0x2e selector #3
+; code_4496  ; lofsa
+; code_4817  ; lofsa
+; code_4848  ; lofsa
+; OBJECT zoomIn of 0x6 selector #3
+; OBJECT door of 0x2f selector #3
+; OBJECT door of 0x2f selector #21
+; OBJECT flyingLooper of 0x51 selector #3
+; OBJECT spaceInertia of 0x7e selector #3
+; code_5240  ; lofsa
+; OBJECT airLockHandle of 0x2c selector #3
+; OBJECT airLockHandle of 0x2c selector #13
+; OBJECT airLockHandle of 0x2c selector #21
+; code_5389  ; lofsa
+; code_5740  ; lofsa
+; code_5783  ; lofsa
+; code_5827  ; lofsa
+; code_5865  ; lofsa
+; code_5906  ; lofsa
+; code_6073  ; lofsa
+; OBJECT goInside of 0x6 selector #3

@@ -1516,5 +1516,103 @@ string_unused_33: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, {'val': 'Restore', 'id': 'string_0'}, {'val': '  Save  ', 'id': 'string_1'}, {'val': 'Replace', 'id': 'string_2'}, {'val': 'Replace', 'id': 'string_2'}, {'val': 'Select the game that you would like to restore.', 'id': 'string_3'}, {'val': 'Type the description of this saved game.', 'id': 'string_4'}, {'val': 'This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk.', 'id': 'string_5'}, {'val': 'This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk.', 'id': 'string_5'}
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 97
-0x8f, 0x97, 0xbf, 0xc7, 0xe6, 0x10d, 0x11f, 0x13a, 0x14c, 0x15c, 0x166, 0x178, 0x188, 0x192, 0x19b, 0x19f, 0x1a3, 0x1a7, 0x1ab, 0x1d1, 0x1d9, 0x1f2, 0x274, 0x27a, 0x287, 0x294, 0x29a, 0x2b0, 0x2b6, 0x2c5, 0x321, 0x33d, 0x36e, 0x377, 0x433, 0x441, 0x449, 0x450, 0x53f, 0x55d, 0x58e, 0x5ea, 0x64e, 0x654, 0x6a6, 0x6ac, 0x713, 0x71b, 0x73b, 0x743, 0x759, 0x761, 0x781, 0x789, 0x79f, 0x7b0, 0x7be, 0x7cb, 0x7d7, 0x7e0, 0x7ed, 0x7f5, 0x7f9, 0x811, 0x83d, 0x846, 0x85c, 0x8b4, 0x8bb, 0x956, 0x98e, 0x9c0, 0x9ee, 0xa02, 0xa1c, 0xa30, 0xa4a, 0xa5e, 0xa78, 0xaa8, 0xabc, 0xad8, 0xaec, 0xb08, 0xb38, 0xb6a, 0xb7e, 0xb98, 0xbac, 0xdde, 0xde0, 0xde2, 0xde4, 0xde6, 0xde8, 0xdea, 0xdec
+; code_142  ; lofsa
+; code_150  ; lofsa
+; code_190  ; lofsa
+; code_198  ; lofsa
+; code_229  ; lofsa
+; code_268  ; lofsa
+; code_286  ; lofsa
+; code_313  ; lofsa
+; code_331  ; lofsa
+; code_347  ; lofsa
+; code_357  ; lofsa
+; code_375  ; lofsa
+; code_391  ; lofsa
+; code_401  ; lofsa
+; code_410  ; lofsa
+; code_414  ; lofsa
+; code_418  ; lofsa
+; code_422  ; lofsa
+; code_426  ; lofsa
+; code_464  ; lofsa
+; code_472  ; lofsa
+; code_497  ; lofsa
+; code_627  ; lofsa
+; code_633  ; lofsa
+; code_646  ; lofsa
+; code_659  ; lofsa
+; code_665  ; lofsa
+; code_687  ; lofsa
+; code_693  ; lofsa
+; code_708  ; lofsa
+; code_800  ; lofsa
+; code_828  ; lofsa
+; code_877  ; lofsa
+; code_886  ; lofsa
+; code_1074  ; lofsa
+; code_1088  ; lofsa
+; code_1096  ; lofsa
+; code_1103  ; lofsa
+; code_1342  ; lofsa
+; code_1372  ; lofsa
+; code_1421  ; lofsa
+; CLASS SRDialog of 0x12 selector #3
+; CLASS Restore of 0x3a selector #3
+; CLASS Restore of 0x3a selector #6
+; CLASS Save of 0x3a selector #3
+; CLASS Save of 0x3a selector #6
+; code_1810  ; lofsa
+; code_1818  ; lofsa
+; code_1850  ; lofsa
+; code_1858  ; lofsa
+; code_1880  ; lofsa
+; code_1888  ; lofsa
+; code_1920  ; lofsa
+; code_1928  ; lofsa
+; code_1950  ; lofsa
+; code_1967  ; lofsa
+; code_1981  ; lofsa
+; code_1994  ; lofsa
+; code_2006  ; lofsa
+; code_2015  ; lofsa
+; code_2028  ; lofsa
+; code_2036  ; lofsa
+; code_2040  ; lofsa
+; code_2064  ; lofsa
+; code_2108  ; lofsa
+; code_2117  ; lofsa
+; OBJECT GetReplaceName of 0x12 selector #3
+; code_2227  ; lofsa
+; code_2234  ; lofsa
+; OBJECT selectorI of 0x11 selector #3
+; OBJECT editI of 0x10 selector #3
+; OBJECT okI of 0xf selector #3
+; OBJECT cancelI of 0xf selector #3
+; OBJECT cancelI of 0xf selector #13
+; OBJECT changeDirI of 0xf selector #3
+; OBJECT changeDirI of 0xf selector #13
+; OBJECT deleteI of 0xf selector #3
+; OBJECT deleteI of 0xf selector #13
+; OBJECT textI of 0xd selector #3
+; OBJECT text1 of 0xd selector #3
+; OBJECT text1 of 0xd selector #13
+; OBJECT text2 of 0xd selector #3
+; OBJECT text2 of 0xd selector #13
+; OBJECT oldName of 0xd selector #3
+; OBJECT newName of 0x10 selector #3
+; OBJECT button1 of 0xf selector #3
+; OBJECT button1 of 0xf selector #13
+; OBJECT button2 of 0xf selector #3
+; OBJECT button2 of 0xf selector #13
+; LOCAL_VARS var #6 val: Restore, id: string_0
+; LOCAL_VARS var #7 val:   Save  , id: string_1
+; LOCAL_VARS var #8 val: Replace, id: string_2
+; LOCAL_VARS var #9 val: Replace, id: string_2
+; LOCAL_VARS var #10 val: Select the game that you would like to restore., id: string_3
+; LOCAL_VARS var #11 val: Type the description of this saved game., id: string_4
+; LOCAL_VARS var #12 val: This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk., id: string_5
+; LOCAL_VARS var #13 val: This directory/disk can hold no more saved games. You must replace one of your saved games or use Change Directory to save on a different directory/disk., id: string_5

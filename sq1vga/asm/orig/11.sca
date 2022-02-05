@@ -2599,5 +2599,109 @@ string_unused_39: ""
 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 103
-0x33, 0x3f, 0x47, 0x4f, 0x57, 0x5f, 0x6e, 0x83, 0x8b, 0xb1, 0xbd, 0xc9, 0xd8, 0xe4, 0xf4, 0x100, 0x215, 0x233, 0x245, 0x29c, 0x2a8, 0x2d2, 0x2de, 0x338, 0x34d, 0x371, 0x386, 0x3f5, 0x432, 0x462, 0x51c, 0x531, 0x560, 0x5ce, 0x63e, 0x682, 0x6c1, 0x70a, 0x736, 0x784, 0x797, 0x7bb, 0x7ce, 0x84f, 0x88d, 0x8f9, 0x905, 0x989, 0x9d5, 0x9f6, 0xa82, 0xa93, 0xaa5, 0xb46, 0xb7b, 0xb87, 0xbbe, 0xbd2, 0xbe2, 0xc22, 0xc48, 0xc5c, 0xc6c, 0xca8, 0xcbc, 0xccc, 0xd08, 0xd32, 0xd46, 0xd56, 0xdae, 0xdd8, 0xdec, 0xdfc, 0xe62, 0xebe, 0xed2, 0xee2, 0xf48, 0xf5c, 0xf6c, 0xfc8, 0xfdf, 0x1006, 0x101a, 0x102a, 0x1074, 0x1088, 0x1098, 0x113a, 0x114e, 0x115e, 0x1193, 0x11b8, 0x11cc, 0x11dc, 0x1212, 0x123c, 0x1250, 0x1260, 0x12bc, 0x12d0, 0x12e0
+; code_50  ; lofsa
+; code_62  ; lofsa
+; code_70  ; lofsa
+; code_78  ; lofsa
+; code_86  ; lofsa
+; code_94  ; lofsa
+; code_109  ; lofsa
+; code_130  ; lofsa
+; code_138  ; lofsa
+; code_176  ; lofsa
+; code_188  ; lofsa
+; code_200  ; lofsa
+; code_215  ; lofsa
+; code_227  ; lofsa
+; code_243  ; lofsa
+; code_255  ; lofsa
+; code_532  ; lofsa
+; code_562  ; lofsa
+; code_580  ; lofsa
+; code_667  ; lofsa
+; code_679  ; lofsa
+; OBJECT rm11 of 0x43 selector #3
+; OBJECT rm11 of 0x43 selector #9
+; code_823  ; lofsa
+; code_844  ; lofsa
+; code_880  ; lofsa
+; code_901  ; lofsa
+; code_1012  ; lofsa
+; code_1073  ; lofsa
+; OBJECT putOnSpacesuit of 0x6 selector #3
+; code_1307  ; lofsa
+; code_1328  ; lofsa
+; code_1375  ; lofsa
+; code_1485  ; lofsa
+; OBJECT leaveToHanger of 0x6 selector #3
+; code_1665  ; lofsa
+; code_1728  ; lofsa
+; code_1801  ; lofsa
+; OBJECT enterFromHanger of 0x6 selector #3
+; code_1923  ; lofsa
+; code_1942  ; lofsa
+; code_1978  ; lofsa
+; code_1997  ; lofsa
+; code_2126  ; lofsa
+; code_2188  ; lofsa
+; code_2296  ; lofsa
+; code_2308  ; lofsa
+; code_2440  ; lofsa
+; code_2516  ; lofsa
+; OBJECT openClosetDoor of 0x6 selector #3
+; code_2689  ; lofsa
+; code_2706  ; lofsa
+; code_2724  ; lofsa
+; OBJECT openDrawer of 0x6 selector #3
+; code_2938  ; lofsa
+; code_2950  ; lofsa
+; OBJECT spaceSuit of 0x2e selector #3
+; OBJECT spaceSuit of 0x2e selector #13
+; OBJECT spaceSuit of 0x2e selector #21
+; code_3105  ; lofsa
+; OBJECT helmet of 0x2e selector #3
+; OBJECT helmet of 0x2e selector #13
+; OBJECT helmet of 0x2e selector #21
+; OBJECT doorLight of 0x2e selector #3
+; OBJECT doorLight of 0x2e selector #13
+; OBJECT doorLight of 0x2e selector #21
+; code_3335  ; lofsa
+; OBJECT bigRedDoor of 0x2f selector #3
+; OBJECT bigRedDoor of 0x2f selector #13
+; OBJECT bigRedDoor of 0x2f selector #21
+; code_3501  ; lofsa
+; OBJECT drawer of 0x2f selector #3
+; OBJECT drawer of 0x2f selector #13
+; OBJECT drawer of 0x2f selector #21
+; code_3681  ; lofsa
+; OBJECT closetDoor of 0x2f selector #3
+; OBJECT closetDoor of 0x2f selector #13
+; OBJECT closetDoor of 0x2f selector #21
+; OBJECT lights of 0x2f selector #3
+; OBJECT lights of 0x2f selector #13
+; OBJECT lights of 0x2f selector #21
+; code_4039  ; lofsa
+; code_4062  ; lofsa
+; OBJECT control of 0x2f selector #3
+; OBJECT control of 0x2f selector #13
+; OBJECT control of 0x2f selector #21
+; OBJECT elevatorDoor of 0x73 selector #3
+; OBJECT elevatorDoor of 0x73 selector #13
+; OBJECT elevatorDoor of 0x73 selector #21
+; OBJECT controlPanel of 0x2c selector #3
+; OBJECT controlPanel of 0x2c selector #13
+; OBJECT controlPanel of 0x2c selector #21
+; code_4498  ; lofsa
+; OBJECT drawerButton of 0x2c selector #3
+; OBJECT drawerButton of 0x2c selector #13
+; OBJECT drawerButton of 0x2c selector #21
+; code_4625  ; lofsa
+; OBJECT BayButton of 0x2c selector #3
+; OBJECT BayButton of 0x2c selector #13
+; OBJECT BayButton of 0x2c selector #21
+; OBJECT drawerFeature of 0x2c selector #3
+; OBJECT drawerFeature of 0x2c selector #13
+; OBJECT drawerFeature of 0x2c selector #21

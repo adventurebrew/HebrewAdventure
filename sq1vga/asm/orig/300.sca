@@ -625,5 +625,13 @@ string_unused_5: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 7
-0x13c, 0x29e, 0x2b2, 0x2c2, 0x438, 0x44c, 0x45c
+; OBJECT bluesBrothers of 0x6 selector #3
+; OBJECT jakeBlue of 0x2f selector #3
+; OBJECT jakeBlue of 0x2f selector #13
+; OBJECT jakeBlue of 0x2f selector #21
+; OBJECT elwoodBlue of 0x2f selector #3
+; OBJECT elwoodBlue of 0x2f selector #13
+; OBJECT elwoodBlue of 0x2f selector #21

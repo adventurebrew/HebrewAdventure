@@ -135,5 +135,7 @@ string_unused_1: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 1
-0xc0
+; CLASS RandCycle of 0x16 selector #3

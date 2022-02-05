@@ -93,5 +93,7 @@ string_unused_1: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 1
-0x6a
+; CLASS MoveFwd of 0x24 selector #3

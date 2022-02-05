@@ -4198,5 +4198,161 @@ string_unused_64: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x3
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 155
-0x29, 0x35, 0x44, 0x53, 0xde, 0xf7, 0x11b, 0x133, 0x142, 0x146, 0x14a, 0x14e, 0x152, 0x18a, 0x375, 0x379, 0x390, 0x3a6, 0x450, 0x459, 0x475, 0x482, 0x497, 0x4ab, 0x506, 0x50a, 0x541, 0x545, 0x578, 0x587, 0x58b, 0x593, 0x5a2, 0x5a6, 0x61c, 0x67e, 0x696, 0x730, 0x79d, 0x7f9, 0x83b, 0x856, 0x883, 0x8bf, 0x8e6, 0x8ea, 0x8fa, 0x915, 0x947, 0x974, 0x97d, 0x989, 0x99b, 0x9ad, 0x9ce, 0x9f9, 0xa19, 0xb30, 0xb54, 0xb92, 0xc03, 0xc0b, 0xc23, 0xc3f, 0xc6c, 0xc70, 0xc74, 0xc7d, 0xc85, 0xcb4, 0xcc1, 0xcce, 0xcdb, 0xce8, 0xcf5, 0xd02, 0xd0f, 0xd1c, 0xd29, 0xd36, 0xd43, 0xd50, 0xd5d, 0xd6a, 0xd77, 0xd84, 0xd91, 0xd9e, 0xdab, 0xdc0, 0xde9, 0xdfc, 0xe24, 0xe4e, 0xe8c, 0xf06, 0x1004, 0x106b, 0x109b, 0x10c3, 0x10e9, 0x1117, 0x1144, 0x11bb, 0x11db, 0x1203, 0x123a, 0x125f, 0x1272, 0x128e, 0x1312, 0x1326, 0x1336, 0x13b4, 0x13c8, 0x13d8, 0x1458, 0x146c, 0x147c, 0x14e6, 0x14fa, 0x150a, 0x1570, 0x1584, 0x1594, 0x1653, 0x16f5, 0x1764, 0x1778, 0x18a0, 0x18a6, 0x199a, 0x19ae, 0x19be, 0x1a42, 0x1a74, 0x1a88, 0x1a98, 0x1afc, 0x1b10, 0x1b20, 0x1b80, 0x1b94, 0x1ba4, 0x1c04, 0x1c18, 0x1c28, 0x1ca4, 0x1cb8, 0x1cc8, 0x1ce4, 0x1d56, 0x1db2, 0x1e18, 0x1eae
+; code_40  ; lofsa
+; code_52  ; lofsa
+; code_67  ; lofsa
+; code_82  ; lofsa
+; code_221  ; lofsa
+; code_246  ; lofsa
+; code_282  ; lofsa
+; code_306  ; lofsa
+; code_321  ; lofsa
+; code_325  ; lofsa
+; code_329  ; lofsa
+; code_333  ; lofsa
+; code_337  ; lofsa
+; code_393  ; lofsa
+; code_884  ; lofsa
+; code_888  ; lofsa
+; code_911  ; lofsa
+; code_933  ; lofsa
+; code_1103  ; lofsa
+; code_1112  ; lofsa
+; code_1140  ; lofsa
+; code_1153  ; lofsa
+; code_1174  ; lofsa
+; code_1194  ; lofsa
+; code_1285  ; lofsa
+; code_1289  ; lofsa
+; code_1344  ; lofsa
+; code_1348  ; lofsa
+; code_1399  ; lofsa
+; code_1414  ; lofsa
+; code_1418  ; lofsa
+; code_1426  ; lofsa
+; code_1441  ; lofsa
+; code_1445  ; lofsa
+; code_1563  ; lofsa
+; code_1661  ; lofsa
+; OBJECT rm3 of 0x74 selector #3
+; OBJECT enterRoom of 0x6 selector #3
+; code_1948  ; lofsa
+; code_2040  ; lofsa
+; code_2106  ; lofsa
+; code_2133  ; lofsa
+; code_2178  ; lofsa
+; code_2238  ; lofsa
+; code_2277  ; lofsa
+; code_2281  ; lofsa
+; code_2297  ; lofsa
+; code_2324  ; lofsa
+; code_2374  ; lofsa
+; code_2419  ; lofsa
+; code_2428  ; lofsa
+; code_2440  ; lofsa
+; code_2458  ; lofsa
+; code_2476  ; lofsa
+; code_2509  ; lofsa
+; code_2552  ; lofsa
+; code_2584  ; lofsa
+; code_2863  ; lofsa
+; code_2899  ; lofsa
+; OBJECT scientistComeIn of 0x6 selector #3
+; code_3074  ; lofsa
+; code_3082  ; lofsa
+; code_3106  ; lofsa
+; code_3134  ; lofsa
+; code_3179  ; lofsa
+; code_3183  ; lofsa
+; code_3187  ; lofsa
+; code_3196  ; lofsa
+; code_3204  ; lofsa
+; code_3251  ; lofsa
+; code_3264  ; lofsa
+; code_3277  ; lofsa
+; code_3290  ; lofsa
+; code_3303  ; lofsa
+; code_3316  ; lofsa
+; code_3329  ; lofsa
+; code_3342  ; lofsa
+; code_3355  ; lofsa
+; code_3368  ; lofsa
+; code_3381  ; lofsa
+; code_3394  ; lofsa
+; code_3407  ; lofsa
+; code_3420  ; lofsa
+; code_3433  ; lofsa
+; code_3446  ; lofsa
+; code_3459  ; lofsa
+; code_3472  ; lofsa
+; code_3485  ; lofsa
+; code_3498  ; lofsa
+; code_3519  ; lofsa
+; code_3560  ; lofsa
+; code_3579  ; lofsa
+; code_3619  ; lofsa
+; code_3661  ; lofsa
+; OBJECT talkScientist of 0x6 selector #3
+; OBJECT sitDown of 0x6 selector #3
+; OBJECT riseFromComputer of 0x6 selector #3
+; code_4202  ; lofsa
+; code_4250  ; lofsa
+; code_4290  ; lofsa
+; code_4328  ; lofsa
+; code_4374  ; lofsa
+; OBJECT goGetCart of 0x6 selector #3
+; code_4538  ; lofsa
+; code_4570  ; lofsa
+; code_4610  ; lofsa
+; code_4665  ; lofsa
+; code_4702  ; lofsa
+; code_4721  ; lofsa
+; OBJECT putCartAway of 0x6 selector #3
+; OBJECT theDummy of 0x2f selector #3
+; OBJECT theDummy of 0x2f selector #13
+; OBJECT theDummy of 0x2f selector #21
+; OBJECT leftDoor of 0x2f selector #3
+; OBJECT leftDoor of 0x2f selector #13
+; OBJECT leftDoor of 0x2f selector #21
+; OBJECT rightDoor of 0x2f selector #3
+; OBJECT rightDoor of 0x2f selector #13
+; OBJECT rightDoor of 0x2f selector #21
+; OBJECT rightPanelLights of 0x2f selector #3
+; OBJECT rightPanelLights of 0x2f selector #13
+; OBJECT rightPanelLights of 0x2f selector #21
+; OBJECT leftPanelLights of 0x2f selector #3
+; OBJECT leftPanelLights of 0x2f selector #13
+; OBJECT leftPanelLights of 0x2f selector #21
+; code_5714  ; lofsa
+; code_5876  ; lofsa
+; OBJECT scientist of 0x30 selector #3
+; OBJECT scientist of 0x30 selector #13
+; code_6303  ; lofsa
+; code_6309  ; lofsa
+; OBJECT droid of 0x30 selector #3
+; OBJECT droid of 0x30 selector #13
+; OBJECT droid of 0x30 selector #21
+; code_6721  ; lofsa
+; OBJECT Computer of 0x2c selector #3
+; OBJECT Computer of 0x2c selector #13
+; OBJECT Computer of 0x2c selector #21
+; OBJECT cartridgeSlots of 0x2c selector #3
+; OBJECT cartridgeSlots of 0x2c selector #13
+; OBJECT cartridgeSlots of 0x2c selector #21
+; OBJECT mainComputer of 0x2c selector #3
+; OBJECT mainComputer of 0x2c selector #13
+; OBJECT mainComputer of 0x2c selector #21
+; OBJECT lights of 0x2c selector #3
+; OBJECT lights of 0x2c selector #13
+; OBJECT lights of 0x2c selector #21
+; OBJECT holes of 0x2c selector #3
+; OBJECT holes of 0x2c selector #13
+; OBJECT holes of 0x2c selector #21
+; OBJECT sciTalker of 0x6f selector #3
+; OBJECT sciBust of 0x2e selector #3
+; OBJECT sciEyes of 0x2f selector #3
+; OBJECT sciMouth of 0x2f selector #3
+; OBJECT backSound of 0xa selector #3

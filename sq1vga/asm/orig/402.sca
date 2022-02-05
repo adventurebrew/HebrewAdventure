@@ -208,5 +208,11 @@ string_unused_3: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 5
-0x63, 0x94, 0xa6, 0xda, 0x110
+; code_98  ; lofsa
+; code_147  ; lofsa
+; code_165  ; lofsa
+; OBJECT romulanWarbird of 0x6 selector #3
+; OBJECT warBird of 0x30 selector #3

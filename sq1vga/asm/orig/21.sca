@@ -395,5 +395,14 @@ string_unused_7: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 8
-0x14d, 0x18b, 0x1aa, 0x1b6, 0x268, 0x2ca, 0x2de, 0x2ee
+; code_332  ; lofsa
+; code_394  ; lofsa
+; OBJECT rm21 of 0x74 selector #3
+; OBJECT rm21 of 0x74 selector #9
+; OBJECT enterCaves of 0x6 selector #3
+; OBJECT thingy of 0x2c selector #3
+; OBJECT thingy of 0x2c selector #13
+; OBJECT thingy of 0x2c selector #21

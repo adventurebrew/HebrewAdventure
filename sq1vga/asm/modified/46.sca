@@ -2996,5 +2996,185 @@ string_unused_62: ""
 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 179
-0x6b, 0x93, 0xb5, 0x255, 0x259, 0x270, 0x27f, 0x28b, 0x293, 0x29b, 0x2a3, 0x2ab, 0x2d4, 0x2e0, 0x3ae, 0x3d4, 0x3e7, 0x3f0, 0x3f4, 0x3f8, 0x3fc, 0x404, 0x418, 0x420, 0x45a, 0x53c, 0x572, 0x5ac, 0x5c6, 0x62a, 0x674, 0x68b, 0x6a2, 0x6b9, 0x6e1, 0x71a, 0x73f, 0x76c, 0x770, 0x774, 0x778, 0x780, 0x7ac, 0x7c6, 0x88e, 0x8b4, 0x8c7, 0x8d0, 0x8d4, 0x8d8, 0x8dc, 0x8e4, 0x904, 0x9e5, 0x9e9, 0x9ed, 0x9f1, 0x9f9, 0xa4e, 0xae0, 0xaf4, 0xb04, 0xb75, 0xb79, 0xb7d, 0xb81, 0xb89, 0xb9c, 0xba0, 0xba4, 0xba8, 0xbb0, 0xbc3, 0xbc7, 0xbcb, 0xbcf, 0xbd7, 0xbea, 0xbee, 0xbf2, 0xbf6, 0xbfe, 0xc11, 0xc15, 0xc19, 0xc1d, 0xc25, 0xc31, 0xc35, 0xc39, 0xc3d, 0xc45, 0xc6f, 0xc73, 0xc77, 0xc7b, 0xc83, 0xcd0, 0xcd4, 0xcd8, 0xcdc, 0xce4, 0xcf7, 0xcfb, 0xcff, 0xd03, 0xd0b, 0xd1e, 0xd22, 0xd26, 0xd2a, 0xd32, 0xd45, 0xd49, 0xd4d, 0xd51, 0xd59, 0xd6c, 0xd70, 0xd74, 0xd78, 0xd80, 0xd93, 0xd97, 0xd9b, 0xd9f, 0xda7, 0xdba, 0xdbe, 0xdc2, 0xdc6, 0xdce, 0xde1, 0xde5, 0xde9, 0xded, 0xdf5, 0xe08, 0xe0c, 0xe10, 0xe14, 0xe1c, 0xe78, 0xe8c, 0xe9c, 0xefe, 0xf12, 0xf22, 0xfbf, 0xfea, 0xffe, 0x100e, 0x104d, 0x1064, 0x1078, 0x1088, 0x10a9, 0x10c0, 0x10d4, 0x10e4, 0x1105, 0x111c, 0x1130, 0x1140, 0x11d8, 0x11ec, 0x11fc, 0x1298, 0x12ac, 0x12bc, 0x1358, 0x136c, 0x137c, 0x1398, 0x140a, 0x1466, 0x14cc, 0x1532, 0x1598
+; code_106  ; lofsa
+; code_146  ; lofsa
+; code_180  ; lofsa
+; code_596  ; lofsa
+; code_600  ; lofsa
+; code_623  ; lofsa
+; code_638  ; lofsa
+; code_650  ; lofsa
+; code_658  ; lofsa
+; code_666  ; lofsa
+; code_674  ; lofsa
+; code_682  ; lofsa
+; OBJECT rm46 of 0x74 selector #3
+; OBJECT rm46 of 0x74 selector #9
+; code_941  ; lofsa
+; code_979  ; lofsa
+; code_998  ; lofsa
+; code_1007  ; lofsa
+; code_1011  ; lofsa
+; code_1015  ; lofsa
+; code_1019  ; lofsa
+; code_1027  ; lofsa
+; code_1047  ; lofsa
+; code_1055  ; lofsa
+; OBJECT complexRobot of 0x6 selector #3
+; code_1339  ; lofsa
+; code_1393  ; lofsa
+; code_1451  ; lofsa
+; OBJECT blowUpBox of 0x6 selector #3
+; code_1577  ; lofsa
+; code_1651  ; lofsa
+; code_1674  ; lofsa
+; code_1697  ; lofsa
+; code_1720  ; lofsa
+; code_1760  ; lofsa
+; code_1817  ; lofsa
+; code_1854  ; lofsa
+; code_1899  ; lofsa
+; code_1903  ; lofsa
+; code_1907  ; lofsa
+; code_1911  ; lofsa
+; code_1919  ; lofsa
+; code_1963  ; lofsa
+; OBJECT suxRobotS of 0x6 selector #3
+; code_2189  ; lofsa
+; code_2227  ; lofsa
+; code_2246  ; lofsa
+; code_2255  ; lofsa
+; code_2259  ; lofsa
+; code_2263  ; lofsa
+; code_2267  ; lofsa
+; code_2275  ; lofsa
+; code_2307  ; lofsa
+; code_2532  ; lofsa
+; code_2536  ; lofsa
+; code_2540  ; lofsa
+; code_2544  ; lofsa
+; code_2552  ; lofsa
+; OBJECT rightRobot of 0x6 selector #3
+; OBJECT radar of 0x2f selector #3
+; OBJECT radar of 0x2f selector #13
+; OBJECT radar of 0x2f selector #21
+; code_2932  ; lofsa
+; code_2936  ; lofsa
+; code_2940  ; lofsa
+; code_2944  ; lofsa
+; code_2952  ; lofsa
+; code_2971  ; lofsa
+; code_2975  ; lofsa
+; code_2979  ; lofsa
+; code_2983  ; lofsa
+; code_2991  ; lofsa
+; code_3010  ; lofsa
+; code_3014  ; lofsa
+; code_3018  ; lofsa
+; code_3022  ; lofsa
+; code_3030  ; lofsa
+; code_3049  ; lofsa
+; code_3053  ; lofsa
+; code_3057  ; lofsa
+; code_3061  ; lofsa
+; code_3069  ; lofsa
+; code_3088  ; lofsa
+; code_3092  ; lofsa
+; code_3096  ; lofsa
+; code_3100  ; lofsa
+; code_3108  ; lofsa
+; code_3120  ; lofsa
+; code_3124  ; lofsa
+; code_3128  ; lofsa
+; code_3132  ; lofsa
+; code_3140  ; lofsa
+; code_3182  ; lofsa
+; code_3186  ; lofsa
+; code_3190  ; lofsa
+; code_3194  ; lofsa
+; code_3202  ; lofsa
+; code_3279  ; lofsa
+; code_3283  ; lofsa
+; code_3287  ; lofsa
+; code_3291  ; lofsa
+; code_3299  ; lofsa
+; code_3318  ; lofsa
+; code_3322  ; lofsa
+; code_3326  ; lofsa
+; code_3330  ; lofsa
+; code_3338  ; lofsa
+; code_3357  ; lofsa
+; code_3361  ; lofsa
+; code_3365  ; lofsa
+; code_3369  ; lofsa
+; code_3377  ; lofsa
+; code_3396  ; lofsa
+; code_3400  ; lofsa
+; code_3404  ; lofsa
+; code_3408  ; lofsa
+; code_3416  ; lofsa
+; code_3435  ; lofsa
+; code_3439  ; lofsa
+; code_3443  ; lofsa
+; code_3447  ; lofsa
+; code_3455  ; lofsa
+; code_3474  ; lofsa
+; code_3478  ; lofsa
+; code_3482  ; lofsa
+; code_3486  ; lofsa
+; code_3494  ; lofsa
+; code_3513  ; lofsa
+; code_3517  ; lofsa
+; code_3521  ; lofsa
+; code_3525  ; lofsa
+; code_3533  ; lofsa
+; code_3552  ; lofsa
+; code_3556  ; lofsa
+; code_3560  ; lofsa
+; code_3564  ; lofsa
+; code_3572  ; lofsa
+; code_3591  ; lofsa
+; code_3595  ; lofsa
+; code_3599  ; lofsa
+; code_3603  ; lofsa
+; code_3611  ; lofsa
+; OBJECT robbie of 0x30 selector #3
+; OBJECT robbie of 0x30 selector #13
+; OBJECT robbie of 0x30 selector #21
+; OBJECT suxRobot of 0x30 selector #3
+; OBJECT suxRobot of 0x30 selector #13
+; OBJECT suxRobot of 0x30 selector #21
+; code_4030  ; lofsa
+; OBJECT box1 of 0x2f selector #3
+; OBJECT box1 of 0x2f selector #13
+; OBJECT box1 of 0x2f selector #21
+; code_4172  ; lofsa
+; OBJECT box2 of 0x2d selector #3
+; OBJECT box2 of 0x2d selector #13
+; OBJECT box2 of 0x2d selector #21
+; code_4264  ; lofsa
+; OBJECT box3 of 0x2d selector #3
+; OBJECT box3 of 0x2d selector #13
+; OBJECT box3 of 0x2d selector #21
+; code_4356  ; lofsa
+; OBJECT pickupArea of 0x2c selector #3
+; OBJECT pickupArea of 0x2c selector #13
+; OBJECT pickupArea of 0x2c selector #21
+; OBJECT store of 0x2c selector #3
+; OBJECT store of 0x2c selector #13
+; OBJECT store of 0x2c selector #21
+; OBJECT pickupSign of 0x2c selector #3
+; OBJECT pickupSign of 0x2c selector #13
+; OBJECT pickupSign of 0x2c selector #21
+; OBJECT giraffe of 0x2c selector #3
+; OBJECT giraffe of 0x2c selector #13
+; OBJECT giraffe of 0x2c selector #21
+; OBJECT robbieT of 0x6f selector #3
+; OBJECT robBust of 0x2e selector #3
+; OBJECT robMouth of 0x2f selector #3
+; OBJECT topGear of 0x2f selector #3
+; OBJECT leftGear of 0x2f selector #3
+; OBJECT rightGear of 0x2f selector #3

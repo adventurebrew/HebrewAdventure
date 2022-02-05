@@ -105,5 +105,11 @@ string_unused_4: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 5
-0x28, 0x4a, 0x8e, 0xa2, 0xb2
+; code_39  ; lofsa
+; OBJECT rm338 of 0x74 selector #3
+; OBJECT pod of 0x2d selector #3
+; OBJECT pod of 0x2d selector #13
+; OBJECT pod of 0x2d selector #21

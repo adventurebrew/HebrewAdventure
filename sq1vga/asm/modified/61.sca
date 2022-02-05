@@ -1923,5 +1923,56 @@ string_unused_27: ""
 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 50
-0x4f, 0x53, 0x57, 0x6a, 0x7d, 0x89, 0xa0, 0xa8, 0xbb, 0x13f, 0x22f, 0x23e, 0x24d, 0x26e, 0x282, 0x29b, 0x326, 0x33b, 0x350, 0x36e, 0x37a, 0x3da, 0x4d0, 0x690, 0x718, 0x790, 0x814, 0x88c, 0x92a, 0x9b6, 0xa60, 0xa74, 0xa84, 0xb00, 0xb90, 0xbb4, 0xc1e, 0xc42, 0xc90, 0xc98, 0xd08, 0xd1c, 0xd4a, 0xd5e, 0xd6e, 0xd88, 0xd9c, 0xdac, 0xdc6, 0xdfc
+; code_78  ; lofsa
+; code_82  ; lofsa
+; code_86  ; lofsa
+; code_105  ; lofsa
+; code_124  ; lofsa
+; code_136  ; lofsa
+; code_159  ; lofsa
+; code_167  ; lofsa
+; code_186  ; lofsa
+; code_318  ; lofsa
+; code_558  ; lofsa
+; code_573  ; lofsa
+; code_588  ; lofsa
+; code_621  ; lofsa
+; code_641  ; lofsa
+; code_666  ; lofsa
+; code_805  ; lofsa
+; code_826  ; lofsa
+; code_847  ; lofsa
+; OBJECT rm61 of 0x74 selector #3
+; OBJECT rm61 of 0x74 selector #9
+; OBJECT blast1 of 0x2f selector #3
+; code_1231  ; lofsa
+; OBJECT shootTheEgo1 of 0x6 selector #3
+; OBJECT fromElevatorRm of 0x6 selector #3
+; OBJECT toElevatorRm of 0x6 selector #3
+; OBJECT fromStorageRm of 0x6 selector #3
+; OBJECT toStorageRm of 0x80 selector #3
+; OBJECT fromSlantway of 0x80 selector #3
+; OBJECT toSlantway of 0x80 selector #3
+; OBJECT standingSarien of 0x7d selector #3
+; OBJECT standingSarien of 0x7d selector #13
+; OBJECT standingSarien of 0x7d selector #21
+; OBJECT standingSarienHead of 0x76 selector #3
+; OBJECT zap1 of 0x2f selector #3
+; OBJECT zap1 of 0x2f selector #21
+; OBJECT zap2 of 0x2f selector #3
+; OBJECT zap2 of 0x2f selector #21
+; code_3215  ; lofsa
+; code_3223  ; lofsa
+; OBJECT bigMach of 0x7b selector #3
+; OBJECT bigMach of 0x7b selector #13
+; OBJECT smallerMach of 0x7b selector #3
+; OBJECT smallerMach of 0x7b selector #13
+; OBJECT smallerMach of 0x7b selector #21
+; OBJECT upperLevelMachine of 0x7b selector #3
+; OBJECT upperLevelMachine of 0x7b selector #13
+; OBJECT upperLevelMachine of 0x7b selector #21
+; OBJECT sarienShot of 0xa selector #3
+; OBJECT beamSound of 0xa selector #3

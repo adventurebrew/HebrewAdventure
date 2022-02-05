@@ -196,5 +196,7 @@ string_unused_2: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 1
-0x120
+; CLASS PolyPath of 0x1d selector #3

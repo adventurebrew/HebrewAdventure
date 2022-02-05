@@ -5691,5 +5691,183 @@ string_unused_47: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 177
-0xae, 0x30b, 0x313, 0x333, 0x33b, 0x354, 0x36f, 0x378, 0x37c, 0x380, 0x384, 0x388, 0x3b6, 0x3c6, 0x3cd, 0x3dc, 0x3e8, 0x3f4, 0x45d, 0x4c1, 0x4ce, 0x4e5, 0x4e9, 0x4f5, 0x50b, 0x514, 0x51d, 0x526, 0x52f, 0x539, 0x58f, 0x59c, 0x5b3, 0x5c7, 0x654, 0x690, 0x69c, 0x754, 0x792, 0x7a3, 0x7ad, 0x7ca, 0x7de, 0x7ee, 0x8b0, 0x8ec, 0x900, 0x910, 0x96f, 0x9a4, 0x9b8, 0x9c8, 0xa0e, 0xa22, 0xa32, 0xab8, 0xae0, 0xb36, 0xb4a, 0xb5a, 0xbbe, 0xc64, 0xc78, 0xc88, 0xca6, 0xcca, 0xd24, 0xe25, 0xf39, 0xfcc, 0x1014, 0x10c9, 0x111e, 0x11e7, 0x120a, 0x124c, 0x1266, 0x1299, 0x12d6, 0x1312, 0x131a, 0x13b0, 0x13cb, 0x13f0, 0x1450, 0x146e, 0x148c, 0x14a7, 0x14bd, 0x1523, 0x158c, 0x15c5, 0x15ce, 0x15e9, 0x15f1, 0x1624, 0x167f, 0x16a6, 0x16c0, 0x16e2, 0x16ed, 0x1714, 0x1769, 0x1779, 0x178d, 0x1861, 0x187f, 0x188f, 0x18a6, 0x18ca, 0x18d5, 0x1909, 0x1919, 0x192f, 0x1947, 0x194c, 0x196a, 0x197c, 0x198c, 0x1999, 0x1a1d, 0x1a54, 0x1aad, 0x1ad0, 0x1aed, 0x1b08, 0x1b36, 0x1b56, 0x1b78, 0x1bbc, 0x1bcd, 0x1c1c, 0x1c83, 0x1cb3, 0x1d63, 0x1d92, 0x1dd3, 0x1ddb, 0x1dfb, 0x1e1c, 0x1e3b, 0x1e62, 0x1faa, 0x1fd8, 0x2114, 0x2193, 0x225a, 0x22d6, 0x2326, 0x2333, 0x233c, 0x237f, 0x239f, 0x23a3, 0x23ab, 0x23c8, 0x2444, 0x24f8, 0x2519, 0x2598, 0x263e, 0x267a, 0x268e, 0x269e, 0x272c, 0x2768, 0x277c, 0x278c, 0x281a, 0x2856, 0x286a, 0x287a, 0x2908, 0x2944, 0x2958, 0x2968, 0x2986
+; code_173  ; lofsa
+; code_778  ; lofsa
+; code_786  ; lofsa
+; code_818  ; lofsa
+; code_826  ; lofsa
+; code_851  ; lofsa
+; code_878  ; lofsa
+; code_887  ; lofsa
+; code_891  ; lofsa
+; code_895  ; lofsa
+; code_899  ; lofsa
+; code_903  ; lofsa
+; code_949  ; lofsa
+; code_965  ; lofsa
+; code_972  ; lofsa
+; code_987  ; lofsa
+; code_999  ; lofsa
+; code_1011  ; lofsa
+; code_1116  ; lofsa
+; code_1216  ; lofsa
+; code_1229  ; lofsa
+; code_1252  ; lofsa
+; code_1256  ; lofsa
+; code_1268  ; lofsa
+; code_1290  ; lofsa
+; code_1299  ; lofsa
+; code_1308  ; lofsa
+; code_1317  ; lofsa
+; code_1326  ; lofsa
+; code_1336  ; lofsa
+; code_1422  ; lofsa
+; code_1435  ; lofsa
+; code_1458  ; lofsa
+; code_1478  ; lofsa
+; code_1619  ; lofsa
+; OBJECT rm64 of 0x74 selector #3
+; OBJECT rm64 of 0x74 selector #9
+; code_1875  ; lofsa
+; code_1937  ; lofsa
+; code_1954  ; lofsa
+; code_1964  ; lofsa
+; OBJECT leftShieldEmitter of 0x2f selector #3
+; OBJECT leftShieldEmitter of 0x2f selector #13
+; OBJECT leftShieldEmitter of 0x2f selector #21
+; code_2223  ; lofsa
+; OBJECT rightShieldEmitter of 0x2f selector #3
+; OBJECT rightShieldEmitter of 0x2f selector #13
+; OBJECT rightShieldEmitter of 0x2f selector #21
+; code_2414  ; lofsa
+; OBJECT shield of 0x2f selector #3
+; OBJECT shield of 0x2f selector #13
+; OBJECT shield of 0x2f selector #21
+; OBJECT generatorOn of 0x2f selector #3
+; OBJECT generatorOn of 0x2f selector #13
+; OBJECT generatorOn of 0x2f selector #21
+; code_2743  ; lofsa
+; code_2783  ; lofsa
+; OBJECT remote of 0x2f selector #3
+; OBJECT remote of 0x2f selector #13
+; OBJECT remote of 0x2f selector #21
+; code_3005  ; lofsa
+; OBJECT starGenerator of 0x7b selector #3
+; OBJECT starGenerator of 0x7b selector #13
+; OBJECT starGenerator of 0x7b selector #21
+; OBJECT grenade of 0x30 selector #3
+; OBJECT grenade of 0x30 selector #21
+; OBJECT guard2 of 0x30 selector #3
+; code_3620  ; lofsa
+; code_3896  ; lofsa
+; code_4043  ; lofsa
+; OBJECT guard of 0x30 selector #3
+; code_4296  ; lofsa
+; OBJECT toPad of 0x6 selector #3
+; code_4582  ; lofsa
+; code_4617  ; lofsa
+; code_4683  ; lofsa
+; code_4709  ; lofsa
+; code_4760  ; lofsa
+; OBJECT fromPad of 0x6 selector #3
+; code_4881  ; lofsa
+; code_4889  ; lofsa
+; code_5039  ; lofsa
+; code_5066  ; lofsa
+; code_5103  ; lofsa
+; code_5199  ; lofsa
+; code_5229  ; lofsa
+; code_5259  ; lofsa
+; code_5286  ; lofsa
+; code_5308  ; lofsa
+; code_5410  ; lofsa
+; OBJECT killEgo of 0x6 selector #3
+; code_5572  ; lofsa
+; code_5581  ; lofsa
+; code_5608  ; lofsa
+; code_5616  ; lofsa
+; OBJECT pulse of 0x6 selector #3
+; code_5758  ; lofsa
+; code_5797  ; lofsa
+; code_5823  ; lofsa
+; code_5857  ; lofsa
+; code_5868  ; lofsa
+; OBJECT bounceGrenade of 0x6 selector #3
+; code_5992  ; lofsa
+; code_6008  ; lofsa
+; code_6028  ; lofsa
+; code_6240  ; lofsa
+; code_6270  ; lofsa
+; code_6286  ; lofsa
+; code_6309  ; lofsa
+; code_6345  ; lofsa
+; code_6356  ; lofsa
+; code_6408  ; lofsa
+; code_6424  ; lofsa
+; code_6446  ; lofsa
+; code_6470  ; lofsa
+; code_6475  ; lofsa
+; code_6505  ; lofsa
+; code_6523  ; lofsa
+; code_6539  ; lofsa
+; code_6552  ; lofsa
+; code_6684  ; lofsa
+; OBJECT dropTheGrenade of 0x6 selector #3
+; code_6828  ; lofsa
+; code_6863  ; lofsa
+; code_6892  ; lofsa
+; code_6919  ; lofsa
+; code_6965  ; lofsa
+; code_6997  ; lofsa
+; OBJECT guardDies of 0x6 selector #3
+; code_7099  ; lofsa
+; code_7116  ; lofsa
+; code_7195  ; lofsa
+; code_7298  ; lofsa
+; code_7346  ; lofsa
+; code_7522  ; lofsa
+; OBJECT getRemote of 0x6 selector #3
+; code_7634  ; lofsa
+; code_7642  ; lofsa
+; code_7674  ; lofsa
+; code_7707  ; lofsa
+; code_7738  ; lofsa
+; OBJECT turnForceFieldOff of 0x6 selector #3
+; code_8105  ; lofsa
+; OBJECT useRemote of 0x6 selector #3
+; OBJECT toastEgo of 0x6 selector #3
+; code_8594  ; lofsa
+; OBJECT showCard of 0x6 selector #3
+; OBJECT bumpOffShield of 0x6 selector #3
+; code_8997  ; lofsa
+; code_9010  ; lofsa
+; code_9019  ; lofsa
+; code_9086  ; lofsa
+; code_9118  ; lofsa
+; code_9122  ; lofsa
+; code_9130  ; lofsa
+; OBJECT sputnik of 0x6 selector #3
+; OBJECT setToBlow of 0x6 selector #3
+; code_9463  ; lofsa
+; code_9496  ; lofsa
+; OBJECT shootTheEgo of 0x6 selector #3
+; code_9789  ; lofsa
+; OBJECT upperLanding of 0x7b selector #3
+; OBJECT upperLanding of 0x7b selector #13
+; OBJECT upperLanding of 0x7b selector #21
+; code_10027  ; lofsa
+; OBJECT emitter of 0x7b selector #3
+; OBJECT emitter of 0x7b selector #13
+; OBJECT emitter of 0x7b selector #21
+; code_10265  ; lofsa
+; OBJECT tubes of 0x7b selector #3
+; OBJECT tubes of 0x7b selector #13
+; OBJECT tubes of 0x7b selector #21
+; code_10503  ; lofsa
+; OBJECT space of 0x7b selector #3
+; OBJECT space of 0x7b selector #13
+; OBJECT space of 0x7b selector #21
+; OBJECT emitterSound of 0xa selector #3

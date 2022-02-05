@@ -2210,5 +2210,118 @@ string_unused_44: ""
 0x13f, 0x58, 0x13f, 0xbd, 0x0, 0xbd, 0x0, 0x0, 0x13f, 0x0, 0x13f, 0x4d, 0x6f, 0x4d, 0x64, 0x52, 0x5b, 0x4d, 0x5b, 0x4b, 0x6b, 0x4b, 0x6b, 0xe, 0x4b, 0xe, 0x4b, 0x4b, 0x57, 0x4b, 0x57, 0x4d, 0x42, 0x4d, 0x2b, 0x58, 0x13f, 0xbd, 0x0, 0xbd, 0x0, 0x0, 0x13f, 0x0, 0x13f, 0xb1, 0x5d, 0xb0, 0x5d, 0xaa, 0x6b, 0xaa, 0x6c, 0x74, 0x4d, 0x73, 0x4c, 0xa9, 0x5a, 0xaa, 0x58, 0xb0, 0x39, 0xaf, 0x29, 0xb7, 0x13f, 0xb9, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 112
-0x33, 0x37, 0x3b, 0x3f, 0x43, 0x47, 0x4b, 0x4f, 0x53, 0x83, 0x94, 0xa5, 0xb2, 0x10f, 0x11f, 0x126, 0x13c, 0x148, 0x16b, 0x173, 0x18f, 0x196, 0x1bc, 0x1c4, 0x1d1, 0x1d8, 0x1f5, 0x202, 0x206, 0x212, 0x21e, 0x227, 0x231, 0x244, 0x250, 0x25c, 0x268, 0x2bd, 0x2dc, 0x2e8, 0x348, 0x35c, 0x400, 0x414, 0x494, 0x512, 0x586, 0x597, 0x5bc, 0x5ce, 0x5df, 0x604, 0x644, 0x668, 0x6d2, 0x6f6, 0x73c, 0x75c, 0x78d, 0x7c0, 0x7e3, 0x7fe, 0x816, 0x839, 0x856, 0x914, 0x919, 0x941, 0x967, 0x987, 0x9b9, 0x9cc, 0x9d4, 0x9f4, 0xa29, 0xa5b, 0xa6d, 0xa9e, 0xb26, 0xb2d, 0xb40, 0xb48, 0xbb6, 0xbfb, 0xc08, 0xc2a, 0xc4c, 0xcce, 0xce2, 0xcf2, 0xd36, 0xd4a, 0xd5a, 0xdd8, 0xdec, 0xdfc, 0xe68, 0xe7c, 0xe8c, 0xee4, 0xef8, 0xf08, 0xf26, 0xf3a, 0xf64, 0xf78, 0xfc8, 0xfdc, 0xfec, 0x100a, 0x101e, 0x1048
+; code_50  ; lofsa
+; code_54  ; lofsa
+; code_58  ; lofsa
+; code_62  ; lofsa
+; code_66  ; lofsa
+; code_70  ; lofsa
+; code_74  ; lofsa
+; code_78  ; lofsa
+; code_82  ; lofsa
+; code_130  ; lofsa
+; code_147  ; lofsa
+; code_164  ; lofsa
+; code_177  ; lofsa
+; code_270  ; lofsa
+; code_286  ; lofsa
+; code_293  ; lofsa
+; code_315  ; lofsa
+; code_327  ; lofsa
+; code_362  ; lofsa
+; code_370  ; lofsa
+; code_398  ; lofsa
+; code_405  ; lofsa
+; code_443  ; lofsa
+; code_451  ; lofsa
+; code_464  ; lofsa
+; code_471  ; lofsa
+; code_500  ; lofsa
+; code_513  ; lofsa
+; code_517  ; lofsa
+; code_529  ; lofsa
+; code_541  ; lofsa
+; code_550  ; lofsa
+; code_560  ; lofsa
+; code_579  ; lofsa
+; code_591  ; lofsa
+; code_603  ; lofsa
+; code_615  ; lofsa
+; code_700  ; lofsa
+; OBJECT rm59 of 0x74 selector #3
+; OBJECT rm59 of 0x74 selector #9
+; OBJECT e1Door of 0x73 selector #3
+; OBJECT e1Door of 0x73 selector #13
+; OBJECT e2Door of 0x73 selector #3
+; OBJECT e2Door of 0x73 selector #13
+; OBJECT helmet of 0x30 selector #3
+; OBJECT robot of 0x30 selector #3
+; code_1413  ; lofsa
+; code_1430  ; lofsa
+; OBJECT goDown of 0x1 selector #3
+; code_1485  ; lofsa
+; code_1502  ; lofsa
+; OBJECT goUp of 0x1 selector #3
+; OBJECT electBall of 0x2f selector #3
+; OBJECT electBall of 0x2f selector #21
+; OBJECT lights of 0x2f selector #3
+; OBJECT lights of 0x2f selector #21
+; OBJECT upperPoly of 0x23 selector #3
+; OBJECT lowerPoly of 0x23 selector #3
+; code_1932  ; lofsa
+; code_1983  ; lofsa
+; code_2018  ; lofsa
+; code_2045  ; lofsa
+; code_2069  ; lofsa
+; code_2104  ; lofsa
+; OBJECT helmetFlysAcrossRoom of 0x6 selector #3
+; code_2323  ; lofsa
+; code_2328  ; lofsa
+; code_2368  ; lofsa
+; code_2406  ; lofsa
+; code_2438  ; lofsa
+; code_2488  ; lofsa
+; code_2507  ; lofsa
+; code_2515  ; lofsa
+; code_2547  ; lofsa
+; code_2600  ; lofsa
+; code_2650  ; lofsa
+; code_2668  ; lofsa
+; code_2717  ; lofsa
+; code_2853  ; lofsa
+; code_2860  ; lofsa
+; code_2879  ; lofsa
+; code_2887  ; lofsa
+; OBJECT egoLosesHelmet of 0x6 selector #3
+; code_3066  ; lofsa
+; code_3079  ; lofsa
+; code_3113  ; lofsa
+; OBJECT pulse of 0x6 selector #3
+; OBJECT farRightLowerYellowMach of 0x7b selector #3
+; OBJECT farRightLowerYellowMach of 0x7b selector #13
+; OBJECT farRightLowerYellowMach of 0x7b selector #21
+; OBJECT farRightUpperBlueMach of 0x7b selector #3
+; OBJECT farRightUpperBlueMach of 0x7b selector #13
+; OBJECT farRightUpperBlueMach of 0x7b selector #21
+; OBJECT popcorn of 0x7b selector #3
+; OBJECT popcorn of 0x7b selector #13
+; OBJECT popcorn of 0x7b selector #21
+; OBJECT microwave of 0x7b selector #3
+; OBJECT microwave of 0x7b selector #13
+; OBJECT microwave of 0x7b selector #21
+; OBJECT generator of 0x7b selector #3
+; OBJECT generator of 0x7b selector #13
+; OBJECT generator of 0x7b selector #21
+; OBJECT variousMachines of 0x7b selector #3
+; OBJECT variousMachines of 0x7b selector #13
+; OBJECT variousLowerMachines of 0x7b selector #3
+; OBJECT variousLowerMachines of 0x7b selector #13
+; OBJECT rowOfLights of 0x7b selector #3
+; OBJECT rowOfLights of 0x7b selector #13
+; OBJECT rowOfLights of 0x7b selector #21
+; OBJECT otherGadgets of 0x7b selector #3
+; OBJECT otherGadgets of 0x7b selector #13
+; OBJECT robotSound of 0xa selector #3

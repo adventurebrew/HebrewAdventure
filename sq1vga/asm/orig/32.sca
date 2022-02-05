@@ -6161,5 +6161,159 @@ string_unused_50: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 153
-0x26e, 0x27d, 0x28a, 0x295, 0x2b1, 0x2b5, 0x2bd, 0x2c5, 0x2cd, 0x2d5, 0x2e4, 0x2e8, 0x2f7, 0x2fb, 0x30a, 0x30e, 0x31d, 0x321, 0x330, 0x334, 0x343, 0x347, 0x356, 0x35a, 0x369, 0x36d, 0x37c, 0x380, 0x446, 0x5dc, 0x5e8, 0x5f0, 0x5f8, 0x626, 0x654, 0x685, 0x6ea, 0x6fe, 0x802, 0x811, 0x85c, 0x8ad, 0x8b5, 0x8bd, 0x930, 0x938, 0x940, 0x948, 0x97c, 0x9e2, 0xa31, 0xa39, 0xa41, 0xa9b, 0xaf4, 0xb2a, 0xb90, 0xbf6, 0xc52, 0xcae, 0xd14, 0xd7a, 0xd8e, 0xdd1, 0xdfa, 0xe0e, 0xe4e, 0xef3, 0xf52, 0xf66, 0x1036, 0x10d0, 0x1120, 0x1182, 0x124a, 0x131b, 0x133a, 0x134e, 0x1371, 0x1391, 0x13a7, 0x13ca, 0x13ea, 0x1400, 0x1423, 0x1453, 0x1476, 0x14a6, 0x14d0, 0x14e4, 0x14f4, 0x1523, 0x154f, 0x1563, 0x1570, 0x1582, 0x1598, 0x15ca, 0x160d, 0x163d, 0x1650, 0x1668, 0x16f7, 0x1727, 0x173a, 0x1752, 0x17bc, 0x17f2, 0x1828, 0x18b3, 0x194a, 0x195e, 0x1a4a, 0x1a5e, 0x1ace, 0x1ae2, 0x1b52, 0x1b66, 0x1bd6, 0x1bea, 0x1c5a, 0x1c6e, 0x1cde, 0x1cf2, 0x1d62, 0x1d76, 0x1de6, 0x1dfa, 0x1e6a, 0x1e7e, 0x1fae, 0x20ac, 0x210c, 0x220a, 0x226a, 0x2368, 0x23c8, 0x24c6, 0x2526, 0x2624, 0x2684, 0x2782, 0x27e2, 0x28e0, 0x2940, 0x2a3e, 0x2a9e, 0x2b9c, 0x2bfc, 0x2c3a, 0x2c76, 0x2caf, 0x2dae
+; code_621  ; lofsa
+; code_636  ; lofsa
+; code_649  ; lofsa
+; code_660  ; lofsa
+; code_688  ; lofsa
+; code_692  ; lofsa
+; code_700  ; lofsa
+; code_708  ; lofsa
+; code_716  ; lofsa
+; code_724  ; lofsa
+; code_739  ; lofsa
+; code_743  ; lofsa
+; code_758  ; lofsa
+; code_762  ; lofsa
+; code_777  ; lofsa
+; code_781  ; lofsa
+; code_796  ; lofsa
+; code_800  ; lofsa
+; code_815  ; lofsa
+; code_819  ; lofsa
+; code_834  ; lofsa
+; code_838  ; lofsa
+; code_853  ; lofsa
+; code_857  ; lofsa
+; code_872  ; lofsa
+; code_876  ; lofsa
+; code_891  ; lofsa
+; code_895  ; lofsa
+; OBJECT rm32 of 0x74 selector #3
+; code_1499  ; lofsa
+; code_1511  ; lofsa
+; code_1519  ; lofsa
+; code_1527  ; lofsa
+; code_1573  ; lofsa
+; code_1619  ; lofsa
+; code_1668  ; lofsa
+; code_1769  ; lofsa
+; code_1789  ; lofsa
+; code_2049  ; lofsa
+; code_2064  ; lofsa
+; code_2139  ; lofsa
+; code_2220  ; lofsa
+; code_2228  ; lofsa
+; code_2236  ; lofsa
+; code_2351  ; lofsa
+; code_2359  ; lofsa
+; code_2367  ; lofsa
+; code_2375  ; lofsa
+; OBJECT egoTouchesAcid of 0x80 selector #3
+; code_2529  ; lofsa
+; code_2608  ; lofsa
+; code_2616  ; lofsa
+; code_2624  ; lofsa
+; code_2714  ; lofsa
+; OBJECT egoPlugsGeyser of 0x6 selector #3
+; OBJECT circleThing of 0x2f selector #3
+; OBJECT arrowThing of 0x2f selector #3
+; OBJECT viewBox of 0x2e selector #3
+; OBJECT heads of 0x2e selector #3
+; OBJECT mouth1 of 0x2f selector #3
+; OBJECT mouth2 of 0x2f selector #3
+; OBJECT helmet of 0x2e selector #3
+; OBJECT helmet of 0x2e selector #13
+; code_3536  ; lofsa
+; OBJECT ggyer of 0x2c selector #3
+; OBJECT ggyer of 0x2c selector #13
+; code_3661  ; lofsa
+; code_3826  ; lofsa
+; OBJECT geyser of 0x2f selector #3
+; OBJECT geyser of 0x2f selector #13
+; OBJECT plug of 0x2e selector #3
+; OBJECT upperledge of 0x2c selector #3
+; code_4383  ; lofsa
+; OBJECT lowerledge of 0x2c selector #3
+; OBJECT door of 0x2f selector #3
+; code_4890  ; lofsa
+; code_4921  ; lofsa
+; code_4941  ; lofsa
+; code_4976  ; lofsa
+; code_5008  ; lofsa
+; code_5030  ; lofsa
+; code_5065  ; lofsa
+; code_5097  ; lofsa
+; code_5119  ; lofsa
+; code_5154  ; lofsa
+; code_5202  ; lofsa
+; code_5237  ; lofsa
+; code_5285  ; lofsa
+; OBJECT acidPool of 0x2c selector #3
+; OBJECT acidPool of 0x2c selector #13
+; OBJECT acidPool of 0x2c selector #21
+; code_5410  ; lofsa
+; code_5454  ; lofsa
+; code_5474  ; lofsa
+; code_5487  ; lofsa
+; code_5505  ; lofsa
+; code_5527  ; lofsa
+; OBJECT acidDoYourThing of 0x6 selector #3
+; code_5644  ; lofsa
+; code_5692  ; lofsa
+; code_5711  ; lofsa
+; OBJECT fallingAcid of 0x30 selector #3
+; code_5878  ; lofsa
+; code_5926  ; lofsa
+; code_5945  ; lofsa
+; OBJECT acidVapor of 0x2f selector #3
+; OBJECT poolDrop of 0xa selector #3
+; OBJECT geyserSound of 0xa selector #3
+; OBJECT dripSound of 0xa selector #3
+; code_6322  ; lofsa
+; CLASS AcidDrop of 0x30 selector #3
+; CLASS AcidDrop of 0x30 selector #13
+; OBJECT drop1 of 0x82 selector #3
+; OBJECT drop1 of 0x82 selector #13
+; OBJECT drop2 of 0x82 selector #3
+; OBJECT drop2 of 0x82 selector #13
+; OBJECT drop3 of 0x82 selector #3
+; OBJECT drop3 of 0x82 selector #13
+; OBJECT drop4 of 0x82 selector #3
+; OBJECT drop4 of 0x82 selector #13
+; OBJECT drop5 of 0x82 selector #3
+; OBJECT drop5 of 0x82 selector #13
+; OBJECT drop6 of 0x82 selector #3
+; OBJECT drop6 of 0x82 selector #13
+; OBJECT drop7 of 0x82 selector #3
+; OBJECT drop7 of 0x82 selector #13
+; OBJECT drop8 of 0x82 selector #3
+; OBJECT drop8 of 0x82 selector #13
+; OBJECT drop9 of 0x82 selector #3
+; OBJECT drop9 of 0x82 selector #13
+; OBJECT egoHitByAcidDrop of 0x6 selector #3
+; code_8363  ; lofsa
+; OBJECT drop1Falling of 0x6 selector #3
+; code_8713  ; lofsa
+; OBJECT drop2Falling of 0x6 selector #3
+; code_9063  ; lofsa
+; OBJECT drop3Falling of 0x6 selector #3
+; code_9413  ; lofsa
+; OBJECT drop4Falling of 0x6 selector #3
+; code_9763  ; lofsa
+; OBJECT drop5Falling of 0x6 selector #3
+; code_10113  ; lofsa
+; OBJECT drop6Falling of 0x6 selector #3
+; code_10463  ; lofsa
+; OBJECT drop7Falling of 0x6 selector #3
+; code_10813  ; lofsa
+; OBJECT drop8Falling of 0x6 selector #3
+; code_11163  ; lofsa
+; OBJECT drop9Falling of 0x6 selector #3
+; code_11321  ; lofsa
+; code_11381  ; lofsa
+; code_11438  ; lofsa
+; OBJECT egoTasteAcid of 0x6 selector #3

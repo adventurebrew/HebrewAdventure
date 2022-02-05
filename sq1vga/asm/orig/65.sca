@@ -1884,5 +1884,53 @@ string_unused_31: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 47
-0xb0, 0xbc, 0xc8, 0xd4, 0xe0, 0xec, 0xf8, 0x104, 0x110, 0x11c, 0x120, 0x12c, 0x130, 0x146, 0x17a, 0x186, 0x27e, 0x3ad, 0x3cf, 0x41c, 0x500, 0x5dc, 0x654, 0x6a6, 0x6c8, 0x71a, 0x73c, 0x78e, 0x7b0, 0x802, 0x824, 0x876, 0x898, 0x8ea, 0x90c, 0x95e, 0x980, 0x9d2, 0x9f4, 0xa46, 0xada, 0xb4c, 0xd04, 0xd42, 0xd8c, 0xdf2, 0xe48
+; code_175  ; lofsa
+; code_187  ; lofsa
+; code_199  ; lofsa
+; code_211  ; lofsa
+; code_223  ; lofsa
+; code_235  ; lofsa
+; code_247  ; lofsa
+; code_259  ; lofsa
+; code_271  ; lofsa
+; code_283  ; lofsa
+; code_287  ; lofsa
+; code_299  ; lofsa
+; code_303  ; lofsa
+; code_325  ; lofsa
+; OBJECT rm65 of 0x74 selector #3
+; OBJECT rm65 of 0x74 selector #9
+; OBJECT hand of 0x2e selector #3
+; code_940  ; lofsa
+; code_974  ; lofsa
+; CLASS PadButton of 0x2f selector #3
+; OBJECT enterBut of 0x89 selector #3
+; OBJECT quitBut of 0x89 selector #3
+; OBJECT oneBut of 0x89 selector #3
+; OBJECT oneBut of 0x89 selector #44
+; OBJECT twoBut of 0x89 selector #3
+; OBJECT twoBut of 0x89 selector #44
+; OBJECT threeBut of 0x89 selector #3
+; OBJECT threeBut of 0x89 selector #44
+; OBJECT fourBut of 0x89 selector #3
+; OBJECT fourBut of 0x89 selector #44
+; OBJECT fiveBut of 0x89 selector #3
+; OBJECT fiveBut of 0x89 selector #44
+; OBJECT sixBut of 0x89 selector #3
+; OBJECT sixBut of 0x89 selector #44
+; OBJECT sevenBut of 0x89 selector #3
+; OBJECT sevenBut of 0x89 selector #44
+; OBJECT eightBut of 0x89 selector #3
+; OBJECT eightBut of 0x89 selector #44
+; OBJECT nineBut of 0x89 selector #3
+; OBJECT nineBut of 0x89 selector #44
+; code_2777  ; lofsa
+; OBJECT EnterScript of 0x6 selector #3
+; OBJECT flashText of 0x6 selector #3
+; OBJECT beep of 0xa selector #3
+; code_3467  ; lofsa
+; OBJECT keyFlashScript of 0x6 selector #3
+; OBJECT quitScript of 0x6 selector #3

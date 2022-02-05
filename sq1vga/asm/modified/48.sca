@@ -2127,5 +2127,165 @@ string_unused_101: ""
 0x0, 0x0, 0x37, 0x28, 0x2d, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 159
-0x1e, 0x34, 0x53, 0x63, 0x67, 0x7a, 0x7e, 0x8a, 0x96, 0x9e, 0xa6, 0xae, 0xb6, 0xbe, 0xc6, 0xce, 0xd6, 0xde, 0xe6, 0xee, 0xf7, 0x125, 0x137, 0x29a, 0x2fa, 0x30c, 0x318, 0x321, 0x32a, 0x348, 0x376, 0x384, 0x3b4, 0x3ef, 0x460, 0x483, 0x49c, 0x4bc, 0x4cc, 0x4ea, 0x529, 0x532, 0x560, 0x5a5, 0x5b8, 0x5cb, 0x5d7, 0x5e5, 0x606, 0x640, 0x64e, 0x657, 0x660, 0x673, 0x67c, 0x685, 0x68e, 0x6a1, 0x6aa, 0x6b3, 0x6bc, 0x6c5, 0x6d8, 0x6e1, 0x6ea, 0x6fd, 0x706, 0x70f, 0x718, 0x72b, 0x734, 0x73d, 0x750, 0x759, 0x762, 0x775, 0x77e, 0x787, 0x79a, 0x7a3, 0x7ac, 0x7bf, 0x7c8, 0x7db, 0x7e4, 0x7ed, 0x7f6, 0x813, 0x826, 0x839, 0x84c, 0x899, 0x8b3, 0x8c4, 0x8c8, 0x8f0, 0x8f4, 0x900, 0x904, 0x917, 0x91b, 0x92b, 0x956, 0x95a, 0x966, 0x96a, 0x97d, 0x981, 0x991, 0x9a7, 0x9ab, 0x9be, 0x9c2, 0x9d2, 0x9fd, 0xa01, 0xa0d, 0xa11, 0xa1b, 0xa46, 0xa5a, 0xa6a, 0xa86, 0xa9a, 0xb36, 0xb6c, 0xbd2, 0xc38, 0xc94, 0xcf0, 0xd04, 0xd14, 0xd52, 0xd66, 0xd76, 0xd92, 0xda6, 0xdb6, 0xdf6, 0xe0a, 0xe1a, 0xe36, 0xe4a, 0xe5a, 0xe72, 0xe86, 0xe96, 0xeae, 0xec2, 0xed2, 0xeea, 0xefe, 0xf0e, 0xf26, 0xf3a, 0xf4a, 0xf62, 0xf76, 0xf86
+; code_29  ; lofsa
+; code_51  ; lofsa
+; code_82  ; lofsa
+; code_98  ; lofsa
+; code_102  ; lofsa
+; code_121  ; lofsa
+; code_125  ; lofsa
+; code_137  ; lofsa
+; code_149  ; lofsa
+; code_157  ; lofsa
+; code_165  ; lofsa
+; code_173  ; lofsa
+; code_181  ; lofsa
+; code_189  ; lofsa
+; code_197  ; lofsa
+; code_205  ; lofsa
+; code_213  ; lofsa
+; code_221  ; lofsa
+; code_229  ; lofsa
+; code_237  ; lofsa
+; code_246  ; lofsa
+; code_292  ; lofsa
+; code_310  ; lofsa
+; OBJECT rm48 of 0x43 selector #3
+; code_761  ; lofsa
+; code_779  ; lofsa
+; code_791  ; lofsa
+; code_800  ; lofsa
+; code_809  ; lofsa
+; code_839  ; lofsa
+; code_885  ; lofsa
+; code_899  ; lofsa
+; OBJECT sellRobots of 0x6 selector #3
+; code_1006  ; lofsa
+; code_1119  ; lofsa
+; code_1154  ; lofsa
+; code_1179  ; lofsa
+; code_1211  ; lofsa
+; code_1227  ; lofsa
+; OBJECT bugTalker of 0x6 selector #3
+; code_1320  ; lofsa
+; code_1329  ; lofsa
+; OBJECT soldDroid of 0x6 selector #3
+; code_1444  ; lofsa
+; code_1463  ; lofsa
+; code_1482  ; lofsa
+; code_1494  ; lofsa
+; code_1508  ; lofsa
+; OBJECT noMoney of 0x6 selector #3
+; code_1599  ; lofsa
+; code_1613  ; lofsa
+; code_1622  ; lofsa
+; code_1631  ; lofsa
+; code_1650  ; lofsa
+; code_1659  ; lofsa
+; code_1668  ; lofsa
+; code_1677  ; lofsa
+; code_1696  ; lofsa
+; code_1705  ; lofsa
+; code_1714  ; lofsa
+; code_1723  ; lofsa
+; code_1732  ; lofsa
+; code_1751  ; lofsa
+; code_1760  ; lofsa
+; code_1769  ; lofsa
+; code_1788  ; lofsa
+; code_1797  ; lofsa
+; code_1806  ; lofsa
+; code_1815  ; lofsa
+; code_1834  ; lofsa
+; code_1843  ; lofsa
+; code_1852  ; lofsa
+; code_1871  ; lofsa
+; code_1880  ; lofsa
+; code_1889  ; lofsa
+; code_1908  ; lofsa
+; code_1917  ; lofsa
+; code_1926  ; lofsa
+; code_1945  ; lofsa
+; code_1954  ; lofsa
+; code_1963  ; lofsa
+; code_1982  ; lofsa
+; code_1991  ; lofsa
+; code_2010  ; lofsa
+; code_2019  ; lofsa
+; code_2028  ; lofsa
+; code_2037  ; lofsa
+; code_2066  ; lofsa
+; code_2085  ; lofsa
+; code_2104  ; lofsa
+; code_2123  ; lofsa
+; code_2200  ; lofsa
+; code_2226  ; lofsa
+; code_2243  ; lofsa
+; code_2247  ; lofsa
+; code_2287  ; lofsa
+; code_2291  ; lofsa
+; code_2303  ; lofsa
+; code_2307  ; lofsa
+; code_2326  ; lofsa
+; code_2330  ; lofsa
+; code_2346  ; lofsa
+; code_2389  ; lofsa
+; code_2393  ; lofsa
+; code_2405  ; lofsa
+; code_2409  ; lofsa
+; code_2428  ; lofsa
+; code_2432  ; lofsa
+; code_2448  ; lofsa
+; code_2470  ; lofsa
+; code_2474  ; lofsa
+; code_2493  ; lofsa
+; code_2497  ; lofsa
+; code_2513  ; lofsa
+; code_2556  ; lofsa
+; code_2560  ; lofsa
+; code_2572  ; lofsa
+; code_2576  ; lofsa
+; code_2586  ; lofsa
+; OBJECT bug of 0x2c selector #3
+; OBJECT bug of 0x2c selector #13
+; OBJECT bug of 0x2c selector #21
+; OBJECT antenna of 0x2f selector #3
+; OBJECT antenna of 0x2f selector #13
+; OBJECT wiggleAntenna of 0x6 selector #3
+; OBJECT bugMouth of 0x2f selector #3
+; OBJECT rightarm of 0x2f selector #3
+; OBJECT display of 0x2e selector #3
+; OBJECT readout of 0x2e selector #3
+; OBJECT award of 0x2c selector #3
+; OBJECT award of 0x2c selector #13
+; OBJECT award of 0x2c selector #21
+; OBJECT robotHead of 0x2c selector #3
+; OBJECT robotHead of 0x2c selector #13
+; OBJECT robotHead of 0x2c selector #21
+; OBJECT robotArm of 0x2c selector #3
+; OBJECT robotArm of 0x2c selector #13
+; OBJECT robotArm of 0x2c selector #21
+; OBJECT bugButt of 0x2c selector #3
+; OBJECT bugButt of 0x2c selector #13
+; OBJECT bugButt of 0x2c selector #21
+; OBJECT DBUsign of 0x2c selector #3
+; OBJECT DBUsign of 0x2c selector #13
+; OBJECT DBUsign of 0x2c selector #21
+; OBJECT screen of 0x2c selector #3
+; OBJECT screen of 0x2c selector #13
+; OBJECT screen of 0x2c selector #21
+; OBJECT diaphram of 0x2c selector #3
+; OBJECT diaphram of 0x2c selector #13
+; OBJECT diaphram of 0x2c selector #21
+; OBJECT tubes of 0x2c selector #3
+; OBJECT tubes of 0x2c selector #13
+; OBJECT tubes of 0x2c selector #21
+; OBJECT table of 0x2c selector #3
+; OBJECT table of 0x2c selector #13
+; OBJECT table of 0x2c selector #21
+; OBJECT parts of 0x2c selector #3
+; OBJECT parts of 0x2c selector #13
+; OBJECT parts of 0x2c selector #21

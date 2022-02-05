@@ -1253,5 +1253,69 @@ string_unused_30: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 63
-0x3a, 0x3e, 0x42, 0x46, 0x4a, 0xcd, 0xdd, 0xe4, 0xed, 0xf4, 0x11e, 0x13a, 0x168, 0x175, 0x179, 0x182, 0x18f, 0x193, 0x19f, 0x1b5, 0x1be, 0x1ca, 0x1d3, 0x1dd, 0x20f, 0x228, 0x234, 0x2c2, 0x33a, 0x37c, 0x38d, 0x3a7, 0x3af, 0x3d0, 0x433, 0x46b, 0x484, 0x4de, 0x502, 0x56c, 0x590, 0x604, 0x618, 0x628, 0x674, 0x688, 0x698, 0x6e4, 0x6f8, 0x708, 0x754, 0x768, 0x778, 0x7c4, 0x7d8, 0x7e8, 0x834, 0x848, 0x858, 0x8e4, 0x8f8, 0x908, 0x930
+; code_57  ; lofsa
+; code_61  ; lofsa
+; code_65  ; lofsa
+; code_69  ; lofsa
+; code_73  ; lofsa
+; code_204  ; lofsa
+; code_220  ; lofsa
+; code_227  ; lofsa
+; code_236  ; lofsa
+; code_243  ; lofsa
+; code_285  ; lofsa
+; code_313  ; lofsa
+; code_359  ; lofsa
+; code_372  ; lofsa
+; code_376  ; lofsa
+; code_385  ; lofsa
+; code_398  ; lofsa
+; code_402  ; lofsa
+; code_414  ; lofsa
+; code_436  ; lofsa
+; code_445  ; lofsa
+; code_457  ; lofsa
+; code_466  ; lofsa
+; code_476  ; lofsa
+; code_526  ; lofsa
+; OBJECT rm63 of 0x74 selector #3
+; OBJECT rm63 of 0x74 selector #9
+; OBJECT fromDoor of 0x6 selector #3
+; OBJECT intoDoor of 0x6 selector #3
+; code_891  ; lofsa
+; code_908  ; lofsa
+; code_934  ; lofsa
+; code_942  ; lofsa
+; OBJECT switchit of 0x6 selector #3
+; code_1074  ; lofsa
+; code_1130  ; lofsa
+; OBJECT walkGuard of 0x6 selector #3
+; OBJECT panel of 0x2f selector #3
+; OBJECT panel of 0x2f selector #21
+; OBJECT orbs of 0x2f selector #3
+; OBJECT orbs of 0x2f selector #21
+; OBJECT panelOfLights of 0x7b selector #3
+; OBJECT panelOfLights of 0x7b selector #13
+; OBJECT panelOfLights of 0x7b selector #21
+; OBJECT variousMachines of 0x7b selector #3
+; OBJECT variousMachines of 0x7b selector #13
+; OBJECT variousMachines of 0x7b selector #21
+; OBJECT transmission of 0x7b selector #3
+; OBJECT transmission of 0x7b selector #13
+; OBJECT transmission of 0x7b selector #21
+; OBJECT rearViewMirror of 0x7b selector #3
+; OBJECT rearViewMirror of 0x7b selector #13
+; OBJECT rearViewMirror of 0x7b selector #21
+; OBJECT globes of 0x7b selector #3
+; OBJECT globes of 0x7b selector #13
+; OBJECT globes of 0x7b selector #21
+; OBJECT walkingGuard of 0x30 selector #3
+; OBJECT walkingGuard of 0x30 selector #13
+; OBJECT walkingGuard of 0x30 selector #21
+; OBJECT standingGuard of 0x2d selector #3
+; OBJECT standingGuard of 0x2d selector #13
+; OBJECT standingGuard of 0x2d selector #21
+; OBJECT beamSound of 0xa selector #3

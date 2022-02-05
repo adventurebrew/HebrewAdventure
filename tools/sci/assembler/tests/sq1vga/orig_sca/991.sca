@@ -537,5 +537,8 @@ string_unused_2: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0x238, 0x398
+; CLASS Jump of 0x1d selector #3
+; CLASS JumpTo of 0x29 selector #3

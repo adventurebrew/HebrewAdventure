@@ -1965,5 +1965,55 @@ string_unused_26: ""
 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 49
-0x160, 0x16d, 0x1af, 0x1b7, 0x1bf, 0x239, 0x250, 0x25d, 0x263, 0x2d6, 0x326, 0x38c, 0x3f2, 0x458, 0x548, 0x562, 0x5a1, 0x5ce, 0x5e4, 0x5f6, 0x5fe, 0x618, 0x625, 0x672, 0x7c0, 0x800, 0x871, 0x87d, 0x885, 0x88d, 0x8a9, 0x8d1, 0xa9a, 0xae6, 0xb93, 0xbdc, 0xc47, 0xc54, 0xc5a, 0xc84, 0xc98, 0xcbf, 0xcd6, 0xcea, 0xcfa, 0xd16, 0xd72, 0xdce, 0xe34
+; code_351  ; lofsa
+; code_364  ; lofsa
+; code_430  ; lofsa
+; code_438  ; lofsa
+; code_446  ; lofsa
+; code_568  ; lofsa
+; code_591  ; lofsa
+; code_604  ; lofsa
+; code_610  ; lofsa
+; OBJECT rm33 of 0x74 selector #3
+; OBJECT laserEnd1 of 0x2f selector #3
+; OBJECT laserEnd2 of 0x2f selector #3
+; OBJECT smoke1 of 0x2f selector #3
+; OBJECT smoke2 of 0x2f selector #3
+; code_1351  ; lofsa
+; code_1377  ; lofsa
+; code_1440  ; lofsa
+; code_1485  ; lofsa
+; code_1507  ; lofsa
+; code_1525  ; lofsa
+; code_1533  ; lofsa
+; code_1559  ; lofsa
+; code_1572  ; lofsa
+; OBJECT egoBlowItUp of 0x6 selector #3
+; code_1983  ; lofsa
+; OBJECT chopUpEgo of 0x6 selector #3
+; code_2160  ; lofsa
+; code_2172  ; lofsa
+; code_2180  ; lofsa
+; code_2188  ; lofsa
+; code_2216  ; lofsa
+; code_2256  ; lofsa
+; code_2713  ; lofsa
+; OBJECT instantReplay of 0x80 selector #3
+; code_2962  ; lofsa
+; OBJECT laser of 0x2f selector #3
+; code_3142  ; lofsa
+; code_3155  ; lofsa
+; code_3161  ; lofsa
+; OBJECT laserThing1 of 0x2c selector #3
+; OBJECT laserThing1 of 0x2c selector #13
+; code_3262  ; lofsa
+; OBJECT laserThing2 of 0x2c selector #3
+; OBJECT laserThing2 of 0x2c selector #13
+; OBJECT laserThing2 of 0x2c selector #21
+; OBJECT viewBox of 0x2e selector #3
+; OBJECT heads of 0x2e selector #3
+; OBJECT mouth1 of 0x2f selector #3
+; OBJECT mouth2 of 0x2f selector #3

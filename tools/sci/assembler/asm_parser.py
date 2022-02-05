@@ -409,7 +409,7 @@ def p_preload_text_section(p):
 
 
 def p_relocation_section(p):
-    """relocation_section : DOT RELOCATION NUM OF POINTERS COLON NUMBER vars_list"""
+    """relocation_section : DOT RELOCATION NUM OF POINTERS COLON NUMBER """
     p[0] = (p[2], p[7])
 
 
@@ -439,7 +439,7 @@ def p_vars_list_single(p):
 def p_error(p):
     try:
         print(f"Line {p.lineno} ", end='')
-    except TypeError:
+    except (TypeError, AttributeError):
         pass
     print("Syntax error in input!\t", end='')
     try:

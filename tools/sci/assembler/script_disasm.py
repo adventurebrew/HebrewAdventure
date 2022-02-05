@@ -174,19 +174,19 @@ def object_second(obj, objects, third_pass):
         if pointer in pointers and not pointers[pointer]:
             if matches:
                 assert len(matches) == 1
-                pointers[pointer] = True
                 matches[0]['usages'].append({'obj': obj, 'selector_i': i})
                 if i <= 3:
                     matches[0]['special'] = True
                 obj.var_selector_vals[i] = {'val': matches[0]['str'], 'id': get_string_id(matches[0])}
+                pointers[pointer] = {'obj': obj, 'selector_i': i, 'val': obj.var_selector_vals[i]}
             elif isinstance(selector, int) and third_pass:
                 new_string = string_match_not_on_start(objects, strings, pointers, selector, pointer,
                                                        {'obj': obj, 'selector_i': i})
                 if new_string:
-                    pointers[pointer] = True
                     if i <= 3:
                         new_string['special'] = True
                     obj.var_selector_vals[i] = {'val': new_string['str'], 'id': get_string_id(new_string)}
+                    pointers[pointer] = {'obj': obj, 'selector_i': i, 'val': obj.var_selector_vals[i]}
 
     # update strings
     obj.species = obj.var_selector_vals[0]
@@ -231,7 +231,7 @@ def string_match_not_on_start(objects, strings, pointers, str_offset, pointer, u
                       }
         strings_obj.strings.append(new_string)
         strings_obj.strings = sorted(strings_obj.strings, key=lambda s: s['offset'])
-        pointers[pointer] = True
+        pointers[pointer] = usage_dict
         return new_string
     else:
         return None
@@ -271,7 +271,7 @@ def code_third(obj, objects):
             matches = [s for s in strings if s['offset'] == instr.operands]
             if matches:
                 assert len(matches) == 1
-                pointers[instr.offset + 1] = True
+                pointers[instr.offset + 1] = {'obj': obj, 'instr': instr}
                 matches[0]['usages'].append({'obj': obj, 'instr': instr})
                 instr.operands = get_string_id(matches[0])
                 instr.str = matches[0]['str']
@@ -289,7 +289,7 @@ def code_third(obj, objects):
             assert len(matches) == 1
             uniqify_name(matches[0], objects)
             if instr.offset + 1 in pointers:
-                pointers[instr.offset + 1] = True
+                pointers[instr.offset + 1] = {'obj': obj, 'instr': instr}
                 matches[0].usages.append({'obj': obj, 'instr': instr})
                 instr.operands = matches[0].get_id()
                 instr.obj = matches[0]
@@ -304,9 +304,9 @@ def local_vars_third(obj, objects):
             matches = [s for s in strings if s['offset'] == var]
             if matches:
                 assert len(matches) == 1
-                pointers[pointer] = True
                 matches[0]['usages'].append({'obj': obj, 'var': var, 'i': i})
                 obj.local_vars[i] = {'val': matches[0]['str'], 'id': get_string_id(matches[0])}
+                pointers[pointer] = {'obj': obj, 'index': i, 'var': obj.local_vars[i]}
             # TODO do we need inaccuate string match for local vars?
             # else:
             #     new_string = string_match_not_on_start(objects, strings, pointers, instr.operands, instr.offset + 1,
@@ -510,10 +510,11 @@ def disasm_all(srcdir, asmdir):
     asm_path.mkdir(exist_ok=True, parents=True)
     for scr in scr_files:
         if scr.name.lower() != 'install.scr':
+            sca = asm_path / f'{scr.stem}.sca'
             print("--------")
-            print(scr)
+            print(f"Disassembling {scr} to {sca}")
             result = disasm(scr)
-            (asm_path / f'{scr.stem}.sca').write_text(result)
+            sca.write_text(result)
 
 
 if __name__ == "__main__":

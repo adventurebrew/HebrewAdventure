@@ -620,5 +620,13 @@ string_unused_4: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 7
-0x1fc, 0x214, 0x220, 0x2b8, 0x326, 0x33a, 0x484
+; code_507  ; lofsa
+; OBJECT rm20 of 0x74 selector #3
+; OBJECT rm20 of 0x74 selector #9
+; code_695  ; lofsa
+; OBJECT hole of 0x2c selector #3
+; OBJECT hole of 0x2c selector #13
+; OBJECT enterHole of 0x6 selector #3

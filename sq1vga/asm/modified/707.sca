@@ -403,5 +403,10 @@ string_unused_4: ""
 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 4
-0x107, 0x126, 0x279, 0x298
+; code_262  ; lofsa
+; OBJECT dropGrenade of 0x6 selector #3
+; code_632  ; lofsa
+; OBJECT egoShot of 0x6 selector #3

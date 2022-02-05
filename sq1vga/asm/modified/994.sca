@@ -2371,5 +2371,50 @@ string_unused_27: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 44
-0x12, 0x2e, 0x4a, 0xa2, 0xbb, 0xe0, 0x11e, 0x13a, 0x156, 0x16a, 0x188, 0x1a8, 0x1c4, 0x2b2, 0x359, 0x41b, 0x425, 0x42f, 0x439, 0x443, 0x44d, 0x457, 0x461, 0x46b, 0x57b, 0x5a2, 0x779, 0x82e, 0x883, 0x8e0, 0xaa4, 0xaf9, 0xdc0, 0xe80, 0xf02, 0xf97, 0xf9d, 0xfc5, 0xfcc, 0xfd3, 0xfe8, 0x1050, 0x1084, 0x10d4
+; OBJECT cast of 0x5 selector #3
+; OBJECT features of 0x5 selector #3
+; OBJECT theDoits of 0x5 selector #3
+; OBJECT sFeatures of 0x5 selector #3
+; code_186  ; lofsa
+; OBJECT sounds of 0x5 selector #3
+; OBJECT mayPause of 0x1 selector #3
+; OBJECT regions of 0x5 selector #3
+; OBJECT locales of 0x5 selector #3
+; code_361  ; lofsa
+; OBJECT addToPics of 0x5 selector #3
+; OBJECT controls of 0x13 selector #3
+; OBJECT timers of 0x4 selector #3
+; OBJECT aTOC of 0x1 selector #3
+; code_856  ; lofsa
+; code_1050  ; lofsa
+; code_1060  ; lofsa
+; code_1070  ; lofsa
+; code_1080  ; lofsa
+; code_1090  ; lofsa
+; code_1100  ; lofsa
+; code_1110  ; lofsa
+; code_1120  ; lofsa
+; code_1130  ; lofsa
+; code_1402  ; lofsa
+; code_1441  ; lofsa
+; code_1912  ; lofsa
+; code_2093  ; lofsa
+; code_2178  ; lofsa
+; CLASS Game of 0x0 selector #3
+; CLASS Rgn of 0x0 selector #3
+; code_2808  ; lofsa
+; CLASS Rm of 0x42 selector #3
+; CLASS Locale of 0x0 selector #3
+; CLASS SL of 0x0 selector #3
+; code_3990  ; lofsa
+; code_3996  ; lofsa
+; code_4036  ; lofsa
+; code_4043  ; lofsa
+; code_4050  ; lofsa
+; code_4071  ; lofsa
+; OBJECT RU of 0x1 selector #3
+; OBJECT DNKR of 0x1 selector #3
+; OBJECT fDC of 0x1 selector #3

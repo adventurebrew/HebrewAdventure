@@ -5525,5 +5525,235 @@ string_unused_38: ""
 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 229
-0x9b, 0x138, 0x14a, 0x15a, 0x16a, 0x174, 0x17f, 0x20e, 0x258, 0x266, 0x26f, 0x278, 0x2e0, 0x34a, 0x3e2, 0x404, 0x477, 0x48c, 0x4a1, 0x4bf, 0x4e2, 0x536, 0x543, 0x573, 0x580, 0x592, 0x59a, 0x5a2, 0x5aa, 0x5c6, 0x622, 0x637, 0x65b, 0x67f, 0x69c, 0x6b2, 0x70c, 0x720, 0x744, 0x768, 0x785, 0x79b, 0x7f3, 0x807, 0x82b, 0x84f, 0x86c, 0x87e, 0x886, 0x88e, 0x89e, 0x8ae, 0x8be, 0x8ce, 0x8de, 0x8ee, 0x90f, 0x923, 0x937, 0x94d, 0x9b2, 0x9c8, 0x9e3, 0x9f3, 0xa09, 0xa19, 0xa2f, 0xa3f, 0xa55, 0xa65, 0xa7b, 0xa8b, 0xaa1, 0xab1, 0xac7, 0xad7, 0xaed, 0xafd, 0xb13, 0xb23, 0xb39, 0xb49, 0xb5f, 0xb6f, 0xb85, 0xb95, 0xbab, 0xbc1, 0xbc9, 0xbd1, 0xbd9, 0xbe2, 0xbea, 0xbf2, 0xbfa, 0xc02, 0xc0a, 0xc12, 0xc84, 0xcd4, 0xd0c, 0xd69, 0xd89, 0xda9, 0xdca, 0xdeb, 0xe0c, 0xe2e, 0xe50, 0xe72, 0xe94, 0xeb6, 0xed8, 0xefa, 0xf1c, 0xf3f, 0xf62, 0xf85, 0xf9b, 0x1030, 0x105c, 0x10d8, 0x10dc, 0x11a4, 0x11b9, 0x11dd, 0x120d, 0x122a, 0x1240, 0x129a, 0x12ae, 0x12d2, 0x12f6, 0x1313, 0x1329, 0x138d, 0x13a1, 0x13c5, 0x13e9, 0x1406, 0x141c, 0x1424, 0x1462, 0x14b4, 0x14ce, 0x14e8, 0x14fe, 0x157e, 0x15be, 0x15fe, 0x1644, 0x164c, 0x1654, 0x16f6, 0x1712, 0x1755, 0x1775, 0x17bc, 0x17c4, 0x1830, 0x184c, 0x188f, 0x18b1, 0x18c3, 0x18cb, 0x192f, 0x1956, 0x1972, 0x1a14, 0x1a73, 0x1a7b, 0x1a8c, 0x1a9d, 0x1aae, 0x1ab7, 0x1ac0, 0x1ade, 0x1aef, 0x1b1b, 0x1b24, 0x1b5e, 0x1b82, 0x1bb8, 0x1c44, 0x1cd2, 0x1d3c, 0x1dcc, 0x1e52, 0x1ed0, 0x1f36, 0x1f9c, 0x2002, 0x2080, 0x20fe, 0x217c, 0x21e2, 0x2248, 0x22ae, 0x2314, 0x237a, 0x23d9, 0x23e9, 0x2410, 0x2473, 0x2483, 0x24aa, 0x250a, 0x251c, 0x2526, 0x2531, 0x2543, 0x254d, 0x2558, 0x256a, 0x2574, 0x257f, 0x2591, 0x259b, 0x25a6, 0x25b0, 0x25d0, 0x263a, 0x26b8, 0x2736, 0x279e, 0x2806, 0x286c, 0x28d2, 0x2938
+; code_154  ; lofsa
+; code_311  ; lofsa
+; code_329  ; lofsa
+; code_345  ; lofsa
+; code_361  ; lofsa
+; code_371  ; lofsa
+; code_382  ; lofsa
+; code_525  ; lofsa
+; code_599  ; lofsa
+; code_613  ; lofsa
+; code_622  ; lofsa
+; code_631  ; lofsa
+; code_735  ; lofsa
+; OBJECT rm1 of 0x43 selector #3
+; code_993  ; lofsa
+; code_1027  ; lofsa
+; code_1142  ; lofsa
+; code_1163  ; lofsa
+; code_1184  ; lofsa
+; code_1214  ; lofsa
+; code_1249  ; lofsa
+; code_1333  ; lofsa
+; code_1346  ; lofsa
+; code_1394  ; lofsa
+; code_1407  ; lofsa
+; code_1425  ; lofsa
+; code_1433  ; lofsa
+; code_1441  ; lofsa
+; code_1449  ; lofsa
+; code_1477  ; lofsa
+; code_1569  ; lofsa
+; code_1590  ; lofsa
+; code_1626  ; lofsa
+; code_1662  ; lofsa
+; code_1691  ; lofsa
+; code_1713  ; lofsa
+; code_1803  ; lofsa
+; code_1823  ; lofsa
+; code_1859  ; lofsa
+; code_1895  ; lofsa
+; code_1924  ; lofsa
+; code_1946  ; lofsa
+; code_2034  ; lofsa
+; code_2054  ; lofsa
+; code_2090  ; lofsa
+; code_2126  ; lofsa
+; code_2155  ; lofsa
+; code_2173  ; lofsa
+; code_2181  ; lofsa
+; code_2189  ; lofsa
+; code_2205  ; lofsa
+; code_2221  ; lofsa
+; code_2237  ; lofsa
+; code_2253  ; lofsa
+; code_2269  ; lofsa
+; code_2285  ; lofsa
+; code_2318  ; lofsa
+; code_2338  ; lofsa
+; code_2358  ; lofsa
+; code_2380  ; lofsa
+; code_2481  ; lofsa
+; code_2503  ; lofsa
+; code_2530  ; lofsa
+; code_2546  ; lofsa
+; code_2568  ; lofsa
+; code_2584  ; lofsa
+; code_2606  ; lofsa
+; code_2622  ; lofsa
+; code_2644  ; lofsa
+; code_2660  ; lofsa
+; code_2682  ; lofsa
+; code_2698  ; lofsa
+; code_2720  ; lofsa
+; code_2736  ; lofsa
+; code_2758  ; lofsa
+; code_2774  ; lofsa
+; code_2796  ; lofsa
+; code_2812  ; lofsa
+; code_2834  ; lofsa
+; code_2850  ; lofsa
+; code_2872  ; lofsa
+; code_2888  ; lofsa
+; code_2910  ; lofsa
+; code_2926  ; lofsa
+; code_2948  ; lofsa
+; code_2964  ; lofsa
+; code_2986  ; lofsa
+; code_3008  ; lofsa
+; code_3016  ; lofsa
+; code_3024  ; lofsa
+; code_3032  ; lofsa
+; code_3041  ; lofsa
+; code_3049  ; lofsa
+; code_3057  ; lofsa
+; code_3065  ; lofsa
+; code_3073  ; lofsa
+; code_3081  ; lofsa
+; code_3089  ; lofsa
+; code_3203  ; lofsa
+; code_3283  ; lofsa
+; code_3339  ; lofsa
+; code_3432  ; lofsa
+; code_3464  ; lofsa
+; code_3496  ; lofsa
+; code_3529  ; lofsa
+; code_3562  ; lofsa
+; code_3595  ; lofsa
+; code_3629  ; lofsa
+; code_3663  ; lofsa
+; code_3697  ; lofsa
+; code_3731  ; lofsa
+; code_3765  ; lofsa
+; code_3799  ; lofsa
+; code_3833  ; lofsa
+; code_3867  ; lofsa
+; code_3902  ; lofsa
+; code_3937  ; lofsa
+; code_3972  ; lofsa
+; code_3994  ; lofsa
+; code_4143  ; lofsa
+; code_4187  ; lofsa
+; code_4311  ; lofsa
+; code_4315  ; lofsa
+; code_4515  ; lofsa
+; code_4536  ; lofsa
+; code_4572  ; lofsa
+; code_4620  ; lofsa
+; code_4649  ; lofsa
+; code_4671  ; lofsa
+; code_4761  ; lofsa
+; code_4781  ; lofsa
+; code_4817  ; lofsa
+; code_4853  ; lofsa
+; code_4882  ; lofsa
+; code_4904  ; lofsa
+; code_5004  ; lofsa
+; code_5024  ; lofsa
+; code_5060  ; lofsa
+; code_5096  ; lofsa
+; code_5125  ; lofsa
+; code_5147  ; lofsa
+; code_5155  ; lofsa
+; code_5217  ; lofsa
+; code_5299  ; lofsa
+; code_5325  ; lofsa
+; code_5351  ; lofsa
+; code_5373  ; lofsa
+; code_5501  ; lofsa
+; code_5565  ; lofsa
+; code_5629  ; lofsa
+; code_5699  ; lofsa
+; code_5707  ; lofsa
+; code_5715  ; lofsa
+; code_5877  ; lofsa
+; code_5905  ; lofsa
+; code_5972  ; lofsa
+; code_6004  ; lofsa
+; code_6075  ; lofsa
+; code_6083  ; lofsa
+; code_6191  ; lofsa
+; code_6219  ; lofsa
+; code_6286  ; lofsa
+; code_6320  ; lofsa
+; code_6338  ; lofsa
+; code_6346  ; lofsa
+; code_6446  ; lofsa
+; code_6485  ; lofsa
+; OBJECT open1 of 0x6 selector #3
+; OBJECT leave of 0x6 selector #3
+; code_6770  ; lofsa
+; code_6778  ; lofsa
+; code_6795  ; lofsa
+; code_6812  ; lofsa
+; code_6829  ; lofsa
+; code_6838  ; lofsa
+; code_6847  ; lofsa
+; code_6877  ; lofsa
+; code_6894  ; lofsa
+; code_6938  ; lofsa
+; code_6947  ; lofsa
+; code_7005  ; lofsa
+; OBJECT open4 of 0x6 selector #3
+; OBJECT comet of 0x30 selector #3
+; OBJECT ship of 0x30 selector #3
+; OBJECT sign1 of 0x2f selector #3
+; OBJECT globe1 of 0x2f selector #3
+; OBJECT sputnik of 0x30 selector #3
+; OBJECT shadow of 0x30 selector #3
+; OBJECT jet1 of 0x2f selector #3
+; OBJECT jet2 of 0x2f selector #3
+; OBJECT electricalThing of 0x2f selector #3
+; OBJECT neon1 of 0x30 selector #3
+; OBJECT neon2 of 0x30 selector #3
+; OBJECT neon3 of 0x30 selector #3
+; OBJECT letterS of 0x2f selector #3
+; OBJECT letterA of 0x2f selector #3
+; OBJECT letterR of 0x2f selector #3
+; OBJECT letterI of 0x2f selector #3
+; OBJECT letterE of 0x2f selector #3
+; OBJECT letterN of 0x2f selector #3
+; code_9176  ; lofsa
+; code_9192  ; lofsa
+; OBJECT flame1 of 0x2f selector #3
+; code_9330  ; lofsa
+; code_9346  ; lofsa
+; OBJECT flame2 of 0x2f selector #3
+; code_9481  ; lofsa
+; code_9499  ; lofsa
+; code_9509  ; lofsa
+; code_9520  ; lofsa
+; code_9538  ; lofsa
+; code_9548  ; lofsa
+; code_9559  ; lofsa
+; code_9577  ; lofsa
+; code_9587  ; lofsa
+; code_9598  ; lofsa
+; code_9616  ; lofsa
+; code_9626  ; lofsa
+; code_9637  ; lofsa
+; code_9647  ; lofsa
+; OBJECT flame3 of 0x2f selector #3
+; OBJECT arcada of 0x30 selector #3
+; OBJECT deltaur of 0x30 selector #3
+; OBJECT armsL of 0x2f selector #3
+; OBJECT armsR of 0x2f selector #3
+; OBJECT star1 of 0x2f selector #3
+; OBJECT star2 of 0x2f selector #3
+; OBJECT star3 of 0x2f selector #3
+; OBJECT sfxSnd of 0xa selector #3

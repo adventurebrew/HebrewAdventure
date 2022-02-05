@@ -3327,5 +3327,232 @@ string_unused_69: ""
 0x0, 0xb2, 0xa9, 0xc4, 0xa2, 0xde, 0xa0, 0x100, 0xa4, 0x109, 0xa8, 0xfd, 0xb1, 0xdc, 0xb6, 0xbd, 0xb2, 0xb2, 0xab, 0xb1, 0x9b, 0xde, 0x96, 0x108, 0x9d, 0x10d, 0xaa, 0xf2, 0xaa, 0xe8, 0xb1, 0xc9, 0xaa, 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 226
-0x1b, 0x2c, 0xd6, 0xe3, 0x147, 0x156, 0x165, 0x16d, 0x175, 0x17d, 0x185, 0x18d, 0x1b8, 0x1d7, 0x1e6, 0x1f2, 0x205, 0x209, 0x22d, 0x235, 0x270, 0x330, 0x33c, 0x39f, 0x3a3, 0x3a7, 0x3b2, 0x3dd, 0x3e1, 0x3e5, 0x3f0, 0x405, 0x409, 0x40d, 0x418, 0x441, 0x445, 0x449, 0x455, 0x491, 0x495, 0x499, 0x4a5, 0x4d4, 0x51a, 0x51e, 0x522, 0x526, 0x52e, 0x53a, 0x53e, 0x542, 0x54e, 0x560, 0x564, 0x568, 0x574, 0x59c, 0x5d9, 0x5dd, 0x5e1, 0x5ed, 0x655, 0x6c8, 0x6d0, 0x6e7, 0x6f3, 0x706, 0x71c, 0x72d, 0x745, 0x768, 0x77e, 0x790, 0x79c, 0x831, 0x843, 0x874, 0x878, 0x87c, 0x888, 0x8a4, 0x8d0, 0x945, 0x958, 0x982, 0x996, 0x9a6, 0x9e5, 0x9fc, 0xa10, 0xa20, 0xae4, 0xaf8, 0xb08, 0xb65, 0xb78, 0xba2, 0xbb6, 0xbc6, 0xc5a, 0xc6e, 0xc7e, 0xd18, 0xd2c, 0xd3c, 0xda8, 0xdbc, 0xdcc, 0xe48, 0xe5c, 0xe6c, 0xece, 0xed2, 0xed6, 0xeda, 0xee1, 0xef3, 0xef7, 0xefb, 0xf12, 0xf85, 0xf89, 0xf8d, 0xf91, 0xf98, 0xfb1, 0xfb5, 0xfb9, 0xfbd, 0xfc4, 0xfd0, 0xfd4, 0xfd8, 0xfdc, 0xfe3, 0x100f, 0x1013, 0x1017, 0x101b, 0x1022, 0x103e, 0x1042, 0x1046, 0x104a, 0x1051, 0x106d, 0x1071, 0x1075, 0x1079, 0x1080, 0x1093, 0x1097, 0x109b, 0x109f, 0x10a6, 0x10b9, 0x10bd, 0x10c1, 0x10c5, 0x10cc, 0x10e9, 0x10ed, 0x10f1, 0x10f5, 0x10fc, 0x110f, 0x1113, 0x1117, 0x111b, 0x1122, 0x1135, 0x1139, 0x113d, 0x1141, 0x1148, 0x115b, 0x115f, 0x1163, 0x1167, 0x116e, 0x1181, 0x1185, 0x1189, 0x118d, 0x1194, 0x11a0, 0x11a4, 0x11a8, 0x11ac, 0x11b3, 0x11da, 0x11ee, 0x11fe, 0x1260, 0x1352, 0x1366, 0x1376, 0x13cd, 0x13db, 0x13ea, 0x13ee, 0x13f2, 0x13f6, 0x13fd, 0x1466, 0x147a, 0x148a, 0x14cd, 0x14e4, 0x14f8, 0x1508, 0x1547, 0x155e, 0x1572, 0x1582, 0x1624, 0x1638, 0x1648, 0x168e, 0x16ae, 0x16ce, 0x1740, 0x179c, 0x1802, 0x1868
+; code_26  ; lofsa
+; code_43  ; lofsa
+; code_213  ; lofsa
+; code_226  ; lofsa
+; code_326  ; lofsa
+; code_341  ; lofsa
+; code_356  ; lofsa
+; code_364  ; lofsa
+; code_372  ; lofsa
+; code_380  ; lofsa
+; code_388  ; lofsa
+; code_396  ; lofsa
+; code_439  ; lofsa
+; code_470  ; lofsa
+; code_485  ; lofsa
+; code_497  ; lofsa
+; code_516  ; lofsa
+; code_520  ; lofsa
+; code_556  ; lofsa
+; code_564  ; lofsa
+; code_623  ; lofsa
+; OBJECT rm40 of 0x74 selector #3
+; OBJECT rm40 of 0x74 selector #9
+; code_926  ; lofsa
+; code_930  ; lofsa
+; code_934  ; lofsa
+; code_945  ; lofsa
+; code_988  ; lofsa
+; code_992  ; lofsa
+; code_996  ; lofsa
+; code_1007  ; lofsa
+; code_1028  ; lofsa
+; code_1032  ; lofsa
+; code_1036  ; lofsa
+; code_1047  ; lofsa
+; code_1088  ; lofsa
+; code_1092  ; lofsa
+; code_1096  ; lofsa
+; code_1108  ; lofsa
+; code_1168  ; lofsa
+; code_1172  ; lofsa
+; code_1176  ; lofsa
+; code_1188  ; lofsa
+; OBJECT tinySellsShip of 0x6 selector #3
+; code_1305  ; lofsa
+; code_1309  ; lofsa
+; code_1313  ; lofsa
+; code_1317  ; lofsa
+; code_1325  ; lofsa
+; code_1337  ; lofsa
+; code_1341  ; lofsa
+; code_1345  ; lofsa
+; code_1357  ; lofsa
+; code_1375  ; lofsa
+; code_1379  ; lofsa
+; code_1383  ; lofsa
+; code_1395  ; lofsa
+; OBJECT sayBye of 0x6 selector #3
+; code_1496  ; lofsa
+; code_1500  ; lofsa
+; code_1504  ; lofsa
+; code_1516  ; lofsa
+; code_1620  ; lofsa
+; code_1735  ; lofsa
+; code_1743  ; lofsa
+; code_1766  ; lofsa
+; code_1778  ; lofsa
+; code_1797  ; lofsa
+; code_1819  ; lofsa
+; code_1836  ; lofsa
+; code_1860  ; lofsa
+; code_1895  ; lofsa
+; code_1917  ; lofsa
+; code_1935  ; lofsa
+; code_1947  ; lofsa
+; code_2096  ; lofsa
+; code_2114  ; lofsa
+; code_2163  ; lofsa
+; code_2167  ; lofsa
+; code_2171  ; lofsa
+; code_2183  ; lofsa
+; code_2211  ; lofsa
+; OBJECT getIntoShip of 0x6 selector #3
+; code_2372  ; lofsa
+; code_2391  ; lofsa
+; OBJECT tinysign of 0x2f selector #3
+; OBJECT tinysign of 0x2f selector #13
+; OBJECT tinysign of 0x2f selector #21
+; code_2532  ; lofsa
+; OBJECT usedsign of 0x2f selector #3
+; OBJECT usedsign of 0x2f selector #13
+; OBJECT usedsign of 0x2f selector #21
+; OBJECT store of 0x2c selector #3
+; OBJECT store of 0x2c selector #13
+; OBJECT store of 0x2c selector #21
+; code_2916  ; lofsa
+; code_2935  ; lofsa
+; OBJECT banners of 0x2c selector #3
+; OBJECT banners of 0x2c selector #13
+; OBJECT banners of 0x2c selector #21
+; OBJECT pinkShip of 0x2c selector #3
+; OBJECT pinkShip of 0x2c selector #13
+; OBJECT pinkShip of 0x2c selector #21
+; OBJECT greenShip of 0x2c selector #3
+; OBJECT greenShip of 0x2c selector #13
+; OBJECT greenShip of 0x2c selector #21
+; OBJECT distantShips of 0x2c selector #3
+; OBJECT distantShips of 0x2c selector #13
+; OBJECT distantShips of 0x2c selector #21
+; OBJECT radar of 0x2f selector #3
+; OBJECT radar of 0x2f selector #13
+; OBJECT radar of 0x2f selector #21
+; code_3789  ; lofsa
+; code_3793  ; lofsa
+; code_3797  ; lofsa
+; code_3801  ; lofsa
+; code_3808  ; lofsa
+; code_3826  ; lofsa
+; code_3830  ; lofsa
+; code_3834  ; lofsa
+; code_3857  ; lofsa
+; code_3972  ; lofsa
+; code_3976  ; lofsa
+; code_3980  ; lofsa
+; code_3984  ; lofsa
+; code_3991  ; lofsa
+; code_4016  ; lofsa
+; code_4020  ; lofsa
+; code_4024  ; lofsa
+; code_4028  ; lofsa
+; code_4035  ; lofsa
+; code_4047  ; lofsa
+; code_4051  ; lofsa
+; code_4055  ; lofsa
+; code_4059  ; lofsa
+; code_4066  ; lofsa
+; code_4110  ; lofsa
+; code_4114  ; lofsa
+; code_4118  ; lofsa
+; code_4122  ; lofsa
+; code_4129  ; lofsa
+; code_4157  ; lofsa
+; code_4161  ; lofsa
+; code_4165  ; lofsa
+; code_4169  ; lofsa
+; code_4176  ; lofsa
+; code_4204  ; lofsa
+; code_4208  ; lofsa
+; code_4212  ; lofsa
+; code_4216  ; lofsa
+; code_4223  ; lofsa
+; code_4242  ; lofsa
+; code_4246  ; lofsa
+; code_4250  ; lofsa
+; code_4254  ; lofsa
+; code_4261  ; lofsa
+; code_4280  ; lofsa
+; code_4284  ; lofsa
+; code_4288  ; lofsa
+; code_4292  ; lofsa
+; code_4299  ; lofsa
+; code_4328  ; lofsa
+; code_4332  ; lofsa
+; code_4336  ; lofsa
+; code_4340  ; lofsa
+; code_4347  ; lofsa
+; code_4366  ; lofsa
+; code_4370  ; lofsa
+; code_4374  ; lofsa
+; code_4378  ; lofsa
+; code_4385  ; lofsa
+; code_4404  ; lofsa
+; code_4408  ; lofsa
+; code_4412  ; lofsa
+; code_4416  ; lofsa
+; code_4423  ; lofsa
+; code_4442  ; lofsa
+; code_4446  ; lofsa
+; code_4450  ; lofsa
+; code_4454  ; lofsa
+; code_4461  ; lofsa
+; code_4480  ; lofsa
+; code_4484  ; lofsa
+; code_4488  ; lofsa
+; code_4492  ; lofsa
+; code_4499  ; lofsa
+; code_4511  ; lofsa
+; code_4515  ; lofsa
+; code_4519  ; lofsa
+; code_4523  ; lofsa
+; code_4530  ; lofsa
+; OBJECT tiny of 0x30 selector #3
+; OBJECT tiny of 0x30 selector #13
+; OBJECT tiny of 0x30 selector #21
+; OBJECT arm of 0x2f selector #3
+; OBJECT hole of 0x2e selector #3
+; OBJECT hole of 0x2e selector #13
+; OBJECT hole of 0x2e selector #21
+; code_5068  ; lofsa
+; code_5082  ; lofsa
+; code_5097  ; lofsa
+; code_5101  ; lofsa
+; code_5105  ; lofsa
+; code_5109  ; lofsa
+; code_5116  ; lofsa
+; OBJECT ship of 0x2f selector #3
+; OBJECT ship of 0x2f selector #13
+; OBJECT ship of 0x2f selector #21
+; code_5324  ; lofsa
+; OBJECT shiplid of 0x2f selector #3
+; OBJECT shiplid of 0x2f selector #13
+; OBJECT shiplid of 0x2f selector #21
+; code_5446  ; lofsa
+; OBJECT shiptail of 0x2f selector #3
+; OBJECT shiptail of 0x2f selector #13
+; OBJECT shiptail of 0x2f selector #21
+; OBJECT ladder of 0x2f selector #3
+; OBJECT ladder of 0x2f selector #13
+; OBJECT ladder of 0x2f selector #21
+; OBJECT shipPoly of 0x23 selector #3
+; OBJECT holePoly of 0x23 selector #3
+; OBJECT tinyTalker of 0x6f selector #3
+; OBJECT tinyBust of 0x2e selector #3
+; OBJECT tinyMouth of 0x2f selector #3
+; OBJECT tinyEye of 0x2f selector #3
+; OBJECT ladderSound of 0xa selector #3

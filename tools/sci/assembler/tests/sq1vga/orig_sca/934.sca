@@ -1105,5 +1105,9 @@ string_unused_3: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 3
-0x340, 0x720, 0x7e4
+; CLASS Slider of 0x14 selector #3
+; CLASS GameControls of 0x15 selector #3
+; CLASS ControlIcon of 0x14 selector #3

@@ -536,5 +536,28 @@ string_unused_6: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 22
-0x33, 0x54, 0x66, 0x79, 0x8f, 0xb9, 0xd5, 0xf3, 0x111, 0x12f, 0x14d, 0x16b, 0x175, 0x19f, 0x1be, 0x320, 0x334, 0x344, 0x387, 0x39e, 0x3b2, 0x3c2
+; code_50  ; lofsa
+; code_83  ; lofsa
+; code_101  ; lofsa
+; code_120  ; lofsa
+; code_142  ; lofsa
+; code_184  ; lofsa
+; code_212  ; lofsa
+; code_242  ; lofsa
+; code_272  ; lofsa
+; code_302  ; lofsa
+; code_332  ; lofsa
+; code_362  ; lofsa
+; code_372  ; lofsa
+; code_414  ; lofsa
+; OBJECT madonnaScript of 0x6 selector #3
+; OBJECT madonna of 0x2f selector #3
+; OBJECT madonna of 0x2f selector #13
+; OBJECT madonna of 0x2f selector #21
+; code_902  ; lofsa
+; OBJECT madonnaFace of 0x2f selector #3
+; OBJECT madonnaFace of 0x2f selector #13
+; OBJECT madonnaFace of 0x2f selector #21

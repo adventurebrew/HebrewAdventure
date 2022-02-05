@@ -160,5 +160,8 @@ string_unused_2: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0xde, 0xea
+; OBJECT rm18 of 0x74 selector #3
+; OBJECT rm18 of 0x74 selector #9

@@ -1869,5 +1869,82 @@ string_unused_39: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 76
-0x2d, 0x35, 0x3d, 0x45, 0x4d, 0x55, 0x5d, 0x65, 0x17e, 0x19a, 0x1bb, 0x1f1, 0x207, 0x21d, 0x22a, 0x25d, 0x285, 0x2a6, 0x2f2, 0x306, 0x316, 0x35d, 0x374, 0x388, 0x398, 0x3ef, 0x418, 0x42c, 0x43c, 0x486, 0x4fd, 0x526, 0x53a, 0x54a, 0x5ce, 0x5e2, 0x5f2, 0x63a, 0x64e, 0x65e, 0x6a6, 0x6ba, 0x6ca, 0x73c, 0x750, 0x7c0, 0x7d4, 0x7e4, 0x844, 0x858, 0x868, 0x8b0, 0x8c4, 0x8d4, 0x91c, 0x930, 0x940, 0x962, 0x991, 0x9a7, 0x9ab, 0xa08, 0xa85, 0xae2, 0xb62, 0xbc2, 0xc54, 0xca5, 0xcca, 0xceb, 0xd07, 0xd1e, 0xd32, 0xd50, 0xd6e, 0xdb2
+; code_44  ; lofsa
+; code_52  ; lofsa
+; code_60  ; lofsa
+; code_68  ; lofsa
+; code_76  ; lofsa
+; code_84  ; lofsa
+; code_92  ; lofsa
+; code_100  ; lofsa
+; code_381  ; lofsa
+; code_409  ; lofsa
+; code_442  ; lofsa
+; code_496  ; lofsa
+; code_518  ; lofsa
+; code_540  ; lofsa
+; code_553  ; lofsa
+; code_604  ; lofsa
+; code_644  ; lofsa
+; OBJECT rm37 of 0x74 selector #3
+; OBJECT smoke of 0x2f selector #3
+; OBJECT smoke of 0x2f selector #13
+; OBJECT smoke of 0x2f selector #21
+; code_860  ; lofsa
+; OBJECT door of 0x2f selector #3
+; OBJECT door of 0x2f selector #13
+; OBJECT door of 0x2f selector #21
+; code_1006  ; lofsa
+; OBJECT glass of 0x2f selector #3
+; OBJECT glass of 0x2f selector #13
+; OBJECT glass of 0x2f selector #21
+; OBJECT grell of 0x2f selector #3
+; code_1276  ; lofsa
+; OBJECT kit of 0x2e selector #3
+; OBJECT kit of 0x2e selector #13
+; OBJECT kit of 0x2e selector #21
+; OBJECT shipHull of 0x2c selector #3
+; OBJECT shipHull of 0x2c selector #13
+; OBJECT shipHull of 0x2c selector #21
+; OBJECT doorway of 0x2c selector #3
+; OBJECT doorway of 0x2c selector #13
+; OBJECT doorway of 0x2c selector #21
+; OBJECT ridgeEdge of 0x2c selector #3
+; OBJECT ridgeEdge of 0x2c selector #13
+; OBJECT ridgeEdge of 0x2c selector #21
+; OBJECT windshield of 0x2c selector #3
+; OBJECT windshield of 0x2c selector #13
+; OBJECT engines of 0x2c selector #3
+; OBJECT engines of 0x2c selector #13
+; OBJECT engines of 0x2c selector #21
+; OBJECT rocks of 0x2c selector #3
+; OBJECT rocks of 0x2c selector #13
+; OBJECT rocks of 0x2c selector #21
+; OBJECT ridge of 0x2c selector #3
+; OBJECT ridge of 0x2c selector #13
+; OBJECT ridge of 0x2c selector #21
+; OBJECT mountains of 0x2c selector #3
+; OBJECT mountains of 0x2c selector #13
+; OBJECT mountains of 0x2c selector #21
+; code_2401  ; lofsa
+; code_2448  ; lofsa
+; code_2470  ; lofsa
+; code_2474  ; lofsa
+; OBJECT exitShip of 0x6 selector #3
+; code_2692  ; lofsa
+; OBJECT getGlass of 0x6 selector #3
+; code_2913  ; lofsa
+; OBJECT getKit of 0x6 selector #3
+; OBJECT walkAwayFromEdge of 0x6 selector #3
+; code_3236  ; lofsa
+; code_3273  ; lofsa
+; code_3306  ; lofsa
+; code_3334  ; lofsa
+; code_3357  ; lofsa
+; code_3377  ; lofsa
+; code_3407  ; lofsa
+; code_3437  ; lofsa
+; OBJECT grellYells of 0x6 selector #3

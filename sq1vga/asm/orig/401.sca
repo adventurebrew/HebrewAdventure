@@ -1128,5 +1128,41 @@ string_unused_11: ""
 0x0, 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 35
-0x20, 0x35, 0x63, 0x85, 0x9a, 0x111, 0x120, 0x12f, 0x13e, 0x14d, 0x156, 0x15a, 0x15e, 0x162, 0x166, 0x16a, 0x18d, 0x1a9, 0x1f0, 0x269, 0x2a8, 0x2de, 0x2f2, 0x2ff, 0x30c, 0x315, 0x336, 0x369, 0x36d, 0x430, 0x4e8, 0x5a4, 0x660, 0x71a, 0x7e0
+; code_31  ; lofsa
+; code_52  ; lofsa
+; code_98  ; lofsa
+; code_132  ; lofsa
+; code_153  ; lofsa
+; code_272  ; lofsa
+; code_287  ; lofsa
+; code_302  ; lofsa
+; code_317  ; lofsa
+; code_332  ; lofsa
+; code_341  ; lofsa
+; code_345  ; lofsa
+; code_349  ; lofsa
+; code_353  ; lofsa
+; code_357  ; lofsa
+; code_361  ; lofsa
+; code_396  ; lofsa
+; code_424  ; lofsa
+; OBJECT dodgeAsteroids of 0x6 selector #3
+; code_616  ; lofsa
+; OBJECT blowUpShip of 0x6 selector #3
+; OBJECT asts of 0x2 selector #3
+; code_753  ; lofsa
+; code_766  ; lofsa
+; code_779  ; lofsa
+; code_788  ; lofsa
+; OBJECT closeCode of 0x1 selector #3
+; code_872  ; lofsa
+; code_876  ; lofsa
+; OBJECT ship of 0x30 selector #3
+; OBJECT ast1 of 0x30 selector #3
+; OBJECT ast2 of 0x30 selector #3
+; OBJECT ast3 of 0x30 selector #3
+; OBJECT ast4 of 0x30 selector #3
+; OBJECT ast5 of 0x30 selector #3

@@ -245,5 +245,13 @@ string_unused_3: ""
 0x95, 0x65, 0x7f, 0x4b, 0x9e, 0x6b, 0x92, 0x92, 0x70, 0x93, 0x86, 0x85, 0x7a, 0x9d, 0x71, 0x9f, 0x6d, 0x9b
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 7
-0x1b, 0x34, 0xa4, 0xdd, 0xee, 0x140, 0x176
+; code_26  ; lofsa
+; OBJECT rm29 of 0x43 selector #3
+; code_163  ; lofsa
+; code_220  ; lofsa
+; code_237  ; lofsa
+; OBJECT falling of 0x6 selector #3
+; OBJECT ego2 of 0x2f selector #3

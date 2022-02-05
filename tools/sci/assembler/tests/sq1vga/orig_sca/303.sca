@@ -595,5 +595,17 @@ string_unused_6: ""
 .PRELOAD_TEXT
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 11
-0x88, 0xad, 0x104, 0x12d, 0x1d2, 0x324, 0x354, 0x368, 0x378, 0x3bd, 0x3e8
+; code_135  ; lofsa
+; code_172  ; lofsa
+; code_259  ; lofsa
+; code_300  ; lofsa
+; OBJECT prepareToDie of 0x6 selector #3
+; code_803  ; lofsa
+; OBJECT slotGuy of 0x2f selector #3
+; OBJECT slotGuy of 0x2f selector #13
+; OBJECT slotGuy of 0x2f selector #21
+; code_956  ; lofsa
+; OBJECT slotGuyBody of 0x2f selector #3

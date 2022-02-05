@@ -733,5 +733,46 @@ string_unused_26: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 40
-0x2f, 0x3e, 0xfc, 0x100, 0x104, 0x108, 0x10c, 0x127, 0x134, 0x154, 0x160, 0x18a, 0x196, 0x1d6, 0x1ea, 0x1fa, 0x232, 0x246, 0x256, 0x2c0, 0x2d4, 0x2e4, 0x328, 0x33c, 0x34c, 0x3c6, 0x3da, 0x3ea, 0x43c, 0x450, 0x460, 0x4b2, 0x4c6, 0x4d6, 0x528, 0x53c, 0x54c, 0x568, 0x57c, 0x58c
+; code_46  ; lofsa
+; code_61  ; lofsa
+; code_251  ; lofsa
+; code_255  ; lofsa
+; code_259  ; lofsa
+; code_263  ; lofsa
+; code_267  ; lofsa
+; code_294  ; lofsa
+; code_307  ; lofsa
+; code_339  ; lofsa
+; code_351  ; lofsa
+; OBJECT rm8 of 0x74 selector #3
+; OBJECT rm8 of 0x74 selector #9
+; OBJECT elevatorLight of 0x2e selector #3
+; OBJECT elevatorLight of 0x2e selector #13
+; OBJECT elevatorLight of 0x2e selector #21
+; OBJECT door of 0x73 selector #3
+; OBJECT door of 0x73 selector #13
+; OBJECT door of 0x73 selector #21
+; OBJECT monitor of 0x2f selector #3
+; OBJECT monitor of 0x2f selector #13
+; OBJECT monitor of 0x2f selector #21
+; OBJECT dials of 0x2f selector #3
+; OBJECT dials of 0x2f selector #13
+; OBJECT dials of 0x2f selector #21
+; OBJECT pipes of 0x2c selector #3
+; OBJECT pipes of 0x2c selector #13
+; OBJECT pipes of 0x2c selector #21
+; OBJECT conduit of 0x2c selector #3
+; OBJECT conduit of 0x2c selector #13
+; OBJECT conduit of 0x2c selector #21
+; OBJECT thing1 of 0x2c selector #3
+; OBJECT thing1 of 0x2c selector #13
+; OBJECT thing1 of 0x2c selector #21
+; OBJECT thing2 of 0x2c selector #3
+; OBJECT thing2 of 0x2c selector #13
+; OBJECT thing2 of 0x2c selector #21
+; OBJECT mouseThing of 0x2c selector #3
+; OBJECT mouseThing of 0x2c selector #13
+; OBJECT mouseThing of 0x2c selector #21

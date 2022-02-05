@@ -477,5 +477,10 @@ string_unused_4: ""
 0x0
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 4
-0xb7, 0xd2, 0x31a, 0x334
+; code_182  ; lofsa
+; OBJECT rmK2 of 0x74 selector #3
+; code_793  ; lofsa
+; OBJECT egoDead of 0x6 selector #3

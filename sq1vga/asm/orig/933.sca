@@ -281,5 +281,7 @@ string_unused_1: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 1
-0x1b0
+; CLASS PseudoMouse of 0x1 selector #3

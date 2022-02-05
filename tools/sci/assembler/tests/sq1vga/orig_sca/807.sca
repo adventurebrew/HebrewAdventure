@@ -224,5 +224,8 @@ string_unused_2: ""
 
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0x92, 0x17e
+; CLASS MoveToY of 0x1e selector #3
+; CLASS MoveToX of 0x1e selector #3

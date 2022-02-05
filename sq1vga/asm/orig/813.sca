@@ -462,5 +462,8 @@ string_unused_3: ""
 0x0, 0x4, 0x2, 0x5, 0x1, 0x7, 0x3, 0x6
 
 .RELOCATION
+ ; This section is automatically created on assembling, regardless of the content written here
+ ; the following is only for informative purposes
 num of pointers: 2
-0x6c, 0x332
+; CLASS SQEgo of 0x32 selector #3
+; CLASS Head of 0x2f selector #3
