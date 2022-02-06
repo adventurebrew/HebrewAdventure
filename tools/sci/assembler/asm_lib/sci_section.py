@@ -86,7 +86,6 @@ class SciSection:
         elif self.kind == SectionKind.EXPORTS:
             result += '\n' + '\n'.join([repr(i) for i in self.exports])
         elif self.kind == SectionKind.RELOCATION:
-            # TODO print pointers as (smart) labels
             result += '''\n ; This section is automatically created on assembling, regardless of the content written here
  ; the following is only for informative purposes'''
             result += f'\nnum of pointers: {len(self.pointers)}'

@@ -1,2 +1,2 @@
-parser.out
-parsetab.py
+asm_lib/parser.out
+asm_lib/parsetab.py

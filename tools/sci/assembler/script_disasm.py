@@ -1,6 +1,3 @@
-# TODO create lib
-# fix 990.sca diff
-
 # TODO other generations:
 # said/synonym
 # .hep
@@ -17,10 +14,10 @@ import argparse
 import os
 from pathlib import Path
 
-from opcodes import SciOpcodes, instruction_length
-from instruction import Instruction
-from misc import *
-from sci_section import SciSection, SectionKind
+from asm_lib.opcodes import SciOpcodes, instruction_length
+from asm_lib.instruction import Instruction
+from asm_lib.misc import *
+from asm_lib.sci_section import SciSection, SectionKind
 
 
 def get_pointers(objects):

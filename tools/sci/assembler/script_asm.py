@@ -1,15 +1,12 @@
-# TODO adding string to script at 990 causes failure at game
-
 import argparse
 from pathlib import Path
 
-import asm_lexer
-import asm_parser
+from asm_lib import asm_parser, asm_lexer
 
-from misc import *
-from instruction import Instruction
-from opcodes import SciOpcodes
-from sci_section import SciSection, SectionKind
+from asm_lib.misc import *
+from asm_lib.instruction import Instruction
+from asm_lib.opcodes import SciOpcodes
+from asm_lib.sci_section import SciSection, SectionKind
 
 HEADER_SIZE = 4
 
