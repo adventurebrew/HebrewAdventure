@@ -7,7 +7,7 @@ RTRandCycle::60:
 		link	0x01
 		pTos	0x12
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		sat	0x00
 		gt?	
 		bnt	code_59
@@ -30,7 +30,7 @@ RTRandCycle::60:
 		pToa	0x08
 		send	0x06
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		aTop	0x0e
 		jmp	code_73
 code_59:
@@ -56,14 +56,14 @@ RTRandCycle::107:
 		pToa	0x08
 		send	0x06
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		aTop	0x0e
 		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_129
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		push	
 		lap	0x02
 		add	
@@ -157,11 +157,11 @@ Talker::192:
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		push	
 		push1	
 		pTos	0x56
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_358
 		pushi	0x0a
 		push0	
@@ -184,13 +184,13 @@ Talker::192:
 		pToa	0x56
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 code_358:
 		push	
 		push1	
 		pTos	0x58
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_406
 		pushi	0x0a
 		push0	
@@ -213,13 +213,13 @@ code_358:
 		pToa	0x58
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 code_406:
 		push	
 		push1	
 		pTos	0x5a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_454
 		pushi	0x0a
 		push0	
@@ -242,7 +242,7 @@ code_406:
 		pToa	0x5a
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 code_454:
 		push	
@@ -255,11 +255,11 @@ code_454:
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		push1	
 		pTos	0x56
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_527
 		pushi	0x09
 		push0	
@@ -282,13 +282,13 @@ code_454:
 		pToa	0x56
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 code_527:
 		push	
 		push1	
 		pTos	0x58
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_575
 		pushi	0x09
 		push0	
@@ -311,13 +311,13 @@ code_527:
 		pToa	0x58
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 code_575:
 		push	
 		push1	
 		pTos	0x5a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_623
 		pushi	0x09
 		push0	
@@ -340,7 +340,7 @@ code_575:
 		pToa	0x5a
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 code_623:
 		push	
@@ -357,15 +357,15 @@ code_623:
 		pTos	0x16
 		pTos	0x18
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		aTop	0x36
 code_657:
 		push0	
-		callk	0xa, 0x0
+		callk	PicNotValid, 0x0
 		sat	0x00
 		push1	
 		push1	
-		callk	0xa, 0x2
+		callk	PicNotValid, 0x2
 		pToa	0x56
 		bnt	code_726
 		pushi	0x06
@@ -400,7 +400,7 @@ code_657:
 		add	
 		push	
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 code_726:
 		pToa	0x58
 		bnt	code_784
@@ -436,7 +436,7 @@ code_726:
 		add	
 		push	
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 code_784:
 		pToa	0x5a
 		bnt	code_842
@@ -472,7 +472,7 @@ code_784:
 		add	
 		push	
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 code_842:
 		pushi	0x06
 		pTos	0x2e
@@ -481,7 +481,7 @@ code_842:
 		pTos	0x14
 		pTos	0x12
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x12
@@ -489,10 +489,10 @@ code_842:
 		pTos	0x16
 		pTos	0x18
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		push1	
 		lst	0x00
-		callk	0xa, 0x2
+		callk	PicNotValid, 0x2
 		ret	
 
 Talker::509:
@@ -554,7 +554,7 @@ code_978:
 		add	
 		push	
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		add	
 		aTop	0x5c
 		ret	
@@ -566,12 +566,12 @@ Talker::511:
 		push	
 		lsp	0x01
 		lsp	0x02
-		callk	0x48, 0x6
+		callk	Format, 0x6
 		pushi	0x05
 		push1	
 		lea	0x04, 0x00
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		mul	
 		aTop	0x5c
 		pToa	0x5a
@@ -611,7 +611,7 @@ Talker::510:
 		push2	
 		push1	
 		push	
-		callk	0x75, 0x4
+		callk	DoAudio, 0x4
 		pToa	0x5a
 		bnt	code_1106
 		pushi	0x0094
@@ -625,7 +625,7 @@ code_1106:
 		push2	
 		push2	
 		lst	0x00
-		callk	0x75, 0x4
+		callk	DoAudio, 0x4
 		aTop	0x5c
 		pToa	0x58
 		bnt	code_1133
@@ -699,7 +699,7 @@ Talker::174:
 		add	
 		push	
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x0c
 		push1	
 		pushi	0x0a
@@ -723,7 +723,7 @@ Talker::174:
 		lap	0x01
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		lap	0x01
@@ -751,7 +751,7 @@ Talker::174:
 		lap	0x01
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		push	
 		lap	0x01
@@ -791,13 +791,13 @@ Talker::174:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 code_1388:
 		ret	
 
 Talker::60:
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		push	
 		pToa	0x5c
 		gt?	
@@ -883,7 +883,7 @@ Talker::105:
 		push2	
 		pushi	0x08
 		pTos	0x36
-		callk	0x6c, 0x4
+		callk	Graph, 0x4
 		ldi	0x00
 		aTop	0x36
 		pushi	0x05
@@ -892,7 +892,7 @@ Talker::105:
 		pTos	0x14
 		pTos	0x16
 		pTos	0x18
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 		ret	
 
 Talker::108:
@@ -949,7 +949,7 @@ code_1638:
 		bnt	code_1652
 		push1	
 		pushi	0x03
-		callk	0x75, 0x2
+		callk	DoAudio, 0x2
 		jmp	code_1662
 code_1652:
 		lag	0x19
@@ -981,7 +981,7 @@ code_1679:
 code_1698:
 		push1	
 		pushSelf	
-		callk	0x5, 0x2
+		callk	DisposeClone, 0x2
 		ret	
 
 

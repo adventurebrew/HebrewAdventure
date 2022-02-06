@@ -34,7 +34,7 @@ CueObj::138:
 		pToa	0x08
 		send	0x04
 		push	
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		push	
 		pushSelf	
 		lag	0x00
@@ -70,7 +70,7 @@ code_87:
 		push0	
 		send	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_139
 		pushi	0x010a
 		push2	
@@ -394,7 +394,7 @@ code_680:
 		push	
 		pTos	0x08
 		pTos	0x0a
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		push	
 		pushi	0x3a
 		push0	
@@ -402,7 +402,7 @@ code_680:
 		send	0x04
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		sat	0x01
 		push	
 		ldi	0x00b4
@@ -439,7 +439,7 @@ Feature::194:
 		link	0x02
 		push1	
 		lsp	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_795
 		pushi	0x04
 		push0	
@@ -460,13 +460,13 @@ code_795:
 code_803:
 		push1	
 		pTos	0x20
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_826
 		pushi	0x03
 		lst	0x00
 		lst	0x01
 		pTos	0x20
-		callk	0x77, 0x6
+		callk	AvoidPath, 0x6
 		jmp	code_905
 code_826:
 		pToa	0x14
@@ -505,7 +505,7 @@ code_874:
 		pushi	0x04
 		lst	0x00
 		lst	0x01
-		callk	0x4e, 0x6
+		callk	OnControl, 0x6
 		and	
 		jmp	code_905
 code_903:
@@ -524,7 +524,7 @@ Feature::108:
 code_920:
 		push1	
 		pTos	0x20
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_940
 		pushi	0x6c
 		push0	

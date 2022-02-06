@@ -175,7 +175,7 @@ code_160:
 		push2	
 		pushi	0x0084
 		pushi	0x01b9
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x6b
 		push0	
 		lofsa	stalagmite

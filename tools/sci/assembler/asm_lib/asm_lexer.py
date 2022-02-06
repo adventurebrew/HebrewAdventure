@@ -45,6 +45,7 @@ tokens = [
              'HEX',
              'OPCODE',
              'OPCODE_LABEL',
+             'OPCODE_CALLK'
          ] + list(reserved.values())
 
 # Regular expression rules for simple tokens
@@ -67,6 +68,8 @@ def t_ID(t):
         opcode = SciOpcodes(t.value)
         if opcode in [SciOpcodes.op_lofsa, SciOpcodes.op_lofss] or opcode.is_relative():
             t.type = 'OPCODE_LABEL'
+        elif opcode == SciOpcodes.op_callk:
+            t.type = 'OPCODE_CALLK'
         else:
             t.type = 'OPCODE'
     except KeyError:

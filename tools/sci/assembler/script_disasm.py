@@ -1,3 +1,5 @@
+# TODO remove ugly {'val': 'DText', 'id': 'string_1'} selectors
+
 # TODO other generations:
 # said/synonym
 # .hep
@@ -12,7 +14,6 @@
 
 import argparse
 import os
-from pathlib import Path
 
 from asm_lib.opcodes import SciOpcodes, instruction_length
 from asm_lib.instruction import Instruction
@@ -54,7 +55,7 @@ def code_first(obj):
         opcode = SciOpcodes(code[idx] >> 1)
         num_of_operands = instruction_length(code[idx]) - 1
         operands = code[idx + 1:idx + 1 + num_of_operands]
-        obj.instructions.append(Instruction(opcode, operands, obj.obj_offset + idx))
+        obj.instructions.append(Instruction(opcode, operands, obj.obj_offset + idx, kernels=kernels))
         idx += instruction_length(code[idx])
 
 
@@ -505,6 +506,8 @@ def disasm_all(srcdir, asmdir):
     scr_files = Path(srcdir).glob('*.scr')
     asm_path = Path(asmdir)
     asm_path.mkdir(exist_ok=True, parents=True)
+    global kernels
+    kernels = Kernels(srcdir, asm_path, mode='disasm')
     for scr in scr_files:
         if scr.name.lower() != 'install.scr':
             sca = asm_path / f'{scr.stem}.sca'

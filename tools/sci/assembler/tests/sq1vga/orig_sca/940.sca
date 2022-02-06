@@ -328,7 +328,7 @@ code_552:
 		sat	0x07
 		push1	
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_603
 		pushi	0x6f
 		push1	

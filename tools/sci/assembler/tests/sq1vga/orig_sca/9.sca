@@ -13,7 +13,7 @@ rm9::107:
 		pushi	0x6d
 		pushi	0x019b
 		pushi	0x019a
-		callk	0x0, 0xa
+		callk	Load, 0xa
 		ldi	0x02
 		sag	0xa6
 		lsg	0x0c
@@ -191,7 +191,7 @@ code_127:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x3c
 		pushi	0x0187
 		push1	
@@ -601,7 +601,7 @@ code_1130:
 		push2	
 		push2	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_1194
 code_1149:
@@ -618,7 +618,7 @@ code_1149:
 		push2	
 		push1	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_1194
 code_1180:

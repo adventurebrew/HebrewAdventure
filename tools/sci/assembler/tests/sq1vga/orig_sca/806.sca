@@ -290,7 +290,7 @@ RegionPath::108:
 		push0	
 		push1	
 		push	
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		send	0x04
 		not	
 		bnt	code_512

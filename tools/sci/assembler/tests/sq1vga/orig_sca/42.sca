@@ -332,7 +332,7 @@ code_660:
 		push2	
 		pushi	0x0a
 		pushi	0x23
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_1036
 code_673:
@@ -683,7 +683,7 @@ code_1270:
 		push2	
 		push2	
 		lsg	0xb0
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sat	0x00
 		lsg	0xb0
 		sub	
@@ -741,7 +741,7 @@ code_1359:
 		push2	
 		pushi	0x02be
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 code_1402:
 		pushi	0x06
@@ -1213,7 +1213,7 @@ code_2217:
 		pushi	0x2a
 		pushi	0x08
 		lsg	0xa5
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		push	
 		push0	
 		push0	

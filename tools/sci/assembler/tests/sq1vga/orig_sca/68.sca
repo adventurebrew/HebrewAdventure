@@ -58,7 +58,7 @@ rm68::107:
 		push2	
 		pushi	0x0084
 		pushi	0x0217
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x6b
 		push0	
 		pushi	0x019a
@@ -649,7 +649,7 @@ code_1220:
 		push2	
 		pushi	0x1e
 		pushi	0x0096
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_1271
 code_1241:
@@ -971,7 +971,7 @@ rocketsRedGlare1::138:
 		push2	
 		pushi	0x0a
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x16
 		jmp	code_1953
 code_1839:
@@ -996,14 +996,14 @@ code_1839:
 		push2	
 		pushi	0x14
 		pushi	0x012c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x03
 		push1	
 		push2	
 		pushi	0x0a
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x07
 		push1	
@@ -1028,7 +1028,7 @@ code_1912:
 		push2	
 		pushi	0x05
 		pushi	0x0f
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_1953
 code_1939:
@@ -1091,7 +1091,7 @@ rocketsRedGlare2::138:
 		push2	
 		pushi	0x0a
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x16
 		jmp	code_2171
 code_2057:
@@ -1116,14 +1116,14 @@ code_2057:
 		push2	
 		pushi	0x14
 		pushi	0x012c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x03
 		push1	
 		push2	
 		pushi	0x0a
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x07
 		push1	
@@ -1148,7 +1148,7 @@ code_2130:
 		push2	
 		pushi	0x05
 		pushi	0x0f
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_2171
 code_2157:
@@ -1211,7 +1211,7 @@ rocketsRedGlare3::138:
 		push2	
 		pushi	0x0a
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x16
 		jmp	code_2389
 code_2275:
@@ -1236,14 +1236,14 @@ code_2275:
 		push2	
 		pushi	0x14
 		pushi	0x012c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x03
 		push1	
 		push2	
 		pushi	0x0a
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x07
 		push1	
@@ -1268,7 +1268,7 @@ code_2348:
 		push2	
 		pushi	0x05
 		pushi	0x0f
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_2389
 code_2375:

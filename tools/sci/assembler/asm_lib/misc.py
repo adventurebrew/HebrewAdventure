@@ -1,5 +1,8 @@
+from pathlib import Path
+
 MAGIC_8 = 8  # TODO why is it needed??
 SIERRA_SCRIPT_HEADER = b'\x82\0'
+SIERRA_VOCAB_HEADER = b'\x86\0'
 SIERRA_HEAP_HEADER = b'\x91\0'
 SCRIPT_OBJECT_MAGIC_NUMBER = 0x1234
 ENCODING_INPUT = 'UTF-8'
@@ -40,6 +43,36 @@ def escape_string(s):
 
 def de_escape_string(s):
     return s.replace(r'\"', '"').replace(r"\n", "\n").replace(r"\t", "\t")
+
+
+class Kernels:
+    def __init__(self, srcdir, target, mode):
+        if mode == 'disasm':
+            kernels_file = Path(srcdir) / '999.voc'
+            kernels_b = kernels_file.read_bytes()
+            assert kernels_b[0:2] == SIERRA_VOCAB_HEADER
+            self.kernels = [k.decode() for k in kernels_b[2:].split(b'\0') if k]
+            (target / 'kernels.csv').write_text('\n'.join([f'{id}, {k}' for id, k in enumerate(self.kernels)]))
+        else:
+            kernels_file = Path(srcdir) / 'kernels.csv'
+            kernels_csv = kernels_file.read_text().splitlines()
+            self.kernels = [k.split(',')[1].strip() for k in kernels_csv]
+            (target / '999.voc').write_bytes(
+                SIERRA_VOCAB_HEADER + b'\0'.join([k.encode() for k in self.kernels]) + b'\0')
+
+    def get_kernel(self, i):
+        try:
+            return self.kernels[i]
+        except IndexError:
+            print(f"Warning: undefined kernel #{i}")
+            return f'kernel_{i}'
+
+    def get_index(self, kernel):
+        try:
+            return self.kernels.index(kernel)
+        except ValueError:
+            assert kernel.startswith('kernel_')
+            return int(kernel.replace('kernel_', ''))
 
 
 if __name__ == '__main__':

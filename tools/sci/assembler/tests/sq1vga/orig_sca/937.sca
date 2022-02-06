@@ -18,7 +18,7 @@ IconI::192:
 		pTos	0x08
 		pTos	0x0a
 		pTos	0x0c
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		aTop	0x12
 		lap	0x02
@@ -28,7 +28,7 @@ IconI::192:
 		pTos	0x08
 		pTos	0x0a
 		pTos	0x0c
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		aTop	0x14
 		jmp	code_91
@@ -38,7 +38,7 @@ code_59:
 		pTos	0x08
 		pTos	0x0a
 		pTos	0x0c
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		aTop	0x12
 		pTos	0x10
@@ -46,7 +46,7 @@ code_59:
 		pTos	0x08
 		pTos	0x0a
 		pTos	0x0c
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		aTop	0x14
 code_91:
@@ -57,7 +57,7 @@ code_91:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pTos	0x20
 		ldi	0x04
 		and	
@@ -90,13 +90,13 @@ IconI::195:
 		pTos	0x08
 		pTos	0x0a
 		pTos	0x0c
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		push	
 		pushi	0x03
 		pTos	0x24
 		pTos	0x26
 		pTos	0x28
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sub	
 		push	
 		ldi	0x02
@@ -108,13 +108,13 @@ IconI::195:
 		pTos	0x08
 		pTos	0x0a
 		pTos	0x0c
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		pushi	0x03
 		pTos	0x24
 		pTos	0x26
 		pTos	0x28
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sub	
 		push	
 		ldi	0x02
@@ -122,7 +122,7 @@ IconI::195:
 		add	
 		push	
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		ret	
 
 IconI::194:
@@ -210,7 +210,7 @@ code_316:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x00
@@ -220,7 +220,7 @@ code_316:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x02
@@ -230,7 +230,7 @@ code_316:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x02
@@ -240,7 +240,7 @@ code_316:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -257,7 +257,7 @@ code_316:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		ret	
 
 IconI::166:
@@ -286,7 +286,7 @@ code_469:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -294,7 +294,7 @@ code_469:
 		pTos	0x14
 		pTos	0x12
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 code_523:
 		pushi	0x22
 		push0	
@@ -329,7 +329,7 @@ code_523:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -337,7 +337,7 @@ code_523:
 		pTos	0x14
 		pTos	0x12
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		jmp	code_649
 code_608:
 		lat	0x01
@@ -351,7 +351,7 @@ code_608:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -359,7 +359,7 @@ code_608:
 		pTos	0x14
 		pTos	0x12
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 code_649:
 		pushi	0x6c
 		push0	
@@ -382,7 +382,7 @@ code_659:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -390,7 +390,7 @@ code_659:
 		pTos	0x14
 		pTos	0x12
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 code_706:
 		lat	0x01
 		jmp	code_713
@@ -440,7 +440,7 @@ IconBar::200:
 		sat	0x02
 		sat	0x01
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x67
 code_860:
 		pushi	0x22
@@ -491,7 +491,7 @@ code_898:
 		lat	0x02
 		send	0x04
 		push	
-		callk	0x48, 0x4
+		callk	Format, 0x4
 		push2	
 		lea	0x04, 0x03
 		push	
@@ -499,7 +499,7 @@ code_898:
 		calle	0xff, 0x00, 0x04
 		push1	
 		lst	0x67
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		jmp	code_989
 code_972:
 		lag	0x19
@@ -532,7 +532,7 @@ code_999:
 code_1021:
 		push1	
 		lst	0x67
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		pushi	0x00c2
 		push1	
 		lst	0x00
@@ -766,7 +766,7 @@ code_1410:
 		bnt	code_1471
 		push1	
 		pTos	0x14
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1531
 		pushi	0x22
 		push1	
@@ -866,7 +866,7 @@ code_1574:
 code_1605:
 		push1	
 		pTos	0x14
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1640
 		pushi	0x22
 		push1	
@@ -901,7 +901,7 @@ code_1652:
 		push1	
 		lat	0x00
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1678
 		lat	0x00
 		lapi	0x01
@@ -967,7 +967,7 @@ code_1764:
 		push1	
 		lat	0x00
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1790
 		lat	0x00
 		lapi	0x01
@@ -1038,14 +1038,14 @@ IconBar::192:
 		lat	0x00
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		aTop	0x0c
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		aTop	0x20
 		push1	
 		pushi	0xff
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		pushi	0x06
 		pushi	0x07
 		pTos	0x28
@@ -1056,36 +1056,36 @@ IconBar::192:
 		push	
 		pushi	0x0140
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		aTop	0x0e
 		push0	
-		callk	0xa, 0x0
+		callk	PicNotValid, 0x0
 		sat	0x01
 		push1	
 		push1	
-		callk	0xa, 0x2
+		callk	PicNotValid, 0x2
 		ldi	0x00
 		sat	0x03
 		pToa	0x28
 		sat	0x04
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x05
 code_1961:
 		lat	0x05
 		bnt	code_2044
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x06
 		push1	
 		push1	
 		lst	0x05
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x07
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_1991
 		ret	
@@ -1164,7 +1164,7 @@ code_2044:
 		pToa	0x1a
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sub	
 		push	
 		ldi	0x02
@@ -1207,7 +1207,7 @@ code_2044:
 		pToa	0x1a
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sub	
 		push	
 		ldi	0x02
@@ -1242,7 +1242,7 @@ code_2044:
 		lst	0x03
 		lst	0x04
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x11
 		push0	
 		pToa	0x1c
@@ -1262,7 +1262,7 @@ code_2269:
 code_2273:
 		push1	
 		lst	0x01
-		callk	0xa, 0x2
+		callk	PicNotValid, 0x2
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x28
@@ -1273,7 +1273,7 @@ code_2273:
 		push	
 		pushi	0x0140
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		pushi	0x00c1
 		push1	
 		pTos	0x14
@@ -1322,22 +1322,22 @@ IconBar::105:
 		aTop	0x24
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_2382:
 		lat	0x00
 		bnt	code_2444
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		push1	
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x02
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_2412
 		ret	
@@ -1355,7 +1355,7 @@ code_2412:
 		push	
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x02
 		send	0x06
 		lat	0x01
@@ -1365,7 +1365,7 @@ code_2444:
 		push2	
 		pushi	0x08
 		pTos	0x0e
-		callk	0x6c, 0x4
+		callk	Graph, 0x4
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x28
@@ -1376,7 +1376,7 @@ code_2444:
 		push	
 		pushi	0x0140
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		pushi	0x05
 		pushi	0x0d
 		pTos	0x28
@@ -1386,10 +1386,10 @@ code_2444:
 		add	
 		push	
 		pushi	0x0140
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 		push1	
 		pTos	0x20
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		pToa	0x26
 		aTop	0x0c
 code_2501:
@@ -1472,7 +1472,7 @@ code_2624:
 		bnt	code_2671
 		push1	
 		pTos	0x1e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2671
 		pushi	0x11
 		push0	
@@ -1497,7 +1497,7 @@ code_2624:
 code_2671:
 		push1	
 		lst	0x00
-		callk	0x1f, 0x2
+		callk	MapKeyToDir, 0x2
 		pushi	0x00c6
 		push1	
 		lst	0x00
@@ -1508,7 +1508,7 @@ code_2671:
 code_2694:
 		push1	
 		lst	0x00
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2710
 		pushi	0x6c
 		push0	
@@ -1610,7 +1610,7 @@ code_2858:
 		bnt	code_3315
 		push1	
 		pTos	0x1e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bt	code_2893
 		pushi	0x11
@@ -1771,7 +1771,7 @@ code_3129:
 code_3154:
 		push1	
 		lst	0x04
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3217
 		pushi	0x00a6
 		push1	
@@ -1822,7 +1822,7 @@ code_3221:
 		send	0x04
 		bnt	code_3282
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x06
 		pushi	0x03
 		pushi	0x03a9
@@ -1835,7 +1835,7 @@ code_3221:
 		calle	0xff, 0x04, 0x06
 		push1	
 		lst	0x06
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 code_3282:
 		pToa	0x1e
 		bnt	code_3304
@@ -1887,7 +1887,7 @@ code_3325:
 		sat	0x00
 		push1	
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_3377
 		push1	
@@ -1895,7 +1895,7 @@ code_3325:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x00
 code_3377:
 		pushi	0x11
@@ -1984,7 +1984,7 @@ code_3483:
 		sat	0x00
 		push1	
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_3532
 		push1	
@@ -1992,7 +1992,7 @@ code_3483:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x00
 code_3532:
 		pushi	0x11
@@ -2100,7 +2100,7 @@ IconBar::193:
 		bnt	code_3722
 		push1	
 		pTos	0x16
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3711
 		pushi	0x00c1
 		push1	
@@ -2196,7 +2196,7 @@ code_3833:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x00
 		ne?	
 		bnt	code_3885
@@ -2216,7 +2216,7 @@ code_3833:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		aTop	0x14
 		jmp	code_3907
 code_3885:

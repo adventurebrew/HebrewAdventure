@@ -77,19 +77,19 @@ class_0::83:
 		aTop	0x08
 		push1	
 		push1	
-		callk	0x20, 0x2
+		callk	DrawMenuBar, 0x2
 		ret	
 
 class_0::105:
 		push1	
 		push0	
-		callk	0x20, 0x2
+		callk	DrawMenuBar, 0x2
 		ret	
 
 class_0::115:
 		push0	
 		rest	0x01
-		callk	0x22, 0x0
+		callk	AddMenu, 0x0
 		ret	
 
 class_0::129:
@@ -101,17 +101,17 @@ class_0::129:
 		push2	
 		pushi	0x0c
 		pushi	0x1e
-		callk	0x6d, 0x4
+		callk	Joystick, 0x4
 		sat	0x01
 		push1	
 		lsp	0x01
 		rest	0x02
-		callk	0x21, 0x2
+		callk	MenuSelect, 0x2
 		sat	0x00
 		push2	
 		pushi	0x0c
 		lst	0x01
-		callk	0x6d, 0x4
+		callk	Joystick, 0x4
 code_188:
 		lat	0x00
 		ret	
@@ -196,7 +196,7 @@ code_314:
 		bnt	code_349
 		push1	
 		pTos	0x16
-		callk	0x25, 0x2
+		callk	Said, 0x2
 code_349:
 		bt	code_390
 		lst	0x01
@@ -303,7 +303,7 @@ code_486:
 		bnt	code_530
 		push1	
 		pushSelf	
-		callk	0x18, 0x2
+		callk	HiliteControl, 0x2
 		lat	0x00
 		sat	0x01
 code_530:
@@ -321,7 +321,7 @@ code_549:
 		bnt	code_559
 		push1	
 		pushSelf	
-		callk	0x18, 0x2
+		callk	HiliteControl, 0x2
 code_559:
 		lat	0x00
 		ret	
@@ -389,7 +389,7 @@ class_0_u::170:
 class_0_u::83:
 		push1	
 		pushSelf	
-		callk	0x17, 0x2
+		callk	DrawControl, 0x2
 		ret	
 
 class_0_u::174:
@@ -460,7 +460,7 @@ code_809:
 		push	
 		lofsa	string_0		; "\n----------\n"
 		push	
-		callk	0x1a, 0xa
+		callk	TextSize, 0xa
 		pTos	0x0c
 		ldi	0x02
 		lati	0x00
@@ -505,7 +505,7 @@ DIcon::168:
 		pTos	0x1a
 		pTos	0x1c
 		pTos	0x1e
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		aTop	0x12
 		pTos	0x0c
@@ -513,7 +513,7 @@ DIcon::168:
 		pTos	0x1a
 		pTos	0x1c
 		pTos	0x1e
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		aTop	0x10
 		ret	
@@ -553,7 +553,7 @@ DButton::168:
 		pTos	0x1c
 		push0	
 		push0	
-		callk	0x1a, 0xa
+		callk	TextSize, 0xa
 		ldi	0x02
 		lsti	0x00
 		add	
@@ -619,7 +619,7 @@ DEdit::167:
 		push2	
 		pushSelf	
 		lsp	0x01
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		selfID	
 		ret	
 
@@ -636,7 +636,7 @@ DEdit::168:
 		pTos	0x1c
 		push0	
 		push0	
-		callk	0x1a, 0xa
+		callk	TextSize, 0xa
 		pTos	0x0c
 		ldi	0x02
 		lati	0x00
@@ -657,7 +657,7 @@ DEdit::168:
 		aTop	0x12
 		push1	
 		pTos	0x1a
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		aTop	0x20
 		ret	
 
@@ -701,7 +701,7 @@ code_1394:
 		push0	
 		push1	
 		lst	0x00
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		eq?	
 		bnt	code_1417
 		ldi	0xff
@@ -711,7 +711,7 @@ code_1417:
 		push2	
 		lsp	0x01
 		lst	0x00
-		callk	0x45, 0x4
+		callk	StrCmp, 0x4
 		not	
 		bnt	code_1432
 		lat	0x01
@@ -746,7 +746,7 @@ DSelector::168:
 		pTos	0x1a
 		push0	
 		push0	
-		callk	0x1a, 0xa
+		callk	TextSize, 0xa
 		pTos	0x0c
 		ldi	0x14
 		add	
@@ -823,7 +823,7 @@ DSelector::175:
 		push2	
 		pTos	0x22
 		push0	
-		callk	0x62, 0x4
+		callk	StrAt, 0x4
 		not	
 		bnt	code_1607
 		ret	
@@ -837,7 +837,7 @@ code_1611:
 		push2	
 		pTos	0x22
 		pTos	0x1c
-		callk	0x62, 0x4
+		callk	StrAt, 0x4
 		bnt	code_1673
 		ldi	0x01
 		sat	0x00
@@ -1044,7 +1044,7 @@ code_1966:
 		pTos	0x1a
 		push0	
 		push0	
-		callk	0x1a, 0xa
+		callk	TextSize, 0xa
 		pushi	0x03
 		push0	
 		lap	0x01
@@ -1133,7 +1133,7 @@ Overriden functions: 6
 .CODE
 Dialog::179:
 		push0	
-		callk	0xa, 0x0
+		callk	PicNotValid, 0x0
 		bnt	code_2217
 		lag	0x05
 		bnt	code_2217
@@ -1144,7 +1144,7 @@ Dialog::179:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 code_2217:
 		pushi	0x6a
 		push0	
@@ -1234,7 +1234,7 @@ code_2358:
 		lag	0x4f
 		sat	0x03
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		sat	0x04
 		jmp	code_2381
 code_2377:
@@ -1278,14 +1278,14 @@ code_2385:
 code_2443:
 		lst	0x04
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		eq?	
 		bnt	code_2459
 		jmp	code_2443
 		jmp	code_2443
 code_2459:
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		sat	0x04
 code_2465:
 		pushi	0x0081
@@ -1313,12 +1313,12 @@ code_2499:
 		push2	
 		pTos	0x10
 		push0	
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		jmp	code_2524
 code_2516:
 		push1	
 		push1	
-		callk	0x41, 0x2
+		callk	Wait, 0x2
 		jmp	code_2385
 code_2524:
 		ldi	0x00
@@ -1332,7 +1332,7 @@ Dialog::162:
 		bnt	code_2567
 		push1	
 		push1	
-		callk	0x42, 0x2
+		callk	GetTime, 0x2
 		sat	0x00
 		pTos	0x22
 		ne?	
@@ -1370,7 +1370,7 @@ Dialog::108:
 		bnt	code_2610
 		push1	
 		lsg	0x29
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		ldi	0x00
 		sag	0x19
 		ldi	0x00
@@ -1426,7 +1426,7 @@ code_2671:
 code_2691:
 		push1	
 		lst	0x01
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		aTop	0x10
 		pushi	0x20
 		push0	
@@ -1509,7 +1509,7 @@ code_2806:
 code_2826:
 		push1	
 		lst	0x01
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		aTop	0x10
 		pushi	0x20
 		push0	
@@ -1681,7 +1681,7 @@ code_3114:
 		push2	
 		pTos	0x10
 		lsp	0x01
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		ldi	0x00
 		ret	
 
@@ -1696,7 +1696,7 @@ code_3128:
 		push2	
 		pTos	0x10
 		push0	
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		pushi	0x00ad
 		push1	
 		push2	
@@ -1762,7 +1762,7 @@ code_3242:
 		push2	
 		pTos	0x10
 		push0	
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		pushi	0x4c
 		push1	
 		push1	
@@ -1833,7 +1833,7 @@ code_3370:
 code_3388:
 		push1	
 		pTos	0x10
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3483
 		pushi	0x00ac
 		push1	
@@ -1868,7 +1868,7 @@ code_3388:
 		pToa	0x10
 		send	0x04
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		ge?	
 		bnt	code_3472
 		pushi	0x00af
@@ -1879,12 +1879,12 @@ code_3472:
 		push2	
 		pTos	0x10
 		lsp	0x01
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		jmp	code_3691
 code_3483:
 		push1	
 		pTos	0x10
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3568
 		pushi	0x00ac
 		push1	
@@ -1924,7 +1924,7 @@ code_3557:
 		push2	
 		pTos	0x10
 		lsp	0x01
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 		jmp	code_3691
 code_3568:
 		pushi	0x04
@@ -1986,7 +1986,7 @@ code_3683:
 		push2	
 		pTos	0x10
 		lsp	0x01
-		callk	0x19, 0x4
+		callk	EditControl, 0x4
 code_3691:
 		lat	0x00
 		ret	
@@ -2092,7 +2092,7 @@ Dialog::168:
 		push0	
 		pushi	0xff
 		push0	
-		callk	0x1a, 0xa
+		callk	TextSize, 0xa
 		ldi	0x00
 		lati	0x02
 		aTop	0x12
@@ -2122,7 +2122,7 @@ code_3891:
 		bnt	code_4005
 		push1	
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x01
 		pushi	0x0a
 		push0	
@@ -2322,7 +2322,7 @@ code_4316:
 		bnt	code_4338
 		push1	
 		lsp	0x01
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 code_4338:
 		ret	
 
@@ -2393,7 +2393,7 @@ code_4358:
 		lspi	0x01
 		lea	0x04, 0x15
 		push	
-		callk	0x49, 0x6
+		callk	GetFarText, 0x6
 		ldi	0x02
 		sat	0x05
 		jmp	code_4512
@@ -2406,7 +2406,7 @@ code_4478:
 		push	
 		ldi	0x00
 		lspi	0x01
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		ldi	0x01
 		sat	0x05
 		jmp	code_4512
@@ -2423,13 +2423,13 @@ code_4517:
 		lea	0x04, 0x15
 		push	
 		lst	0x03fe
-		callk	0x62, 0x4
+		callk	StrAt, 0x4
 		bnt	code_4696
 		push2	
 		lea	0x04, 0x15
 		push	
 		lst	0x03fe
-		callk	0x62, 0x4
+		callk	StrAt, 0x4
 		push	
 		ldi	0x3a00
 		eq?	
@@ -2441,7 +2441,7 @@ code_4517:
 		lat	0x03fe
 		add	
 		push	
-		callk	0x62, 0x4
+		callk	StrAt, 0x4
 		push	
 		ldi	0x4a
 		eq?	
@@ -2461,7 +2461,7 @@ code_4517:
 		push	
 		lofsa	string_12		; "#J"
 		push	
-		callk	0x7b, 0x6
+		callk	kernel_123, 0x6
 		pushi	0x57
 		push1	
 		lst	0x0402
@@ -2475,7 +2475,7 @@ code_4517:
 		push	
 		lst	0x03fe
 		push0	
-		callk	0x62, 0x6
+		callk	StrAt, 0x6
 		pushi	0x03
 		pushi	0x51
 		lst	0x0402
@@ -2728,7 +2728,7 @@ code_5097:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		jmp	code_5445
 code_5120:
 		dup	
@@ -2802,7 +2802,7 @@ code_5225:
 		ldi	0x01
 		add	
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_5281
 		pushi	0x6a
 		push0	
@@ -2870,7 +2870,7 @@ code_5338:
 		ldi	0x01
 		add	
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_5388
 		pushi	0x0089
 		push1	
@@ -3179,7 +3179,7 @@ code_5915:
 		push1	
 		lea	0x04, 0x15
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		not	
 code_5932:
 		bnt	code_5984
@@ -3246,7 +3246,7 @@ code_6029:
 		lat	0x00
 		send	0x08
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x0b
 		pushi	0x00b3
 		push2	
@@ -3274,11 +3274,11 @@ code_6074:
 		lat	0x09
 		bnt	code_6104
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sag	0x29
 		push1	
 		lst	0x0b
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		lat	0x09
 		sag	0x19
 		ret	
@@ -3391,7 +3391,7 @@ code_6259:
 		pushi	0x00ff
 		push0	
 		lsp	0x02
-		callk	0x48, 0x8
+		callk	Format, 0x8
 code_6288:
 		pushi	0x03
 		lea	0x04, 0x00
@@ -3403,7 +3403,7 @@ code_6288:
 		push1	
 		lea	0x04, 0x00
 		push	
-		callk	0x4a, 0x2
+		callk	ReadNumber, 0x2
 		jmp	code_6318
 code_6316:
 		ldi	0xff
@@ -3417,7 +3417,7 @@ code_6319:
 		lea	0x04, 0x00
 		push	
 		rest	0x01
-		callk	0x48, 0x2
+		callk	Format, 0x2
 		push1	
 		lea	0x04, 0x00
 		push	

@@ -35,7 +35,7 @@ code_106:
 		push0	
 		pushi	0x6c
 		lsl	0xbf
-		callk	0x1b, 0x8
+		callk	Display, 0x8
 		pushi	0x05
 		lea	0x02, 0x78
 		push	
@@ -49,7 +49,7 @@ code_106:
 		ldi	0x3c
 		mod	
 		push	
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		pushi	0x09
 		lea	0x02, 0x78
 		push	
@@ -69,14 +69,14 @@ code_106:
 		pushi	0x69
 		push2	
 		pushi	0x6b
-		callk	0x1b, 0x12
+		callk	Display, 0x12
 		sal	0xbf
 		ret	
 
 code_185:
 		push1	
 		lsp	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_206
 		pushi	0x00b2
 		push0	
@@ -108,7 +108,7 @@ code_227:
 code_231:
 		push1	
 		lst	0x00
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_281
 		pushi	0x04
 		dup	
@@ -131,7 +131,7 @@ code_231:
 		lat	0x00
 		send	0x04
 		push	
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		sat	0x01
 		jmp	code_307
 code_281:
@@ -148,7 +148,7 @@ code_281:
 		push	
 		lst	0x00
 		lsp	0x03
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		sat	0x01
 code_307:
 		lst	0x01
@@ -956,7 +956,7 @@ code_1781:
 		push2	
 		pushi	0x02c3
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		lag	0x00
 		send	0x06
@@ -1080,7 +1080,7 @@ DeltaurRegion::266:
 		push2	
 		pushi	0x02c3
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		lag	0x02
 		send	0x06
@@ -1247,7 +1247,7 @@ code_2440:
 		push2	
 		pushi	0x0084
 		pushi	0x0138
-		callk	0x0, 0x4
+		callk	Load, 0x4
 code_2453:
 		pushi	0x05
 		lsg	0x0b
@@ -1644,7 +1644,7 @@ DeltaurRegion::60:
 		pushi	0x69
 		push2	
 		pushi	0x6b
-		callk	0x1b, 0x14
+		callk	Display, 0x14
 		sal	0xbf
 code_3231:
 		push1	
@@ -1844,7 +1844,7 @@ code_3588:
 code_3592:
 		push1	
 		pTos	0x80
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3608
 		pushi	0x6c
 		push0	
@@ -1864,7 +1864,7 @@ code_3623:
 		bnt	code_3735
 		push1	
 		pTos	0x82
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3649
 		ldi	0x01
 		aTop	0x86
@@ -2018,7 +2018,7 @@ code_3863:
 		push2	
 		pushi	0x02c1
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 		jmp	code_4067
@@ -2056,14 +2056,14 @@ code_3930:
 		push2	
 		pushi	0x02c1
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x008c
 		push1	
 		push2	
 		pushi	0x02c1
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 		jmp	code_4067
@@ -3535,7 +3535,7 @@ code_7079:
 		push2	
 		push1	
 		push2	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		dup	
 		ldi	0x01
@@ -3549,7 +3549,7 @@ code_7079:
 		push2	
 		push1	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sub	
 		sat	0x00
 		jmp	code_7139
@@ -3566,7 +3566,7 @@ code_7114:
 		push2	
 		push1	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		add	
 		sat	0x00
 code_7139:
@@ -3574,7 +3574,7 @@ code_7139:
 		push2	
 		push1	
 		push2	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		dup	
 		ldi	0x01
@@ -3588,7 +3588,7 @@ code_7139:
 		push2	
 		push1	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sub	
 		sat	0x01
 		jmp	code_7200
@@ -3605,7 +3605,7 @@ code_7175:
 		push2	
 		push1	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		add	
 		sat	0x01
 code_7200:
@@ -3702,7 +3702,7 @@ code_7314:
 		push2	
 		pushi	0x02c3
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		lag	0x02
 		send	0x06
@@ -4142,7 +4142,7 @@ gd1::138:
 		pToa	0x08
 		send	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_8182
 		pushi	0x6c
 		push0	

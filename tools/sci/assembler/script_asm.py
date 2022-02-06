@@ -227,6 +227,15 @@ def second_code(section, sections):
                 result += value.to_bytes(length=instr.operands_lens[0], byteorder='little',
                                          signed=instr.opcode.is_signed())
                 add_pointer(sections, instr.offset + 1)
+        elif instr.opcode == SciOpcodes.op_callk:
+            assert len(instr.operands) == 2
+            kernel = instr.operands[0]
+            assert type(kernel) is str
+            value = kernels.get_index(kernel)
+            assert value < 256  # if it fails, need to adapt instruction.py
+            result += value.to_bytes(length=instr.operands_lens[0], byteorder='little',
+                                     signed=instr.opcode.is_signed())
+            result += wordize(instr.operands[1], instr.operands_lens[1])
         else:
             for i, operand in enumerate(instr.operands):
                 result += wordize(operand, instr.operands_lens[i])
@@ -387,6 +396,8 @@ def asm(p):
 def asm_all(src, compiledir):
     compile_path = Path(compiledir)
     compile_path.mkdir(exist_ok=True)
+    global kernels
+    kernels = Kernels(src, compiledir, mode='asm')
     if Path(src).is_dir():
         asm_files = Path(src).glob('*.sca')
     else:

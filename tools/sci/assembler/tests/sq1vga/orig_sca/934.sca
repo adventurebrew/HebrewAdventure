@@ -23,7 +23,7 @@ Slider::192:
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sub	
 		aTop	0x3a
 		pToa	0x10
@@ -40,7 +40,7 @@ code_57:
 		pTos	0x36
 		pTos	0x34
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -60,7 +60,7 @@ code_57:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		ret	
 
 Slider::166:
@@ -181,7 +181,7 @@ code_300:
 		pTos	0x40
 		push1	
 		lst	0x04
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		le?	
 		bnt	code_491
 		pTos	0x34
@@ -194,7 +194,7 @@ code_300:
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x01
 		lst	0x00
 		pToa	0x3c
@@ -214,11 +214,11 @@ code_361:
 code_363:
 		aTop	0x34
 		push0	
-		callk	0xa, 0x0
+		callk	PicNotValid, 0x0
 		sat	0x02
 		push1	
 		push1	
-		callk	0xa, 0x2
+		callk	PicNotValid, 0x2
 		pushi	0x06
 		pTos	0x08
 		pTos	0x0a
@@ -226,7 +226,7 @@ code_363:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pTos	0x2e
 		pTos	0x30
@@ -234,7 +234,7 @@ code_363:
 		pTos	0x36
 		pTos	0x34
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -254,10 +254,10 @@ code_363:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		push1	
 		lst	0x02
-		callk	0xa, 0x2
+		callk	PicNotValid, 0x2
 		pushi	0x01f2
 		push1	
 		pTos	0x34
@@ -370,7 +370,7 @@ code_621:
 		lat	0x00
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pTos	0x3a
 		pToa	0x3c
@@ -382,7 +382,7 @@ code_621:
 		pToa	0x46
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		div	
 		add	
 code_653:
@@ -559,7 +559,7 @@ code_1052:
 		aTop	0x24
 		push1	
 		pTos	0x22
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1079
 		pushi	0x00b3
 		push0	
@@ -599,22 +599,22 @@ code_1128:
 		sat	0x01
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x02
 code_1144:
 		lat	0x02
 		bnt	code_1246
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x03
 		push1	
 		push1	
 		lst	0x02
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_1174
 		ret	
@@ -669,7 +669,7 @@ code_1246:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		aTop	0x2a
 code_1264:
 		pToa	0x14
@@ -750,7 +750,7 @@ GameControls::198:
 		send	0x04
 		bnt	code_1489
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x02
 		pushi	0x71
 		push1	
@@ -796,7 +796,7 @@ code_1464:
 code_1483:
 		push1	
 		lst	0x02
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 code_1489:
 		pToa	0x1e
 		bnt	code_1511
@@ -845,7 +845,7 @@ code_1528:
 		send	0x04
 		push1	
 		pTos	0x16
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1600
 		pushi	0x71
 		push1	
@@ -864,7 +864,7 @@ code_1528:
 code_1600:
 		push1	
 		pTos	0x16
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bt	code_1622
 		pushi	0x11
@@ -894,7 +894,7 @@ code_1637:
 		send	0x04
 		push1	
 		pTos	0x16
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1687
 		pushi	0x71
 		push1	
@@ -913,7 +913,7 @@ code_1637:
 code_1687:
 		push1	
 		pTos	0x16
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bt	code_1709
 		pushi	0x11

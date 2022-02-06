@@ -77,7 +77,7 @@ code_95:
 		bnt	code_147
 		push1	
 		pTos	0x0e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_164
 		pushi	0x6c
 		push0	
@@ -93,7 +93,7 @@ code_147:
 		push2	
 		pTos	0x0a
 		lsp	0x02
-		callk	0x4c, 0x4
+		callk	DirLoop, 0x4
 code_164:
 		pushi	0x06
 		push0	
@@ -518,7 +518,7 @@ code_905:
 		pToa	0x0a
 		send	0x04
 		push	
-		callk	0x4c, 0x4
+		callk	DirLoop, 0x4
 		pushi	0x6c
 		push0	
 		super	0x1, 0x4

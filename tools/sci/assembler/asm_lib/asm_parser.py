@@ -176,6 +176,18 @@ def p_code_entry_opcode_label_error(p):
     p[0] = (p[1], p[2])
 
 
+def p_code_entry_opcode_callk(p):
+    """code_entry : OPCODE_CALLK ID COMMA HEX
+                  """
+    p[0] = (SciOpcodes(p[1]), p[2], p[4])
+
+
+def p_code_entry_opcode_callk_error(p):
+    """code_entry : OPCODE_CALLK error"""
+    print(f"\tline {p[2].lineno}: Syntax error in '{p[1]}'")
+    p[0] = (p[1], p[2])
+
+
 def p_code_label(p):
     """code_label : ID COLON COLON NUMBER COLON
                   | NUMBER COLON COLON NUMBER COLON

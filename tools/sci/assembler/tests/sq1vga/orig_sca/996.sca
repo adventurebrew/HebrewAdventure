@@ -78,7 +78,7 @@ User::60:
 		push2	
 		pushi	0x7fff
 		pTos	0x1c
-		callk	0x1c, 0x4
+		callk	GetEvent, 0x4
 		pushi	0x0081
 		push1	
 		pTos	0x1c
@@ -108,7 +108,7 @@ User::129:
 		bnt	code_188
 		push1	
 		lsp	0x01
-		callk	0x1f, 0x2
+		callk	MapKeyToDir, 0x2
 code_188:
 		pushi	0x22
 		push0	
@@ -629,7 +629,7 @@ code_1144:
 		bnt	code_1171
 		push1	
 		pTos	0x64
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1171
 		ldi	0x00
 		sat	0x00

@@ -37,7 +37,7 @@ rm7::107:
 		push2	
 		pushi	0x0080
 		pushi	0x39
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x6b
 		push0	
 		lofsa	widget

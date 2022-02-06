@@ -137,7 +137,7 @@ DScript::79:
 		push0	
 		pushi	0x6c
 		push	
-		callk	0x1b, 0x8
+		callk	Display, 0x8
 		ldi	0x00
 		aTop	0x22
 		pToa	0x24

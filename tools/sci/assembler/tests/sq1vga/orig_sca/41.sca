@@ -193,7 +193,7 @@ code_358:
 		push2	
 		pushi	0x0084
 		pushi	0x0193
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x008c
 		push1	
 		lofsa	fallDown
@@ -360,7 +360,7 @@ code_586:
 		push2	
 		pushi	0x02be
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x08
 code_722:
 		ret	

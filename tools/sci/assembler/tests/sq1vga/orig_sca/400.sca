@@ -18,7 +18,7 @@ code_30:
 		push0	
 		pushi	0x6c
 		push	
-		callk	0x1b, 0x8
+		callk	Display, 0x8
 		ldi	0x00
 		sal	0x14
 code_51:
@@ -92,7 +92,7 @@ code_52:
 		push2	
 		pushi	0x0190
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		lofsa	enterBut
 		send	0x0a
@@ -320,7 +320,7 @@ lowerPad::108:
 		push2	
 		pushi	0x31
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x6c
 		push0	
@@ -331,7 +331,7 @@ lowerPad::108:
 		super	0x6, 0x4
 		push1	
 		pushi	0x0190
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 lowerPad::138:
@@ -454,7 +454,7 @@ enterScript::108:
 		push	
 		lofsa	string_2		; ""
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		pushi	0x6c
 		push0	
 		super	0x6, 0x4
@@ -474,7 +474,7 @@ enterScript::138:
 		push1	
 		lea	0x02, 0x00
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		not	
 		bnt	code_909
 		push2	
@@ -489,7 +489,7 @@ code_909:
 		push1	
 		lea	0x02, 0x00
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		push	
 		ldi	0x04
 		lt?	
@@ -521,7 +521,7 @@ code_948:
 		push	
 		lofsa	string_4		; "GFCB"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_979:
 		dup	
@@ -533,7 +533,7 @@ code_979:
 		push	
 		lofsa	string_5		; "DICJ"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1001:
 		dup	
@@ -545,7 +545,7 @@ code_1001:
 		push	
 		lofsa	string_6		; "JBEI"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1023:
 		dup	
@@ -557,7 +557,7 @@ code_1023:
 		push	
 		lofsa	string_7		; "EAEB"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1045:
 		dup	
@@ -569,7 +569,7 @@ code_1045:
 		push	
 		lofsa	string_8		; "IIBA"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1067:
 		dup	
@@ -581,7 +581,7 @@ code_1067:
 		push	
 		lofsa	string_9		; "EGHD"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1089:
 		dup	
@@ -593,7 +593,7 @@ code_1089:
 		push	
 		lofsa	string_10		; "CBBJ"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1111:
 		dup	
@@ -605,7 +605,7 @@ code_1111:
 		push	
 		lofsa	string_11		; "HFFH"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1133:
 		dup	
@@ -617,7 +617,7 @@ code_1133:
 		push	
 		lofsa	string_12		; "ICDE"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1155:
 		dup	
@@ -629,7 +629,7 @@ code_1155:
 		push	
 		lofsa	string_13		; "BIAA"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1177:
 		dup	
@@ -641,7 +641,7 @@ code_1177:
 		push	
 		lofsa	string_14		; "GHJB"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1199:
 		dup	
@@ -653,7 +653,7 @@ code_1199:
 		push	
 		lofsa	string_15		; "HAAD"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1221:
 		dup	
@@ -665,7 +665,7 @@ code_1221:
 		push	
 		lofsa	string_16		; "DAIB"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1243:
 		dup	
@@ -677,7 +677,7 @@ code_1243:
 		push	
 		lofsa	string_17		; "DDDG"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1265:
 		dup	
@@ -689,7 +689,7 @@ code_1265:
 		push	
 		lofsa	string_18		; "BACH"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1287:
 		dup	
@@ -701,7 +701,7 @@ code_1287:
 		push	
 		lofsa	string_19		; "ABHC"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1309:
 		dup	
@@ -713,7 +713,7 @@ code_1309:
 		push	
 		lofsa	string_20		; "GJDH"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1331:
 		dup	
@@ -725,7 +725,7 @@ code_1331:
 		push	
 		lofsa	string_21		; "CAHC"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1353:
 		dup	
@@ -737,7 +737,7 @@ code_1353:
 		push	
 		lofsa	string_22		; "BGBB"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_1394
 code_1375:
 		dup	
@@ -749,7 +749,7 @@ code_1375:
 		push	
 		lofsa	string_23		; "IJFE"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_1394:
 		toss	
 		push2	
@@ -757,7 +757,7 @@ code_1394:
 		push	
 		lea	0x02, 0x0a
 		push	
-		callk	0x45, 0x4
+		callk	StrCmp, 0x4
 		push	
 		ldi	0x00
 		eq?	
@@ -775,7 +775,7 @@ code_1394:
 		push2	
 		pushi	0x31
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		ldi	0x01
 		aTop	0x10
@@ -799,7 +799,7 @@ code_1452:
 		push2	
 		pushi	0x31
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		ldi	0x01
 		aTop	0x10
@@ -961,7 +961,7 @@ quitScript::138:
 		push2	
 		pushi	0x31
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x6c
 		push0	
@@ -1060,7 +1060,7 @@ KeyPadButton::637:
 		push1	
 		lofsa	keyFlashScript
 		push	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		push	
 		push0	
 		pTos	0x5c
@@ -1069,7 +1069,7 @@ KeyPadButton::637:
 		bnt	code_2053
 		push1	
 		pTos	0x56
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		push	
 		pToa	0x5a
 		lt?	
@@ -1079,7 +1079,7 @@ KeyPadButton::637:
 		push2	
 		pTos	0x56
 		pTos	0x58
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		pushi	0x0b
 		pTos	0x56
 		pushi	0x64
@@ -1109,7 +1109,7 @@ KeyPadButton::637:
 		pushi	0x69
 		pushi	0x1e
 		pushi	0x6b
-		callk	0x1b, 0x16
+		callk	Display, 0x16
 		sal	0x14
 code_2053:
 		ret	

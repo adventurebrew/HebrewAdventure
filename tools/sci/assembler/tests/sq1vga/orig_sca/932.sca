@@ -45,7 +45,7 @@ code_60:
 		bnt	code_93
 		push0	
 		rest	0x02
-		callk	0x1b, 0x0
+		callk	Display, 0x0
 		jmp	code_102
 code_93:
 		push1	
@@ -69,7 +69,7 @@ code_102:
 		bnt	code_139
 		push0	
 		rest	0x02
-		callk	0x1b, 0x0
+		callk	Display, 0x0
 		jmp	code_146
 code_139:
 		push0	
@@ -225,14 +225,14 @@ code_354:
 		push	
 		lsp	0x03
 		lsp	0x04
-		callk	0x49, 0x6
+		callk	GetFarText, 0x6
 		jmp	code_391
 code_381:
 		push2	
 		lea	0x04, 0x03
 		push	
 		lsp	0x03
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_391:
 		pushi	0x57
 		push0	
@@ -257,7 +257,7 @@ code_391:
 		lea	0x04, 0x03
 		push	
 		push0	
-		callk	0x7b, 0x6
+		callk	kernel_123, 0x6
 		ldi	0x00
 		sat	0x02
 		bnt	code_463
@@ -271,14 +271,14 @@ code_391:
 		lea	0x04, 0x03
 		push	
 		push0	
-		callk	0x7b, 0x6
+		callk	kernel_123, 0x6
 		jmp	code_473
 code_463:
 		push2	
 		lsp	0x02
 		lofsa	string_0		; ""
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_473:
 		pushi	0x57
 		push1	

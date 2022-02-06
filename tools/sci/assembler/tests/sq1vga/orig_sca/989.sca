@@ -34,7 +34,7 @@ Sound::107:
 		push2	
 		pushi	0x06
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 		ret	
 
 Sound::42:
@@ -48,7 +48,7 @@ Sound::42:
 		ldi	0x01
 		sub	
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_93
 		lsp	0x00
 		ldi	0x01
@@ -83,7 +83,7 @@ code_128:
 		pushi	0x08
 		pushSelf	
 		push0	
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::154:
@@ -92,11 +92,11 @@ Sound::154:
 		push2	
 		pushi	0x11
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 		push2	
 		pushi	0x09
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 code_157:
 		ret	
 
@@ -122,7 +122,7 @@ code_187:
 code_189:
 		push	
 		lsp	0x01
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::156:
@@ -136,7 +136,7 @@ code_206:
 		pushi	0x0c
 		pushSelf	
 		lsp	0x01
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::122:
@@ -144,7 +144,7 @@ Sound::122:
 		pushi	0x0c
 		pushSelf	
 		push0	
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::157:
@@ -158,7 +158,7 @@ Sound::157:
 		ldi	0x01
 		sub	
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_262
 		lsp	0x00
 		ldi	0x01
@@ -176,7 +176,7 @@ code_262:
 		lsp	0x02
 		lsp	0x03
 		lsp	0x04
-		callk	0x2d, 0xc
+		callk	DoSound, 0xc
 		jmp	code_300
 code_286:
 		pushi	0x06
@@ -186,7 +186,7 @@ code_286:
 		pushi	0x19
 		pushi	0x0a
 		push1	
-		callk	0x2d, 0xc
+		callk	DoSound, 0xc
 code_300:
 		ret	
 
@@ -201,7 +201,7 @@ code_311:
 		pushi	0x0d
 		pushSelf	
 		lsp	0x01
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::159:
@@ -209,7 +209,7 @@ Sound::159:
 		pushi	0x0e
 		pushSelf	
 		lsp	0x01
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::66:
@@ -217,7 +217,7 @@ Sound::66:
 		pushi	0x0f
 		pushSelf	
 		lsp	0x01
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::160:
@@ -225,7 +225,7 @@ Sound::160:
 		pushi	0x10
 		pushSelf	
 		lsp	0x01
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::161:
@@ -248,7 +248,7 @@ Sound::161:
 		pushi	0x00b0
 		lsp	0x02
 		lsp	0x03
-		callk	0x2d, 0xc
+		callk	DoSound, 0xc
 		jmp	code_414
 code_398:
 		pushi	0x06
@@ -258,7 +258,7 @@ code_398:
 		lsp	0x02
 		lsp	0x03
 		lsp	0x04
-		callk	0x2d, 0xc
+		callk	DoSound, 0xc
 code_414:
 		ret	
 
@@ -268,7 +268,7 @@ Sound::162:
 		push2	
 		pushi	0x11
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 code_427:
 		pToa	0x16
 		bnt	code_456
@@ -277,7 +277,7 @@ code_427:
 		aTop	0x16
 		push1	
 		pTos	0x22
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_456
 		pushi	0x008b
 		push1	
@@ -313,7 +313,7 @@ Sound::108:
 		push2	
 		pushi	0x07
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 		ldi	0x00
 		aTop	0x08
 code_501:
@@ -333,7 +333,7 @@ Sound::164:
 		ldi	0x01
 		sub	
 		lspi	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_546
 		lsp	0x00
 		ldi	0x01
@@ -368,14 +368,14 @@ code_581:
 		pushi	0x08
 		pushSelf	
 		push1	
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		ret	
 
 Sound::138:
 		push2	
 		pushi	0x14
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 		ret	
 
 		bnot	

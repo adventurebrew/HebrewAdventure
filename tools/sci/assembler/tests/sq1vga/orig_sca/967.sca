@@ -50,7 +50,7 @@ code_62:
 DCIcon::219:
 		push1	
 		pushSelf	
-		callk	0xe, 0x2
+		callk	NumCels, 0x2
 		push	
 		ldi	0x01
 		sub	

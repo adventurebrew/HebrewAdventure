@@ -1,9 +1,10 @@
 from opcodes import SciOpcodes
+from misc import Kernels
 
 
 class Instruction:
     # TODO mark jump labels?
-    def __init__(self, opcode, operands, offset, mode='disasm', label=None):
+    def __init__(self, opcode, operands, offset, mode='disasm', label=None, kernels=None):
         self.str = None
         self.label = label
         self.exported = False
@@ -18,10 +19,14 @@ class Instruction:
                 self.length = length_range['max']
                 self.operands_lens = [self.length - 1]
                 self.extra = 0
-            elif self.opcode == SciOpcodes.op_call:
+            elif self.opcode in [SciOpcodes.op_call]:
                 self.length = length_range['max']
                 self.operands_lens = [self.length - 2, 1]
                 self.extra = 0
+            elif self.opcode in [SciOpcodes.op_callk]:
+                self.length = length_range['min']
+                self.operands_lens = [self.length - 2, 1]
+                self.extra = 1
             elif self.opcode.is_relative():
                 self.length = length_range['max']
                 self.operands_lens = [self.length - 1]
@@ -59,9 +64,17 @@ class Instruction:
             elif self.opcode in [SciOpcodes.op_lofsa, SciOpcodes.op_lofss]:
                 # see comment at opcodes.py
                 self.operands = int.from_bytes(operands, byteorder='little', signed=self.opcode.is_signed())
-            elif self.opcode in [SciOpcodes.op_callk, SciOpcodes.op_callb, SciOpcodes.op_super]:
-                # TODO make prettier
+            elif self.opcode in [SciOpcodes.op_callb, SciOpcodes.op_super]:
                 self.operands = ', '.join([hex(o) for o in operands])
+            elif self.opcode == SciOpcodes.op_callk:
+                if len(operands) == 2:
+                    self.operands = f'{kernels.get_kernel(operands[0])}, {hex(operands[1])}'
+                    self.operands_width = [1, 1]
+                else:
+                    assert len(operands) == 3
+                    kernel = int.from_bytes(operands[0:2], byteorder='little')
+                    self.operands = f'{kernels.get_kernel(kernel)}, {hex(operands[2])}'
+                    self.operands_width = [2, 1]
             elif self.opcode == SciOpcodes.op_calle:
                 if len(operands) == 3:
                     self.operands = [o for o in operands]  # byte -> list of int

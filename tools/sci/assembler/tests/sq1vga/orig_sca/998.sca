@@ -21,7 +21,7 @@ PicView::107:
 		send	0x06
 		push1	
 		pushSelf	
-		callk	0xc, 0x2
+		callk	SetNowSeen, 0x2
 		pushi	0x6b
 		push0	
 		rest	0x01
@@ -44,7 +44,7 @@ code_57:
 		send	0x06
 		push1	
 		pushSelf	
-		callk	0x5, 0x2
+		callk	DisposeClone, 0x2
 		ret	
 
 PicView::194:
@@ -126,7 +126,7 @@ View::107:
 code_282:
 		push1	
 		pushSelf	
-		callk	0x4b, 0x2
+		callk	BaseSetter, 0x2
 		pushi	0x6b
 		push0	
 		rest	0x02
@@ -158,7 +158,7 @@ View::282:
 code_338:
 		push1	
 		pushSelf	
-		callk	0x4b, 0x2
+		callk	BaseSetter, 0x2
 		pushi	0x011c
 		push0	
 		self	0x04
@@ -209,7 +209,7 @@ View::84:
 		push2	
 		pushi	0x0085
 		push	
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		ldi	0x00
 		aTop	0x36
 code_426:
@@ -262,11 +262,11 @@ code_426:
 code_505:
 		push1	
 		pushSelf	
-		callk	0x5, 0x2
+		callk	DisposeClone, 0x2
 code_510:
 		push1	
 		pTos	0x1e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_526
 		pushi	0x6c
 		push0	
@@ -463,7 +463,7 @@ code_807:
 View::219:
 		push1	
 		pushSelf	
-		callk	0xe, 0x2
+		callk	NumCels, 0x2
 		push	
 		ldi	0x01
 		sub	
@@ -603,7 +603,7 @@ Prop::60:
 		push2	
 		pushSelf	
 		pTos	0x12
-		callk	0xc, 0x4
+		callk	SetNowSeen, 0x4
 		pTos	0x38
 		ldi	0x8000
 		and	
@@ -733,7 +733,7 @@ code_1385:
 Prop::140:
 		push1	
 		pTos	0x4e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1402
 		pushi	0x6c
 		push0	
@@ -940,7 +940,7 @@ code_1820:
 code_1854:
 		push1	
 		pushSelf	
-		callk	0x4b, 0x2
+		callk	BaseSetter, 0x2
 code_1859:
 		lst	0x01
 		pToa	0x44
@@ -1042,7 +1042,7 @@ Actor::297:
 code_2020:
 		push1	
 		lsp	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2053
 		push2	
 		push0	
@@ -1074,7 +1074,7 @@ code_2070:
 Actor::220:
 		push1	
 		pTos	0x64
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bt	code_2106
 		pTos	0x08
@@ -1159,7 +1159,7 @@ code_2201:
 code_2215:
 		push1	
 		pTos	0x1e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2235
 		pushi	0x6c
 		push0	
@@ -1285,7 +1285,7 @@ Actor::228:
 		send	0x04
 		push	
 		lsg	0x1f
-		callk	0x40, 0xa
+		callk	GetDistance, 0xa
 		ret	
 
 Actor::57:
@@ -1300,7 +1300,7 @@ Actor::57:
 code_2432:
 		push1	
 		pushSelf	
-		callk	0x4b, 0x2
+		callk	BaseSetter, 0x2
 code_2437:
 		push2	
 		pushSelf	
@@ -1309,7 +1309,7 @@ code_2437:
 		lag	0x05
 		send	0x04
 		push	
-		callk	0x4d, 0x4
+		callk	CanBeHere, 0x4
 		bnt	code_2456
 		jmp	code_2513
 code_2456:
@@ -1320,7 +1320,7 @@ code_2456:
 		bnt	code_2494
 		push1	
 		lsg	0x02
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2494
 		pTos	0x0a
 		pushi	0x0134
@@ -1379,7 +1379,7 @@ code_2544:
 		mul	
 		push	
 		pushi	0x64
-		callk	0x69, 0x4
+		callk	CosMult, 0x4
 		push	
 		calle	0x03e7, 0x0000, 0x02
 		mul	
@@ -1394,7 +1394,7 @@ code_2544:
 		mul	
 		push	
 		pushi	0x64
-		callk	0x68, 0x4
+		callk	SinMult, 0x4
 		push	
 		calle	0x03e7, 0x0000, 0x02
 		mul	
@@ -1451,7 +1451,7 @@ Actor::305:
 		pushi	0x04
 		pTos	0x08
 		pTos	0x0a
-		callk	0x4e, 0x6
+		callk	OnControl, 0x6
 		jmp	code_2721
 code_2706:
 		pushi	0x05
@@ -1460,7 +1460,7 @@ code_2706:
 		pTos	0x42
 		pTos	0x48
 		pTos	0x46
-		callk	0x4e, 0xa
+		callk	OnControl, 0xa
 code_2721:
 		ret	
 
@@ -1614,7 +1614,7 @@ code_2971:
 		pTos	0x0a
 		lst	0x00
 		lst	0x01
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		sat	0x04
 		lt?	
 		bnt	code_3001
@@ -1640,12 +1640,12 @@ code_3001:
 		push2	
 		push	
 		pushi	0x64
-		callk	0x68, 0x4
+		callk	SinMult, 0x4
 		sat	0x02
 		push2	
 		lst	0x04
 		pushi	0x64
-		callk	0x69, 0x4
+		callk	CosMult, 0x4
 		neg	
 		sat	0x03
 code_3042:
@@ -1657,14 +1657,14 @@ code_3042:
 code_3050:
 		push1	
 		lst	0x03
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		lat	0x05
 		lt?	
 		bnt	code_3093
 		push1	
 		lst	0x02
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		lat	0x05
 		lt?	
@@ -1709,7 +1709,7 @@ code_3093:
 		send	0x04
 		push	
 		push0	
-		callk	0x77, 0xe
+		callk	AvoidPath, 0xe
 		sat	0x06
 		push2	
 		push	
@@ -1730,7 +1730,7 @@ code_3093:
 		push2	
 		pushi	0x03
 		lst	0x06
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_3191:
 		lat	0x02
 		bt	code_3198
@@ -1807,7 +1807,7 @@ Actor::160:
 code_3314:
 		push1	
 		lsp	0x01
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_3340
 		pushi	0x00a0
@@ -1914,14 +1914,14 @@ code_3493:
 		push2	
 		pushSelf	
 		pTos	0x0e
-		callk	0x4c, 0x4
+		callk	DirLoop, 0x4
 		lsp	0x00
 		ldi	0x02
 		ge?	
 		bnt	code_3527
 		push1	
 		lsp	0x02
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3527
 		pushi	0x008b
 		push0	

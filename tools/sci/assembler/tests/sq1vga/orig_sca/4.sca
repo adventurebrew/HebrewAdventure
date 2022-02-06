@@ -18,7 +18,7 @@ rm4::107:
 		push2	
 		pushi	0x0084
 		pushi	0x0137
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x6b
 		push0	
 		pushi	0x0132
@@ -120,7 +120,7 @@ rm4::107:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x2a
 		jmp	code_502
 code_248:
@@ -240,7 +240,7 @@ code_280:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x2a
 code_502:
 		pushi	0x0187
@@ -254,7 +254,7 @@ code_502:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x6b
 		push0	
@@ -902,7 +902,7 @@ code_1704:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0x08
@@ -911,7 +911,7 @@ code_1704:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		ldi	0x06
 		aTop	0x10
@@ -1192,7 +1192,7 @@ code_2209:
 		lofsa	panicDroid
 		send	0x04
 		push	
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		sat	0x00
 		pushi	0x00dc
 		ge?	
@@ -1271,17 +1271,17 @@ beginGame::138:
 		push2	
 		push1	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		push2	
 		push1	
 		pushi	0x09
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		ldi	0x03e8
 		mul	
@@ -1289,7 +1289,7 @@ beginGame::138:
 		push2	
 		push1	
 		pushi	0x09
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		ldi	0x64
 		mul	
@@ -1298,7 +1298,7 @@ beginGame::138:
 		push2	
 		push1	
 		pushi	0x09
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		ldi	0x0a
 		mul	
@@ -1307,7 +1307,7 @@ beginGame::138:
 		push2	
 		push1	
 		pushi	0x09
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		ldi	0x01
 		mul	
@@ -1394,9 +1394,9 @@ code_2589:
 		push2	
 		push1	
 		pushi	0x03
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
-		callk	0x66, 0x4
+		callk	ShakeScreen, 0x4
 		pushi	0x2b
 		push1	
 		pushi	0x0153
@@ -1488,7 +1488,7 @@ code_2744:
 		ldi	0x3c
 		div	
 		push	
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		pushi	0x07
 		lea	0x04, 0x00
 		push	
@@ -1528,7 +1528,7 @@ code_2811:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0x04
@@ -1537,7 +1537,7 @@ code_2811:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0c
 		jmp	code_2931
 code_2863:
@@ -2302,7 +2302,7 @@ panicDroid::60:
 		send	0x04
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		sat	0x00
 		push	
 		ldi	0x00
@@ -2336,7 +2336,7 @@ code_4375:
 		ldi	0x7f
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		sat	0x01
 		push	
 		ldi	0x7f

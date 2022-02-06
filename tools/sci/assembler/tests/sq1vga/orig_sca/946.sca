@@ -15,7 +15,7 @@ Polygon::107:
 		lap	0x00
 		mul	
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 		aTop	0x0a
 		pushi	0x03
 		pTos	0x0a
@@ -26,7 +26,7 @@ Polygon::107:
 		mul	
 		neg	
 		push	
-		callk	0x47, 0x6
+		callk	StrCpy, 0x6
 		ldi	0x01
 		aTop	0x0e
 		ret	
@@ -39,7 +39,7 @@ Polygon::108:
 		push2	
 		pushi	0x03
 		pTos	0x0a
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_66:
 		pushi	0x6c
 		push0	

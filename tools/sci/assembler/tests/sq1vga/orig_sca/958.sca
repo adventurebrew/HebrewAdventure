@@ -28,19 +28,19 @@ code_27:
 		push2	
 		push	
 		lst	0x01
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		jmp	code_62
 code_56:
 		push1	
 		lst	0x01
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 code_62:
 		+at	0x00
 		jmp	code_27
 code_67:
 		push1	
 		pushi	0x03be
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 		bnot	
