@@ -176,7 +176,7 @@ code_264:
 		mul	
 		add	
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 		ret	
 
 ; exported
@@ -191,7 +191,7 @@ code_279:
 Obj::106:
 		push1	
 		pushSelf	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		ret	
 
 Obj::107:
@@ -204,14 +204,14 @@ Obj::60:
 Obj::108:
 		push1	
 		pushSelf	
-		callk	0x5, 0x2
+		callk	DisposeClone, 0x2
 		ret	
 
 Obj::109:
 		push2	
 		lsp	0x01
 		pTos	0x06
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		ret	
 
 Obj::110:
@@ -239,7 +239,7 @@ Obj::113:
 		push2	
 		pushSelf	
 		lsp	0x01
-		callk	0x7, 0x4
+		callk	RespondsTo, 0x4
 		ret	
 
 Obj::112:
@@ -280,7 +280,7 @@ Obj::111:
 		bt	code_422
 		push1	
 		lst	0x00
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_422
 		pushi	0x6f
 		push1	
@@ -348,7 +348,7 @@ Collect::109:
 		push0	
 		pTos	0x06
 		pTos	0x0a
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		ret	
 
 Collect::110:
@@ -373,7 +373,7 @@ Collect::115:
 		not	
 		bnt	code_613
 		push0	
-		callk	0x2e, 0x0
+		callk	NewList, 0x0
 		aTop	0x08
 code_613:
 		ldi	0x00
@@ -389,9 +389,9 @@ code_617:
 		lat	0x01
 		lspi	0x01
 		lspi	0x01
-		callk	0x30, 0x4
+		callk	NewNode, 0x4
 		push	
-		callk	0x39, 0x4
+		callk	AddToEnd, 0x4
 		ipToa	0x0a
 		+at	0x01
 		jmp	code_617
@@ -412,7 +412,7 @@ code_657:
 		pTos	0x08
 		lat	0x00
 		lspi	0x01
-		callk	0x3b, 0x4
+		callk	DeleteKey, 0x4
 		bnt	code_680
 		dpToa	0x0a
 code_680:
@@ -431,7 +431,7 @@ Collect::108:
 		self	0x06
 		push1	
 		pTos	0x08
-		callk	0x2f, 0x2
+		callk	DisposeList, 0x2
 code_705:
 		ldi	0x00
 		aTop	0x08
@@ -444,13 +444,13 @@ code_705:
 Collect::121:
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		ret	
 
 Collect::68:
 		push1	
 		lsp	0x01
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		ret	
 
 Collect::120:
@@ -460,7 +460,7 @@ Collect::120:
 		bt	code_746
 		push1	
 		pTos	0x08
-		callk	0x33, 0x2
+		callk	EmptyList, 0x2
 code_746:
 		ret	
 
@@ -468,29 +468,29 @@ Collect::119:
 		push2	
 		pTos	0x08
 		lsp	0x01
-		callk	0x3a, 0x4
+		callk	FindKey, 0x4
 		ret	
 
 Collect::116:
 		link	0x03
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_766:
 		lat	0x00
 		bnt	code_812
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		push1	
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x02
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_796
 		ret	
@@ -511,18 +511,18 @@ Collect::117:
 		link	0x03
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_823:
 		lat	0x00
 		bnt	code_863
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x02
 		lsp	0x01
 		push0	
@@ -544,18 +544,18 @@ Collect::118:
 		link	0x03
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_876:
 		lat	0x00
 		bnt	code_917
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x02
 		lsp	0x01
 		push0	
@@ -578,20 +578,20 @@ Collect::122:
 		link	0x02
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_930:
 		lat	0x00
 		bnt	code_961
 		push1	
 		push	
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		pushi	0x54
 		push1	
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		push	
 		self	0x06
 		lat	0x01
@@ -634,14 +634,14 @@ List::109:
 		push1	
 		pTos	0x06
 		pTos	0x0a
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		ret	
 
 List::67:
 		link	0x01
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_1088:
 		lap	0x01
@@ -651,7 +651,7 @@ code_1088:
 		-ap	0x01
 		push1	
 		lst	0x00
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x00
 		jmp	code_1088
 code_1111:
@@ -659,7 +659,7 @@ code_1111:
 		bnt	code_1124
 		push1	
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		jmp	code_1126
 code_1124:
 		ldi	0x00
@@ -669,13 +669,13 @@ code_1126:
 List::123:
 		push1	
 		pTos	0x08
-		callk	0x32, 0x2
+		callk	LastNode, 0x2
 		ret	
 
 List::124:
 		push1	
 		lsp	0x01
-		callk	0x35, 0x2
+		callk	PrevNode, 0x2
 		ret	
 
 List::125:
@@ -684,7 +684,7 @@ List::125:
 		not	
 		bnt	code_1155
 		push0	
-		callk	0x2e, 0x0
+		callk	NewList, 0x0
 		aTop	0x08
 code_1155:
 		lsp	0x00
@@ -702,9 +702,9 @@ code_1162:
 		lat	0x00
 		lspi	0x01
 		lspi	0x01
-		callk	0x30, 0x4
+		callk	NewNode, 0x4
 		push	
-		callk	0x38, 0x4
+		callk	AddToFront, 0x4
 		ipToa	0x0a
 		-at	0x00
 		jmp	code_1162
@@ -718,7 +718,7 @@ List::126:
 		not	
 		bnt	code_1209
 		push0	
-		callk	0x2e, 0x0
+		callk	NewList, 0x0
 		aTop	0x08
 code_1209:
 		ldi	0x00
@@ -734,9 +734,9 @@ code_1213:
 		lat	0x00
 		lspi	0x01
 		lspi	0x01
-		callk	0x30, 0x4
+		callk	NewNode, 0x4
 		push	
-		callk	0x39, 0x4
+		callk	AddToEnd, 0x4
 		ipToa	0x0a
 		+at	0x00
 		jmp	code_1213
@@ -749,7 +749,7 @@ List::127:
 		push2	
 		pTos	0x08
 		lsp	0x01
-		callk	0x3a, 0x4
+		callk	FindKey, 0x4
 		sat	0x02
 		bnt	code_1305
 		-ap	0x00
@@ -767,9 +767,9 @@ code_1268:
 		lat	0x00
 		lspi	0x02
 		lspi	0x02
-		callk	0x30, 0x4
+		callk	NewNode, 0x4
 		push	
-		callk	0x37, 0x6
+		callk	AddAfter, 0x6
 		sat	0x02
 		ipToa	0x0a
 		+at	0x00
@@ -784,7 +784,7 @@ List::128:
 		sat	0x00
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x01
 code_1321:
 		lat	0x01
@@ -792,7 +792,7 @@ code_1321:
 		lsp	0x01
 		push1	
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		eq?	
 		bnt	code_1340
 		lat	0x00
@@ -802,7 +802,7 @@ code_1340:
 		+at	0x00
 		push1	
 		lst	0x01
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		jmp	code_1321
 code_1353:
@@ -837,7 +837,7 @@ Set::109:
 		push2	
 		pTos	0x06
 		pTos	0x0a
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		ret	
 
 Set::115:
@@ -846,7 +846,7 @@ Set::115:
 		not	
 		bnt	code_1462
 		push0	
-		callk	0x2e, 0x0
+		callk	NewList, 0x0
 		aTop	0x08
 code_1462:
 		ldi	0x00
@@ -870,9 +870,9 @@ code_1466:
 		push2	
 		lst	0x02
 		dup	
-		callk	0x30, 0x4
+		callk	NewNode, 0x4
 		push	
-		callk	0x39, 0x4
+		callk	AddToEnd, 0x4
 		ipToa	0x0a
 code_1506:
 		+at	0x01
@@ -899,7 +899,7 @@ EventHandler::129:
 		link	0x03
 		push1	
 		pTos	0x08
-		callk	0x31, 0x2
+		callk	FirstNode, 0x2
 		sat	0x00
 code_1574:
 		lat	0x00
@@ -912,15 +912,15 @@ code_1574:
 		bnt	code_1632
 		push1	
 		lst	0x00
-		callk	0x34, 0x2
+		callk	NextNode, 0x2
 		sat	0x01
 		push1	
 		push1	
 		lst	0x00
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x02
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bt	code_1632
 		pushi	0x0081
@@ -974,7 +974,7 @@ code_1720:
 		bnt	code_1757
 		push1	
 		push1	
-		callk	0x42, 0x2
+		callk	GetTime, 0x2
 		sat	0x00
 		pTos	0x14
 		ne?	
@@ -997,7 +997,7 @@ code_1757:
 		pToa	0x18
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		sub	
 		aTop	0x16
 		push	
@@ -1048,7 +1048,7 @@ Script::108:
 		link	0x01
 		push1	
 		pTos	0x1c
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1868
 		pushi	0x6c
 		push0	
@@ -1057,7 +1057,7 @@ Script::108:
 code_1868:
 		push1	
 		pTos	0x0e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1884
 		pushi	0x6c
 		push0	
@@ -1066,13 +1066,13 @@ code_1868:
 code_1884:
 		push1	
 		pTos	0x08
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1966
 		pushi	0x0088
 		push1	
 		push1	
 		pTos	0x20
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1911
 		pToa	0x20
 		jmp	code_1921
@@ -1081,7 +1081,7 @@ code_1911:
 		bnt	code_1921
 		push1	
 		push	
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 code_1921:
 		sat	0x00
 		push	
@@ -1111,7 +1111,7 @@ code_1959:
 code_1966:
 		push1	
 		pTos	0x1e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1993
 		lsg	0x0d
 		lag	0x0b
@@ -1156,7 +1156,7 @@ code_2036:
 Script::140:
 		push1	
 		pTos	0x1c
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2053
 		pushi	0x6c
 		push0	
@@ -1234,7 +1234,7 @@ code_2225:
 code_2228:
 		push	
 		lst	0x00
-		callk	0x1c, 0x4
+		callk	GetEvent, 0x4
 		lat	0x00
 		ret	
 
@@ -1245,14 +1245,14 @@ Event::142:
 		ne?	
 		bnt	code_2302
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x00
 		pToa	0x14
 		not	
 		bnt	code_2268
 		push1	
 		pushSelf	
-		callk	0x1d, 0x2
+		callk	GlobalToLocal, 0x2
 		jmp	code_2298
 code_2268:
 		pTos	0x14
@@ -1261,16 +1261,16 @@ code_2268:
 		bnt	code_2298
 		push1	
 		pTos	0x14
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		push1	
 		pushSelf	
-		callk	0x1e, 0x2
+		callk	LocalToGlobal, 0x2
 		push1	
 		lst	0x00
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		push1	
 		pushSelf	
-		callk	0x1d, 0x2
+		callk	GlobalToLocal, 0x2
 code_2298:
 		lat	0x00
 		aTop	0x14
@@ -1285,27 +1285,27 @@ Event::143:
 		ne?	
 		bnt	code_2360
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x00
 		pTos	0x14
 		eq?	
 		bnt	code_2335
 		push1	
 		pushSelf	
-		callk	0x1e, 0x2
+		callk	LocalToGlobal, 0x2
 		jmp	code_2356
 code_2335:
 		pToa	0x14
 		bnt	code_2356
 		push1	
 		push	
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		push1	
 		pushSelf	
-		callk	0x1e, 0x2
+		callk	LocalToGlobal, 0x2
 		push1	
 		lst	0x00
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 code_2356:
 		ldi	0x00
 		aTop	0x14

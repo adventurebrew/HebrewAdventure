@@ -322,7 +322,7 @@ Jump::216:
 		bnt	code_543
 		push1	
 		pTos	0x0a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_543
 		pushi	0x008b
 		push0	
@@ -431,7 +431,7 @@ code_762:
 		lst	0x00
 		push	
 		pTos	0x28
-		callk	0x52, 0x8
+		callk	SetJump, 0x8
 		lat	0x00
 		not	
 		bnt	code_808

@@ -182,7 +182,7 @@ code_191:
 		push2	
 		pushi	0x02be
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x08
 code_373:
 		ret	
@@ -281,7 +281,7 @@ outaDBU::138:
 		push2	
 		pushi	0x02be
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x08
 		jmp	code_586
 code_570:

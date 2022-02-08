@@ -14,7 +14,7 @@ SysWindow::179:
 		pTos	0x14
 		pTos	0x10
 		pTos	0x12
-		callk	0x13, 0x12
+		callk	NewWindow, 0x12
 		aTop	0x16
 		ret	
 
@@ -23,7 +23,7 @@ SysWindow::108:
 		bnt	code_44
 		push1	
 		push	
-		callk	0x16, 0x2
+		callk	DisposeWindow, 0x2
 		ldi	0x00
 		aTop	0x16
 code_44:
@@ -178,7 +178,7 @@ Window::192:
 		push0	
 		self	0x04
 		push	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		ret	
 
 Window::83:
@@ -208,7 +208,7 @@ code_356:
 		push	
 		pTos	0x10
 		pTos	0x14
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		ret	
 
 Window::78:
@@ -222,7 +222,7 @@ Window::78:
 		push0	
 		self	0x04
 		push	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		aTop	0x24
 		ret	
 
@@ -232,7 +232,7 @@ Window::79:
 		push2	
 		pushi	0x08
 		push	
-		callk	0x6c, 0x4
+		callk	Graph, 0x4
 code_420:
 		ret	
 
@@ -247,7 +247,7 @@ Window::179:
 		pTos	0x14
 		pTos	0x10
 		pTos	0x12
-		callk	0x13, 0x12
+		callk	NewWindow, 0x12
 		aTop	0x16
 		ret	
 
@@ -266,7 +266,7 @@ Window::108:
 		bnt	code_470
 		push1	
 		push	
-		callk	0x16, 0x2
+		callk	DisposeWindow, 0x2
 		ldi	0x00
 		aTop	0x16
 code_470:

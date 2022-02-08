@@ -66,7 +66,7 @@ disposeCode::60:
 		bnt	code_165
 		push1	
 		pushi	0x0331
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 code_165:
 		pushi	0x0e
 		lsp	0x01
@@ -88,14 +88,14 @@ code_165:
 		bnt	code_212
 		push1	
 		pushi	0x03a0
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 code_212:
 		push1	
 		pushi	0x0320
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		push1	
 		pushi	0x0321
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 		bnot	

@@ -538,7 +538,7 @@ code_997:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0xff7f
@@ -547,7 +547,7 @@ code_997:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		jmp	code_1102
 code_1054:
@@ -1165,7 +1165,7 @@ code_2134:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0x0080
@@ -1174,7 +1174,7 @@ code_2134:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x011f
 		push1	
@@ -1218,7 +1218,7 @@ code_2232:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0x40
@@ -1227,7 +1227,7 @@ code_2232:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 code_2289:
 		pushi	0x0117
@@ -1324,7 +1324,7 @@ code_2425:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0xff7f
@@ -1333,7 +1333,7 @@ code_2425:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		push1	
 		pushi	0x10

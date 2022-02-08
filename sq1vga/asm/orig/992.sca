@@ -21,7 +21,7 @@ Cycle::214:
 		pToa	0x0e
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pushi	0x00d9
 		push0	
@@ -74,7 +74,7 @@ Cycle::216:
 		bnt	code_128
 		push1	
 		pTos	0x0a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_128
 		pushi	0x008b
 		push0	
@@ -400,7 +400,7 @@ SyncWalk::60:
 		send	0x04
 		sat	0x00
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_909
 		pushi	0x04
 		push0	
@@ -528,7 +528,7 @@ code_1087:
 		push	
 		pTos	0x0c
 		pTos	0x0e
-		callk	0x40, 0x8
+		callk	GetDistance, 0x8
 		bnt	code_1140
 		pushi	0x00e2
 		push1	
@@ -537,14 +537,14 @@ code_1087:
 		lst	0x03
 		pTos	0x0c
 		pTos	0x0e
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		push	
 		pToa	0x08
 		send	0x06
 code_1140:
 		push1	
 		pushSelf	
-		callk	0x4f, 0x2
+		callk	InitBresen, 0x2
 		ret	
 
 Motion::225:
@@ -583,7 +583,7 @@ Motion::60:
 		pToa	0x14
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pushi	0x38
 		push0	
@@ -595,7 +595,7 @@ Motion::60:
 		aTop	0x14
 		push1	
 		pushSelf	
-		callk	0x50, 0x2
+		callk	DoBresen, 0x2
 code_1219:
 		ret	
 
@@ -624,7 +624,7 @@ Motion::216:
 		bnt	code_1273
 		push1	
 		pTos	0x0a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1273
 		pushi	0x008b
 		push0	
@@ -686,7 +686,7 @@ MoveTo::225:
 		pToa	0x0c
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pushi	0x36
 		push0	
@@ -703,7 +703,7 @@ MoveTo::225:
 		pToa	0x0e
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pushi	0x37
 		push0	

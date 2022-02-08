@@ -51,7 +51,7 @@ code_79:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		ret	
 
 rm13::107:
@@ -65,7 +65,7 @@ rm13::107:
 		push2	
 		pushi	0x0081
 		pushi	0x00d5
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x03
 		pushi	0x0080
 		pushi	0x00d8
@@ -574,7 +574,7 @@ code_1072:
 		push2	
 		pushi	0x0084
 		pushi	0x0146
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		pushi	0x2b
 		push1	
 		pushi	0x0324
@@ -867,7 +867,7 @@ code_1594:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0x01
@@ -876,7 +876,7 @@ code_1594:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x00c0
 		push0	
@@ -964,7 +964,7 @@ code_1738:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		push	
 		ldi	0xfe
@@ -973,7 +973,7 @@ code_1738:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x69
 		push0	
@@ -1109,7 +1109,7 @@ throttleUp::138:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 code_2070:
 		pToa	0x1a
@@ -1162,7 +1162,7 @@ code_2143:
 		push2	
 		pushi	0x02bc
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x2b
 		push1	
@@ -1202,15 +1202,15 @@ code_2228:
 		push2	
 		pushi	0x0084
 		pushi	0x0148
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		push2	
 		pushi	0x0084
 		pushi	0x0151
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		push2	
 		pushi	0x0084
 		pushi	0x0145
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		pushi	0x2b
 		push1	
 		pushi	0x0147

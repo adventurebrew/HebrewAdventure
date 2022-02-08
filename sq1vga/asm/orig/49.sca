@@ -283,7 +283,7 @@ code_526:
 		push2	
 		pushi	0x0191
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 		jmp	code_650
@@ -295,7 +295,7 @@ code_560:
 		push2	
 		push0	
 		push1	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		dup	
 		ldi	0x00
@@ -306,7 +306,7 @@ code_560:
 		push2	
 		pushi	0x0192
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 		jmp	code_621
@@ -320,7 +320,7 @@ code_599:
 		push2	
 		pushi	0x0191
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 code_621:
@@ -336,7 +336,7 @@ code_625:
 		push2	
 		pushi	0x0191
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		pushSelf	
 		push1	
@@ -560,7 +560,7 @@ code_999:
 		push2	
 		pushi	0x0190
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 		jmp	code_1083
@@ -972,7 +972,7 @@ code_1778:
 		pushi	0x00ee
 		pushi	0x00ff
 		pushi	0xff
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 		ret	
 
 doHyperSpace::108:
@@ -1057,7 +1057,7 @@ code_1897:
 		push2	
 		pushi	0x0191
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		pToa	0x08
 		send	0x06

@@ -45,7 +45,7 @@ SRDialog::107:
 		push	
 		lsp	0x02
 		lsp	0x03
-		callk	0x5d, 0x6
+		callk	GetSaveFiles, 0x6
 		sal	0x03
 		push	
 		ldi	0xff
@@ -67,7 +67,7 @@ code_100:
 		push2	
 		lsp	0x01
 		lsp	0x02
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		push	
 		pushi	0x21
 		push1	
@@ -315,9 +315,9 @@ SRDialog::60:
 		lag	0x01
 		send	0x04
 		push	
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		push	
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 		sat	0x00
 		push	
 		ldi	0xff
@@ -329,7 +329,7 @@ code_581:
 		push2	
 		push1	
 		lst	0x00
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 code_588:
 		pushi	0x6b
 		pushi	0x03
@@ -415,7 +415,7 @@ code_668:
 		push	
 		lea	0x0004, 0x016c
 		push	
-		callk	0x5d, 0x6
+		callk	GetSaveFiles, 0x6
 		sal	0x03
 		push	
 		ldi	0xff
@@ -453,7 +453,7 @@ code_790:
 		lat	0x02
 		lea	0x14, 0x03
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		push	
 		lofsa	GetReplaceName
 		send	0x06
@@ -488,7 +488,7 @@ code_890:
 		bnt	code_1072
 		push1	
 		lsp	0x01
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		push	
 		ldi	0x00
 		eq?	
@@ -524,7 +524,7 @@ code_945:
 		mul	
 		lea	0x14, 0x03
 		push	
-		callk	0x45, 0x4
+		callk	StrCmp, 0x4
 		sat	0x01
 		not	
 		bt	code_979
@@ -622,7 +622,7 @@ code_1139:
 		lag	0x01
 		send	0x04
 		push	
-		callk	0x63, 0x6
+		callk	DeviceInfo, 0x6
 		push	
 		pushi	0x00b3
 		push1	
@@ -698,12 +698,12 @@ code_1257:
 		push	
 		lal	0x04
 		lsti	0x016c
-		callk	0x63, 0x8
+		callk	DeviceInfo, 0x8
 		push2	
 		pushi	0x04
 		lea	0x0004, 0x0181
 		push	
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 		pushi	0x6b
 		pushi	0x03
 		lsp	0x01
@@ -750,9 +750,9 @@ code_1389:
 		lat	0x02
 		lea	0x14, 0x03
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		push	
 		pushi	0x53
 		push0	
@@ -762,16 +762,16 @@ code_1389:
 code_1429:
 		push1	
 		pushi	0x03e1
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		push1	
 		pushi	0x03ac
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		pushi	0x6c
 		push0	
 		self	0x04
 		push1	
 		pushi	0x03de
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		lat	0x01
 		ret	
 
@@ -1038,7 +1038,7 @@ GetReplaceName::60:
 		self	0x04
 		push1	
 		lsp	0x01
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		not	
 		bnt	code_2097
 		push0	
@@ -1111,7 +1111,7 @@ code_2184:
 		lea	0x04, 0x01
 		push	
 		lsp	0x01
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		push	
 		pushi	0x1d
 		pushi	0x51
@@ -1139,24 +1139,24 @@ code_2263:
 		push1	
 		lea	0x04, 0x01
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		not	
 		bnt	code_2283
 		push1	
 		lea	0x04, 0x01
 		push	
-		callk	0x5e, 0x2
+		callk	GetCWD, 0x2
 code_2283:
 		push1	
 		lea	0x04, 0x01
 		push	
-		callk	0x60, 0x2
+		callk	ValidPath, 0x2
 		bnt	code_2310
 		push2	
 		lsp	0x01
 		lea	0x04, 0x01
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		ldi	0x01
 		ret	
 
@@ -1170,7 +1170,7 @@ code_2310:
 		push2	
 		lea	0x04, 0x01
 		push	
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		push	
 		pushi	0x21
 		push0	
@@ -1185,7 +1185,7 @@ code_2341:
 		bnt	code_2355
 		push1	
 		lsg	0x1d
-		callk	0x5f, 0x2
+		callk	CheckFreeSpace, 0x2
 code_2355:
 		ret	
 

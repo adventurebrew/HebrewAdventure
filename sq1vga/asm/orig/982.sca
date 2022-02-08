@@ -114,7 +114,7 @@ code_135:
 		lst	0x06
 		lst	0x03
 		lst	0x04
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		push	
 		pushi	0x3a
 		push0	
@@ -123,7 +123,7 @@ code_135:
 		push	
 		call	code_240, 4
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		lt?	
 		bt	code_239
 		lst	0x02
@@ -133,7 +133,7 @@ code_135:
 		lst	0x03
 		lst	0x04
 		lsg	0x1f
-		callk	0x40, 0xa
+		callk	GetDistance, 0xa
 		lt?	
 code_239:
 		ret	

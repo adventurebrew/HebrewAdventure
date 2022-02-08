@@ -16,7 +16,7 @@ rm63::107:
 		push2	
 		pushi	0x0084
 		pushi	0x06
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x03
 		pushi	0x0080
 		pushi	0x019a
@@ -459,7 +459,7 @@ switchit::138:
 		push2	
 		push1	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		pushi	0x00c0
 		push0	
@@ -496,7 +496,7 @@ code_916:
 		push2	
 		push1	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 code_956:
 		toss	
@@ -538,7 +538,7 @@ walkGuard::138:
 		push2	
 		push1	
 		pushi	0x0a
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_1135
 code_1040:

@@ -838,7 +838,7 @@ code_1539:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		bnt	code_1652
 		pushi	0x0130
@@ -850,7 +850,7 @@ code_1539:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0c
 		bnt	code_1652
 		pushi	0x008c
@@ -989,7 +989,7 @@ splatSpider::138:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 		pushi	0x0119
 		pushi	0x04
@@ -1041,7 +1041,7 @@ code_1917:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		pushi	0x6b
 		push0	

@@ -530,7 +530,7 @@ code_1004:
 		push2	
 		pushi	0x0080
 		pushi	0x0d
-		callk	0x0, 0x4
+		callk	Load, 0x4
 code_1027:
 		pushi	0x03
 		pushi	0x0080
@@ -560,7 +560,7 @@ code_1058:
 		push2	
 		pushi	0x0082
 		pushi	0x03a2
-		callk	0x0, 0x4
+		callk	Load, 0x4
 code_1107:
 		pushi	0x6b
 		push0	
@@ -911,7 +911,7 @@ keronaRegion::375:
 		lofsa	spider
 		send	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1818
 		pushi	0x0201
 		push0	
@@ -3273,7 +3273,7 @@ code_6161:
 spiderRP::547:
 		push1	
 		pTos	0x6e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_6186
 		lsg	0x0b
 		pushi	0x0201

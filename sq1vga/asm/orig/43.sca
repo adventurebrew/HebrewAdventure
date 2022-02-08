@@ -17,7 +17,7 @@ rm43::107:
 		push2	
 		pushi	0x0083
 		pushi	0x008f
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push1	
 		pushi	0x3f
 		callb	0x6, 0x2
@@ -29,7 +29,7 @@ rm43::107:
 		push2	
 		pushi	0x0080
 		pushi	0x00f3
-		callk	0x0, 0x4
+		callk	Load, 0x4
 code_75:
 		pushi	0x6b
 		push0	
@@ -87,12 +87,12 @@ code_102:
 		push2	
 		pushi	0x012f
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 		pushi	0x6b
 		push0	
@@ -101,7 +101,7 @@ code_102:
 		push2	
 		pushi	0x012f
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x08
 		jmp	code_220
 code_210:
@@ -194,7 +194,7 @@ code_386:
 		ldi	0x03
 code_388:
 		push	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sag	0xaa
 code_394:
 		push	
@@ -215,7 +215,7 @@ code_394:
 		push2	
 		pushi	0x012e
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x12
 		pushi	0x6b
 		push0	
@@ -226,7 +226,7 @@ code_394:
 		push2	
 		pushi	0x012e
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 		pushi	0x6b
 		push0	
@@ -237,14 +237,14 @@ code_394:
 		push2	
 		pushi	0x012e
 		pushi	0x04
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 		pushi	0x73
 		push1	
 		push2	
 		pushi	0x012e
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		lag	0x0a
 		send	0x06
@@ -267,14 +267,14 @@ code_500:
 		push2	
 		pushi	0x012c
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		push	
 		push2	
 		pushi	0x012c
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 		pushi	0x6b
 		push0	
@@ -284,16 +284,16 @@ code_500:
 		push2	
 		pushi	0x012c
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		push	
 		push0	
 		pushi	0x03
 		push2	
 		pushi	0x012c
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0e
 		pushi	0x2b
 		push1	
@@ -323,12 +323,12 @@ code_606:
 		push2	
 		pushi	0x012d
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		push2	
 		pushi	0x012d
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0a
 		pushi	0x6b
 		push0	
@@ -341,7 +341,7 @@ code_606:
 		push2	
 		pushi	0x012d
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0e
 		pushi	0x2b
 		push1	
@@ -482,7 +482,7 @@ code_918:
 		push2	
 		pushi	0x0084
 		pushi	0x0138
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x6b
 		push0	
 		pushi	0x011b
@@ -822,7 +822,7 @@ code_1514:
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 code_1537:
 		pushi	0x0177
@@ -1472,7 +1472,7 @@ slugScript::138:
 		push2	
 		pushi	0x0c
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_2956
 code_2770:
@@ -1483,7 +1483,7 @@ code_2770:
 		push2	
 		push0	
 		push2	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		bnt	code_2843
 		ldi	0xff
 		aTop	0x0a
@@ -1501,7 +1501,7 @@ code_2770:
 		push2	
 		pushi	0x03
 		pushi	0x06
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushi	0x07
 		push1	
@@ -1511,7 +1511,7 @@ code_2770:
 		push2	
 		pushi	0x0f
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_2956
 code_2843:
@@ -1624,7 +1624,7 @@ triScript::138:
 		push2	
 		pushi	0x1e
 		pushi	0x00b4
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_3197
 code_3051:
@@ -1635,7 +1635,7 @@ code_3051:
 		push2	
 		push0	
 		push1	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		bnt	code_3108
 		ldi	0xff
 		aTop	0x0a
@@ -1652,7 +1652,7 @@ code_3051:
 		push2	
 		push1	
 		pushi	0x03
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushSelf	
 		lofsa	triGirl
@@ -1692,7 +1692,7 @@ code_3153:
 		push2	
 		pushi	0x1e
 		pushi	0x5a
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_3197
 code_3173:
@@ -1754,7 +1754,7 @@ fenrisScript::138:
 		push2	
 		pushi	0x09
 		pushi	0x5a
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_3459
 code_3292:
@@ -1765,7 +1765,7 @@ code_3292:
 		push2	
 		push0	
 		push1	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		bnt	code_3346
 		ldi	0xff
 		aTop	0x0a
@@ -1784,7 +1784,7 @@ code_3292:
 		push2	
 		pushi	0x0f
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_3459
 code_3346:
@@ -1828,7 +1828,7 @@ code_3385:
 		push2	
 		push1	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushSelf	
 		lofsa	fenris
@@ -1934,7 +1934,7 @@ code_3561:
 		push2	
 		push0	
 		push2	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		push0	
 		push1	
@@ -1983,7 +1983,7 @@ code_3698:
 		push2	
 		pushi	0x0f
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_4769
 code_3711:
@@ -2725,7 +2725,7 @@ beerJumping::138:
 		push2	
 		push1	
 		pushi	0x03
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		ldi	0x01
 		sub	
@@ -2733,7 +2733,7 @@ beerJumping::138:
 		push2	
 		pushi	0x0c
 		pushi	0x5a
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_5403
 code_5129:
@@ -2842,7 +2842,7 @@ code_5281:
 		push2	
 		push2	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_5403
 code_5322:
@@ -3756,7 +3756,7 @@ code_7004:
 		push2	
 		pushi	0x012f
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x08
 		pushi	0x05
 		push1	
@@ -3782,7 +3782,7 @@ code_7004:
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x28
 		jmp	code_8005
 code_7071:
@@ -3801,7 +3801,7 @@ code_7071:
 		pushi	0x59
 		pushi	0x00ff
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		sal	0x01
 		pushi	0x09
 		pushi	0x04
@@ -3813,14 +3813,14 @@ code_7071:
 		push1	
 		push0	
 		push0	
-		callk	0x6c, 0x12
+		callk	Graph, 0x12
 		pushi	0x05
 		pushi	0x0d
 		pushi	0x14
 		pushi	0x3e
 		pushi	0x59
 		pushi	0x00ff
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 		jmp	code_7201
 code_7145:
 		pushi	0x06
@@ -3830,7 +3830,7 @@ code_7145:
 		pushi	0x59
 		pushi	0x00fa
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		sal	0x01
 		pushi	0x09
 		pushi	0x04
@@ -3842,14 +3842,14 @@ code_7145:
 		push1	
 		push0	
 		push0	
-		callk	0x6c, 0x12
+		callk	Graph, 0x12
 		pushi	0x05
 		pushi	0x0d
 		pushi	0x14
 		pushi	0x3e
 		pushi	0x59
 		pushi	0x00fa
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 code_7201:
 		pushi	0x2b
 		push1	
@@ -3895,7 +3895,7 @@ code_7247:
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x1a
 code_7282:
 		pushi	0x0094
@@ -3916,7 +3916,7 @@ code_7301:
 		push2	
 		pushi	0x08
 		lsl	0x01
-		callk	0x6c, 0x4
+		callk	Graph, 0x4
 		pTos	0x1a
 		lag	0x00
 		eq?	
@@ -3927,7 +3927,7 @@ code_7301:
 		pushi	0x3e
 		pushi	0x59
 		pushi	0x00ff
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 		jmp	code_7359
 code_7343:
 		pushi	0x05
@@ -3936,7 +3936,7 @@ code_7343:
 		pushi	0x3e
 		pushi	0x59
 		pushi	0x00fa
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 code_7359:
 		ldi	0x00
 		sal	0x01
@@ -4001,7 +4001,7 @@ code_7415:
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x14
 		jmp	code_8005
 code_7475:
@@ -4266,7 +4266,7 @@ code_7923:
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		lag	0xbc
 		not	
@@ -4284,11 +4284,11 @@ code_7968:
 		push2	
 		pushi	0x0080
 		pushi	0x01bc
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		push2	
 		pushi	0x0080
 		pushi	0x01bb
-		callk	0x1, 0x4
+		callk	UnLoad, 0x4
 		pushi	0x009a
 		push0	
 		lag	0x9a

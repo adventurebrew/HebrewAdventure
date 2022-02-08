@@ -73,13 +73,13 @@ FROR::60:
 		push2	
 		pTos	0x16
 		pTos	0x18
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x1a
 		push1	
 		push2	
 		push0	
 		push2	
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sub	
 		aTop	0x0c
 		pToa	0x0c
@@ -90,7 +90,7 @@ FROR::60:
 		push2	
 		pTos	0x12
 		pTos	0x14
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pToa	0x08
 		send	0x06

@@ -173,7 +173,7 @@ addToPics::60:
 		self	0x08
 		push1	
 		pTos	0x08
-		callk	0x12, 0x2
+		callk	AddToPic, 0x2
 		ret	
 
 
@@ -236,7 +236,7 @@ aTOC::60:
 		push	
 		push2	
 		push0	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		push	
 		ldi	0x02
 		div	
@@ -270,9 +270,9 @@ aTOC::60:
 		lap	0x01
 		send	0x04
 		push	
-		callk	0x61, 0x2
+		callk	CoordPri, 0x2
 		push	
-		callk	0x61, 0x4
+		callk	CoordPri, 0x4
 		push	
 		lat	0x01
 		sub	
@@ -293,9 +293,9 @@ aTOC::60:
 		lap	0x01
 		send	0x04
 		push	
-		callk	0x61, 0x2
+		callk	CoordPri, 0x2
 		push	
-		callk	0x61, 0x4
+		callk	CoordPri, 0x4
 		push	
 		lat	0x01
 		sub	
@@ -362,15 +362,15 @@ Game::42:
 		selfID	
 		sag	0x01
 		push0	
-		callk	0x64, 0x0
+		callk	GetSaveDir, 0x0
 		sag	0x1d
 		push0	
-		callk	0x2c, 0x0
+		callk	GameIsRestarting, 0x0
 		not	
 		bnt	code_727
 		push1	
 		lsg	0x1d
-		callk	0x5e, 0x2
+		callk	GetCWD, 0x2
 code_727:
 		pushi	0x00b9
 		push2	
@@ -382,7 +382,7 @@ code_727:
 		push2	
 		lsg	0x14
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		push	
 		self	0x14
 code_750:
@@ -414,12 +414,12 @@ Game::381:
 		push2	
 		push0	
 		lsp	0x01
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 		jmp	code_801
 code_796:
 		push1	
 		push0	
-		callk	0x2d, 0x2
+		callk	DoSound, 0x2
 code_801:
 		ret	
 
@@ -476,7 +476,7 @@ code_851:
 		pushi	0x64
 		push1	
 		lsg	0x28
-		callk	0x8, 0x8
+		callk	DrawPic, 0x8
 		lsg	0x24
 		ldi	0xff
 		ne?	
@@ -486,7 +486,7 @@ code_851:
 		pushi	0x64
 		push0	
 		lsg	0x28
-		callk	0x8, 0x8
+		callk	DrawPic, 0x8
 code_914:
 		pushi	0x0139
 		push0	
@@ -526,7 +526,7 @@ code_979:
 code_981:
 		push	
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		push	
 		lag	0x01
 		send	0x08
@@ -536,7 +536,7 @@ code_981:
 		send	0x04
 		push1	
 		push2	
-		callk	0x2d, 0x2
+		callk	DoSound, 0x2
 		pushi	0x009b
 		push1	
 		push0	
@@ -544,7 +544,7 @@ code_981:
 		send	0x06
 		lsg	0x58
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		sub	
 		sag	0x56
 code_1021:
@@ -563,7 +563,7 @@ Game::107:
 		class	0x0a
 		push1	
 		pushi	0x03a4
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		pushi	0x73
 		push0	
 		lofsa	cast
@@ -612,7 +612,7 @@ Game::107:
 		ldi	0x00
 		sag	0x54
 		push0	
-		callk	0x64, 0x0
+		callk	GetSaveDir, 0x0
 		sag	0x1d
 		pushi	0x6b
 		push0	
@@ -636,7 +636,7 @@ Game::60:
 		link	0x01
 		lsg	0x56
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		add	
 		sag	0x58
 		lag	0x54
@@ -695,7 +695,7 @@ code_1279:
 		send	0x04
 		push	
 		push1	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		lag	0x25
 		bnt	code_1311
 		ldi	0x00
@@ -746,7 +746,7 @@ code_1368:
 		send	0x06
 		push1	
 		push0	
-		callk	0x2c, 0x2
+		callk	GameIsRestarting, 0x2
 code_1382:
 		ret	
 
@@ -803,7 +803,7 @@ Game::375:
 		send	0x04
 		push1	
 		push0	
-		callk	0xb, 0x2
+		callk	Animate, 0x2
 		lag	0x0b
 		sag	0x0c
 		lap	0x01
@@ -812,7 +812,7 @@ Game::375:
 		sag	0x0d
 		push1	
 		lsp	0x01
-		callk	0x67, 0x2
+		callk	FlushResources, 0x2
 		pushi	0x0178
 		push1	
 		lsg	0x0b
@@ -821,7 +821,7 @@ Game::375:
 		self	0x0a
 		push1	
 		lsg	0x06
-		callk	0x26, 0x2
+		callk	SetSynonyms, 0x2
 code_1512:
 		pushi	0x22
 		push0	
@@ -854,10 +854,10 @@ Game::379:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		push1	
 		push0	
-		callk	0x41, 0x2
+		callk	Wait, 0x2
 		push2	
 		pushi	0x1b
 		push0	
@@ -865,11 +865,11 @@ Game::379:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 code_1582:
 		push1	
 		push0	
-		callk	0x41, 0x2
+		callk	Wait, 0x2
 		push	
 		lag	0x1e
 		gt?	
@@ -895,7 +895,7 @@ code_1582:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		pushi	0x74
 		push1	
 		pushi	0x54
@@ -909,13 +909,13 @@ Game::376:
 		lag	0x0e
 		bnt	code_1656
 		push0	
-		callk	0x53, 0x0
+		callk	SetDebug, 0x0
 code_1656:
 		pushi	0x7d
 		push1	
 		push1	
 		lsp	0x01
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		sag	0x02
 		push	
 		lag	0x06
@@ -982,7 +982,7 @@ Game::104:
 		send	0x04
 code_1769:
 		push0	
-		callk	0x2b, 0x0
+		callk	RestartGame, 0x0
 		ret	
 
 Game::78:
@@ -994,14 +994,14 @@ Game::78:
 		push2	
 		pushi	0x0087
 		lsg	0x17
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push2	
 		pushi	0x0088
 		lsg	0x15
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push1	
 		pushi	0x03de
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		pushi	0x00b9
 		push1	
 		lsg	0x14
@@ -1047,7 +1047,7 @@ code_1847:
 		lea	0x04, 0x00
 		push	
 		lsg	0x1b
-		callk	0x29, 0x8
+		callk	SaveGame, 0x8
 		not	
 		bnt	code_1921
 		pushi	0x07
@@ -1065,7 +1065,7 @@ code_1921:
 		push2	
 		lst	0x15
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		push	
 		self	0x08
 code_1934:
@@ -1091,14 +1091,14 @@ Game::79:
 		push2	
 		pushi	0x0087
 		lsg	0x17
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push2	
 		pushi	0x0088
 		lsg	0x15
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push1	
 		pushi	0x03de
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		pushi	0x00b9
 		push1	
 		lsg	0x14
@@ -1138,13 +1138,13 @@ code_2027:
 		pTos	0x06
 		lst	0x14
 		lsg	0x1b
-		callk	0x65, 0x6
+		callk	CheckSaveGame, 0x6
 		bnt	code_2082
 		pushi	0x03
 		pTos	0x06
 		lst	0x14
 		lsg	0x1b
-		callk	0x2a, 0x6
+		callk	RestoreGame, 0x6
 		jmp	code_2126
 code_2082:
 		pushi	0x07
@@ -1161,7 +1161,7 @@ code_2082:
 		push2	
 		lst	0x15
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		push	
 		self	0x08
 		lat	0x16
@@ -1200,7 +1200,7 @@ Game::185:
 		push1	
 		lsp	0x01
 		rest	0x02
-		callk	0x28, 0x2
+		callk	SetCursor, 0x2
 		lat	0x00
 		ret	
 
@@ -1210,22 +1210,22 @@ Game::377:
 		push	
 		push1	
 		push1	
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		push	
 		push1	
 		push0	
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		push	
 		push1	
 		pushi	0x03
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		push	
 		ldi	0x06
 		shr	
 		push	
 		push1	
 		push2	
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		push	
 		calle	0xff, 0x04, 0x0a
 		ret	
@@ -1435,7 +1435,7 @@ Rgn::108:
 		send	0x06
 		push1	
 		pTos	0x08
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2628
 		pushi	0x6c
 		push0	
@@ -1444,7 +1444,7 @@ Rgn::108:
 code_2628:
 		push1	
 		pTos	0x0c
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2644
 		pushi	0x6c
 		push0	
@@ -1459,13 +1459,13 @@ code_2644:
 		send	0x08
 		push1	
 		pTos	0x0a
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 Rgn::140:
 		push1	
 		pTos	0x08
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_2678
 		pushi	0x6c
 		push0	
@@ -1767,7 +1767,7 @@ code_3181:
 		sat	0x01
 		push1	
 		push	
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		sat	0x02
 		pushi	0x2b
 		push1	
@@ -1811,7 +1811,7 @@ code_3249:
 		push	
 		push1	
 		push	
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		sat	0x02
 		send	0x06
 		pushi	0x73
@@ -1851,7 +1851,7 @@ code_3328:
 Rm::372:
 		push1	
 		pTos	0x2c
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_3348
 		pushi	0x6a
@@ -1924,7 +1924,7 @@ code_3449:
 		push	
 		push1	
 		lsg	0x28
-		callk	0x8, 0x8
+		callk	DrawPic, 0x8
 		ret	
 
 Rm::395:
@@ -1951,7 +1951,7 @@ code_3493:
 		push	
 		push0	
 		lsg	0x28
-		callk	0x8, 0x8
+		callk	DrawPic, 0x8
 		ret	
 
 		bnot	
@@ -2014,7 +2014,7 @@ Locale::108:
 		send	0x06
 		push1	
 		pTos	0x08
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 		bnot	
@@ -2046,7 +2046,7 @@ code_3762:
 		ldi	0x52
 code_3764:
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 		sat	0x00
 		pushi	0x3c
 		push1	
@@ -2062,11 +2062,11 @@ code_3789:
 		ldi	0x00
 code_3791:
 		push	
-		callk	0x23, 0x2
+		callk	DrawStatus, 0x2
 		push2	
 		pushi	0x03
 		lst	0x00
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_3803:
 		ret	
 
@@ -2114,7 +2114,7 @@ code_3895:
 		ldi	0x50
 code_3897:
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 		sat	0x51
 		ldi	0x01
 		sat	0x00
@@ -2123,17 +2123,17 @@ code_3897:
 		lsg	0x1d
 		lea	0x04, 0x01
 		push	
-		callk	0x63, 0x6
+		callk	DeviceInfo, 0x6
 		push2	
 		push1	
 		lea	0x04, 0x29
 		push	
-		callk	0x63, 0x4
+		callk	DeviceInfo, 0x4
 		push2	
 		pushi	0x03
 		lea	0x04, 0x29
 		push	
-		callk	0x63, 0x4
+		callk	DeviceInfo, 0x4
 		bnt	code_4100
 		pushi	0x03
 		push2	
@@ -2141,7 +2141,7 @@ code_3897:
 		push	
 		lea	0x04, 0x29
 		push	
-		callk	0x63, 0x6
+		callk	DeviceInfo, 0x6
 		bt	code_3973
 		push2	
 		pushi	0x06
@@ -2150,7 +2150,7 @@ code_3897:
 		lag	0x01
 		send	0x04
 		push	
-		callk	0x63, 0x4
+		callk	DeviceInfo, 0x4
 		not	
 code_3973:
 		bnt	code_4100
@@ -2168,14 +2168,14 @@ code_3999:
 		push	
 		lea	0x04, 0x01
 		push	
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		push2	
 		pushi	0x0087
 		lsg	0x16
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push1	
 		pushi	0x04
-		callk	0x63, 0x2
+		callk	DeviceInfo, 0x2
 		lap	0x01
 		bnt	code_4062
 		pushi	0x0c
@@ -2220,7 +2220,7 @@ code_4100:
 		push2	
 		pushi	0x03
 		lst	0x51
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 		lat	0x00
 		ret	
 

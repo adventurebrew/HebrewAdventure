@@ -31,6 +31,7 @@ def strings_import(csvdir):
     modified_asm_path = Path(csvdir) / 'asm' / 'modified'
     shutil.rmtree(modified_asm_path, ignore_errors=True)
     modified_asm_path.mkdir()
+    shutil.copyfile(orig_asm_path / 'kernels.csv', modified_asm_path / 'kernels.csv')
 
     with open(os.path.join(csvdir, config.scripts_strings_csv_filename), newline='', encoding='utf-8') as csvfile:
         texts = [{k: v for k, v in row.items()}

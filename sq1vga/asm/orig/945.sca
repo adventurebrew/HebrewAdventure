@@ -22,7 +22,7 @@ PolyPath::107:
 code_36:
 		push1	
 		pTos	0x2e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_56
 		pushi	0x00e8
@@ -36,7 +36,7 @@ code_56:
 		push2	
 		pushi	0x03
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_68:
 		pushi	0x07
 		pushi	0x04
@@ -79,7 +79,7 @@ code_131:
 		ldi	0x01
 code_133:
 		push	
-		callk	0x77, 0xe
+		callk	AvoidPath, 0xe
 		aTop	0x28
 		lsp	0x00
 		ldi	0x03
@@ -102,7 +102,7 @@ PolyPath::108:
 		push2	
 		pushi	0x03
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_176:
 		ldi	0x00
 		aTop	0x28

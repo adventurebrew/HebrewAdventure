@@ -12,7 +12,7 @@ prepareToDie::107:
 		push2	
 		pushi	0x07
 		pushi	0x0e
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x1a
 		pushi	0x6b
 		push0	
@@ -31,7 +31,7 @@ prepareToDie::138:
 		push2	
 		pushi	0x1e
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_446
 code_66:
@@ -111,12 +111,12 @@ code_180:
 		push2	
 		pushi	0x2b
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		push2	
 		pushi	0x0f
 		pushi	0x3c
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_446
 code_216:
@@ -130,7 +130,7 @@ code_216:
 		push2	
 		pushi	0x2b
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x06
 		pushi	0x00a0
 		push1	
@@ -199,13 +199,13 @@ code_337:
 		push2	
 		pushi	0x2b
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		pushSelf	
 		push2	
 		pushi	0x012f
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x0a
 		jmp	code_446
@@ -448,10 +448,10 @@ slotGuy::108:
 		self	0x04
 		push1	
 		pushi	0x01bb
-		callk	0x1, 0x2
+		callk	UnLoad, 0x2
 		push1	
 		pushi	0x012f
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 

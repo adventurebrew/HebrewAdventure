@@ -271,12 +271,12 @@ rm48::60:
 		push2	
 		push0	
 		pushi	0x1e
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		ldi	0x0f
 		sub	
 		push	
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 		jmp	code_592
 code_503:
 		dup	
@@ -288,7 +288,7 @@ code_503:
 		pushi	0x40
 		pushi	0x49
 		pushi	0x08
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 		jmp	code_592
 code_526:
 		dup	
@@ -300,7 +300,7 @@ code_526:
 		pushi	0x40
 		pushi	0x49
 		pushi	0x03
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 		jmp	code_592
 code_549:
 		dup	
@@ -312,7 +312,7 @@ code_549:
 		pushi	0x40
 		pushi	0x49
 		pushi	0xfd
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 		jmp	code_592
 code_572:
 		dup	
@@ -324,7 +324,7 @@ code_572:
 		pushi	0x40
 		pushi	0x49
 		pushi	0xf8
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 code_592:
 		toss	
 		jmp	code_615
@@ -332,12 +332,12 @@ code_596:
 		push2	
 		pushi	0x14
 		pushi	0x32
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sal	0x10
 		push2	
 		push0	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sal	0x11
 code_615:
 		pushi	0x3c
@@ -606,7 +606,7 @@ code_1074:
 		push1	
 		lal	0x0f
 		lsli	0x05
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		push	
 		ldi	0x0a
 		div	
@@ -1460,7 +1460,7 @@ wiggleAntenna::138:
 		push2	
 		push1	
 		pushi	0x03
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		pushSelf	
 		pToa	0x08
@@ -1474,7 +1474,7 @@ code_2818:
 		push2	
 		pushi	0x0a
 		pushi	0x18
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x10
 		jmp	code_2850
 code_2838:

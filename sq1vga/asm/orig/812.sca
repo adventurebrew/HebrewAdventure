@@ -142,7 +142,7 @@ code_215:
 		send	0x04
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		push	
 		ldi	0x02
 		div	
@@ -174,7 +174,7 @@ code_215:
 		send	0x04
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		sat	0x01
 		pushi	0x0144
@@ -463,7 +463,7 @@ code_847:
 		lag	0x00
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x00
 		push1	
 		pushi	0x021c
@@ -471,7 +471,7 @@ code_847:
 		lag	0x00
 		send	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_963
 		lst	0x00
 		pushi	0x03
@@ -499,7 +499,7 @@ code_847:
 		send	0x04
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x03
 		add	
@@ -778,7 +778,7 @@ eRS::138:
 		lag	0x00
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x00
 		ldi	0x19
 		sat	0x01

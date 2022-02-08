@@ -14,7 +14,7 @@ PChase::107:
 code_19:
 		push1	
 		pTos	0x2e
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_39
 		pushi	0x00e8
@@ -84,7 +84,7 @@ PChase::60:
 		pToa	0x30
 		send	0x04
 		push	
-		callk	0x40, 0x8
+		callk	GetDistance, 0x8
 		push	
 		pToa	0x32
 		gt?	
@@ -94,7 +94,7 @@ PChase::60:
 		push2	
 		pushi	0x03
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_170:
 		ldi	0x00
 		aTop	0x28
@@ -162,7 +162,7 @@ code_263:
 		push2	
 		pushi	0x03
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_294:
 		ldi	0x00
 		aTop	0x28
@@ -290,7 +290,7 @@ PFollow::60:
 		pToa	0x30
 		send	0x04
 		push	
-		callk	0x40, 0x8
+		callk	GetDistance, 0x8
 		push	
 		pToa	0x32
 		gt?	
@@ -300,7 +300,7 @@ PFollow::60:
 		push2	
 		pushi	0x03
 		push	
-		callk	0x72, 0x4
+		callk	Memory, 0x4
 code_609:
 		ldi	0x00
 		aTop	0x28
@@ -346,7 +346,7 @@ code_629:
 		pToa	0x30
 		send	0x04
 		push	
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		push	
 		pToa	0x08
 		send	0x06

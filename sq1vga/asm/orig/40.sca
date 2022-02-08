@@ -92,7 +92,7 @@ rm40::107:
 		push2	
 		pushi	0x0084
 		pushi	0x025b
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		push1	
 		pushi	0x12
 		callb	0x6, 0x2
@@ -2020,7 +2020,7 @@ code_3822:
 		pushi	0x28
 		pushi	0x18
 		pushi	0x63
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		push	
 		push0	
 		push0	

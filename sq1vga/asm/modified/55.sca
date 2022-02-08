@@ -1079,7 +1079,7 @@ randomRatLow::138:
 		push2	
 		pushi	0x0a
 		pushi	0x14
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_2233
 code_2042:
@@ -1233,7 +1233,7 @@ randomRatHi::138:
 		push2	
 		pushi	0x0a
 		pushi	0x14
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		aTop	0x12
 		jmp	code_2520
 code_2330:

@@ -20,13 +20,13 @@ MoveToY::107:
 		lap	0x02
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		sat	0x01
 		push	
 		ldi	0x64
 		mul	
 		push	
-		callk	0x68, 0x4
+		callk	SinMult, 0x4
 		push	
 		push1	
 		push2	
@@ -36,10 +36,10 @@ MoveToY::107:
 		send	0x04
 		push	
 		pushi	0x64
-		callk	0x69, 0x4
+		callk	CosMult, 0x4
 		neg	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		bt	code_67
 		ldi	0x01
 code_67:
@@ -55,7 +55,7 @@ code_67:
 code_84:
 		push1	
 		lst	0x00
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		lat	0x01
 		gt?	
@@ -135,13 +135,13 @@ MoveToX::107:
 		lap	0x02
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		sat	0x00
 		push	
 		ldi	0x64
 		mul	
 		push	
-		callk	0x69, 0x4
+		callk	CosMult, 0x4
 		neg	
 		push	
 		push2	
@@ -151,7 +151,7 @@ MoveToX::107:
 		send	0x04
 		push	
 		pushi	0x64
-		callk	0x68, 0x4
+		callk	SinMult, 0x4
 		bt	code_304
 		ldi	0x01
 code_304:
@@ -167,7 +167,7 @@ code_304:
 code_321:
 		push1	
 		lst	0x01
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		lat	0x00
 		gt?	

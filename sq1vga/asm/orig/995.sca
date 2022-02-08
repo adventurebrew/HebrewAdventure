@@ -75,7 +75,7 @@ code_74:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x00
@@ -85,7 +85,7 @@ code_74:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x02
@@ -95,7 +95,7 @@ code_74:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x02
@@ -105,7 +105,7 @@ code_74:
 		lst	0x04
 		pushi	0xff
 		dup	
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x06
 		pushi	0x0c
 		pTos	0x10
@@ -125,7 +125,7 @@ code_74:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		ret	
 
 InvI::192:
@@ -137,7 +137,7 @@ InvI::192:
 		pTos	0x0e
 		pTos	0x10
 		pushi	0xff
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		ret	
 
 InvI::327:
@@ -228,7 +228,7 @@ code_451:
 		push	
 		push1	
 		lst	0x08
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x09
 		send	0x06
 		bnt	code_618
@@ -267,7 +267,7 @@ code_451:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sat	0x06
 		push	
 		lat	0x02
@@ -292,7 +292,7 @@ code_551:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x07
 		push	
 		lat	0x01
@@ -334,7 +334,7 @@ code_618:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		sat	0x05
 		pushi	0x03
@@ -353,7 +353,7 @@ code_618:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x07
 		push	
 		lat	0x04
@@ -384,7 +384,7 @@ code_710:
 code_731:
 		push1	
 		lst	0x00
-		callk	0x3e, 0x2
+		callk	Sqrt, 0x2
 		sat	0x10
 		push	
 		mul	
@@ -535,7 +535,7 @@ code_989:
 		push0	
 		push1	
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x09
 		send	0x04
 		push	
@@ -579,7 +579,7 @@ code_989:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sat	0x06
 		sub	
 		push	
@@ -607,7 +607,7 @@ code_989:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x07
 		sub	
 		push	
@@ -751,7 +751,7 @@ code_1353:
 		push	
 		push1	
 		lst	0x08
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x09
 		send	0x06
 		not	
@@ -772,7 +772,7 @@ code_1353:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sat	0x06
 		pushi	0x03
 		pushi	0x05
@@ -790,7 +790,7 @@ code_1353:
 		lat	0x09
 		send	0x04
 		push	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		sat	0x07
 		pushi	0x11
 		push0	
@@ -937,7 +937,7 @@ code_1665:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		aTop	0x36
 code_1683:
 		ldi	0x00
@@ -1027,7 +1027,7 @@ code_1816:
 		sat	0x00
 		push1	
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_1842
 		push1	
@@ -1035,7 +1035,7 @@ code_1816:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x00
 code_1842:
 		pushi	0x11
@@ -1120,7 +1120,7 @@ code_1963:
 		sat	0x00
 		push1	
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_1993
 		push1	
@@ -1128,7 +1128,7 @@ code_1963:
 		push0	
 		self	0x04
 		push	
-		callk	0x36, 0x2
+		callk	NodeValue, 0x2
 		sat	0x00
 code_1993:
 		pushi	0x11
@@ -1307,7 +1307,7 @@ code_2268:
 code_2292:
 		push1	
 		lst	0x01
-		callk	0x1f, 0x2
+		callk	MapKeyToDir, 0x2
 		pushi	0x22
 		push0	
 		lat	0x01
@@ -1377,7 +1377,7 @@ code_2418:
 		bnt	code_2548
 		push1	
 		pTos	0x16
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3055
 		pushi	0x00a6
 		push2	
@@ -1760,7 +1760,7 @@ code_3102:
 code_3112:
 		push1	
 		pTos	0x14
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_3229
 		pushi	0x6f
 		push1	

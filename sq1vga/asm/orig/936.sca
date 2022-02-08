@@ -7,7 +7,7 @@ BorderWindow::179:
 		link	0x02
 		push1	
 		push0	
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		ldi	0x01
 		sat	0x01
 		pTos	0x14
@@ -51,7 +51,7 @@ code_30:
 		pTos	0x38
 		pTos	0x3a
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		aTop	0x24
 		pTos	0x14
 		ldi	0xff
@@ -64,7 +64,7 @@ code_30:
 		pTos	0x38
 		pTos	0x3a
 		push2	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		aTop	0x26
 code_116:
 		pushi	0x0d
@@ -89,7 +89,7 @@ code_116:
 		pTos	0x38
 		pTos	0x3a
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		ldi	0x0081
 		aTop	0x18
 		pushi	0x00b3
@@ -100,15 +100,15 @@ code_116:
 BorderWindow::108:
 		push1	
 		push0	
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		push2	
 		pushi	0x08
 		pTos	0x24
-		callk	0x6c, 0x4
+		callk	Graph, 0x4
 		push2	
 		pushi	0x08
 		pTos	0x26
-		callk	0x6c, 0x4
+		callk	Graph, 0x4
 		pToa	0x3c
 		bnt	code_222
 		pushi	0x06
@@ -118,7 +118,7 @@ BorderWindow::108:
 		pTos	0x38
 		pTos	0x3a
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		jmp	code_237
 code_222:
 		pushi	0x05
@@ -127,20 +127,20 @@ code_222:
 		pTos	0x36
 		pTos	0x38
 		pTos	0x3a
-		callk	0x6c, 0xa
+		callk	Graph, 0xa
 code_237:
 		pToa	0x16
 		bnt	code_253
 		push2	
 		push	
 		pTos	0x3c
-		callk	0x16, 0x4
+		callk	DisposeWindow, 0x4
 		ldi	0x00
 		aTop	0x16
 code_253:
 		push1	
 		pushSelf	
-		callk	0x5, 0x2
+		callk	DisposeClone, 0x2
 		ret	
 
 		bnot	
@@ -256,11 +256,11 @@ code_433:
 		lst	0x00
 		call	code_792, 26
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x01
 		push1	
 		push0	
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		pushi	0x06
 		pushi	0x0c
 		lst	0x02
@@ -280,10 +280,10 @@ code_433:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		push1	
 		lst	0x01
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		ret	
 
 
@@ -341,11 +341,11 @@ Overriden functions: 1
 code_792:
 		link	0x02
 		push0	
-		callk	0x14, 0x0
+		callk	GetPort, 0x0
 		sat	0x00
 		push1	
 		push0	
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		pushi	0x08
 		pushi	0x0b
 		lsp	0x01
@@ -361,7 +361,7 @@ code_792:
 		lsp	0x0d
 		lsp	0x05
 		lsp	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		lsp	0x01
 		lap	0x0a
 		sub	
@@ -390,7 +390,7 @@ code_792:
 		lsp	0x0d
 		lsp	0x06
 		lsp	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x0b
 		lsp	0x03
@@ -403,7 +403,7 @@ code_792:
 		lsp	0x0d
 		lsp	0x08
 		lsp	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		ldi	0x00
 		sat	0x01
 code_916:
@@ -434,7 +434,7 @@ code_916:
 		lsp	0x07
 		lsp	0x0c
 		pushi	0xff
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lsp	0x01
@@ -462,7 +462,7 @@ code_916:
 		lsp	0x09
 		lsp	0x0c
 		pushi	0xff
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		+at	0x01
 		jmp	code_916
 code_1015:
@@ -485,7 +485,7 @@ code_1015:
 		lsp	0x0d
 		push0	
 		lsp	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x0b
 		lsp	0x03
@@ -501,11 +501,11 @@ code_1015:
 		lsp	0x0d
 		push0	
 		lsp	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 code_1078:
 		push1	
 		lst	0x00
-		callk	0x15, 0x2
+		callk	SetPort, 0x2
 		ret	
 
 code_1085:

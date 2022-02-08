@@ -144,7 +144,7 @@ code_80:
 		push0	
 		lsg	0xaf
 		lsg	0xa5
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		push	
 		call	code_5000, 2
 		jmp	code_300
@@ -636,7 +636,7 @@ code_1159:
 		push0	
 		lsg	0xaf
 		lsg	0xa5
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		push	
 		call	code_5000, 2
 		jmp	code_1221
@@ -857,7 +857,7 @@ code_1590:
 		push2	
 		push0	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		bnt	code_1631
 		pushi	0x2b
 		push1	
@@ -1009,7 +1009,7 @@ code_1866:
 		push2	
 		push0	
 		pushi	0x06
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		dup	
 		ldi	0x00
@@ -1172,7 +1172,7 @@ code_2148:
 		mul	
 		push	
 		lsg	0xa5
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		push	
 		call	code_5000, 2
 		lsg	0xa5
@@ -1924,7 +1924,7 @@ code_3642:
 		push0	
 		lsg	0xaf
 		lsg	0xa5
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		push	
 		call	code_5000, 2
 		jmp	code_3752
@@ -2054,7 +2054,7 @@ code_3896:
 		push2	
 		push2	
 		pushi	0x04
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sal	0x02
 		push	
 		dup	
@@ -2091,7 +2091,7 @@ code_3967:
 		push2	
 		push0	
 		pushi	0x06
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		not	
 		bnt	code_3985
 		ldi	0x01
@@ -2149,7 +2149,7 @@ code_3989:
 		push1	
 		lofsa	spinPic
 		push	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		push	
 		lofsa	pic1
 		push	
@@ -2165,7 +2165,7 @@ code_3989:
 		push1	
 		lofsa	spinPic
 		push	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		push	
 		lofsa	pic2
 		push	
@@ -2181,7 +2181,7 @@ code_3989:
 		push1	
 		lofsa	spinPic
 		push	
-		callk	0x4, 0x2
+		callk	Clone, 0x2
 		push	
 		lofsa	pic3
 		push	
@@ -2535,7 +2535,7 @@ code_4819:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		push2	
 		pushi	0x1b
 		push0	
@@ -2543,7 +2543,7 @@ code_4819:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		push2	
 		pushi	0x1b
 		push0	
@@ -2551,7 +2551,7 @@ code_4819:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		pushi	0x0177
 		push1	
 		pushi	0x2b
@@ -2637,7 +2637,7 @@ code_5010:
 		pushi	0x66
 		lsg	0x81
 		pushi	0x6b
-		callk	0x1b, 0x14
+		callk	Display, 0x14
 		sal	0x01
 		ret	
 
@@ -2647,7 +2647,7 @@ code_5040:
 		pushi	0x14
 		pushi	0x6c
 		lsl	0x01
-		callk	0x1b, 0x8
+		callk	Display, 0x8
 		ldi	0x00
 		sal	0x01
 		ret	

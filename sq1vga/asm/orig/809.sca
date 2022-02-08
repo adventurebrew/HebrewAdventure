@@ -420,12 +420,12 @@ code_755:
 		push	
 		pTos	0x0c
 		pTos	0x0e
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		ne?	
 		bnt	code_796
 		push1	
 		pushSelf	
-		callk	0x4f, 0x2
+		callk	InitBresen, 0x2
 code_796:
 		pushi	0x3c
 		push0	

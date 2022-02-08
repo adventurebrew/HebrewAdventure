@@ -106,7 +106,7 @@ code_195:
 		push2	
 		pushi	0x02c0
 		pushi	0x04
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		lag	0x02
 		send	0x06
@@ -161,7 +161,7 @@ code_335:
 		push2	
 		push1	
 		pushi	0x05
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		push	
 		dup	
 		ldi	0x01
@@ -432,7 +432,7 @@ soundEffects::162:
 		push2	
 		pushi	0x11
 		pushSelf	
-		callk	0x2d, 0x4
+		callk	DoSound, 0x4
 		pToa	0x16
 		bnt	code_955
 		aTop	0x18
@@ -459,12 +459,12 @@ soundEffects::162:
 		pushi	0x08
 		pushSelf	
 		push0	
-		callk	0x2d, 0x6
+		callk	DoSound, 0x6
 		jmp	code_955
 code_937:
 		push1	
 		pTos	0x22
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_955
 		pushi	0x008b
 		push1	
@@ -532,7 +532,7 @@ stopGroop::60:
 		lag	0x00
 		send	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1129
 		pushi	0x6f
 		push1	
@@ -665,7 +665,7 @@ sq1::107:
 		push2	
 		push1	
 		pushi	0x14
-		callk	0x3c, 0x4
+		callk	Random, 0x4
 		sag	0xba
 		ldi	0x01
 		sag	0x22
@@ -682,7 +682,7 @@ sq1::107:
 		class	0x40
 		push1	
 		pushi	0x03d6
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		class	0x5e
 		pushi	0x6b
 		push0	
@@ -693,7 +693,7 @@ sq1::107:
 		push	
 		lofsa	string_15		; ""
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		lofsa	sq1DoVerbCode
 		sag	0x41
 		lofsa	sq1FtrInit
@@ -789,11 +789,11 @@ sq1::107:
 		sag	0x16
 		push1	
 		pushi	0x03
-		callk	0x2d, 0x2
+		callk	DoSound, 0x2
 		sag	0x6a
 		push1	
 		push2	
-		callk	0x6c, 0x2
+		callk	Graph, 0x2
 		sag	0x69
 		pushi	0x1c
 		push1	
@@ -992,7 +992,7 @@ sq1::107:
 		pushi	0x28
 		push1	
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		bnt	code_2021
 		ldi	0x0f00
 		jmp	code_2023
@@ -1219,7 +1219,7 @@ code_2286:
 		push2	
 		pushi	0x032b
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		pushi	0x01ee
 		push1	
@@ -1259,7 +1259,7 @@ code_2286:
 		lofsa	buckazoid
 		send	0x06
 		push0	
-		callk	0x2c, 0x0
+		callk	GameIsRestarting, 0x0
 		bnt	code_2520
 		ldi	0x04
 		jmp	code_2522
@@ -1300,7 +1300,7 @@ sq1::65:
 		push0	
 		pushi	0x00ff
 		pushi	0x64
-		callk	0x6f, 0x8
+		callk	Palette, 0x8
 		pushi	0x41
 		push0	
 		super	0x41, 0x4
@@ -1402,7 +1402,7 @@ code_2733:
 		lsp	0x01
 		push1	
 		pushi	0x0321
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		send	0x06
 		lag	0xbb
 		bnt	code_2819
@@ -1410,14 +1410,14 @@ code_2733:
 		bnt	code_2819
 		push1	
 		push1	
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		push	
 		ldi	0x02
 		sub	
 		push	
 		push1	
 		push0	
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		ne?	
 		bnt	code_2819
 		pushi	0x08
@@ -1434,7 +1434,7 @@ code_2733:
 		calle	0xff, 0x00, 0x10
 		bnt	code_2819
 		push0	
-		callk	0x53, 0x0
+		callk	SetDebug, 0x0
 code_2819:
 		pushi	0x6b
 		push0	
@@ -1452,7 +1452,7 @@ code_2819:
 		lag	0x0e
 		bnt	code_2854
 		push0	
-		callk	0x53, 0x0
+		callk	SetDebug, 0x0
 code_2854:
 		pushi	0x0d
 		lsp	0x01
@@ -1473,7 +1473,7 @@ code_2854:
 		class	0x73
 		push1	
 		pushi	0x02bc
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		jmp	code_3008
 code_2903:
 		pushi	0x0c
@@ -1493,7 +1493,7 @@ code_2903:
 		bnt	code_2948
 		push1	
 		pushi	0x02c0
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		jmp	code_3008
 code_2948:
 		pushi	0x0e
@@ -1517,7 +1517,7 @@ code_2948:
 		class	0x70
 		push1	
 		pushi	0x02bf
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		ldi	0x02bf
 		sag	0x66
 		jmp	code_3008
@@ -1559,7 +1559,7 @@ code_3057:
 		push0	
 		push1	
 		pushi	0x0320
-		callk	0x2, 0x2
+		callk	ScriptID, 0x2
 		send	0x04
 code_3090:
 		pushi	0x0178
@@ -3317,7 +3317,7 @@ code_6576:
 		lag	0x45
 		send	0x06
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		not	
 		bnt	code_6702
 		pushi	0x04
@@ -3412,7 +3412,7 @@ code_6725:
 		send	0x06
 code_6812:
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		not	
 		bnt	code_6851
 		pushi	0x00b9
@@ -3451,7 +3451,7 @@ code_6873:
 code_6874:
 		push1	
 		push1	
-		callk	0x58, 0x2
+		callk	MemoryInfo, 0x2
 		push	
 		lap	0x01
 		ugt?	
@@ -3587,7 +3587,7 @@ code_7047:
 		lea	0x04, 0x03
 		push	
 		rest	0x04
-		callk	0x48, 0x2
+		callk	Format, 0x2
 		jmp	code_7115
 code_7090:
 		ldi	0x03b0
@@ -3601,7 +3601,7 @@ code_7090:
 		push	
 		push0	
 		pushi	0x1c
-		callk	0x48, 0x6
+		callk	Format, 0x6
 code_7115:
 		pushi	0x2b
 		push1	
@@ -3717,9 +3717,9 @@ code_7287:
 		pushi	0x6c
 		ldi	0x00
 		lspi	0x01
-		callk	0x1b, 0x8
+		callk	Display, 0x8
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		not	
 		bnt	code_7583
 		pushi	0x00b9
@@ -3819,7 +3819,7 @@ code_7485:
 		jmp	code_7368
 code_7491:
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		not	
 		bnt	code_7514
 		lag	0x13
@@ -3846,7 +3846,7 @@ code_7514:
 		pushi	0x69
 		lst	0x02
 		pushi	0x6b
-		callk	0x1b, 0x1a
+		callk	Display, 0x1a
 		sat	0x08
 		pushi	0x0c
 		ldi	0x00
@@ -3862,7 +3862,7 @@ code_7514:
 		lst	0x00
 		pushi	0x69
 		lst	0x01
-		callk	0x1b, 0x18
+		callk	Display, 0x18
 		lat	0x08
 		ret	
 
@@ -3876,7 +3876,7 @@ code_7584:
 		sat	0x03
 		push1	
 		lsp	0x02
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_7632
 		pushi	0x04
 		push0	
@@ -3920,14 +3920,14 @@ code_7652:
 		push	
 		lst	0x01
 		lst	0x02
-		callk	0x3f, 0x8
+		callk	GetAngle, 0x8
 		sat	0x00
 		pushi	0x00e2
 		push2	
 		push	
 		push1	
 		lst	0x03
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_7694
 		lat	0x03
 code_7694:
@@ -3943,7 +3943,7 @@ code_7700:
 		push	
 		lofsa	string_82		; "  Space Quest I - The Sarien Encounter"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		pushi	0x03
 		lea	0x06, 0x01
 		push	
@@ -3953,7 +3953,7 @@ code_7700:
 		lsg	0x9b
 		call	code_8792, 4
 		push	
-		callk	0x23, 0x6
+		callk	DrawStatus, 0x6
 		ret	
 
 		bnot	
@@ -4056,7 +4056,7 @@ code_7830:
 		send	0x04
 		push	
 		push1	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		push2	
 		pushi	0x1b
 		push0	
@@ -4064,18 +4064,18 @@ code_7830:
 		send	0x04
 		push	
 		push0	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		sat	0x04
 code_7944:
 		push1	
 		lst	0x04
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		ldi	0x28
 		lt?	
@@ -4102,7 +4102,7 @@ code_7944:
 code_8002:
 		push1	
 		lst	0x03
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_8018
 		pushi	0x6c
 		push0	
@@ -4124,7 +4124,7 @@ code_8018:
 		send	0x04
 		push	
 		push1	
-		callk	0xb, 0x4
+		callk	Animate, 0x4
 		pushi	0x54
 		push1	
 		lofsa	redX
@@ -4152,7 +4152,7 @@ code_8074:
 		push1	
 		lea	0x00, 0x2a
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		not	
 		bnt	code_8141
 		push2	
@@ -4160,7 +4160,7 @@ code_8074:
 		push	
 		lofsa	string_15		; ""
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		pushi	0x03
 		lea	0x04, 0x1e
 		push	
@@ -4173,23 +4173,23 @@ code_8074:
 		push	
 		lea	0x04, 0x1e
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_8141:
 		push2	
 		lea	0x04, 0x00
 		push	
 		lea	0x00, 0x2a
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		push2	
 		lea	0x04, 0x00
 		push	
 		lofsa	string_85		; "newresp.log"
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		push1	
 		lsp	0x02
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_8193
 		push2	
 		lea	0x04, 0xb4
@@ -4199,7 +4199,7 @@ code_8141:
 		lap	0x02
 		send	0x04
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_8205
 code_8193:
 		push2	
@@ -4207,7 +4207,7 @@ code_8193:
 		push	
 		lofsa	string_86		; "Default Response"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_8205:
 		pushi	0x06
 		lea	0x04, 0x3d
@@ -4225,7 +4225,7 @@ code_8205:
 		send	0x04
 		send	0x04
 		push	
-		callk	0x48, 0xc
+		callk	Format, 0xc
 		lsp	0x01
 		ldi	0x04
 		eq?	
@@ -4241,7 +4241,7 @@ code_8205:
 		send	0x04
 		send	0x04
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		push2	
 		lea	0x04, 0x3d
 		push	
@@ -4251,22 +4251,22 @@ code_8205:
 		lofsa	string_87		; "\n(switch theItem (%d"
 		push	
 		lsp	0x03
-		callk	0x48, 0x6
+		callk	Format, 0x6
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		push2	
 		lea	0x04, 0x3d
 		push	
 		lofsa	string_88		; "\n"
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 code_8304:
 		push2	
 		lea	0x04, 0xd2
 		push	
 		lofsa	string_15		; ""
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		lsp	0x01
 		ldi	0x04
 		eq?	
@@ -4276,7 +4276,7 @@ code_8304:
 		push	
 		lofsa	string_89		; "verbUse"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_8461
 code_8339:
 		pushi	0x24
@@ -4296,7 +4296,7 @@ code_8339:
 		push	
 		lofsa	string_90		; "verbLook"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_8460
 code_8375:
 		dup	
@@ -4308,7 +4308,7 @@ code_8375:
 		push	
 		lofsa	string_91		; "verbDo"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_8460
 code_8397:
 		dup	
@@ -4320,7 +4320,7 @@ code_8397:
 		push	
 		lofsa	string_92		; "verbTalk"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_8460
 code_8419:
 		dup	
@@ -4332,7 +4332,7 @@ code_8419:
 		push	
 		lofsa	string_93		; "verbSmell"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 		jmp	code_8460
 code_8441:
 		dup	
@@ -4344,7 +4344,7 @@ code_8441:
 		push	
 		lofsa	string_94		; "verbTaste"
 		push	
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_8460:
 		toss	
 code_8461:
@@ -4355,38 +4355,38 @@ code_8461:
 		pushi	0x1f
 		lea	0x04, 0xd2
 		push	
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		push2	
 		lea	0x04, 0x3d
 		push	
 		lea	0x04, 0xa1
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		push2	
 		lea	0x04, 0x3d
 		push	
 		lofsa	string_95		; "\t\t\t(Print\n"
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		push2	
 		lea	0x04, 0x3d
 		push	
 		lofsa	string_96		; "\t\t\t\t\""
 		push	
-		callk	0x44, 0x4
+		callk	StrCat, 0x4
 		pushi	0x03
 		push0	
 		lea	0x04, 0x00
 		push	
 		push0	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		sat	0x3c
 		pushi	0x03
 		pushi	0x06
 		push	
 		lea	0x04, 0x3d
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 code_8538:
 		ldi	0x00
 		sat	0x3d
@@ -4400,7 +4400,7 @@ code_8538:
 		push1	
 		lea	0x04, 0x3d
 		push	
-		callk	0x46, 0x2
+		callk	StrLen, 0x2
 		push	
 		ldi	0x00
 		eq?	
@@ -4410,29 +4410,29 @@ code_8538:
 		lst	0x3c
 		lofsa	string_98		; "\n\t\t\t\t\"\n"
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		pushi	0x03
 		pushi	0x06
 		lst	0x3c
 		lofsa	string_99		; "\t\t\t)\n"
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		pushi	0x03
 		pushi	0x06
 		lst	0x3c
 		lofsa	string_100		; "\t\t)\n"
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		pushi	0x03
 		pushi	0x06
 		lst	0x3c
 		lofsa	string_101		; "\t\t\n\n"
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		push2	
 		push1	
 		lst	0x3c
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 		jmp	code_8664
 code_8635:
 		pushi	0x03
@@ -4440,13 +4440,13 @@ code_8635:
 		lst	0x3c
 		lea	0x04, 0x3d
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		pushi	0x03
 		pushi	0x06
 		lst	0x3c
 		lofsa	string_102		; "\n\t\t\t\t"
 		push	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		jmp	code_8538
 code_8664:
 		pushi	0x00b9
@@ -4468,14 +4468,14 @@ code_8675:
 		lsp	0x03
 		lea	0x04, 0x00
 		push	
-		callk	0x49, 0x6
+		callk	GetFarText, 0x6
 		jmp	code_8713
 code_8703:
 		push2	
 		lea	0x04, 0x00
 		push	
 		lsp	0x02
-		callk	0x47, 0x4
+		callk	StrCpy, 0x4
 code_8713:
 		pushi	0x05
 		push1	
@@ -5008,7 +5008,7 @@ Overriden functions: 1
 .CODE
 sq1Win::179:
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		not	
 		bnt	code_9815
 		lag	0x13
@@ -5032,7 +5032,7 @@ sq1Win::108:
 		rest	0x01
 		super	0x3d, 0x4
 		push0	
-		callk	0x27, 0x0
+		callk	HaveMouse, 0x0
 		not	
 		bnt	code_9852
 		pushi	0x00b9
@@ -5145,7 +5145,7 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x06
 		add	
@@ -5162,7 +5162,7 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		sub	
 		push	
@@ -5175,7 +5175,7 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x06
 		add	
@@ -5185,7 +5185,7 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x06
 		add	
@@ -5202,7 +5202,7 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		pushi	0x0140
@@ -5211,7 +5211,7 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		sub	
 		push	
@@ -5235,7 +5235,7 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		pushi	0x04
@@ -5243,7 +5243,7 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		sub	
 		push	
@@ -5251,7 +5251,7 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		pushi	0x05
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sub	
 		push	
 		ldi	0x02
@@ -5262,13 +5262,13 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		add	
 		push	
 		pushi	0x06
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x03b3
 		push1	
@@ -5276,7 +5276,7 @@ gcWin::179:
 		pushi	0x04
 		pushi	0x03
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x03b3
 		push1	
@@ -5284,7 +5284,7 @@ gcWin::179:
 		pushi	0x5e
 		pushi	0x26
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x03b3
 		push1	
@@ -5292,7 +5292,7 @@ gcWin::179:
 		pushi	0x0087
 		pushi	0x26
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x03b3
 		push0	
@@ -5303,14 +5303,14 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		pushi	0x04
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x03
 		add	
 		sub	
 		push	
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x03b3
 		push0	
@@ -5321,14 +5321,14 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		pushi	0x04
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x03
 		add	
 		sub	
 		push	
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x06
 		pushi	0x03b3
 		push0	
@@ -5339,20 +5339,20 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		pushi	0x04
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x03
 		add	
 		sub	
 		push	
 		lst	0x0c
-		callk	0x11, 0xc
+		callk	DrawCel, 0xc
 		pushi	0x2e
 		pushi	0x03
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		sat	0x02
 		push	
@@ -5364,7 +5364,7 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		sat	0x03
 		push	
@@ -5373,7 +5373,7 @@ gcWin::179:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		pushi	0x0a
@@ -5381,7 +5381,7 @@ gcWin::179:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		ldi	0x06
@@ -5424,7 +5424,7 @@ gcWin::179:
 		lst	0x07
 		lst	0x06
 		lst	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		lst	0x02
 		lat	0x01
 		sub	
@@ -5453,7 +5453,7 @@ gcWin::179:
 		lst	0x07
 		lst	0x08
 		lst	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x0b
 		lst	0x05
@@ -5466,7 +5466,7 @@ gcWin::179:
 		lst	0x07
 		lst	0x09
 		lst	0x0c
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		ldi	0x00
 		sat	0x0d
 code_10662:
@@ -5497,7 +5497,7 @@ code_10662:
 		lst	0x0b
 		lst	0x0c
 		pushi	0xff
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		pushi	0x08
 		pushi	0x04
 		lst	0x02
@@ -5525,7 +5525,7 @@ code_10662:
 		lst	0x0a
 		lst	0x0c
 		pushi	0xff
-		callk	0x6c, 0x10
+		callk	Graph, 0x10
 		+at	0x0d
 		jmp	code_10662
 code_10761:
@@ -5542,7 +5542,7 @@ code_10761:
 		add	
 		push	
 		push1	
-		callk	0x6c, 0xc
+		callk	Graph, 0xc
 		pushi	0x05
 		lea	0x04, 0x0e
 		push	
@@ -5550,7 +5550,7 @@ code_10761:
 		pushi	0x20
 		lsg	0x0f
 		lsg	0x10
-		callk	0x48, 0xa
+		callk	Format, 0xa
 		pushi	0x04
 		lea	0x04, 0x1d
 		push	
@@ -5558,7 +5558,7 @@ code_10761:
 		push	
 		pushi	0x03e7
 		push0	
-		callk	0x1a, 0x8
+		callk	TextSize, 0x8
 		pushi	0x08
 		lea	0x04, 0x0e
 		push	
@@ -5576,7 +5576,7 @@ code_10761:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		pushi	0x0097
@@ -5584,7 +5584,7 @@ code_10761:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		pushi	0x0a
@@ -5592,7 +5592,7 @@ code_10761:
 		pushi	0x03b3
 		push1	
 		push1	
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		add	
 		push	
 		ldi	0x06
@@ -5612,13 +5612,13 @@ code_10761:
 		pushi	0x03b3
 		push0	
 		push1	
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		add	
 		push	
 		ldi	0x03
 		add	
 		push	
-		callk	0x1b, 0x10
+		callk	Display, 0x10
 		ret	
 
 

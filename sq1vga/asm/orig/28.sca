@@ -50,7 +50,7 @@ code_67:
 		push2	
 		pushi	0x0084
 		pushi	0x01c4
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		lal	0x00
 		bnt	code_181
 		pushi	0x6b
@@ -77,7 +77,7 @@ code_67:
 		push2	
 		pushi	0x0084
 		pushi	0x019b
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		jmp	code_210
 code_181:
 		push1	
@@ -399,7 +399,7 @@ code_704:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x30
 		ldi	0x0bb8
 		sag	0xb7
@@ -439,7 +439,7 @@ code_820:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0c
 		push2	
 		pushi	0x1c
@@ -476,7 +476,7 @@ code_877:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0c
 		jmp	code_1410
 code_939:
@@ -540,7 +540,7 @@ code_981:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x2a
 		pushi	0x2b
 		push1	
@@ -573,7 +573,7 @@ code_1067:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x0e
 		jmp	code_1410
 code_1110:
@@ -619,7 +619,7 @@ code_1110:
 		push2	
 		pushi	0x02c0
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x04
 		jmp	code_1410
 code_1199:
@@ -867,7 +867,7 @@ code_1596:
 		lap	0x01
 		send	0x04
 		push	
-		callk	0x4e, 0x6
+		callk	OnControl, 0x6
 		bnt	code_1650
 		ldi	0x00a2
 		sal	0x02

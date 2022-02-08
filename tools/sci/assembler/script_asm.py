@@ -397,7 +397,7 @@ def asm_all(src, compiledir):
     compile_path = Path(compiledir)
     compile_path.mkdir(exist_ok=True)
     global kernels
-    kernels = Kernels(src, compiledir, mode='asm')
+    kernels = Kernels(src, compile_path, mode='asm')
     if Path(src).is_dir():
         asm_files = Path(src).glob('*.sca')
     else:

@@ -21,7 +21,7 @@ MoveFwd::107:
 		send	0x04
 		push	
 		lsp	0x02
-		callk	0x68, 0x4
+		callk	SinMult, 0x4
 		add	
 		push	
 		pushi	0x03
@@ -36,7 +36,7 @@ MoveFwd::107:
 		send	0x04
 		push	
 		lsp	0x02
-		callk	0x69, 0x4
+		callk	CosMult, 0x4
 		sub	
 		push	
 		lsp	0x00

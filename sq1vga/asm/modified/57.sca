@@ -91,7 +91,7 @@ code_168:
 		push2	
 		pushi	0x0084
 		pushi	0x0193
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x6b
 		push0	
 		pushi	0x69
@@ -340,7 +340,7 @@ code_646:
 		push2	
 		pushi	0x009d
 		push0	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		self	0x06
 		jmp	code_695

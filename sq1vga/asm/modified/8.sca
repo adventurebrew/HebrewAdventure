@@ -10,7 +10,7 @@ rm8::107:
 		push2	
 		pushi	0x0080
 		pushi	0x6c
-		callk	0x0, 0x4
+		callk	Load, 0x4
 		pushi	0x0187
 		push1	
 		pushi	0x02bc

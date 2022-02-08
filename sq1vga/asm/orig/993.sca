@@ -13,7 +13,7 @@ class_0::179:
 		push0	
 		pTos	0x06
 		push0	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		jmp	code_47
 code_25:
 		dup	
@@ -24,7 +24,7 @@ code_25:
 		push0	
 		pTos	0x06
 		lsp	0x01
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		jmp	code_47
 code_45:
 		ldi	0x00
@@ -63,7 +63,7 @@ code_88:
 		push	
 		lsp	0x01
 		lsp	0x02
-		callk	0x74, 0x8
+		callk	FileIO, 0x8
 		jmp	code_110
 code_108:
 		ldi	0x00
@@ -93,7 +93,7 @@ code_134:
 		pTos	0x08
 		lat	0x00
 		lspi	0x01
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		+at	0x00
 		jmp	code_134
 code_160:
@@ -123,7 +123,7 @@ code_185:
 		push	
 		lsp	0x01
 		lsp	0x02
-		callk	0x74, 0x8
+		callk	FileIO, 0x8
 		jmp	code_206
 code_204:
 		ldi	0x00
@@ -154,7 +154,7 @@ code_231:
 		lsp	0x01
 		lsp	0x02
 		push	
-		callk	0x74, 0x8
+		callk	FileIO, 0x8
 		jmp	code_253
 code_251:
 		ldi	0x00
@@ -188,7 +188,7 @@ code_286:
 		push	
 		lsp	0x01
 		lst	0x00
-		callk	0x74, 0x8
+		callk	FileIO, 0x8
 		jmp	code_308
 code_306:
 		ldi	0x00
@@ -201,7 +201,7 @@ class_0::334:
 		push2	
 		push1	
 		push	
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 		ldi	0x00
 		aTop	0x08
 code_324:
@@ -217,7 +217,7 @@ code_336:
 		push2	
 		pushi	0x04
 		pTos	0x06
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 		ret	
 
 class_0::108:
@@ -235,7 +235,7 @@ class_0::109:
 		pushi	0x03e1
 		push0	
 		pTos	0x06
-		callk	0x48, 0x8
+		callk	Format, 0x8
 		ret	
 
 

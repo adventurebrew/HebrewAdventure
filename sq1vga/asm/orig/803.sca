@@ -72,18 +72,18 @@ speedTest::107:
 		lofsa	string_1		; "version"
 		push	
 		push1	
-		callk	0x74, 0x6
+		callk	FileIO, 0x6
 		sal	0x02
 		pushi	0x04
 		pushi	0x05
 		lsg	0x1b
 		pushi	0x06
 		push	
-		callk	0x74, 0x8
+		callk	FileIO, 0x8
 		push2	
 		push1	
 		lsl	0x02
-		callk	0x74, 0x4
+		callk	FileIO, 0x4
 		pushi	0x6b
 		push0	
 		super	0x43, 0x4
@@ -94,7 +94,7 @@ speedTest::107:
 		send	0x06
 code_188:
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		push	
 		ldi	0xfc00
 		ugt?	
@@ -181,13 +181,13 @@ speedTest::60:
 		bnt	code_341
 		pushi	0x3c
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		add	
 		sal	0x00
 code_341:
 		lsl	0x00
 		push0	
-		callk	0x42, 0x0
+		callk	GetTime, 0x0
 		ult?	
 		bnt	code_433
 		pushi	0x0088

@@ -14,7 +14,7 @@ launchBayScript::108:
 		super	0x6, 0x4
 		push1	
 		pushi	0x02c1
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 launchBayScript::138:
@@ -219,7 +219,7 @@ printGuard::108:
 		super	0x6, 0x4
 		push1	
 		pushi	0x02c1
-		callk	0x3, 0x2
+		callk	DisposeScript, 0x2
 		ret	
 
 printGuard::138:

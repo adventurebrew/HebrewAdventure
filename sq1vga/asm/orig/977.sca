@@ -39,7 +39,7 @@ code_47:
 code_59:
 		push1	
 		pTos	0x08
-		callk	0xd, 0x2
+		callk	NumLoops, 0x2
 		push	
 		ldi	0x08
 		lt?	
@@ -125,7 +125,7 @@ code_183:
 code_208:
 		push1	
 		pTos	0x0a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_261
 		pushi	0x70
 		push1	
@@ -217,7 +217,7 @@ Grooper::139:
 		pToa	0x08
 		send	0x04
 		push	
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		not	
 		bnt	code_386
 		pushi	0x3b
@@ -228,7 +228,7 @@ Grooper::139:
 code_386:
 		push1	
 		pTos	0x0a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_405
 		pushi	0x00da
 		push1	
@@ -254,7 +254,7 @@ code_430:
 Grooper::108:
 		push1	
 		pTos	0x0a
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_451
 		pushi	0x6c
 		push0	
@@ -265,7 +265,7 @@ Grooper::108:
 code_451:
 		push1	
 		pTos	0x0c
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_471
 		pushi	0x6c
 		push0	
@@ -314,7 +314,7 @@ Grycler::107:
 		aTop	0x0a
 		push1	
 		pTos	0x08
-		callk	0xd, 0x2
+		callk	NumLoops, 0x2
 		push	
 		ldi	0x08
 		lt?	
@@ -392,7 +392,7 @@ Grycler::430:
 		push	
 		calle	0x03d6, 0x0002, 0x04
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pushi	0x00b4
 		pToa	0x14
@@ -409,7 +409,7 @@ Grycler::214:
 		pToa	0x0e
 		sub	
 		push	
-		callk	0x3d, 0x2
+		callk	Abs, 0x2
 		push	
 		pushi	0x00d9
 		push0	

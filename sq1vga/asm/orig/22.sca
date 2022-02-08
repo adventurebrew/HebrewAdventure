@@ -103,7 +103,7 @@ code_151:
 		push2	
 		pushi	0x02c0
 		push1	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x18
 		pushi	0x04
 		push1	
@@ -120,7 +120,7 @@ code_151:
 		push2	
 		pushi	0x02c0
 		push2	
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		send	0x18
 		pushi	0x6b
 		push0	

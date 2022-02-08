@@ -2095,7 +2095,7 @@ elevator::194:
 		lap	0x01
 		send	0x04
 		push	
-		callk	0x4e, 0x6
+		callk	OnControl, 0x6
 		and	
 		ret	
 

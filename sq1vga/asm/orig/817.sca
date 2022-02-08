@@ -55,7 +55,7 @@ code_73:
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
-		callk	0x10, 0x6
+		callk	CelHigh, 0x6
 		push	
 		ldi	0x02
 		add	
@@ -68,7 +68,7 @@ code_119:
 		pTos	0x2e
 		pTos	0x30
 		pTos	0x32
-		callk	0xf, 0x6
+		callk	CelWide, 0x6
 		sat	0x00
 		pToa	0x0a
 		aTop	0x76
@@ -648,7 +648,7 @@ code_1165:
 code_1172:
 		push1	
 		pTos	0x56
-		callk	0x6, 0x2
+		callk	IsObject, 0x2
 		bnt	code_1197
 		pushi	0x020c
 		push1	

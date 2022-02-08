@@ -19,7 +19,7 @@ romulanWarbird::138:
 		push2	
 		pushi	0x31
 		pushi	0x03
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		pushSelf	
 		self	0x08
@@ -38,7 +38,7 @@ code_45:
 		push2	
 		pushi	0x31
 		pushi	0x05
-		callk	0x2, 0x4
+		callk	ScriptID, 0x4
 		push	
 		pushSelf	
 		self	0x08
