@@ -4325,37 +4325,37 @@ string_6: "אין מצב!"
 string_7: "getOutaSkimmer"		 ; special
 string_8: "sellSkimmerForMoney"		 ; special
 string_9: "סגרנו!"
-string_10: "אין מצב!"
+string_10: "\"נהדר!\""
 string_11: "sellSkimmerForJet"		 ; special
 string_12: "noTwice"		 ; special
 string_13: "getOnSkimmer"		 ; special
 string_14: "bendOverSkimmer"		 ; special
 string_15: "muggerPloy"		 ; special
 string_16: "guy"		 ; special
-string_17: "נהדר!"
-string_18: "יצור-זאב חייזרי"
+string_17: "יצור זאב חייזרי"
+string_18: "היצור הזה הוא בגודל של דמוי אדם, אבל יש לו כמה מאפיינים מוזרים. נראה שיש לו פרצוף ידידותי למראה."
 string_19: "mugger"		 ; special
-string_20: "היצור הזה הוא בגודל של דמוי אדם, אבל יש לו כמה מאפיינים מוזרים. נראה שיש לו פרצוף ידידותי למראה."
+string_20: "שלט של טיל"
 string_21: "rocketSign"		 ; special
 string_22: "barSign"		 ; special
-string_23: "שלט של טיל"
+string_23: "רחפת חול"
 string_24: "skimmer"		 ; special
-string_25: "שלט של טיל"
-string_26: "רחפת חול"
+string_25: "חיישן שדה כוח"
+string_26: "המושבה של מישורי אולנס מוקפת במייצרי שדה הכוח האלו. הם דוחים דברים שאינם רצויים כמו הגרל שמשגשגים מתחת לחול. הוא מאפשר רק לכלי רכב אוויריים להיכנס ולצאת."
 string_27: "radar"		 ; special
-string_28: "חיישן שדה כוח"
-string_29: "המושבה של מישורי אולנס מוקפת במייצרי שדה הכוח האלו. הם דוחים דברים שאינם רצויים כמו הגרל שמשגשגים מתחת לחול. הוא מאפשר רק לכלי רכב אוויריים להיכנס ולצאת."
+string_28: "רכב הסעות"
+string_29: "נראה שזה רכב הסעות לטווח רחוק, אולי מספינת כוכבים גדולה יותר. הוא נראה מעט מוכר, משום מה."
 string_30: "shuttle"		 ; special
-string_31: "רכב הסעות"
-string_32: "נראה שזה רכב הסעות לטווח רחוק, אולי מספינת כוכבים גדולה יותר. הוא נראה מעט מוכר, משום מה."
+string_31: "ספינת חמוצים"
+string_32: "הספינה הזאת היא קלאסיקה אמיתית - וולווד פיתול-פיצוץ ZX עם הצבע המקורי. ראית כאלה רק על גבי גלויות ישנות."
 string_33: "pickleShip"		 ; special
-string_34: "ספינת חמוצים"
-string_35: "הספינה הזאת היא קלאסיקה אמיתית - וולווד פיתול-פיצוץ ZX עם הצבע המקורי. ראית כאלה רק על גבי גלויות ישנות."
+string_34: "ספינת חלל גבוהה"
+string_35: "זאת ענתיקה אמיתית מהמאה העשרים וארבע וחצי."
 string_36: "tallRocket"		 ; special
-string_37: "ספינת חלל גבוהה"
-string_38: "זאת ענתיקה אמיתית מהמאה העשרים וארבע וחצי."
+string_37: "מסבאה"
+string_38: "יש פה מבנה עגול עם דלת בצד אחד. זה מראה טיפוסי לחלק מהמבנים הטרומיים שנבנו על ידי החלוצים לפני שנים."
 string_39: "barFront"		 ; special
-string_40: "מסבאה"
+string_40: "שלט של מסבאת הטיל"
 string_41: "barSigns"		 ; special
 string_42: "guyTalker"		 ; special
 string_43: "guyBust"		 ; special
