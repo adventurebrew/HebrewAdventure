@@ -666,7 +666,10 @@ code_1240:
 		lofsa	string_5		; " 1991 Sierra On-Line, Inc."
 		push	
 		pushi	0x1e
-		push0	
+		
+		;Z push0 	; teJustLeft	
+		pushi   0xff	;Z hopefully - that's teJustRight
+		
 		pushi	0x1c
 		lsg	0x87
 		pushi	0x1d
@@ -5483,7 +5486,7 @@ string_1: "דלג"
 string_2: "צפה"
 string_3: "טען משחק"
 string_4: "rm1"		 ; special
-string_5: "\03 1991 סיירה און-ליין, בע\"מ"
+string_5: " 1991 סיירה און-ליין, בע\"מ"
 string_6: "open1"		 ; special
 string_7: "leave"		 ; special
 string_8: "open4"		 ; special
