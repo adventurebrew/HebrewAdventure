@@ -26,7 +26,7 @@ def texts_import(csvdir, patchesdir):
         with open(output_file, "wb") as out_file:
             out_file.write(SIERRA_TEXT_HEADER)
             for idx, entry in enumerate(entries):
-                assert int(entry['idx']) == idx
+                assert int(float(entry['idx'])) == idx
                 if entry['translated'].strip() != '':
                     txt = entry['translated']
                 else:
