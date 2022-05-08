@@ -273,6 +273,7 @@
 						(or
 							(== (pEvent message?) KEY_S)
 							(== (pEvent message?) KEY_s)
+							(== (pEvent message?) $e3)	;Z Hebrew Dalet (windows 1255)
 						)
 						(LaurasHead setScript: 0)
 						(LaurasArms setScript: 0)
