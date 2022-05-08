@@ -146,6 +146,7 @@
 						(or
 							(== (pEvent message?) KEY_S)
 							(== (pEvent message?) KEY_s)
+							(== (pEvent message?) $e3)	;Z Hebrew Dalet (windows 1255)
 						)
 						(pEvent claimed: 1)
 						(global2 newRoom: 783)
