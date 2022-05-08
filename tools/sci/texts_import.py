@@ -17,7 +17,7 @@ def texts_import(csvdir, patchesdir):
     rooms.sort(key=float)
     for room in rooms:
         entries = [entry for entry in texts if entry['room'] == room]
-        output_file = os.path.join(patchesdir, 'text.' + room.zfill(3))
+        output_file = os.path.join(patchesdir, 'text.' + str(int(float(room))).zfill(3))
 
         if set([entry['translated'] for entry in entries]) == {''}:
             # there is no translated entry, no need to create a text file
