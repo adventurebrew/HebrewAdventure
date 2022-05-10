@@ -377,7 +377,52 @@
 				(large view: 524 y: 131 setMotion: largeTBPath)
 				(= seconds 5)
 			)
+			
+			;Z added Hebrew credits
 			(5
+				(Display 779 2 108 local2)
+				(Display 779 2 108 local1)
+				(= seconds 1)
+				(= local1
+					(Display
+						779
+						7
+						dsCOORD
+						2
+						12
+						dsWIDTH
+						315
+						dsCOLOR
+						0
+						dsBACKGROUND
+						-1
+						dsFONT
+						41
+						dsSAVEPIXELS
+					)
+				)
+				(= local2
+					(Display
+						779
+						7
+						dsCOORD
+						1
+						10
+						dsWIDTH
+						315
+						dsCOLOR
+						14
+						dsBACKGROUND
+						-1
+						dsFONT
+						41
+						dsSAVEPIXELS
+					)
+				)
+				(= seconds 5)
+			)
+
+			(6
 				(squirrel startUpd:)
 				(Display 779 2 108 local2)
 				(Display 779 2 108 local1)
@@ -392,7 +437,9 @@
 					setMotion: MoveTo 127 183 self
 				)
 			)
-			(6
+
+
+			(7
 				(gAddToPics add: LilysHead LilysLegs doit:)
 				(Lillian
 					loop: 2
@@ -405,7 +452,7 @@
 				(LaurasArms loop: 4 cel: 0 setCycle: End)
 				(squirrel cycleSpeed: 1 setCycle: End self)
 			)
-			(7
+			(8
 				(squirrel
 					loop: 2
 					cel: 0
@@ -418,7 +465,7 @@
 				(localproc_011c 170 25 130 779 3)
 				(= seconds 8)
 			)
-			(8
+			(9
 				(squirrel loop: 3)
 				(large view: 528 setMotion: largeRLPath)
 				(= local3 1)
@@ -427,7 +474,7 @@
 				(localproc_011c 10 75 100 779 4)
 				(= seconds 8)
 			)
-			(9
+			(10
 				(squirrel
 					loop: 1
 					cel: 0
@@ -441,13 +488,13 @@
 				(localproc_011c 170 40 130 779 5)
 				(= seconds 8)
 			)
-			(10
+			(11
 				(squirrel stopUpd:)
 				(= local3 1)
 				(localproc_011c 10 60 100 779 6)
 				(= seconds 5)
 			)
-			(11
+			(12
 				(LaurasHead cel: 0 forceUpd:)
 				(LaurasArms setScript: 0)
 				(Lillian setScript: 0)

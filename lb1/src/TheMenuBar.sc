@@ -18,6 +18,7 @@
 
 (procedure (localproc_04fd)
 	(proc255_0 997 7 33 4 70 275)
+	(proc255_0 997 8 33 4 70 275)	;Z
 )
 
 (class TheMenuBar of Class_255_0
