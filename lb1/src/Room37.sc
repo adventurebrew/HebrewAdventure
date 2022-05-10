@@ -331,7 +331,8 @@ code_06f9:
 			lap      pEvent
 			send     4
 			push    
-			ldi      69
+			;Z ldi      69		; E
+			ldi 	77		;M
 			eq?     
 			bt       code_071a
 			pushi    #message
@@ -339,7 +340,8 @@ code_06f9:
 			lap      pEvent
 			send     4
 			push    
-			ldi      101
+			;Z ldi      101		; e
+			ldi 	246		; Tsadik
 			eq?     
 			bnt      code_0767
 code_071a:

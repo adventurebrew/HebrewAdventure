@@ -441,7 +441,7 @@
 "28.0","6.0","Go ahead. Just enter the water.","קדימה. פשוט היכנסי למים.",""
 "28.0","7.0","The thick muck was too much for you.","הרפש הסמיך היה יותר מדי בשבילך.",""
 "28.0","8.0","The old sign is firmly attached to the gate.","השלט הישן הוצמד בחוזקה לשער.",""
-"28.0","9.0","The rusted sign on the front gate reads ""Misty Acres."" That must be the name of the old plantation!","השלט החלוד על פני שער הכניסה זועק ""אדמות בערפל."" זהו בטח שמה של האחוזה הישנה!",""
+"28.0","9.0","The rusted sign on the front gate reads ""Misty Acres."" That must be the name of the old plantation!","השלט החלוד על פני שער הכניסה זועק ""אדמות בערפל."" זהו בטח שמה של האחוזה הישנה!","השלט בגרפיקה, אם משתנה נא לעדכן"
 "28.0","10.0","You can't read a sign from behind it.","את לא יכולה לקרוא את השלט מצידו האחורי.",""
 "28.0","11.0","The eagles are for decoration only.","הנשרים נועדו לקישוט בלבד.",""
 "28.0","12.0","A pair of iron eagles decorate the top of the gate posts.","זוג נשרי ברזל מעטרים את ראש עמודי השער.",""
@@ -688,7 +688,7 @@
 "36.0","39.0","The piano bench doesn't open.","כיסא הפסנתר לא נפתח.",""
 "36.0","40.0","A lovely old player piano sits against the back wall.","פסנתר ישן ומקסים עומד עם גבו אל הקיר האחורי.",""
 "36.0","41.0","You never learned to play the piano. But, there is a winding mechanism on the side of the player piano.","אף פעם לא למדת לנגן פסנתר. אולם, לצד הפסנתר ישנו מנגנון מתיחה.",""
-"37.0","0.0","Press the 'E' key to exit.","הקישי 'E' ליציאה.",""
+"37.0","0.0","Press the 'E' key to exit.","הקישי 'צ' ליציאה.",""
 "37.0","1.0","","",""
 "37.0","2.0","This is the front downstairs hallway of the big house. A grand stairway leads upstairs.","את נמצאת בקדמת המסדרון בקומה התחתונה. מדרגות מפוארות מובילות אל הקומה העליונה.",""
 "37.0","3.0","The wooden eagles are firmly attached to the newel posts. They do not move.","נשרי עץ מחוברים לעמודים המרכזיים. לא ניתן להזיזם ממקומם.",""
@@ -1366,9 +1366,9 @@ Sarah Marie Crouton Born - 1854","פרנסואה פייר קרוטון נולד 
 "65.0","5.0","You don't see anything!","את לא רואה דבר!",""
 "65.0","6.0","There might be a passage down there.","יתכן שיש שם מעבר למטה.",""
 "65.0","7.0","There is a metal valve handle attached to the valve stem at the base of the statue.","ישנה ידית מתכת המחוברת לשסתום בבסיס הפסל.",""
-"65.0","8.0","The small, square shaft attracts your curiosity.","חור מרובע קטן מעורר את סקרנותך.",""
-"65.0","9.0","The crank doesn't fit on the shaft.","הארכובה לא תתאים מעל לחור.",""
-"65.0","10.0","The crank doesn't fit the shaft.","הארכובה לא מתאימה לחור.",""
+"65.0","8.0","The small, square shaft attracts your curiosity.","צינור מרובע קטן מעורר את סקרנותך.",""
+"65.0","9.0","The crank doesn't fit on the shaft.","הארכובה לא מתלבשת על הצינור.",""
+"65.0","10.0","The crank doesn't fit the shaft.","הארכובה לא מתאימה לצינור.",""
 "65.0","11.0","Turning the valve handle in your hand you see the other side of it.","את מסובבת את הברז בידך ורואה את הצד השני שלו.",""
 "65.0","12.0","It is already on!","זה כבר פועל!",""
 "65.0","13.0","You don't know how.","אינך יודעת כיצד.",""
@@ -1379,16 +1379,16 @@ Sarah Marie Crouton Born - 1854","פרנסואה פייר קרוטון נולד 
 "65.0","18.0","The gate is already open.","השער כבר פתוח.",""
 "65.0","19.0","There is no reason to get your feet wet!","אין שום סיבה להרטיב את הרגליים!",""
 "65.0","20.0","You have no reason to carry water.","אין שום הגיון להיסחב עם מים.",""
-"65.0","21.0","The metal shaft can't be taken.","לא ניתן לקחת את מוט המתכת.",""
-"65.0","22.0","The metal shaft doesn't move.","מוט הברזל לא ניתן להזזה.",""
-"65.0","23.0","The metal shaft won't turn by itself.","מוט הברזל לא מסתובב בכוחות עצמו.",""
+"65.0","21.0","The metal shaft can't be taken.","לא ניתן לקחת את צינור המתכת.",""
+"65.0","22.0","The metal shaft doesn't move.","צינור הברזל לא ניתן להזזה.",""
+"65.0","23.0","The metal shaft won't turn by itself.","צינור הברזל לא מסתובב בכוחות עצמו.",""
 "65.0","24.0","You don't need it anymore.","את לא צריכה את זה יותר.",""
 "65.0","25.0","You already have it.","כבר יש לך את זה.",""
 "65.0","26.0","What are you talking about?","על מה את מדברת?",""
 "65.0","27.0","You're not thirsty.","את לא צמאה.",""
 "65.0","28.0","That won't help. It's not rusty.","זה לא יעזור. זה לא חלוד.",""
 "65.0","29.0","Using what? Rudy's hair tonic?!","באמצעות מה? ג'ל השיער של רודי?!",""
-"65.0","30.0","The shaft isn't loose.","המוט אינו משוחרר.",""
+"65.0","30.0","The shaft isn't loose.","הצינור אינו משוחרר.",""
 "65.0","31.0","With your bare hands?","בידיים חשופות?",""
 "65.0","32.0","Upon turning the valve handle, you hear a click and the fountain comes to life.","בעודך מסובבת את השסתום, את שומעת קליק והמזרקה מתעוררת לחיים.",""
 "65.0","33.0","The fountain flow subsides when you turn the valve handle back.","זרם המזרקה שוכך כאשר את מסובבת את השסתום בחזרה.",""
@@ -1401,7 +1401,7 @@ Sarah Marie Crouton Born - 1854","פרנסואה פייר קרוטון נולד 
 "65.0","40.0","You can't carry around a statue!","את לא יכולה לסחוב את הפסל!",""
 "65.0","41.0","Despite your bulging muscles, you cannot move the statue.","למרות שרירייך הנפוחים, את לא מסוגלת להזיז את הפסל.",""
 "65.0","42.0","A statue of a dancing nymph overlooks the fountain. %s","פסל של נימפה רוקדת צופה על המזרקה. %s",""
-"65.0","43.0","What's this? You notice a small, square shaft protruding from the base of the statue.","מה זה? את שמה לב למוט מרובע קטן בולט מבסיס הפסל.",""
+"65.0","43.0","What's this? You notice a small, square shaft protruding from the base of the statue.","מה זה? את שמה לב לצינור מרובע קטן בולט מבסיס הפסל.",""
 "65.0","44.0","","",""
 "65.0","45.0","The urns are much too heavy to carry around.","הכדים כבדים מדי לטלטול.",""
 "65.0","46.0","Even your bugling muscles couldn't move those heavy urns.","למרות כוחך העצום את לא מצליחה להזיז את הכדים הכבדים.",""
@@ -1479,7 +1479,7 @@ Sarah Marie Crouton Born - 1854","פרנסואה פייר קרוטון נולד 
 "73.0","19.0","Please! Lillian doesn't want to watch you!","בבקשה! ליליאן לא רוצה לצפות בך!",""
 "73.0","20.0","Excuse us.","סלחו לנו.",""
 "73.0","21.0","""Hi, Laura. I'm feeling better now. That ride through the bayou had me plumb frazzled. If you need to freshen up, too, I'll be done in just a bit.""","""הי, ליאורה. אני מרגישה עכשיו הרבה יותר טוב. הרכיבה דרך הביצות התישה אותי לגמרי. אם תרצי להתרענן גם את, אסיים בעוד מספר דקות.""",""
-"73.0","22.0","You read the small print of the sleeping powder bottle through the monocle. It says ""Can be fatal if taken in too large a dose."" Oh, oh!","את קוראת את האותיות הקטנות על בקבוק סם השינה בעזרת המשקף. כתוב שם ""נטילה במינון גבוה עלולה לגרום למוות."" הו, הו!",""
+"73.0","22.0","You read the small print of the sleeping powder bottle through the monocle. It says ""Can be fatal if taken in too large a dose."" Oh, oh!","את קוראת את האותיות הקטנות על בקבוק סם השינה בעזרת המשקף. כתוב שם ""נטילה במינון גבוה עלולה לגרום למוות."" הו, הו!","הסיומת של התווית (""מוות"") בגרפיקה... אם המשפט משתנה צריך לעדכן"
 "73.0","23.0","After retrieving the small bottle from the wastebasket you read its label.","לאחר ששלפת את הבקבוק הקטן מפח האשפה את קוראת את התווית.",""
 "73.0","24.0","It says, ""Dr. Milliken's Miracle-Sleep Powder... with Dr. Milliken's, you can be sure your dreams will be `sweet' tonight!""","כתוב עליה, ""סם הפלא לשינה טובה של ד""ר מיליקן... עם ד""ר מיליקן, היו סמוכים ובטוחים כי הלילה תחלמו חלומות 'מתוקים'!""",""
 "73.0","25.0","Upon further inspection of the label you notice some very small print at the bottom. Though you try to read the small print, you can't quite make it out.","לאחר בדיקה נוספת של התווית את מבחינה באותיות קטנות מאוד למטה. חרף מאמצייך לקרוא אותם, את לא מצליחה להבין כלום.",""
@@ -6029,7 +6029,7 @@ Have you previously attended a performance of
 "410.0","3.0","You don't have the monocle.","אין לך את המשקף.",""
 "410.0","4.0","You don't know how to wear a monocle; it keeps falling off!","את לא יודעת כיצד להרכיב משקף; זה כל הזמן נופל!",""
 "410.0","5.0","Things appear larger and sharper when you look through the monocle; much like a magnifying glass.","דברים נראים יותר גדולים וחדים כאשר את מביטה דרך המשקף; ממש כמו זכוכית מגדלת.",""
-"410.0","6.0","You carefully examine the white handkerchief using Wilbur's monocle much like a magnifying glass. Why, what's this? You see a small ""EP"" in one corner of the white lace trim.","את בוחנת בקפידה את הממחטה באמצעות שימוש במשקף של ווילבור כמו זכוכית מגדלת. הי, מה זה? את רואה ""א""פ"" בקטן על אחת מפינות התחרה הלבנה.",""
+"410.0","6.0","You carefully examine the white handkerchief using Wilbur's monocle much like a magnifying glass. Why, what's this? You see a small ""EP"" in one corner of the white lace trim.","את בוחנת בקפידה את הממחטה באמצעות שימוש במשקף של ווילבור כמו זכוכית מגדלת. הי, מה זה? את רואה ""א""פ"" בקטן על אחת מפינות התחרה הלבנה.","ראשי התיבות א""פ בגרפיקה, אם משתנה נא לעדכן (מניח שמתייחס לאת'ל פרון)"
 "410.0","7.0","You scrutinize the entire rolling pin with Wilbur's monocle. Aha! You have discovered traces of blood on it!","את בוחנת את המערוך כולו בעזרת המשקף של ווילבור. אהה! את מגלה עליו עקבות של דם!",""
 "410.0","8.0","You examine the entire fireplace poker with the monocle. Oh, oh! There are traces of blood on it!","את בוחנת את מוט הגחלים בעזרת המשקף. הו, הו! יש עליו עקבות של דם!",""
 "410.0","9.0","Squinting into the monocle you carefully examine the piece of broken record. Closely situated to each other, you notice two different fingerprints.","את ממצמצת אל תוך המשקף ובוחנת בזהירות את פיסת התקליט השבורה. ממוקמים זה לצד זה, את מבחינה בשתי טביעות אצבע שונות.",""
@@ -6078,14 +6078,14 @@ I'm so terribly upset! I can't believe Uncle Henri would do this to me! I though
 "410.0","44.0","You don't have any matches.","אין לך גפרורים בכלל.",""
 "410.0","45.0","You extinguish the lantern.","את מכבה את העששית.",""
 "410.0","46.0","It's already extinguished.","זה כבר כבוי.",""
-"410.0","47.0","You open your notebook and skim through your many notes and observations.","את פותחת את מחברתך ומרפרפת בין ההערות והתובנות הרבות שלך.",""
+"410.0","47.0","You open your notebook and skim through your many notes and observations.","את פותחת את פנקסך ומרפרפת בין ההערות והתובנות הרבות שלך.",""
 "410.0","48.0","It is closed.","זה סגור.",""
 "410.0","49.0","From your detective father, you have learned to write down all your notes and observations.","מאביך הבלש, למדת לרשום ביסודיות את כל ההערות והאבחנות.",""
 "411.0","0.0","This is the guest room you share with Lillian. Though a bit tired-looking, it seems comfortable enough.","זהו חדר האורחים שאותו את חולקת עם ליליאן. למרות מראהו הדהוי מעט, הוא נראה נוח למדי.",""
 "411.0","1.0","""Laura, dear. Please excuse me. I'm going to go freshen up in the bathroom. Why don't you explore the estate a bit?""","""ליאורה, יקירתי. תסלחי לי בבקשה. אני הולכת להתרענן במקלחת. למה שלא תצאי לחקור קצת את האחוזה?""",""
 "411.0","2.0","Hmmmm...something doesn't feel right. Everybody's acting too strange...even Lillian. What would Daddy do in a situation like this?","הממממ...משהו לא מסתדר לי. כולם מתנהגים כל כך מוזר...אפילו ליליאן. מה אבא היה עושה במצב כזה?",""
 "411.0","3.0","""Honey, if things don't feel right, they probably AREN'T. Observe the situation closely, yet be unobtrusive. Explore your surroundings quietly and carefully. Try to question the others without raising suspicion. Notice small details. Take lots of notes. And above all, be careful.""","""מותק, אם את מרגישה שמשהו לא בסדר, כנראה שאת צודקת. בחני את המצב מקרוב, אך לא בפולשניות. חקרי את סביבתך בשקט ובזהירות. נסי לתשאל אחרים מבלי לעורר חשד. שימי לב לפרטים הקטנים. רשמי הרבה הערות. ומעל הכל, היי זהירה.""",""
-"411.0","4.0","Since you never go anywhere without your trusty notebook and pencil, you go to your suitcase, open it, and remove those two items. Yes...your father is right. Observing the situation and taking notes WOULD be a good idea.","מאחר ואת לעולם לא יוצאת בלי המחברת והעיפרון הנאמנים שלך, את הולכת למזוודתך, פותחת אותה, ולוקחת את אותם שני חפצים. כן...אביך צדק. בחינת המצב ורישום הערות אלה הם בהחלט רעיונות מבורכים.",""
+"411.0","4.0","Since you never go anywhere without your trusty notebook and pencil, you go to your suitcase, open it, and remove those two items. Yes...your father is right. Observing the situation and taking notes WOULD be a good idea.","מאחר ואת לעולם לא יוצאת בלי הפנקס והעיפרון הנאמנים שלך, את הולכת למזוודתך, פותחת אותה, ולוקחת את אותם שני חפצים. כן...אביך צדק. בחינת המצב ורישום הערות אלה הם בהחלט רעיונות מבורכים.",""
 "412.0","0.0","""Remember what I taught you about interrogation, Laura? Don't forget to ask questions. If you ""ask Lillian about Gloria,"" you might get more information about Gloria, or at least how Lillian FEELS about her. That sort of information could be very useful.""","""זוכרת מה שלימדתי אותך בקשר לתחקור, ליאורה? לא לשכוח לשאול שאלות. אם את ""שואלת את ליליאן על גלוריה,"" הדבר עשוי לשפוך אור חדש על גלוריה, או לכל הפחות מה ליליאן מרגישה כלפיה. מידע מהסוג הזה עשוי להועיל לך עד מאוד.""",""
 "412.0","1.0","""One important tool a good detective uses besides asking questions of people is to selectively reveal information to THEM and listen to their response. If you ""tell Gloria about Fifi,"" you may receive additional information about Fifi, or at least what Gloria THINKS of her.""","""כלי חשוב מאוד שמשמש בלשים טובים מלבד הצגת קושיות הוא לחשוף בפני האנשים מידע מבוקר ולהקשיב לתגובותיהם. אם את ""מספרת לגלוריה על פיפי,"" יתכן ותקבלי מידע נוסף על פיפי, או לפחות מה גלוריה חושבת עליה.""",""
 "412.0","2.0","""Honey, if you've found any items you're confused about, or would like more information about, try ""showing"" it to the others. They may reveal more information about it to you.""","""מותק, אם מצאת חפץ כלשהו ואת מבולבלת לגביו, או שמא תרצי לקבל עליו מידע נוסף, נסי ""להראות"" אותו לאחרים. הם עשויים לחשוף בפנייך מידע שקשור אליו.""",""
@@ -6262,7 +6262,7 @@ Ken Allen","מוזיקה וקולות
 "784.0","5.0","""Miss Bow, I know you found an old Civil War treasure on my estate.""","""גברת קשת, אני יודע שמצאת אוצר מימי מלחמת האזרחים באחוזה שלי.""",""
 "784.0","6.0","""Since you so bravely saved my life, I'll let you keep every dime of it for yourself...as a reward.""","""מאחר והצלת את חיי באומץ כה רב, אתן לך לשמור אותו לעצמך עד השקל האחרון...כפרס.""",""
 "784.0","7.0","""Thank you, Colonel Dijon. That's very kind of you.""","""תודה רבה, קולונל דיז'ון. זה מאוד נדיב מצידך.""",""
-"784.0","8.0","""You know, Beauregard, people are funny creatures. They're greedy, they're rude, they're selfish.""","""אתה יודע, בורגארד, אנשים הם יצורים מוזרים. הם חמדנים, הם גסי רוח, הם אנוכיים.""",""
+"784.0","8.0","""You know, Beauregard, people are funny creatures. They're greedy, they're rude, they're selfish.""","""אתה יודע, בורגארד, אנשים הם יצורים משונים. הם חמדנים, הם גסי רוח, הם אנוכיים.""",""
 "784.0","9.0","""That's why we live way out here, to get away from them. But we couldn't get away from them completely, could we, boy?""","""לכן אנחנו גרים במקום כל כך נידח, כדי להתרחק מהם. אבל לא נוכל להתחמק מהם לחלוטין, נכון, ילד?""",""
 "784.0","10.0","""No, not completely. But, everything will be okay, now.""","""לא, לא לגמרי. אבל, הכל יהיה בסדר, עכשיו.""",""
 "784.0","11.0","The
@@ -6401,7 +6401,7 @@ End","תם
 "786.0","117.0","INCOMPLETE","לא הושלם",""
 "786.0","118.0","SLEUTH-O-METER","בלש-ו-מטר",""
 "786.0","119.0","Would you like to review your notes?","תרצי לסקור את ההערות שלך?",""
-"786.0","120.0","     NOTEBOOK","   מחברת",""
+"786.0","120.0","     NOTEBOOK","   פנקס",""
 "786.0","121.0","Congratulations, you have attained the highest possible sleuth rating. The curtain will now fall. We hope you enjoyed the performance.","ברכות, השגת את הציון הבלשי הגבוה ביותר. המסך יורד עכשיו. אנו מקווים שנהניתם מההצגה.",""
 "786.0","122.0","Some portions of your notes are rather scanty. You can replay the game to gain additional information.","חלק מהערותייך אינן מפורטות דיו. באפשרותך לחזור על המשחק ולהשיג מידע נוסף.",""
 "983.0","0.0","%s needs an 'at:' method.","%s needs an 'at:' method.",""
@@ -6422,7 +6422,7 @@ is not a valid directory","%s
 "994.0","7.0","Try another way to say that.","נסו לנסח את זה אחרת.",""
 "994.0","8.0","Please insert your %s disk in drive %s.","נא להכניס דיסקט %s בכונן %s.",""
 "996.0","0.0","%c","%c",""
-"997.0","0.0","""The Colonel's Bequest"" is different than the so-called ""normal"" adventure game as it was designed around a story and characters rather than a series of puzzles. You may feel that there is a lack of a ""quest."" Well, in a way, you're right. There isn't a ""quest,"" as such. Your goal is to get to know the story and the characters; to understand what's going on; and to survive the long night. We feel that ""The Colonel's Bequest"" is a true interactive STORY rather than a game and every effort was put into giving you the sensation that you are part of the story. ""The Colonel's Bequest"" will give back what you put into it. If you don't put much effort into playing it you may feel that there isn't much to the game. But you would be wrong! There is a lot to it--but you may have to dig a bit to find it--and to be very observant. ""The Colonel's Bequest"" will reward those who are determined; who will notice subtleties; who will ask questions; who will probe. Good luck! We truly hope you enjoy it!","""עזבונו של הקולונל"" שונה מכל משחק הרפתקאות ""נורמלי"" אחר שאתם מכירים שכן הוא תוכנן סביב עלילה ודמויות ואינו רק סדרה של פאזלים. יתכן ותרגישו מעט חוסר ב""קווסטיות."". ובכן, במידה מסוימת, אתם צודקים. זה לא ממש ""קווסט"" כשלעצמו. מטרתכם היא להכיר את הסיפור ואת הדמויות; להבין מה קורה; ולשרוד את הלילה הארוך. אנו מרגישים כי ""עזבונו של הקולונל"" הוא יותר סיפור אינטרקטיבי מאשר משחק והקדשנו כל מאמץ אפשרי כדי לתת לכם את התחושה שאתם חלק מהסיפור. ""עזבונו של הקולונל"" יחזיר לכם ככל שתתנו יותר. אם לא תשקיעו בו הרבה מאמץ יתכן ותרגישו שאין הרבה מה לעשות במשחק. אבל זו כמובן טעות! יש בו עושר אינסופי--פשוט צריך לחפור ולגלות אותו--ולהיות עירניים וחדי אבחנה; מי שיבחין בדקויות; מי שישאל שאלות; מי שיחקור. בהצלחה! אני מקווים מכל הלב שתיהנו!",""
+"997.0","0.0","""The Colonel's Bequest"" is different than the so-called ""normal"" adventure game as it was designed around a story and characters rather than a series of puzzles. You may feel that there is a lack of a ""quest."" Well, in a way, you're right. There isn't a ""quest,"" as such. Your goal is to get to know the story and the characters; to understand what's going on; and to survive the long night. We feel that ""The Colonel's Bequest"" is a true interactive STORY rather than a game and every effort was put into giving you the sensation that you are part of the story. ""The Colonel's Bequest"" will give back what you put into it. If you don't put much effort into playing it you may feel that there isn't much to the game. But you would be wrong! There is a lot to it--but you may have to dig a bit to find it--and to be very observant. ""The Colonel's Bequest"" will reward those who are determined; who will notice subtleties; who will ask questions; who will probe. Good luck! We truly hope you enjoy it!","""עזבונו של הקולונל"" שונה מכל משחק הרפתקאות ""נורמלי"" אחר שאתם מכירים שכן הוא תוכנן סביב עלילה ודמויות ואינו רק סדרה של פאזלים. יתכן ותרגישו מעט חוסר ב""קווסטיות."". ובכן, במידה מסוימת, אתם צודקים. זה לא ממש ""קווסט"" כשלעצמו. מטרתכם היא להכיר את הסיפור ואת הדמויות; להבין מה קורה; ולשרוד את הלילה הארוך. אנו מרגישים כי ""עזבונו של הקולונל"" הוא יותר סיפור אינטרקטיבי מאשר משחק והקדשנו כל מאמץ אפשרי כדי לתת לכם את התחושה שאתם חלק מהסיפור. ""עזבונו של הקולונל"" יחזיר לכם ככל שתתנו יותר. אם לא תשקיעו בו הרבה מאמץ יתכן ותרגישו שאין הרבה מה לעשות במשחק. אבל זו כמובן טעות! יש בו עושר אינסופי--פשוט צריך לחפור ולגלות אותו--ולהיות עירניים וחדי אבחנה; ""עזבונו של הקולונל"" יתגמל את מי שיבחין בדקויות; מי שישאל שאלות; מי שיחקור. בהצלחה! אני מקווים מכל הלב שתיהנו!",""
 "997.0","1.0","You cannot save a game right now.","אי אפשר לשמור את המשחק כרגע.",""
 "997.0","2.0","You cannot restore a game right now.","אי אפשר לטעון משחק כרגע.",""
 "997.0","3.0","Do you wish to start over?","רוצים להתחיל מחדש?",""
@@ -6448,23 +6448,24 @@ Examples:
 Confine your conversation to the topics listed above. DON'T
 try to converse about general concepts such as:
     The Spanish-American War
-    Real estate development","מידע חיוני נוסף ניתן להשיג באמצעות שיחה
-עם שלל הדמויות שאת נתקלת בהם, אודות:
-אנשים - חיים או מתים
-צמדים וזוגות
-חיות המחמד של הקולונל
-חפצים שאת רואה או נושאת
+    Real estate development","באמצעות שיחה עם שלל הדמויות אותן
+את פוגשת, תוכלי לקבל מידע שימושי לגבי:
+
+    אנשים - חיים או מתים
+    צמדים וזוגות
+    חיות המחמד של הקולונל
+    חפצים שאת רואה או נושאת
 
 דוגמאות:
-שאלי את ליליאן על קולונל דיז'ון.
-ספרי לאת'ל על רודי וגלוריה.
-שאלי את פיפי על הכלב.
-הראי את המחברת לקלארנס.
-תני את המחברת לגרטרוד.
+    שאלי את ליליאן על קולונל דיז'ון.
+    ספרי לאת'ל על רודי וגלוריה.
+    שאלי את פיפי על הכלב.
+    הראי את המחברת לקלארנס.
+    תני את המחברת לגרטרוד.
 
 הגבילו את שיחותיכם לנושאים המפורטים לעיל. אל תנסו לנהל שיחה על נושאים כלליים כמו:
-מלחמת ארה""ב- ספרד
-פיתוח נדל""ן",""
+    מלחמת ארה""ב- ספרד
+    פיתוח נדל""ן",""
 "997.0","8.0","","נ.ב. מאמצים רבים נעשו על מנת לתרגם את הקלט בצורה הטבעית ביותר,
 ואנו מקווים שזו תהיה החווייה שלכם.
 זכרו כי בעת הצורך ביכולתכם להקליד פקודות באנגלית.
