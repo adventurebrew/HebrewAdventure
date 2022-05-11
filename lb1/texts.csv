@@ -15,7 +15,7 @@
 "0.0","13.0","You see nothing special.","את לא רואה שום דבר מיוחד.",""
 "0.0","14.0","You can't do that.","את לא יכולה לעשות את זה.",""
 "0.0","15.0","You don't have it.","אין לך את זה.",""
-"0.0","16.0","You don't see it here.","את לא רואה את זה כאן.",""
+"0.0","16.0","16.0","את לא רואה את זה כאן.",""
 "0.0","17.0","Okay.","בסדר.",""
 "0.0","18.0","It is very difficult to talk to two people at once.","זה מאוד מסובך לדבר עם שני אנשים בו זמנית.",""
 "1.0","0.0","A weather-beaten dock extends from the island's edge out into the alligator-infested bayou. Toward the center of the island you can see the old plantation house.","רציף שחוק נמתח מקצהו של האי אל עבר הביצה שורצת התנינים. בקרבת מרכז האי את רואה את בית האחוזה הישן.",""
@@ -40,9 +40,9 @@
 "2.0","1.0","You must enter the tomb to do that.","עלייך להיכנס לקבר כדי לעשות זאת.",""
 "2.0","2.0","The tomb door is sealed. You can't enter it.","הדלת של הקבר אטומה. את לא יכולה להיכנס.",""
 "2.0","3.0","The tomb door isn't locked.","הדלת של הקבר אינה נעולה.",""
-"2.0","4.0","There is no keyhole, or handle, to the tomb door. It is sealed from the inside.","אין חור מנעול, או ידית, לדלת של הקבר. היא אטומה מבפנים.",""
+"2.0","4.0","There is no keyhole, or handle, to the tomb door. It is sealed from the inside.","אין חור מנעול, או ידית, לדלת הקבר. היא אטומה מבפנים.",""
 "2.0","5.0","The tomb door is firmly sealed. No matter what you do, you cannot open it.","הדלת של הקבר אטומה בחוזקה. לא משנה מה תעשי, לא תצליחי לפתוח אותה.",""
-"2.0","6.0","One tomb has the name DIJON carved over the door and CROUTON has been inscribed over the door of the other.","השם 'דיז'ון' חרוט מעל דלתו של קבר אחד ו'קרוטון' רשום מעל הדלת של השני.",""
+"2.0","6.0","One tomb has the name DIJON carved over the door and CROUTON has been inscribed over the door of the other.","השם 'דיז'ון' חרוט מעל דלתו של הקבר אחד ומעל השני רשום 'קרוטון'.",""
 "2.0","7.0","Each gravestone is dedicated to a member of the Crouton family.","כל אחת מהמצבות מוקדשת לבן משפחת קרוטון.",""
 "2.0","8.0","A path leads to the chapel from the cemetery.","שביל מוביל מהכנסייה לעבר בית הקברות.",""
 "2.0","9.0","You don't really believe in ghosts, do you?!","את לא באמת מאמינה ברוחות רפאים, נכון?!",""
@@ -484,7 +484,7 @@
 "31.0","24.0","It sure looks sharp!","הוא בהחלט נראה חד!",""
 "31.0","25.0","The mace looks rusted. Quite usable, though.","האלה נראית חלודה. עם זאת, עדיין שימושית.",""
 "31.0","26.0","The handle is inlaid with beautiful mother-of-pearl.","הידית משובצת בצדפת פנינים יפהפייה.",""
-"31.0","27.0","Cautiously, you peek inside the open door of the cabinet. Not surprisingly, part of the Colonel's weapons collection is housed there. Within the cabinet, you see an Australian boomerang, a steel cutlass%s a mace, and an antique crossbow.","מסוקרנת, את מציצה מבעד לדלת הארון הפתוחה. שלא במפתיע, חלק מאוסף כלי הנשק של הקולונל מאוחסן כאן. בתוך הארון, את רואה בומרנג אוסטרלי, %s פגיונות פלדה, אלה, וקשת עתיקה.",""
+"31.0","27.0","Cautiously, you peek inside the open door of the cabinet. Not surprisingly, part of the Colonel's weapons collection is housed there. Within the cabinet, you see an Australian boomerang, a steel cutlass%s a mace, and an antique crossbow.","מסוקרנת, את מציצה מבעד לדלת הארון הפתוחה. שלא במפתיע, חלק מאוסף כלי הנשק של הקולונל מאוחסן כאן. בתוך הארון, את רואה בומרנג אוסטרלי, פגיון פלדה%s אלה, וקשת עתיקה.",""
 "31.0","28.0","None of the rifles are loaded.","אף לא אחד מהרובים טעון.",""
 "31.0","29.0","You carefully open the glass door of the cabinet and look inside. Stored within it is the Colonel's rifle collection.","את פותחת בזהירות את דלת הארון השבירה ומתבוננת בפנים. בתוכו איחסן הקולונל את אוסף הרובים שלו.",""
 "31.0","30.0","There is nothing in the rhino head.","בתוך ראש הקרנף אין דבר.",""
@@ -5854,7 +5854,7 @@ Corinna Abdul","פיתוח מערכות
 "385.0","8.0","Now, now! There's no need for that!","נו, נו! אין צורך בזה!",""
 "385.0","9.0","Even though he IS attractive, you'll pass.","למרות שהוא מושך, את תוותרי.",""
 "385.0","10.0","It's tempting, but it's not you.","זה מפתה, אבל זה לא את.",""
-"386.0","0.0","""Come and get it!""","""בואי קחי את זה!""",""
+"386.0","0.0","""Come and get it!""","""בוא קח את זה!""",""
 "400.0","0.0","Is that Beauregard barking?","אלו נביחות של בורגארד?",""
 "401.0","0.0","You hear scuffling upstairs.","את שומעת התכתשות למעלה.",""
 "401.0","1.0","You hear scuffling further upstairs.","את שומעת התכתשות בקומה העליונה.",""
@@ -6034,7 +6034,7 @@ Have you previously attended a performance of
 "410.0","8.0","You examine the entire fireplace poker with the monocle. Oh, oh! There are traces of blood on it!","את בוחנת את מוט הגחלים בעזרת המשקף. הו, הו! יש עליו עקבות של דם!",""
 "410.0","9.0","Squinting into the monocle you carefully examine the piece of broken record. Closely situated to each other, you notice two different fingerprints.","את ממצמצת אל תוך המשקף ובוחנת בזהירות את פיסת התקליט השבורה. ממוקמים זה לצד זה, את מבחינה בשתי טביעות אצבע שונות.",""
 "410.0","10.0","Upon opening the diary you see a small inky fingerprint inside the front cover. You examine it more closely with Wilbur's monocle.","את פותחת את היומן ומגלה טביעת אצבע קטנה בדיו על עמוד השער מבפנים. את בוחנת אותה מקרוב בעזרת המשקף של ווילבור.",""
-"410.0","11.0","You examine it with the monocle, but don't see anything interesting.","את בוחנת את זה עם המשקף, אך לא מבחינה בדבר מה מעניין.",""
+"410.0","11.0","You examine it with the monocle, but don't see anything interesting.","את בוחנת את זה עם המשקף, ואולם אינך מבחינה בדבר מה מעניין.",""
 "410.0","12.0","It's already loaded.","זה כבר טעון.",""
 "410.0","13.0","You have no bullet.","אין לך קליעים.",""
 "410.0","14.0","You have no gun.","אין לך אקדח.",""
@@ -6210,11 +6210,13 @@ New Orleans, LA","1925
 "779.0","4.0","""I don't know. I have studying to do....""","""לא יודעת. יש לי מבחנים להשלים....""",""
 "779.0","5.0","""Oh, come on! It'll be a scream! It's such a creepy old place; you might find it interesting.""","""נו, בחייך! יהיה פצצה! זהו מקום ישן וכל כך מפחיד; את מה זה תיהני.""",""
 "779.0","6.0","""Okay. Count me in.""","""סבבה. תרשמי אותי.""",""
-"779.0","7.0","","תרגום עברי מבית ""הרפתקה עברית""
+"779.0","7.0","","מהדורה עברית
    תכנות: צביקה הרמתי
    גרפיקה: ניב באר
    תרגום: עומר כהן, שני רוז
-   בדיקות והגהות: שי גרינברג",""
+   בדיקות והגהות: שי גרינברג
+
+      מבית ""הרפתקה עברית""",""
 "780.0","0.0","Two nights later...","כעבור שני לילות...",""
 "780.0","1.0","   Programmed by:
 Chris Hoyt & Chris Iden","תכנות מאת:
