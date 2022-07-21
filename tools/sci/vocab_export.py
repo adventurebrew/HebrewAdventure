@@ -3,7 +3,7 @@
 # while "new" version (used by vocab.900) has 8 bits ascii
 #
 # reference: http://sci.sierrahelp.com/Documentation/SCISpecifications/27-TheParser.html#AEN5794
-# for Hebrew translation, we need to the vocab to be in the newer version
+# for Hebrew translation, we need the vocab to be in the newer version
 
 # this exports vocab file to a csv
 # see also vocab_import.py
@@ -74,6 +74,8 @@ def vocab_export(gamedir, csvdir):
             if at_start_of_word:
                 at_start_of_word = False
                 current_word = current_word[:int(val)]
+            elif val < 0x20:
+                print(f"Warning: strange char, with ascii value {val}. Ignoring")
             elif val < 0x80:
                 current_word += chr(val)
             else:

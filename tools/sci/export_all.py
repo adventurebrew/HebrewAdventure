@@ -1,6 +1,3 @@
-# C:\Zvika\Games\sq3ega\sq3ega.checking C:\Zvika\Games\sq3ega\TEMP -g SCI0
-# C:\Zvika\Games\gk1 "C:\Zvika\Games\GK mess" -g SCI32
-
 import argparse
 import glob
 import os
@@ -39,6 +36,7 @@ if __name__ == "__main__":
                                      description='Exports resources for translation',
                                      epilog='''
 
+Some preparations:
 1. You need to work with Kawa's latest SCICompanion 
     (at lease 3.2.3.2, from http://helmet.kafuka.org/sci/SCICompanion.exe)
 2. Enable Game->Properties->Manage resources as patch files->Yes
@@ -53,6 +51,8 @@ if __name__ == "__main__":
     parser.add_argument("gamedir", help="directory containing the game files (as patches - see below)")
     parser.add_argument("csvdir", help="directory to write .csv and combined .xlsx files")
     args = parser.parse_args()
+
+    Path(args.csvdir).mkdir(exist_ok=True)
 
     strings_export.strings_export(os.path.join(args.gamedir, 'src'), args.csvdir)
     texts_export.texts_export(args.gamedir, args.csvdir)
