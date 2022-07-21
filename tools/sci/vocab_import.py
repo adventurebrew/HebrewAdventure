@@ -10,9 +10,6 @@ from vocab_export import write_csv
 
 VOCAB_NEW = 'vocab.900'
 VOCAB_OLD = 'vocab.000'
-# INPUT_FILE = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.csv"
-# OUTPUT_FILE1 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3\patches\vocab.000"
-# OUTPUT_FILE2 = r"C:\Zvika\ScummVM-dev\HebrewAdventure\sq3.scripts\vocab.900"
 ENCODING = 'windows-1255'
 
 
@@ -113,27 +110,53 @@ def read_csv_file(csvdir):
 def write_vocab_file(entries, patchesdir, output_game_dir):
     binary_vocab = [0x86, 0x00]  # vocab signature
     # vocab.900 starts with 255 16-bit pointers
-    # they aren't interesting...
+    # save place for them, we'll return to them later
     binary_vocab.extend([0] * (255 * 2))
+    pointers = [0] * 255
+    current_char = None
+    previous_word = ''
 
+    words = {}
     for entry in entries:
+        for word in entry['words']:
+            words[word] = entry
+
+    for word in sorted(words.keys()):
+        if word[0] != current_char:
+            current_char = word[0]
+            pointers[ord(current_char)] = len(binary_vocab) - 2     # magic number is ignored
+        entry = words[word]
         byte1 = entry['cls'] >> 4
         byte2 = (entry['cls'] & 0x0f) << 4
         byte2 += entry['group'] >> 8
         byte3 = entry['group'] & 0xff
 
-        for word in entry['words']:
-            # don't bother with the useless compression
-            binary_vocab.append(0)
+        # "compression"
+        same_letters = 0
+        for p, c in zip(previous_word, word):
+            if p == c:
+                same_letters += 1
+            else:
+                break
+        # print(previous_word, word, same_letters, end='\t')
+        binary_vocab.append(same_letters)
+        previous_word = word
 
-            chars = str.encode(word, ENCODING)
-            for char in chars:
-                assert 0 <= char <= 255
-                binary_vocab.append(char)
-            binary_vocab.append(0)  # end of string (only on newer format!)
-            binary_vocab.append(byte1)
-            binary_vocab.append(byte2)
-            binary_vocab.append(byte3)
+        chars = str.encode(word[same_letters:], ENCODING)
+        # print(chars)
+        for char in chars:
+            assert 0 <= char <= 255
+            binary_vocab.append(char)
+        binary_vocab.append(0)  # end of string (only on newer format!)
+        binary_vocab.append(byte1)
+        binary_vocab.append(byte2)
+        binary_vocab.append(byte3)
+
+    i = 2
+    for pointer in pointers:
+        binary_vocab[i] = pointer % 0x100
+        binary_vocab[i+1] = pointer // 0x100
+        i += 2
 
     output_file1 = os.path.join(patchesdir, VOCAB_OLD)
     (Path(output_game_dir) / VOCAB_OLD).unlink(missing_ok=True)

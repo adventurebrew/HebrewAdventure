@@ -47,6 +47,8 @@ if __name__ == "__main__":
     parser.add_argument("csvdir", help="directory to write .csv, combined .xlsx files and assembly .sca files")
     args = parser.parse_args()
 
+    Path(args.csvdir).mkdir(exist_ok=True)
+
     # first, let's make a disassembly
     asm_path = Path(args.csvdir) / 'asm' / 'orig'
     assembler.script_disasm.disasm_all(args.gamedir, asm_path)
