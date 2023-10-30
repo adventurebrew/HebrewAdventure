@@ -1,0 +1,74 @@
+name: Update Translations
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'  # This will schedule the workflow to run every Sunday at midnight
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m venv venv
+        . venv/bin/activate
+        git clone --depth 1 https://github.com/adventurebrew/re-quest.git
+        echo "PYTHONPATH=$PYTHONPATH:$(pwd)/re-quest/tools" >> $GITHUB_ENV
+
+    - name: Check translation updates
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        base_branch=test_auto_update
+
+        # git config --global core.autocrlf input
+        git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+        git config --global user.name "${{ github.actor }}"
+        git fetch origin $base_branch
+
+        rootdir=$(pwd)
+
+        for dir in */ ; do
+
+          # Skip directories without a Google Sheets ID file
+          if [ ! -f "$rootdir/$dir/google_sheets_id.txt" ]; then
+            continue
+          fi
+
+          cd $rootdir/$dir
+
+          basename=$(basename $dir)
+
+          new_branch=ci-update-translation-$basename
+          git checkout -b $new_branch origin/$base_branch
+
+          GOOGLE_SHEETS_ID=$(cat google_sheets_id.txt)
+          curl -L -o messages.csv "https://docs.google.com/spreadsheets/d/$GOOGLE_SHEETS_ID/export?format=csv"
+
+          python -m sci.tradusci_import -t PATCHES > /dev/null
+
+          # Add and commit changes, skip if there are no changes
+          git add PATCHES messages.csv
+
+          message="${basename^^}: update translation"
+          git commit -m "$message" || true
+
+          # Force push changes to the same branch, replacing any existing commits
+          git push --force origin HEAD:$new_branch
+
+          gh pr edit $new_branch -b "$message" -t "$message" \
+            && gh pr reopen $new_branch \
+            || gh pr create --fill -B $base_branch -H $new_branch --label automated
+
+        done
