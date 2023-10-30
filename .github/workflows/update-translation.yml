@@ -3,7 +3,8 @@ name: Update Translations
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0'  # This will schedule the workflow to run every Sunday at midnight
+    # Runs at 20:00 UTC on every day-of-week from Sunday through Thursday.
+    - cron: '0 20 * * 0-4'
 
 jobs:
   setup:
@@ -52,28 +53,33 @@ jobs:
         git clone --depth 1 https://github.com/adventurebrew/re-quest.git
         echo "PYTHONPATH=$PYTHONPATH:$(pwd)/re-quest/tools" >> $GITHUB_ENV
 
-    - name: Check translation updates
-      env:
-        GH_TOKEN: ${{ github.token }}
-      working-directory: ${{ matrix.dir }}
+    - name: Setup git
       run: |
-        base_branch=test_auto_update
-
         # git config --global core.autocrlf input
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
         git config --global user.name "${{ github.actor }}"
         git fetch origin $base_branch
+        echo "basename=$(basename ${{ matrix.dir }})" >> $GITHUB_ENV
+        echo "base_branch=test_auto_update" >> $GITHUB_ENV
+        echo "new_branch=ci-update-translation-${{ matrix.dir }}" >> $GITHUB_ENV
 
-        basename=$(basename ${{ matrix.dir }})
-
-        new_branch=ci-update-translation-$basename
+    - name: Checkout new branch
+      run: |
         git checkout -b $new_branch origin/$base_branch
 
+    - name: Update translation files
+      working-directory: ${{ matrix.dir }}
+      run: |
         GOOGLE_SHEETS_ID=$(cat google_sheets_id.txt)
         curl -L -o messages.csv "https://docs.google.com/spreadsheets/d/$GOOGLE_SHEETS_ID/export?format=csv"
 
         python -m sci.tradusci_import -t PATCHES > /dev/null
 
+    - name: Persist translation updates
+      env:
+        GH_TOKEN: ${{ github.token }}
+      working-directory: ${{ matrix.dir }}
+      run: |
         # Add and commit changes, skip if there are no changes
         git add PATCHES messages.csv
 
