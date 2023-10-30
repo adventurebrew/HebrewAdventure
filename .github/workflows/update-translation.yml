@@ -6,8 +6,34 @@ on:
     - cron: '0 0 * * 0'  # This will schedule the workflow to run every Sunday at midnight
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set matrix for translation updates
+      id: set-matrix
+      run: |
+        echo "MATRIX=$(find . -name 'google_sheets_id.txt' -exec dirname {} \; | xargs -I {} basename {} | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
+
+  sanity:
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+    - run: |
+        echo "${{needs.setup.outputs.MATRIX}}"
+
+
+  check-updates:
+    runs-on: ubuntu-latest
+    needs: setup
+    strategy:
+      matrix:
+        dir: ${{fromJson(needs.setup.outputs.MATRIX)}}
 
     steps:
     - name: Checkout repository
@@ -29,6 +55,7 @@ jobs:
     - name: Check translation updates
       env:
         GH_TOKEN: ${{ github.token }}
+      working-directory: ${{ matrix.dir }}
       run: |
         base_branch=test_auto_update
 
@@ -37,38 +64,26 @@ jobs:
         git config --global user.name "${{ github.actor }}"
         git fetch origin $base_branch
 
-        rootdir=$(pwd)
+        basename=$(basename ${{ matrix.dir }})
 
-        for dir in */ ; do
+        new_branch=ci-update-translation-$basename
+        git checkout -b $new_branch origin/$base_branch
 
-          # Skip directories without a Google Sheets ID file
-          if [ ! -f "$rootdir/$dir/google_sheets_id.txt" ]; then
-            continue
-          fi
+        GOOGLE_SHEETS_ID=$(cat google_sheets_id.txt)
+        curl -L -o messages.csv "https://docs.google.com/spreadsheets/d/$GOOGLE_SHEETS_ID/export?format=csv"
 
-          cd $rootdir/$dir
+        python -m sci.tradusci_import -t PATCHES > /dev/null
 
-          basename=$(basename $dir)
+        # Add and commit changes, skip if there are no changes
+        git add PATCHES messages.csv
 
-          new_branch=ci-update-translation-$basename
-          git checkout -b $new_branch origin/$base_branch
+        message="${basename^^}: update translation"
+        git commit -m "$message" || echo "No changes"
 
-          GOOGLE_SHEETS_ID=$(cat google_sheets_id.txt)
-          curl -L -o messages.csv "https://docs.google.com/spreadsheets/d/$GOOGLE_SHEETS_ID/export?format=csv"
+        # Force push changes to the same branch, replacing any existing commits
+        git push --force origin HEAD:$new_branch
 
-          python -m sci.tradusci_import -t PATCHES > /dev/null
-
-          # Add and commit changes, skip if there are no changes
-          git add PATCHES messages.csv
-
-          message="${basename^^}: update translation"
-          git commit -m "$message" || true
-
-          # Force push changes to the same branch, replacing any existing commits
-          git push --force origin HEAD:$new_branch
-
-          gh pr edit $new_branch -b "$message" -t "$message" \
-            && gh pr reopen $new_branch \
-            || gh pr create --fill -B $base_branch -H $new_branch --label automated
-
-        done
+        gh pr edit $new_branch -b "$message" -t "$message" \
+          && gh pr reopen $new_branch \
+          || gh pr create --fill -B $base_branch -H $new_branch --label automated \
+          || echo "No need to open PR"
