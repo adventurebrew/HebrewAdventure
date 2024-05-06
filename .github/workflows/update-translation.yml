@@ -6,6 +6,9 @@ on:
     # Runs at 20:00 UTC on every day-of-week from Sunday through Thursday.
     - cron: '0 20 * * 0-4'
 
+env:
+  BASE_BRANCH: master
+
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -60,7 +63,7 @@ jobs:
         git config --global user.name "${{ github.actor }}"
         git fetch origin $base_branch
         echo "basename=$(basename ${{ matrix.dir }})" >> $GITHUB_ENV
-        echo "base_branch=test_auto_update" >> $GITHUB_ENV
+        echo "base_branch=${{ env.BASE_BRANCH }}" >> $GITHUB_ENV
         echo "new_branch=ci-update-translation-${{ matrix.dir }}" >> $GITHUB_ENV
 
     - name: Checkout new branch
