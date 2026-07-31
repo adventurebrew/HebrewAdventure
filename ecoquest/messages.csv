@@ -1,5 +1,5 @@
 file,noun,verb,condition,sequence,talker,padding,text,translation,comment_padding,comment_text
-811.MSG,1,0,0,1,99,00000000,"      EcoQuest
+811.msg,1,0,0,1,99,00000000,"      EcoQuest
 The Search for Cetus
    Version: 1.1   ",אקו קווסט 1: החיפוש אחר סיטוס גרסא 1.1,36bba82b0100,
 0.msg,1,0,1,1,98,00000000,Restart game,התחילו את המשחק מההתחלה.,,
@@ -3316,9 +3316,6 @@ Michael Hutchison
       טרנס סי פולס
       מייקל האצ'יסון
       ואס נוקודיאן",,
-811.msg,1,0,0,1,99,00000000,"      EcoQuest
-The Search for Cetus
-   Version:   ",,,
 816.msg,1,0,0,1,99,00000000,"...What came from man must now return,
 Lest the Kingdom die, the oceans burn...","...את אשר הביא האדם יש להחזיר
 שמא את הממלכה ימית ואת הים יבעיר...",,
