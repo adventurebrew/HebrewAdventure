@@ -643,12 +643,14 @@ code_0218:
 		(= theGStrength [gStrength param1])
 	)
 	(= [gStrength 13] (+ [gStrength 13] (/ theGStrength 4)))
+	;Z fix: decompiler mis-folded the (= [global150 param1] ...) store into the
+	;Z gStrength index. Sierra's original reloads param1 as the index. Splitting
+	;Z the store out and indexing gStrength by param1 restores the original code.
+	(= [global150 param1] (+ [global150 param1] theGStrength))
 	(if
 		(>=
 			[global150 param1]
-			[gStrength (= [global150 param1]
-				(+ [global150 param1] theGStrength)
-			)]
+			[gStrength param1]
 		)
 		(= [global150 param1]
 			(- [global150 param1] [gStrength param1])
