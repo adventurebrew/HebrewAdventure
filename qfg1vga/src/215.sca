@@ -1,0 +1,5297 @@
+.sca 2
+.game qfg1vga
+.sci11		; script+heap pair (SCI1.1)
+
+.exports
+  0 = &obj.closeCombat
+  1 = &obj.aSpell
+  2 = &obj.pointBox
+  3 = &obj.blood
+  4 = &obj.zapCrap
+
+.code
+closeCombat::dispose:
+  link.b	0x1
+  pushi.b	0x6f
+  push0
+  lofsa.w	&obj.monHurt
+  send	0x4
+  pushi.b	0x6f
+  push0
+  super.b	0x6, 0x4
+  ret
+
+closeCombat::init:
+  pushi.b	0x6e
+  push0
+  lofsa.w	&obj.monHurt
+  send	0x4
+  push1
+  pushi.w	0x11c
+  callb.b	0x5, 0x2
+  push1
+  pushi.b	0x66
+  callb.b	0x6, 0x2
+  pushi.w	0x15b
+  push1
+  push0
+  lag.b	0x50
+  send	0x6
+  pushi.b	0x6e
+  push0
+  pushi.w	0x9b
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.pointBox
+  send	0xe
+  ldi.b	0x0
+  sal.b	0xa
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_398
+  push2
+  pushi.w	0x80
+  pushi.b	0x6d
+  callk.b	Load, 0x4
+  ldi.b	0x1
+  sal.b	0x12
+  ldi.b	0x0
+  sal.b	0xa
+  push2
+  push1
+  pushi.w	0x217
+  lofsa.w	&obj.blood
+  send	0x6
+  jmp.b	@code_486
+code_398:
+  ldi.b	0x0
+  sal.b	0x12
+  pushi.b	0x6e
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  pushi.b	0x66
+  push0
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.dodgeLIcon
+  send	0x12
+  pushi.b	0x6e
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  pushi.b	0x66
+  push0
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.dodgeRIcon
+  send	0x12
+  lsg.b	0x7a
+  ldi.b	0x2
+  ne?
+  bnt.b	@code_457
+  pushi.b	0x39
+  push0
+  lofsa.w	&obj.switchLoop
+  send	0x4
+code_457:
+  push2
+  pushi.w	0x80
+  pushi.b	0x66
+  callk.b	Load, 0x4
+  push2
+  push1
+  pushi.w	0x217
+  lofsa.w	&obj.blood
+  send	0x6
+  push2
+  push1
+  pushi.w	0x217
+  lofsa.w	&obj.aSpell
+  send	0x6
+code_486:
+  ldi.b	0x1
+  sag.b	0xf5
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+closeCombat::doit:
+  pushi.b	0x39
+  push0
+  lofsa.w	&obj.pointBox
+  send	0x4
+  pushi.b	0x39
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+closeCombat::handleEvent:
+  link.b	0x4
+  ;Z ===== CHEAT: Ctrl+Shift + click during combat -> zero enemy HP (instant win) =====
+  ;Z Combat is mouse-driven and keyboard events never reach this handler, but a
+  ;Z mouse event carries the keyboard modifier state. So the combo we detect is a
+  ;Z left-click made while BOTH Ctrl and Shift are held. We zero the enemy HP and
+  ;Z fall through, so the click's normal attack resolves the kill. An ordinary
+  ;Z click (or Ctrl-only, or Shift-only) still fights normally.
+  ;Z (Right-click can't be used: the verb/icon system consumes it before combat.)
+  pushi.b	0x1f		; (pEvent type?)
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x1		; evMOUSEBUTTON (a mouse press)
+  and
+  bnt.b	@ccWinSkip
+  pushi.b	0x3d		; (pEvent modifiers?)
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x4		; kSciKeyModCtrl - require Ctrl held
+  and
+  bnt.b	@ccWinSkip
+  pushi.b	0x3d		; (pEvent modifiers?)
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x3		; kSciKeyModShift - require Shift held
+  and
+  bnt.b	@ccWinSkip
+  lal.b	0x1		; local1 = combat manager (may be 0 before combat inits)
+  bnt.b	@ccWinSkip
+  pushi.w	0x27b		; ([local1] theFighter:) hp: 0
+  push1
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  ldi.b	0x0
+  sag.w	0x118		; gMonsterHealth (global280) = 0 -> on-screen bar
+ccWinSkip:
+  pushi.b	0x1f
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_542
+  pushi.b	0x49
+  push1
+  push1
+  lap.b	0x1
+  send	0x6
+  ldi.b	0x1
+  ret
+
+code_542:
+  pushi.w	0x281
+  push0
+  pToa.b	0x12
+  send	0x4
+  not
+  bt.b	@code_564
+  lag.b	0xf5
+  not
+  bt.b	@code_564
+  push1
+  pushi.b	0x66
+  callb.b	0x7, 0x2
+code_564:
+  bnt.b	@code_611
+  pushi.b	0x49
+  push1
+  push1
+  lap.b	0x1
+  send	0x6
+code_574:
+  pushi.b	0x1f
+  push0
+  pushi.b	0x6d
+  push1
+  pushi.b	0x47
+  class.b	0x7
+  send	0x6
+  sat.b	0x3
+  send	0x4
+  bnt.b	@code_601
+  pushi.b	0x6f
+  push0
+  lat.b	0x3
+  send	0x4
+  jmp.b	@code_574
+code_601:
+  pushi.b	0x6f
+  push0
+  lat.b	0x3
+  send	0x4
+  ldi.b	0x1
+  ret
+
+code_611:
+  pToa.b	0x26
+  bnt.b	@code_677
+  push1
+  pushi.b	0x25
+  push0
+  lap.b	0x1
+  send	0x4
+  le?
+  bnt.b	@code_643
+  pprev
+  ldi.b	0x8
+  le?
+  bnt.b	@code_643
+  pushi.b	0x25
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x1
+  ne?
+code_643:
+  bt.b	@code_656
+  pushi.b	0x1f
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x1
+  eq?
+code_656:
+  bnt.b	@code_668
+  pushi.w	0x91
+  push0
+  pToa.b	0x26
+  send	0x4
+  jmp.b	@code_677
+code_668:
+  pushi.b	0x49
+  push1
+  push1
+  lap.b	0x1
+  send	0x6
+  ret
+
+code_677:
+  pushi.b	0x1f
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_1408
+  push1
+  push0
+  lap.b	0x1
+  send	0x4
+  sat.b	0x0
+  push0
+  push0
+  lap.b	0x1
+  send	0x4
+  sat.b	0x1
+  push
+  ldi.w	0x90
+  lt?
+  bnt.w	@code_997
+  lst.b	0x0
+  ldi.w	0x11d
+  gt?
+  bnt.w	@code_856
+  ldi.b	0x2
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_750
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoThrust
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_1397
+code_750:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_782
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  pushi.b	0x3
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_782:
+  pushi.w	0x24b
+  push1
+  pushi.b	0x17
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_836
+  push1
+  pushi.b	0x17
+  calle.w	0x32e, 0x18, 0x2
+  bnt.w	@code_1397
+  pushi.w	0x2aa
+  push1
+  ldi.b	0x10
+  lsgi.b	0x7d
+  pToa.b	0x12
+  send	0x6
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x92
+  push2
+  lofsa.w	&obj.egoFlame
+  push
+  pushSelf
+  self	0x8
+  jmp.w	@code_1397
+code_836:
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push1
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_856:
+  lst.b	0x0
+  ldi.w	0x109
+  lt?
+  bnt.w	@code_1397
+  ldi.b	0x1
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_891
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoThrust
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_1397
+code_891:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_923
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  pushi.b	0x3
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_923:
+  pushi.w	0x24b
+  push1
+  pushi.b	0x15
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_977
+  push1
+  pushi.b	0x15
+  calle.w	0x32e, 0x18, 0x2
+  bnt.w	@code_1397
+  pushi.w	0x2aa
+  push1
+  ldi.b	0x10
+  lsgi.b	0x7d
+  pToa.b	0x12
+  send	0x6
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x92
+  push2
+  lofsa.w	&obj.egoZap
+  push
+  pushSelf
+  self	0x8
+  jmp.w	@code_1397
+code_977:
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push1
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_997:
+  lst.b	0x1
+  ldi.w	0x9f
+  gt?
+  bnt.w	@code_1277
+  lst.b	0x0
+  ldi.w	0x11d
+  gt?
+  bnt.w	@code_1147
+  ldi.b	0x0
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_1041
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoDodge
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_1397
+code_1041:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1073
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  pushi.b	0x3
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_1073:
+  pushi.w	0x24b
+  push1
+  pushi.b	0x14
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1127
+  push1
+  pushi.b	0x14
+  calle.w	0x32e, 0x18, 0x2
+  bnt.w	@code_1397
+  pushi.w	0x2aa
+  push1
+  ldi.b	0x10
+  lsgi.b	0x7d
+  pToa.b	0x12
+  send	0x6
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x92
+  push2
+  lofsa.w	&obj.egoDazzle
+  push
+  pushSelf
+  self	0x8
+  jmp.w	@code_1397
+code_1127:
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push1
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_1147:
+  lst.b	0x0
+  ldi.w	0x109
+  lt?
+  bnt.w	@code_1397
+  ldi.b	0x2
+  sal.b	0x5
+  pushi.b	0x3
+  push0
+  lofsa.w	&obj.pointBox
+  send	0x4
+  push
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_1191
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoBlock
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_1397
+code_1191:
+  lsg.b	0xc
+  ldi.b	0xe
+  eq?
+  bt.b	@code_1239
+  lsg.b	0xc
+  ldi.w	0xab
+  eq?
+  bt.b	@code_1239
+  lsg.b	0xc
+  ldi.b	0x58
+  eq?
+  bt.b	@code_1239
+  lsg.b	0xc
+  ldi.b	0x59
+  eq?
+  bt.b	@code_1239
+  lsg.b	0xc
+  ldi.b	0x5d
+  eq?
+  bt.b	@code_1239
+  lsg.b	0xc
+  ldi.b	0x49
+  eq?
+  bt.b	@code_1239
+  lsg.b	0xc
+  ldi.b	0x5b
+  eq?
+code_1239:
+  bnt.b	@code_1261
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push2
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_1397
+code_1261:
+  pushi.w	0x29e
+  push1
+  push1
+  push1
+  lsg.b	0xb
+  callk.b	ScriptID, 0x2
+  send	0x6
+  jmp.w	@code_1397
+code_1277:
+  pushi.w	0x11d
+  lat.b	0x0
+  gt?
+  bnt.w	@code_1397
+  pprev
+  ldi.w	0x109
+  gt?
+  bnt.w	@code_1397
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1389
+  lsg.b	0xc
+  ldi.b	0xe
+  eq?
+  bt.b	@code_1353
+  lsg.b	0xc
+  ldi.w	0xab
+  eq?
+  bt.b	@code_1353
+  lsg.b	0xc
+  ldi.b	0x58
+  eq?
+  bt.b	@code_1353
+  lsg.b	0xc
+  ldi.b	0x59
+  eq?
+  bt.b	@code_1353
+  lsg.b	0xc
+  ldi.b	0x5d
+  eq?
+  bt.b	@code_1353
+  lsg.b	0xc
+  ldi.b	0x49
+  eq?
+  bt.b	@code_1353
+  lsg.b	0xc
+  ldi.b	0x5b
+  eq?
+code_1353:
+  bnt.b	@code_1374
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push2
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.b	@code_1397
+code_1374:
+  pushi.w	0x29e
+  push1
+  push1
+  push1
+  lsg.b	0xb
+  callk.b	ScriptID, 0x2
+  send	0x6
+  jmp.b	@code_1397
+code_1389:
+  pushi.b	0x39
+  push0
+  lofsa.w	&obj.switchLoop
+  send	0x4
+code_1397:
+  pushi.b	0x49
+  push1
+  push1
+  lap.b	0x1
+  send	0x6
+  jmp.w	@code_2199
+code_1408:
+  push0
+  pushi.b	0x25
+  push0
+  lap.b	0x1
+  send	0x4
+  le?
+  bnt.w	@code_2199
+  pprev
+  ldi.b	0x8
+  le?
+  bnt.w	@code_2199
+  push0
+  callb.b	0x2, 0x0
+  pushi.b	0x25
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_1596
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  pushi.w	0x125
+  pushi.w	0x87
+  lag.b	0x1
+  send	0xc
+  ldi.b	0x2
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_1490
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoThrust
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_2190
+code_1490:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1522
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  pushi.b	0x3
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_1522:
+  pushi.w	0x24b
+  push1
+  pushi.b	0x17
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1576
+  push1
+  pushi.b	0x17
+  calle.w	0x32e, 0x18, 0x2
+  bnt.w	@code_2190
+  pushi.w	0x2aa
+  push1
+  ldi.b	0x10
+  lsgi.b	0x7d
+  pToa.b	0x12
+  send	0x6
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x92
+  push2
+  lofsa.w	&obj.egoFlame
+  push
+  pushSelf
+  self	0x8
+  jmp.w	@code_2190
+code_1576:
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push1
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_1596:
+  dup
+  ldi.b	0x4
+  eq?
+  bnt.w	@code_1753
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  pushi.w	0x125
+  pushi.w	0xaa
+  lag.b	0x1
+  send	0xc
+  ldi.b	0x0
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_1647
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoDodge
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_2190
+code_1647:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1679
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  pushi.b	0x3
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_1679:
+  pushi.w	0x24b
+  push1
+  pushi.b	0x14
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1733
+  push1
+  pushi.b	0x14
+  calle.w	0x32e, 0x18, 0x2
+  bnt.w	@code_2190
+  pushi.w	0x2aa
+  push1
+  ldi.b	0x10
+  lsgi.b	0x7d
+  pToa.b	0x12
+  send	0x6
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x92
+  push2
+  lofsa.w	&obj.egoDazzle
+  push
+  pushSelf
+  self	0x8
+  jmp.w	@code_2190
+code_1733:
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push1
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_1753:
+  dup
+  ldi.b	0x8
+  eq?
+  bnt.w	@code_1910
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  pushi.w	0xff
+  pushi.w	0x87
+  lag.b	0x1
+  send	0xc
+  ldi.b	0x1
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_1804
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoThrust
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_2190
+code_1804:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1836
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  pushi.b	0x3
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_1836:
+  pushi.w	0x24b
+  push1
+  pushi.b	0x15
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_1890
+  push1
+  pushi.b	0x15
+  calle.w	0x32e, 0x18, 0x2
+  bnt.w	@code_2190
+  pushi.w	0x2aa
+  push1
+  ldi.b	0x10
+  lsgi.b	0x7d
+  pToa.b	0x12
+  send	0x6
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x92
+  push2
+  lofsa.w	&obj.egoZap
+  push
+  pushSelf
+  self	0x8
+  jmp.w	@code_2190
+code_1890:
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push1
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_1910:
+  dup
+  ldi.b	0x6
+  eq?
+  bnt.w	@code_2047
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  pushi.w	0xff
+  pushi.w	0xaa
+  lag.b	0x1
+  send	0xc
+  ldi.b	0x2
+  sal.b	0x5
+  lal.b	0xa
+  not
+  bnt.b	@code_1961
+  pushi.w	0x92
+  pushi.b	0x3
+  lofsa.w	&obj.egoBlock
+  push
+  pushSelf
+  lsl.b	0x5
+  self	0xa
+  jmp.w	@code_2190
+code_1961:
+  lsg.b	0xc
+  ldi.b	0xe
+  eq?
+  bt.b	@code_2009
+  lsg.b	0xc
+  ldi.w	0xab
+  eq?
+  bt.b	@code_2009
+  lsg.b	0xc
+  ldi.b	0x58
+  eq?
+  bt.b	@code_2009
+  lsg.b	0xc
+  ldi.b	0x59
+  eq?
+  bt.b	@code_2009
+  lsg.b	0xc
+  ldi.b	0x5d
+  eq?
+  bt.b	@code_2009
+  lsg.b	0xc
+  ldi.b	0x49
+  eq?
+  bt.b	@code_2009
+  lsg.b	0xc
+  ldi.b	0x5b
+  eq?
+code_2009:
+  bnt.b	@code_2031
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push2
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.w	@code_2190
+code_2031:
+  pushi.w	0x29e
+  push1
+  push1
+  push1
+  lsg.b	0xb
+  callk.b	ScriptID, 0x2
+  send	0x6
+  jmp.w	@code_2190
+code_2047:
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_2190
+  pushi.b	0x1f
+  push0
+  lap.b	0x1
+  send	0x4
+  push
+  ldi.b	0x44
+  eq?
+  bnt.w	@code_2190
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  pushi.w	0x113
+  pushi.w	0x98
+  lag.b	0x1
+  send	0xc
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.w	@code_2182
+  lsg.b	0xc
+  ldi.b	0xe
+  eq?
+  bt.b	@code_2146
+  lsg.b	0xc
+  ldi.w	0xab
+  eq?
+  bt.b	@code_2146
+  lsg.b	0xc
+  ldi.b	0x58
+  eq?
+  bt.b	@code_2146
+  lsg.b	0xc
+  ldi.b	0x59
+  eq?
+  bt.b	@code_2146
+  lsg.b	0xc
+  ldi.b	0x5d
+  eq?
+  bt.b	@code_2146
+  lsg.b	0xc
+  ldi.b	0x49
+  eq?
+  bt.b	@code_2146
+  lsg.b	0xc
+  ldi.b	0x5b
+  eq?
+code_2146:
+  bnt.b	@code_2167
+  pushi.w	0x127
+  pushi.b	0x6
+  push1
+  push0
+  push2
+  push0
+  push0
+  pushi.w	0xd7
+  lag.b	0x5b
+  send	0x10
+  jmp.b	@code_2190
+code_2167:
+  pushi.w	0x29e
+  push1
+  push1
+  push1
+  lsg.b	0xb
+  callk.b	ScriptID, 0x2
+  send	0x6
+  jmp.b	@code_2190
+code_2182:
+  pushi.b	0x39
+  push0
+  lofsa.w	&obj.switchLoop
+  send	0x4
+code_2190:
+  toss
+  pushi.b	0x49
+  push1
+  push1
+  lap.b	0x1
+  send	0x6
+code_2199:
+  ret
+
+closeCombat::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.b	@code_2256
+  pushi.w	0x2a8
+  push0
+  pToa.b	0x12
+  send	0x4
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  pushi.w	0x81
+  push1
+  pTos.b	0x12
+  lag.b	0x4a
+  send	0x6
+  pushi.w	0x81
+  push1
+  pTos.b	0x12
+  lag.b	0x49
+  send	0x6
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_2500
+code_2256:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_2443
+  pushi.w	0x2a5
+  push0
+  lal.b	0x1
+  send	0x4
+  bnt.b	@code_2317
+  ldi.b	0x2
+  aTop.b	0x14
+  push2
+  push1
+  pushi.b	0x75
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0xf4
+  push1
+  pushi.b	0xc
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  pToa.b	0x12
+  send	0x26
+  jmp.w	@code_2500
+code_2317:
+  pushi.w	0x27a
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x0
+  le?
+  bnt.b	@code_2360
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pushi.b	0xa
+  pToa.b	0x12
+  send	0xc
+  push2
+  pushi.b	0x40
+  pushi.b	0x41
+  calle.w	0x32e, 0x0, 0x4
+  jmp.w	@code_2500
+code_2360:
+  pushi.w	0x292
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  bnt.b	@code_2379
+  jmp.w	@code_2500
+code_2379:
+  lal.b	0x12
+  bnt.b	@code_2393
+  push2
+  push1
+  pushi.b	0x6d
+  pToa.b	0x12
+  send	0x6
+  jmp.b	@code_2401
+code_2393:
+  push2
+  push1
+  pushi.b	0x66
+  pToa.b	0x12
+  send	0x6
+code_2401:
+  pushi.w	0x281
+  push1
+  push1
+  pushi.w	0x282
+  push1
+  push0
+  pushi.w	0xf4
+  push1
+  pushi.b	0x8
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xff
+  pushi.w	0x139
+  push0
+  pToa.b	0x12
+  send	0x28
+  jmp.w	@code_2500
+code_2443:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_2482
+  push0
+  callb.b	0x3, 0x0
+  pushi.w	0x15b
+  push1
+  push0
+  lag.b	0x50
+  send	0x6
+  pushi.w	0xc5
+  push2
+  lsg.b	0x14
+  push1
+  lag.b	0x1
+  send	0x8
+  pushi.w	0x90
+  push1
+  push1
+  self	0x6
+  jmp.b	@code_2500
+code_2482:
+  dup
+  ldi.b	0x3
+  eq?
+  bnt.b	@code_2500
+  push2
+  pushi.b	0x7e
+  pushi.w	0x81
+  calle.w	0x32e, 0x0, 0x4
+code_2500:
+  toss
+  ret
+
+egoFlame::dispose:
+  push0
+  callb.b	0x3, 0x0
+  lal.b	0x6
+  bnt.b	@code_2515
+  pushi.b	0x6f
+  push0
+  send	0x4
+code_2515:
+  pushi.w	0x15b
+  push1
+  push0
+  lag.b	0x50
+  send	0x6
+  pushi.w	0xc5
+  push2
+  lsg.b	0x14
+  push1
+  lag.b	0x1
+  send	0x8
+  pushi.b	0x6f
+  push0
+  super.b	0x6, 0x4
+  ret
+
+egoFlame::init:
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  push2
+  pushi.w	0xd7
+  push1
+  callk.b	ScriptID, 0x4
+  sal.b	0x6
+  pushi.b	0x6e
+  push0
+  pushi.w	0x99
+  push2
+  pushi.w	0x1f4
+  dup
+  pushi.w	0x139
+  push0
+  send	0x10
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoFlame::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_2667
+  push0
+  callb.b	0x2, 0x0
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pushi.b	0xb
+  push2
+  push1
+  pushi.b	0x6b
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  lal.b	0x1
+  send	0x1e
+  pushi.w	0xa1
+  pushi.b	0x4
+  class.b	0x1a
+  push
+  pushi.b	0x4
+  push1
+  pushSelf
+  lal.b	0x1
+  send	0xc
+  pushi.w	0x29d
+  push1
+  push1
+  push2
+  lsg.w	0x117
+  push0
+  callk.b	ScriptID, 0x4
+  send	0x6
+  jmp.w	@code_3696
+code_2667:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_2780
+  push2
+  push1
+  pushi.w	0x217
+  pushi.w	0x9b
+  push1
+  pushi.b	0x6
+  pushi.w	0x9c
+  push1
+  push1
+  pushi.w	0xf4
+  push1
+  pushi.b	0x4
+  pushi.b	0x35
+  push1
+  push0
+  pushi.b	0x33
+  push1
+  pushi.b	0x32
+  pushi.b	0x34
+  push1
+  pushi.b	0x1e
+  pushi.w	0x13c
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0x3c
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x1
+  add
+  push
+  pushi.w	0x99
+  push2
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x2b
+  add
+  push
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x38
+  sub
+  push
+  lal.b	0x6
+  send	0x3c
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x1
+  send	0x8
+  jmp.w	@code_3696
+code_2780:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_2793
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_3696
+code_2793:
+  dup
+  ldi.b	0x3
+  eq?
+  bnt.w	@code_3001
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xff
+  lal.b	0x1
+  send	0x12
+  pushi.b	0x3f
+  push1
+  pushi.b	0x3c
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x1
+  add
+  push
+  lal.b	0x6
+  send	0x6
+  lsg.w	0x117
+  ldi.w	0x1a9
+  eq?
+  bt.b	@code_2887
+  lsg.w	0x117
+  ldi.w	0x1ae
+  eq?
+  bt.b	@code_2887
+  lsg.w	0x117
+  ldi.w	0x1b8
+  eq?
+  bt.b	@code_2887
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bt.b	@code_2887
+  lsg.w	0x117
+  ldi.w	0x1cc
+  eq?
+code_2887:
+  bnt.b	@code_2896
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_3696
+code_2896:
+  lsg.w	0x117
+  ldi.w	0x1b3
+  ne?
+  bnt.b	@code_2951
+  pushi.w	0x138
+  pushi.b	0x4
+  class.b	0x1f
+  push
+  pushi.w	0x297
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  pushi.w	0x298
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  pushSelf
+  lal.b	0x6
+  send	0xc
+  jmp.w	@code_3696
+code_2951:
+  pushi.w	0x138
+  pushi.b	0x4
+  class.b	0x1f
+  push
+  push1
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x25
+  sub
+  push
+  push0
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x1e
+  add
+  push
+  pushSelf
+  lal.b	0x6
+  send	0xc
+  jmp.w	@code_3696
+code_3001:
+  dup
+  ldi.b	0x4
+  eq?
+  bnt.b	@code_3043
+  pushi.b	0x3f
+  push1
+  pushi.b	0x3c
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x1
+  add
+  push
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x6
+  send	0xe
+  jmp.w	@code_3696
+code_3043:
+  dup
+  ldi.b	0x5
+  eq?
+  bnt.w	@code_3237
+  pushi.b	0x3c
+  push1
+  pushi.b	0x3c
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x1
+  add
+  push
+  lal.b	0x6
+  send	0x6
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x92
+  push1
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0xc
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bnt.w	@code_3155
+  push1
+  push1
+  pushi.b	0x7b
+  push0
+  push1
+  pushi.b	0x19
+  pushi.b	0x3
+  push1
+  pushi.b	0x3
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x1c
+  pushi.b	0x66
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1c7
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x8
+code_3155:
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bnt.w	@code_3230
+  pushi.b	0x4
+  push1
+  push0
+  push1
+  push1
+  pushi.w	0xb6
+  push0
+  push1
+  pushi.b	0x5b
+  pushi.w	0xd8
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1c2
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x1a
+  push1
+  push1
+  pushi.w	0xb6
+  push0
+  push1
+  pushi.b	0x5b
+  pushi.w	0x9b
+  push1
+  push1
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x1c
+code_3230:
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_3696
+code_3237:
+  dup
+  ldi.b	0x6
+  eq?
+  bnt.w	@code_3457
+  pushi.b	0x6f
+  push0
+  lal.b	0x6
+  send	0x4
+  push1
+  push1
+  pushi.w	0x1f4
+  push0
+  push1
+  pushi.w	0x1f4
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1a9
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x16
+  push1
+  pushi.w	0x11d
+  callb.b	0x5, 0x2
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bnt.w	@code_3366
+  pushi.b	0x3
+  push1
+  push2
+  pushi.b	0x4
+  push1
+  push0
+  push1
+  push1
+  pushi.w	0xa6
+  push0
+  push1
+  pushi.b	0x58
+  pushi.w	0xd8
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1c7
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x20
+  pushi.b	0x3
+  push1
+  push1
+  push1
+  push1
+  pushi.w	0xa5
+  push0
+  push1
+  pushi.b	0x50
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x1c
+code_3366:
+  lsg.w	0x117
+  ldi.w	0x1bd
+  eq?
+  bt.b	@code_3382
+  lsg.w	0x117
+  ldi.w	0x1d1
+  eq?
+code_3382:
+  bnt.b	@code_3402
+  pushi.w	0xf4
+  push1
+  pushi.b	0x6
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  jmp.b	@code_3418
+code_3402:
+  pushi.w	0xf4
+  push1
+  pushi.b	0x17
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+code_3418:
+  pushi.b	0x27
+  push0
+  lofsa.w	&obj.monHurt
+  send	0x4
+  pushi.w	0x9b
+  push1
+  push1
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x14
+  jmp.w	@code_3696
+code_3457:
+  dup
+  ldi.b	0x7
+  eq?
+  bnt.w	@code_3696
+  pushi.w	0x252
+  push1
+  pushi.b	0x5
+  ldi.b	0x17
+  lsgi.b	0x7d
+  ldi.b	0x3
+  div
+  add
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  pushi.w	0x29b
+  push1
+  pushi.w	0x27b
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  push2
+  pushi.b	0x18
+  push0
+  lag.b	0x5
+  send	0x4
+  push
+  push0
+  callk.b	Animate, 0x4
+  pushi.w	0x27b
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x0
+  le?
+  bnt.b	@code_3565
+  pushi.w	0x26d
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+code_3565:
+  lsg.w	0x117
+  ldi.w	0x1bd
+  eq?
+  bt.b	@code_3581
+  lsg.w	0x117
+  ldi.w	0x1d1
+  eq?
+code_3581:
+  bnt.w	@code_3630
+  pushi.w	0x27b
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x0
+  le?
+  bnt.b	@code_3630
+  pushi.w	0x92
+  push1
+  push2
+  lsg.w	0x117
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  jmp.b	@code_3668
+code_3630:
+  pushi.w	0x29d
+  push1
+  push0
+  push2
+  lsg.w	0x117
+  push0
+  callk.b	ScriptID, 0x4
+  send	0x6
+  pushi.w	0x92
+  push1
+  push2
+  lsg.w	0x117
+  push2
+  callk.b	ScriptID, 0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+code_3668:
+  pushi.w	0x281
+  push1
+  push1
+  push2
+  push1
+  pushi.b	0x66
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x9b
+  push1
+  push0
+  lal.b	0x1
+  send	0x18
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_3696:
+  toss
+  ret
+
+egoZap::init:
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  push2
+  pushi.w	0xd7
+  push1
+  callk.b	ScriptID, 0x4
+  sal.b	0x6
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoZap::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_3802
+  pushi.b	0x5
+  ldi.b	0x15
+  lsgi.b	0x7d
+  ldi.b	0xa
+  div
+  add
+  sag.b	0xe5
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pushi.b	0xb
+  push2
+  push1
+  pushi.b	0x6c
+  pushi.b	0x3
+  push1
+  push0
+  pushi.b	0x4
+  push1
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  lal.b	0x1
+  send	0x28
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x1
+  send	0x8
+  jmp.w	@code_3852
+code_3802:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.b	@code_3815
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_3852
+code_3815:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_3852
+  pushi.w	0x281
+  push1
+  push1
+  push2
+  push1
+  pushi.b	0x66
+  pushi.b	0x4
+  push1
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xff
+  lal.b	0x1
+  send	0x1c
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_3852:
+  toss
+  ret
+
+egoDazzle::init:
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  push2
+  pushi.w	0xd7
+  push1
+  callk.b	ScriptID, 0x4
+  sal.b	0x6
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoDazzle::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_3939
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pushi.b	0xb
+  push2
+  push1
+  pushi.b	0x6b
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  lal.b	0x1
+  send	0x1e
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x1
+  send	0x8
+  jmp.w	@code_4098
+code_3939:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.b	@code_3952
+  ldi.b	0xf
+  aTop.b	0x20
+  jmp.w	@code_4098
+code_3952:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_4052
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xff
+  lal.b	0x1
+  send	0x12
+  push2
+  push1
+  pushi.w	0x217
+  pushi.w	0x9b
+  push1
+  pushi.b	0x5
+  pushi.b	0x4
+  push1
+  push0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  pushi.w	0xf4
+  push1
+  pushi.b	0x6
+  pushi.w	0x13c
+  push0
+  pushi.w	0x99
+  push2
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x23
+  add
+  push
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x3c
+  sub
+  push
+  pushi.b	0x6e
+  push0
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x6
+  send	0x36
+  jmp.w	@code_4098
+code_4052:
+  dup
+  ldi.b	0x3
+  eq?
+  bnt.w	@code_4098
+  pushi.b	0x6f
+  push0
+  lal.b	0x6
+  send	0x4
+  push1
+  pushi.w	0xe9
+  callb.b	0x5, 0x2
+  ldi.b	0x14
+  lagi.b	0x7d
+  sag.b	0xe6
+  pushi.w	0x281
+  push1
+  push1
+  pushi.w	0x282
+  push1
+  push0
+  lal.b	0x1
+  send	0xc
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_4098:
+  toss
+  ret
+
+egoThrust::init:
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoThrust::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_5545
+  pushi.w	0x26c
+  push1
+  pushi.b	0x4
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  push1
+  lal.b	0x1
+  send	0x18
+  lal.b	0x12
+  bnt.w	@code_4197
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bt.b	@code_4177
+  lsg.w	0x117
+  ldi.w	0x1b3
+  eq?
+code_4177:
+  bnt.b	@code_4197
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_4197
+  push2
+  push1
+  pushi.b	0x72
+  lal.b	0x1
+  send	0x6
+  jmp.w	@code_4266
+code_4197:
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_4230
+  push2
+  push1
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_4221
+  ldi.b	0x6e
+  jmp.b	@code_4223
+code_4221:
+  ldi.b	0x6d
+code_4223:
+  push
+  lal.b	0x1
+  send	0x6
+  jmp.b	@code_4250
+code_4230:
+  push2
+  push1
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.b	@code_4243
+  ldi.b	0x67
+  jmp.b	@code_4245
+code_4243:
+  ldi.b	0x66
+code_4245:
+  push
+  lal.b	0x1
+  send	0x6
+code_4250:
+  lsl.b	0x5
+  ldi.b	0x2
+  ne?
+  bnt.b	@code_4266
+  pushi.w	0x9c
+  push1
+  push1
+  lal.b	0x1
+  send	0x6
+code_4266:
+  ldi.b	0x0
+  aTop.b	0x24
+  pushi.w	0x29d
+  push1
+  push1
+  push2
+  lsg.w	0x117
+  push0
+  callk.b	ScriptID, 0x4
+  send	0x6
+  ldi.b	0x0
+  sag.b	0xf5
+  pushi.b	0x3
+  pushi.b	0x5
+  push0
+  push0
+  calle.w	0x32e, 0xf, 0x6
+  pushi.w	0x26a
+  push1
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  lal.b	0x1
+  send	0x6
+  sal.b	0x9
+  lsg.w	0x117
+  ldi.w	0x1a9
+  eq?
+  bt.w	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1d1
+  eq?
+  bt.w	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1b3
+  eq?
+  bt.w	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1bd
+  eq?
+  bt.w	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bt.w	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1b8
+  eq?
+  bt.b	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bt.b	@code_4395
+  lsg.w	0x117
+  ldi.w	0x1a4
+  eq?
+code_4395:
+  bnt.w	@code_4422
+  pushi.w	0x282
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x3
+  eq?
+  bnt.b	@code_4422
+  ldi.b	0x0
+  sal.b	0x9
+code_4422:
+  lal.b	0x9
+  bnt.w	@code_4919
+  pushi.b	0x6e
+  push0
+  pushi.w	0x99
+  push2
+  pushi.w	0x1f4
+  dup
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.blood
+  send	0x10
+  pushi.b	0x6e
+  push0
+  pushi.w	0x99
+  push2
+  pushi.w	0x1f4
+  dup
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.zapCrap
+  send	0x10
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x92
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  pushi.w	0x26b
+  push2
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  lsg.b	0xe5
+  lal.b	0x1
+  send	0x8
+  lsg.w	0x117
+  dup
+  ldi.w	0x1b8
+  eq?
+  bnt.w	@code_4553
+  push2
+  push1
+  pushi.w	0x1ba
+  pushi.w	0x9b
+  push1
+  push1
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x16
+  jmp.w	@code_4915
+code_4553:
+  dup
+  ldi.w	0x1ae
+  eq?
+  bnt.w	@code_4625
+  push2
+  push0
+  push1
+  callk.b	Random, 0x4
+  bnt.w	@code_4597
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push1
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4597:
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  pushi.b	0x7
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4625:
+  dup
+  ldi.w	0x1bd
+  eq?
+  bnt.w	@code_4660
+  pushi.w	0x9b
+  push1
+  push1
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4660:
+  dup
+  ldi.w	0x1c2
+  eq?
+  bnt.w	@code_4737
+  push1
+  push1
+  pushi.w	0xb6
+  push0
+  push1
+  pushi.b	0x5b
+  pushi.w	0xd8
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  push2
+  pushi.w	0x1c2
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x1a
+  push1
+  push1
+  pushi.w	0xb6
+  push0
+  push1
+  pushi.b	0x5b
+  pushi.w	0x9b
+  push1
+  push1
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x1c
+  jmp.w	@code_4915
+code_4737:
+  dup
+  ldi.w	0x1cc
+  eq?
+  bnt.w	@code_4809
+  push2
+  push0
+  push1
+  callk.b	Random, 0x4
+  bnt.w	@code_4781
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4781:
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  pushi.b	0x7
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4809:
+  dup
+  ldi.w	0x1a4
+  eq?
+  bnt.w	@code_4915
+  lsl.b	0x5
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_4885
+  lal.b	0x12
+  bnt.w	@code_4857
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4857:
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  pushi.b	0x3
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_4915
+code_4885:
+  lal.b	0x12
+  not
+  bnt.w	@code_4915
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+code_4915:
+  toss
+  jmp.w	@code_5314
+code_4919:
+  lsg.w	0x117
+  ldi.w	0x1b3
+  ne?
+  bnt.w	@code_4967
+  push1
+  pushi.w	0x11c
+  callb.b	0x7, 0x2
+  bnt.w	@code_4967
+  ldi.b	0x1
+  sal.b	0x11
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x92
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+code_4967:
+  lal.b	0x11
+  bnt.w	@code_5307
+  lsg.w	0x117
+  dup
+  ldi.w	0x1a9
+  eq?
+  bnt.w	@code_5041
+  push1
+  push1
+  pushi.w	0x1f4
+  push0
+  push1
+  pushi.w	0x1f4
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1a9
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x16
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  pushi.b	0x4
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_5306
+code_5041:
+  dup
+  ldi.w	0x1b8
+  eq?
+  bnt.w	@code_5081
+  push2
+  push1
+  pushi.w	0x1bc
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push1
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x16
+  jmp.w	@code_5306
+code_5081:
+  dup
+  ldi.w	0x1ae
+  eq?
+  bnt.w	@code_5121
+  lal.b	0x11
+  bnt.w	@code_5306
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_5306
+code_5121:
+  dup
+  ldi.w	0x1bd
+  eq?
+  bnt.w	@code_5157
+  pushi.w	0x9b
+  push1
+  push2
+  pushi.w	0x9c
+  push1
+  pushi.b	0x4
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_5306
+code_5157:
+  dup
+  ldi.w	0x1d1
+  eq?
+  bnt.w	@code_5193
+  pushi.w	0x9b
+  push1
+  pushi.b	0x3
+  pushi.w	0x9c
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_5306
+code_5193:
+  dup
+  ldi.w	0x1a4
+  eq?
+  bnt.w	@code_5306
+  lal.b	0x11
+  bnt.w	@code_5306
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_5246
+  lal.b	0x12
+  bnt.w	@code_5246
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_5306
+code_5246:
+  push2
+  push0
+  push1
+  callk.b	Random, 0x4
+  bnt.w	@code_5282
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_5306
+code_5282:
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push1
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+code_5306:
+  toss
+code_5307:
+  push1
+  pushi.w	0x165
+  callb.b	0x5, 0x2
+code_5314:
+  push1
+  push1
+  pushi.w	0x1f4
+  push0
+  push1
+  pushi.w	0x1f4
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1a9
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x16
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bnt.w	@code_5438
+  pushi.b	0x3
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_5438
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_5438
+  lal.b	0x12
+  bnt.w	@code_5438
+  ldi.b	0x1
+  aTop.b	0x24
+  pushi.b	0x3f
+  push1
+  push1
+  pushi.w	0xa1
+  pushi.b	0x4
+  class.b	0x1a
+  push
+  push1
+  push1
+  pushSelf
+  lal.b	0x1
+  send	0x12
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0x92
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x12
+  jmp.w	@code_6916
+code_5438:
+  lal.b	0x9
+  bnt.b	@code_5454
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  lal.b	0x1
+  send	0x6
+  jmp.w	@code_5489
+code_5454:
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bnt.b	@code_5471
+  pushi.b	0x3f
+  push1
+  push1
+  lal.b	0x1
+  send	0x6
+code_5471:
+  lsg.w	0x117
+  ldi.w	0x1b8
+  eq?
+  bnt.b	@code_5489
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  lal.b	0x1
+  send	0x6
+code_5489:
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_5526
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  bnt.b	@code_5526
+  pushi.w	0xa1
+  pushi.b	0x4
+  class.b	0x1a
+  push
+  push2
+  push1
+  pushSelf
+  lal.b	0x1
+  send	0xc
+  jmp.w	@code_6916
+code_5526:
+  pushi.w	0xa1
+  pushi.b	0x4
+  class.b	0x1a
+  push
+  pushi.b	0x3
+  push1
+  pushSelf
+  lal.b	0x1
+  send	0xc
+  jmp.w	@code_6916
+code_5545:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_5987
+  pToa.b	0x24
+  bnt.b	@code_5563
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_6916
+code_5563:
+  lal.b	0x9
+  bnt.w	@code_5980
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bnt.b	@code_5584
+  ldi.b	0x2d
+  aTop.b	0x20
+  jmp.w	@code_5603
+code_5584:
+  lsg.w	0x117
+  ldi.w	0x1a4
+  eq?
+  bnt.b	@code_5599
+  ldi.b	0x19
+  aTop.b	0x20
+  jmp.b	@code_5603
+code_5599:
+  ldi.b	0x1
+  aTop.b	0x20
+code_5603:
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  pushi.w	0x13c
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  lofsa.w	&obj.blood
+  send	0x10
+  pushi.b	0x3f
+  push1
+  pushi.b	0xf
+  pushi.w	0x13c
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  lofsa.w	&obj.zapCrap
+  send	0x10
+  pushi.b	0x27
+  push0
+  lofsa.w	&obj.monHurt
+  send	0x4
+  lsl.b	0x5
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_5843
+  lal.b	0x12
+  bnt.w	@code_5749
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bt.b	@code_5678
+  lsg.w	0x117
+  ldi.w	0x1b3
+  eq?
+code_5678:
+  bnt.w	@code_5715
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x35
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x51
+  sub
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+  jmp.w	@code_5823
+code_5715:
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x40
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x40
+  sub
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+  jmp.w	@code_5823
+code_5749:
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x2b
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x46
+  sub
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+  lag.b	0xe5
+  bnt.w	@code_5823
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x2b
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x46
+  sub
+  push
+  pushi.w	0xa1
+  push1
+  class.b	0x1b
+  push
+  lofsa.w	&obj.zapCrap
+  send	0x12
+code_5823:
+  pushi.w	0x9b
+  push1
+  push2
+  pushi.w	0xa1
+  push1
+  class.b	0x1b
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+  jmp.w	@code_5973
+code_5843:
+  lal.b	0x12
+  bnt.w	@code_5882
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x2a
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x41
+  sub
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+  jmp.w	@code_5956
+code_5882:
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x20
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x38
+  sub
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+  lag.b	0xe5
+  bnt.w	@code_5956
+  push1
+  push1
+  push1
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x20
+  add
+  push
+  push0
+  push1
+  push0
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x38
+  sub
+  push
+  pushi.w	0xa1
+  push1
+  class.b	0x1b
+  push
+  lofsa.w	&obj.zapCrap
+  send	0x12
+code_5956:
+  pushi.w	0x9b
+  push1
+  push1
+  pushi.w	0xa1
+  push1
+  class.b	0x1b
+  push
+  lofsa.w	&obj.blood
+  send	0xc
+code_5973:
+  ldi.b	0x0
+  sag.b	0xe5
+  jmp.w	@code_6916
+code_5980:
+  ldi.b	0x8
+  aTop.b	0x20
+  jmp.w	@code_6916
+code_5987:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_6422
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x1
+  send	0x8
+  lal.b	0x9
+  bnt.w	@code_6178
+  push1
+  pushi.w	0x11d
+  callb.b	0x5, 0x2
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bnt.w	@code_6095
+  pushi.b	0x3
+  push1
+  push2
+  pushi.b	0x4
+  push1
+  push0
+  push1
+  push1
+  pushi.w	0xa6
+  push0
+  push1
+  pushi.b	0x58
+  pushi.w	0xd8
+  push0
+  pushi.w	0x13a
+  push0
+  push2
+  pushi.w	0x1c7
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  send	0x20
+  pushi.b	0x3
+  push1
+  push1
+  pushi.b	0x4
+  push1
+  push0
+  push1
+  push1
+  pushi.w	0xa5
+  push0
+  push1
+  pushi.b	0x50
+  pushi.w	0x13a
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x1c
+code_6095:
+  lsg.w	0x117
+  ldi.w	0x1bd
+  eq?
+  bt.b	@code_6111
+  lsg.w	0x117
+  ldi.w	0x1d1
+  eq?
+code_6111:
+  bnt.w	@code_6133
+  pushi.w	0xf4
+  push1
+  pushi.b	0x6
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  jmp.w	@code_6149
+code_6133:
+  pushi.w	0xf4
+  push1
+  pushi.b	0x17
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+code_6149:
+  pushi.b	0x3
+  push1
+  push1
+  pushi.b	0x4
+  push1
+  push0
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x14
+  jmp.w	@code_6916
+code_6178:
+  lal.b	0x11
+  bnt.w	@code_6413
+  lsg.w	0x117
+  dup
+  ldi.w	0x1a9
+  eq?
+  bnt.w	@code_6222
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  pushi.b	0x3
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_6412
+code_6222:
+  dup
+  ldi.w	0x1b8
+  eq?
+  bnt.w	@code_6262
+  push2
+  push1
+  pushi.w	0x1bc
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x16
+  jmp.w	@code_6412
+code_6262:
+  dup
+  ldi.w	0x1ae
+  eq?
+  bnt.w	@code_6302
+  lal.b	0x11
+  bnt.w	@code_6412
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push1
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_6412
+code_6302:
+  dup
+  ldi.w	0x1bd
+  eq?
+  bnt.w	@code_6338
+  pushi.w	0x9b
+  push1
+  push2
+  pushi.w	0x9c
+  push1
+  pushi.b	0x5
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_6412
+code_6338:
+  dup
+  ldi.w	0x1d1
+  eq?
+  bnt.w	@code_6375
+  pushi.w	0x9b
+  push1
+  pushi.b	0x3
+  pushi.w	0x9c
+  push1
+  pushi.b	0x3
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+  jmp.w	@code_6412
+code_6375:
+  dup
+  ldi.w	0x1cc
+  eq?
+  bnt.w	@code_6412
+  lal.b	0x11
+  bnt.w	@code_6412
+  pushi.w	0x9b
+  push1
+  push0
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x10
+code_6412:
+  toss
+code_6413:
+  pushi.w	0x91
+  push0
+  self	0x4
+  jmp.w	@code_6916
+code_6422:
+  dup
+  ldi.b	0x3
+  eq?
+  bnt.w	@code_6486
+  pushi.w	0xf5
+  push0
+  lal.b	0x1
+  send	0x4
+  not
+  bnt.w	@code_6916
+  lal.b	0x12
+  bnt.w	@code_6466
+  push2
+  push1
+  pushi.b	0x6d
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0x10
+  jmp.w	@code_6916
+code_6466:
+  push2
+  push1
+  pushi.b	0x66
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0x10
+  jmp.w	@code_6916
+code_6486:
+  dup
+  ldi.b	0x4
+  eq?
+  bnt.w	@code_6542
+  lal.b	0x12
+  bnt.w	@code_6518
+  push2
+  push1
+  pushi.b	0x6d
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0x10
+  jmp.w	@code_6535
+code_6518:
+  push2
+  push1
+  pushi.b	0x66
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0x10
+code_6535:
+  ldi.b	0xf
+  aTop.b	0x20
+  jmp.w	@code_6916
+code_6542:
+  dup
+  ldi.b	0x5
+  eq?
+  bnt.w	@code_6916
+  pushi.b	0x6f
+  push0
+  lofsa.w	&obj.zapCrap
+  send	0x4
+  pushi.b	0x6f
+  push0
+  lofsa.w	&obj.blood
+  send	0x4
+  lal.b	0x9
+  bnt.w	@code_6634
+  pushi.w	0x29b
+  push1
+  pushi.w	0x27b
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  pushi.w	0x27b
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x0
+  le?
+  bnt.w	@code_6634
+  pushi.w	0x26d
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+code_6634:
+  lal.b	0x12
+  bnt.b	@code_6646
+  push2
+  push1
+  pushi.b	0x6d
+  lal.b	0x1
+  send	0x6
+code_6646:
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bt.b	@code_6662
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+code_6662:
+  bnt.w	@code_6719
+  lal.b	0x11
+  bt.b	@code_6671
+  lal.b	0x9
+code_6671:
+  bnt.w	@code_6701
+  pushi.w	0x92
+  push1
+  push2
+  lsg.w	0x117
+  push2
+  callk.b	ScriptID, 0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  ldi.b	0x0
+  sal.b	0x11
+code_6701:
+  pushi.w	0x29d
+  push1
+  push0
+  push2
+  lsg.w	0x117
+  push0
+  callk.b	ScriptID, 0x4
+  send	0x6
+  jmp.w	@code_6880
+code_6719:
+  lsg.w	0x117
+  ldi.w	0x1bd
+  eq?
+  bt.b	@code_6735
+  lsg.w	0x117
+  ldi.w	0x1d1
+  eq?
+code_6735:
+  bnt.w	@code_6786
+  pushi.w	0x27b
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  push
+  ldi.b	0x0
+  le?
+  bnt.w	@code_6786
+  pushi.w	0x92
+  push1
+  push2
+  lsg.w	0x117
+  pushi.b	0x3
+  callk.b	ScriptID, 0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+  jmp.w	@code_6880
+code_6786:
+  lsg.w	0x117
+  ldi.w	0x1b3
+  eq?
+  bnt.w	@code_6820
+  lal.b	0x9
+  not
+  bnt.w	@code_6820
+  pushi.w	0x29d
+  push1
+  push0
+  push2
+  lsg.w	0x117
+  push0
+  callk.b	ScriptID, 0x4
+  send	0x6
+  jmp.w	@code_6880
+code_6820:
+  pushi.w	0x8e
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  not
+  bnt.w	@code_6865
+  ldi.b	0x0
+  sal.b	0x11
+  pushi.w	0x92
+  push1
+  push2
+  lsg.w	0x117
+  push2
+  callk.b	ScriptID, 0x4
+  push
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x6
+code_6865:
+  pushi.w	0x29d
+  push1
+  push0
+  push2
+  lsg.w	0x117
+  push0
+  callk.b	ScriptID, 0x4
+  send	0x6
+code_6880:
+  ldi.b	0x0
+  sal.b	0x9
+  push1
+  pushi.w	0xe9
+  callb.b	0x6, 0x2
+  push1
+  pushi.w	0x165
+  callb.b	0x6, 0x2
+  pushi.w	0x281
+  push1
+  push1
+  lal.b	0x1
+  send	0x6
+  ldi.b	0x1
+  sag.b	0xf5
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_6916:
+  toss
+  ret
+
+egoBlock::init:
+  ldi.b	0x1
+  sal.b	0x10
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoBlock::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_7105
+  ldi.b	0x0
+  sag.b	0xf5
+  lal.b	0x12
+  bnt.w	@code_6973
+  push2
+  push1
+  pushi.b	0x6f
+  lal.b	0x1
+  send	0x6
+  jmp.w	@code_6981
+code_6973:
+  push2
+  push1
+  pushi.b	0x68
+  lal.b	0x1
+  send	0x6
+code_6981:
+  pushi.w	0x26c
+  push1
+  push1
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pushi.b	0x3
+  pushi.w	0x9c
+  push1
+  push0
+  lal.b	0x1
+  send	0x18
+  pushi.b	0x3
+  pushi.b	0x6
+  push0
+  pushi.b	0x14
+  calle.w	0x32e, 0xf, 0x6
+  pushi.w	0x292
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  bnt.b	@code_7040
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_7040:
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bt.w	@code_7057
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+code_7057:
+  bnt.w	@code_7098
+  lal.b	0x12
+  bnt.w	@code_7098
+  push2
+  push1
+  pushi.b	0x73
+  pushi.b	0x3
+  push1
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.w	0xa1
+  pushi.b	0x3
+  class.b	0x1a
+  push
+  push2
+  push1
+  lal.b	0x1
+  send	0x1a
+  ldi.b	0x50
+  aTop.b	0x20
+  jmp.w	@code_7207
+code_7098:
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_7207
+code_7105:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_7127
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x1
+  send	0x8
+  jmp.w	@code_7207
+code_7127:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_7141
+  ldi.b	0xc
+  aTop.b	0x20
+  jmp.w	@code_7207
+code_7141:
+  dup
+  ldi.b	0x3
+  eq?
+  bnt.w	@code_7207
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+  bt.w	@code_7165
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+code_7165:
+  bnt.w	@code_7185
+  lal.b	0x12
+  bnt.w	@code_7185
+  push2
+  push1
+  pushi.b	0x6d
+  pushi.w	0x13a
+  push0
+  lal.b	0x1
+  send	0xa
+code_7185:
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0xa
+  ldi.b	0x1
+  sag.b	0xf5
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_7207:
+  toss
+  ret
+
+egoParry::init:
+  ldi.b	0x1
+  sal.b	0x10
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoParry::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_7303
+  ldi.b	0x0
+  sag.b	0xf5
+  pushi.b	0x3
+  pushi.b	0x6
+  push0
+  pushi.b	0x14
+  calle.w	0x32e, 0xf, 0x6
+  pushi.w	0x26c
+  push1
+  push1
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pushi.b	0x3
+  pushi.w	0x9b
+  push1
+  pushi.b	0x4
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0x22
+  ldi.b	0x1
+  aTop.b	0x1a
+  jmp.w	@code_7382
+code_7303:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_7326
+  pushi.w	0x9c
+  push1
+  push1
+  lal.b	0x1
+  send	0x6
+  ldi.b	0x7
+  aTop.b	0x1a
+  jmp.w	@code_7382
+code_7326:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_7349
+  pushi.w	0x9c
+  push1
+  push0
+  lal.b	0x1
+  send	0x6
+  ldi.b	0x1
+  aTop.b	0x1a
+  jmp.w	@code_7382
+code_7349:
+  dup
+  ldi.b	0x3
+  eq?
+  bnt.w	@code_7382
+  pushi.b	0x4
+  push1
+  push0
+  pushi.w	0x9b
+  push1
+  push2
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0x10
+  ldi.b	0x1
+  sag.b	0xf5
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_7382:
+  toss
+  ret
+
+egoDodge::init:
+  ldi.b	0x1
+  sal.b	0x10
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoDodge::doit:
+  pushi.w	0x292
+  push0
+  pushi.w	0x283
+  push0
+  lal.b	0x1
+  send	0x4
+  send	0x4
+  bnt.w	@code_7449
+  pushi.w	0xa1
+  push1
+  push0
+  pushi.w	0xa1
+  pushi.b	0x3
+  class.b	0x1a
+  push
+  push0
+  pushi.b	0xff
+  lal.b	0x1
+  send	0x10
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_7449:
+  pushi.b	0x39
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+egoDodge::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_7623
+  ldi.b	0x0
+  sag.b	0xf5
+  pushi.b	0x3
+  pushi.b	0x7
+  push0
+  pushi.b	0x14
+  calle.w	0x32e, 0xf, 0x6
+  lal.b	0x12
+  bnt.w	@code_7528
+  lsg.w	0x117
+  ldi.w	0x1c2
+  eq?
+  bt.w	@code_7509
+  lsg.w	0x117
+  ldi.w	0x1c7
+  eq?
+code_7509:
+  bnt.w	@code_7528
+  push2
+  push1
+  pushi.b	0x74
+  pushi.w	0x9b
+  push1
+  push0
+  lal.b	0x1
+  send	0xc
+  jmp.w	@code_7557
+code_7528:
+  lal.b	0x12
+  bnt.w	@code_7549
+  push2
+  push1
+  pushi.b	0x70
+  pushi.w	0x9b
+  push1
+  push0
+  lal.b	0x1
+  send	0xc
+  jmp.w	@code_7557
+code_7549:
+  push2
+  push1
+  pushi.b	0x69
+  lal.b	0x1
+  send	0x6
+code_7557:
+  lal.b	0x12
+  bnt.w	@code_7571
+  pushi.w	0x9c
+  push1
+  push1
+  lal.b	0x1
+  send	0x6
+code_7571:
+  pushi.w	0x26c
+  push1
+  push2
+  pushi.w	0x281
+  push1
+  push0
+  pushi.w	0x282
+  push1
+  pTos.b	0x24
+  ldi.b	0x0
+  eq?
+  bnt.b	@code_7596
+  ldi.b	0x5
+  jmp.b	@code_7598
+code_7596:
+  ldi.b	0x6
+code_7598:
+  push
+  pushi.w	0x9c
+  push1
+  push0
+  lal.b	0x1
+  send	0x18
+  pushi.w	0xa1
+  push2
+  class.b	0x1b
+  push
+  pushSelf
+  lal.b	0x1
+  send	0x8
+  jmp.w	@code_7687
+code_7623:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_7637
+  ldi.b	0xc
+  aTop.b	0x20
+  jmp.w	@code_7687
+code_7637:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_7687
+  push2
+  push0
+  lal.b	0x1
+  send	0x4
+  push
+  ldi.b	0x6e
+  eq?
+  bnt.w	@code_7665
+  push2
+  push1
+  pushi.b	0x6d
+  lal.b	0x1
+  send	0x6
+code_7665:
+  pushi.w	0x9c
+  push1
+  push0
+  pushi.w	0x139
+  push0
+  lal.b	0x1
+  send	0xa
+  ldi.b	0x1
+  sag.b	0xf5
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_7687:
+  toss
+  ret
+
+painReaction::dispose:
+  pushi.b	0x6f
+  push0
+  super.b	0x6, 0x4
+  ret
+
+painReaction::init:
+  push2
+  pushi.w	0xd5
+  push0
+  callk.b	ScriptID, 0x4
+  sal.b	0x1
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x6, 0x4
+  ret
+
+painReaction::changeState:
+  lap.b	0x1
+  aTop.b	0x14
+  push
+  dup
+  ldi.b	0x0
+  eq?
+  bnt.w	@code_7738
+  ldi.b	0x0
+  sag.b	0xf5
+  ldi.b	0x1
+  aTop.b	0x20
+  jmp.w	@code_7777
+code_7738:
+  dup
+  ldi.b	0x1
+  eq?
+  bnt.w	@code_7765
+  push1
+  pushi.w	0xf8
+  callb.b	0x7, 0x2
+  bnt.b	@code_7758
+  ldi.b	0x1
+  aTop.b	0x20
+code_7758:
+  ldi.b	0x1
+  sag.b	0xf5
+  jmp.w	@code_7777
+code_7765:
+  dup
+  ldi.b	0x2
+  eq?
+  bnt.w	@code_7777
+  pushi.b	0x6f
+  push0
+  self	0x4
+code_7777:
+  toss
+  ret
+
+inputBox::dispose:
+  pushi.w	0xc5
+  push2
+  lsg.b	0x14
+  push1
+  lag.b	0x1
+  send	0x8
+  pushi.b	0x6f
+  push0
+  super.b	0x30, 0x4
+  ret
+
+inputBox::init:
+  pushi.w	0xe9
+  push0
+  lag.b	0x45
+  send	0x4
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  pushi.w	0x118
+  pushi.w	0x9b
+  lag.b	0x1
+  send	0xc
+  pushi.b	0x3f
+  push1
+  pushi.b	0xe
+  pushi.w	0x13c
+  push0
+  self	0xa
+  pushi.b	0x6e
+  push0
+  rest.b	0x1
+  super.b	0x30, 0x4
+  ret
+
+inputBox::draw:
+  link.b	0x2
+  pTos.b	0x6e
+  ldi.b	0x1
+  lt?
+  bnt.w	@code_7857
+  ldi.b	0x1
+  aTop.b	0x6e
+code_7857:
+  pToa.b	0x70
+  sat.b	0x1
+  push
+  pToa.b	0x6e
+  gt?
+  bnt.w	@code_7872
+  pToa.b	0x6e
+  sat.b	0x1
+code_7872:
+  lst.b	0x1
+  ldi.b	0x64
+  mul
+  push
+  pToa.b	0x6e
+  add
+  push
+  ldi.b	0xff
+  add
+  push
+  pToa.b	0x6e
+  div
+  sat.b	0x1
+  push
+  ldi.b	0x9
+  add
+  push
+  ldi.b	0xa
+  div
+  sat.b	0x0
+  push
+  ldi.b	0x9
+  gt?
+  bnt.w	@code_7912
+  ldi.b	0x9
+  sat.b	0x0
+code_7912:
+  pushi.b	0x4
+  push1
+  lst.b	0x0
+  pushi.b	0x3f
+  push1
+  pushi.b	0xe
+  pushi.w	0x139
+  push0
+  self	0x10
+  ret
+
+inputBox::doit:
+  link.b	0x8
+  pushi.b	0x6d
+  push0
+  class.b	0x7
+  send	0x4
+  sat.b	0x0
+  push1
+  push0
+  send	0x4
+  sat.b	0x3
+  push0
+  push0
+  lat.b	0x0
+  send	0x4
+  push
+  ldi.b	0xa
+  sub
+  sat.b	0x4
+  pToa.b	0x64
+  bnt.w	@code_7975
+  lat.b	0x3
+  aTop.b	0x5c
+  lat.b	0x4
+  aTop.b	0x5e
+  ldi.b	0x0
+  aTop.b	0x64
+code_7975:
+  lst.b	0x3
+  pToa.b	0x5c
+  ne?
+  bt.w	@code_7988
+  lst.b	0x4
+  pToa.b	0x5e
+  ne?
+code_7988:
+  bnt.w	@code_8140
+  lst.b	0x3
+  pToa.b	0x5c
+  ne?
+  bnt.w	@code_8050
+  lst.b	0x3
+  pToa.b	0x5c
+  sub
+  sat.b	0x5
+  lat.b	0x3
+  aTop.b	0x5c
+  pTos.b	0x60
+  lat.b	0x5
+  add
+  sat.b	0x1
+  push
+  pToa.b	0x66
+  lt?
+  bnt.w	@code_8033
+  pToa.b	0x66
+  aTop.b	0x5c
+  sat.b	0x1
+  jmp.w	@code_8054
+code_8033:
+  lst.b	0x1
+  pToa.b	0x68
+  gt?
+  bnt.w	@code_8054
+  pToa.b	0x68
+  aTop.b	0x5c
+  sat.b	0x1
+  jmp.w	@code_8054
+code_8050:
+  pToa.b	0x60
+  sat.b	0x1
+code_8054:
+  lst.b	0x4
+  pToa.b	0x5e
+  ne?
+  bnt.w	@code_8113
+  lst.b	0x4
+  pToa.b	0x62
+  sub
+  sat.b	0x6
+  lat.b	0x4
+  aTop.b	0x5e
+  pTos.b	0x62
+  lat.b	0x6
+  add
+  sat.b	0x2
+  push
+  pToa.b	0x6a
+  lt?
+  bnt.w	@code_8096
+  pToa.b	0x6a
+  aTop.b	0x5e
+  sat.b	0x2
+  jmp.w	@code_8117
+code_8096:
+  lst.b	0x2
+  pToa.b	0x6c
+  gt?
+  bnt.w	@code_8117
+  pToa.b	0x6c
+  aTop.b	0x5e
+  sat.b	0x2
+  jmp.w	@code_8117
+code_8113:
+  pToa.b	0x62
+  sat.b	0x2
+code_8117:
+  lat.b	0x2
+  aTop.b	0x62
+  lat.b	0x1
+  aTop.b	0x60
+  pushi.w	0xc5
+  pushi.b	0x4
+  lsg.b	0x14
+  push1
+  push
+  lst.b	0x2
+  lag.b	0x1
+  send	0xc
+code_8140:
+  pushi.b	0x6f
+  push0
+  lat.b	0x0
+  send	0x4
+  pushi.b	0x39
+  push0
+  rest.b	0x1
+  super.b	0x30, 0x4
+  ret
+
+findPenalty::doit:
+  link.b	0x2
+  push0
+  callk.b	GetTime, 0x0
+  sat.b	0x0
+  push1
+  push
+  lal.b	0xe
+  sub
+  push
+  callk.b	Abs, 0x2
+  sat.b	0x1
+  push
+  ldi.w	0xb4
+  lt?
+  bnt.w	@code_8188
+  ldi.b	0x32
+  jmp.w	@code_8245
+code_8188:
+  lst.b	0x1
+  ldi.w	0xf0
+  lt?
+  bnt.w	@code_8202
+  ldi.b	0x28
+  jmp.w	@code_8245
+code_8202:
+  lst.b	0x1
+  ldi.w	0x12c
+  lt?
+  bnt.w	@code_8216
+  ldi.b	0x1e
+  jmp.w	@code_8245
+code_8216:
+  lst.b	0x1
+  ldi.w	0x168
+  lt?
+  bnt.w	@code_8230
+  ldi.b	0x14
+  jmp.w	@code_8245
+code_8230:
+  lst.b	0x1
+  ldi.w	0x1a4
+  lt?
+  bnt.w	@code_8243
+  ldi.b	0xa
+  jmp.b	@code_8245
+code_8243:
+  ldi.b	0x0
+code_8245:
+  sal.b	0xf
+  lal.b	0x10
+  bnt.w	@code_8256
+  ldi.b	0x0
+  sal.b	0xf
+code_8256:
+  ldi.b	0x0
+  sal.b	0x10
+  lat.b	0x0
+  sal.b	0xe
+  ret
+
+switchLoop::doit:
+  lal.b	0xa
+  bnt.w	@code_8334
+  pushi.w	0x9b
+  push1
+  push2
+  lofsa.w	&obj.pointBox
+  send	0x6
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  not
+  bnt.w	@code_8327
+  pushi.w	0xd8
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.dodgeRIcon
+  send	0xc
+  pushi.w	0xd8
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.dodgeLIcon
+  send	0xc
+code_8327:
+  ldi.b	0x0
+  sal.b	0xa
+  jmp.w	@code_8394
+code_8334:
+  pushi.w	0x9b
+  push1
+  pushi.b	0x3
+  lofsa.w	&obj.pointBox
+  send	0x6
+  pushi.w	0xee
+  push1
+  push2
+  lag.b	0x0
+  send	0x6
+  not
+  bnt.w	@code_8390
+  pushi.b	0x66
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.dodgeRIcon
+  send	0xc
+  pushi.b	0x66
+  push0
+  pushi.w	0x13a
+  push0
+  pushi.w	0x139
+  push0
+  lofsa.w	&obj.dodgeLIcon
+  send	0xc
+code_8390:
+  ldi.b	0x1
+  sal.b	0xa
+code_8394:
+  ret
+
+  bnot
+
+.locals
+  0 = 0x0
+  1 = 0x0
+  2 = 0x0
+  3 = 0x0
+  4 = 0x0
+  5 = 0x2
+  6 = 0x0
+  7 = 0x0
+  8 = 0x0
+  9 = 0x0
+  10 = 0x0
+  11 = 0x0
+  12 = 0x0
+  13 = 0x0
+  14 = 0x0
+  15 = 0x0
+  16 = 0x0
+  17 = 0x0
+  18 = 0x0
+  19 = 0x0
+
+.object aSpell		; species 0xffff super 0x32
+  exported
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x32
+  prop 7 = 0x0
+  prop 8 = &string_0		; "aSpell"
+  prop 9 = 0x0
+  prop 10 = 0x0
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0xffff
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x6789
+  prop 20 = 0x0
+  prop 21 = 0x6789
+  prop 22 = 0x0
+  prop 23 = 0x0
+  prop 24 = 0x0
+  prop 25 = 0x0
+  prop 26 = 0x2
+  prop 27 = 0xffff
+  prop 28 = 0x0
+  prop 29 = 0x0
+  prop 30 = 0x0
+  prop 31 = 0x0
+  prop 32 = 0x0
+  prop 33 = 0x0
+  prop 34 = 0x0
+  prop 35 = 0x0
+  prop 36 = 0x0
+  prop 37 = 0x0
+  prop 38 = 0x0
+  prop 39 = 0x0
+  prop 40 = 0x0
+  prop 41 = 0x0
+  prop 42 = 0x0
+  prop 43 = 0x80
+  prop 44 = 0x80
+  prop 45 = 0x80
+  prop 46 = 0x6
+  prop 47 = 0x0
+  prop 48 = 0x0
+  prop 49 = 0x0
+  prop 50 = 0x0
+  prop 51 = 0x0
+  prop 52 = 0x8000
+  prop 53 = 0x0
+  prop 54 = 0x0
+  prop 55 = 0x3
+  prop 56 = 0x302
+  prop 57 = 0x6
+  prop 58 = 0x0
+  prop 59 = 0x0
+  prop 60 = 0x0
+  prop 61 = 0x0
+  prop 62 = 0x0
+  prop 63 = 0x0
+  prop 64 = 0x0
+
+.object monHurt		; species 0xffff super 0xb
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0xb
+  prop 7 = 0x0
+  prop 8 = &string_1		; "monHurt"
+  prop 9 = 0x0
+  prop 10 = 0x0
+  prop 11 = 0xffff
+  prop 12 = 0x66
+  prop 13 = 0x7f
+  prop 14 = 0x1
+  prop 15 = 0x1
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  prop 22 = 0x0
+  prop 23 = 0x0
+
+.object closeCombat		; species 0xffff super 0x6
+  exported
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_2		; "closeCombat"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @closeCombat::init
+  method 57 = @closeCombat::doit
+  method 111 = @closeCombat::dispose
+  method 144 = @closeCombat::changeState
+  method 133 = @closeCombat::handleEvent
+
+.object egoFlame		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_3		; "egoFlame"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoFlame::init
+  method 111 = @egoFlame::dispose
+  method 144 = @egoFlame::changeState
+
+.object egoZap		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_4		; "egoZap"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoZap::init
+  method 144 = @egoZap::changeState
+
+.object egoDazzle		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_5		; "egoDazzle"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoDazzle::init
+  method 144 = @egoDazzle::changeState
+
+.object egoThrust		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_6		; "egoThrust"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoThrust::init
+  method 144 = @egoThrust::changeState
+
+.object egoBlock		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_7		; "egoBlock"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoBlock::init
+  method 144 = @egoBlock::changeState
+
+.object egoParry		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_8		; "egoParry"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoParry::init
+  method 144 = @egoParry::changeState
+
+.object egoDodge		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_9		; "egoDodge"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @egoDodge::init
+  method 57 = @egoDodge::doit
+  method 144 = @egoDodge::changeState
+
+.object painReaction		; species 0xffff super 0x6
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x6
+  prop 7 = 0x0
+  prop 8 = &string_10		; "painReaction"
+  prop 9 = 0x0
+  prop 10 = 0xffff
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0x0
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 20 = 0x0
+  prop 21 = 0x0
+  method 110 = @painReaction::init
+  method 111 = @painReaction::dispose
+  method 144 = @painReaction::changeState
+
+.object dodgeLIcon		; species 0xffff super 0x30
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x30
+  prop 7 = 0x0
+  prop 8 = &string_11		; "dodgeLIcon"
+  prop 9 = 0xf6
+  prop 10 = 0xaf
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0xffff
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x6789
+  prop 20 = 0x0
+  prop 21 = 0x6789
+  prop 22 = 0x0
+  prop 23 = 0x0
+  prop 24 = 0x0
+  prop 25 = 0x0
+  prop 26 = 0x2
+  prop 27 = 0x3b1
+  prop 28 = 0x0
+  prop 29 = 0x4
+  prop 30 = 0x0
+  prop 31 = 0x0
+  prop 32 = 0x101
+  prop 33 = 0x0
+  prop 34 = 0x0
+  prop 35 = 0x0
+  prop 36 = 0x0
+  prop 37 = 0x0
+  prop 38 = 0x0
+  prop 39 = 0x0
+  prop 40 = 0x0
+  prop 41 = 0x0
+  prop 42 = 0x0
+  prop 43 = 0x80
+  prop 44 = 0x80
+  prop 45 = 0x80
+
+.object dodgeRIcon		; species 0xffff super 0x30
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x30
+  prop 7 = 0x0
+  prop 8 = &string_12		; "dodgeRIcon"
+  prop 9 = 0x11a
+  prop 10 = 0xaf
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0xffff
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x6789
+  prop 20 = 0x0
+  prop 21 = 0x6789
+  prop 22 = 0x0
+  prop 23 = 0x0
+  prop 24 = 0x0
+  prop 25 = 0x0
+  prop 26 = 0x2
+  prop 27 = 0x3b1
+  prop 28 = 0x0
+  prop 29 = 0x5
+  prop 30 = 0x0
+  prop 31 = 0x0
+  prop 32 = 0x101
+  prop 33 = 0x0
+  prop 34 = 0x0
+  prop 35 = 0x0
+  prop 36 = 0x0
+  prop 37 = 0x0
+  prop 38 = 0x0
+  prop 39 = 0x0
+  prop 40 = 0x0
+  prop 41 = 0x0
+  prop 42 = 0x0
+  prop 43 = 0x80
+  prop 44 = 0x80
+  prop 45 = 0x80
+
+.class inputBox		; species 0x8b super 0x30
+  prop 4100 = 0x0
+  prop 4101 = 0x8b
+  prop 4102 = 0x30
+  prop 4103 = 0x8000
+  prop 20 = &string_13		; "inputBox"
+  prop 1 = 0x0
+  prop 0 = 0x0
+  prop 82 = 0x0
+  prop 55 = 0x0
+  prop 213 = 0x0
+  prop 214 = 0xffff
+  prop 6 = 0x0
+  prop 7 = 0x0
+  prop 8 = 0x0
+  prop 9 = 0x0
+  prop 301 = 0x6789
+  prop 299 = 0x0
+  prop 302 = 0x6789
+  prop 303 = 0x0
+  prop 304 = 0x0
+  prop 305 = 0x0
+  prop 306 = 0x0
+  prop 52 = 0x2
+  prop 2 = 0xffff
+  prop 3 = 0x0
+  prop 4 = 0x0
+  prop 60 = 0x0
+  prop 5 = 0x0
+  prop 14 = 0x101
+  prop 10 = 0x0
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x0
+  prop 88 = 0x0
+  prop 103 = 0x0
+  prop 104 = 0x80
+  prop 105 = 0x80
+  prop 106 = 0x80
+  prop 684 = 0x0
+  prop 685 = 0x0
+  prop 686 = 0x118
+  prop 687 = 0x9b
+  prop 124 = 0x1
+  prop 688 = 0x104
+  prop 689 = 0x12f
+  prop 690 = 0x82
+  prop 691 = 0xaf
+  prop 34 = 0x3e8
+  prop 74 = 0x0
+  method 110 = @inputBox::init
+  method 57 = @inputBox::doit
+  method 111 = @inputBox::dispose
+  method 80 = @inputBox::draw
+
+.object pointBox		; species 0xffff super 0x8b
+  exported
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x8b
+  prop 7 = 0x0
+  prop 8 = &string_14		; "pointBox"
+  prop 9 = 0x12f
+  prop 10 = 0xaf
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0xffff
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x6789
+  prop 20 = 0x0
+  prop 21 = 0x6789
+  prop 22 = 0x0
+  prop 23 = 0x0
+  prop 24 = 0x0
+  prop 25 = 0x0
+  prop 26 = 0x2
+  prop 27 = 0x3b1
+  prop 28 = 0x2
+  prop 29 = 0x0
+  prop 30 = 0x0
+  prop 31 = 0x0
+  prop 32 = 0x101
+  prop 33 = 0x0
+  prop 34 = 0x0
+  prop 35 = 0x0
+  prop 36 = 0x0
+  prop 37 = 0x0
+  prop 38 = 0x0
+  prop 39 = 0x0
+  prop 40 = 0x0
+  prop 41 = 0x0
+  prop 42 = 0x0
+  prop 43 = 0x80
+  prop 44 = 0x80
+  prop 45 = 0x80
+  prop 46 = 0x0
+  prop 47 = 0x0
+  prop 48 = 0x118
+  prop 49 = 0x9b
+  prop 50 = 0x1
+  prop 51 = 0x104
+  prop 52 = 0x12f
+  prop 53 = 0x82
+  prop 54 = 0xaf
+  prop 55 = 0x3e8
+  prop 56 = 0x0
+
+.object findPenalty		; species 0xffff super 0x1
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x1
+  prop 7 = 0x0
+  prop 8 = &string_15		; "findPenalty"
+  method 57 = @findPenalty::doit
+
+.object switchLoop		; species 0xffff super 0x1
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x1
+  prop 7 = 0x0
+  prop 8 = &string_16		; "switchLoop"
+  method 57 = @switchLoop::doit
+
+.object blood		; species 0xffff super 0x31
+  exported
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x31
+  prop 7 = 0x0
+  prop 8 = &string_17		; "blood"
+  prop 9 = 0x0
+  prop 10 = 0x0
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0xffff
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x6789
+  prop 20 = 0x0
+  prop 21 = 0x6789
+  prop 22 = 0x0
+  prop 23 = 0x0
+  prop 24 = 0x0
+  prop 25 = 0x0
+  prop 26 = 0x2
+  prop 27 = 0xffff
+  prop 28 = 0x0
+  prop 29 = 0x0
+  prop 30 = 0x0
+  prop 31 = 0x0
+  prop 32 = 0x0
+  prop 33 = 0x0
+  prop 34 = 0x0
+  prop 35 = 0x0
+  prop 36 = 0x0
+  prop 37 = 0x0
+  prop 38 = 0x0
+  prop 39 = 0x0
+  prop 40 = 0x0
+  prop 41 = 0x0
+  prop 42 = 0x0
+  prop 43 = 0x80
+  prop 44 = 0x80
+  prop 45 = 0x80
+  prop 46 = 0x3
+  prop 47 = 0x0
+  prop 48 = 0x0
+  prop 49 = 0x0
+  prop 50 = 0x0
+  prop 51 = 0x0
+
+.object zapCrap		; species 0xffff super 0x31
+  exported
+  prop 4 = 0x0
+  prop 5 = 0xffff
+  prop 6 = 0x31
+  prop 7 = 0x0
+  prop 8 = &string_18		; "zapCrap"
+  prop 9 = 0x0
+  prop 10 = 0x0
+  prop 11 = 0x0
+  prop 12 = 0x0
+  prop 13 = 0x0
+  prop 14 = 0xffff
+  prop 15 = 0x0
+  prop 16 = 0x0
+  prop 17 = 0x0
+  prop 18 = 0x0
+  prop 19 = 0x6789
+  prop 20 = 0x0
+  prop 21 = 0x6789
+  prop 22 = 0x0
+  prop 23 = 0x0
+  prop 24 = 0x0
+  prop 25 = 0x0
+  prop 26 = 0x2
+  prop 27 = 0x217
+  prop 28 = 0x7
+  prop 29 = 0x0
+  prop 30 = 0x0
+  prop 31 = 0x0
+  prop 32 = 0x0
+  prop 33 = 0x0
+  prop 34 = 0x0
+  prop 35 = 0x0
+  prop 36 = 0x0
+  prop 37 = 0x0
+  prop 38 = 0x0
+  prop 39 = 0x0
+  prop 40 = 0x0
+  prop 41 = 0x0
+  prop 42 = 0x0
+  prop 43 = 0x80
+  prop 44 = 0x80
+  prop 45 = 0x80
+  prop 46 = 0x3
+  prop 47 = 0x0
+  prop 48 = 0x0
+  prop 49 = 0x0
+  prop 50 = 0x0
+  prop 51 = 0x0
+
+.strings
+string_0 = "aSpell"		; special
+string_1 = "monHurt"		; special
+string_2 = "closeCombat"		; special
+string_3 = "egoFlame"		; special
+string_4 = "egoZap"		; special
+string_5 = "egoDazzle"		; special
+string_6 = "egoThrust"		; special
+string_7 = "egoBlock"		; special
+string_8 = "egoParry"		; special
+string_9 = "egoDodge"		; special
+string_10 = "painReaction"		; special
+string_11 = "dodgeLIcon"		; special
+string_12 = "dodgeRIcon"		; special
+string_13 = "inputBox"		; special
+string_14 = "pointBox"		; special
+string_15 = "findPenalty"		; special
+string_16 = "switchLoop"		; special
+string_17 = "blood"		; special
+string_18 = "zapCrap"		; special
